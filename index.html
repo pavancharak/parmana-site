@@ -946,6 +946,25 @@
     }
     .d-final-fail.show { display: flex; }
 
+    /* VIDEO */
+    .video-frame {
+      max-width: 860px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-dark);
+      background: #000;
+      position: relative;
+      aspect-ratio: 16 / 9;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+    }
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
     /* OSS NOTE */
     .oss-note {
       max-width: 720px;
@@ -981,12 +1000,13 @@
       <li><a href="#problem">The Problem</a></li>
       <li><a href="#solution">How It Helps</a></li>
       <li><a href="#how">How It Works</a></li>
+      <li><a href="#video">Watch</a></li>
       <li><a href="#demo">Demo</a></li>
       <li><a href="https://github.com/pavancharak/parmana-trust-core" target="_blank" rel="noopener" class="nav-gh">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:inline;vertical-align:-2px;margin-right:5px"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
         Open Source
       </a></li>
-      <li><a href="#cta" class="nav-cta">Get Started</a></li>
+      <li><a href="https://www.linkedin.com/in/pavancharak/" target="_blank" rel="noopener" class="nav-cta">Get Started</a></li>
     </ul>
   </nav>
 
@@ -1046,7 +1066,7 @@
           <p class="section-eyebrow">Closing the Gap</p>
           <h2>A direct link between human decisions and AI actions.</h2>
           <p>
-            Parmana creates a connection between what an organization approves and what its AI systems actually carry out so nothing happens without a corresponding decision.
+            Parmana creates a connection between what an organization approves and what its AI systems actually carry out — so nothing happens without a corresponding decision.
           </p>
           <ul class="benefits-list">
             <li>Keep AI actions aligned with human decisions</li>
@@ -1066,7 +1086,7 @@
         <p class="section-eyebrow">Core Principle</p>
         <h2>AI may be unpredictable. <em>Execution should not be.</em></h2>
         <p>
-          AI can generate many possible actions. Parmana helps ensure that only approved actions are executed so organizations can confidently deploy AI without losing control of what it does.
+          AI can generate many possible actions. Parmana helps ensure that only approved actions are executed — so organizations can confidently deploy AI without losing control of what it does.
         </p>
       </div>
     </div>
@@ -1119,6 +1139,25 @@
     </div>
   </section>
 
+  <!-- VIDEO -->
+  <section id="video" style="background:var(--ink-mid);border-top:1px solid var(--border-dark);border-bottom:1px solid var(--border-dark);padding:5rem 2rem;">
+    <div class="section-inner">
+      <div class="reveal" style="margin-bottom:2.5rem;">
+        <p class="section-eyebrow">Watch It Work</p>
+        <h2 style="font-family:'DM Serif Display',serif;font-size:clamp(1.75rem,3vw,2.75rem);font-weight:400;color:var(--cream);">See Parmana in action.</h2>
+      </div>
+      <div class="reveal video-frame">
+        <iframe
+          src="https://www.youtube.com/embed/JApDNQ9S5MY"
+          title="Parmana — See It In Action"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
   <!-- DEMO -->
   <section id="demo">
     <div class="section-inner">
@@ -1167,7 +1206,7 @@
 
       <div class="oss-note reveal">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;opacity:0.6"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        <span>This demo runs real code from <a href="https://github.com/pavancharak/parmana-trust-core" target="_blank" rel="noopener" class="oss-link">github.com/pavancharak/parmana-trust-core</a> open source, MIT licensed.</span>
+        <span>This demo runs real code from <a href="https://github.com/pavancharak/parmana-trust-core" target="_blank" rel="noopener" class="oss-link">github.com/pavancharak/parmana-trust-core</a> — open source, MIT licensed.</span>
       </div>
 
       <div class="demo-shell reveal">
@@ -1194,7 +1233,7 @@
     <div class="section-inner reveal">
       <h2>Trust AI Execution</h2>
       <p>Ensure AI systems do what humans decide.</p>
-      <a href="mailto:hello@parmana.systems" class="btn-primary">Get Started</a>
+      <a href="https://www.linkedin.com/in/pavancharak/" target="_blank" rel="noopener" class="btn-primary">Get Started</a>
     </div>
   </section>
 
