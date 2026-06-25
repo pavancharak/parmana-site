@@ -1,546 +1,1463 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Parmana , Execution Authority Infrastructure for AI Systems. Every autonomous action verified, authorized, and cryptographically attested before execution.">
-<title>Parmana Systems</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --ink:#12121f;
-  --ink2:#1e1e30;
-  --ink3:#2a2a40;
-  --saffron:#E8872A;
-  --saffron-dim:#c97020;
-  --cream:#F7F3ED;
-  --cream2:#EDE8E0;
-  --warm:#8A8680;
-  --ghost:rgba(255,255,255,0.06);
-  --ghost2:rgba(255,255,255,0.12);
-  --serif:'DM Serif Display',Georgia,serif;
-  --sans:'Inter',-apple-system,sans-serif;
-  --mono:'IBM Plex Mono',monospace;
-}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parmana — Human Authority for AI Execution</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 48px;display:flex;align-items:center;justify-content:space-between;background:rgba(18,18,31,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06)}
-.nav-logo{font-family:var(--serif);font-size:20px;color:var(--cream);letter-spacing:-0.3px}
-.nav-logo span{color:var(--saffron)}
-.nav-links{display:flex;gap:32px;list-style:none}
-.nav-links a{color:rgba(255,255,255,0.55);font-size:14px;text-decoration:none;letter-spacing:0.2px;transition:color .2s}
-.nav-links a:hover{color:var(--cream)}
-.nav-cta{background:var(--saffron);color:var(--ink);font-size:13px;font-weight:600;padding:8px 20px;border-radius:6px;text-decoration:none;letter-spacing:0.2px;transition:background .2s}
-.nav-cta:hover{background:var(--saffron-dim)}
+    :root {
+      --ink: #0A0A0F;
+      --ink-mid: #1C1C26;
+      --cream: #F5F4F0;
+      --cream-dim: #E8E7E2;
+      --amber: #E8631A;
+      --amber-dim: #C45214;
+      --muted: #6B7280;
+      --muted-light: #9CA3AF;
+      --white: #FFFFFF;
+      --border-dark: rgba(255,255,255,0.08);
+      --border-light: rgba(0,0,0,0.08);
+      --gap-red: #EF4444;
+    }
 
-/* HERO */
-.hero{min-height:100vh;background:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 48px 80px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 40%,rgba(232,135,42,0.08) 0%,transparent 70%);pointer-events:none}
-.hero-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--saffron);text-transform:uppercase;margin-bottom:28px;opacity:0.9}
-.hero h1{font-family:var(--serif);font-size:clamp(44px,6vw,76px);color:var(--cream);line-height:1.08;letter-spacing:-1px;max-width:820px;margin-bottom:28px}
-.hero h1 em{font-style:italic;color:var(--saffron)}
-.hero-sub{font-size:18px;color:rgba(247,243,237,0.55);max-width:520px;line-height:1.65;margin-bottom:52px}
-.hero-actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:center;margin-bottom:80px}
-.btn-primary{background:var(--saffron);color:var(--ink);font-weight:600;font-size:15px;padding:14px 32px;border-radius:8px;text-decoration:none;transition:background .2s}
-.btn-primary:hover{background:var(--saffron-dim)}
-.btn-ghost{border:1px solid rgba(255,255,255,0.18);color:rgba(247,243,237,0.75);font-size:15px;padding:14px 32px;border-radius:8px;text-decoration:none;transition:all .2s}
-.btn-ghost:hover{border-color:rgba(255,255,255,0.35);color:var(--cream)}
+    html { scroll-behavior: smooth; }
 
-/* ATTESTATION DEMO CARD */
-.attest-card{background:var(--ink2);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:0;width:100%;max-width:560px;text-align:left;overflow:hidden;font-family:var(--mono);font-size:12px}
-.attest-header{background:var(--ink3);padding:12px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,0.06)}
-.dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.15)}
-.dot.r{background:#E85D5D}.dot.y{background:#E8C15D}.dot.g{background:#5DE88A}
-.attest-title{font-family:var(--sans);font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:1px;margin-left:4px}
-.attest-body{padding:20px 20px 24px}
-.attest-line{display:flex;gap:12px;margin-bottom:8px;line-height:1.5}
-.attest-key{color:rgba(247,243,237,0.35);min-width:140px;flex-shrink:0}
-.attest-val{color:rgba(247,243,237,0.85)}
-.attest-val.hash{color:var(--saffron);word-break:break-all}
-.attest-val.ok{color:#5DE88A}
-.attest-val.dim{color:rgba(247,243,237,0.4)}
-.attest-divider{border:none;border-top:1px solid rgba(255,255,255,0.06);margin:14px 0}
-.pulse-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#5DE88A;margin-right:6px;animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--ink);
+      color: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
 
-/* AUDIO PLAYER */
-.audio-player{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:40px;padding:10px 20px 10px 12px;margin-bottom:48px;width:100%;max-width:380px}
-.audio-play-btn{width:36px;height:36px;border-radius:50%;background:var(--saffron);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--ink);flex-shrink:0;transition:background .2s;padding-left:2px}
-.audio-play-btn:hover{background:var(--saffron-dim)}
-.audio-play-btn svg{display:block}
-.audio-info{flex:1;display:flex;flex-direction:column;gap:6px}
-.audio-label{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;color:rgba(247,243,237,0.4);text-transform:uppercase}
-.audio-progress-wrap{cursor:pointer;padding:4px 0}
-.audio-progress-track{height:2px;background:rgba(255,255,255,0.12);border-radius:2px;overflow:hidden}
-.audio-progress-fill{height:100%;width:0%;background:var(--saffron);border-radius:2px;transition:width .1s linear}
-.audio-time{font-family:var(--mono);font-size:11px;color:rgba(247,243,237,0.35);flex-shrink:0;min-width:32px;text-align:right}
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-dark);
+    }
 
-/* STATS ROW */
-.stats{display:flex;gap:0;justify-content:center;border-top:1px solid rgba(255,255,255,0.06);margin-top:64px;width:100%;max-width:680px}
-.stat{flex:1;padding:20px;text-align:center;border-right:1px solid rgba(255,255,255,0.06)}
-.stat:last-child{border-right:none}
-.stat-num{font-family:var(--serif);font-size:28px;color:var(--cream)}
-.stat-lbl{font-size:11px;color:rgba(247,243,237,0.35);letter-spacing:1px;text-transform:uppercase;margin-top:2px}
+    .nav-logo {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--cream);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
 
-/* SECTION COMMON */
-section{padding:96px 48px}
-.section-label{font-family:var(--mono);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--saffron);margin-bottom:20px}
-.section-h2{font-family:var(--serif);font-size:clamp(32px,4vw,52px);line-height:1.1;letter-spacing:-0.5px;margin-bottom:24px}
-.section-lead{font-size:17px;color:#5a564f;line-height:1.7;max-width:560px}
+    .nav-logo span { color: var(--amber); }
 
-/* PROBLEM SECTION */
-.problem{max-width:1100px;margin:0 auto}
-.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:64px}
-.gap-card{background:white;border:1px solid var(--cream2);border-radius:12px;padding:32px;position:relative}
-.gap-card::before{content:attr(data-n);position:absolute;top:24px;right:24px;font-family:var(--mono);font-size:48px;color:var(--cream2);font-weight:500;line-height:1}
-.gap-card h3{font-family:var(--serif);font-size:22px;margin-bottom:12px;color:var(--ink)}
-.gap-card p{font-size:15px;color:#6a6560;line-height:1.65}
-.gap-big{background:var(--ink);color:var(--cream);border-radius:12px;padding:40px;grid-column:1/-1}
-.gap-big-label{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--saffron);margin-bottom:16px}
-.gap-big h3{font-family:var(--serif);font-size:30px;margin-bottom:16px;color:var(--cream)}
-.gap-big p{font-size:16px;color:rgba(247,243,237,0.6);line-height:1.7;max-width:640px}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
 
-/* HOW IT WORKS */
-.how{background:var(--ink);padding:96px 48px}
-.how-inner{max-width:1100px;margin:0 auto}
-.flow-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:64px;position:relative}
-.flow-step{text-align:center;padding:0 12px;position:relative}
-.flow-step:not(:last-child)::after{content:'→';position:absolute;right:-10px;top:28px;color:var(--saffron);font-size:18px;opacity:0.5}
-.step-circle{width:56px;height:56px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:22px;transition:all .3s}
-.flow-step:hover .step-circle{border-color:var(--saffron)}
-.step-name{font-size:13px;font-weight:500;color:var(--cream);margin-bottom:6px}
-.step-desc{font-size:12px;color:rgba(247,243,237,0.4);line-height:1.5}
-.principles-grid{margin-top:64px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
-.principle{border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:28px}
-.principle-label{font-family:var(--mono);font-size:10px;letter-spacing:2px;color:var(--saffron);margin-bottom:12px}
-.principle h3{font-size:15px;font-weight:500;color:var(--cream);margin-bottom:8px}
-.principle p{font-size:13px;color:rgba(247,243,237,0.4);line-height:1.6}
+    .nav-links a {
+      color: var(--muted-light);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
 
-/* USE CASES */
-.usecases{max-width:1100px;margin:0 auto}
-.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
-.case-card{border:1px solid var(--cream2);border-radius:12px;padding:32px;background:white;transition:border-color .2s,transform .2s}
-.case-card:hover{border-color:#ccc;transform:translateY(-2px)}
-.case-icon{width:44px;height:44px;border-radius:10px;background:var(--ink);display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:20px}
-.case-card h3{font-family:var(--serif);font-size:20px;margin-bottom:10px}
-.case-card p{font-size:14px;color:#6a6560;line-height:1.65}
-.case-tag{display:inline-block;margin-top:16px;font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--saffron);background:#fdf1e4;padding:4px 10px;border-radius:4px}
+    .nav-links a:hover { color: var(--cream); }
 
-/* LIVE DEMO */
-.demo-section{background:var(--ink2);padding:96px 48px}
-.demo-inner{max-width:760px;margin:0 auto;text-align:center}
-.demo-box{background:var(--ink);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:32px;text-align:left;margin-top:48px}
-.demo-input-row{display:flex;gap:12px;margin-bottom:24px;flex-wrap:wrap}
-.demo-input{flex:1;min-width:200px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 16px;color:var(--cream);font-family:var(--sans);font-size:14px;outline:none}
-.demo-input:focus{border-color:var(--saffron)}
-.demo-select{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 16px;color:rgba(247,243,237,0.7);font-family:var(--sans);font-size:14px;outline:none;cursor:pointer}
-.demo-btn{background:var(--saffron);color:var(--ink);border:none;border-radius:8px;padding:12px 24px;font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap;transition:background .2s}
-.demo-btn:hover{background:var(--saffron-dim)}
-.demo-output{font-family:var(--mono);font-size:12px;border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;min-height:40px}
-.demo-out-line{display:flex;gap:10px;margin-bottom:6px;opacity:0;transition:opacity .4s;flex-wrap:wrap}
-.demo-out-line.show{opacity:1}
-.demo-ts{color:rgba(247,243,237,0.25);min-width:80px}
-.demo-stage{min-width:100px}
-.stage-init{color:#5DCAA5}
-.stage-eval{color:#FAC775}
-.stage-sign{color:var(--saffron)}
-.stage-ok{color:#5DE88A}
-.demo-msg{color:rgba(247,243,237,0.7);word-break:break-all}
+    .nav-cta {
+      background: var(--amber);
+      color: var(--white) !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 500 !important;
+      font-size: 0.875rem;
+      transition: background 0.2s !important;
+    }
 
-/* CTA */
-.cta-section{background:var(--ink);padding:120px 48px;text-align:center}
-.cta-devanagari{font-family:var(--serif);font-size:42px;color:rgba(247,243,237,0.1);letter-spacing:4px;margin-bottom:16px}
-.cta-section h2{font-family:var(--serif);font-size:clamp(36px,5vw,60px);color:var(--cream);max-width:640px;margin:0 auto 20px;letter-spacing:-0.5px;line-height:1.1}
-.cta-section p{font-size:17px;color:rgba(247,243,237,0.45);max-width:420px;margin:0 auto 48px}
-.cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    .nav-cta:hover { background: var(--amber-dim) !important; color: var(--white) !important; }
 
-/* FOOTER */
-footer{background:var(--ink2);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.06);flex-wrap:wrap;gap:20px}
-.footer-logo{font-family:var(--serif);font-size:18px;color:rgba(247,243,237,0.5)}
-.footer-logo span{color:var(--saffron)}
-.footer-links{display:flex;gap:24px}
-.footer-links a{font-size:13px;color:rgba(247,243,237,0.3);text-decoration:none;transition:color .2s}
-.footer-links a:hover{color:rgba(247,243,237,0.6)}
-.footer-copy{font-size:12px;color:rgba(247,243,237,0.2);font-family:var(--mono)}
+    .nav-gh {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--muted-light) !important;
+      border: 1px solid var(--border-dark);
+      padding: 0.35rem 0.85rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s !important;
+    }
+    .nav-gh:hover { border-color: rgba(255,255,255,0.2); color: var(--cream) !important; }
 
-@media(max-width:768px){
-  nav{padding:16px 24px}
-  .nav-links{display:none}
-  section{padding:72px 24px}
-  .problem-grid{grid-template-columns:1fr}
-  .flow-steps{grid-template-columns:1fr 1fr;gap:24px}
-  .flow-step:not(:last-child)::after{display:none}
-  .cases-grid{grid-template-columns:1fr}
-  .principles-grid{grid-template-columns:1fr}
-  .hero{padding:100px 24px 60px}
-  .hero h1{font-size:38px}
-  .stats{flex-wrap:wrap}
-  .stat{min-width:50%}
-  footer{flex-direction:column;text-align:center}
-}
-</style>
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 6rem;
+      position: relative;
+      background: var(--ink);
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(ellipse at center, rgba(232,99,26,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.1s forwards;
+    }
+
+    h1.hero-headline {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      max-width: 820px;
+      color: var(--cream);
+      margin-bottom: 1.75rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.25s forwards;
+    }
+
+    h1.hero-headline em {
+      font-style: italic;
+      color: var(--amber);
+    }
+
+    .hero-sub {
+      font-size: 1.125rem;
+      font-weight: 300;
+      line-height: 1.65;
+      color: var(--muted-light);
+      max-width: 580px;
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.4s forwards;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.55s forwards;
+    }
+
+    .btn-primary {
+      background: var(--amber);
+      color: var(--white);
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { background: var(--amber-dim); transform: translateY(-1px); }
+
+    .btn-ghost {
+      color: var(--muted-light);
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      font-size: 0.9375rem;
+      font-weight: 400;
+      text-decoration: none;
+      border: 1px solid var(--border-dark);
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.2); color: var(--cream); }
+
+    /* SECTIONS */
+    section {
+      padding: 7rem 2rem;
+    }
+
+    .section-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .section-eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1.25rem;
+    }
+
+    /* PROBLEM */
+    #problem {
+      background: var(--ink-mid);
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .problem-text h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--cream);
+      margin-bottom: 1.5rem;
+    }
+
+    .problem-text p {
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      color: var(--muted-light);
+      max-width: 460px;
+    }
+
+    /* GAP DIAGRAM */
+    .gap-diagram {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+
+    .gap-node {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border-dark);
+      border-radius: 10px;
+      padding: 1.1rem 2.2rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--cream);
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .gap-arrow {
+      width: 2px;
+      height: 32px;
+      background: var(--border-dark);
+      position: relative;
+    }
+
+    .gap-arrow::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid rgba(255,255,255,0.12);
+    }
+
+    .gap-gap {
+      border: 1.5px dashed var(--gap-red);
+      border-radius: 10px;
+      padding: 1.1rem 2.2rem;
+      font-size: 0.8rem;
+      color: var(--gap-red);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      position: relative;
+      background: rgba(239,68,68,0.06);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      animation: pulse-border 2.5s ease-in-out infinite;
+    }
+
+    .gap-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gap-red);
+      animation: blink 1.4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-border {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0); }
+      50% { box-shadow: 0 0 0 6px rgba(239,68,68,0.08); }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .gap-label {
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+      letter-spacing: 0.04em;
+    }
+
+    /* SOLUTION */
+    #solution {
+      background: var(--ink);
+    }
+
+    .solution-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .solution-text h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--cream);
+      margin-bottom: 1.5rem;
+    }
+
+    .solution-text p {
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      color: var(--muted-light);
+      margin-bottom: 2.5rem;
+    }
+
+    .benefits-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .benefits-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.9375rem;
+      color: var(--muted-light);
+      line-height: 1.5;
+    }
+
+    .benefits-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--amber);
+      margin-top: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    /* SOLVED DIAGRAM */
+    .solved-diagram {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .solved-node {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border-dark);
+      border-radius: 10px;
+      padding: 1.1rem 2.2rem;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--cream);
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .solved-node.parmana-node {
+      border-color: var(--amber);
+      background: rgba(232,99,26,0.1);
+      color: var(--amber);
+    }
+
+    .solved-arrow {
+      width: 2px;
+      height: 28px;
+      background: var(--amber);
+      opacity: 0.4;
+      position: relative;
+    }
+
+    .solved-arrow::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid rgba(232,99,26,0.4);
+    }
+
+    /* PRINCIPLE */
+    #principle {
+      background: var(--cream);
+      color: var(--ink);
+    }
+
+    #principle .section-eyebrow { color: var(--amber); }
+
+    .principle-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .principle-inner h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+
+    .principle-inner h2 em {
+      font-style: italic;
+      color: var(--amber);
+    }
+
+    .principle-inner p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: #4B5563;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    /* HOW IT WORKS */
+    #how {
+      background: var(--ink-mid);
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    #how h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.75rem, 3vw, 2.75rem);
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 3.5rem;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 640px;
+    }
+
+    .step {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: calc(1.5rem - 1px);
+      top: 3rem;
+      bottom: -1rem;
+      width: 2px;
+      background: var(--border-dark);
+    }
+
+    .step-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--amber);
+      letter-spacing: 0.08em;
+      background: rgba(232,99,26,0.12);
+      border: 1px solid rgba(232,99,26,0.25);
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-body {
+      padding: 0.25rem 0 2.5rem;
+    }
+
+    .step-title {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--cream);
+      margin-bottom: 0.4rem;
+    }
+
+    .step-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* FINAL CTA */
+    #cta {
+      background: var(--ink);
+      text-align: center;
+      border-top: 1px solid var(--border-dark);
+    }
+
+    #cta h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 1rem;
+    }
+
+    #cta p {
+      font-size: 1.125rem;
+      color: var(--muted-light);
+      margin-bottom: 2.5rem;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border-dark);
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.875rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-logo span { color: var(--amber); }
+
+    .footer-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 0 1.25rem; }
+      .nav-links { display: none; }
+      section { padding: 5rem 1.25rem; }
+      .problem-grid,
+      .solution-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .gap-diagram,
+      .solved-diagram { order: -1; }
+      footer { flex-direction: column; gap: 0.75rem; text-align: center; }
+    }
+
+    /* DEMO SECTION */
+    #demo {
+      background: var(--ink);
+      border-top: 1px solid var(--border-dark);
+    }
+
+    #demo h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.75rem, 3vw, 2.75rem);
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 0.75rem;
+    }
+
+    #demo .demo-sub {
+      font-size: 0.9375rem;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+    }
+
+    .demo-shell {
+      background: #0D0D12;
+      border: 1px solid var(--border-dark);
+      border-radius: 12px;
+      overflow: hidden;
+      max-width: 720px;
+    }
+
+    .demo-titlebar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-dark);
+      background: #111118;
+    }
+
+    .demo-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+    }
+    .demo-dot.r { background: #FF5F57; }
+    .demo-dot.y { background: #FEBC2E; }
+    .demo-dot.g { background: #28C840; }
+
+    .demo-title-text {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      flex: 1;
+      text-align: center;
+    }
+
+    .demo-body {
+      padding: 1.5rem;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.8rem;
+      line-height: 1.7;
+      min-height: 320px;
+    }
+
+    .demo-run-btn {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      padding: 0.55rem 1.25rem;
+      border-radius: 6px;
+      border: 1px solid rgba(232,99,26,0.35);
+      background: rgba(232,99,26,0.08);
+      color: var(--amber);
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .demo-run-btn:hover { background: rgba(232,99,26,0.15); border-color: rgba(232,99,26,0.6); }
+    .demo-run-btn:disabled { opacity: 0.4; cursor: default; }
+
+    /* step row */
+    .d-step-row {
+      display: flex;
+      gap: 0;
+      align-items: stretch;
+      margin-bottom: 4px;
+      opacity: 0;
+      animation: dFadeUp 0.3s ease forwards;
+    }
+    @keyframes dFadeUp {
+      from { opacity: 0; transform: translateY(-5px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    .d-step-col {
+      width: 28px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .d-circle {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 9px; color: var(--muted);
+      flex-shrink: 0;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .d-circle.running { border-color: var(--amber); color: var(--amber); animation: dBlink 0.8s ease-in-out infinite; }
+    .d-circle.done { background: #1D9E75; border-color: #1D9E75; color: #fff; font-size: 10px; }
+    .d-circle.done::after { content: '✓'; }
+    @keyframes dBlink { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+    .d-connector {
+      width: 1px;
+      background: rgba(255,255,255,0.06);
+      flex: 1;
+      min-height: 6px;
+      margin: 2px auto 0;
+    }
+
+    .d-body {
+      flex: 1;
+      padding: 0 0 10px 10px;
+      min-width: 0;
+    }
+
+    .d-label {
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 1px 0 4px;
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    .d-badge {
+      font-size: 0.6rem;
+      padding: 1px 6px;
+      border-radius: 3px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .d-badge.ok { background: rgba(29,158,117,0.18); color: #1D9E75; animation: dApproved 0.3s ease; }
+    @keyframes dApproved { from{transform:scale(.85);opacity:0} to{transform:scale(1);opacity:1} }
+
+    .d-data {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 6px;
+      padding: 8px 10px;
+      font-size: 0.72rem;
+      line-height: 1.75;
+      color: var(--muted);
+      display: none;
+    }
+    .d-data.show { display: block; animation: dFadeUp 0.25s ease; }
+
+    .dk { color: var(--muted); }
+    .dv-str { color: #7EB8A4; }
+    .dv-id  { color: #6A9FCA; font-size: 0.67rem; }
+    .dv-ok  { color: #1D9E75; font-weight: 500; }
+    .dv-hash{ color: #C8963A; font-size: 0.67rem; font-family: 'IBM Plex Mono', monospace; }
+    .dv-sys { color: var(--amber); }
+    .dv-match { color: #1D9E75; }
+
+    .d-chip-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+    .d-chip {
+      font-size: 0.65rem;
+      padding: 2px 7px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 3px;
+      color: var(--muted-light);
+      background: rgba(255,255,255,0.03);
+    }
+    .d-chip .dk { color: rgba(255,255,255,0.3); }
+
+    .d-chain-bar {
+      display: flex;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 6px;
+    }
+    .d-seg {
+      flex: 1;
+      padding: 5px 6px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.06);
+      font-size: 0.62rem;
+      color: var(--muted);
+      background: rgba(255,255,255,0.02);
+    }
+    .d-seg:last-child { border-right: none; }
+    .d-seg .dl { display: block; color: rgba(255,255,255,0.2); font-size: 0.58rem; margin-bottom: 1px; }
+    .d-seg.lit { background: rgba(29,158,117,0.08); }
+    .d-seg.lit .dl { color: rgba(29,158,117,0.5); }
+    .d-seg.lit span:last-child { color: #1D9E75; }
+
+    .d-final {
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      border: 1px solid rgba(29,158,117,0.3);
+      background: rgba(29,158,117,0.08);
+      font-size: 0.72rem;
+      color: #1D9E75;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      animation: dApproved 0.35s ease;
+    }
+    .d-final.show { display: flex; }
+
+    .d-hash-cmp { margin-top: 6px; font-size: 0.65rem; line-height: 1.9; }
+    .d-hrow { display: flex; align-items: center; gap: 6px; }
+    .d-hlabel { color: rgba(255,255,255,0.2); width: 72px; flex-shrink: 0; }
+    .d-hval { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: var(--muted); }
+    .d-hval.match { color: #1D9E75; }
+
+    /* DEMO CONTROLS */
+    .demo-controls {
+      max-width: 720px;
+      margin-bottom: 1.5rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border-dark);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+    }
+    .demo-controls-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .demo-fields { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .demo-field { display: flex; flex-direction: column; gap: 5px; }
+    .demo-field-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.62rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .demo-field-input-wrap { position: relative; display: flex; align-items: center; }
+    .demo-field-prefix {
+      position: absolute; left: 9px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.75rem; color: var(--muted); pointer-events: none;
+    }
+    .demo-field-input {
+      font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px; color: var(--cream);
+      padding: 6px 10px; outline: none;
+      transition: border-color 0.2s, color 0.2s;
+      -moz-appearance: textfield;
+    }
+    .demo-field-input:focus { border-color: rgba(232,99,26,0.5); }
+    .demo-field-input::-webkit-outer-spin-button,
+    .demo-field-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+    #f-amount { padding-left: 22px; width: 110px; }
+    #f-recipient { width: 160px; }
+    #f-currency { width: 90px; cursor: pointer; }
+    .demo-field-input.tampered { border-color: rgba(239,68,68,0.5) !important; color: #EF4444; }
+
+    .demo-preset-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 1rem; }
+    .demo-preset-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: var(--muted); letter-spacing: 0.06em; }
+    .demo-preset-btn {
+      font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem;
+      padding: 4px 10px; border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: transparent; color: var(--muted-light);
+      cursor: pointer; transition: border-color 0.15s, color 0.15s, background 0.15s;
+      letter-spacing: 0.04em;
+    }
+    .demo-preset-btn:hover { border-color: rgba(255,255,255,0.25); color: var(--cream); background: rgba(255,255,255,0.04); }
+    .demo-preset-btn.p-clean { border-color: rgba(29,158,117,0.5); color: #1D9E75; background: rgba(29,158,117,0.06); }
+    .demo-preset-btn.p-tamper { border-color: rgba(239,68,68,0.4); color: #EF4444; background: rgba(239,68,68,0.06); }
+
+    .demo-hint {
+      display: flex; align-items: center; gap: 8px;
+      font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem;
+      color: #1D9E75; transition: color 0.3s;
+    }
+    .demo-hint.bad { color: #EF4444; }
+    .demo-hint-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #1D9E75; flex-shrink: 0;
+      animation: hintPulse 2s ease-in-out infinite;
+      transition: background 0.3s;
+    }
+    .demo-hint.bad .demo-hint-dot { background: #EF4444; animation: none; }
+    @keyframes hintPulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+    /* tamper/error states */
+    .d-circle.err { background: #E24B4A; border-color: #E24B4A; color: #fff; font-size: 10px; }
+    .d-circle.err::after { content: '✕'; }
+    .d-badge.fail { background: rgba(226,75,74,0.18); color: #E24B4A; }
+    .d-error-block {
+      background: rgba(226,75,74,0.06); border: 1px solid rgba(226,75,74,0.25);
+      border-radius: 6px; padding: 10px 12px;
+      font-size: 0.72rem; color: #E24B4A; line-height: 1.7; display: none;
+    }
+    .d-error-block.show { display: block; animation: dFadeUp 0.25s ease; }
+    .d-error-title { font-weight: 500; font-size: 0.75rem; margin-bottom: 4px; }
+    .d-error-detail { color: rgba(226,75,74,0.65); font-size: 0.65rem; }
+    .d-final-fail {
+      margin-top: 10px; padding: 10px 14px; border-radius: 6px;
+      border: 1px solid rgba(226,75,74,0.3); background: rgba(226,75,74,0.07);
+      font-size: 0.72rem; color: #E24B4A;
+      display: none; align-items: flex-start; gap: 10px;
+      animation: dApproved 0.35s ease;
+    }
+    .d-final-fail.show { display: flex; }
+
+    /* OSS NOTE */
+    .oss-note {
+      max-width: 720px;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .oss-link {
+      color: var(--amber);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(232,99,26,0.3);
+      transition: border-color 0.2s;
+    }
+    .oss-link:hover { border-color: var(--amber); }
+
+    /* DARK MODE (default is already dark — light mode system override) */
+    @media (prefers-color-scheme: light) {
+      /* intentionally left dark for brand consistency */
+    }
+  </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">Par<span>m</span>ana</div>
-  <ul class="nav-links">
-    <li><a href="#problem">Problem</a></li>
-    <li><a href="#how">How it works</a></li>
-    <li><a href="#usecases">Use cases</a></li>
-    <li><a href="#demo">Demo</a></li>
-  </ul>
-  <a href="https://docs.manthan.systems" class="nav-cta">Read the docs</a>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#">प्र<span>·</span>Parmana</a>
+    <ul class="nav-links">
+      <li><a href="#problem">The Problem</a></li>
+      <li><a href="#solution">How It Helps</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="https://github.com/pavancharak/parmana-trust-core" target="_blank" rel="noopener" class="nav-gh">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:inline;vertical-align:-2px;margin-right:5px"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        Open Source
+      </a></li>
+      <li><a href="#cta" class="nav-cta">Get Started</a></li>
+    </ul>
+  </nav>
 
-<!-- HERO -->
-<section class="hero" id="top">
-  <div class="hero-eyebrow">प्रमाण · Execution Authority Infrastructure</div>
-  <h1>AI has intelligence.<br>Humans have <em>authority</em>.</h1>
-  <p class="hero-sub">Parmana verifies every autonomous action against human-defined policy before execution and creates cryptographic proof it happened.</p>
-  <div class="hero-actions">
-    <a href="#demo" class="btn-primary">See it live</a>
-    <a href="https://docs.manthan.systems" class="btn-ghost">Read the docs →</a>
-  </div>
+  <!-- HERO -->
+  <section id="hero">
+    <p class="hero-eyebrow">Human Authority for AI Execution</p>
+    <h1 class="hero-headline">
+      Parmana ensures there is no gap between what humans<em> decide</em> and what AI systems<em> do.</em>
+    </h1>
+    <p class="hero-sub">
+      As AI systems gain the ability to take actions, organizations need confidence that those actions match approved decisions. Parmana makes that possible.
+    </p>
+    <div class="hero-actions">
+      <a href="#how" class="btn-primary">See How It Works</a>
+      <a href="#demo" class="btn-ghost">View Demo</a>
+    </div>
+  </section>
 
-  <!-- AUDIO PLAYER -->
-  <div class="audio-player" id="audio-player">
-    <button class="audio-play-btn" id="audio-play-btn" onclick="toggleAudio()" aria-label="Play pitch">
-      <svg id="icon-play" width="16" height="16" viewBox="0 0 16 16" fill="none">
-        <polygon points="4,2 14,8 4,14" fill="currentColor"/>
-      </svg>
-      <svg id="icon-pause" width="16" height="16" viewBox="0 0 16 16" fill="none" style="display:none">
-        <rect x="3" y="2" width="4" height="12" rx="1" fill="currentColor"/>
-        <rect x="9" y="2" width="4" height="12" rx="1" fill="currentColor"/>
-      </svg>
-    </button>
-    <div class="audio-info">
-      <div class="audio-label">Founder pitch · Hindi</div>
-      <div class="audio-progress-wrap" onclick="seekAudio(event)" id="audio-progress-wrap">
-        <div class="audio-progress-track">
-          <div class="audio-progress-fill" id="audio-progress-fill"></div>
+  <!-- PROBLEM -->
+  <section id="problem">
+    <div class="section-inner">
+      <div class="problem-grid">
+        <div class="problem-text reveal">
+          <p class="section-eyebrow">The Problem</p>
+          <h2>Decisions are tracked. Actions are not.</h2>
+          <p>
+            Organizations can usually see who approved a decision and when it was approved. What is often missing is proof that AI actually did what was approved.
+          </p>
+        </div>
+        <div class="gap-diagram reveal">
+          <div class="gap-node">Humans Decide</div>
+          <div class="gap-arrow"></div>
+          <div class="gap-gap">
+            <span class="gap-dot"></span>
+            No connection
+          </div>
+          <p class="gap-label">What happens in between?</p>
+          <div class="gap-arrow"></div>
+          <div class="gap-node">AI Executes</div>
         </div>
       </div>
     </div>
-    <div class="audio-time" id="audio-time">0:00</div>
-    <audio id="audio-el" src="PARMANA.mp3" preload="metadata"></audio>
-  </div>
+  </section>
 
-  <div class="attest-card">
-    <div class="attest-header">
-      <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
-      <span class="attest-title">ATTESTATION RECEIPT</span>
-    </div>
-    <div class="attest-body">
-      <div class="attest-line"><span class="attest-key">action</span><span class="attest-val">transfer · ₹4,80,000 → Vendor A</span></div>
-      <div class="attest-line"><span class="attest-key">agent_id</span><span class="attest-val dim">pmt-agent-0x91f2</span></div>
-      <div class="attest-line"><span class="attest-key">policy_version</span><span class="attest-val dim">v3.2.1</span></div>
-      <div class="attest-line"><span class="attest-key">timestamp</span><span class="attest-val dim" id="live-ts">—</span></div>
-      <hr class="attest-divider">
-      <div class="attest-line"><span class="attest-key">decision</span><span class="attest-val ok">● AUTHORIZED</span></div>
-      <div class="attest-line"><span class="attest-key">attestation_hash</span><span class="attest-val hash" id="live-hash">computing…</span></div>
-      <div class="attest-line"><span class="attest-key">status</span><span class="attest-val"><span class="pulse-dot"></span>verified independently</span></div>
-    </div>
-  </div>
-
-  <div class="stats">
-    <div class="stat"><div class="stat-num">&lt; 4ms</div><div class="stat-lbl">Verification latency</div></div>
-    <div class="stat"><div class="stat-num">Ed25519</div><div class="stat-lbl">Signature scheme</div></div>
-    <div class="stat"><div class="stat-num">100%</div><div class="stat-lbl">Actions attested</div></div>
-    <div class="stat"><div class="stat-num">On-prem</div><div class="stat-lbl">Deploy anywhere</div></div>
-  </div>
-</section>
-
-<!-- PROBLEM -->
-<section id="problem" style="background:var(--cream)">
-  <div class="problem">
-    <div class="section-label">The gap</div>
-    <h2 class="section-h2">AI can act. But who authorized it?</h2>
-    <p class="section-lead">Organizations can define policies, manage identities, and log actions after the fact. What they can't do today is verify — before execution that a specific autonomous action was explicitly authorized.</p>
-
-    <div class="problem-grid">
-      <div class="gap-card" data-n="01">
-        <h3>Policy exists. Enforcement doesn't.</h3>
-        <p>You have approval workflows and governance policies. But when an AI agent triggers a payment or procurement action, there is no layer that checks authorization before execution happens.</p>
-      </div>
-      <div class="gap-card" data-n="02">
-        <h3>Human approval doesn't scale.</h3>
-        <p>At low volumes, human-in-the-loop works. At scale, it becomes a bottleneck adding latency, cost, and human error to every automated action.</p>
-      </div>
-      <div class="gap-card" data-n="03">
-        <h3>Logs aren't proof.</h3>
-        <p>Audit logs tell you what happened. They don't prove the action was authorized at the moment of execution, or that the record hasn't been altered since.</p>
-      </div>
-      <div class="gap-card" data-n="04">
-        <h3>Regulators are watching.</h3>
-        <p>RBI, IRDAI, and SEBI are moving toward mandating explainability for automated decisions. "The AI did it" is not a compliance answer.</p>
-      </div>
-      <div class="gap-big">
-        <div class="gap-big-label">The trust gap</div>
-        <h3>The missing layer between AI and execution</h3>
-        <p>Today's stack goes from policy definition straight to action execution. The enforcement layer the one that verifies authority in real time and creates independent proof doesn't exist yet. That's what Parmana builds.</p>
+  <!-- SOLUTION -->
+  <section id="solution">
+    <div class="section-inner">
+      <div class="solution-grid">
+        <div class="solved-diagram reveal">
+          <div class="solved-node">Humans Decide</div>
+          <div class="solved-arrow"></div>
+          <div class="solved-node parmana-node">Parmana</div>
+          <div class="solved-arrow"></div>
+          <div class="solved-node">AI Executes</div>
+        </div>
+        <div class="solution-text reveal">
+          <p class="section-eyebrow">Closing the Gap</p>
+          <h2>A direct link between human decisions and AI actions.</h2>
+          <p>
+            Parmana creates a connection between what an organization approves and what its AI systems actually carry out — so nothing happens without a corresponding decision.
+          </p>
+          <ul class="benefits-list">
+            <li>Keep AI actions aligned with human decisions</li>
+            <li>Prevent unauthorized actions before they happen</li>
+            <li>Verify what was approved and what was executed</li>
+            <li>Create confidence in AI-powered operations</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- HOW IT WORKS -->
-<section class="how" id="how">
-  <div class="how-inner">
-    <div class="section-label">The mechanism</div>
-    <h2 class="section-h2" style="color:var(--cream)">Verify before execute.<br>Attest every decision.</h2>
-    <p class="section-lead" style="color:rgba(247,243,237,0.45)">Parmana sits between AI-generated signals and your execution systems. Authority is defined once by humans. Verification happens automatically, at any scale.</p>
-
-    <div class="flow-steps">
-      <div class="flow-step">
-        <div class="step-circle"></div>
-        <div class="step-name">AI Agent</div>
-        <div class="step-desc">Generates an action signal with context and intent</div>
-      </div>
-      <div class="flow-step">
-        <div class="step-circle">📡</div>
-        <div class="step-name">Signal received</div>
-        <div class="step-desc">Parmana intercepts before any execution occurs</div>
-      </div>
-      <div class="flow-step">
-        <div class="step-circle" style="border-color:var(--saffron)">⚖️</div>
-        <div class="step-name" style="color:var(--saffron)">Policy check</div>
-        <div class="step-desc" style="color:rgba(247,243,237,0.6)">Evaluated against human-defined authority rules</div>
-      </div>
-      <div class="flow-step">
-        <div class="step-circle"></div>
-        <div class="step-name">Attestation</div>
-        <div class="step-desc">Cryptographic receipt generated — immutable, independently verifiable</div>
-      </div>
-      <div class="flow-step">
-        <div class="step-circle"></div>
-        <div class="step-name">Execution</div>
-        <div class="step-desc">Action proceeds only if authorized. Receipt stored outside the system.</div>
+  <!-- PRINCIPLE -->
+  <section id="principle">
+    <div class="section-inner">
+      <div class="principle-inner reveal">
+        <p class="section-eyebrow">Core Principle</p>
+        <h2>AI may be unpredictable. <em>Execution should not be.</em></h2>
+        <p>
+          AI can generate many possible actions. Parmana helps ensure that only approved actions are executed — so organizations can confidently deploy AI without losing control of what it does.
+        </p>
       </div>
     </div>
+  </section>
 
-    <div class="principles-grid">
-      <div class="principle">
-        <div class="principle-label">Separation</div>
-        <h3>AI does not authorize itself</h3>
-        <p>The agent that requests an action is never the authority that approves it. Hard architectural separation enforced at the infrastructure level.</p>
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <div class="section-inner">
+      <div class="reveal">
+        <p class="section-eyebrow">How It Works</p>
+        <h2>Five steps, no surprises.</h2>
       </div>
-      <div class="principle">
-        <div class="principle-label">Independence</div>
-        <h3>Proof lives outside the system</h3>
-        <p>Attestations are stored independently. Verification requires no access to the system that created the decision.</p>
-      </div>
-      <div class="principle">
-        <div class="principle-label">Scale</div>
-        <h3>Define once, enforce always</h3>
-        <p>Authority rules are written by humans once. Parmana enforces them automatically across every subsequent action no bottlenecks.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- USE CASES -->
-<section id="usecases" style="background:var(--cream)">
-  <div class="usecases">
-    <div class="section-label">Where it runs</div>
-    <h2 class="section-h2">Built for consequential automation</h2>
-    <p class="section-lead">Parmana starts where the stakes are highest AI-triggered payments and expands across any domain where automated actions require verifiable authority.</p>
-
-    <div class="cases-grid">
-      <div class="case-card">
-        <div class="case-icon"></div>
-        <h3>AI Payment Systems</h3>
-        <p>Every payment triggered by an AI agent is authorized against policy and attested before settlement. Full audit trail for RBI compliance.</p>
-        <span class="case-tag">Phase 1</span>
-      </div>
-      <div class="case-card">
-        <div class="case-icon"></div>
-        <h3>Procurement &amp; Vendor Approvals</h3>
-        <p>Autonomous procurement agents operate within authority limits. Every vendor approval is verified against spending mandates and attested.</p>
-        <span class="case-tag">Phase 2</span>
-      </div>
-      <div class="case-card">
-        <div class="case-icon"></div>
-        <h3>Enterprise &amp; Government Workflows</h3>
-        <p>Infrastructure changes, policy enforcement, and regulated decisions all verifiably authorized before execution, with independent proof.</p>
-        <span class="case-tag">Phase 3</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LIVE DEMO -->
-<section class="demo-section" id="demo">
-  <div class="demo-inner">
-    <div class="section-label">Live demo</div>
-    <h2 class="section-h2" style="color:var(--cream)">Watch Parmana verify an action</h2>
-    <p class="section-lead" style="color:rgba(247,243,237,0.5);margin:0 auto">Submit an action and watch the authorization and attestation pipeline run in real time.</p>
-
-    <div class="demo-box">
-      <div class="demo-input-row">
-        <input class="demo-input" id="demo-action-input" placeholder="e.g. transfer ₹2,00,000 to Supplier B" value="transfer ₹2,00,000 to Supplier B">
-        <select class="demo-select" id="demo-policy">
-          <option>Payments policy</option>
-          <option>Procurement policy</option>
-          <option>KYC policy</option>
-        </select>
-        <button class="demo-btn" id="demo-run-btn" onclick="runDemo()">Run →</button>
-      </div>
-      <div class="demo-output" id="demo-output">
-        <div style="font-size:11px;color:rgba(247,243,237,0.2);letter-spacing:1px">READY , submit an action above</div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <p class="step-title">Humans make a decision</p>
+            <p class="step-desc">A person or team defines what the AI is allowed to do and under what conditions.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <p class="step-title">The intended action is recorded</p>
+            <p class="step-desc">Parmana captures the approved action before anything is executed.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <p class="step-title">AI attempts execution</p>
+            <p class="step-desc">The AI system moves to carry out the action in the real world.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <p class="step-title">Parmana verifies the action</p>
+            <p class="step-desc">Before anything happens, Parmana checks whether the action matches what was approved.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">05</div>
+          <div class="step-body">
+            <p class="step-title">Approved actions execute</p>
+            <p class="step-desc">If it matches, the action proceeds. If it doesn't, it is stopped. A verifiable record is created either way.</p>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- DEMO -->
+  <section id="demo">
+    <div class="section-inner">
+      <div class="reveal">
+        <p class="section-eyebrow">Live Demo</p>
+        <h2>See it run.</h2>
+        <p class="demo-sub">Set the payment details below, then run. Change the amount or recipient to see Parmana catch the difference before anything executes.</p>
+      </div>
+
+      <!-- Scenario controls -->
+      <div class="demo-controls reveal">
+        <div class="demo-controls-label">Payment details the AI will attempt to send</div>
+        <div class="demo-fields">
+          <div class="demo-field">
+            <label class="demo-field-label" for="f-amount">Amount</label>
+            <div class="demo-field-input-wrap">
+              <span class="demo-field-prefix">₹</span>
+              <input type="number" id="f-amount" class="demo-field-input" value="1000" min="1" />
+            </div>
+          </div>
+          <div class="demo-field">
+            <label class="demo-field-label" for="f-recipient">Recipient</label>
+            <input type="text" id="f-recipient" class="demo-field-input" value="merchant-123" style="padding-left:10px;" />
+          </div>
+          <div class="demo-field">
+            <label class="demo-field-label" for="f-currency">Currency</label>
+            <select id="f-currency" class="demo-field-input" style="padding-left:8px;">
+              <option value="INR">INR</option>
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+            </select>
+          </div>
+        </div>
+        <div class="demo-preset-row">
+          <span class="demo-preset-label">Try:</span>
+          <button class="demo-preset-btn" onclick="setPreset('clean')">Approved payment</button>
+          <button class="demo-preset-btn" onclick="setPreset('amount')">Wrong amount</button>
+          <button class="demo-preset-btn" onclick="setPreset('recipient')">Wrong recipient</button>
+          <button class="demo-preset-btn" onclick="setPreset('both')">Both changed</button>
+        </div>
+        <div class="demo-hint" id="demo-hint">
+          <span class="demo-hint-dot"></span>
+          <span id="demo-hint-text">These values match what was approved. Payment will go through.</span>
+        </div>
+      </div>
+
+      <div class="oss-note reveal">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;opacity:0.6"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        <span>This demo runs real code from <a href="https://github.com/pavancharak/parmana-trust-core" target="_blank" rel="noopener" class="oss-link">github.com/pavancharak/parmana-trust-core</a> — open source, MIT licensed.</span>
+      </div>
+
+      <div class="demo-shell reveal">
+        <div class="demo-titlebar">
+          <span class="demo-dot r"></span>
+          <span class="demo-dot y"></span>
+          <span class="demo-dot g"></span>
+          <span class="demo-title-text"><a href="https://github.com/pavancharak/parmana-trust-core" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.12);padding-bottom:1px;">payment-release-flow.ts</a> — parmana-trust-core</span>
+          <button class="demo-run-btn" id="demo-run-btn" onclick="runDemo()">▶ Run</button>
+        </div>
+        <div class="demo-body" id="demo-body">
+          <div style="color:rgba(255,255,255,0.18);font-size:0.75rem;line-height:1.9;">
+            <span style="color:rgba(232,99,26,0.5)">$</span> npx tsx examples/end-to-end/payment-release-flow.ts<br>
+            <span style="color:rgba(255,255,255,0.1)">——————————————————————————————</span><br>
+            <span style="color:rgba(255,255,255,0.2)">Set payment details above, then press Run →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section id="cta">
+    <div class="section-inner reveal">
+      <h2>Trust AI Execution</h2>
+      <p>Ensure AI systems do what humans decide.</p>
+      <a href="mailto:hello@parmana.systems" class="btn-primary">Get Started</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div style="border-top: 1px solid var(--border-dark);">
+    <footer>
+      <a class="footer-logo" href="#">प्र<span>·</span>Parmana</a>
+      <div style="display:flex;align-items:center;gap:1.5rem;">
+        <a href="https://github.com/pavancharak/parmana-trust-core" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--cream)'" onmouseout="this.style.color='var(--muted)'">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          parmana-trust-core
+        </a>
+        <p class="footer-note">© 2025 Parmana Systems. Built in India.</p>
+      </div>
+    </footer>
   </div>
-</section>
 
-<!-- CTA -->
-<section class="cta-section">
-  <div class="cta-devanagari">प्रमाण</div>
-  <h2>The authority layer for the autonomous era.</h2>
-  <p>Talk to us about enterprise pilots, design partnerships, or the infrastructure powering it.</p>
-  <div class="cta-actions">
-    <a href="mailto:pavan@manthan.systems" class="btn-primary">Request a pilot</a>
-    <a href="https://docs.manthan.systems" class="btn-ghost">Read the docs →</a>
-  </div>
-</section>
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">Par<span>m</span>ana Systems</div>
-  <div class="footer-links">
-    <a href="https://docs.manthan.systems">Docs</a>
-    <a href="https://www.npmjs.com/~charak1987">npm</a>
-    <a href="https://github.com/pavancharak">GitHub</a>
-  </div>
-  <div class="footer-copy">© 2026 Parmana Systems</div>
-</footer>
+    // ─── DEMO ───────────────────────────────────────────────────────────────
+    const APPROVED = { amount: 1000, recipient: 'merchant-123', currency: 'INR' };
 
-<script>
-// Audio player
-const audioEl = document.getElementById('audio-el');
-const progressFill = document.getElementById('audio-progress-fill');
-const audioTime = document.getElementById('audio-time');
-const iconPlay = document.getElementById('icon-play');
-const iconPause = document.getElementById('icon-pause');
-
-function fmt(s) {
-  const m = Math.floor(s / 60);
-  const sec = Math.floor(s % 60);
-  return m + ':' + (sec < 10 ? '0' : '') + sec;
-}
-
-function toggleAudio() {
-  if (audioEl.paused) {
-    audioEl.play();
-    iconPlay.style.display = 'none';
-    iconPause.style.display = 'block';
-  } else {
-    audioEl.pause();
-    iconPlay.style.display = 'block';
-    iconPause.style.display = 'none';
-  }
-}
-
-audioEl.addEventListener('timeupdate', () => {
-  if (!audioEl.duration) return;
-  const pct = (audioEl.currentTime / audioEl.duration) * 100;
-  progressFill.style.width = pct + '%';
-  audioTime.textContent = fmt(audioEl.currentTime);
-});
-
-audioEl.addEventListener('ended', () => {
-  iconPlay.style.display = 'block';
-  iconPause.style.display = 'none';
-  progressFill.style.width = '0%';
-  audioTime.textContent = '0:00';
-});
-
-audioEl.addEventListener('loadedmetadata', () => {
-  audioTime.textContent = fmt(audioEl.duration);
-});
-
-function seekAudio(e) {
-  const wrap = document.getElementById('audio-progress-wrap');
-  const rect = wrap.getBoundingClientRect();
-  const pct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
-  if (audioEl.duration) audioEl.currentTime = pct * audioEl.duration;
-}
-
-function fakeHash() {
-  const chars = '0123456789abcdef';
-  let h = '0x';
-  for (let i = 0; i < 40; i++) h += chars[Math.floor(Math.random() * 16)];
-  return h;
-}
-
-function animateHash() {
-  const el = document.getElementById('live-hash');
-  if (!el) return;
-  let count = 0;
-  const interval = setInterval(() => {
-    el.textContent = fakeHash();
-    count++;
-    if (count > 12) {
-      clearInterval(interval);
-      el.textContent = '0x9f3ac21b…e7d4f2a8c1';
+    function getInputs() {
+      return {
+        amount:    parseInt(document.getElementById('f-amount').value) || 0,
+        recipient: document.getElementById('f-recipient').value.trim(),
+        currency:  document.getElementById('f-currency').value
+      };
     }
-  }, 80);
-}
 
-function updateTS() {
-  const el = document.getElementById('live-ts');
-  if (el) el.textContent = new Date().toISOString().replace('T', ' ').slice(0, 19) + ' IST';
-}
+    function isTampered(v) {
+      return v.amount !== APPROVED.amount ||
+             v.recipient !== APPROVED.recipient ||
+             v.currency !== APPROVED.currency;
+    }
 
-updateTS();
-animateHash();
-setInterval(() => {
-  updateTS();
-  setTimeout(animateHash, 1500);
-}, 8000);
+    function tamperReasons(v) {
+      const r = [];
+      if (v.amount    !== APPROVED.amount)    r.push(`amount changed from ₹${APPROVED.amount} to ₹${v.amount}`);
+      if (v.recipient !== APPROVED.recipient) r.push(`recipient changed from "${APPROVED.recipient}" to "${v.recipient}"`);
+      if (v.currency  !== APPROVED.currency)  r.push(`currency changed from ${APPROVED.currency} to ${v.currency}`);
+      return r;
+    }
 
-function runDemo() {
-  const action = document.getElementById('demo-action-input').value || 'transfer ₹2,00,000 to Supplier B';
-  const policy = document.getElementById('demo-policy').value;
-  const out = document.getElementById('demo-output');
-  const btn = document.getElementById('demo-run-btn');
-  btn.disabled = true;
-  btn.textContent = 'Running…';
-  out.innerHTML = '';
+    function updateHint() {
+      const v = getInputs();
+      const hint = document.getElementById('demo-hint');
+      const hintText = document.getElementById('demo-hint-text');
+      const tampered = isTampered(v);
+      hint.className = tampered ? 'demo-hint bad' : 'demo-hint';
+      hintText.textContent = tampered
+        ? 'These values differ from what was approved. Parmana will block execution.'
+        : 'These values match what was approved. Payment will go through.';
 
-  const ts = () => new Date().toISOString().slice(11, 23);
+      // highlight tampered fields
+      const aEl = document.getElementById('f-amount');
+      const rEl = document.getElementById('f-recipient');
+      const cEl = document.getElementById('f-currency');
+      aEl.classList.toggle('tampered', v.amount    !== APPROVED.amount);
+      rEl.classList.toggle('tampered', v.recipient !== APPROVED.recipient);
+      cEl.classList.toggle('tampered', v.currency  !== APPROVED.currency);
+    }
 
-  const steps = [
-    { delay: 0,    stage: 'RECEIVED',   cls: 'stage-init', msg: `action: "${action}"` },
-    { delay: 280,  stage: 'LOADING',    cls: 'stage-eval', msg: `policy: ${policy} v3.2.1` },
-    { delay: 600,  stage: 'CANONICAL',  cls: 'stage-eval', msg: 'canonicalizing action payload…' },
-    { delay: 950,  stage: 'EVALUATING', cls: 'stage-eval', msg: 'checking authority rules…' },
-    { delay: 1400, stage: 'DECISION',   cls: 'stage-ok',   msg: '✓ AUTHORIZED — rule: limit_5L_vendor_payment matched' },
-    { delay: 1750, stage: 'SIGNING',    cls: 'stage-sign', msg: 'Ed25519 signing…' },
-    { delay: 2100, stage: 'ATTESTED',   cls: 'stage-ok',   msg: `hash: ${fakeHash()}` },
-  ];
+    ['f-amount','f-recipient','f-currency'].forEach(id =>
+      document.getElementById(id).addEventListener('input', updateHint)
+    );
 
-  steps.forEach(s => {
-    setTimeout(() => {
-      const line = document.createElement('div');
-      line.className = 'demo-out-line';
-      line.innerHTML = `<span class="demo-ts">${ts()}</span><span class="demo-stage ${s.cls}">[${s.stage}]</span><span class="demo-msg">${s.msg}</span>`;
-      out.appendChild(line);
-      setTimeout(() => line.classList.add('show'), 20);
-      out.scrollTop = out.scrollHeight;
-    }, s.delay);
-  });
+    function setPreset(type) {
+      document.querySelectorAll('.demo-preset-btn').forEach(b => b.classList.remove('p-clean','p-tamper'));
+      const btn = event.currentTarget;
+      if (type === 'clean') {
+        document.getElementById('f-amount').value    = 1000;
+        document.getElementById('f-recipient').value = 'merchant-123';
+        document.getElementById('f-currency').value  = 'INR';
+        btn.classList.add('p-clean');
+      } else if (type === 'amount') {
+        document.getElementById('f-amount').value    = 9500;
+        document.getElementById('f-recipient').value = 'merchant-123';
+        document.getElementById('f-currency').value  = 'INR';
+        btn.classList.add('p-tamper');
+      } else if (type === 'recipient') {
+        document.getElementById('f-amount').value    = 1000;
+        document.getElementById('f-recipient').value = 'attacker-999';
+        document.getElementById('f-currency').value  = 'INR';
+        btn.classList.add('p-tamper');
+      } else if (type === 'both') {
+        document.getElementById('f-amount').value    = 9500;
+        document.getElementById('f-recipient').value = 'attacker-999';
+        document.getElementById('f-currency').value  = 'USD';
+        btn.classList.add('p-tamper');
+      }
+      updateHint();
+    }
 
-  setTimeout(() => {
-    btn.disabled = false;
-    btn.textContent = 'Run →';
-  }, 2400);
-}
-</script>
+    // ─── STEP DEFINITIONS ──────────────────────────────────────────────────
+    function stepsForClean(v) {
+      return [
+        {
+          id:'evaluate', label:'Step 1 — Evaluate', delay:500, badge:'approved', badgeClass:'ok',
+          html: () => `<div class="d-data show">
+<span class="dk">decision    </span><span class="dv-ok">approved</span>
+<span class="dk" style="display:block">task        </span><span class="dv-str">payment.release</span>
+<span class="dk" style="display:block">policy      </span><span class="dv-str">payment-policy-v1 · 1.0.0</span>
+<span class="dk" style="display:block">decision_id </span><span class="dv-id">fbb6c57f-9223-4c79-a9be-051aa111ff43</span>
+<div style="margin-top:6px"><span class="dk">signals → </span></div>
+<div class="d-chip-row"><span class="d-chip"><span class="dk">kyc </span>verified</span><span class="d-chip"><span class="dk">manager </span>approved</span></div>
+<div style="margin-top:6px"><span class="dk">intent → </span></div>
+<div class="d-chip-row"><span class="d-chip"><span class="dk">amount </span>₹${v.amount}</span><span class="d-chip"><span class="dk">currency </span>${v.currency}</span><span class="d-chip"><span class="dk">recipient </span>${v.recipient}</span></div>
+<div style="margin-top:6px;font-size:0.65rem;color:rgba(255,255,255,0.2)">attestation signed · ed25519 · parmana-root-key</div></div>`
+        },
+        {
+          id:'policy', label:'Step 2 — Load policy', delay:1100, badge:'loaded', badgeClass:'ok',
+          html: () => `<div class="d-data show">
+<span class="dk">policy_id   </span><span class="dv-str">payment-policy-v1</span>
+<span class="dk" style="display:block">version     </span><span class="dv-str">1.0.0</span>
+<span class="dk" style="display:block">condition   </span><span class="dv-str">kycVerified AND managerApproved</span></div>`
+        },
+        {
+          id:'verify', label:'Step 3 — Verify', delay:1800, badge:'receipt created', badgeClass:'ok',
+          html: () => `<div class="d-data show">
+<span class="dk">receipt_id  </span><span class="dv-id">28a28dc1-da24-41f8-957b-e3a7ebfec935</span>
+<span class="dk" style="display:block">valid       </span><span class="dv-ok">true</span>
+<span class="dk" style="display:block">algorithm   </span><span class="dv-str">ed25519</span>
+<div class="d-hash-cmp" style="margin-top:6px">
+<div class="d-hrow"><span class="d-hlabel">intent hash</span><span class="d-hval match">405ff5dc…bcc3715</span></div>
+<div class="d-hrow"><span class="d-hlabel">exec hash  </span><span class="d-hval match">405ff5dc…bcc3715</span></div>
+<div style="margin-top:4px;font-size:0.65rem;color:#1D9E75">✓ hashes match — payload unchanged</div>
+</div></div>`
+        },
+        {
+          id:'token', label:'Step 4 — Issue token', delay:2500, badge:'token issued', badgeClass:'ok',
+          html: () => `<div class="d-data show">
+<span class="dk">bound_to    </span><span class="dv-str">payment.release · user-001</span>
+<span class="dk" style="display:block">scope       </span><span class="dv-str">single-use · non-transferable</span></div>`
+        },
+        {
+          id:'execute', label:'Step 5 — Execute', delay:3200, badge:'completed', badgeClass:'ok',
+          html: () => `<div class="d-data show">
+<span class="dk">system      </span><span class="dv-sys">stripe</span>
+<span class="dk" style="display:block">reference   </span><span class="dv-str">pi_1782300089187</span>
+<span class="dk" style="display:block">status      </span><span class="dv-ok">completed</span>
+<span class="dk" style="display:block">amount      </span><span class="dv-ok">₹${v.amount} ${v.currency} → ${v.recipient}</span></div>`
+        },
+        {
+          id:'trust', label:'Step 6 — Trust chain', delay:4000, badge:'verified', badgeClass:'ok',
+          html: () => `<div class="d-data show">
+<div class="d-chain-bar">
+<div class="d-seg lit"><span class="dl">decision</span><span>approved ✓</span></div>
+<div class="d-seg lit"><span class="dl">attestation</span><span>ed25519 ✓</span></div>
+<div class="d-seg lit"><span class="dl">receipt</span><span>valid ✓</span></div>
+<div class="d-seg lit"><span class="dl">token</span><span>issued ✓</span></div>
+<div class="d-seg lit"><span class="dl">execution</span><span>stripe ✓</span></div>
+</div>
+<div style="margin-top:6px;font-size:0.65rem;color:#1D9E75">complete unbroken chain · human decision → AI execution</div></div>`
+        }
+      ];
+    }
+
+    function stepsForTampered(v, reasons) {
+      const reasonText = reasons.join(' · ');
+      return [
+        {
+          id:'evaluate', label:'Step 1 — Evaluate', delay:500, badge:'approved', badgeClass:'ok',
+          html: () => `<div class="d-data show">
+<span class="dk">decision    </span><span class="dv-ok">approved</span>
+<span class="dk" style="display:block">decision_id </span><span class="dv-id">fbb6c57f-9223-4c79-a9be-051aa111ff43</span>
+<div style="margin-top:6px"><span class="dk">approved intent → </span></div>
+<div class="d-chip-row"><span class="d-chip"><span class="dk">amount </span>₹${APPROVED.amount}</span><span class="d-chip"><span class="dk">currency </span>${APPROVED.currency}</span><span class="d-chip"><span class="dk">recipient </span>${APPROVED.recipient}</span></div>
+<div style="margin-top:6px;font-size:0.65rem;color:rgba(255,255,255,0.2)">attestation signed · ed25519 · parmana-root-key</div></div>`
+        },
+        {
+          id:'policy', label:'Step 2 — Load policy', delay:1100, badge:'loaded', badgeClass:'ok',
+          html: () => `<div class="d-data show">
+<span class="dk">policy_id   </span><span class="dv-str">payment-policy-v1 · 1.0.0</span>
+<span class="dk" style="display:block">condition   </span><span class="dv-str">kycVerified AND managerApproved</span></div>`
+        },
+        {
+          id:'verify', label:'Step 3 — Verify', delay:1800, badge:'blocked', badgeClass:'fail', isError: true,
+          html: () => `<div class="d-error-block show">
+<div class="d-error-title">INV-200 — Execution payload does not match authorized intent</div>
+<div class="d-hash-cmp" style="margin-top:6px">
+<div class="d-hrow"><span class="d-hlabel" style="color:rgba(226,75,74,0.5)">approved  </span><span class="d-hval" style="color:rgba(226,75,74,0.6)">405ff5dc…bcc3715</span></div>
+<div class="d-hrow"><span class="d-hlabel" style="color:rgba(226,75,74,0.5)">attempted </span><span class="d-hval" style="color:#E24B4A">a69f5397…031f19</span></div>
+</div>
+<div class="d-error-detail" style="margin-top:6px">${reasonText}</div>
+<div style="margin-top:8px;font-size:0.65rem;color:rgba(226,75,74,0.6)">No token issued. No execution. Record created.</div>
+</div>`
+        }
+      ];
+    }
+
+    // ─── RUNNER ────────────────────────────────────────────────────────────
+    let dRunning = false;
+    let dTimers = [];
+
+    function runDemo() {
+      if (dRunning) return;
+      const v = getInputs();
+      const tampered = isTampered(v);
+      const reasons = tampered ? tamperReasons(v) : [];
+      const steps = tampered ? stepsForTampered(v, reasons) : stepsForClean(v);
+
+      dRunning = true;
+      const btn = document.getElementById('demo-run-btn');
+      const body = document.getElementById('demo-body');
+      btn.disabled = true;
+      btn.textContent = '● running';
+
+      body.innerHTML = `<div style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:rgba(255,255,255,0.18);margin-bottom:12px"><span style="color:rgba(232,99,26,0.5)">$</span> npx tsx examples/end-to-end/payment-release-flow.ts</div><div id="d-steps"></div><div class="d-final" id="d-final"><span style="font-size:1.1rem">✓</span><div><div style="font-weight:500;font-size:0.75rem">END TO END SUCCESS</div><div style="font-size:0.65rem;margin-top:2px;color:rgba(29,158,117,0.7)">execution_id: 61cc2fa3 · stripe · pi_1782300089187 · completed</div></div></div><div class="d-final-fail" id="d-final-fail"><span style="font-size:1.1rem;margin-top:2px">✕</span><div><div style="font-weight:500;font-size:0.75rem">END TO END FAILED — BLOCKED BY PARMANA</div><div style="font-size:0.65rem;margin-top:4px;color:rgba(226,75,74,0.65)">The AI attempted to send a payment that did not match what was approved. Nothing was executed. The attempt was recorded.</div></div></div>`;
+
+      dTimers.forEach(clearTimeout); dTimers = [];
+
+      steps.forEach((step, i) => {
+        const t1 = setTimeout(() => {
+          const isLast = i === steps.length - 1;
+          const row = document.createElement('div');
+          row.className = 'd-step-row';
+          row.innerHTML = `
+            <div class="d-step-col">
+              <div class="d-circle running" id="dc-${step.id}"></div>
+              ${!isLast ? '<div class="d-connector"></div>' : ''}
+            </div>
+            <div class="d-body">
+              <div class="d-label" id="dl-${step.id}">${step.label}</div>
+              <div id="dd-${step.id}"></div>
+            </div>`;
+          document.getElementById('d-steps').appendChild(row);
+
+          const t2 = setTimeout(() => {
+            const circle = document.getElementById(`dc-${step.id}`);
+            circle.className = step.isError ? 'd-circle err' : 'd-circle done';
+            document.getElementById(`dl-${step.id}`).innerHTML =
+              `${step.label} <span class="d-badge ${step.badgeClass}">${step.badge}</span>`;
+            document.getElementById(`dd-${step.id}`).innerHTML = step.html();
+
+            if (isLast) {
+              const t3 = setTimeout(() => {
+                if (tampered) {
+                  document.getElementById('d-final-fail').classList.add('show');
+                } else {
+                  document.getElementById('d-final').classList.add('show');
+                }
+                dRunning = false;
+                btn.disabled = false;
+                btn.textContent = '↺ Run again';
+              }, 400);
+              dTimers.push(t3);
+            }
+          }, 520);
+          dTimers.push(t2);
+        }, step.delay);
+        dTimers.push(t1);
+      });
+    }
+  </script>
+
 </body>
 </html>
