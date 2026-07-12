@@ -1,0 +1,153 @@
+:root {
+  --ink: #211a12;
+  --ink-soft: #4a4036;
+  --cream: #faf4e8;
+  --cream-soft: rgba(250, 244, 232, 0.65);
+  --cream-deep: #f3ead8;
+  --saffron: #e0670b;
+  --saffron-deep: #9c4406;
+  --hairline: #d8cbb2;
+  --hairline-on-ink: rgba(250, 244, 232, 0.14);
+
+  --font-heading: 'Eczar', 'Noto Sans Devanagari', serif;
+  --font-body: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --container-width: 1180px;
+  --section-pad-block: clamp(4rem, 8vw, 7rem);
+  --section-pad-inline: clamp(1.5rem, 5vw, 3rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink-soft);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--saffron);
+  outline-offset: 3px;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--section-pad-inline);
+}
+
+.kicker {
+  display: block;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--saffron-deep);
+}
+
+.kicker--on-ink {
+  color: var(--saffron);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 0.85em 1.75em;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.button--primary {
+  background: var(--saffron);
+  color: var(--ink);
+}
+
+.button--primary:hover {
+  background: var(--saffron-deep);
+  color: var(--cream);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  background: var(--saffron);
+  color: var(--ink);
+  padding: 0.6em 1.2em;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  z-index: 1000;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+}
