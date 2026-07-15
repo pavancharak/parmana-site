@@ -22,8 +22,6 @@ export default function Footer() {
           <a href="https://www.linkedin.com/in/pavancharak/">LinkedIn</a>
           <a href="mailto:founder@parmanasystems.com">founder@parmanasystems.com</a>
         </div>
-
-        <p className={styles.closing}>A Manthan Systems company.</p>
       </div>
     </footer>
   );

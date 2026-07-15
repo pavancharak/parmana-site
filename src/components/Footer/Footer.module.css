@@ -43,10 +43,3 @@
 .linkRow a:hover {
   border-bottom-color: var(--kesari);
 }
-
-.closing {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--ink);
-  opacity: 0.6;
-}
