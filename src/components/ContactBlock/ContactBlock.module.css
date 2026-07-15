@@ -1,0 +1,12 @@
+.section {
+  border-top: 1px solid var(--microline);
+}
+
+.link {
+  font-family: var(--font-mono);
+  font-size: clamp(1.4rem, 4vw, 2.1rem);
+  text-decoration: none;
+  color: var(--ink);
+  border-bottom: 2px solid var(--kesari);
+  display: inline-block;
+}

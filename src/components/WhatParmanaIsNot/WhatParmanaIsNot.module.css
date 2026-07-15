@@ -1,38 +1,18 @@
 .section {
-  background: var(--ink);
-  padding-block: var(--section-pad-block);
+  border-top: 1px solid var(--microline);
 }
 
-.headline {
-  margin-top: 1.25rem;
-  font-weight: 600;
-  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
-  line-height: 1.2;
-  color: var(--cream);
+.heading {
+  margin-bottom: 1.25rem;
 }
 
 .list {
-  margin-top: 2.75rem;
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
-  max-width: 68ch;
+  gap: 1rem;
+  max-width: 60ch;
 }
 
-.item {
-  position: relative;
-  padding-left: 1.75rem;
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--cream-soft);
-}
-
-.item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 8px;
-  height: 8px;
-  background: var(--saffron);
+.list strong {
+  font-family: var(--font-body);
 }

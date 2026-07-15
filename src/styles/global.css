@@ -1,21 +1,19 @@
 :root {
-  --ink: #211a12;
-  --ink-soft: #4a4036;
-  --cream: #faf4e8;
-  --cream-soft: rgba(250, 244, 232, 0.65);
-  --cream-deep: #f3ead8;
-  --saffron: #e0670b;
-  --saffron-deep: #9c4406;
-  --hairline: #d8cbb2;
-  --hairline-on-ink: rgba(250, 244, 232, 0.14);
+  --paper: #edf0e8;
+  --paper-instrument: #f4f6f0;
+  --ink: #1a2233;
+  --kesari: #e08900;
+  --stamp-allow: #1f7a4d;
+  --stamp-block: #b33a2b;
+  --microline: #c6cdbf;
 
-  --font-heading: 'Eczar', 'Noto Sans Devanagari', serif;
-  --font-body: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  --font-display: 'Eczar', 'Noto Sans Devanagari', serif;
+  --font-body: 'Spectral', 'Noto Sans Devanagari', serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
-  --container-width: 1180px;
-  --section-pad-block: clamp(4rem, 8vw, 7rem);
-  --section-pad-inline: clamp(1.5rem, 5vw, 3rem);
+  --container-width: 1080px;
+  --section-pad-block: clamp(3.5rem, 7vw, 6rem);
+  --section-pad-inline: clamp(1.25rem, 5vw, 2.5rem);
 }
 
 *,
@@ -31,12 +29,19 @@ html {
 
 body {
   margin: 0;
-  background: var(--cream);
-  color: var(--ink-soft);
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(26, 34, 51, 0.025) 0px,
+    rgba(26, 34, 51, 0.025) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  color: var(--ink);
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -73,15 +78,23 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-heading);
+  font-family: var(--font-display);
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: -0.01em;
   color: var(--ink);
 }
 
+h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
 :focus-visible {
-  outline: 2px solid var(--saffron);
+  outline: 2px solid var(--kesari);
   outline-offset: 3px;
 }
 
@@ -91,18 +104,32 @@ h4 {
   padding-inline: var(--section-pad-inline);
 }
 
-.kicker {
+.section {
+  padding-block: var(--section-pad-block);
+}
+
+.rule {
+  border: none;
+  border-top: 1px solid var(--microline);
+  margin: 0;
+}
+
+.eyebrow {
   display: block;
   font-family: var(--font-mono);
   font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 0.2em;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--saffron-deep);
+  color: var(--kesari);
 }
 
-.kicker--on-ink {
-  color: var(--saffron);
+.devanagari {
+  font-family: var(--font-display);
+}
+
+.mono {
+  font-family: var(--font-mono);
 }
 
 .button {
@@ -110,34 +137,36 @@ h4 {
   align-items: center;
   justify-content: center;
   font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 1rem;
   text-decoration: none;
-  border-radius: 3px;
+  border: 1px solid var(--ink);
+  border-radius: 2px;
   padding: 0.85em 1.75em;
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .button--primary {
-  background: var(--saffron);
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
 }
 
 .button--primary:hover {
-  background: var(--saffron-deep);
-  color: var(--cream);
+  background: var(--kesari);
+  border-color: var(--kesari);
+  color: var(--ink);
 }
 
 .skip-link {
   position: absolute;
   left: 1rem;
   top: -3rem;
-  background: var(--saffron);
+  background: var(--kesari);
   color: var(--ink);
   padding: 0.6em 1.2em;
-  border-radius: 3px;
+  border-radius: 2px;
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 0.8rem;
   z-index: 1000;
   transition: top 0.15s ease;
 }
@@ -148,6 +177,20 @@ h4 {
 
 @media (max-width: 640px) {
   body {
-    font-size: 16px;
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

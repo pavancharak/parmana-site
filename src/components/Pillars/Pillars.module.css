@@ -1,47 +1,30 @@
 .section {
-  background: var(--cream);
-  padding-block: var(--section-pad-block);
+  border-top: 1px solid var(--microline);
+}
+
+.heading {
+  max-width: 32ch;
+  margin-bottom: 2rem;
 }
 
 .grid {
-  margin-top: 2.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
+  gap: 2rem;
 }
 
-.card {
-  background: #fffdf8;
-  border: 1px solid var(--hairline);
-  border-top: 2.5px solid var(--saffron);
-  border-radius: 8px;
-  padding: 2.5rem 2rem;
+.column h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
 }
 
-.number {
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  color: var(--saffron-deep);
+.column p {
+  max-width: 32ch;
 }
 
-.title {
-  margin-top: 1.1rem;
-  font-weight: 600;
-  font-size: 1.35rem;
-  color: var(--ink);
-}
-
-.body {
-  margin-top: 0.9rem;
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--ink-soft);
-}
-
-@media (max-width: 900px) {
+@media (max-width: 720px) {
   .grid {
     grid-template-columns: 1fr;
+    gap: 1.75rem;
   }
 }

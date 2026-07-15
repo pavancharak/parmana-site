@@ -1,116 +1,49 @@
 .hero {
-  position: relative;
-  overflow: hidden;
-  background: var(--ink);
-  padding-block: clamp(4rem, 10vw, 7.5rem) clamp(3.5rem, 8vw, 6rem);
+  padding-block: clamp(2rem, 6vw, 3.5rem) var(--section-pad-block);
 }
 
-.glow {
-  position: absolute;
-  top: -20%;
-  right: -15%;
-  width: 60vw;
-  height: 60vw;
-  min-width: 480px;
-  min-height: 480px;
-  background: radial-gradient(circle, rgba(224, 103, 11, 0.18) 0%, rgba(224, 103, 11, 0) 70%);
-  pointer-events: none;
-}
-
-.watermark {
-  position: absolute;
-  right: -4%;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: min(48vw, 620px);
-  line-height: 1;
-  color: var(--cream);
-  opacity: 0.05;
-  pointer-events: none;
-  user-select: none;
-}
-
-.inner {
-  position: relative;
-  max-width: var(--container-width);
-  margin-inline: auto;
-  padding-inline: var(--section-pad-inline);
-}
-
-.badge {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--saffron);
-  border: 1px solid var(--saffron);
-  border-radius: 999px;
-  padding: 0.5em 1.1em;
-  margin-bottom: 1.75rem;
-}
-
-.kicker {
-  margin-bottom: 1.25rem;
-}
-
-.headline {
-  font-weight: 700;
-  font-size: clamp(1.45rem, 3.4vw, 2.75rem);
-  line-height: 1.22;
-  letter-spacing: -0.015em;
-  color: var(--cream);
-}
-
-.headlineLine {
-  display: block;
-}
-
-.headlineAccent {
-  color: var(--saffron);
-}
-
-.subhead {
-  margin-top: 2rem;
-  max-width: 58ch;
-  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
-  line-height: 1.6;
-  color: var(--cream-soft);
-}
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
-  gap: 1.75rem;
-  margin-top: 2.5rem;
 }
 
-.secondaryLink {
-  font-weight: 600;
-  font-size: 16px;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  color: var(--cream);
+.mark {
+  font-size: 1.6rem;
+  color: var(--kesari);
+  margin-bottom: 0.75rem;
 }
 
-.reassurance {
-  margin-top: 1.75rem;
-  font-size: 14px;
-  color: var(--cream-soft);
-}
-
-.trustStrip {
-  margin-top: 2.5rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid var(--hairline-on-ink);
+.tagline {
+  margin-top: 1rem;
   font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--cream-soft);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: var(--kesari);
+}
+
+.subline {
+  margin-top: 1rem;
+  max-width: 46ch;
+}
+
+.cta {
+  margin-top: 1.75rem;
+}
+
+.receiptWrap {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .receiptWrap {
+    order: -1;
+    justify-content: flex-start;
+  }
 }

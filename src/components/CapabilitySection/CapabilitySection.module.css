@@ -1,0 +1,26 @@
+.section {
+  border-top: 1px solid var(--microline);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.heading {
+  margin-bottom: 0.75rem;
+}
+
+.body {
+  max-width: 60ch;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.stamp {
+  flex-shrink: 0;
+}

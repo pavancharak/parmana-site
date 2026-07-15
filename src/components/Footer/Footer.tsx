@@ -1,34 +1,29 @@
-import PrMark from '../PrMark/PrMark';
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.inner}>
-        <div className={styles.lockup}>
-          <PrMark size={28} />
-          <span className={styles.lockupText}>
-            PARMANA <span aria-hidden="true">·</span> The authorization layer for AI execution
-          </span>
+      <div className={`container ${styles.inner}`}>
+        <div>
+          <p className={styles.wordmark}>PARMANA</p>
+          <p className={styles.tagline}>The authorization layer for AI execution.</p>
         </div>
 
-        <div className={styles.links}>
-          <a href="mailto:founder@manthan.systems">founder@manthan.systems</a>
-          <a href="https://www.linkedin.com/in/pavancharak/" target="_blank" rel="noreferrer noopener">
-            LinkedIn
-          </a>
-          <a href="https://theaiexecutionreview.substack.com/" target="_blank" rel="noreferrer noopener">
-            Writing
-          </a>
+        <nav className={styles.pageLinks} aria-label="Pages">
+          <Link to="/">Home</Link>
+          <Link to="/product">Product</Link>
+          <Link to="/company">Company</Link>
+        </nav>
+
+        <div className={styles.linkRow}>
+          <a href="https://docs.parmanasystems.com/">Docs</a>
+          <a href="https://github.com/pavancharak/parmana-exp">GitHub</a>
+          <a href="https://www.linkedin.com/in/pavancharak/">LinkedIn</a>
+          <a href="mailto:founder@parmanasystems.com">founder@parmanasystems.com</a>
         </div>
 
-        <p className={styles.copyright}>© 2026 Manthan Systems. All rights reserved.</p>
-
-        <p className={styles.smallPrint}>
-          Parmana enforces policies your organisation defines. Deployment architecture determines enforcement scope;
-          in a standard deployment, execution flows through the Parmana gateway and AI systems hold no enterprise
-          credentials.
-        </p>
+        <p className={styles.closing}>A Manthan Systems company.</p>
       </div>
     </footer>
   );

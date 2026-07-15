@@ -1,35 +1,36 @@
-import PrMark from '../PrMark/PrMark';
+import { NavLink } from 'react-router-dom';
 import styles from './Nav.module.css';
 
-const PILOT_MAILTO = 'mailto:founder@manthan.systems?subject=Pilot%20conversation';
+const CONTACT_MAILTO = 'mailto:founder@parmanasystems.com';
+
+function navLinkClass({ isActive }: { isActive: boolean }) {
+  return isActive ? `${styles.link} ${styles.linkActive}` : styles.link;
+}
 
 export default function Nav() {
   return (
-    <header className={styles.header}>
-      <div className={styles.inner}>
-        <a href="#top" className={styles.logo} aria-label="Parmana, home">
-          <PrMark size={34} />
-          <span className={styles.wordmark}>PARMANA</span>
-        </a>
-        <nav className={styles.nav} aria-label="Primary">
-          <ul className={styles.links}>
-            <li>
-              <a href="#how-it-works">How it works</a>
-            </li>
-            <li>
-              <a href="#why-deterministic">Why deterministic</a>
-            </li>
-            <li>
-              <a href="#design-partners">Design partners</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-          </ul>
+    <header className={styles.nav}>
+      <div className={`container ${styles.inner}`}>
+        <NavLink to="/" className={styles.wordmark}>
+          PARMANA
+        </NavLink>
+        <nav className={styles.links} aria-label="Primary">
+          <NavLink to="/" className={navLinkClass} end>
+            Home
+          </NavLink>
+          <NavLink to="/product" className={navLinkClass}>
+            Product
+          </NavLink>
+          <NavLink to="/company" className={navLinkClass}>
+            Company
+          </NavLink>
+          <a className={styles.link} href="https://docs.parmanasystems.com/">
+            Docs
+          </a>
+          <a className={`button button--primary ${styles.contact}`} href={CONTACT_MAILTO}>
+            Contact
+          </a>
         </nav>
-        <a className={`button button--primary ${styles.cta}`} href={PILOT_MAILTO}>
-          Start a pilot
-        </a>
       </div>
     </header>
   );

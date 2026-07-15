@@ -1,0 +1,38 @@
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  border: 3px double currentColor;
+  mix-blend-mode: multiply;
+  transform: rotate(-6deg);
+}
+
+.allow {
+  color: var(--stamp-allow);
+}
+
+.block {
+  color: var(--stamp-block);
+}
+
+.landed {
+  animation: land 0.3s ease-out;
+}
+
+@keyframes land {
+  0% {
+    transform: rotate(0deg) scale(1.15);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-6deg) scale(1);
+    opacity: 1;
+  }
+}
