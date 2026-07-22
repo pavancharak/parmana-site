@@ -11,7 +11,7 @@ export default function Team() {
             <h3>
               <a href="https://www.linkedin.com/in/pavancharak/">Pavan Charak</a>, CEO and System Architect
             </h3>
-            <p>Designs and builds the policy engine, gateway, and receipt system end to end.</p>
+            <p>Designs and builds policy evaluation, the gateway, and the receipt system end to end.</p>
           </div>
           <div className={styles.member}>
             <h3>Mohinder Singh Charak, Co-founder and Policy Advisor</h3>

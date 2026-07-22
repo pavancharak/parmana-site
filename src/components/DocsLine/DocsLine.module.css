@@ -1,5 +1,5 @@
 .section {
-  border-top: 1px solid var(--microline);
+  border-top: 1px solid var(--line);
 }
 
 .line {
@@ -7,6 +7,6 @@
 }
 
 .line a {
-  color: var(--kesari);
+  color: var(--accent);
   text-decoration: underline;
 }

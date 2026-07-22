@@ -1,14 +1,14 @@
 :root {
-  --paper: #edf0e8;
-  --paper-instrument: #f4f6f0;
-  --ink: #1a2233;
-  --kesari: #e08900;
-  --stamp-allow: #1f7a4d;
-  --stamp-block: #b33a2b;
-  --microline: #c6cdbf;
+  --bg: #0b0d10;
+  --bg-panel: #15181d;
+  --text: #e8eaed;
+  --accent: #f0952e;
+  --stamp-allow: #3ecf7e;
+  --stamp-block: #f2564a;
+  --line: rgba(232, 234, 237, 0.14);
 
-  --font-display: 'Eczar', 'Noto Sans Devanagari', serif;
-  --font-body: 'Spectral', 'Noto Sans Devanagari', serif;
+  --font-display: 'Space Grotesk', 'Noto Sans Devanagari', sans-serif;
+  --font-body: 'Inter', 'Noto Sans Devanagari', sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
   --container-width: 1080px;
@@ -29,15 +29,15 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--paper);
+  background-color: var(--bg);
   background-image: repeating-linear-gradient(
     135deg,
-    rgba(26, 34, 51, 0.025) 0px,
-    rgba(26, 34, 51, 0.025) 1px,
+    rgba(232, 234, 237, 0.025) 0px,
+    rgba(232, 234, 237, 0.025) 1px,
     transparent 1px,
     transparent 10px
   );
-  color: var(--ink);
+  color: var(--text);
   font-family: var(--font-body);
   font-weight: 400;
   font-size: 1.05rem;
@@ -82,7 +82,7 @@ h4 {
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.01em;
-  color: var(--ink);
+  color: var(--text);
 }
 
 h1 {
@@ -94,7 +94,7 @@ h2 {
 }
 
 :focus-visible {
-  outline: 2px solid var(--kesari);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
@@ -110,7 +110,7 @@ h2 {
 
 .rule {
   border: none;
-  border-top: 1px solid var(--microline);
+  border-top: 1px solid var(--line);
   margin: 0;
 }
 
@@ -121,7 +121,7 @@ h2 {
   font-size: 0.78rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--kesari);
+  color: var(--accent);
 }
 
 .devanagari {
@@ -136,33 +136,37 @@ h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  appearance: none;
+  background: none;
   font-family: var(--font-body);
   font-weight: 500;
   font-size: 1rem;
+  color: var(--text);
   text-decoration: none;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--text);
   border-radius: 2px;
   padding: 0.85em 1.75em;
+  cursor: pointer;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .button--primary {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--text);
+  color: var(--bg);
 }
 
 .button--primary:hover {
-  background: var(--kesari);
-  border-color: var(--kesari);
-  color: var(--ink);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
 }
 
 .skip-link {
   position: absolute;
   left: 1rem;
   top: -3rem;
-  background: var(--kesari);
-  color: var(--ink);
+  background: var(--accent);
+  color: var(--bg);
   padding: 0.6em 1.2em;
   border-radius: 2px;
   font-family: var(--font-mono);

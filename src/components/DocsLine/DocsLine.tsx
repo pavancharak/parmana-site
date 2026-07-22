@@ -5,8 +5,11 @@ export default function DocsLine() {
     <section className={`section ${styles.section}`} aria-label="Documentation">
       <div className="container">
         <p className={styles.line}>
-          The full reference lives at{' '}
-          <a href="https://docs.parmanasystems.com/">docs.parmanasystems.com</a>.
+          Explore the documentation, API reference, architecture, and integration
+          guides at{' '}
+          <a href="https://docs.parmanasystems.com/">
+            docs.parmanasystems.com
+          </a>.
         </p>
       </div>
     </section>

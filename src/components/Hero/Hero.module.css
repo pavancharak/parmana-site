@@ -4,14 +4,14 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
+  align-items: start;
 }
 
 .mark {
   font-size: 1.6rem;
-  color: var(--kesari);
+  color: var(--accent);
   margin-bottom: 0.75rem;
 }
 
@@ -20,7 +20,29 @@
   font-family: var(--font-mono);
   font-size: 0.9rem;
   letter-spacing: 0.04em;
-  color: var(--kesari);
+  color: var(--accent);
+}
+
+.rotator {
+  display: inline-grid;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.rotatorWord {
+  grid-area: 1 / 1;
+  animation: rotator-fade 0.4s ease;
+}
+
+@keyframes rotator-fade {
+  from {
+    opacity: 0;
+    transform: translateY(0.3em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .subline {
@@ -32,9 +54,10 @@
   margin-top: 1.75rem;
 }
 
-.receiptWrap {
+.diagramWrap {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 @media (max-width: 860px) {
@@ -42,7 +65,7 @@
     grid-template-columns: 1fr;
   }
 
-  .receiptWrap {
+  .diagramWrap {
     order: -1;
     justify-content: flex-start;
   }

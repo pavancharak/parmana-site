@@ -1,27 +1,30 @@
 import DocumentHeader from '../components/DocumentHeader/DocumentHeader';
 import Hero from '../components/Hero/Hero';
-import Pillars from '../components/Pillars/Pillars';
-import HowItWorks from '../components/HowItWorks/HowItWorks';
-import JailbreakNotice from '../components/JailbreakNotice/JailbreakNotice';
-import WhoItIsFor from '../components/WhoItIsFor/WhoItIsFor';
-import WhyNow from '../components/WhyNow/WhyNow';
+import FeatureBlocks from '../components/FeatureBlocks/FeatureBlocks';
+import Autonomy from '../components/Autonomy/Autonomy';
+import Developers from '../components/Developers/Developers';
+import FAQ from '../components/FAQ/FAQ';
 import CTA from '../components/CTA/CTA';
 
 export default function Home() {
   return (
     <>
       <DocumentHeader page="Home" />
+
       <Hero />
-      <Pillars />
-      <HowItWorks />
-      <JailbreakNotice />
-      <WhoItIsFor />
-      <WhyNow />
+
+      <FeatureBlocks />
+
+      <Autonomy />
+
+      <Developers />
+
+      <FAQ />
+
       <CTA
-        heading="See it stop a compromised agent."
-        body="Our demo shows four outcomes live: a valid action accepted, a replay rejected, a tampered request rejected, and a missing authorization rejected."
-        label="Write to founder@parmanasystems.com"
-        mailto="mailto:founder@parmanasystems.com"
+        heading="Keep human authority in control of AI execution."
+        body="See how Parmana verifies every AI action before it reaches your business systems, ensuring AI operates within the authority your organization defines."
+        label="Become a Design Partner"
       />
     </>
   );

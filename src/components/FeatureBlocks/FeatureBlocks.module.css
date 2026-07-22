@@ -1,0 +1,263 @@
+.section {
+  border-top: 1px solid var(--line);
+}
+
+.block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  padding-block: clamp(2rem, 5vw, 3rem);
+}
+
+.block + .block {
+  border-top: 1px solid var(--line);
+}
+
+.block[data-reverse='true'] .text {
+  order: 2;
+}
+
+.block[data-reverse='true'] .visual {
+  order: 1;
+}
+
+.heading {
+  max-width: 24ch;
+  margin-top: 0.6rem;
+}
+
+.body {
+  margin-top: 0.85rem;
+  max-width: 42ch;
+}
+
+.visual {
+  display: flex;
+  justify-content: center;
+}
+
+/* Policy visual */
+
+.policyCard {
+  width: 100%;
+  max-width: 320px;
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.policyAction {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+}
+
+.policyRule {
+  margin-top: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  opacity: 0.6;
+}
+
+.policyOutcome {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Credential + connector shared node styling */
+
+.credentialFlow {
+  display: flex;
+  align-items: stretch;
+  gap: 0.4rem;
+  width: 100%;
+  max-width: 340px;
+}
+
+.credNode {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  text-align: center;
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.85rem 0.4rem;
+  min-width: 0;
+}
+
+.credCheckpoint {
+  border-color: var(--accent);
+}
+
+.credLabel {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.credSub {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.02em;
+  opacity: 0.6;
+}
+
+.credRail {
+  flex: 0 0 clamp(0.75rem, 3vw, 1.5rem);
+  align-self: center;
+  height: 2px;
+  background: var(--line);
+}
+
+/* Connector visual */
+
+.connectorFlow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 340px;
+}
+
+.connectorSource {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  text-align: center;
+  background: var(--bg-panel);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.85rem 0.9rem;
+}
+
+.connectorTargets {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.connectorTarget {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.connectorRail {
+  width: 1.25rem;
+  height: 2px;
+  background: var(--line);
+}
+
+.connectorLabel {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.3em 0.7em;
+}
+
+/* Receipt visual */
+
+.receiptWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+.receiptCard {
+  width: 100%;
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.25rem 1.25rem 0;
+}
+
+.receiptHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.65;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.receiptBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-block: 1rem;
+}
+
+.receiptRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.receiptLabel {
+  opacity: 0.6;
+}
+
+.receiptOutcome {
+  display: flex;
+  justify-content: flex-end;
+  padding-block: 0.4rem 1.1rem;
+}
+
+.receiptSignature {
+  margin: 0 -1.25rem;
+  padding: 0.6rem 1.25rem;
+  background: rgba(232, 234, 237, 0.04);
+  border-top: 1px solid var(--line);
+  border-radius: 0 0 6px 6px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.02em;
+  opacity: 0.55;
+  word-break: break-all;
+}
+
+.receiptProof {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-align: center;
+  opacity: 0.7;
+  max-width: 32ch;
+}
+
+@media (max-width: 720px) {
+  .block,
+  .block[data-reverse='true'] .text,
+  .block[data-reverse='true'] .visual {
+    order: initial;
+  }
+
+  .block {
+    grid-template-columns: 1fr;
+  }
+
+  .heading,
+  .body {
+    max-width: none;
+  }
+}

@@ -1,0 +1,16 @@
+.section {
+  border-top: 1px solid var(--line);
+}
+
+.panel {
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
+}
+
+.heading {
+  max-width: 28ch;
+  margin: 0.75rem auto 0;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}

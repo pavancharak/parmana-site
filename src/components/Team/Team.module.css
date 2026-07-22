@@ -1,5 +1,5 @@
 .section {
-  border-top: 1px solid var(--microline);
+  border-top: 1px solid var(--line);
 }
 
 .heading {
@@ -18,9 +18,9 @@
 }
 
 .member a {
-  color: var(--ink);
+  color: var(--text);
   text-decoration: underline;
-  text-decoration-color: var(--microline);
+  text-decoration-color: var(--line);
 }
 
 .title {
@@ -28,7 +28,7 @@
   font-size: 0.78rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--ink);
+  color: var(--text);
   opacity: 0.6;
   display: block;
   margin-bottom: 0.5rem;

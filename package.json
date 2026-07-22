@@ -10,9 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fontsource/eczar": "^5.2.8",
     "@fontsource/ibm-plex-mono": "^5.2.7",
-    "@fontsource/spectral": "^5.2.7",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/noto-sans-devanagari": "^5.2.8",
+    "@fontsource/space-grotesk": "^5.2.8",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-router-dom": "^7.9.5"

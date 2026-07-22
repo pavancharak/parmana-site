@@ -1,0 +1,25 @@
+.section {
+  border-top: 1px solid var(--line);
+}
+
+.heading {
+  margin-top: 0.75rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.link {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.link:hover {
+  border-bottom-color: var(--accent);
+}

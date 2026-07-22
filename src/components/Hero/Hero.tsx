@@ -1,7 +1,36 @@
-import ExecutionReceipt from '../ExecutionReceipt/ExecutionReceipt';
+import { useEffect, useState } from 'react';
+import FlowDiagram from '../FlowDiagram/FlowDiagram';
 import styles from './Hero.module.css';
 
+const CONTACT_MAILTO =
+  'mailto:founder@parmanasystems.com?subject=Design%20partner%20conversation';
+
+const VERTICALS = [
+  'Financial Services',
+  'Healthcare',
+  'Insurance',
+  'Government',
+  'Enterprise Software',
+  'Critical Operations',
+];
+
+const ROTATE_MS = 2600;
+
 export default function Hero() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
+    const id = window.setInterval(() => {
+      setIndex((current) => (current + 1) % VERTICALS.length);
+    }, ROTATE_MS);
+
+    return () => window.clearInterval(id);
+  }, []);
+
   return (
     <section className={styles.hero} aria-label="Introduction">
       <div className={`container ${styles.grid}`}>
@@ -9,21 +38,41 @@ export default function Hero() {
           <p className={`devanagari ${styles.mark}`} lang="sa">
             प्रमाण
           </p>
-          <h1>Companies bought AI they're afraid to switch on. We make it safe to switch on.</h1>
-          <p className={styles.tagline}>The authorization layer for AI execution.</p>
-          <p className={styles.subline}>
-            The AI asks permission before every action, gets an answer at machine speed, and leaves verifiable proof
-            behind. Even a compromised AI can't bypass that control.
+
+          <h1>
+            The biggest risk isn't that AI makes mistakes.
+            <br />
+            It's that organizations lose authority over execution.
+          </h1>
+
+          <p className={styles.tagline}>
+            No matter how AI behaves, Parmana ensures human authority remains in
+            control of execution across{' '}
+            <span className={styles.rotator}>
+              <span key={VERTICALS[index]} className={styles.rotatorWord}>
+                {VERTICALS[index]}
+              </span>
+            </span>
+            .
           </p>
+
+          <p className={styles.subline}>
+            AI systems can be wrong, compromised, unavailable, or behave
+            unexpectedly. Parmana verifies every AI action before it reaches
+            your business systems, ensuring execution always remains under human
+            authority.
+          </p>
+
           <a
             className={`button button--primary ${styles.cta}`}
-            href="mailto:founder@parmanasystems.com?subject=Design%20partner%20brief"
+            href={CONTACT_MAILTO}
           >
-            Request a design partner brief
+            Become a Design Partner
           </a>
         </div>
-        <div className={styles.receiptWrap}>
-          <ExecutionReceipt />
+
+        <div className={styles.diagramWrap}>
+          <FlowDiagram />
         </div>
       </div>
     </section>

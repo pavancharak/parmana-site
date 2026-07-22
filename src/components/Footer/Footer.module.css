@@ -1,5 +1,5 @@
 .footer {
-  border-top: 1px solid var(--microline);
+  border-top: 1px solid var(--line);
   margin-top: 2rem;
 }
 
@@ -18,7 +18,7 @@
 
 .tagline {
   font-size: 0.95rem;
-  color: var(--ink);
+  color: var(--text);
   opacity: 0.75;
 }
 
@@ -35,11 +35,11 @@
   font-size: 0.82rem;
   letter-spacing: 0.03em;
   text-decoration: none;
-  color: var(--ink);
+  color: var(--text);
   border-bottom: 1px solid transparent;
 }
 
 .pageLinks a:hover,
 .linkRow a:hover {
-  border-bottom-color: var(--kesari);
+  border-bottom-color: var(--accent);
 }

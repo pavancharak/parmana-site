@@ -11,9 +11,12 @@ export default function Nav() {
   return (
     <header className={styles.nav}>
       <div className={`container ${styles.inner}`}>
-        <NavLink to="/" className={styles.wordmark}>
-          PARMANA
-        </NavLink>
+        <div className={styles.brand}>
+          <NavLink to="/" className={styles.wordmark}>
+            PARMANA
+          </NavLink>
+          <span className={styles.badge}>Live in production</span>
+        </div>
         <nav className={styles.links} aria-label="Primary">
           <NavLink to="/" className={navLinkClass} end>
             Home
