@@ -24,6 +24,18 @@ export default function Nav() {
           <NavLink to="/product" className={navLinkClass}>
             Product
           </NavLink>
+          <NavLink to="/trust" className={navLinkClass}>
+            Trust
+          </NavLink>
+          <NavLink to="/deployment" className={navLinkClass}>
+            Deployment
+          </NavLink>
+          <NavLink to="/faq" className={navLinkClass}>
+            FAQ
+          </NavLink>
+          <NavLink to="/value" className={navLinkClass}>
+            Value
+          </NavLink>
           <NavLink to="/company" className={navLinkClass}>
             Company
           </NavLink>

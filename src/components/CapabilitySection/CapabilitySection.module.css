@@ -24,3 +24,13 @@
 .stamp {
   flex-shrink: 0;
 }
+
+.roleList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.roleList strong {
+  font-family: var(--font-body);
+}

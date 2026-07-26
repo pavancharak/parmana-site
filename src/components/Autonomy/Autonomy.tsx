@@ -8,16 +8,15 @@ export default function Autonomy() {
           <span className="eyebrow">Built for autonomous AI</span>
 
           <h2 className={styles.heading}>
-            AI can operate autonomously.
-            <br />
-            Authority should never be autonomous.
+            Set the rule once. The AI acts without asking again.
           </h2>
 
           <p className={styles.body}>
-            Autonomous AI can move at machine speed, but every action should
-            remain within the authority your organization defines. Parmana
-            verifies every AI action before execution, allowing AI to operate
-            independently without giving up human control.
+            Once your organization defines what's allowed, the AI doesn't
+            need to check back in for every action. It keeps moving at its
+            own speed. Every action it takes is still checked against that
+            rule before it executes, so independence never means the AI is
+            acting outside what you've allowed.
           </p>
         </div>
       </div>

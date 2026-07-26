@@ -1,7 +1,9 @@
 import DocumentHeader from '../components/DocumentHeader/DocumentHeader';
 import CapabilitySection from '../components/CapabilitySection/CapabilitySection';
-import WhatParmanaIsNot from '../components/WhatParmanaIsNot/WhatParmanaIsNot';
-import DocsLine from '../components/DocsLine/DocsLine';
+import capabilityStyles from '../components/CapabilitySection/CapabilitySection.module.css';
+import PullQuote from '../components/PullQuote/PullQuote';
+import Autonomy from '../components/Autonomy/Autonomy';
+import Verticals from '../components/Verticals/Verticals';
 import CTA from '../components/CTA/CTA';
 
 export default function Product() {
@@ -11,106 +13,98 @@ export default function Product() {
 
       <section className="section" aria-label="Product overview">
         <div className="container">
-          <h1>Every AI action is verified before execution.</h1>
+          <h1>Every AI action is checked before it happens, not after.</h1>
           <p>
-            Parmana sits between AI systems and your business systems,
-            verifying every action against your organization's policies before
-            execution. Authorized actions proceed. Unauthorized actions stop.
+            When an AI wants to take an action, refund a payment, update a
+            record, send a message, it doesn't just go do it. It sends that
+            proposed action to Parmana first. Parmana checks it against the
+            specific rule your organization set for that type of action. If
+            the action matches an allowed rule, it goes through. If it
+            doesn't, it's stopped, before anything happens to your systems.
           </p>
         </div>
       </section>
 
       <CapabilitySection
-        eyebrow="Verification"
-        heading="Every action is verified"
-        stamp={{ variant: 'block', label: 'Blocked' }}
+        eyebrow="Human authority layer"
+        heading="Autonomy belongs to the AI. Authority stays with the human."
       >
         <p>
-          Every action proposed by an AI system is evaluated against
-          deterministic policies before execution.
+          Parmana is the layer where that stays true, no matter how fast or
+          independently the AI operates.
         </p>
-
         <p>
-          If an action is authorized, it executes. If it is not explicitly
-          authorized, it is blocked.
+          As AI moves from answering to acting, someone still has to hold the
+          authority to decide what it's allowed to do. Parmana is where that
+          authority actually lives and gets enforced, not just documented.
         </p>
       </CapabilitySection>
 
       <CapabilitySection
-        eyebrow="Credentials"
-        heading="AI never receives execution credentials"
+        eyebrow="Never hands over the keys"
+        heading="Other systems hand the AI the keys. Parmana never does."
       >
         <p>
-          AI systems never possess API keys, secrets, or privileged credentials.
+          Other systems that connect AI to real business systems hand the AI
+          the credentials to act directly. Parmana never does. The AI can
+          only propose an action. It never holds the keys to carry one out.
+          Execution always stays with your own systems, only after Parmana
+          clears it.
         </p>
+        <PullQuote>
+          Other systems give the AI the keys and hope. Parmana never hands
+          over the keys at all. The AI proposes, your systems act.
+        </PullQuote>
+
+        <ul className={capabilityStyles.roleList}>
+          <li>
+            <strong>The AI.</strong> Only ever proposes an action. Never
+            holds real credentials.
+          </li>
+          <li>
+            <strong>The gateway.</strong> The checkpoint between the AI and
+            every system it might touch. Checks each proposed action against
+            your rules. Only the gateway holds real access, and only it
+            decides what proceeds.
+          </li>
+          <li>
+            <strong>Connectors.</strong> One per connected system (payments,
+            records, and so on), each holding only the access it specifically
+            needs. The AI never talks to a connector directly. Only the
+            gateway can invoke one, and only after a request clears.
+          </li>
+        </ul>
 
         <p>
-          Credentials are resolved only during authorized execution and are
-          never exposed to the AI.
+          <strong>
+            The AI proposes. The gateway decides. The connector carries it
+            out. Three separate roles, three separate places. The power to
+            act only ever lives in the last two.
+          </strong>
         </p>
       </CapabilitySection>
 
       <CapabilitySection
-        eyebrow="Evidence"
-        heading="Every decision produces proof"
+        eyebrow="Holds even against attacks"
+        heading="AI security attacks can't execute unauthorized actions."
       >
         <p>
-          Every allowed and blocked action generates a cryptographically signed,
-          tamper-evident record.
+          AI security attacks can't execute unauthorized actions in your
+          business systems, because the AI never had the power to execute
+          anything on its own.
         </p>
-
         <p>
-          Decisions can be independently verified without repeating execution.
+          Even with prompt injection (a hidden instruction slipped into
+          something the AI reads), the attack can compromise what the AI
+          decides to do. It can't compromise what the AI is actually allowed
+          to do.
         </p>
       </CapabilitySection>
 
-      <CapabilitySection
-        eyebrow="Performance"
-        heading="Built for machine-speed execution"
-      >
-        <p>
-          Parmana verifies actions in milliseconds, enabling governance without
-          slowing AI systems.
-        </p>
+      <Autonomy />
 
-        <p>
-          Verification happens fast enough to support real-time autonomous
-          execution.
-        </p>
-      </CapabilitySection>
+      <Verticals />
 
-      <CapabilitySection
-        eyebrow="Security"
-        heading="Designed for long-term trust"
-      >
-        <p>
-          Cryptographic signatures protect every execution record against
-          tampering.
-        </p>
-
-        <p>
-          Modern cryptography provides verifiable evidence for every authorized
-          decision.
-        </p>
-      </CapabilitySection>
-
-      <CapabilitySection
-        eyebrow="Integration"
-        heading="Works with your existing systems"
-      >
-        <p>
-          Parmana connects AI systems to enterprise applications through secure,
-          policy-controlled connectors.
-        </p>
-
-        <p>
-          Organizations define what AI may do without changing their existing
-          business systems.
-        </p>
-      </CapabilitySection>
-
-      <WhatParmanaIsNot />
-      <DocsLine />
       <CTA />
     </>
   );

@@ -13,13 +13,10 @@ export default function Hero() {
             प्रमाण
           </p>
 
-          <h1>Keep human authority in control of AI execution.</h1>
+          <h1>AI can take action. Make sure every action is one your business allows.</h1>
 
           <p className={styles.subline}>
-            AI systems can be wrong, compromised, unavailable, or behave
-            unexpectedly. Parmana verifies every AI action before it reaches
-            your business systems, ensuring every action executes within your
-            organization's authority.
+            No unauthorized access to your business systems in the agentic era.
           </p>
 
           <a

@@ -2,34 +2,34 @@ import styles from './FAQ.module.css';
 
 const ITEMS = [
   {
-    question: 'How is this different from an AI safety filter or prompt-level guardrail?',
+    question: "Why doesn't Parmana let a human step in when it's unsure?",
     answer:
-      "A safety filter asks a model to judge another model's output. Parmana doesn't use a model in the decision path at all. Authorization comes from rules your organization wrote, evaluated deterministically, so there's no second AI to manipulate or talk around.",
+      "There's no gap to escalate into. The check happens once, right before the action runs, and it's used up the moment it's checked. By the time a human could weigh in, the decision's already been made correctly. Escalation still exists, but only as a narrow, pre-configured exception for specific action types (a dollar threshold, a new kind of action), never a default fallback for uncertainty.",
   },
   {
-    question: 'Does this slow down AI execution?',
+    question: "Doesn't giving AI a way to escalate make this safer?",
     answer:
-      'No. Decisions are benchmarked at sub-2ms mean latency under in-memory storage. The agent gets an answer fast enough that nothing waits on Parmana.',
+      "Escalation feels safer, but it isn't free. It reopens the exact gap the system was built to close. That's why it stays a narrow, pre-set exception, not a general fallback for uncertainty. A general escalation path recreates the timing gap the single-use check closes, shifts enforcement from the system to a person's judgment (inconsistent, susceptible to pressure, and it doesn't scale), and creates false comfort, the sense that someone checked this, even when that check is a rubber stamp.",
   },
   {
-    question: 'What happens if the AI itself is compromised or jailbroken?',
+    question: 'Is this an AI governance platform?',
     answer:
-      "It still can't act outside the rules. The AI never holds execution credentials, so even a hacked AI has nothing to exercise directly, and every action is still checked against policy before anything runs.",
+      "No. Governance tools tell you what an AI did. Parmana decides whether it's allowed to do it in the first place. Governance watches, logs, and reports after the fact. Parmana is the checkpoint that decides in real time, before anything happens.",
   },
   {
-    question: 'Who writes the rules?',
+    question: 'Does this slow down execution?',
     answer:
-      'Your organization does, not the vendor and not the model. Policy is data your team defines and controls, evaluated the same way every time.',
+      "No. The authorization check itself completes in roughly one to two milliseconds. It's a synchronous step directly in the path before execution, not a queue an action waits in.",
   },
   {
-    question: 'What proof exists that this works today, not just on a roadmap?',
+    question: 'What happens if the AI is compromised or jailbroken?',
     answer:
-      "It's TRL 7: demonstrated in a live operational environment, not a lab demo. A real Razorpay refund has settled end to end through Parmana, verified via a signed webhook.",
+      "Even a jailbroken AI can't act outside your rules. It can want anything. It can execute nothing the check doesn't clear. That's not the AI resisting temptation, it never held the credentials needed to act on its own in the first place, so there's nothing for a jailbreak to hijack.",
   },
   {
-    question: 'When Parmana blocks an action, does a human have to step in?',
+    question: 'What happens if Parmana itself is unavailable or goes down?',
     answer:
-      'Not for the block itself. Humans write policy once, and nothing waits on a person after that. Parmana allows or blocks before execution, every time, rather than flagging it for someone to review afterward.',
+      "Nothing gets authorized while it's down. An action requires a signed authorization to execute, and none is issued unless the check actually runs and passes. An outage stops execution. It never opens a path around it.",
   },
 ];
 
@@ -37,8 +37,6 @@ export default function FAQ() {
   return (
     <section className={`section ${styles.section}`} aria-label="Frequently asked questions">
       <div className="container">
-        <span className="eyebrow">Questions</span>
-        <h2 className={styles.heading}>Straight answers.</h2>
         <div className={styles.list}>
           {ITEMS.map((item) => (
             <details className={styles.item} key={item.question}>

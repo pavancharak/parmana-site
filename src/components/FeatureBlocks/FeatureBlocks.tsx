@@ -169,8 +169,10 @@ const BLOCKS: Block[] = [
 
 export default function FeatureBlocks() {
   return (
-    <section className={`section ${styles.section}`} aria-label="How Parmana works">
+    <section className={`section ${styles.section}`} aria-label="The next step in AI">
       <div className="container">
+        <span className={`eyebrow ${styles.intro}`}>The next step in AI</span>
+
         {BLOCKS.map((block, index) => (
           <div
             className={styles.block}
@@ -186,6 +188,10 @@ export default function FeatureBlocks() {
             <div className={styles.visual}>{block.visual}</div>
           </div>
         ))}
+
+        <p className={styles.capstone}>
+          The challenge isn't intelligence anymore. It's control.
+        </p>
       </div>
     </section>
   );

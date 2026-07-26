@@ -13,6 +13,10 @@ export default function Footer() {
         <nav className={styles.pageLinks} aria-label="Pages">
           <Link to="/">Home</Link>
           <Link to="/product">Product</Link>
+          <Link to="/trust">Trust</Link>
+          <Link to="/deployment">Deployment</Link>
+          <Link to="/faq">FAQ</Link>
+          <Link to="/value">Value</Link>
           <Link to="/company">Company</Link>
         </nav>
 

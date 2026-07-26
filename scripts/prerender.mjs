@@ -26,6 +26,30 @@ const ROUTES = [
     description: 'Allow or block. Blocked by default. How Parmana authorizes AI execution against rules you wrote.',
   },
   {
+    urlPath: '/trust',
+    outFile: 'trust/index.html',
+    title: 'Trust | Parmana',
+    description: 'Zero trust architecture: nothing is trusted by default, not the AI, not Parmana, not your own systems. Every action verified against evidence.',
+  },
+  {
+    urlPath: '/deployment',
+    outFile: 'deployment/index.html',
+    title: 'Deployment | Parmana',
+    description: 'Works with any AI model. Runs on-prem, hybrid, or cloud. Not air-gapped, on purpose.',
+  },
+  {
+    urlPath: '/faq',
+    outFile: 'faq/index.html',
+    title: 'FAQ | Parmana',
+    description: 'Straight answers to the questions evaluators actually ask about how Parmana authorizes AI execution.',
+  },
+  {
+    urlPath: '/value',
+    outFile: 'value/index.html',
+    title: 'Value | Parmana',
+    description: 'From probabilistic guardrails to explicit, pre-authorized rules: the direct and strategic value of authorizing AI execution before it happens.',
+  },
+  {
     urlPath: '/company',
     outFile: 'company/index.html',
     title: 'Company | Parmana',

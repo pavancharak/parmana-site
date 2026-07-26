@@ -1,0 +1,10 @@
+.quote {
+  margin: 1.25rem 0 0;
+  border-left: 3px solid var(--accent);
+  padding-left: 1.25rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  line-height: 1.5;
+  max-width: 48ch;
+}

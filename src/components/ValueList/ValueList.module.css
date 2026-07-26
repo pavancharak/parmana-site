@@ -3,14 +3,15 @@
 }
 
 .heading {
-  margin-bottom: 1.25rem;
+  margin-top: 0.75rem;
 }
 
 .list {
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 60ch;
+  max-width: 62ch;
 }
 
 .list strong {
