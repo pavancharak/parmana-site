@@ -1,7 +1,6 @@
 import styles from './CTA.module.css';
 
-const CONTACT_MAILTO =
-  'mailto:founder@parmanasystems.com?subject=Design%20partner%20conversation';
+const CONTACT_MAILTO = 'mailto:founder@parmanasystems.com';
 
 interface CTAProps {
   heading?: string;
@@ -12,8 +11,8 @@ interface CTAProps {
 
 export default function CTA({
   heading = 'Keep human authority in control of AI execution.',
-  body = 'See how Parmana verifies every AI action before it reaches your business systems, ensuring AI operates within the authority your organization defines.',
-  label = 'Become a Design Partner',
+  body = "If you're deploying AI agents and want them switched on rather than stuck in pilot, write to us: founder@parmanasystems.com",
+  label = 'Write to us',
   mailto = CONTACT_MAILTO,
 }: CTAProps) {
   return (

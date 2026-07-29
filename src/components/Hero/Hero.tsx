@@ -1,8 +1,7 @@
 import FlowDiagram from '../FlowDiagram/FlowDiagram';
 import styles from './Hero.module.css';
 
-const CONTACT_MAILTO =
-  'mailto:founder@parmanasystems.com?subject=Design%20partner%20conversation';
+const CONTACT_MAILTO = 'mailto:founder@parmanasystems.com';
 
 export default function Hero() {
   return (
@@ -13,17 +12,23 @@ export default function Hero() {
             प्रमाण
           </p>
 
-          <h1>AI can take action. Make sure every action is one your business allows.</h1>
+          <h1>AI can finally take real action in your business, at full speed, without losing control.</h1>
 
           <p className={styles.subline}>
-            No unauthorized access to your business systems in the agentic era.
+            The agentic era is here. Now your business can move at its
+            speed, fully in control.
+          </p>
+
+          <p className={styles.tagline}>
+            AI can take action. Make sure every action is one your business
+            allows.
           </p>
 
           <a
             className={`button button--primary ${styles.cta}`}
             href={CONTACT_MAILTO}
           >
-            Become a Design Partner
+            Write to us
           </a>
         </div>
 

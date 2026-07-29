@@ -44,7 +44,7 @@ export default function Value() {
           <h1>From probabilistic guardrails to explicit, pre-authorized rules.</h1>
           <p>
             That shift isn't just a technical one. It changes what your
-            organization can actually do with AI, and how quickly.
+            organization can actually do with AI, and how fast.
           </p>
         </div>
       </section>
@@ -54,8 +54,8 @@ export default function Value() {
       <ValueList eyebrow="Strategic value" heading="What it means for the business." items={STRATEGIC_VALUE} />
 
       <PromiseCallout label="The edge">
-        Innovate for your customers without losing control. That control
-        becomes your edge.
+        Innovate for your customers at full speed. That control becomes
+        your edge.
       </PromiseCallout>
 
       <section className="section" aria-label="Closing">

@@ -3,6 +3,7 @@ import Hero from '../components/Hero/Hero';
 import FeatureBlocks from '../components/FeatureBlocks/FeatureBlocks';
 import PromiseCallout from '../components/PromiseCallout/PromiseCallout';
 import CapabilitySection from '../components/CapabilitySection/CapabilitySection';
+import PullQuote from '../components/PullQuote/PullQuote';
 import Developers from '../components/Developers/Developers';
 import CTA from '../components/CTA/CTA';
 
@@ -13,15 +14,28 @@ export default function Home() {
 
       <Hero />
 
+      <CapabilitySection eyebrow="Built for confidence" heading="Simple enough to trust completely.">
+        <p>
+          It doesn't reason about whether an action seems okay. It doesn't
+          judge intent. It checks a proposed action against a rule your
+          business set in advance, and the answer is yes or no. Nothing to
+          persuade. Nothing to talk into an exception. The same check, the
+          same way, every time.
+        </p>
+        <PullQuote>
+          A smart checkpoint can be reasoned with. A dumb one can't be talked
+          into anything, because there's nothing to persuade.
+        </PullQuote>
+      </CapabilitySection>
+
       <FeatureBlocks />
 
       <PromiseCallout>
-        Every action Parmana clears follows exactly the rules you set.
-        Nothing more, nothing less. If it didn't come from your rules, it
-        doesn't run.
+        Every action Parmana clears is exactly the action your business
+        chose to allow, nothing left to chance.
       </PromiseCallout>
 
-      <CapabilitySection eyebrow="Integration" heading="How Parmana fits into what you already run.">
+      <CapabilitySection eyebrow="Integration" heading="Runs on the systems you already trust.">
         <p>
           Parmana sits between your AI systems and the systems that actually
           do the work: payments, records, operations. It doesn't replace
@@ -34,33 +48,32 @@ export default function Home() {
         </p>
       </CapabilitySection>
 
-      <CapabilitySection eyebrow="Why it matters" heading="Because AI doesn't just answer anymore. It acts.">
+      <CapabilitySection eyebrow="Why it matters" heading="AI doesn't just answer anymore. It gets to act.">
         <p>
-          An AI that can send a refund, update a record, or move funds is
-          making decisions with real consequences, whether it was right to
-          make them or not.
+          An AI that can send a refund, update a record, or move funds can
+          finally do real work in your business, not just suggest it.
         </p>
         <p>
           Parmana is the check between what an AI decides and what actually
-          happens to your business. Without it, every wrong decision becomes
-          a real one.
+          happens to your business, so every decision that reaches your
+          systems is one you already stood behind.
         </p>
       </CapabilitySection>
 
       <PromiseCallout label="Zero trust">
-        Zero trust, all the way down. Not the AI. Not us. Not even your own
-        systems by default. Verified, every time.
+        Every action, verified and provable, so trust is never something you
+        have to hope for.
       </PromiseCallout>
 
-      <CapabilitySection eyebrow="Built for consequence" heading="Designed for systems that matter.">
+      <CapabilitySection eyebrow="Built for what matters" heading="Ready for the systems that carry real weight.">
         <p>
           Financial transactions. Patient records. Regulated operations.
-          These aren't places where "probably fine" is an acceptable
-          outcome.
+          This is where AI can do the most good, once it's operating inside
+          rules you set.
         </p>
         <p>
           Parmana is built for exactly the kind of AI action where getting it
-          wrong has a real cost, not just for the easy, low-stakes cases.
+          right pays off the most, not just the easy, low-stakes cases.
         </p>
       </CapabilitySection>
 
@@ -80,9 +93,9 @@ export default function Home() {
       <Developers />
 
       <CTA
-        heading="Keep human authority in control of AI execution."
-        body="See how Parmana verifies every AI action before it reaches your business systems, ensuring AI operates within the authority your organization defines."
-        label="Become a Design Partner"
+        heading="Ready to let AI act at full speed? Keep human authority in control of AI execution."
+        body="If you're deploying AI agents and want them switched on rather than stuck in pilot, write to us: founder@parmanasystems.com"
+        label="Write to us"
       />
     </>
   );

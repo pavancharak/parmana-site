@@ -29,28 +29,29 @@ export default function Trust() {
         <div className="container">
           <span className="eyebrow">Zero trust architecture</span>
           <h1>
-            Nothing is trusted by default. Not the AI. Not Parmana. Not even
-            your own systems.
+            Every action, verified and provable, so trust is never something
+            you have to hope for.
           </h1>
           <p>
             Parmana is built on zero trust architecture: nothing is trusted
             by default. Not the AI, not Parmana itself, not the business
             systems it connects to. Every action is verified against
-            evidence, every time, with nothing assumed.
+            evidence, every time, so confidence in what AI did is never a
+            matter of taking someone's word for it.
           </p>
         </div>
       </section>
 
-      <CardGrid eyebrow="What that means here" heading="Three places nothing is assumed." items={ZERO_TRUST_CARDS} />
+      <CardGrid eyebrow="What that means here" heading="Three places where confidence is earned, not assumed." items={ZERO_TRUST_CARDS} />
 
       <CapabilitySection
-        eyebrow="Holds even against attacks"
-        heading="AI security attacks can't execute unauthorized actions."
+        eyebrow="Built to hold"
+        heading="Confidence that holds even against a determined attack."
       >
         <p>
-          AI security attacks can't execute unauthorized actions in your
-          business systems, because the AI never had the power to execute
-          anything on its own.
+          You can put AI in front of real business systems and mean it,
+          because the AI never had the power to execute anything on its own
+          in the first place.
         </p>
         <p>
           Prompt injection is the clearest example: a hidden instruction
@@ -73,8 +74,8 @@ export default function Trust() {
       </section>
 
       <PromiseCallout label="Verify everything">
-        Verify everything. Even us. Every decision leaves proof, not a
-        promise.
+        Verify everything, including us. Every decision comes with proof,
+        not just a promise.
       </PromiseCallout>
 
       <CTA />

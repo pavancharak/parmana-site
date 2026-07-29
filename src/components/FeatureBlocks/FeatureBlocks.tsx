@@ -139,30 +139,30 @@ interface Block {
 const BLOCKS: Block[] = [
   {
     eyebrow: '01 · Verification',
-    heading: 'Every AI action is verified before execution.',
+    heading: 'Every AI action is cleared to run before it happens.',
     body:
-      "Every action proposed by an AI system is verified against your organization's policies. Authorized actions proceed. Unauthorized actions stop.",
+      "Every action proposed by an AI system is checked against your organization's policies in real time. Authorized actions proceed immediately. Anything else stops before it reaches your systems.",
     visual: <PolicyVisual />,
   },
   {
     eyebrow: '02 · Credential Isolation',
-    heading: 'AI never receives execution credentials.',
+    heading: 'AI gets to act, without ever holding the keys.',
     body:
-      'Execution credentials remain outside the AI. They are resolved only for authorized actions and are never exposed to the model.',
+      "Execution credentials stay outside the AI entirely. They're resolved only for authorized actions, so the AI can move fast while your systems stay the only ones actually in control.",
     visual: <CredentialVisual />,
   },
   {
     eyebrow: '03 · Secure Integration',
-    heading: 'Works with your existing business systems.',
+    heading: 'Works with your existing business systems, day one.',
     body:
-      'Parmana securely connects AI systems to enterprise applications through policy-controlled connectors, without requiring changes to your existing systems.',
+      'Parmana connects AI systems to your enterprise applications through policy-controlled connectors, with no rip-and-replace and no changes to the systems you already run.',
     visual: <ConnectorVisual />,
   },
   {
     eyebrow: '04 · Verifiable Proof',
-    heading: 'Every decision produces verifiable proof.',
+    heading: 'Every decision comes with proof, not just an answer.',
     body:
-      'Every allowed and blocked action generates a cryptographically signed, tamper-evident record that can be independently verified.',
+      'Every allowed and blocked action generates a cryptographically signed record that can be independently verified, so confidence in what AI did never has to rest on taking our word for it.',
     visual: <ReceiptVisual />,
   },
 ];
@@ -190,7 +190,8 @@ export default function FeatureBlocks() {
         ))}
 
         <p className={styles.capstone}>
-          The challenge isn't intelligence anymore. It's control.
+          Intelligence was never the hard part. Control was, and now it's
+          solved.
         </p>
       </div>
     </section>

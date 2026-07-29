@@ -1,3 +1,4 @@
+import PullQuote from '../PullQuote/PullQuote';
 import styles from './CompanyIntro.module.css';
 
 export default function CompanyIntro() {
@@ -10,19 +11,29 @@ export default function CompanyIntro() {
           AI can operate at machine speed. Human authority should too.
         </h1>
 
+        <PullQuote>
+          We want to make the world safer from unauthorized execution by
+          autonomous systems.
+        </PullQuote>
+
         <div className={styles.body}>
           <p>
             AI systems are increasingly making and executing decisions across
-            critical business operations. The challenge isn't simply making AI
-            more accurate , it's ensuring every action remains within the authority
-            your organization defines.
+            critical business operations. That's an enormous opportunity,
+            and we built Parmana to make sure organizations can take it fully:
+            not by slowing AI down, but by making sure every action it takes
+            remains exactly within the authority your organization defines.
           </p>
 
           <p>
             Parmana verifies every AI action before execution. If an action is
-            authorized, it proceeds. If it isn't, it stops. Every decision
-            produces cryptographic proof, giving organizations confidence that
-            authority remains under human control, regardless of how AI behaves.
+            authorized, it proceeds, immediately. If it isn't, it stops.
+            Every decision produces cryptographic proof, so organizations can
+            hand AI real work with confidence that authority stays under
+            human control, regardless of how AI behaves. That's the world we
+            want to build: one where autonomous systems can be trusted with
+            real authority, because unauthorized execution was designed out
+            from the start.
           </p>
         </div>
       </div>

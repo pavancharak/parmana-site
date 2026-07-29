@@ -8,15 +8,15 @@ export default function Autonomy() {
           <span className="eyebrow">Built for autonomous AI</span>
 
           <h2 className={styles.heading}>
-            Set the rule once. The AI acts without asking again.
+            Set the rule once. Let the AI run at full speed from there.
           </h2>
 
           <p className={styles.body}>
             Once your organization defines what's allowed, the AI doesn't
             need to check back in for every action. It keeps moving at its
-            own speed. Every action it takes is still checked against that
-            rule before it executes, so independence never means the AI is
-            acting outside what you've allowed.
+            own speed, taking real action continuously. Every action it
+            takes is still checked against that rule before it executes, so
+            speed and control finally stop being a trade-off.
           </p>
         </div>
       </div>

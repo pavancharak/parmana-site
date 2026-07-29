@@ -13,14 +13,14 @@ export default function Product() {
 
       <section className="section" aria-label="Product overview">
         <div className="container">
-          <h1>Every AI action is checked before it happens, not after.</h1>
+          <h1>AI can finally act on your business's behalf, exactly within the limits you set.</h1>
           <p>
             When an AI wants to take an action, refund a payment, update a
-            record, send a message, it doesn't just go do it. It sends that
-            proposed action to Parmana first. Parmana checks it against the
-            specific rule your organization set for that type of action. If
-            the action matches an allowed rule, it goes through. If it
-            doesn't, it's stopped, before anything happens to your systems.
+            record, send a message, it sends that proposed action to
+            Parmana first. Parmana checks it against the specific rule your
+            organization set for that type of action. If the action matches
+            an allowed rule, it goes through immediately. If it doesn't, it
+            stops, before anything happens to your systems.
           </p>
         </div>
       </section>
@@ -42,14 +42,15 @@ export default function Product() {
 
       <CapabilitySection
         eyebrow="Never hands over the keys"
-        heading="Other systems hand the AI the keys. Parmana never does."
+        heading="Your systems keep the keys. AI gets the freedom to act anyway."
       >
         <p>
           Other systems that connect AI to real business systems hand the AI
           the credentials to act directly. Parmana never does. The AI can
           only propose an action. It never holds the keys to carry one out.
           Execution always stays with your own systems, only after Parmana
-          clears it.
+          clears it, so the AI moves freely while your systems stay firmly
+          in charge.
         </p>
         <PullQuote>
           Other systems give the AI the keys and hope. Parmana never hands
@@ -85,13 +86,13 @@ export default function Product() {
       </CapabilitySection>
 
       <CapabilitySection
-        eyebrow="Holds even against attacks"
-        heading="AI security attacks can't execute unauthorized actions."
+        eyebrow="Built to hold"
+        heading="Confidence that holds even against a determined attack."
       >
         <p>
-          AI security attacks can't execute unauthorized actions in your
-          business systems, because the AI never had the power to execute
-          anything on its own.
+          You can put AI in front of real business systems and mean it,
+          because the AI never had the power to execute anything on its own
+          in the first place.
         </p>
         <p>
           Even with prompt injection (a hidden instruction slipped into

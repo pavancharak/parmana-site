@@ -12,8 +12,9 @@ export default function FAQPage() {
           <span className="eyebrow">Questions</span>
           <h1>Straight answers to the questions evaluators actually ask.</h1>
           <p>
-            No unauthorized access to your business systems in the agentic
-            era means answering these directly, not around them.
+            The agentic era rewards businesses that move fast and stay in
+            control, and that starts with answering these directly, not
+            around them.
           </p>
         </div>
       </section>

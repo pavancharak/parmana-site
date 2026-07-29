@@ -26,16 +26,16 @@ export default function Deployment() {
       <section className="section" aria-label="Deployment overview">
         <div className="container">
           <span className="eyebrow">Deployment</span>
-          <h1>Works with any AI. Runs wherever your systems already live.</h1>
+          <h1>Ready to run wherever your business already lives. Works with any AI.</h1>
         </div>
       </section>
 
       <CardGrid eyebrow="How it deploys" heading="Built to fit your infrastructure, not the other way around." items={CARDS} />
 
       <PromiseCallout label="The deployment promise">
-        Works with any AI model. Runs on-prem, hybrid, or cloud. Not
-        air-gapped, on purpose: a system that can't be updated or verified
-        isn't safer, it's just harder to trust.
+        Works with any AI model. Runs on-prem, hybrid, or cloud, wherever
+        you're ready for it. Not air-gapped, on purpose: a system you can
+        keep updating and verifying is one you can actually trust.
       </PromiseCallout>
 
       <CTA />
