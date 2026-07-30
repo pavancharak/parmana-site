@@ -11,8 +11,8 @@ const ITEMS = [
   {
     question: 'Why no escalation path?',
     answer: [
-      "There's no gap to escalate into — the check happens once, right before the action runs, and it's used up the moment it's checked. By the time a human could weigh in, the decision's already been made correctly.",
-      'Escalation still exists — but only as a deliberate, pre-configured exception for specific action types, for example anything above a dollar threshold. It is never a default fallback for uncertainty.',
+      "There's no gap to escalate into the check happens once, right before the action runs, and it's used up the moment it's checked. By the time a human could weigh in, the decision's already been made correctly.",
+      'Escalation still exists but only as a deliberate, pre-configured exception for specific action types, for example anything above a dollar threshold. It is never a default fallback for uncertainty.',
     ],
   },
   {
@@ -29,7 +29,7 @@ const ITEMS = [
   {
     question: "Don't audits and monitoring already cover this?",
     answer: [
-      "We don't believe an annual audit or a compliance review is AI governance. Those work exactly as long as everything is fine — and something eventually won't be. We don't believe monitoring and observability is AI governance either — watching what already happened doesn't stop it from happening. And we don't believe a human-in-the-loop process that checks in periodically can keep pace with a system that acts continuously, at machine speed. So we designed humans into the architecture itself, not into a review cycle.",
+      "We don't believe an annual audit or a compliance review is AI governance. Those work exactly as long as everything is fine and something eventually won't be. We don't believe monitoring and observability is AI governance either — watching what already happened doesn't stop it from happening. And we don't believe a human-in-the-loop process that checks in periodically can keep pace with a system that acts continuously, at machine speed. So we designed humans into the architecture itself, not into a review cycle.",
     ],
   },
 ];
