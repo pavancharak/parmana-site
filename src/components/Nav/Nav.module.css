@@ -1,5 +1,9 @@
 .nav {
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .inner {
@@ -11,66 +15,51 @@
   flex-wrap: wrap;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
 .wordmark {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.15rem;
-  letter-spacing: 0.04em;
+  letter-spacing: -0.01em;
   text-decoration: none;
   color: var(--text);
-}
-
-.badge {
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent);
-  padding-left: 0.75rem;
-  border-left: 1px solid var(--line);
 }
 
 .links {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+  gap: 1.75rem;
+  margin-inline: auto;
 }
 
 .link {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
+  font-size: 0.92rem;
+  color: var(--muted);
   text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.link:hover,
+.link:global(.active) {
   color: var(--text);
-  padding-block: 0.25rem;
-  border-bottom: 1px solid transparent;
-}
-
-.link:hover {
-  border-bottom-color: var(--accent);
-}
-
-.linkActive {
-  color: var(--accent);
 }
 
 .contact {
   font-size: 0.85rem;
-  padding: 0.5em 1.1em;
+  padding: 0.5em 1.2em;
+  text-align: center;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 720px) {
+  .inner {
+    justify-content: center;
+    text-align: center;
+  }
+
   .links {
+    order: 3;
+    margin-inline: 0;
     width: 100%;
-    gap: 0.65rem 1.25rem;
+    justify-content: center;
+    gap: 1.25rem;
   }
 }

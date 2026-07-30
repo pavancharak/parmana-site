@@ -1,101 +1,88 @@
-import DocumentHeader from '../components/DocumentHeader/DocumentHeader';
 import Hero from '../components/Hero/Hero';
-import FeatureBlocks from '../components/FeatureBlocks/FeatureBlocks';
-import PromiseCallout from '../components/PromiseCallout/PromiseCallout';
-import CapabilitySection from '../components/CapabilitySection/CapabilitySection';
+import RotatingWord from '../components/RotatingWord/RotatingWord';
 import PullQuote from '../components/PullQuote/PullQuote';
-import Developers from '../components/Developers/Developers';
+import CheckpointDiagram from '../components/CheckpointDiagram/CheckpointDiagram';
+import FeatureGrid from '../components/FeatureGrid/FeatureGrid';
+import ValueGrid from '../components/ValueGrid/ValueGrid';
+import Verticals from '../components/Verticals/Verticals';
+import FAQ from '../components/FAQ/FAQ';
 import CTA from '../components/CTA/CTA';
+import styles from './Home.module.css';
 
 export default function Home() {
   return (
     <>
-      <DocumentHeader page="Home" />
-
       <Hero />
 
-      <CapabilitySection eyebrow="Built for confidence" heading="Simple enough to trust completely.">
-        <p>
-          It doesn't reason about whether an action seems okay. It doesn't
-          judge intent. It checks a proposed action against a rule your
-          business set in advance, and the answer is yes or no. Nothing to
-          persuade. Nothing to talk into an exception. The same check, the
-          same way, every time.
-        </p>
-        <PullQuote>
-          A smart checkpoint can be reasoned with. A dumb one can't be talked
-          into anything, because there's nothing to persuade.
-        </PullQuote>
-      </CapabilitySection>
+      <RotatingWord />
 
-      <FeatureBlocks />
+      <PullQuote label="Category">
+        From probabilistic guardrails to explicit, pre-authorized rules.
+      </PullQuote>
 
-      <PromiseCallout>
-        Every action Parmana clears is exactly the action your business
-        chose to allow, nothing left to chance.
-      </PromiseCallout>
+      <section className={`section ${styles.banner}`} aria-label="Full intelligence, full authority">
+        <div className="container">
+          <p className={styles.bannerText}>
+            AI gets full use of its intelligence. Humans keep full authority over the decision, set
+            through policy and rules.
+          </p>
+        </div>
+      </section>
 
-      <CapabilitySection eyebrow="Integration" heading="Runs on the systems you already trust.">
-        <p>
-          Parmana sits between your AI systems and the systems that actually
-          do the work: payments, records, operations. It doesn't replace
-          those systems or ask you to move your data into a new one.
-        </p>
-        <p>
-          Every action still runs through your own systems. Parmana only
-          decides, in the moment, whether that action is allowed to go
-          through.
-        </p>
-      </CapabilitySection>
+      <section
+        id="how-parmana-fits"
+        className={`section ${styles.fits}`}
+        aria-label="How Parmana fits"
+      >
+        <div className="container">
+          <h2 className={styles.fitsHeading}>How Parmana fits</h2>
 
-      <CapabilitySection eyebrow="Why it matters" heading="AI doesn't just answer anymore. It gets to act.">
-        <p>
-          An AI that can send a refund, update a record, or move funds can
-          finally do real work in your business, not just suggest it.
-        </p>
-        <p>
-          Parmana is the check between what an AI decides and what actually
-          happens to your business, so every decision that reaches your
-          systems is one you already stood behind.
-        </p>
-      </CapabilitySection>
+          <div className={styles.fitsLayout}>
+            <p className={styles.fitsCopy}>
+              Parmana makes sure AI only does what your business allows. It sits between AI and the
+              systems AI interacts with. It checks every action before it happens. If the action
+              follows your rules, it proceeds. If not, it stops.
+            </p>
 
-      <PromiseCallout label="Zero trust">
-        Every action, verified and provable, so trust is never something you
-        have to hope for.
-      </PromiseCallout>
+            <CheckpointDiagram />
 
-      <CapabilitySection eyebrow="Built for what matters" heading="Ready for the systems that carry real weight.">
-        <p>
-          Financial transactions. Patient records. Regulated operations.
-          This is where AI can do the most good, once it's operating inside
-          rules you set.
-        </p>
-        <p>
-          Parmana is built for exactly the kind of AI action where getting it
-          right pays off the most, not just the easy, low-stakes cases.
-        </p>
-      </CapabilitySection>
+            <p className={styles.fitsCopy}>
+              AI is never given a direct path to act on business systems. Every proposed action
+              passes through Parmana&rsquo;s check first. Nothing on the other side of that boundary
+              can act without clearing the checkpoint first.
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <CapabilitySection eyebrow="In the background" heading="Built to disappear.">
-        <p>
-          Parmana isn't a new screen for your team to watch or another
-          dashboard added to the pile. Once the rules are set, it works in
-          the background, checking every action, without becoming one more
-          thing to operate.
-        </p>
-        <p>
-          The goal isn't a new interface. It's for AI to be trustworthy
-          enough that you stop thinking about it.
-        </p>
-      </CapabilitySection>
+      <FeatureGrid />
 
-      <Developers />
+      <PullQuote
+        label="No unauthorized access"
+        supporting="As AI enters the agentic era — acting, not just answering — Parmana makes sure that access never happens without authorization. Not because the AI behaves. Because it never had the access to misuse."
+      >
+        No unauthorized access to your business systems in the agentic era.
+      </PullQuote>
+
+      <ValueGrid />
+
+      <Verticals />
+
+      <FAQ />
+
+      <section className={`section ${styles.disappear}`} aria-label="Built to disappear">
+        <div className="container">
+          <p className={styles.disappearText}>
+            The best infrastructure isn&rsquo;t something users notice. It quietly makes every AI
+            action more reliable.
+          </p>
+        </div>
+      </section>
 
       <CTA
-        heading="Ready to let AI act at full speed? Keep human authority in control of AI execution."
-        body="If you're deploying AI agents and want them switched on rather than stuck in pilot, write to us: founder@parmanasystems.com"
+        heading="AI is ready to operate. Make sure it operates within your rules."
         label="Write to us"
+        supporting="If you're deploying AI agents and want them switched on rather than stuck in pilot, write to us: founder@parmanasystems.com"
       />
     </>
   );

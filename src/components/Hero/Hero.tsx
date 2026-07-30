@@ -1,4 +1,3 @@
-import FlowDiagram from '../FlowDiagram/FlowDiagram';
 import styles from './Hero.module.css';
 
 const CONTACT_MAILTO = 'mailto:founder@parmanasystems.com';
@@ -6,34 +5,21 @@ const CONTACT_MAILTO = 'mailto:founder@parmanasystems.com';
 export default function Hero() {
   return (
     <section className={styles.hero} aria-label="Introduction">
-      <div className={`container ${styles.grid}`}>
-        <div>
-          <p className={`devanagari ${styles.mark}`} lang="sa">
-            प्रमाण
-          </p>
+      <div className={`container ${styles.inner}`}>
+        <h1>AI can take action. Make sure every action is one your business allows.</h1>
 
-          <h1>AI can finally take real action in your business, at full speed, without losing control.</h1>
+        <p className={styles.subline}>
+          As AI begins operating business systems, Parmana checks every action before it happens
+          so organizations stay in control.
+        </p>
 
-          <p className={styles.subline}>
-            The agentic era is here. Now your business can move at its
-            speed, fully in control.
-          </p>
-
-          <p className={styles.tagline}>
-            AI can take action. Make sure every action is one your business
-            allows.
-          </p>
-
-          <a
-            className={`button button--primary ${styles.cta}`}
-            href={CONTACT_MAILTO}
-          >
+        <div className={styles.actions}>
+          <a className={`button button--primary ${styles.cta}`} href="#how-parmana-fits">
+            Explore Parmana
+          </a>
+          <a className="button" href={CONTACT_MAILTO}>
             Write to us
           </a>
-        </div>
-
-        <div className={styles.diagramWrap}>
-          <FlowDiagram />
         </div>
       </div>
     </section>

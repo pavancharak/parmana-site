@@ -1,31 +1,21 @@
-import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
-        <div>
-          <p className={styles.wordmark}>PARMANA</p>
-          <p className={styles.tagline}>The authorization layer for AI execution.</p>
-        </div>
+        <p className={styles.wordmark}>Parmana</p>
 
-        <nav className={styles.pageLinks} aria-label="Pages">
-          <Link to="/">Home</Link>
-          <Link to="/product">Product</Link>
-          <Link to="/trust">Trust</Link>
-          <Link to="/deployment">Deployment</Link>
-          <Link to="/faq">FAQ</Link>
-          <Link to="/value">Value</Link>
-          <Link to="/company">Company</Link>
+        <nav className={styles.linkRow} aria-label="Footer">
+          <a href="/product">Product</a>
+          <a href="/company">Company</a>
+          <a href="https://docs.parmanasystems.com/">Docs</a>
+          <a href="mailto:founder@parmanasystems.com">founder@parmanasystems.com</a>
         </nav>
 
-        <div className={styles.linkRow}>
-          <a href="https://docs.parmanasystems.com/">Docs</a>
-          <a href="https://github.com/pavancharak/parmana-exp">GitHub</a>
-          <a href="https://www.linkedin.com/in/pavancharak/">LinkedIn</a>
-          <a href="mailto:founder@parmanasystems.com">founder@parmanasystems.com</a>
-        </div>
+        <p className={`mono ${styles.copyright}`}>© {year} Parmana Systems. All rights reserved.</p>
       </div>
     </footer>
   );

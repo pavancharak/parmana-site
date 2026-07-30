@@ -1,0 +1,53 @@
+.section {
+  border-top: 1px solid var(--border);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  grid-column: span 4;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: border-color 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--gold-dim);
+}
+
+.card:nth-child(1) {
+  grid-column: span 7;
+}
+
+.card:nth-child(2) {
+  grid-column: span 5;
+}
+
+.cardTitle {
+  font-size: 1.15rem;
+}
+
+.cardBody {
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 860px) {
+  .card,
+  .card:nth-child(1),
+  .card:nth-child(2) {
+    grid-column: span 12;
+  }
+}

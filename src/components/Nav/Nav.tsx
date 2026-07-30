@@ -3,49 +3,29 @@ import styles from './Nav.module.css';
 
 const CONTACT_MAILTO = 'mailto:founder@parmanasystems.com';
 
-function navLinkClass({ isActive }: { isActive: boolean }) {
-  return isActive ? `${styles.link} ${styles.linkActive}` : styles.link;
-}
-
 export default function Nav() {
   return (
     <header className={styles.nav}>
       <div className={`container ${styles.inner}`}>
-        <div className={styles.brand}>
-          <NavLink to="/" className={styles.wordmark}>
-            PARMANA
-          </NavLink>
-          <span className={styles.badge}>Live in production</span>
-        </div>
+        <NavLink to="/" className={styles.wordmark}>
+          Parmana
+        </NavLink>
+
         <nav className={styles.links} aria-label="Primary">
-          <NavLink to="/" className={navLinkClass} end>
-            Home
-          </NavLink>
-          <NavLink to="/product" className={navLinkClass}>
+          <NavLink to="/product" className={styles.link}>
             Product
           </NavLink>
-          <NavLink to="/trust" className={navLinkClass}>
-            Trust
-          </NavLink>
-          <NavLink to="/deployment" className={navLinkClass}>
-            Deployment
-          </NavLink>
-          <NavLink to="/faq" className={navLinkClass}>
-            FAQ
-          </NavLink>
-          <NavLink to="/value" className={navLinkClass}>
-            Value
-          </NavLink>
-          <NavLink to="/company" className={navLinkClass}>
+          <NavLink to="/company" className={styles.link}>
             Company
           </NavLink>
           <a className={styles.link} href="https://docs.parmanasystems.com/">
             Docs
           </a>
-          <a className={`button button--primary ${styles.contact}`} href={CONTACT_MAILTO}>
-            Contact
-          </a>
         </nav>
+
+        <a className={`button button--primary ${styles.contact}`} href={CONTACT_MAILTO}>
+          Write to us
+        </a>
       </div>
     </header>
   );

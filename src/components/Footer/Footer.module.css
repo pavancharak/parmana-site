@@ -1,5 +1,5 @@
 .footer {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid var(--border);
   margin-top: 2rem;
 }
 
@@ -7,7 +7,7 @@
   padding-block: clamp(2rem, 5vw, 3rem);
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .wordmark {
@@ -16,30 +16,27 @@
   font-size: 1.05rem;
 }
 
-.tagline {
-  font-size: 0.95rem;
-  color: var(--text);
-  opacity: 0.75;
-}
-
-.pageLinks,
 .linkRow {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
-.pageLinks a,
 .linkRow a {
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  letter-spacing: 0.03em;
+  font-size: 0.9rem;
   text-decoration: none;
-  color: var(--text);
+  color: var(--muted);
   border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.pageLinks a:hover,
 .linkRow a:hover {
-  border-bottom-color: var(--accent);
+  color: var(--text);
+  border-bottom-color: var(--gold);
+}
+
+.copyright {
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
 }

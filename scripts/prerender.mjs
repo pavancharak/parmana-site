@@ -13,47 +13,10 @@ const ROUTES = [
   {
     urlPath: '/',
     outFile: 'index.html',
-    title: 'Parmana | The authorization layer for AI execution',
+    title: 'Parmana | Make sure every AI action is one your business allows',
     description:
-      "The AI asks permission before every action and leaves verifiable proof behind. Even a compromised AI can't bypass that control. Built for regulated finance.",
-    ogDescription:
-      "The AI has to ask permission before it acts, and everything it does leaves proof. Even a hacked AI can't skip that step.",
-  },
-  {
-    urlPath: '/product',
-    outFile: 'product/index.html',
-    title: 'Product | Parmana',
-    description: 'Allow or block. Blocked by default. How Parmana authorizes AI execution against rules you wrote.',
-  },
-  {
-    urlPath: '/trust',
-    outFile: 'trust/index.html',
-    title: 'Trust | Parmana',
-    description: 'Zero trust architecture: nothing is trusted by default, not the AI, not Parmana, not your own systems. Every action verified against evidence.',
-  },
-  {
-    urlPath: '/deployment',
-    outFile: 'deployment/index.html',
-    title: 'Deployment | Parmana',
-    description: 'Works with any AI model. Runs on-prem, hybrid, or cloud. Not air-gapped, on purpose.',
-  },
-  {
-    urlPath: '/faq',
-    outFile: 'faq/index.html',
-    title: 'FAQ | Parmana',
-    description: 'Straight answers to the questions evaluators actually ask about how Parmana authorizes AI execution.',
-  },
-  {
-    urlPath: '/value',
-    outFile: 'value/index.html',
-    title: 'Value | Parmana',
-    description: 'From probabilistic guardrails to explicit, pre-authorized rules: the direct and strategic value of authorizing AI execution before it happens.',
-  },
-  {
-    urlPath: '/company',
-    outFile: 'company/index.html',
-    title: 'Company | Parmana',
-    description: 'Parmana comes from pramana, a valid means of knowing. Built by Manthan Systems.',
+      'As AI begins operating business systems, Parmana checks every action before it happens so organizations stay in control.',
+    ogDescription: 'AI can take action. Make sure every action is one your business allows.',
   },
 ];
 

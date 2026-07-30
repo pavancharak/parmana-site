@@ -1,0 +1,24 @@
+.section {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.heading {
+  margin-top: 1rem;
+  max-width: 22ch;
+}
+
+.body {
+  margin-top: 1.25rem;
+  max-width: 40rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.body a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
