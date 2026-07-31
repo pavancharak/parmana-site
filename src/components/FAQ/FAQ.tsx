@@ -4,15 +4,15 @@ const ITEMS = [
   {
     question: "What's your philosophy?",
     answer: [
-      "We don't believe in a kill switch. A kill switch is something you reach for after you've already accepted that an AI might be doing something wrong — it's damage control, not prevention. We also don't believe your AI agent will stay uncompromised. We assume the opposite: it will be attacked, it will be jailbroken, something will try to manipulate it eventually. That's not pessimism, it's the only honest starting assumption for anything exposed to language.",
-      "So instead of building a switch to pull after something goes wrong, we built a system where the AI never has anything to misuse in the first place. It can be compromised, rogue, jailbroken — it still can't execute anything outside your rules, because it never held the keys to begin with. There's nothing to kill, because there was never anything unauthorized running.",
+      "We don't believe in a kill switch. A kill switch is something you reach for after you've already accepted that an AI might be doing something wrong. It's damage control, not prevention. We also don't believe your AI agent will stay uncompromised. We assume the opposite: it will be attacked, it will be jailbroken, something will try to manipulate it eventually. That's not pessimism, it's the only honest starting assumption for anything exposed to language.",
+      "So instead of building a switch to pull after something goes wrong, we built a system where the AI never has anything to misuse in the first place. It can be compromised, rogue, jailbroken. It still can't execute anything outside your rules, because it never held the keys to begin with. There's nothing to kill, because there was never anything unauthorized running.",
     ],
   },
   {
     question: 'Why no escalation path?',
     answer: [
-      "There's no gap to escalate into the check happens once, right before the action runs, and it's used up the moment it's checked. By the time a human could weigh in, the decision's already been made correctly.",
-      'Escalation still exists but only as a deliberate, pre-configured exception for specific action types, for example anything above a dollar threshold. It is never a default fallback for uncertainty.',
+      "There's no gap to escalate into. The check happens once, right before the action runs, and it's used up the moment it's checked. By the time a human could weigh in, the decision's already been made correctly.",
+      'Escalation still exists but only as a deliberate, preconfigured exception for specific action types, for example anything above a dollar threshold. It is never a default fallback for uncertainty.',
     ],
   },
   {
@@ -29,7 +29,7 @@ const ITEMS = [
   {
     question: "Don't audits and monitoring already cover this?",
     answer: [
-      "We don't believe an annual audit or a compliance review is AI governance. Those work exactly as long as everything is fine and something eventually won't be. We don't believe monitoring and observability is AI governance either — watching what already happened doesn't stop it from happening. And we don't believe a human-in-the-loop process that checks in periodically can keep pace with a system that acts continuously, at machine speed. So we designed humans into the architecture itself, not into a review cycle.",
+      "We don't believe an annual audit or a compliance review is AI governance. Those work exactly as long as everything is fine and something eventually won't be. We don't believe monitoring and observability is AI governance either. Watching what already happened doesn't stop it from happening. And we don't believe a human in the loop process that checks in periodically can keep pace with a system that acts continuously, at machine speed. So we designed humans into the architecture itself, not into a review cycle.",
     ],
   },
 ];

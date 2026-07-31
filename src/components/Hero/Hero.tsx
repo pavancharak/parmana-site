@@ -6,6 +6,11 @@ export default function Hero() {
   return (
     <section className={styles.hero} aria-label="Introduction">
       <div className={`container ${styles.inner}`}>
+        <p className={`mono ${styles.mission}`}>
+          We ensure human authority in autonomous systems, independent of its capability, at
+          machine speed.
+        </p>
+
         <h1>AI can take action. Make sure every action is one your business allows.</h1>
 
         <p className={styles.subline}>

@@ -1,0 +1,52 @@
+.section {
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.inner {
+  max-width: 36rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  margin-top: 0.75rem;
+}
+
+.supporting {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 32rem;
+}
+
+.card {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 480px;
+  padding: 0.75rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.embed {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: 320px;
+  border-radius: 4px;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 0.5rem;
+  }
+
+  .embed {
+    height: 280px;
+  }
+}

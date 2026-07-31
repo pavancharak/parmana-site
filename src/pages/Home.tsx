@@ -7,6 +7,7 @@ import ValueGrid from '../components/ValueGrid/ValueGrid';
 import Verticals from '../components/Verticals/Verticals';
 import FAQ from '../components/FAQ/FAQ';
 import CTA from '../components/CTA/CTA';
+import Newsletter from '../components/Newsletter/Newsletter';
 import styles from './Home.module.css';
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
       <RotatingWord />
 
       <PullQuote label="Category">
-        From probabilistic guardrails to explicit, pre-authorized rules.
+        From probabilistic guardrails to explicit, preauthorized rules.
       </PullQuote>
 
       <section className={`section ${styles.banner}`} aria-label="Full intelligence, full authority">
@@ -59,7 +60,7 @@ export default function Home() {
 
       <PullQuote
         label="No unauthorized access"
-        supporting="As AI enters the agentic era — acting, not just answering — Parmana makes sure that access never happens without authorization. Not because the AI behaves. Because it never had the access to misuse."
+        supporting="As AI enters the agentic era, acting and not just answering, Parmana makes sure that access never happens without authorization. Not because the AI behaves. Because it never had the access to misuse."
       >
         No unauthorized access to your business systems in the agentic era.
       </PullQuote>
@@ -84,6 +85,8 @@ export default function Home() {
         label="Write to us"
         supporting="If you're deploying AI agents and want them switched on rather than stuck in pilot, write to us: founder@parmanasystems.com"
       />
+
+      <Newsletter />
     </>
   );
 }

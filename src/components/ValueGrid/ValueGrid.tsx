@@ -15,18 +15,18 @@ const DIRECT = [
   },
   {
     title: 'Faster AI rollout',
-    body: 'The control question is already answered, so new AI work doesn’t wait on case-by-case manual review.',
+    body: 'The control question is already answered, so new AI work doesn’t wait on case by case manual review.',
   },
 ];
 
 const STRATEGIC = [
   {
     title: 'A competitive edge, not just risk reduction',
-    body: 'Move faster on customer-facing AI than competitors still relying on manual sign-off.',
+    body: 'Move faster on customer facing AI than competitors still relying on manual signoff.',
   },
   {
     title: 'Regulatory readiness',
-    body: 'A built-in checkpoint, not after-the-fact logs or guardrails built into the model itself.',
+    body: 'A checkpoint that is built in, not logs added after the fact or guardrails built into the model itself.',
   },
 ];
 

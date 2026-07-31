@@ -11,6 +11,15 @@
   align-items: center;
 }
 
+.mission {
+  max-width: 34ch;
+  margin-bottom: 1.5rem;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--gold-dim);
+}
+
 .hero h1 {
   max-width: 20ch;
   margin-bottom: 1.1rem;
