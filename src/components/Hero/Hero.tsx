@@ -1,32 +1,43 @@
+import { useState } from 'react';
 import styles from './Hero.module.css';
-
-const CONTACT_MAILTO = 'mailto:founder@parmanasystems.com';
+import ExecutionRiskQuestionnaire from '../ExecutionRiskQuestionnaire/ExecutionRiskQuestionnaire';
 
 export default function Hero() {
+  const [questionnaireOpen, setQuestionnaireOpen] = useState(false);
+
   return (
-    <section className={styles.hero} aria-label="Introduction">
-      <div className={`container ${styles.inner}`}>
-        <p className={`mono ${styles.mission}`}>
-          We ensure human authority in autonomous systems, independent of its capability, at
-          machine speed.
-        </p>
+    <>
+      <section className={styles.hero} aria-label="Introduction">
+        <div className={`container ${styles.inner}`}>
+          <p className={`mono ${styles.mission}`}>
+            EXECUTION AUTHORIZATION INFRASTRUCTURE
+          </p>
 
-        <h1>AI can take action. Make sure every action is one your business allows.</h1>
+          <h1>If AI can decide what gets executed on your systems, you risk losing your customers' trust.</h1>
 
-        <p className={styles.subline}>
-          As AI begins operating business systems, Parmana checks every action before it happens
-          so organizations stay in control.
-        </p>
+          <p className={styles.subline}>
+            Parmana ensures your authority determines what gets executed—not the AI agent.
+          </p>
 
-        <div className={styles.actions}>
-          <a className={`button button--primary ${styles.cta}`} href="#how-parmana-fits">
-            Explore Parmana
-          </a>
-          <a className="button" href={CONTACT_MAILTO}>
-            Write to us
-          </a>
+          <div className={styles.actions}>
+            <button
+              className={`button button--primary ${styles.cta}`}
+              type="button"
+              onClick={() => setQuestionnaireOpen(true)}
+            >
+              Discover Your AI Execution Risk
+            </button>
+            <a className="button" href="#how-parmana-fits">
+              Explore Architecture
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <ExecutionRiskQuestionnaire
+        open={questionnaireOpen}
+        onClose={() => setQuestionnaireOpen(false)}
+      />
+    </>
   );
 }
