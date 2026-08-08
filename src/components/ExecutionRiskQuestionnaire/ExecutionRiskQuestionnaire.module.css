@@ -1,0 +1,68 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: rgb(10 10 10 / 72%);
+}
+
+.dialog {
+  position: relative;
+  width: min(100%, 42rem);
+  max-height: min(90vh, 46rem);
+  overflow-y: auto;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+  box-shadow: 0 2rem 6rem rgb(0 0 0 / 24%);
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.close:hover { background: var(--surface-2); color: var(--text); }
+
+.header { max-width: 36rem; }
+.eyebrow, .insightLabel, .principleLabel { color: var(--gold-dim); font-size: 0.72rem; letter-spacing: 0.12em; }
+.header h2 { margin-top: 0.8rem; max-width: 16ch; }
+.intro, .insight, .resultCopy { color: var(--muted); line-height: 1.65; }
+.intro { margin-top: 1rem; }
+
+.questionArea { margin-top: 2rem; }
+.progress { display: grid; gap: 0.65rem; color: var(--muted); font-size: 0.8rem; }
+.progressTrack { height: 2px; overflow: hidden; background: var(--border); }
+.progressTrack span { display: block; height: 100%; background: var(--text); transition: width 200ms ease; }
+.questionArea h3 { margin-top: 1.5rem; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.25; }
+.options { display: grid; gap: 0.7rem; margin-top: 1.5rem; }
+.option { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 1rem 1.1rem; border: 1px solid var(--border); border-radius: 0.65rem; background: transparent; color: var(--text); text-align: left; cursor: pointer; transition: border-color 160ms ease, background 160ms ease; }
+.option:hover { border-color: var(--text); background: var(--surface-2); }
+.insight { margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--border); }
+.insight p:last-child { margin-top: 0.45rem; }
+
+.result { margin-top: 2rem; }
+.resultScore { display: inline-block; padding: 0.45rem 0.7rem; border: 1px solid var(--border); border-radius: 999px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; }
+.resultLead { margin-top: 1.25rem; font-size: 1.2rem; line-height: 1.55; }
+.resultCopy { margin-top: 1rem; }
+.principle { margin-top: 1.5rem; padding: 1.25rem; border: 1px solid var(--border); border-radius: 0.65rem; }
+.principle p:last-child { margin-top: 0.5rem; font-size: 1.1rem; line-height: 1.5; }
+.resultActions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
+
+@media (max-width: 640px) {
+  .dialog { max-height: 92vh; }
+  .resultActions > * { width: 100%; justify-content: center; }
+}
