@@ -16,7 +16,7 @@
   padding: clamp(1.5rem, 5vw, 3rem);
   border: 1px solid var(--border);
   border-radius: 1rem;
-  background: var(--surface);
+  background: var(--panel);
   box-shadow: 0 2rem 6rem rgb(0 0 0 / 24%);
 }
 
@@ -35,7 +35,7 @@
   cursor: pointer;
 }
 
-.close:hover { background: var(--surface-2); color: var(--text); }
+.close:hover { background: var(--panel-2); color: var(--text); }
 
 .header { max-width: 36rem; }
 .eyebrow, .insightLabel, .principleLabel { color: var(--gold-dim); font-size: 0.72rem; letter-spacing: 0.12em; }
@@ -50,7 +50,7 @@
 .questionArea h3 { margin-top: 1.5rem; font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.25; }
 .options { display: grid; gap: 0.7rem; margin-top: 1.5rem; }
 .option { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 1rem 1.1rem; border: 1px solid var(--border); border-radius: 0.65rem; background: transparent; color: var(--text); text-align: left; cursor: pointer; transition: border-color 160ms ease, background 160ms ease; }
-.option:hover { border-color: var(--text); background: var(--surface-2); }
+.option:hover { border-color: var(--text); background: var(--panel-2); }
 .insight { margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--border); }
 .insight p:last-child { margin-top: 0.45rem; }
 
