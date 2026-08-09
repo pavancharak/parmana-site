@@ -71,8 +71,10 @@ export default function Company() {
 
             <p>
               Parmana provides the infrastructure that ensures institutional
-              authority remains in control of execution—even when execution is
-              initiated by AI agents.
+              authority remains in control of execution, regardless of who
+              or what requests it. AI agents are one source of execution
+              risk, not the only one, and Parmana is built to remain
+              agnostic to who or what makes the request.
             </p>
           </div>
         </div>
@@ -83,8 +85,10 @@ export default function Company() {
 
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Build the infrastructure that enables institutions to retain
-              authority over execution as AI systems increasingly initiate
-              business actions.
+              authority over execution, regardless of who or what initiates
+              it. AI agents are accelerating the need for this, but the
+              mission does
+              not depend on any one technology.
             </p>
           </div>
 
@@ -161,8 +165,10 @@ export default function Company() {
           </p>
 
           <p className="mt-6 max-w-4xl text-lg leading-8 font-medium">
-            Parmana ensures institutions don&apos;t lose authority to AI
-            agents.
+            Parmana ensures institutions don&apos;t lose authority over what
+            becomes real, no matter who or what requests it. AI may decide.
+            You
+            decide what becomes real.
           </p>
         </div>
       </div>

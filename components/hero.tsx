@@ -5,10 +5,10 @@ import { useState } from "react";
 const questions = [
   {
     question:
-      "Can an AI agent change a record in your production business system?",
+      "Can an AI agent, application, or other automated system change a record in your production business system?",
     options: [
-      "Yes, if the agent has access",
-      "No, AI agents cannot write",
+      "Yes, if it has access",
+      "No, automated systems cannot write",
       "Only when the action is authorized",
       "Only when a human is watching",
     ],
@@ -16,23 +16,23 @@ const questions = [
   },
   {
     question:
-      "If an AI agent has read access, does that give it authority to write?",
+      "If a system has read access, does that give it authority to write?",
     options: [
       "Yes",
       "No",
-      "Only for trusted agents",
+      "Only for trusted systems",
       "Only for low-risk data",
     ],
     correct: 1,
   },
   {
     question:
-      "Where should authority over an AI-generated state-changing action be enforced?",
+      "Where should authority over a state-changing action be enforced?",
     options: [
       "Inside the AI model",
       "In the system prompt",
       "At the execution authorization boundary",
-      "In the agent's memory",
+      "In the requester's memory",
     ],
     correct: 2,
   },
@@ -40,7 +40,7 @@ const questions = [
     question:
       "How do you ensure the action that gets written is the action that was authorized?",
     options: [
-      "Trust the AI agent",
+      "Trust the requester",
       "Review the logs afterward",
       "Bind the authorization to the transaction",
       "Ask the user again after execution",
@@ -49,12 +49,12 @@ const questions = [
   },
   {
     question:
-      "Who remains accountable when an AI agent changes your business system?",
+      "Who remains accountable when an AI agent, application, or person changes your business system?",
     options: [
       "The AI model",
-      "The AI vendor",
+      "The vendor",
       "The institution operating the system",
-      "The agent itself",
+      "The requester itself",
     ],
     correct: 2,
   },
@@ -106,20 +106,22 @@ export default function Hero() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="py-24 lg:py-32">
             <p className="text-sm font-medium tracking-[0.2em] text-neutral-500">
-              EXECUTION AUTHORIZATION INFRASTRUCTURE
+              INSTITUTIONAL AUTHORITY INFRASTRUCTURE
             </p>
 
             <h1 className="mt-8 max-w-6xl text-5xl font-semibold tracking-tight text-neutral-900 md:text-6xl lg:text-7xl">
-              AI can execute.
+              AI may decide.
               <br />
-              You remain accountable.
+              You decide what becomes real.
             </h1>
 
             <div className="mt-10 max-w-4xl">
               <p className="text-xl leading-9 text-neutral-700">
-                If AI agents can execute without your authorization, you have
-                accountability without authority. Parmana ensures your
-                authority determines what gets executed—not the AI agent.
+                Parmana is not in the AI race. It is technology-agnostic
+                infrastructure that protects institutional authority over
+                what is allowed to become real-world execution, whether the
+                request comes from an AI agent, an application, or a person.
+                Only what you authorize should become real.
               </p>
             </div>
 
@@ -129,7 +131,7 @@ export default function Hero() {
                 onClick={startTest}
                 className="inline-flex h-12 items-center justify-center rounded-md bg-black px-8 text-sm font-medium !text-white transition-colors duration-200 hover:bg-neutral-800"
               >
-                Test Your Authority Over AI Execution
+                Test Your Authority Over Execution
               </button>
 
               <a
@@ -225,13 +227,13 @@ export default function Hero() {
                     ? "You understand the execution authority boundary."
                     : score >= 3
                       ? "You may have an execution authority gap."
-                      : "Your AI execution authority may need stronger controls."}
+                      : "Your execution authority may need stronger controls."}
                 </h3>
 
                 <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-neutral-600">
-                  The critical question is whether your institution not the AI
-                  agent determines which actions are allowed to change your
-                  business systems.
+                  The critical question is whether your institution, not
+                  who or what requested it, determines what is allowed to
+                  become real.
                 </p>
 
                 <div className="mt-8 flex justify-center gap-4">

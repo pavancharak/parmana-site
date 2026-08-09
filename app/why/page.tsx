@@ -23,13 +23,14 @@ export default function WhyPage() {
               </h1>
 
               <p className="body mt-12">
-                AI agents are transforming software from systems that wait for
-                instructions into systems capable of autonomous execution.
+                AI agents are the clearest example of software shifting from
+                systems that wait for instructions into systems capable of
+                autonomous execution, but they are not the only one.
               </p>
 
               <p className="body">
                 As execution becomes autonomous, organizations face a new
-                challenge.
+                challenge, regardless of what is initiating it.
               </p>
 
               <p className="body highlight">
@@ -49,11 +50,13 @@ export default function WhyPage() {
           </p>
 
           <p className="body">
-            AI agents fundamentally change this model.
+            AI agents are the clearest example of this change, but they are
+            not the only one.
           </p>
 
           <p className="body">
-            They can execute business actions autonomously.
+            Automated systems, integrations, and agents can all execute
+            business actions without a person in the loop.
           </p>
         </Section>
 
@@ -74,7 +77,8 @@ export default function WhyPage() {
           </p>
 
           <p className="body highlight">
-            AI-driven execution is becoming part of every connected business.
+            Autonomous execution, AI-driven or otherwise, is becoming part of
+            every connected business.
           </p>
         </Section>
 
@@ -99,6 +103,10 @@ export default function WhyPage() {
 
           <p className="body">
             An unauthorized action should never execute.
+          </p>
+
+          <p className="body highlight">
+            Only what you authorize should become real.
           </p>
         </Section>
 

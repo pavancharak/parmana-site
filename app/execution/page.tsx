@@ -78,18 +78,20 @@ export default function ExecutionPage() {
 
         <Section
           label="The Shift"
-          title="AI Agents Can Initiate Execution."
+          title="Systems Can Now Initiate Execution."
         >
           <p className="body">
             Earlier generations of AI primarily generated information.
           </p>
 
           <p className="body">
-            AI agents can now initiate business actions.
+            AI agents can now initiate business actions directly, and they
+            are not the only systems that can.
           </p>
 
           <p className="body">
-            They can interact directly with enterprise systems.
+            AI agents, applications, and integrations can all interact
+            directly with enterprise systems.
           </p>
 
           <p className="body highlight">
@@ -112,8 +114,8 @@ export default function ExecutionPage() {
           </h3>
 
           <p className="body highlight mt-8">
-            Institutional authority not the AI agent determines what gets
-            executed.
+            Institutional authority, not who or what requested it,
+            determines what gets executed.
           </p>
         </Section>
 
@@ -125,12 +127,12 @@ export default function ExecutionPage() {
               <h2 className="heading-lg mt-6">
                 Your Institution Has Authority.
                 <br />
-                Not the AI Agent.
+                Not the Requester.
               </h2>
 
               <p className="body mt-12">
-                Parmana ensures institutions don&apos;t lose authority to AI
-                agents.
+                Parmana ensures institutions don&apos;t lose authority over
+                what becomes real, regardless of who or what requested it.
               </p>
             </div>
           </div>

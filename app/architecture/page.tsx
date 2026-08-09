@@ -13,9 +13,39 @@ import {
   ArrowRight,
   ChevronLeft,
   ShieldCheck,
+  BadgeCheck,
+  FileCheck,
+  Fingerprint,
+  Lock,
 } from "lucide-react";
 
-export default function ArchitectureDiagram() {
+const proofPoints = [
+  {
+    icon: BadgeCheck,
+    title: "TRL 7",
+    description:
+      "A real, live-money Razorpay refund, executed on production infrastructure.",
+  },
+  {
+    icon: FileCheck,
+    title: "Four Independent Validation Passes",
+    description:
+      "The core authorization claim was adversarially re-checked four times. The one gap found was disclosed and closed, then re-verified from scratch. Verdict: YES.",
+  },
+  {
+    icon: Fingerprint,
+    title: "Verifiable Enforcement",
+    description:
+      "Every approval and every refusal is independently verifiable, using Refusal Records and signed audit-sink events, not just internal logs.",
+  },
+  {
+    icon: Lock,
+    title: "Post-Quantum Signatures",
+    description: "Native ML-DSA-65 signature support, built and tested.",
+  },
+];
+
+export default function ArchitecturePage() {
   const sources = [
     { name: "AI Agent", icon: Bot },
     { name: "Human", icon: UserRound },
@@ -133,7 +163,7 @@ execute.
               </h2>
 
               <p className="mt-3 text-center text-neutral-300">
-                Human Authority Infrastructure
+                Institutional Authority Infrastructure
               </p>
 
               <div className="mt-8 rounded-2xl bg-white/5 p-6">
@@ -223,6 +253,82 @@ execute.
               ))}
 
             </div>
+
+          </div>
+
+        </div>
+
+        {/* Deterministic Authorization */}
+
+        <div className="mt-24 text-center">
+
+          <p className="label mb-6">
+            DETERMINISTIC AUTHORIZATION
+          </p>
+
+          <h3 className="text-3xl font-semibold tracking-tight md:text-4xl">
+            One Request. One Deterministic Decision.
+          </h3>
+
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-neutral-600">
+            AI models generate outputs based on probabilities, and that makes them
+            capable, but it does not make every execution decision
+            deterministic. Authorization must not depend on which AI model,
+            prompt, or reasoning quality produced the request. It should
+            depend on organizational policy alone, so every execution
+            request produces exactly one outcome.
+          </p>
+
+          <div className="mx-auto mt-10 grid max-w-2xl gap-6 sm:grid-cols-2">
+
+            <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-8">
+              <p className="text-2xl font-semibold text-emerald-700">
+                Authorized → Execute
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-8">
+              <p className="text-2xl font-semibold text-neutral-700">
+                Unauthorized → Block
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Proof Points */}
+
+        <div className="mt-24">
+
+          <p className="label mb-6 text-center">
+            INDEPENDENTLY VERIFIED, NOT JUST CLAIMED
+          </p>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+            {proofPoints.map(({ icon: Icon, title, description }) => (
+
+              <div
+                key={title}
+                className="rounded-2xl border border-neutral-200 bg-white p-6"
+              >
+
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-neutral-100">
+                  <Icon size={22} />
+                </div>
+
+                <h4 className="mt-5 font-semibold">
+                  {title}
+                </h4>
+
+                <p className="mt-2 text-sm leading-6 text-neutral-500">
+                  {description}
+                </p>
+
+              </div>
+
+            ))}
 
           </div>
 

@@ -5,7 +5,7 @@ const faqs = [
   {
     question: "What is Parmana?",
     answer:
-      "Parmana is execution authorization infrastructure that ensures institutions don't lose authority to AI agents. It evaluates execution requests against institutional authority and policies before they reach business systems.",
+      "Parmana is institutional authority infrastructure. It is technology-agnostic: it evaluates execution requests, whatever their source, against institutional authority and policy before they reach business systems. AI agents are one source of execution risk, not the only one.",
   },
   {
     question: "Does Parmana control what an AI agent thinks or decides?",
@@ -20,7 +20,7 @@ const faqs = [
   {
     question: "Does Parmana give AI agents authority?",
     answer:
-      "No. AI agents can initiate execution requests, but initiating a request does not create authority. Institutional authority determines what gets executed not the AI agent.",
+      "No. AI agents, like any other requester, can initiate execution requests, but initiating a request does not create authority. Institutional authority determines what gets executed, not the requester.",
   },
   {
     question: "What happens if an AI agent is compromised?",
@@ -71,7 +71,8 @@ const faqs = [
   {
     question: "Is Parmana technology-agnostic?",
     answer:
-      "Parmana is designed as an execution authorization layer rather than an AI model or application platform. Its purpose is to apply institutional authority to execution requests independently of the underlying AI technology.",
+      "Yes. Parmana is not competing in the AI race. It is authority infrastructure that governs execution regardless of the underlying technology. AI agents are one source of execution risk. Parmana applies institutional authority to a request whether it came from an AI agent, an application, or a person.",
+    highlight: true,
   },
   {
     question: "Can Parmana run on-premises?",
@@ -99,9 +100,9 @@ const faqs = [
       "No. Parmana is designed to work with existing systems of record and business applications. The institution's existing business systems remain responsible for executing the authorized action.",
   },
   {
-    question: "What happens if an AI agent tries to bypass Parmana?",
+    question: "What happens if something tries to bypass Parmana?",
     answer:
-      "Parmana's purpose is to establish an authorization boundary around governed execution paths. An action that reaches a governed execution path must satisfy the institution's authorization requirements before execution.",
+      "Parmana's purpose is to establish an authorization boundary around governed execution paths. An action that reaches a governed execution path must satisfy the institution's authorization requirements before execution, regardless of whether the request came from an AI agent, an application, or a person.",
   },
   {
     question: "What types of actions can Parmana govern?",
@@ -111,12 +112,34 @@ const faqs = [
   {
     question: "Why is this becoming important now?",
     answer:
-      "AI agents can increasingly interact directly with business systems and initiate actions. Institutions therefore need to retain authority over execution even when AI initiates the request.",
+      "AI agents are the clearest and fastest-growing example of systems that can interact directly with business systems and initiate actions without a person in the loop, but they are not the only one. Institutions need to retain authority over execution regardless of who or what initiates it.",
+  },
+  {
+    question: "Has this actually been verified, or is it just a claim?",
+    answer:
+      "It has been independently verified, not just claimed. Parmana's core authorization claim underwent four separate adversarial validation passes against the actual source code. The first three passes found a real gap, a capability whose authorization-relevant facts were pure caller-declared attestations with no independent verifier. That capability was removed from the codebase entirely, and a fourth pass, run fresh with no reliance on the earlier conclusions, confirmed no gap remains. The verdict: YES, with the gap disclosed and the fix documented, not hidden.",
+    highlight: true,
+  },
+  {
+    question: "What is TRL 7 and why does it matter?",
+    answer:
+      "Technology Readiness Level 7 means the system has been demonstrated in an operational environment, not just tested in a lab. Parmana has processed a real, live-money Razorpay refund on production infrastructure, proof the authorization boundary holds under real financial transactions, not only simulated ones.",
+  },
+  {
+    question: "Is Parmana quantum-safe?",
+    answer:
+      "Parmana includes native support for ML-DSA-65, a post-quantum digital signature algorithm, built and tested, so authorization evidence signed today remains verifiable as cryptographic standards evolve.",
+  },
+  {
+    question: "Can I inspect or extend the authorization mechanism myself?",
+    answer:
+      "Parmana's SDK is extracted as an open-core project under the Apache 2.0 license, hardened with OpenSSF Scorecard, SLSA provenance, and Sigstore signing, so the authorization mechanism itself is inspectable, not a black box.",
   },
   {
     question: "What is the core principle behind Parmana?",
     answer:
-      "AI has intelligence. Your institution has authority. No matter what happens to the AI, institutional authority determines what gets executed—not the AI agent.",
+      "Intelligence does not create authority. Only what you authorize should become real. No matter who or what requests execution, an AI agent, an application, or a person, institutional authority determines what gets executed. AI may decide. You decide what becomes real.",
+    highlight: true,
   },
 ];
 
@@ -138,8 +161,8 @@ export default function FAQPage() {
               </h1>
 
               <p className="body mt-12 max-w-3xl">
-                Understand how Parmana preserves institutional authority when
-                AI agents initiate execution.
+                Understand how Parmana preserves institutional authority over
+                execution, regardless of who or what initiates it.
               </p>
             </div>
 
