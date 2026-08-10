@@ -120,8 +120,8 @@ export default function Hero() {
                 Parmana is technology-agnostic infrastructure that protects
                 institutional authority over what is allowed to become
                 real-world execution, whether the request comes from an AI
-                agent, an application, or a person. Only what you authorize
-                should become real.
+                agent, an application, or a person. It works at machine
+                speed. Only what you authorize should become real.
               </p>
             </div>
 
