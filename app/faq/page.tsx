@@ -71,7 +71,7 @@ const faqs = [
   {
     question: "Is Parmana technology-agnostic?",
     answer:
-      "Yes. Parmana is not competing in the AI race. It is authority infrastructure that governs execution regardless of the underlying technology. AI agents are one source of execution risk. Parmana applies institutional authority to a request whether it came from an AI agent, an application, or a person.",
+      "Yes. Parmana is authority infrastructure that governs execution regardless of the underlying technology. AI agents are one source of execution risk. Parmana applies institutional authority to a request whether it came from an AI agent, an application, or a person.",
     highlight: true,
   },
   {

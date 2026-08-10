@@ -117,11 +117,11 @@ export default function Hero() {
 
             <div className="mt-10 max-w-4xl">
               <p className="text-xl leading-9 text-neutral-700">
-                Parmana is not in the AI race. It is technology-agnostic
-                infrastructure that protects institutional authority over
-                what is allowed to become real-world execution, whether the
-                request comes from an AI agent, an application, or a person.
-                Only what you authorize should become real.
+                Parmana is technology-agnostic infrastructure that protects
+                institutional authority over what is allowed to become
+                real-world execution, whether the request comes from an AI
+                agent, an application, or a person. Only what you authorize
+                should become real.
               </p>
             </div>
 
