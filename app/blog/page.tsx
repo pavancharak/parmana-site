@@ -4,6 +4,12 @@ import Footer from "@/components/footer";
 
 const posts = [
   {
+    title: "Why I Think This Is an Authority Problem, Not a Governance Problem",
+    teaser: "People ask me some version of this question a lot now.",
+    date: "2026-08-10",
+    url: "https://parmanasystems.substack.com/p/why-i-think-this-is-an-authority",
+  },
+  {
     title: "The Kill Switch Is a Sign We Have Not Solved the Problem Yet",
     teaser:
       "In June, the Reserve Bank of India released a draft framework requiring every AI model used by a bank to have a kill switch.",
