@@ -5,7 +5,7 @@ const faqs = [
   {
     question: "What is Parmana?",
     answer:
-      "Parmana is institutional authority infrastructure. It is technology-agnostic: it evaluates execution requests, whatever their source, against institutional authority and policy before they reach business systems. AI agents are one source of execution risk, not the only one.",
+      "We help institutions preserve their authority over their systems in the agentic era. Parmana is institutional authority infrastructure. It is technology-agnostic: it evaluates execution requests, whatever their source, against institutional authority and policy before they reach business systems. AI agents are one source of execution risk, not the only one.",
   },
   {
     question: "Does Parmana control what an AI agent thinks or decides?",
@@ -138,7 +138,7 @@ const faqs = [
   {
     question: "What is the core principle behind Parmana?",
     answer:
-      "Intelligence does not create authority. Only what you authorize should become real. No matter who or what requests execution, an AI agent, an application, or a person, institutional authority determines what gets executed. AI may decide. You decide what becomes real.",
+      "Intelligence does not create authority. Only what you authorize should become real. No matter who or what requests execution, an AI agent, an application, or a person, institutional authority determines what gets executed.",
     highlight: true,
   },
 ];

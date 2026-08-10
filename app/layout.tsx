@@ -12,7 +12,7 @@ const ibm = IBM_Plex_Sans({
 export const metadata: Metadata = {
   title: "Parmana",
   description:
-    "Institutional authority infrastructure. Technology-agnostic execution authorization. AI may decide, you decide what becomes real.",
+    "Institutional authority infrastructure. Technology-agnostic execution authorization.",
 };
 
 export default function RootLayout({

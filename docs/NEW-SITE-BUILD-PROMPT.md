@@ -47,7 +47,7 @@ was written.
 | `components/navbar.tsx` | Structurally fine, preserve as-is. Links: Why / Execution / Architecture / FAQ / Company / external blog, plus a Contact CTA. |
 | `components/footer.tsx` | Tagline: *"Parmana ensures institutions don't lose authority to AI agents."*, see repeated-line note below. |
 
-**Repeated stale line:** the exact sentence *"Parmana ensures institutions don't lose authority to AI agents"* (or a one-word variant) appears **verbatim in at least four places**, `footer.tsx`, `execution/page.tsx`'s closer, `company.tsx`'s mission and its commitment block, and is paraphrased as the FAQ's "What is Parmana?" answer. This is the single highest-leverage line to fix: replacing it once conceptually (e.g. toward "...don't lose authority over what becomes real" / language consistent with "AI may decide. You decide what becomes real.") and propagating that replacement to all four spots will fix a large share of the site's stale-framing surface area.
+**Repeated stale line:** the exact sentence *"Parmana ensures institutions don't lose authority to AI agents"* (or a one-word variant) appears **verbatim in at least four places**, `footer.tsx`, `execution/page.tsx`'s closer, `company.tsx`'s mission and its commitment block, and is paraphrased as the FAQ's "What is Parmana?" answer. This is the single highest-leverage line to fix: replacing it once conceptually (e.g. toward "...don't lose authority over what becomes real") and propagating that replacement to all four spots will fix a large share of the site's stale-framing surface area.
 
 ### Dead / unused code (cleanup candidates, not content-rewrite candidates)
 
@@ -87,8 +87,31 @@ Shared foundation regardless of dialect: Tailwind v4 (`@import "tailwindcss"` in
 >
 > Supporting language (available, not mandatory verbatim on every page): *"AI does not have a
 > governance problem, it has an authority problem."*
+
+### Locked hero copy (non-negotiable, confirmed final call)
+
+This supersedes any hero wording implied elsewhere in this document. If Part 4's page-by-page
+plan reads as suggesting different hero wording, this is the reconciled, final version:
+
+> **Hero line:** "We are building authority infrastructure for institutions."
 >
-> **Closing tagline: "AI may decide. You decide what becomes real."**
+> **Subhead, immediately below it:** "Only what you authorize should become real."
+
+Use this verbatim in the `/` hero (see Part 4). If a genuine layout constraint forces a minimal
+adjustment (character-count overflow, line-wrap collision), flag the deviation explicitly in the
+rebuild session's output rather than silently changing the wording.
+
+### Locked category term (non-negotiable)
+
+Wherever the site names its category, `layout.tsx` metadata description, footer, any "what is
+Parmana" one-liner on `/company` or `/faq`, use:
+
+> **Institutional Authority Infrastructure**
+
+This replaces "Execution Layer for AI," "Execution Authorization Infrastructure for AI systems,"
+and the current bare "Execution Authorization Infrastructure" in `layout.tsx` metadata (see
+Part 1's global-chrome inventory). Apply it consistently everywhere the category is named, not
+just in `layout.tsx`.
 
 Every page in Part 1 marked "Stale" should be rewritten so its argument generalizes from "AI
 agents" to "any execution source, AI agents, humans, applications, or attackers", mirroring
@@ -123,6 +146,8 @@ all six are independently corroborated in that repo's own documentation, not jus
 - "Execution Layer for AI" or "Execution Authorization Infrastructure for AI systems" as
   category terms (the current `layout.tsx` metadata, `"Execution Authorization Infrastructure"`
  , is adjacent to this and should be updated, though it's not the fully banned phrase verbatim).
+  The locked replacement category term is **"Institutional Authority Infrastructure"**, see the
+  "Locked category term" subsection above.
 - "AI never decides" language, or any claim that Parmana controls AI reasoning/behavior (the FAQ
   already correctly avoids this in a few answers, e.g. "Parmana does not control the AI's
   reasoning", preserve that distinction, just generalize the surrounding frame).
@@ -171,7 +196,7 @@ others aren't:
 
 | Page | Action | Specifics |
 |---|---|---|
-| `/` (hero) | **Rewrite copy, decide fate of quiz** | Replace eyebrow/H1/subhead with positioning from Part 2 (consider working the tagline "AI may decide. You decide what becomes real." into the hero directly, it's built for this slot). The quiz is a genuinely good interactive device, either rewrite all 5 questions to be source-agnostic ("Can *any unauthorized actor* change a record..." rather than "Can an AI agent...") or repurpose it as a proof-point-driven interaction (e.g. testing understanding of the authority-vs-authority boundary generally). Don't delete it without considering the rewrite first, it's the most distinctive piece of the current site. |
+| `/` (hero) | **Rewrite copy, decide fate of quiz** | Replace eyebrow/H1/subhead with the **locked hero copy** ("Locked hero copy" subsection in Part 2), H1 "We are building authority infrastructure for institutions.", subhead "Only what you authorize should become real." immediately below it, this is a confirmed final call, not a suggestion to riff on. The quiz is a genuinely good interactive device, either rewrite all 5 questions to be source-agnostic ("Can *any unauthorized actor* change a record..." rather than "Can an AI agent...") or repurpose it as a proof-point-driven interaction (e.g. testing understanding of the authority-vs-authority boundary generally). Don't delete it without considering the rewrite first, it's the most distinctive piece of the current site. |
 | `/why` | **Copy-edit, not rebuild** | Generalize "AI agents are transforming software..." opening and the "Exposure" section to lead with the authority-protection thesis; the existing Risk section's "AI agent, a human, an application, or an attacker" line is already correct, use it as the model for the rest of the page. |
 | `/execution` | **Copy-edit** | Same pattern, reframe "The Shift" section, replace the closing "don't lose authority to AI agents" line site-wide per Part 2. |
 | `/architecture` | **Light touch, add proof points, don't restructure** | Already the best-aligned page. Add a proof-points strip or footnote referencing TRL 7 / the four validation passes / PQC support. Also resolve the dead-code duplication with `architecture-diagram.tsx` (Part 1) as part of this pass. |
@@ -179,7 +204,7 @@ others aren't:
 | `/company` | **Rewrite Mission/Vision/Commitment; keep Principles** | The `Principles` grid (Authority, Determinism, Integrity, Accountability) already reads technology-agnostic, leave it. Rewrite the Mission/Vision prose and the "Our Commitment" closing block per Part 2. |
 | `/contact` | **Verify only** | No rewrite expected; confirm tone consistency once other pages change. |
 | `/deterministic` | **Decide: relink + rewrite, or fold into `/why`/`/architecture`** | It's currently orphaned from nav and fully AI-framed. Recommend folding its core argument (deterministic authorize/block, no in-between) into `/architecture` as a supporting section, since that page is already the "how it works" page, but if kept standalone, it must be (a) relinked in `navbar.tsx`/`footer.tsx` and (b) rewritten per the same source-agnostic pattern as `/why`/`/execution`. Don't leave it orphaned *and* stale in the rebuilt site either way. |
-| Global (`layout.tsx`, `footer.tsx`) | **Rewrite** | Update `metadata.description`; replace the repeated "don't lose authority to AI agents" tagline everywhere it appears (4+ locations cataloged in Part 1) with one consistent authority-over-execution line, ideally derived from or adjacent to "AI may decide. You decide what becomes real." |
+| Global (`layout.tsx`, `footer.tsx`) | **Rewrite** | Update `metadata.description` to use the locked category term "Institutional Authority Infrastructure"; replace the repeated "don't lose authority to AI agents" tagline everywhere it appears (4+ locations cataloged in Part 1) with one consistent authority-over-execution line. Do not use "AI may decide. You decide what becomes real.", that line has been retired from site copy. |
 | Dead files (`architecture.tsx`, `solution.tsx`, `independence.tsx`, `problem.tsx`, `exposure.tsx`, `enterprise-shift.tsx`, `why-not-enough.tsx`) | **Delete, after a final import-grep confirms still-unused** | These carry no positioning debt of their own since nothing renders them, but they're dead weight and a source of confusion (e.g. `problem.tsx`'s superseded framing). Delete rather than rewrite. |
 
 ---
@@ -192,8 +217,15 @@ others aren't:
 - [ ] No page's *sole* framing device is "AI agents", each names AI as one source among several
       (human, application, attacker/unauthorized actor), consistent with `/architecture` and
       `/why`'s Risk section.
-- [ ] Tagline "AI may decide. You decide what becomes real." appears at least once, prominently
-      (hero is the natural slot).
+- [ ] Hero (`/`) uses the locked hero line "We are building authority infrastructure for
+      institutions." and subhead "Only what you authorize should become real." verbatim, or a
+      minimally-adjusted version with the deviation explicitly flagged.
+- [ ] "AI may decide. You decide what becomes real." does not appear anywhere on the site, this
+      line has been retired from site copy.
+- [ ] "Institutional Authority Infrastructure" is the category term used consistently wherever
+      the site names its category (metadata description, footer, "what is Parmana" one-liners),
+      replacing any lingering "Execution Layer for AI" / "Execution Authorization Infrastructure"
+      language.
 - [ ] At least one of the six proof points in Part 2 is featured with real specificity (not just
       a vague "we're verified" claim), the four-pass validation story is the strongest
       candidate for a dedicated treatment.

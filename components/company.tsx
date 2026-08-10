@@ -55,7 +55,7 @@ export default function Company() {
           </span>
 
           <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
-            Authority Infrastructure
+            Institutional Authority Infrastructure
           </h2>
 
           <p className="mt-8 text-xl leading-9 text-gray-600">
@@ -84,11 +84,12 @@ export default function Company() {
             <h3 className="text-2xl font-semibold">Mission</h3>
 
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Build the infrastructure that enables institutions to retain
-              authority over execution, regardless of who or what initiates
-              it. AI agents are accelerating the need for this, but the
-              mission does
-              not depend on any one technology.
+              We help institutions preserve their authority over their
+              systems in the agentic era. Build the infrastructure that
+              enables institutions to retain authority over execution,
+              regardless of who or what initiates it. AI agents are
+              accelerating the need for this, but the mission does not
+              depend on any one technology.
             </p>
           </div>
 
@@ -106,10 +107,10 @@ export default function Company() {
           <h3 className="text-3xl font-semibold">What We Build</h3>
 
           <p className="mt-8 max-w-4xl text-lg leading-8 text-gray-600">
-            Parmana is authority infrastructure. It evaluates execution
-            requests against institutional policies, determines whether
-            execution is authorized, and produces verifiable evidence for
-            every decision.
+            Parmana is institutional authority infrastructure. It evaluates
+            execution requests against institutional policies, determines
+            whether execution is authorized, and produces verifiable
+            evidence for every decision.
           </p>
         </div>
 
@@ -166,9 +167,7 @@ export default function Company() {
 
           <p className="mt-6 max-w-4xl text-lg leading-8 font-medium">
             Parmana ensures institutions don&apos;t lose authority over what
-            becomes real, no matter who or what requests it. AI may decide.
-            You
-            decide what becomes real.
+            becomes real, no matter who or what requests it.
           </p>
         </div>
       </div>
