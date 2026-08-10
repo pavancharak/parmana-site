@@ -28,13 +28,6 @@ export default function Footer() {
               </Link>
 
               <Link
-                href="/execution"
-                className="block text-neutral-300 hover:text-white"
-              >
-                Execution
-              </Link>
-
-              <Link
                 href="/architecture"
                 className="block text-neutral-300 hover:text-white"
               >
