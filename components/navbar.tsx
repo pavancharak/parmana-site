@@ -2,14 +2,10 @@ import Link from "next/link";
 
 const navigation = [
   { name: "Architecture", href: "/architecture" },
+  { name: "Blog", href: "/blog" },
   {
     name: "Docs",
     href: "https://docs.parmanasystems.com/",
-    external: true,
-  },
-  {
-    name: "Official blog",
-    href: "https://parmanasystems.substack.com/",
     external: true,
   },
 ];
