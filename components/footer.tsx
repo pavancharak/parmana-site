@@ -55,6 +55,13 @@ export default function Footer() {
               </Link>
 
               <Link
+                href="/advisory"
+                className="block text-neutral-300 hover:text-white"
+              >
+                Advisory
+              </Link>
+
+              <Link
                 href="/contact"
                 className="block text-neutral-300 hover:text-white"
               >
