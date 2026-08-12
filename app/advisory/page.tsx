@@ -313,7 +313,7 @@ export default function AdvisoryPage() {
               </h2>
               <p className="body mt-8">
                 Parmana is building Institutional Authority Infrastructure for
-                autonomous systems — ensuring that an institution&apos;s
+                autonomous systems ensuring that an institution&apos;s
                 definition of what is allowed determines what becomes
                 real-world execution.
               </p>
