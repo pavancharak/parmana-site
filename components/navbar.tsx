@@ -3,7 +3,7 @@ import Link from "next/link";
 const navigation = [
   { name: "Architecture", href: "/architecture" },
   { name: "Advisory", href: "/advisory" },
-  { name: "Blog", href: "/blog" },
+  { name: "Investors", href: "/investors" },
   {
     name: "Docs",
     href: "https://docs.parmanasystems.com/",

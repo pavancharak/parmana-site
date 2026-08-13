@@ -62,6 +62,13 @@ export default function Footer() {
               </Link>
 
               <Link
+                href="/investors"
+                className="block text-neutral-300 hover:text-white"
+              >
+                Investors
+              </Link>
+
+              <Link
                 href="/contact"
                 className="block text-neutral-300 hover:text-white"
               >
