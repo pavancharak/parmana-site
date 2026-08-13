@@ -4,21 +4,27 @@ export default function Hero() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="py-24 lg:py-32">
           <p className="text-sm font-medium tracking-[0.2em] text-neutral-500">
-            INSTITUTIONAL AUTHORITY INFRASTRUCTURE
+           AI EXECUTION INFRASTRUCTURE
           </p>
 
           <h1 className="mt-8 max-w-6xl text-5xl font-semibold tracking-tight text-neutral-900 md:text-6xl lg:text-7xl">
-            We are building authority infrastructure for institutions.
+            Make AI Capability Deployable.
           </h1>
 
           <p className="mt-6 max-w-4xl text-2xl font-medium leading-9 text-neutral-900">
-            Only what you authorize should become real.
+            Capability creates potential. Controlled execution creates business
+            value.
           </p>
 
           <div className="mt-8 max-w-4xl">
             <p className="text-xl leading-9 text-neutral-700">
-              We help institutions preserve their authority over their
-              systems in the agentic era.
+              <strong>AI capability in a demo ≠ AI capability in production.</strong>
+              <br />
+              <br />
+              Until AI operates inside real business workflows with real
+              customers, real money, real data, real decisions, and real
+              consequences .AI capability remains potential. Real business
+              value is not created.
             </p>
           </div>
 
