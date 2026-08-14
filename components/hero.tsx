@@ -8,7 +8,7 @@ export default function Hero() {
           </p>
 
           <h1 className="mt-8 max-w-6xl text-5xl font-semibold tracking-tight text-neutral-900 md:text-6xl lg:text-7xl">
-            AI Decides at Machine Speed. Institutions Can&apos;t Keep Up.
+            AI Acts at Machine Speed. Institutions Must Keep Authority.
           </h1>
 
           <p className="mt-6 max-w-4xl text-2xl font-medium leading-9 text-neutral-900">
@@ -18,14 +18,14 @@ export default function Hero() {
           <div className="mt-8 max-w-4xl">
             <p className="text-xl leading-9 text-neutral-700">
               AI provides the intelligence. Institutions define what is
-              allowed. Parmana enforces the institution&apos;s decision before
-              execution.
+              allowed. Parmana enforces what the institution has authorized
+              before execution.
             </p>
           </div>
 
           <div className="mt-8 max-w-4xl">
             <p className="text-xl font-semibold leading-9 text-neutral-900">
-              Only institution-authorized actions execute. No exceptions.
+              Only institution-authorized actions execute.
             </p>
           </div>
 

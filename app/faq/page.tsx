@@ -8,19 +8,37 @@ const faqs = [
       "We help institutions preserve their authority over their systems in the agentic era. Parmana is institutional authority infrastructure. It is technology-agnostic: it evaluates execution requests, whatever their source, against institutional authority and policy before they reach business systems. AI agents are one source of execution risk, not the only one.",
   },
   {
+    question: "What problem does Parmana solve?",
+    answer:
+      "Business systems do not run on trust. They run on authority, policies, permissions, and controls. AI can generate decisions and initiate actions at machine speed, but intelligence does not create institutional authority. Parmana establishes an authorization boundary that determines whether a specific requested action is permitted to become execution.",
+    highlight: true,
+  },
+  {
+    question: "What is the difference between trust and authority?",
+    answer:
+      "Trust asks whether we believe a system will behave correctly. Authority asks whether a specific action is permitted to happen. Parmana addresses authority. It does not require an institution to trust an AI system with the authority to execute an action.",
+  },
+  {
+    question:
+      "Can an AI system behave exactly as designed and still perform an unauthorized action?",
+    answer:
+      "Yes. An AI system can follow its instructions correctly and still initiate an action the institution never authorized. Instructions describe intended behavior; they do not, by themselves, create enforceable institutional authority. Parmana evaluates the requested action against the institution's defined authority and policies before execution.",
+    highlight: true,
+  },
+  {
     question: "Does Parmana control what an AI agent thinks or decides?",
     answer:
       "No. Parmana does not control the AI's reasoning. An AI agent can reason, make recommendations, and request actions. Parmana determines whether a requested action is authorized to execute.",
   },
   {
-    question: "Why can't an AI agent simply follow its instructions?",
-    answer:
-      "Instructions are not the same as enforceable authority. An AI system can be misconfigured, manipulated, compromised, or behave unexpectedly. Parmana provides an independent authorization boundary so institutional authority does not depend on the AI behaving correctly.",
-  },
-  {
     question: "Does Parmana give AI agents authority?",
     answer:
       "No. AI agents, like any other requester, can initiate execution requests, but initiating a request does not create authority. Institutional authority determines what gets executed, not the requester.",
+  },
+  {
+    question: "Why aren't AI instructions enough?",
+    answer:
+      "Instructions are not the same as enforceable authority. An AI system can faithfully follow its instructions and still produce an action that falls outside the institution's authorized boundaries. Parmana provides an independent authorization boundary so institutional authority does not depend on the AI behaving exactly as intended.",
   },
   {
     question: "What happens if an AI agent is compromised?",
@@ -35,7 +53,7 @@ const faqs = [
   {
     question: "Does Parmana protect against frontier AI models?",
     answer:
-      "Parmana is designed to preserve institutional authorization regardless of the AI model initiating an execution request. The authorization decision is based on institutional authority and policy not on the model's reputation, capability, or alignment.",
+      "Parmana is designed to preserve institutional authorization regardless of the AI model initiating an execution request. The authorization decision is based on institutional authority and policy, not on the model's reputation, capability, or alignment.",
     highlight: true,
   },
   {
@@ -44,9 +62,14 @@ const faqs = [
       "Parmana does not rely on the AI agent obeying instructions to preserve institutional authority. Authorization is evaluated independently against the institution's defined authority and policies.",
   },
   {
+    question: "Does Parmana need to trust the AI?",
+    answer:
+      "No. Parmana does not need to determine whether an AI system is trustworthy, aligned, safe, or correct. It evaluates the specific execution request against institutional authority and policy. The requester can initiate an action, but the requester does not create the authority to execute it.",
+  },
+  {
     question: "Is Parmana an AI safety product?",
     answer:
-      "No. AI safety focuses on improving AI behavior. Parmana addresses a different question: is this action authorized by the institution?",
+      "No. AI safety focuses on improving or constraining AI behavior. Parmana addresses a different question: is this specific action authorized by the institution?",
   },
   {
     question: "Does Parmana replace existing AI security solutions?",
@@ -126,9 +149,9 @@ const faqs = [
       "Technology Readiness Level 7 means the system has been demonstrated in an operational environment, not just tested in a lab. Parmana has processed a real, live-money Razorpay refund on production infrastructure, proof the authorization boundary holds under real financial transactions, not only simulated ones.",
   },
   {
-    question: "Is Parmana quantum-safe?",
+    question: "Does Parmana support post-quantum cryptography?",
     answer:
-      "Parmana includes native support for ML-DSA-65, a post-quantum digital signature algorithm, built and tested, so authorization evidence signed today remains verifiable as cryptographic standards evolve.",
+      "Parmana includes native support for ML-DSA-65, a post-quantum digital signature algorithm, built and tested, so authorization evidence can use post-quantum signatures as cryptographic standards evolve.",
   },
   {
     question: "Can I inspect or extend the authorization mechanism myself?",
@@ -138,7 +161,7 @@ const faqs = [
   {
     question: "What is the core principle behind Parmana?",
     answer:
-      "Intelligence does not create authority. Only what you authorize should become real. No matter who or what requests execution, an AI agent, an application, or a person, institutional authority determines what gets executed.",
+      "Intelligence does not create authority. Only what the institution authorizes should become real. No matter who or what requests execution, an AI agent, an application, or a person, institutional authority determines what gets executed.",
     highlight: true,
   },
 ];

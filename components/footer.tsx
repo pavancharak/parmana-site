@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="max-w-md">
             <h3 className="text-2xl font-semibold">Parmana</h3>
 
-            <p className="mt-6 text-neutral-400 leading-8">
+            <p className="mt-6 leading-8 text-neutral-400">
               Parmana enforces human authority at machine speed.
             </p>
           </div>
@@ -21,23 +21,23 @@ export default function Footer() {
 
               <Link
                 href="/why"
-                className="block text-neutral-300 hover:text-white"
+                className="block text-neutral-300 transition-colors hover:text-white"
               >
-                Why
+                Why Authority
               </Link>
 
               <Link
                 href="/architecture"
-                className="block text-neutral-300 hover:text-white"
+                className="block text-neutral-300 transition-colors hover:text-white"
               >
                 Architecture
               </Link>
 
               <Link
-                href="/faq"
-                className="block text-neutral-300 hover:text-white"
+                href="/docs"
+                className="block text-neutral-300 transition-colors hover:text-white"
               >
-                FAQ
+                Documentation
               </Link>
             </div>
 
@@ -48,28 +48,28 @@ export default function Footer() {
 
               <Link
                 href="/company"
-                className="block text-neutral-300 hover:text-white"
+                className="block text-neutral-300 transition-colors hover:text-white"
               >
                 Company
               </Link>
 
               <Link
                 href="/advisory"
-                className="block text-neutral-300 hover:text-white"
+                className="block text-neutral-300 transition-colors hover:text-white"
               >
                 Advisory
               </Link>
 
               <Link
                 href="/investors"
-                className="block text-neutral-300 hover:text-white"
+                className="block text-neutral-300 transition-colors hover:text-white"
               >
                 Investors
               </Link>
 
               <Link
                 href="/contact"
-                className="block text-neutral-300 hover:text-white"
+                className="block text-neutral-300 transition-colors hover:text-white"
               >
                 Contact
               </Link>
