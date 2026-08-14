@@ -9,9 +9,7 @@ export default function Footer() {
             <h3 className="text-2xl font-semibold">Parmana</h3>
 
             <p className="mt-6 text-neutral-400 leading-8">
-              Parmana enforces human authority at machine speed. AI can act.
-              Humans can&apos;t approve every action. Only institutionally
-              authorized actions become real.
+              Parmana enforces human authority at machine speed.
             </p>
           </div>
 
