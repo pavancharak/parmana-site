@@ -15,14 +15,14 @@ export default function InvestorsPage() {
               <p className="label">FOR INVESTORS</p>
 
               <h1 className="heading-xl mt-6 max-w-6xl">
-                AI Can Act at Machine Speed. Humans Can&apos;t Approve Every
-                Action.
+                AI Can Act at Machine Speed. Institutions Can&apos;t Approve
+                Every Action.
               </h1>
 
               <p className="body mt-12 max-w-4xl">
                 AI can generate decisions, plan workflows, use tools, and take
-                action. Humans cannot practically approve every action
-                individually.
+                action. Institutions cannot practically approve every AI
+                action individually.
               </p>
 
               <p className="body max-w-4xl">
@@ -32,10 +32,10 @@ export default function InvestorsPage() {
               </p>
 
               <p className="body highlight max-w-4xl">
-                Parmana enforces human authority at the point of execution,
-                ensuring that only authorized actions become real-world
-                execution, with verifiable evidence of what was authorized,
-                what executed, and why.
+                Parmana enforces institutional authority at the point of
+                execution, ensuring that only institution-authorized actions
+                become real-world execution, with verifiable evidence of what
+                was authorized, what executed, and why.
               </p>
             </div>
           </div>
@@ -63,8 +63,8 @@ export default function InvestorsPage() {
           </p>
 
           <p className="body highlight">
-            AI can generate the action. The institution must retain authority
-            over whether that action becomes real.
+            AI can generate the action. Institutions must retain authority over
+            whether that action becomes real.
           </p>
         </Section>
 
@@ -94,9 +94,9 @@ export default function InvestorsPage() {
           </p>
 
           <p className="body">
-            Humans define the authority and boundaries. Institutional policy
-            determines what the organization permits. Parmana enforces those
-            boundaries before execution reaches systems of record.
+            Institutions define the authority and boundaries. Institutional
+            policy determines what the organization permits. Parmana enforces
+            those boundaries before execution reaches systems of record.
           </p>
         </Section>
 
@@ -111,11 +111,73 @@ export default function InvestorsPage() {
             system generating the request.
           </p>
 
+          {/* Core Model */}
+          <div className="mt-12 grid gap-4 md:grid-cols-4">
+            <div className="rounded-2xl border bg-white p-6">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
+                AI
+              </p>
+
+              <h3 className="mt-3 text-2xl font-semibold">
+                Intelligence
+              </h3>
+
+              <p className="mt-3 leading-7 text-neutral-600">
+                AI generates decisions and proposes actions.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border bg-white p-6">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
+                Institutions
+              </p>
+
+              <h3 className="mt-3 text-2xl font-semibold">
+                Authority
+              </h3>
+
+              <p className="mt-3 leading-7 text-neutral-600">
+                Institutions define what is permitted.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border bg-white p-6">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
+                Parmana
+              </p>
+
+              <h3 className="mt-3 text-2xl font-semibold">
+                Enforcement
+              </h3>
+
+              <p className="mt-3 leading-7 text-neutral-600">
+                Parmana enforces institutional authority at machine speed.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border bg-white p-6">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-neutral-500">
+                Systems
+              </p>
+
+              <h3 className="mt-3 text-2xl font-semibold">
+                Execution
+              </h3>
+
+              <p className="mt-3 leading-7 text-neutral-600">
+                Systems execute only what is authorized.
+              </p>
+            </div>
+          </div>
+
+          {/* Execution Flow */}
           <div className="mt-12 grid gap-4 md:grid-cols-4">
             <div className="rounded-2xl border p-8">
               <p className="label">01</p>
 
-              <h3 className="mt-4 text-2xl font-semibold">AI Proposes</h3>
+              <h3 className="mt-4 text-2xl font-semibold">
+                AI Proposes
+              </h3>
 
               <p className="mt-4 leading-7 text-neutral-600">
                 AI systems generate decisions and execution requests.
@@ -126,7 +188,7 @@ export default function InvestorsPage() {
               <p className="label">02</p>
 
               <h3 className="mt-4 text-2xl font-semibold">
-                Institution Defines
+                Institutions Define
               </h3>
 
               <p className="mt-4 leading-7 text-neutral-600">
@@ -142,15 +204,17 @@ export default function InvestorsPage() {
               </h3>
 
               <p className="mt-4 leading-7 text-neutral-600">
-                Parmana determines whether the proposed action is authorized
-                to become execution.
+                Parmana enforces the institution&apos;s authorization before
+                the proposed action becomes execution.
               </p>
             </div>
 
             <div className="rounded-2xl border p-8">
               <p className="label">04</p>
 
-              <h3 className="mt-4 text-2xl font-semibold">Parmana Proves</h3>
+              <h3 className="mt-4 text-2xl font-semibold">
+                Parmana Proves
+              </h3>
 
               <p className="mt-4 leading-7 text-neutral-600">
                 The authorization and execution produce independently
@@ -160,8 +224,8 @@ export default function InvestorsPage() {
           </div>
 
           <p className="body highlight mt-12">
-            AI creates capability. The institution retains authority. Parmana
-            controls execution.
+            AI creates capability. Institutions retain authority. Parmana
+            enforces that authority.
           </p>
         </Section>
 
@@ -197,16 +261,16 @@ export default function InvestorsPage() {
           </p>
 
           <p className="body">
-            We are building the infrastructure that makes human authority
-            enforceable at the point where machine-generated decisions become
-            execution.
+            We are building the infrastructure that makes institutional
+            authority enforceable at the point where machine-generated
+            decisions become execution.
           </p>
         </Section>
 
         {/* Investment Thesis */}
         <Section
           label="THE INVESTMENT THESIS"
-          title="AI's Value Depends on Institutional Authority Over Execution."
+          title="AI&apos;s Value Depends on Institutional Authority Over Execution."
         >
           <p className="body">
             The AI market has demonstrated enormous capability. The next
@@ -223,9 +287,10 @@ export default function InvestorsPage() {
           </p>
 
           <p className="body">
-            Humans cannot practically approve every action. The scalable
-            alternative is to define authority through institutional policy and
-            enforce that authority deterministically at execution time.
+            Institutions cannot practically approve every AI action
+            individually. The scalable alternative is to define authority
+            through institutional policy and enforce that authority
+            deterministically at execution time.
           </p>
 
           <p className="body">
@@ -277,7 +342,7 @@ export default function InvestorsPage() {
         {/* Technical Foundation */}
         <Section
           label="TECHNICAL FOUNDATION"
-          title="Human Authority, Enforced Deterministically."
+          title="Institutional Authority, Enforced Deterministically."
         >
           <p className="body">
             Parmana separates probabilistic AI behavior from deterministic
@@ -317,7 +382,9 @@ export default function InvestorsPage() {
             </div>
 
             <div className="rounded-2xl border p-8">
-              <h3 className="text-xl font-semibold">Technology Agnostic</h3>
+              <h3 className="text-xl font-semibold">
+                Technology Agnostic
+              </h3>
 
               <p className="mt-4 leading-7 text-neutral-600">
                 Authority remains independent of the model, agent, vendor, or
@@ -335,7 +402,7 @@ export default function InvestorsPage() {
         >
           <p className="body">
             Parmana has progressed beyond a conceptual architecture into
-            working authorization infrastructure.
+            working institutional authorization infrastructure.
           </p>
 
           <div className="mt-12 grid gap-4 md:grid-cols-4">
@@ -398,8 +465,8 @@ export default function InvestorsPage() {
           </p>
 
           <p className="body highlight">
-            AI can act at machine speed. Human authority cannot. Parmana makes
-            human authority enforceable at machine speed.
+            AI can act at machine speed. Institutional authority cannot.
+            Parmana makes institutional authority enforceable at machine speed.
           </p>
         </Section>
 
@@ -407,12 +474,14 @@ export default function InvestorsPage() {
         <section className="bg-black text-white">
           <div className="container section">
             <div className="max-w-5xl">
-              <p className="label !text-neutral-400">LONG-TERM VISION</p>
+              <p className="label !text-neutral-400">
+                LONG-TERM VISION
+              </p>
 
               <h2 className="mt-6 text-4xl font-semibold tracking-tight md:text-6xl">
                 AI Can Operate at Machine Speed.
                 <br />
-                Human Authority Must Keep Up.
+                Institutional Authority Must Keep Up.
               </h2>
 
               <p className="mt-10 max-w-4xl text-xl leading-9 text-neutral-300">
@@ -423,7 +492,7 @@ export default function InvestorsPage() {
               <p className="mt-6 max-w-4xl text-xl leading-9 text-neutral-300">
                 It requires infrastructure that allows AI to operate at machine
                 speed while institutional authority remains in control of
-                execution—without requiring humans to approve every action.
+                execution without requiring humans to approve every action.
               </p>
 
               <p className="mt-10 text-2xl font-medium text-white">
@@ -437,7 +506,9 @@ export default function InvestorsPage() {
         <section className="bg-white">
           <div className="container section">
             <div className="mx-auto max-w-4xl text-center">
-              <p className="label">BUILDING THE NEXT INFRASTRUCTURE LAYER</p>
+              <p className="label">
+                BUILDING THE NEXT INFRASTRUCTURE LAYER
+              </p>
 
               <h2 className="heading-xl mt-6">
                 Who Has the Authority to Decide What Actually Happens?

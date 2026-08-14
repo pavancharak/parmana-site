@@ -91,7 +91,7 @@ export default function ArchitecturePage() {
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-neutral-600">
             Parmana sits between execution requests and systems of record,
             enforcing institutional authority at machine speed so that only
-            authorized actions become real-world execution.
+            institution-authorized actions become real-world execution.
           </p>
 
         </div>
@@ -163,7 +163,7 @@ export default function ArchitecturePage() {
               </h2>
 
               <p className="mt-3 text-center text-neutral-300">
-                Human Authority Infrastructure
+                Institutional Authority Infrastructure
               </p>
 
               <div className="mt-8 rounded-2xl bg-white/5 p-6">
@@ -180,11 +180,11 @@ export default function ArchitecturePage() {
 
                 <div className="flex justify-between py-2">
                   <span className="text-neutral-400">
-                    Organizational Authority
+                    Institutional Authority
                   </span>
 
                   <span>
-                    Evaluate
+                    Enforce
                   </span>
                 </div>
 
@@ -267,17 +267,16 @@ export default function ArchitecturePage() {
           </p>
 
           <h3 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            One Request. One Deterministic Decision.
+            One Request. One Deterministic Enforcement Outcome.
           </h3>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-neutral-600">
-            Humans cannot practically approve every AI action. AI models
-            generate outputs based on probabilities, and that makes them
-            capable, but it does not make every execution decision
-            deterministic. Parmana moves authorization out of the AI
-            reasoning path and into an independent policy enforcement layer,
-            so authorization depends on institutional authority rather than
-            the model, prompt, or reasoning quality that produced the request.
+            AI systems can generate decisions and execution requests at
+            machine speed. Institutions define the authority and policies
+            that determine what is permitted. Parmana does not make those
+            decisions; it enforces them deterministically at machine speed,
+            independently of the model, prompt, or reasoning that produced
+            the request.
           </p>
 
           <div className="mx-auto mt-10 grid max-w-2xl gap-6 sm:grid-cols-2">
@@ -345,10 +344,11 @@ export default function ArchitecturePage() {
 
           <p className="mx-auto mt-4 max-w-3xl text-neutral-600">
             Execution requests may originate from AI agents, people,
-            applications, or attackers. Parmana does not require a human to
+            applications, or other systems. Parmana does not replace
+            institutional decision-making and does not require a human to
             approve every action. It enforces the authority the institution
-            has already defined, determining what is actually allowed to
-            execute before any action reaches systems of record.
+            has already defined, at machine speed, before an action reaches
+            the systems of record.
           </p>
 
         </div>
