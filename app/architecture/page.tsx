@@ -41,7 +41,8 @@ const proofPoints = [
   {
     icon: Lock,
     title: "Post-Quantum Signatures",
-    description: "Native ML-DSA-65 signature support, built and tested.",
+    description:
+      "Native ML-DSA-65 signature support, built and tested.",
   },
 ];
 
@@ -66,8 +67,20 @@ export default function ArchitecturePage() {
     <section className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-6">
 
-        {/* Back */}
+        {/* Spotify Episode */}
+        <div className="mx-auto mb-12 w-full max-w-3xl">
+          <iframe
+            src="https://open.spotify.com/embed/episode/14EwqJbd2tj4AwOv2Svkei?utm_source=generator"
+            width="100%"
+            height="152"
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            className="rounded-xl"
+          />
+        </div>
 
+        {/* Back */}
         <Link
           href="/"
           className="mb-10 inline-flex items-center gap-2 text-sm font-medium text-neutral-500 transition hover:text-black"
@@ -77,9 +90,7 @@ export default function ArchitecturePage() {
         </Link>
 
         {/* Header */}
-
         <div className="mb-16 text-center">
-
           <p className="label">
             ARCHITECTURE
           </p>
@@ -93,36 +104,28 @@ export default function ArchitecturePage() {
             enforcing institutional authority at machine speed so that only
             institution-authorized actions become real-world execution.
           </p>
-
         </div>
 
-        {/* Diagram */}
-
+        {/* Architecture Diagram */}
         <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-12">
 
-          {/* Sources */}
-
+          {/* Execution Sources */}
           <div>
-
             <p className="label mb-6">
               EXECUTION SOURCES
             </p>
 
             <div className="space-y-4">
-
               {sources.map(({ name, icon: Icon }) => (
-
                 <div
                   key={name}
                   className="flex items-center gap-4 rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                 >
-
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-100">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-neutral-100">
                     <Icon size={24} />
                   </div>
 
                   <div>
-
                     <div className="font-semibold">
                       {name}
                     </div>
@@ -130,19 +133,13 @@ export default function ArchitecturePage() {
                     <div className="text-sm text-neutral-500">
                       Initiates Execution Request
                     </div>
-
                   </div>
-
                 </div>
-
               ))}
-
             </div>
-
           </div>
 
           {/* Parmana */}
-
           <div className="flex flex-col items-center">
 
             <ArrowRight
@@ -153,9 +150,7 @@ export default function ArchitecturePage() {
             <div className="w-[440px] rounded-[36px] bg-black px-10 py-12 text-white shadow-2xl">
 
               <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white/10">
-
                 <ShieldCheck size={46} />
-
               </div>
 
               <h2 className="mt-8 text-center text-4xl font-semibold">
@@ -195,15 +190,13 @@ export default function ArchitecturePage() {
               </div>
 
               <div className="mt-8 flex flex-wrap justify-center gap-2">
-
                 <span className="rounded-full border border-neutral-700 px-3 py-1 text-xs">
                   Authority Driven
                 </span>
 
                 <span className="rounded-full border border-neutral-700 px-3 py-1 text-xs">
-                  Vendor & Model Agnostic
+                  Vendor &amp; Model Agnostic
                 </span>
-
               </div>
 
             </div>
@@ -215,29 +208,23 @@ export default function ArchitecturePage() {
 
           </div>
 
-          {/* SYSTEMS OF RECORD */}
-
+          {/* Systems of Record */}
           <div>
-
             <p className="label mb-6">
               SYSTEMS OF RECORD
             </p>
 
             <div className="space-y-4">
-
               {systems.map(({ name, icon: Icon }) => (
-
                 <div
                   key={name}
                   className="flex items-center gap-4 rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
                 >
-
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-100">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-neutral-100">
                     <Icon size={24} />
                   </div>
 
                   <div>
-
                     <div className="font-semibold">
                       {name}
                     </div>
@@ -245,21 +232,15 @@ export default function ArchitecturePage() {
                     <div className="text-sm text-neutral-500">
                       Authority Enforcement Point
                     </div>
-
                   </div>
-
                 </div>
-
               ))}
-
             </div>
-
           </div>
 
         </div>
 
         {/* Deterministic Authorization */}
-
         <div className="mt-24 text-center">
 
           <p className="label mb-6">
@@ -294,11 +275,9 @@ export default function ArchitecturePage() {
             </div>
 
           </div>
-
         </div>
 
         {/* Proof Points */}
-
         <div className="mt-24">
 
           <p className="label mb-6 text-center">
@@ -308,12 +287,10 @@ export default function ArchitecturePage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
             {proofPoints.map(({ icon: Icon, title, description }) => (
-
               <div
                 key={title}
                 className="rounded-2xl border border-neutral-200 bg-white p-6"
               >
-
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-neutral-100">
                   <Icon size={22} />
                 </div>
@@ -325,17 +302,13 @@ export default function ArchitecturePage() {
                 <p className="mt-2 text-sm leading-6 text-neutral-500">
                   {description}
                 </p>
-
               </div>
-
             ))}
 
           </div>
-
         </div>
 
         {/* Footer */}
-
         <div className="mt-20 rounded-3xl border border-neutral-200 bg-neutral-50 p-10 text-center">
 
           <h3 className="text-3xl font-semibold">
