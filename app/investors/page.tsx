@@ -15,24 +15,27 @@ export default function InvestorsPage() {
               <p className="label">FOR INVESTORS</p>
 
               <h1 className="heading-xl mt-6 max-w-6xl">
-                AI in a demo ≠ AI in production.
+                AI Can Act at Machine Speed. Humans Can&apos;t Approve Every
+                Action.
               </h1>
 
               <p className="body mt-12 max-w-4xl">
-                Capability creates potential. Controlled execution creates
-                business value.
+                AI can generate decisions, plan workflows, use tools, and take
+                action. Humans cannot practically approve every action
+                individually.
               </p>
 
               <p className="body max-w-4xl">
-                AI capability becomes business value only when it operates
-                inside real business workflows with real customers, real
-                money, real data, real decisions, and real consequences.
+                The infrastructure challenge is therefore not simply making AI
+                more capable. It is preserving institutional authority while
+                autonomous systems operate at machine speed.
               </p>
 
               <p className="body highlight max-w-4xl">
-                The next infrastructure opportunity is making AI capability
-                deployable in the real world without institutions losing
-                authority over execution.
+                Parmana enforces human authority at the point of execution,
+                ensuring that only authorized actions become real-world
+                execution, with verifiable evidence of what was authorized,
+                what executed, and why.
               </p>
             </div>
           </div>
@@ -49,17 +52,19 @@ export default function InvestorsPage() {
           </p>
 
           <p className="body">
-            But capability alone does not create business value.
+            As AI moves closer to customers, money, data, and consequential
+            business decisions, organizations cannot place a human approval
+            step in every execution path.
           </p>
 
           <p className="body">
-            Value appears when that capability can operate inside production
-            environments where actions have real consequences.
+            The system generating an action can be highly capable without
+            possessing institutional authority to make that action real.
           </p>
 
           <p className="body highlight">
-            AI can generate the decision. The institution must retain authority
-            over what becomes real.
+            AI can generate the action. The institution must retain authority
+            over whether that action becomes real.
           </p>
         </Section>
 
@@ -74,32 +79,39 @@ export default function InvestorsPage() {
           </p>
 
           <p className="body">
-            It may have credentials. It may have access to an API. It may be
-            able to execute the action.
+            It may have credentials. It may have access to an API. It may have
+            tools, permissions, and guardrails.
           </p>
 
           <p className="body">
-            None of these establish that the institution has authorized the
-            specific action.
+            None of these, by themselves, establish that the institution has
+            authorized the specific action in the specific business context.
           </p>
 
           <p className="body highlight">
             The system that proposes an action should not be the system that
             determines whether it is authorized.
           </p>
+
+          <p className="body">
+            Humans define the authority and boundaries. Institutional policy
+            determines what the organization permits. Parmana enforces those
+            boundaries before execution reaches systems of record.
+          </p>
         </Section>
 
         {/* Infrastructure Layer */}
         <Section
           label="A NEW INFRASTRUCTURE LAYER"
-          title="Controlled Execution Infrastructure."
+          title="The Authority Layer for AI Execution."
         >
           <p className="body">
-            Parmana is building the infrastructure between autonomous systems
-            and consequential execution.
+            Parmana sits between autonomous systems and consequential
+            execution, enforcing institutional authority independently of the
+            system generating the request.
           </p>
 
-          <div className="mt-12 grid gap-4 md:grid-cols-3">
+          <div className="mt-12 grid gap-4 md:grid-cols-4">
             <div className="rounded-2xl border p-8">
               <p className="label">01</p>
 
@@ -114,11 +126,11 @@ export default function InvestorsPage() {
               <p className="label">02</p>
 
               <h3 className="mt-4 text-2xl font-semibold">
-                Policy Determines
+                Institution Defines
               </h3>
 
               <p className="mt-4 leading-7 text-neutral-600">
-                Institutional policy defines what is permitted.
+                Institutional policy defines what actions are permitted.
               </p>
             </div>
 
@@ -126,19 +138,30 @@ export default function InvestorsPage() {
               <p className="label">03</p>
 
               <h3 className="mt-4 text-2xl font-semibold">
-                Parmana Authorizes
+                Parmana Enforces
               </h3>
 
               <p className="mt-4 leading-7 text-neutral-600">
-                Parmana determines whether the proposed action is authorized to
-                become execution.
+                Parmana determines whether the proposed action is authorized
+                to become execution.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border p-8">
+              <p className="label">04</p>
+
+              <h3 className="mt-4 text-2xl font-semibold">Parmana Proves</h3>
+
+              <p className="mt-4 leading-7 text-neutral-600">
+                The authorization and execution produce independently
+                verifiable evidence.
               </p>
             </div>
           </div>
 
           <p className="body highlight mt-12">
-            Capability creates potential. Controlled execution creates business
-            value.
+            AI creates capability. The institution retains authority. Parmana
+            controls execution.
           </p>
         </Section>
 
@@ -146,7 +169,7 @@ export default function InvestorsPage() {
         <Section
           background="gray"
           label="WHY INFRASTRUCTURE"
-          title="AI Capability Will Keep Changing. Execution Authority Cannot Depend on It."
+          title="AI Capability Will Keep Changing. Institutional Authority Cannot Depend on It."
         >
           <p className="body">
             Models will change. Agents will change. Vendors will change.
@@ -174,36 +197,47 @@ export default function InvestorsPage() {
           </p>
 
           <p className="body">
-            We are building the infrastructure that determines whether a
-            decision is authorized to become execution.
+            We are building the infrastructure that makes human authority
+            enforceable at the point where machine-generated decisions become
+            execution.
           </p>
         </Section>
 
         {/* Investment Thesis */}
         <Section
           label="THE INVESTMENT THESIS"
-          title="The Value of AI Depends on Its Ability to Reach Production."
+          title="AI's Value Depends on Institutional Authority Over Execution."
         >
           <p className="body">
             The AI market has demonstrated enormous capability. The next
-            challenge is deployment.
+            infrastructure challenge is enabling that capability to operate
+            inside real business environments without transferring
+            institutional authority to the systems generating the decisions.
           </p>
 
           <p className="body">
-            Organizations will not capture meaningful value from autonomous
-            systems if those systems cannot operate inside real business
-            environments.
+            As autonomous systems gain access to customers, money, data,
+            business applications, APIs, databases, and systems of record,
+            institutions need an independent mechanism for enforcing what those
+            systems are permitted to make real.
           </p>
 
           <p className="body">
-            The closer AI gets to real-world execution, the more important
-            controlled execution becomes.
+            Humans cannot practically approve every action. The scalable
+            alternative is to define authority through institutional policy and
+            enforce that authority deterministically at execution time.
+          </p>
+
+          <p className="body">
+            Authorization alone is not enough. Institutions also need evidence
+            that establishes what was authorized, what executed, and whether
+            the execution matched the authorization.
           </p>
 
           <p className="body highlight">
-            We believe the infrastructure that enables AI capability to become
-            controlled production execution will become increasingly important
-            to the agentic computing stack.
+            We believe an authorization and evidence layer between autonomous
+            systems and consequential execution will become increasingly
+            important to the agentic computing stack.
           </p>
         </Section>
 
@@ -234,12 +268,16 @@ export default function InvestorsPage() {
           <p className="body highlight">
             It becomes: What can AI be allowed to make real?
           </p>
+
+          <p className="body highlight">
+            And who has the authority to decide?
+          </p>
         </Section>
 
         {/* Technical Foundation */}
         <Section
           label="TECHNICAL FOUNDATION"
-          title="Built for Deterministic Authorization."
+          title="Human Authority, Enforced Deterministically."
         >
           <p className="body">
             Parmana separates probabilistic AI behavior from deterministic
@@ -249,7 +287,7 @@ export default function InvestorsPage() {
           <div className="mt-12 grid gap-4 md:grid-cols-2">
             <div className="rounded-2xl border p-8">
               <h3 className="text-xl font-semibold">
-                Deterministic Decisions
+                Deterministic Authorization
               </h3>
 
               <p className="mt-4 leading-7 text-neutral-600">
@@ -293,7 +331,7 @@ export default function InvestorsPage() {
         <Section
           background="gray"
           label="PROOF"
-          title="Built for Real Execution."
+          title="Built to Prove Authorized Execution."
         >
           <p className="body">
             Parmana has progressed beyond a conceptual architecture into
@@ -316,7 +354,7 @@ export default function InvestorsPage() {
               ],
               [
                 "Production-Oriented",
-                "Built around execution paths, verification, auditability, and deployment requirements.",
+                "Built around execution paths, authorization, verification, auditability, and deployment requirements.",
               ],
             ].map(([title, description]) => (
               <div
@@ -336,25 +374,32 @@ export default function InvestorsPage() {
         {/* Thesis */}
         <Section
           label="THE THESIS"
-          title="Capability Creates Potential. Controlled Execution Creates Business Value."
+          title="AI Creates Capability. Institutions Retain Authority."
         >
           <p className="body">
             The AI industry is focused on increasing capability.
           </p>
 
           <p className="body">
-            We believe the next infrastructure layer is about converting that
-            capability into controlled production execution.
+            As autonomous systems become more capable, the critical
+            infrastructure question becomes who has authority over what those
+            systems are allowed to make real.
           </p>
 
           <p className="body">
-            As autonomous systems become more capable, institutions will need
-            to deploy them without surrendering authority over what they are
-            allowed to do.
+            Institutions will need to deploy increasingly capable autonomous
+            systems without surrendering authority over what those systems are
+            permitted to do.
           </p>
 
           <p className="body highlight">
-            That is the infrastructure opportunity Parmana is building for.
+            Parmana is building the infrastructure that keeps that authority
+            with the institution.
+          </p>
+
+          <p className="body highlight">
+            AI can act at machine speed. Human authority cannot. Parmana makes
+            human authority enforceable at machine speed.
           </p>
         </Section>
 
@@ -367,7 +412,7 @@ export default function InvestorsPage() {
               <h2 className="mt-6 text-4xl font-semibold tracking-tight md:text-6xl">
                 AI Can Operate at Machine Speed.
                 <br />
-                Institutions Must Retain Authority.
+                Human Authority Must Keep Up.
               </h2>
 
               <p className="mt-10 max-w-4xl text-xl leading-9 text-neutral-300">
@@ -376,7 +421,9 @@ export default function InvestorsPage() {
               </p>
 
               <p className="mt-6 max-w-4xl text-xl leading-9 text-neutral-300">
-                It requires infrastructure that allows both.
+                It requires infrastructure that allows AI to operate at machine
+                speed while institutional authority remains in control of
+                execution—without requiring humans to approve every action.
               </p>
 
               <p className="mt-10 text-2xl font-medium text-white">
@@ -393,18 +440,17 @@ export default function InvestorsPage() {
               <p className="label">BUILDING THE NEXT INFRASTRUCTURE LAYER</p>
 
               <h2 className="heading-xl mt-6">
-                Make AI Capability Deployable.
+                Who Has the Authority to Decide What Actually Happens?
               </h2>
 
               <p className="body mx-auto mt-8 max-w-3xl">
-                The agentic era will not be defined only by what AI can do. It
-                will be defined by what businesses can confidently allow AI to
-                do in production.
+                AI can generate actions at machine speed. Institutions must
+                remain the authority over what becomes real-world execution.
               </p>
 
               <p className="body highlight mx-auto mt-6 max-w-3xl">
-                Capability creates potential. Controlled execution creates
-                business value.
+                Parmana enforces that authority and provides the evidence to
+                prove what happened.
               </p>
 
               <div className="mt-10">

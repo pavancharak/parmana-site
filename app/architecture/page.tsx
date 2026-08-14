@@ -89,9 +89,9 @@ export default function ArchitecturePage() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-neutral-600">
-            Parmana sits between every execution request and your systems of
-record, ensuring that only institutionally authorized actions
-execute.
+            Parmana sits between execution requests and systems of record,
+            enforcing institutional authority at machine speed so that only
+            authorized actions become real-world execution.
           </p>
 
         </div>
@@ -163,40 +163,40 @@ execute.
               </h2>
 
               <p className="mt-3 text-center text-neutral-300">
-                Institutional Authority Infrastructure
+                Human Authority Infrastructure
               </p>
 
               <div className="mt-8 rounded-2xl bg-white/5 p-6">
 
                 <div className="flex justify-between py-2">
-  <span className="text-neutral-400">
-    Execution Request
-  </span>
+                  <span className="text-neutral-400">
+                    Execution Request
+                  </span>
 
-  <span>
-    Receive
-  </span>
-</div>
+                  <span>
+                    Receive
+                  </span>
+                </div>
 
-<div className="flex justify-between py-2">
-  <span className="text-neutral-400">
-    Organizational Authority
-  </span>
+                <div className="flex justify-between py-2">
+                  <span className="text-neutral-400">
+                    Organizational Authority
+                  </span>
 
-  <span>
-    Evaluate
-  </span>
-</div>
+                  <span>
+                    Evaluate
+                  </span>
+                </div>
 
-<div className="mt-4 rounded-xl bg-emerald-500/20 px-4 py-3 text-center font-semibold text-emerald-300">
-  ✓ Authorized to Execute
-</div>
+                <div className="mt-4 rounded-xl bg-emerald-500/20 px-4 py-3 text-center font-semibold text-emerald-300">
+                  ✓ Authorized to Execute
+                </div>
 
               </div>
 
               <div className="mt-8 flex flex-wrap justify-center gap-2">
 
-                               <span className="rounded-full border border-neutral-700 px-3 py-1 text-xs">
+                <span className="rounded-full border border-neutral-700 px-3 py-1 text-xs">
                   Authority Driven
                 </span>
 
@@ -271,12 +271,13 @@ execute.
           </h3>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-neutral-600">
-            AI models generate outputs based on probabilities, and that makes them
+            Humans cannot practically approve every AI action. AI models
+            generate outputs based on probabilities, and that makes them
             capable, but it does not make every execution decision
-            deterministic. Authorization must not depend on which AI model,
-            prompt, or reasoning quality produced the request. It should
-            depend on organizational policy alone, so every execution
-            request produces exactly one outcome.
+            deterministic. Parmana moves authorization out of the AI
+            reasoning path and into an independent policy enforcement layer,
+            so authorization depends on institutional authority rather than
+            the model, prompt, or reasoning quality that produced the request.
           </p>
 
           <div className="mx-auto mt-10 grid max-w-2xl gap-6 sm:grid-cols-2">
@@ -343,10 +344,11 @@ execute.
           </h3>
 
           <p className="mx-auto mt-4 max-w-3xl text-neutral-600">
-Execution requests may originate from AI agents, people, applications,
-or attackers. Parmana ensures organizational authority determines
-what is actually allowed to execute before any action reaches systems
-of record.
+            Execution requests may originate from AI agents, people,
+            applications, or attackers. Parmana does not require a human to
+            approve every action. It enforces the authority the institution
+            has already defined, determining what is actually allowed to
+            execute before any action reaches systems of record.
           </p>
 
         </div>

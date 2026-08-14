@@ -13,22 +13,22 @@ const services = [
   {
     title: "AI Governance",
     description:
-      "Design governance mechanisms that remain meaningful when AI systems can act autonomously.",
+      "Design governance mechanisms that remain enforceable when AI systems can act autonomously.",
   },
   {
     title: "AI Security",
     description:
-      "Review the security boundaries around agents, identities, tools, APIs, and execution paths.",
+      "Review the security boundaries around agents, identities, tools, APIs, credentials, and execution paths.",
   },
   {
     title: "Autonomous Systems Architecture",
     description:
-      "Assess architectures where AI systems can initiate consequential actions.",
+      "Assess architectures where AI systems can initiate consequential actions and identify where capability can exceed institutional authority.",
   },
   {
     title: "Execution Authorization",
     description:
-      "Design controls that determine whether a proposed action is permitted to become real-world execution.",
+      "Design controls that determine whether a proposed action is authorized to become real-world execution.",
   },
   {
     title: "Enterprise Architecture",
@@ -114,18 +114,20 @@ export default function AdvisoryPage() {
             <p className="label">AI &amp; AUTONOMOUS SYSTEMS ADVISORY</p>
 
             <h1 className="mt-8 max-w-6xl text-5xl font-semibold tracking-[-0.04em] text-neutral-950 md:text-6xl lg:text-7xl">
-              AI capability in a demo ≠ AI capability in production.
+              AI Can Act at Machine Speed. Humans Can&apos;t Approve Every
+              Action.
             </h1>
 
-            <p className="mt-8 max-w-4xl text-2xl font-medium leading-10 text-neutral-950 md:text-3xl">
-              Capability creates potential. Controlled execution creates
-              business value.
+            <p className="mt-8 max-w-4xl text-2xl font-medium leading-10 text-neutral-950 md:text-3xl md:leading-11">
+              Parmana helps organizations enforce human authority at machine
+              speed.
             </p>
 
             <p className="mt-8 max-w-3xl text-xl leading-9 text-neutral-700 md:text-2xl md:leading-10">
-              AI capability becomes real business value only when it operates
-              inside real business workflows with real customers, real
-              money, real data, real decisions, and real consequences.
+              As AI systems move from generating outputs to taking actions,
+              organizations cannot practically place a human approval step in
+              every execution path. The challenge is preserving institutional
+              authority while autonomous systems operate at machine speed.
             </p>
 
             <div className="mt-12 flex flex-wrap gap-4">
@@ -158,7 +160,8 @@ export default function AdvisoryPage() {
 
               <p className="body mt-10">
                 Autonomous systems can interact with APIs, databases, business
-                applications, and systems of record.
+                applications, and systems of record. As their capability grows,
+                humans cannot realistically approve every action individually.
               </p>
 
               <p className="mt-8 text-2xl font-medium leading-10 text-neutral-950">
@@ -171,7 +174,9 @@ export default function AdvisoryPage() {
                 <br />
                 It is:
                 <br />
-                What is the system authorized to do?
+                <span>
+                  What is the system authorized to do?
+                </span>
               </p>
             </div>
 
@@ -208,7 +213,7 @@ export default function AdvisoryPage() {
             <p className="label">SERVICES</p>
 
             <h2 className="heading-lg mt-6 max-w-4xl">
-              What I help organizations address
+              Where autonomous execution creates risk
             </h2>
 
             <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -239,7 +244,7 @@ export default function AdvisoryPage() {
               </p>
 
               <h2 className="mt-6 text-4xl font-semibold tracking-[-0.04em] md:text-5xl">
-                Capability is not authority.
+                Human authority does not require a human in every loop.
               </h2>
 
               <div className="mt-10 max-w-3xl space-y-7 text-lg leading-9 text-neutral-300">
@@ -256,10 +261,15 @@ export default function AdvisoryPage() {
                   this specific action, against this specific resource, under
                   these specific conditions.
                 </p>
+
+                <p>
+                  Humans define the authority and boundaries. Autonomous
+                  systems operate within them.
+                </p>
               </div>
 
               <p className="mt-12 text-2xl font-medium text-white">
-                The institution must determine what becomes real.
+                Parmana enforces that authority at machine speed.
               </p>
             </div>
           </div>
@@ -349,13 +359,13 @@ export default function AdvisoryPage() {
               </h2>
 
               <p className="body mt-8">
-                Parmana is building Institutional Authority Infrastructure for
+                Parmana is building Human Authority Infrastructure for
                 autonomous systems.
               </p>
 
               <p className="mt-6 max-w-3xl text-2xl font-medium leading-10 text-neutral-950">
-                Capability creates potential. Controlled execution creates
-                business value.
+                AI can act at machine speed. Human authority cannot. Parmana
+                makes human authority enforceable at machine speed.
               </p>
 
               <Link
@@ -411,8 +421,8 @@ export default function AdvisoryPage() {
               </h2>
 
               <p className="body mt-8">
-                Before giving it the ability to act, understand what authority
-                it actually has.
+                Before giving it the ability to act, define what it is
+                actually authorized to make real.
               </p>
 
               <Link

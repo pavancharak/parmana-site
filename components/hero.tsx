@@ -4,27 +4,24 @@ export default function Hero() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="py-24 lg:py-32">
           <p className="text-sm font-medium tracking-[0.2em] text-neutral-500">
-           AI EXECUTION INFRASTRUCTURE
+            HUMAN AUTHORITY INFRASTRUCTURE
           </p>
 
           <h1 className="mt-8 max-w-6xl text-5xl font-semibold tracking-tight text-neutral-900 md:text-6xl lg:text-7xl">
-            Make AI Capability Deployable.
+            AI Can Act at Machine Speed. Humans Can&apos;t Approve Every
+            Action.
           </h1>
 
           <p className="mt-6 max-w-4xl text-2xl font-medium leading-9 text-neutral-900">
-            Capability creates potential. Controlled execution creates business
-            value.
+            Parmana enforces human authority at machine speed.
           </p>
 
           <div className="mt-8 max-w-4xl">
             <p className="text-xl leading-9 text-neutral-700">
-              <strong>AI capability in a demo ≠ AI capability in production.</strong>
-              <br />
-              <br />
-              Until AI operates inside real business workflows with real
-              customers, real money, real data, real decisions, and real
-              consequences .AI capability remains potential. Real business
-              value is not created.
+              Humans define what the institution allows. AI systems generate
+              actions. Parmana determines whether each requested action is
+              authorized to become real-world execution with verifiable
+              evidence of what was authorized, what executed, and why.
             </p>
           </div>
 
