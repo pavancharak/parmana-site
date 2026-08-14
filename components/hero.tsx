@@ -13,7 +13,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 max-w-4xl text-2xl font-medium leading-9 text-neutral-900">
-            Parmana enforces human authority at machine speed.
+           Parmana guarantees that only authorized actions execute. No exceptions.
           </p>
 
           <div className="mt-8 max-w-4xl">
