@@ -19,7 +19,7 @@ export default function Hero() {
           <div className="mt-8 max-w-4xl">
             <p className="text-xl leading-9 text-neutral-700">
               Humans define the rules. AI proposes actions. Parmana decides
-              what is authorized to happen—and records the proof.
+              what is authorized to happen and records the proof.
             </p>
           </div>
 
