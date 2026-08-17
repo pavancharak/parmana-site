@@ -1,9 +1,9 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# Parmana site
 
-# This is NOT the Next.js you know
+React + Vite + TypeScript, plain CSS (CSS Modules per component, no Tailwind, no component library).
+Single-page marketing site. See `docs/NEW-SITE-BUILD-PROMPT.md` for the design system, copy rules, and
+content brief this build follows.
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
-
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
-
-<!-- END:nextjs-agent-rules -->
+- Colors, type, and the gate motif are governed by the design system in that brief, don't improvise new
+  accent colors or reuse `--signal-go` / `--signal-stop` outside the gate glyph.
+- Copy rules in that brief (banned words, "never lead with AI", no em/en-dashes) apply to all site text.

@@ -1,0 +1,100 @@
+.section {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper-dim);
+}
+
+.inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 4.5rem) var(--gutter);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.copy p {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.65;
+  max-width: 42ch;
+}
+
+.copy p + p {
+  margin-top: 1rem;
+}
+
+.diagram {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0;
+  align-items: center;
+}
+
+.sources {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  min-height: 17rem;
+}
+
+.source {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.source::after {
+  content: "";
+  flex: 1;
+  min-width: 1.5rem;
+  height: 1px;
+  background: var(--line);
+}
+
+.svg {
+  height: 17rem;
+  width: clamp(9rem, 16vw, 14rem);
+}
+
+.gateIcon {
+  height: 4.5rem;
+}
+
+.gateBox {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diagram {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .svg {
+    width: 100%;
+    height: 12rem;
+  }
+
+  .sources {
+    min-height: 12rem;
+  }
+
+  .gateBox {
+    justify-content: center;
+    padding-left: 0;
+  }
+}
