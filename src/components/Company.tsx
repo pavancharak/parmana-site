@@ -5,9 +5,9 @@ import mohinderPhoto from "../assets/mohinder.png";
 import abhignaPhoto from "../assets/abhigna.jpg";
 
 const TEAM = [
-  { photo: pavanPhoto, name: "Pavan", role: "CEO & System Architect" },
+  { photo: pavanPhoto, name: "Pavan Dev Singh Charak", role: "CEO & System Architect" },
   { photo: mohinderPhoto, name: "Mohinder Singh Charak", role: "Co-founder & Policy Advisor" },
-  { photo: abhignaPhoto, name: "Venkata Abhigna", role: "Head of Partnerships" },
+  { photo: abhignaPhoto, name: "K Venkata Abhigna", role: "Head of Partnerships" },
 ];
 
 export function Company() {
