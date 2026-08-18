@@ -11,7 +11,7 @@ export function Nav() {
   return (
     <header className={styles.nav}>
       <div className={styles.inner}>
-        <a href="#top" className={styles.wordmarkLink}>
+        <a href="/" className={styles.wordmarkLink}>
           <span className={styles.wordmark}>Parmana</span>
         </a>
         <nav className={styles.links} aria-label="Section">

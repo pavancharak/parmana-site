@@ -109,7 +109,9 @@ export function ChallengePage() {
     <>
       <header className={styles.header}>
         <div className={styles.headerInner}>
-          <span className={styles.wordmark}>Parmana</span>
+          <a href="/" className={styles.wordmarkLink}>
+            <span className={styles.wordmark}>Parmana</span>
+          </a>
           <span className={styles.headerLabel}>
             Mastercard Innovation Challenge, GFF 2026 submission
           </span>
@@ -303,6 +305,60 @@ export function ChallengePage() {
             <a className={styles.includedLink} href={REPO_URL} target="_blank" rel="noreferrer">
               github.com/pavancharak/mastercard-ai-defense-lab
             </a>
+          </div>
+        </section>
+
+        <section className={`${styles.section} ${styles.sectionDim}`} id="why-different">
+          <div className={styles.inner}>
+            <FigureLabel n="06" title="Why our approach is different" />
+            <div className={styles.differentiators}>
+              <div className={styles.differentiator}>
+                <h3 className={styles.differentiatorTitle}>Why it's different</h3>
+                <div className={styles.copy}>
+                  <p>
+                    Most fraud defenses score a transaction after it happens, and rate it as risky
+                    or safe. That works for many attack types. It doesn't work for all of them.
+                  </p>
+                  <p>
+                    Some attacks don't look wrong in the moment. A purchasing agent can make a
+                    transaction that looks completely normal on its own, and only becomes fraud when
+                    you compare it against what it was actually allowed to do. A classifier scoring
+                    one transaction at a time has no way to catch that, because the problem isn't in
+                    that transaction. It's in the gap between what was claimed and what was
+                    authorized.
+                  </p>
+                </div>
+              </div>
+              <div className={styles.differentiator}>
+                <h3 className={styles.differentiatorTitle}>How</h3>
+                <div className={styles.copy}>
+                  <p>
+                    Instead of only scoring transactions after the fact, we built a second check
+                    that compares each action against the actual authorization behind it, before
+                    deciding whether to allow it.
+                  </p>
+                  <p>
+                    In our test, a purchasing agent tried six purchases under a fixed monthly
+                    spending mandate. The classifier alone flagged four of them as low risk and
+                    would have let them through. Our authorization check caught all four, including
+                    one the classifier had no way to catch at all: the agent had gone over its
+                    monthly limit across two separate purchases, and no single transaction showed
+                    that.
+                  </p>
+                </div>
+              </div>
+              <div className={styles.differentiator}>
+                <h3 className={styles.differentiatorTitle}>What it enables</h3>
+                <div className={styles.copy}>
+                  <p>
+                    A business can stop this kind of fraud without waiting for a smarter model. The
+                    check doesn't need to learn the attack pattern first. It just confirms whether
+                    the action was actually authorized, every time, regardless of how the attack was
+                    carried out.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
