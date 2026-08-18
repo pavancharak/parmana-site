@@ -31,7 +31,10 @@ export function Hero() {
     <section className={styles.hero} id="top">
       <div className={styles.inner}>
         <div>
-          <span className={styles.eyebrow}>Institutional Authority Infrastructure</span>
+          <div className={styles.topRow}>
+            <span className={styles.eyebrow}>Institutional Authority Infrastructure</span>
+            <span className={styles.badge}>Made in India</span>
+          </div>
           <h1 className={styles.headline}>AI may decide. You decide what becomes real.</h1>
           <p className={styles.dek}>
             All kinds of things try to act inside a business: an AI agent, a person, a connected app,

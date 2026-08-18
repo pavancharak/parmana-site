@@ -18,8 +18,25 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--brass);
-  margin-bottom: 1.25rem;
   display: block;
+}
+
+.topRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 0.3rem 0.65rem;
 }
 
 .headline {
