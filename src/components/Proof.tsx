@@ -18,9 +18,9 @@ interface Request {
 }
 
 const REQUESTS: Request[] = [
-  { id: "refund", label: "Refund a customer $40", outcome: "go" },
+  { id: "refund", label: "Refund a customer ₹40", outcome: "go" },
   { id: "address", label: "Update a customer's shipping address", outcome: "go" },
-  { id: "wire", label: "Move $250,000 to an unfamiliar account", outcome: "stop" },
+  { id: "wire", label: "Move ₹2,50,000 to an unfamiliar account", outcome: "stop" },
   { id: "export", label: "Export the entire customer database", outcome: "stop" },
 ];
 
