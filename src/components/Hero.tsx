@@ -35,15 +35,14 @@ export function Hero() {
             <span className={styles.eyebrow}>Institutional Authority Infrastructure</span>
             <span className={styles.badge}>Made in India</span>
           </div>
-          <h1 className={styles.headline}>AI may decide. You decide what becomes real.</h1>
+          <h1 className={styles.headline}>Only what your business authorizes should ever happen.</h1>
           <p className={styles.dek}>
-            All kinds of things try to act inside a business: an AI agent, a person, a connected app,
-            sometimes an attacker. Parmana checks every one of them against what your business has
-            actually authorized, before the action happens, and only lets the real ones through.
+            Parmana checks every action against what you've actually approved, before it happens, no
+            matter who or what is asking.
           </p>
           <div className={styles.actions}>
             <a className={styles.primary} href="#how-it-works">
-              See how it works
+              Explore Parmana
             </a>
             <a className={styles.secondary} href="mailto:founder@parmanasystems.com">
               Write to us
