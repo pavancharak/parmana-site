@@ -8,9 +8,10 @@ export function Company() {
         <FigureLabel n="07" title="Company" />
         <div className={styles.copy}>
           <p>
-            Parmana is built by people who've spent their careers inside the systems that move money
-            and control access at real companies. We kept watching businesses find out what went
-            wrong only after it had already happened, and decided that was backwards.
+            Parmana is built by people who've spent their careers building the products companies run
+            on, and watching what happens when access and authorization aren't designed carefully. We
+            kept watching businesses find out what went wrong only after it had already happened, and
+            decided that was backwards.
           </p>
           <p>
             We exist to build the checkpoint instead, infrastructure that keeps working no matter
