@@ -48,7 +48,7 @@ const ATTACK_CATEGORIES = [
     letter: "E",
     name: "Synthetic behaviour",
     count: "NEW",
-    copy: "Large-scale artificial activity designed to resemble legitimate customers and transactions.",
+    copy: "Artificial activity designed to resemble legitimate customers and transactions.",
   },
 ];
 
@@ -67,7 +67,7 @@ const RESULTS = [
   },
 ];
 
-const INCLUDED = [
+const SUBMISSIONS = [
   {
     num: "01",
     title: "Code repository",
@@ -78,12 +78,12 @@ const INCLUDED = [
   {
     num: "02",
     title: "Solution walkthrough",
-    copy: "A clear explanation of the attacks identified, how they are generated, how they are detected, and how the system could work in real payments.",
+    copy: "A Word document covering the attacks identified, how they are generated and simulated, the detection and mitigation approach, results, and real-world feasibility.",
   },
   {
     num: "03",
     title: "Working web prototype",
-    copy: "A live demonstration of the complete loop from discovering an attack to generating it and testing the defence.",
+    copy: "A live web prototype demonstrating the closed loop from identifying an attack to generating it and testing the defence.",
     href: "https://mastercard-ai-defense-lab.fly.dev/",
     label: "Open the working prototype →",
   },
@@ -92,15 +92,15 @@ const INCLUDED = [
 const DIFFERENTIATORS = [
   {
     title: "The attack becomes the test.",
-    copy: "Instead of building a detector against a fixed list of known fraud patterns, the system creates new attacks and uses them to test the defence.",
+    copy: "The system does not rely only on a fixed list of known fraud patterns. New attacks become tests for the defence.",
   },
   {
-    title: "The loop keeps improving.",
-    copy: "When the defence finds a gap, that gap becomes another attack to study and simulate.",
+    title: "The defence exposes the next weakness.",
+    copy: "When the defence misses something, that gap becomes another attack to study and simulate.",
   },
   {
     title: "Built for real payments.",
-    copy: "The goal is not simply to win on a dataset. The system should make sense in a real payment environment where false positives and missed fraud both matter.",
+    copy: "The goal is useful protection in live payment environments, where missed fraud and unnecessary declines both matter.",
   },
 ];
 
@@ -164,14 +164,14 @@ export function ChallengePage() {
         <section className={`${styles.section} ${styles.sectionDim}`}>
           <div className={styles.inner}>
             <p className={styles.lede}>
-              What we are looking for
+              Emerging attack areas
             </p>
 
             <div className={styles.copy}>
               <p>
-                The system should look beyond a small set of known fraud
-                examples. It should explore how AI can change the way
-                payment fraud is created, adapted, and scaled.
+                The system explores how AI can change the way payment fraud
+                is created, adapted, and scaled across different payment
+                surfaces.
               </p>
             </div>
 
@@ -212,15 +212,15 @@ export function ChallengePage() {
 
             <div className={styles.copy}>
               <p>
-                The important part is not any one model. It is the loop
-                between attack and defence.
+                The important part is the loop between attack and defence.
+                Each side continuously tests the other.
               </p>
             </div>
 
             <div className={styles.mandateBlock}>
               <GateSvg
                 titleId="challenge-gate-title"
-                title="An attack reaches the defence, which decides whether it should be allowed through."
+                title="An attack reaches the defence and is tested."
                 className={styles.mandateIcon}
                 tone="ink"
                 tokenX={120}
@@ -230,13 +230,13 @@ export function ChallengePage() {
 
               <div>
                 <h2 className={styles.categoryName}>
-                  Attack → Generate → Defend → Learn
+                  Identify → Generate → Defend
                 </h2>
 
                 <p className={styles.categoryCopy}>
-                  Every weakness found by the defence becomes a reason
-                  to create another test. The system is designed to
-                  keep challenging itself.
+                  New attacks are identified, realistic examples are
+                  generated, and the defence is tested against them.
+                  Weaknesses found by the defence feed the next round.
                 </p>
               </div>
             </div>
@@ -288,11 +288,18 @@ export function ChallengePage() {
         <section className={styles.section}>
           <div className={styles.inner}>
             <p className={styles.lede}>
-              What we are submitting
+              Submission
             </p>
 
+            <div className={styles.copy}>
+              <p>
+                The challenge requires three artifacts before the
+                submission deadline.
+              </p>
+            </div>
+
             <div className={styles.includedList}>
-              {INCLUDED.map((item) => (
+              {SUBMISSIONS.map((item) => (
                 <article
                   className={styles.includedItem}
                   key={item.num}
@@ -310,7 +317,7 @@ export function ChallengePage() {
                       {item.copy}
                     </p>
 
-                    {item.href && (
+                    {item.href ? (
                       <a
                         className={styles.includedLink}
                         href={item.href}
@@ -319,6 +326,10 @@ export function ChallengePage() {
                       >
                         {item.label}
                       </a>
+                    ) : (
+                      <span className={styles.includedLink}>
+                        .docx walkthrough
+                      </span>
                     )}
                   </div>
                 </article>
