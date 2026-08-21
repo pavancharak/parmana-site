@@ -64,6 +64,8 @@ const SUBMISSIONS = [
     num: "02",
     title: "Solution walkthrough",
     copy: "A Word document covering the attacks identified, how they are generated and simulated, the detection and mitigation approach, results, and real-world feasibility.",
+    href: "https://www.kaggle.com/competitions/mastercard-innovation-challenge-2026/writeups/infrastructure-integration-plan-independent-ai-au",
+    label: "Read the solution walkthrough on Kaggle →",
   },
   {
     num: "03",
@@ -332,20 +334,14 @@ export function ChallengePage() {
                       {item.copy}
                     </p>
 
-                    {item.href ? (
-                      <a
-                        className={styles.includedLink}
-                        href={item.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {item.label}
-                      </a>
-                    ) : (
-                      <span className={styles.includedLink}>
-                        .docx walkthrough
-                      </span>
-                    )}
+                    <a
+                      className={styles.includedLink}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {item.label}
+                    </a>
                   </div>
                 </article>
               ))}
