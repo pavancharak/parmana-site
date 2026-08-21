@@ -1,10 +1,9 @@
 import styles from "./Nav.module.css";
 
 const LINKS = [
-  { href: "#problem", label: "The problem" },
   { href: "#how-it-works", label: "How it works" },
-  { href: "#proof", label: "Proof" },
-  { href: "#who-its-for", label: "Systems of record" },
+  { href: "#proof", label: "See it in action" },
+  { href: "#who-its-for", label: "Where it matters" },
   { href: "#company", label: "Company" },
 ];
 
@@ -18,7 +17,11 @@ export function Nav() {
 
         <nav className={styles.links} aria-label="Section">
           {LINKS.map((link) => (
-            <a key={link.href} href={link.href} className={styles.link}>
+            <a
+              key={link.href}
+              href={link.href}
+              className={styles.link}
+            >
               {link.label}
             </a>
           ))}

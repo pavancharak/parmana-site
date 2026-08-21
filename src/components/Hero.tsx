@@ -11,13 +11,18 @@ type Phase = "start" | "approach" | "through";
 
 export function Hero() {
   const reducedMotion = usePrefersReducedMotion();
-  const [phase, setPhase] = useState<Phase>(reducedMotion ? "through" : "start");
+  const [phase, setPhase] = useState<Phase>(
+    reducedMotion ? "through" : "start"
+  );
 
   useEffect(() => {
     if (reducedMotion) return;
 
     const t1 = window.setTimeout(() => setPhase("approach"), 450);
-    const t2 = window.setTimeout(() => setPhase("through"), 450 + 1300);
+    const t2 = window.setTimeout(
+      () => setPhase("through"),
+      450 + 1300
+    );
 
     return () => {
       window.clearTimeout(t1);
@@ -26,10 +31,19 @@ export function Hero() {
   }, [reducedMotion]);
 
   const tokenX =
-    phase === "start" ? START_X : phase === "approach" ? GATE_X : END_X;
+    phase === "start"
+      ? START_X
+      : phase === "approach"
+        ? GATE_X
+        : END_X;
 
   const openAmount = phase === "through" ? 1 : 0;
-  const duration = reducedMotion ? 1 : phase === "approach" ? 1300 : 900;
+  const duration =
+    reducedMotion
+      ? 1
+      : phase === "approach"
+        ? 1300
+        : 900;
 
   return (
     <section className={styles.hero} id="top">
@@ -37,30 +51,31 @@ export function Hero() {
         <div>
           <div className={styles.topRow}>
             <span className={styles.eyebrow}>
-              Execution Authority Infrastructure
+              Control for AI actions
             </span>
             <span className={styles.badge}>Made in India</span>
           </div>
 
           <h1 className={styles.headline}>
-            Organizations lack deterministic control over AI agents acting on
-            systems of record.
+            AI can decide. Parmana controls what actually happens.
           </h1>
 
           <p className={styles.dek}>
-            Parmana provides that control. It deterministically authorizes or
-            blocks machine-generated actions before they become execution.
+            AI agents can act on your systems. Parmana checks every action
+            before it happens and allows only what your organization has
+            approved.
           </p>
 
           <div className={styles.actions}>
             <a className={styles.primary} href="#how-it-works">
-              See how Parmana works
+              See how it works
             </a>
+
             <a
               className={styles.secondary}
               href="mailto:founder@parmanasystems.com"
             >
-              Talk to us
+              Write to us
             </a>
           </div>
         </div>
@@ -69,7 +84,7 @@ export function Hero() {
           <div className={styles.gateWrap}>
             <GateSvg
               titleId="hero-gate-title"
-              title="A machine-generated action approaches an authorization boundary and continues only when authorized."
+              title="An action reaches Parmana and continues only when it is allowed."
               tone="ink"
               tokenX={tokenX}
               openAmount={openAmount}
@@ -78,7 +93,7 @@ export function Hero() {
           </div>
 
           <p className={styles.gateCaption}>
-            every machine-generated action reaches the same control point
+            every action is checked before it happens
           </p>
         </div>
       </div>

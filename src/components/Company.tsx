@@ -5,9 +5,21 @@ import mohinderPhoto from "../assets/mohinder.png";
 import abhignaPhoto from "../assets/abhigna.jpg";
 
 const TEAM = [
-  { photo: pavanPhoto, name: "Pavan Dev Singh Charak", role: "CEO & System Architect" },
-  { photo: mohinderPhoto, name: "Mohinder Singh Charak", role: "Co-founder & Policy Advisor" },
-  { photo: abhignaPhoto, name: "K Venkata Abhigna", role: "Head of Partnerships" },
+  {
+    photo: pavanPhoto,
+    name: "Pavan Dev Singh Charak",
+    role: "CEO & System Architect",
+  },
+  {
+    photo: mohinderPhoto,
+    name: "Mohinder Singh Charak",
+    role: "Co-founder & Policy Advisor",
+  },
+  {
+    photo: abhignaPhoto,
+    name: "K Venkata Abhigna",
+    role: "Head of Partnerships",
+  },
 ];
 
 export function Company() {
@@ -19,17 +31,15 @@ export function Company() {
         <div className={styles.grid}>
           <div className={styles.copy}>
             <p>
-              Parmana builds infrastructure for a world where AI agents can
-              act directly on behalf of organizations. Our focus is not on
-              making AI more capable, but on ensuring organizations retain
-              deterministic authority over what AI is allowed to execute.
+              Parmana exists for one simple reason: businesses need to
+              remain in control when machines can make decisions and act
+              on their behalf.
             </p>
 
             <p>
-              We built Parmana around a simple principle: the organization
-              should remain the final authority over execution. The AI may
-              generate the action, but Parmana provides the control point that
-              determines whether that action can become real.
+              We are building the control between an AI agent and the
+              systems that matter to your business. The agent can decide.
+              Your organization decides what it is allowed to actually do.
             </p>
           </div>
 
@@ -41,6 +51,7 @@ export function Company() {
                   src={member.photo}
                   alt={member.name}
                 />
+
                 <span className={styles.name}>{member.name}</span>
                 <span className={styles.role}>{member.role}</span>
               </div>

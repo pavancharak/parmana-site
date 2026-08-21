@@ -2,23 +2,22 @@ import styles from "./WhoItsFor.module.css";
 import { FigureLabel } from "./FigureLabel";
 
 const ITEMS = [
-  { num: "01", label: "Financial transactions" },
-  { num: "02", label: "Customer records" },
-  { num: "03", label: "Operational systems" },
-  { num: "04", label: "Enterprise APIs" },
+  { num: "01", label: "Moving money" },
+  { num: "02", label: "Changing a customer record" },
+  { num: "03", label: "Giving someone access" },
+  { num: "04", label: "Taking an action in the real world" },
 ];
 
 export function WhoItsFor() {
   return (
     <section className={styles.section} id="who-its-for">
       <div className={styles.inner}>
-        <FigureLabel n="06" title="Systems of record" />
+        <FigureLabel n="06" title="Where it matters" />
 
         <p className={styles.intro}>
-          Parmana is built for organizations where AI agents can make changes
-          to authoritative business systems and where unauthorized execution
-          can be costly, difficult to reverse, or subject to regulatory
-          accountability.
+          Parmana matters wherever an AI agent or automated system can
+          make a decision that changes something important for your
+          business.
         </p>
 
         <div className={styles.list}>
@@ -31,10 +30,9 @@ export function WhoItsFor() {
         </div>
 
         <p className={styles.note}>
-          Financial institutions, fintech companies, insurers, and large
-          enterprises are natural early customers as they increasingly deploy
-          AI agents across systems that hold authoritative customer,
-          financial, and operational data.
+          Banks, insurers, fintechs, and other businesses may be the
+          first to need this. But the need is broader: whenever a wrong
+          action is costly or difficult to undo, control matters.
         </p>
       </div>
     </section>

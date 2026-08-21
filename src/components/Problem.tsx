@@ -4,14 +4,13 @@ import { GateSvg } from "./GateSvg";
 
 const SOURCES = [
   "AI agent",
-  "AI-generated action",
-  "Agent workflow",
-  "Autonomous system",
-  "Machine decision",
+  "Employee",
+  "Connected app",
+  "Automated system",
 ];
 
-const ROW_Y = [28, 84, 140, 196, 252];
-const CONVERGE = { x: 100, y: 140 };
+const ROW_Y = [28, 84, 140, 196];
+const CONVERGE = { x: 100, y: 112 };
 
 export function Problem() {
   return (
@@ -22,16 +21,15 @@ export function Problem() {
         <div className={styles.grid}>
           <div className={styles.copy}>
             <p>
-              Organizations are giving AI agents the ability to make decisions
-              and execute actions on systems of record, but they lack a
-              deterministic control point over what those agents are allowed
-              to execute.
+              An AI agent can make a decision and act on your systems.
+              But the organization that owns those systems may have no
+              independent control over what the agent actually does.
             </p>
 
             <p>
-              The AI agent can generate the action. The organization needs to
-              retain authority over whether that action becomes real execution.
-              Parmana provides that control at the execution boundary.
+              The problem isn't whether the AI is good or bad. The problem
+              is what happens when a machine can turn a decision into a real
+              action without a final check from the organization.
             </p>
           </div>
 
@@ -46,7 +44,7 @@ export function Problem() {
 
             <svg
               className={styles.svg}
-              viewBox="0 0 100 280"
+              viewBox="0 0 100 224"
               preserveAspectRatio="none"
               role="presentation"
               aria-hidden="true"
@@ -67,7 +65,7 @@ export function Problem() {
             <div className={styles.gateBox}>
               <GateSvg
                 titleId="problem-gate-title"
-                title="A closed authorization boundary with machine-generated actions converging on it."
+                title="Different sources reach one control point before an action can happen."
                 className={styles.gateIcon}
                 tone="ink"
                 tokenX={20}

@@ -1,58 +1,69 @@
 import styles from "./ChallengePage.module.css";
+import { GateSvg } from "../components/GateSvg";
 
-const TAXONOMY = [
+const PILLARS = [
+  {
+    num: "01",
+    title: "Identify",
+    copy: "Find new ways AI could be used to commit payment fraud.",
+  },
+  {
+    num: "02",
+    title: "Generate",
+    copy: "Create realistic examples of those attacks at scale.",
+  },
+  {
+    num: "03",
+    title: "Defend",
+    copy: "Build a system that detects and stops them.",
+  },
+];
+
+const ATTACK_CATEGORIES = [
   {
     letter: "A",
-    name: "Identity & onboarding fraud",
-    count: "A1–A2",
-    copy: "GenAI-assisted identity creation, synthetic identities, and automated onboarding abuse designed to make fraudulent accounts look legitimate.",
+    name: "AI-generated fraud",
+    count: "NEW",
+    copy: "Fraud created or adapted by AI to look like normal payment activity.",
   },
   {
     letter: "B",
-    name: "Social engineering & authorization fraud",
-    count: "B1–B3",
-    copy: "Attacks that manipulate legitimate users or authorization flows, including cases where the transaction itself can look statistically normal.",
+    name: "Social engineering",
+    count: "NEW",
+    copy: "AI-assisted messages, calls, identities, and conversations designed to manipulate people.",
   },
   {
     letter: "C",
-    name: "Agentic commerce fraud",
-    count: "C1–C3",
-    copy: "AI agents acting at machine speed, including delegated mandate abuse where an action can be technically valid yet outside what was actually authorized.",
+    name: "Account abuse",
+    count: "NEW",
+    copy: "Attempts to use stolen, created, or manipulated identities to access payment accounts.",
   },
   {
     letter: "D",
-    name: "Automated machine-speed attacks",
-    count: "D1–D2",
-    copy: "High-volume, automated payment attacks that exploit speed, repetition, and scale beyond what manual controls can reliably handle.",
+    name: "Payment manipulation",
+    count: "NEW",
+    copy: "Attempts to change payment details, destinations, amounts, or transaction behaviour.",
   },
   {
     letter: "E",
-    name: "Post-transaction & loyalty fraud",
-    count: "E1–E2",
-    copy: "Abuse after payment, including fabricated dispute evidence and promotion or coupon manipulation.",
+    name: "Synthetic behaviour",
+    count: "NEW",
+    copy: "Large-scale artificial activity designed to resemble legitimate customers and transactions.",
   },
 ];
 
 const RESULTS = [
   {
-    metric: "Precision",
-    value: "0.944",
-    note: "Held-out test set.",
+    metric: "Attack diversity",
+    note: "How broadly the system can identify different AI-powered payment fraud scenarios.",
   },
   {
-    metric: "Recall",
-    value: "0.966",
-    note: "Held-out fraud detection recall.",
+    metric: "Attack realism",
+    note: "How closely generated examples resemble real payment behaviour.",
   },
   {
-    metric: "F1",
-    value: "0.955",
-    note: "Balanced precision/recall measure.",
-  },
-  {
-    metric: "ROC AUC",
-    value: "0.999",
-    note: "Held-out test set.",
+    metric: "Detection",
+    note: "How accurately the defence identifies generated attacks while limiting false positives.",
   },
 ];
 
@@ -60,42 +71,34 @@ const INCLUDED = [
   {
     num: "01",
     title: "Code repository",
-    copy: "Complete implementation covering Identify, Generate, Defend, the deterministic mandate layer, and the web prototype.",
+    copy: "A complete, runnable repository covering identify, generate, and defend.",
     href: "https://github.com/pavancharak/mastercard-ai-defense-lab",
     label: "View on GitHub",
   },
   {
     num: "02",
-    title: "Working prototype",
-    copy: "A live web application that brings the taxonomy, generated data, trained model, case browser, dashboard, and mandate demonstration together.",
-    href: "https://mastercard-ai-defense-lab.fly.dev/",
-    label: "Open live prototype",
+    title: "Solution walkthrough",
+    copy: "A clear explanation of the attacks identified, how they are generated, how they are detected, and how the system could work in real payments.",
   },
   {
     num: "03",
-    title: "Solution walkthrough",
-    copy: "The complete approach, evidence, model results, architectural distinction, and real-world feasibility are documented in the repository.",
-    href: "https://github.com/pavancharak/mastercard-ai-defense-lab",
-    label: "Read the submission",
+    title: "Working web prototype",
+    copy: "A live demonstration of the complete loop from discovering an attack to generating it and testing the defence.",
   },
 ];
 
 const DIFFERENTIATORS = [
   {
-    title: "Detection is not authorization.",
-    copy: "A fraud classifier estimates whether a transaction resembles known fraud. It does not know what a customer, institution, or delegated agent was actually authorized to do.",
+    title: "The attack becomes the test.",
+    copy: "Instead of building a detector against a fixed list of known fraud patterns, the system creates new attacks and uses them to test the defence.",
   },
   {
-    title: "The mandate layer is structurally different.",
-    copy: "For delegated mandate abuse, the system independently compares the proposed action with the authoritative mandate. No training data, probability threshold, or model confidence is required.",
+    title: "The loop keeps improving.",
+    copy: "When the defence finds a gap, that gap becomes another attack to study and simulate.",
   },
   {
-    title: "The failure is demonstrated, not hypothetical.",
-    copy: "Four live mandate-violation scenarios were refused even though the trained fraud classifier independently scored the same proposed transactions as low risk.",
-  },
-  {
-    title: "The two systems complement each other.",
-    copy: "AI detection handles statistical patterns across emerging fraud. Deterministic authorization handles what must never happen because it was never authorized.",
+    title: "Built for real payments.",
+    copy: "The goal is not simply to win on a dataset. The system should make sense in a real payment environment where false positives and missed fraud both matter.",
   },
 ];
 
@@ -107,8 +110,9 @@ export function ChallengePage() {
           <a href="/" className={styles.wordmarkLink}>
             <span className={styles.wordmark}>Parmana</span>
           </a>
+
           <span className={styles.headerLabel}>
-            Mastercard Innovation Challenge · AI Defense Lab
+            Mastercard AI Defense Lab
           </span>
         </div>
       </header>
@@ -116,121 +120,42 @@ export function ChallengePage() {
       <main>
         <section className={styles.section}>
           <div className={styles.inner}>
-            <p className={styles.headerLabel}>Mastercard Innovation Challenge 2026</p>
-
-            <h1>Build the attack. Build the defense.</h1>
-
             <p className={styles.lede}>
-              An end-to-end AI defense system for GenAI-era payment fraud:
-              identify emerging attacks, generate realistic simulations, detect
-              them with machine learning, and independently verify whether the
-              proposed action is actually authorized.
+              Building the attack and the defence together.
             </p>
 
             <div className={styles.copy}>
               <p>
-                Generative AI makes payment fraud faster, cheaper, more adaptive,
-                and harder to detect. Static rules and transaction-level
-                classifiers remain necessary, but they do not answer every
-                security question.
+                AI is making payment fraud faster, cheaper, and harder
+                to spot. This challenge asks us to look at both sides:
+                how new attacks could work, and how we can build a
+                defence that catches them.
               </p>
+
               <p>
-                Our approach treats payment defense as a closed loop:
-                <strong> Identify → Generate → Defend → Authorize.</strong>
+                Our approach is a closed loop: identify new attacks,
+                generate realistic examples, test the defence, and use
+                what the defence misses to find the next attack.
               </p>
             </div>
-          </div>
-        </section>
-
-        <section className={`${styles.section} ${styles.sectionDim}`}>
-          <div className={styles.inner}>
-            <p className={styles.headerLabel}>01 · Closed-loop defense</p>
 
             <div className={styles.pillars}>
-              <article className={styles.pillar}>
-                <div className={styles.pillarIcon} aria-hidden="true">
-                  <svg viewBox="0 0 120 80" role="presentation">
-                    <line x1="10" y1="40" x2="45" y2="40" stroke="currentColor" strokeWidth="1.5" />
-                    <circle cx="60" cy="40" r="15" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                    <line x1="75" y1="40" x2="110" y2="40" stroke="currentColor" strokeWidth="1.5" />
-                  </svg>
-                </div>
-                <h2 className={styles.pillarName}>Identify</h2>
-                <p className={styles.pillarCopy}>
-                  Map emerging GenAI-powered payment fraud across channels,
-                  rails, social engineering surfaces, and agentic workflows.
-                </p>
-              </article>
+              {PILLARS.map((pillar) => (
+                <article
+                  className={styles.pillar}
+                  key={pillar.num}
+                >
+                  <span className={styles.pillarIcon}>
+                    {pillar.num}
+                  </span>
 
-              <article className={styles.pillar}>
-                <div className={styles.pillarIcon} aria-hidden="true">
-                  <svg viewBox="0 0 120 80" role="presentation">
-                    <path
-                      d="M10 40 C30 10, 45 70, 65 40 S95 10, 110 40"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    />
-                  </svg>
-                </div>
-                <h2 className={styles.pillarName}>Generate</h2>
-                <p className={styles.pillarCopy}>
-                  Turn the taxonomy into realistic synthetic attacks and
-                  transactions that can stress-test a defense at scale.
-                </p>
-              </article>
+                  <h2 className={styles.pillarName}>
+                    {pillar.title}
+                  </h2>
 
-              <article className={styles.pillar}>
-                <div className={styles.pillarIcon} aria-hidden="true">
-                  <svg viewBox="0 0 120 80" role="presentation">
-                    <rect
-                      x="25"
-                      y="15"
-                      width="70"
-                      height="50"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    />
-                    <path
-                      d="M38 40 L52 52 L82 27"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    />
-                  </svg>
-                </div>
-                <h2 className={styles.pillarName}>Defend</h2>
-                <p className={styles.pillarCopy}>
-                  Train and evaluate a fraud classifier, then add deterministic
-                  authorization where statistical detection cannot establish
-                  what was actually permitted.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.section}>
-          <div className={styles.inner}>
-            <p className={styles.headerLabel}>02 · Identify</p>
-
-            <h2>Attack taxonomy</h2>
-
-            <p className={styles.lede}>
-              Twelve attack vectors across five categories form the shared
-              specification for the rest of the system.
-            </p>
-
-            <div className={styles.categoryGrid}>
-              {TAXONOMY.map((category) => (
-                <article className={styles.category} key={category.letter}>
-                  <div className={styles.categoryHead}>
-                    <span className={styles.categoryLetter}>{category.letter}</span>
-                    <span className={styles.categoryCount}>{category.count}</span>
-                  </div>
-                  <h3 className={styles.categoryName}>{category.name}</h3>
-                  <p className={styles.categoryCopy}>{category.copy}</p>
+                  <p className={styles.pillarCopy}>
+                    {pillar.copy}
+                  </p>
                 </article>
               ))}
             </div>
@@ -239,113 +164,80 @@ export function ChallengePage() {
 
         <section className={`${styles.section} ${styles.sectionDim}`}>
           <div className={styles.inner}>
-            <p className={styles.headerLabel}>03 · Defend</p>
-
-            <h2>Detection performance</h2>
-
-            <div className={styles.stats}>
-              {RESULTS.map((result) => (
-                <div className={styles.stat} key={result.metric}>
-                  <span className={styles.statLabel}>{result.metric}</span>
-                  <span className={styles.statValue}>{result.value}</span>
-                </div>
-              ))}
-            </div>
+            <p className={styles.lede}>
+              What we are looking for
+            </p>
 
             <div className={styles.copy}>
               <p>
-                The classifier is an XGBoost binary fraud detector trained only
-                on generated data and evaluated on a held-out test set.
-              </p>
-              <p>
-                The evaluation is intentionally broken down by category and
-                vector so aggregate performance cannot hide weak spots.
+                The system should look beyond a small set of known fraud
+                examples. It should explore how AI can change the way
+                payment fraud is created, adapted, and scaled.
               </p>
             </div>
 
-            <div className={styles.resultRows}>
-              <div className={styles.resultRow}>
-                <span className={styles.resultMetric}>Category A</span>
-                <span className={styles.resultNote}>
-                  Identity and onboarding — 1.000 recall.
-                </span>
-              </div>
-              <div className={styles.resultRow}>
-                <span className={styles.resultMetric}>Category B</span>
-                <span className={styles.resultNote}>
-                  Social engineering and authorization — 0.891 recall; the
-                  hardest category by design.
-                </span>
-              </div>
-              <div className={styles.resultRow}>
-                <span className={styles.resultMetric}>Category C</span>
-                <span className={styles.resultNote}>
-                  Agentic commerce — 1.000 recall on the held-out classifier
-                  evaluation.
-                </span>
-              </div>
-              <div className={styles.resultRow}>
-                <span className={styles.resultMetric}>Category D</span>
-                <span className={styles.resultNote}>
-                  Automated machine speed — 1.000 recall.
-                </span>
-              </div>
+            <div className={styles.categoryGrid}>
+              {ATTACK_CATEGORIES.map((category) => (
+                <article
+                  className={styles.category}
+                  key={category.letter}
+                >
+                  <div className={styles.categoryHead}>
+                    <span className={styles.categoryLetter}>
+                      {category.letter}
+                    </span>
+
+                    <span className={styles.categoryCount}>
+                      {category.count}
+                    </span>
+                  </div>
+
+                  <h3 className={styles.categoryName}>
+                    {category.name}
+                  </h3>
+
+                  <p className={styles.categoryCopy}>
+                    {category.copy}
+                  </p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
 
         <section className={styles.section}>
           <div className={styles.inner}>
-            <p className={styles.headerLabel}>04 · The critical distinction</p>
-
-            <h2>When detection is not enough</h2>
+            <p className={styles.lede}>
+              The closed loop
+            </p>
 
             <div className={styles.copy}>
               <p>
-                A payment can look statistically legitimate and still violate
-                the authority under which an agent is operating.
-              </p>
-              <p>
-                That is the problem demonstrated by category C3: delegated
-                mandate scope abuse.
+                The important part is not any one model. It is the loop
+                between attack and defence.
               </p>
             </div>
 
             <div className={styles.mandateBlock}>
-              <div className={styles.mandateIcon} aria-hidden="true">
-                <svg viewBox="0 0 120 120" role="presentation">
-                  <rect
-                    x="25"
-                    y="20"
-                    width="70"
-                    height="80"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  />
-                  <line x1="40" y1="42" x2="80" y2="42" stroke="currentColor" strokeWidth="1.5" />
-                  <line x1="40" y1="58" x2="80" y2="58" stroke="currentColor" strokeWidth="1.5" />
-                  <line x1="40" y1="74" x2="65" y2="74" stroke="currentColor" strokeWidth="1.5" />
-                  <path
-                    d="M72 82 L80 90 L94 72"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  />
-                </svg>
-              </div>
+              <GateSvg
+                titleId="challenge-gate-title"
+                title="An attack reaches the defence, which decides whether it should be allowed through."
+                className={styles.mandateIcon}
+                tone="ink"
+                tokenX={120}
+                openAmount={0}
+                showToken
+              />
 
-              <div className={styles.copy}>
-                <h3>Independent mandate authorization</h3>
-                <p>
-                  The proposed transaction is checked against the authoritative
-                  mandate itself, rather than asking the classifier whether the
-                  transaction resembles fraud.
-                </p>
-                <p>
-                  In the live demonstration, four mandate violations were
-                  refused even though the trained classifier independently
-                  scored those proposed transactions as low risk.
+              <div>
+                <h2 className={styles.categoryName}>
+                  Attack → Generate → Defend → Learn
+                </h2>
+
+                <p className={styles.categoryCopy}>
+                  Every weakness found by the defence becomes a reason
+                  to create another test. The system is designed to
+                  keep challenging itself.
                 </p>
               </div>
             </div>
@@ -354,27 +246,41 @@ export function ChallengePage() {
 
         <section className={`${styles.section} ${styles.sectionDim}`}>
           <div className={styles.inner}>
-            <p className={styles.headerLabel}>05 · Submission</p>
+            <p className={styles.lede}>
+              What success looks like
+            </p>
 
-            <h2>What is included</h2>
+            <div className={styles.stats}>
+              <div className={styles.stat}>
+                <span className={styles.statLabel}>Identify</span>
+                <span className={styles.statValue}>Broad</span>
+              </div>
 
-            <div className={styles.includedList}>
-              {INCLUDED.map((item) => (
-                <article className={styles.includedItem} key={item.num}>
-                  <span className={styles.includedNum}>{item.num}</span>
-                  <div>
-                    <h3 className={styles.includedTitle}>{item.title}</h3>
-                    <p className={styles.includedCopy}>{item.copy}</p>
-                    <a
-                      className={styles.includedLink}
-                      href={item.href}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {item.label} →
-                    </a>
-                  </div>
-                </article>
+              <div className={styles.stat}>
+                <span className={styles.statLabel}>Generate</span>
+                <span className={styles.statValue}>Realistic</span>
+              </div>
+
+              <div className={styles.stat}>
+                <span className={styles.statLabel}>Defend</span>
+                <span className={styles.statValue}>Accurate</span>
+              </div>
+            </div>
+
+            <div className={styles.resultRows}>
+              {RESULTS.map((result) => (
+                <div
+                  className={styles.resultRow}
+                  key={result.metric}
+                >
+                  <span className={styles.resultMetric}>
+                    {result.metric}
+                  </span>
+
+                  <span className={styles.resultNote}>
+                    {result.note}
+                  </span>
+                </div>
               ))}
             </div>
           </div>
@@ -382,15 +288,40 @@ export function ChallengePage() {
 
         <section className={styles.section}>
           <div className={styles.inner}>
-            <p className={styles.headerLabel}>06 · Why this is different</p>
+            <p className={styles.lede}>
+              What we are submitting
+            </p>
 
-            <h2>Two different questions require two different checks.</h2>
+            <div className={styles.includedList}>
+              {INCLUDED.map((item) => (
+                <article
+                  className={styles.includedItem}
+                  key={item.num}
+                >
+                  <span className={styles.includedNum}>
+                    {item.num}
+                  </span>
 
-            <div className={styles.differentiators}>
-              {DIFFERENTIATORS.map((item) => (
-                <article className={styles.differentiator} key={item.title}>
-                  <h3 className={styles.differentiatorTitle}>{item.title}</h3>
-                  <p className={styles.copy}>{item.copy}</p>
+                  <div>
+                    <h3 className={styles.includedTitle}>
+                      {item.title}
+                    </h3>
+
+                    <p className={styles.includedCopy}>
+                      {item.copy}
+                    </p>
+
+                    {item.href && (
+                      <a
+                        className={styles.includedLink}
+                        href={item.href}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {item.label}
+                      </a>
+                    )}
+                  </div>
                 </article>
               ))}
             </div>
@@ -399,32 +330,26 @@ export function ChallengePage() {
 
         <section className={`${styles.section} ${styles.sectionDim}`}>
           <div className={styles.inner}>
-            <p className={styles.headerLabel}>07 · Live evidence</p>
-
-            <h2>See the system run.</h2>
-
             <p className={styles.lede}>
-              The prototype is deployed and exposes the actual taxonomy,
-              generated dataset, trained model, dashboard, case browser, and
-              mandate demonstration.
+              Why this approach
             </p>
 
-            <div className={styles.copy}>
-              <p>
-                The strongest demonstration is the mandate flow: a real
-                proposed purchase is scored by the trained fraud model and then
-                independently evaluated against the authorized mandate.
-              </p>
-            </div>
+            <div className={styles.differentiators}>
+              {DIFFERENTIATORS.map((item) => (
+                <article
+                  className={styles.differentiator}
+                  key={item.title}
+                >
+                  <h2 className={styles.differentiatorTitle}>
+                    {item.title}
+                  </h2>
 
-            <a
-              className={styles.includedLink}
-              href="https://mastercard-ai-defense-lab.fly.dev/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open the live AI Defense Lab →
-            </a>
+                  <p className={styles.copy}>
+                    {item.copy}
+                  </p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
       </main>
@@ -432,10 +357,10 @@ export function ChallengePage() {
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
           <div className={styles.footerWordmark}>Parmana</div>
+
           <p className={styles.footerNote}>
-            Mastercard Innovation Challenge 2026 · AI Defense Lab for Payment
-            Security. Detection, generation, and independent authorization for
-            GenAI-era payment systems.
+            Mastercard Innovation Challenge 2026 · AI Defense Lab
+            for Payment Security
           </p>
         </div>
       </footer>
