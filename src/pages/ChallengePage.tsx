@@ -84,6 +84,8 @@ const INCLUDED = [
     num: "03",
     title: "Working web prototype",
     copy: "A live demonstration of the complete loop from discovering an attack to generating it and testing the defence.",
+    href: "https://mastercard-ai-defense-lab.fly.dev/mandate-demo",
+    label: "Open live prototype",
   },
 ];
 
