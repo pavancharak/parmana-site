@@ -76,29 +76,6 @@ const SUBMISSIONS = [
   },
 ];
 
-const EVALUATION = [
-  {
-    metric: "Attack diversity",
-    note: "The range of emerging payment fraud attacks identified.",
-  },
-  {
-    metric: "Attack fidelity",
-    note: "How closely simulated attacks resemble realistic payment fraud.",
-  },
-  {
-    metric: "Detection efficacy",
-    note: "How effectively the defence detects the generated attacks.",
-  },
-  {
-    metric: "Novelty",
-    note: "What is new and distinctive about the overall solution.",
-  },
-  {
-    metric: "Real-world feasibility",
-    note: "Whether the approach can work in live payment environments.",
-  },
-];
-
 const DIFFERENTIATORS = [
   {
     title: "The attack becomes the test.",
@@ -247,55 +224,6 @@ export function ChallengePage() {
                   New attacks are identified, realistic examples are
                   generated, and the defence is tested against them.
                   Weaknesses found by the defence feed the next round.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className={`${styles.section} ${styles.sectionDim}`}>
-          <div className={styles.inner}>
-            <p className={styles.lede}>
-              Evaluation
-            </p>
-
-            <div className={styles.copy}>
-              <p>
-                The solution is evaluated on five things: how many different
-                attacks it can identify, how realistic those attacks are,
-                how well the defence detects them, how novel the overall
-                approach is, and whether it can work in real payment
-                environments.
-              </p>
-            </div>
-
-            <div className={styles.resultRows}>
-              {EVALUATION.map((item) => (
-                <div
-                  className={styles.resultRow}
-                  key={item.metric}
-                >
-                  <span className={styles.resultMetric}>
-                    {item.metric}
-                  </span>
-
-                  <span className={styles.resultNote}>
-                    {item.note}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            <div className={styles.mandateBlock}>
-              <div>
-                <h2 className={styles.categoryName}>
-                  Submission deadline
-                </h2>
-
-                <p className={styles.categoryCopy}>
-                  Final submission must be made before 31 August 2026.
-                  Shortlisted teams will present at Global Fintech Fest
-                  in Mumbai from 8–11 September 2026.
                 </p>
               </div>
             </div>
