@@ -64,14 +64,14 @@ const SUBMISSIONS = [
     num: "02",
     title: "Solution walkthrough",
     copy: "A Word document covering the attacks identified, how they are generated and simulated, the detection and mitigation approach, results, and real-world feasibility.",
-    href: "https://www.kaggle.com/competitions/mastercard-innovation-challenge-2026/writeups/infrastructure-integration-plan-independent-ai-au",
+    href: "https://www.kaggle.com/competitions/mastercard-innovation-challenge-2026/writeups/ai-defense-lab-closed-loop-payment-fraud-defense",
     label: "Read the solution walkthrough on Kaggle →",
   },
   {
     num: "03",
     title: "Working web prototype",
     copy: "A live web prototype demonstrating the closed loop from identifying an attack to generating it and testing the defence.",
-    href: "https://mastercard-ai-defense-lab.fly.dev/",
+    href: "https://www.parmanasystems.com/mastercard-challenge",
     label: "Open the working prototype →",
   },
 ];
