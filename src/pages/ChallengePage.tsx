@@ -52,21 +52,6 @@ const ATTACK_CATEGORIES = [
   },
 ];
 
-const RESULTS = [
-  {
-    metric: "Attack diversity",
-    note: "How broadly the system can identify different AI-powered payment fraud scenarios.",
-  },
-  {
-    metric: "Attack realism",
-    note: "How closely generated examples resemble real payment behaviour.",
-  },
-  {
-    metric: "Detection",
-    note: "How accurately the defence identifies generated attacks while limiting false positives.",
-  },
-];
-
 const SUBMISSIONS = [
   {
     num: "01",
@@ -86,6 +71,29 @@ const SUBMISSIONS = [
     copy: "A live web prototype demonstrating the closed loop from identifying an attack to generating it and testing the defence.",
     href: "https://mastercard-ai-defense-lab.fly.dev/",
     label: "Open the working prototype →",
+  },
+];
+
+const EVALUATION = [
+  {
+    metric: "Attack diversity",
+    note: "The range of emerging payment fraud attacks identified.",
+  },
+  {
+    metric: "Attack fidelity",
+    note: "How closely simulated attacks resemble realistic payment fraud.",
+  },
+  {
+    metric: "Detection efficacy",
+    note: "How effectively the defence detects the generated attacks.",
+  },
+  {
+    metric: "Novelty",
+    note: "What is new and distinctive about the overall solution.",
+  },
+  {
+    metric: "Real-world feasibility",
+    note: "Whether the approach can work in live payment environments.",
   },
 ];
 
@@ -246,41 +254,48 @@ export function ChallengePage() {
         <section className={`${styles.section} ${styles.sectionDim}`}>
           <div className={styles.inner}>
             <p className={styles.lede}>
-              What success looks like
+              Evaluation
             </p>
 
-            <div className={styles.stats}>
-              <div className={styles.stat}>
-                <span className={styles.statLabel}>Identify</span>
-                <span className={styles.statValue}>Broad</span>
-              </div>
-
-              <div className={styles.stat}>
-                <span className={styles.statLabel}>Generate</span>
-                <span className={styles.statValue}>Realistic</span>
-              </div>
-
-              <div className={styles.stat}>
-                <span className={styles.statLabel}>Defend</span>
-                <span className={styles.statValue}>Accurate</span>
-              </div>
+            <div className={styles.copy}>
+              <p>
+                The solution is evaluated on five things: how many different
+                attacks it can identify, how realistic those attacks are,
+                how well the defence detects them, how novel the overall
+                approach is, and whether it can work in real payment
+                environments.
+              </p>
             </div>
 
             <div className={styles.resultRows}>
-              {RESULTS.map((result) => (
+              {EVALUATION.map((item) => (
                 <div
                   className={styles.resultRow}
-                  key={result.metric}
+                  key={item.metric}
                 >
                   <span className={styles.resultMetric}>
-                    {result.metric}
+                    {item.metric}
                   </span>
 
                   <span className={styles.resultNote}>
-                    {result.note}
+                    {item.note}
                   </span>
                 </div>
               ))}
+            </div>
+
+            <div className={styles.mandateBlock}>
+              <div>
+                <h2 className={styles.categoryName}>
+                  Submission deadline
+                </h2>
+
+                <p className={styles.categoryCopy}>
+                  Final submission must be made before 31 August 2026.
+                  Shortlisted teams will present at Global Fintech Fest
+                  in Mumbai from 8–11 September 2026.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -293,8 +308,8 @@ export function ChallengePage() {
 
             <div className={styles.copy}>
               <p>
-                The challenge requires three artifacts before the
-                submission deadline.
+                The challenge requires three artifacts submitted through
+                the Writeups section before the deadline.
               </p>
             </div>
 
