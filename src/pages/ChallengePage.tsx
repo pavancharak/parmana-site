@@ -71,7 +71,7 @@ const SUBMISSIONS = [
     num: "03",
     title: "Working web prototype",
     copy: "A live web prototype demonstrating the closed loop from identifying an attack to generating it and testing the defence.",
-    href: "https://www.parmanasystems.com/mastercard-challenge",
+    href: "https://mastercard-ai-defense-lab.fly.dev/mandate-demo",
     label: "Open the working prototype →",
   },
 ];
