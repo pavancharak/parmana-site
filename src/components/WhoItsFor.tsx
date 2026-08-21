@@ -30,9 +30,9 @@ export function WhoItsFor() {
         </div>
 
         <p className={styles.note}>
-          Banks, insurers, fintechs, and other businesses may be the
-          first to need this. But the need is broader: whenever a wrong
-          action is costly or difficult to undo, control matters.
+          The need is universal: whenever a machine can take a consequential
+          action, the organization should be able to determine what it is
+          allowed to execute and prevent everything else.
         </p>
       </div>
     </section>

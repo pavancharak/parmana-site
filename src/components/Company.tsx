@@ -31,15 +31,14 @@ export function Company() {
         <div className={styles.grid}>
           <div className={styles.copy}>
             <p>
-              Parmana exists for one simple reason: businesses need to
-              remain in control when machines can make decisions and act
-              on their behalf.
+              Parmana is building the infrastructure that keeps human
+              authority in control as machines gain the ability to act.
             </p>
 
             <p>
-              We are building the control between an AI agent and the
-              systems that matter to your business. The agent can decide.
-              Your organization decides what it is allowed to actually do.
+              AI can decide what it wants to do. Parmana sits at the
+              execution boundary and makes sure only actions the
+              organization has authorized can actually happen.
             </p>
           </div>
 

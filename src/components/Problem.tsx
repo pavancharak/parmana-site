@@ -21,15 +21,16 @@ export function Problem() {
         <div className={styles.grid}>
           <div className={styles.copy}>
             <p>
-              An AI agent can make a decision and act on your systems.
-              But the organization that owns those systems may have no
-              independent control over what the agent actually does.
+              AI systems can make decisions and act on systems of record at
+              machine speed. But the institution that owns those systems still
+              needs deterministic control over what the machine is allowed to
+              execute.
             </p>
 
             <p>
-              The problem isn't whether the AI is good or bad. The problem
-              is what happens when a machine can turn a decision into a real
-              action without a final check from the organization.
+              The problem isn't whether the AI is good or bad. A machine can
+              follow its instructions exactly and still produce an action the
+              institution never intended to authorize.
             </p>
           </div>
 
@@ -65,7 +66,7 @@ export function Problem() {
             <div className={styles.gateBox}>
               <GateSvg
                 titleId="problem-gate-title"
-                title="Different sources reach one control point before an action can happen."
+                title="Different sources converge at the execution authority boundary."
                 className={styles.gateIcon}
                 tone="ink"
                 tokenX={20}

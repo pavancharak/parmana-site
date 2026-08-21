@@ -2,7 +2,7 @@ import styles from "./Nav.module.css";
 
 const LINKS = [
   { href: "#how-it-works", label: "How it works" },
-  { href: "#proof", label: "See it in action" },
+  { href: "#proof", label: "Execution authority" },
   { href: "#who-its-for", label: "Where it matters" },
   { href: "#company", label: "Company" },
 ];

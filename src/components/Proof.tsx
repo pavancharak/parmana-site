@@ -116,18 +116,18 @@ export function Proof() {
   return (
     <section className={styles.section} id="proof">
       <div className={styles.inner}>
-        <FigureLabel n="05" title="See it in action" />
+        <FigureLabel n="05" title="Execution authority" />
 
         <div className={styles.grid}>
           <div className={styles.copy}>
             <p>
-              Parmana checks an action before it reaches the system.
-              It either allows the action or stops it.
+              Parmana deterministically authorizes or rejects an action
+              before it reaches the system of record.
             </p>
 
             <p>
-              Try a few examples below. The point is simple: the
-              organization stays in control of what actually happens.
+              The machine can propose the action. The institution
+              determines whether it is allowed to execute.
             </p>
           </div>
 
@@ -161,7 +161,7 @@ export function Proof() {
             <div className={styles.gateStage}>
               <GateSvg
                 titleId="proof-gate-title"
-                title="Parmana checks the selected action and either allows or stops it."
+                title="Parmana authorizes the selected action or rejects it before execution."
                 tone={tone}
                 tokenX={tokenX}
                 openAmount={openAmount}
@@ -177,21 +177,21 @@ export function Proof() {
             >
               {phase === "resolved" && outcome === "go" && (
                 <span className={styles.resultGo}>
-                  ALLOWED — the action can happen.
+                  AUTHORIZED — execution can proceed.
                 </span>
               )}
 
               {phase === "resolved" && outcome === "stop" && (
                 <span className={styles.resultStop}>
-                  BLOCKED — the action cannot happen.
+                  REJECTED — execution cannot proceed.
                 </span>
               )}
 
               {phase !== "resolved" && (
                 <span className={styles.resultIdle}>
                   {activeId
-                    ? "Checking…"
-                    : "Choose an action to check it."}
+                    ? "Determining authorization…"
+                    : "Choose an action to test authorization."}
                 </span>
               )}
             </div>

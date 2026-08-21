@@ -5,15 +5,15 @@ export function LogContrast() {
   return (
     <section className={styles.section} id="why-a-log-isnt-enough">
       <div className={styles.inner}>
-        <FigureLabel n="04" title="Why checking afterward isn't enough" />
+        <FigureLabel n="04" title="Why evidence alone isn't enough" />
 
         <div className={styles.grid}>
           <div className={styles.block}>
             <span className={styles.label}>After it happens</span>
 
             <p className={styles.statement}>
-              A log can tell you what an AI agent did. It cannot stop an
-              action that should never have happened.
+              A log can tell you what an AI agent did. It cannot give the
+              institution control over an action that has already happened.
             </p>
           </div>
 
@@ -23,8 +23,8 @@ export function LogContrast() {
             <span className={styles.label}>Before it happens</span>
 
             <p className={styles.statement}>
-              Parmana checks the action first. If your organization hasn't
-              allowed it, the action stops.
+              Parmana determines whether the action is authorized before
+              execution. If it isn't allowed, the action cannot proceed.
             </p>
           </div>
         </div>

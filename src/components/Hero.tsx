@@ -38,6 +38,7 @@ export function Hero() {
         : END_X;
 
   const openAmount = phase === "through" ? 1 : 0;
+
   const duration =
     reducedMotion
       ? 1
@@ -51,23 +52,30 @@ export function Hero() {
         <div>
           <div className={styles.topRow}>
             <span className={styles.eyebrow}>
-              Control for AI actions
+              Execution authority for AI
             </span>
-            <span className={styles.badge}>Made in India</span>
+
+            <span className={styles.badge}>
+              Made in India
+            </span>
           </div>
 
           <h1 className={styles.headline}>
-            AI can decide. Parmana controls what actually happens.
+            Can your institution control what AI is allowed to execute?
           </h1>
 
           <p className={styles.dek}>
-            AI agents can act on your systems. Parmana checks every action
-            before it happens and allows only what your organization has
-            approved.
+            AI can propose and decide at machine speed. Parmana
+            deterministically authorizes or rejects execution so only
+            actions your organization permits can reach your systems
+            of record.
           </p>
 
           <div className={styles.actions}>
-            <a className={styles.primary} href="#how-it-works">
+            <a
+              className={styles.primary}
+              href="#how-it-works"
+            >
               See how it works
             </a>
 
@@ -93,7 +101,7 @@ export function Hero() {
           </div>
 
           <p className={styles.gateCaption}>
-            every action is checked before it happens
+            only authorized actions reach execution
           </p>
         </div>
       </div>

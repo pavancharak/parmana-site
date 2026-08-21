@@ -1,0 +1,141 @@
+.section {
+  padding: 112px 0;
+  border-top: 1px solid var(--line);
+}
+
+.inner {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.intro {
+  max-width: 760px;
+  margin-top: 48px;
+}
+
+.headline {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+}
+
+.subhead {
+  margin: 24px 0 0;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.flow {
+  margin-top: 72px;
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.sources {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.source {
+  padding: 12px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.arrow {
+  margin: 22px 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--muted);
+}
+
+.decision {
+  width: min(560px, 100%);
+  margin: 0 auto;
+  padding: 32px;
+  text-align: center;
+  border: 1px solid var(--ink);
+}
+
+.decisionLabel {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.decision strong {
+  display: block;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.decisionText {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.outcomes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: min(560px, 100%);
+  margin: 0 auto;
+}
+
+.allow,
+.reject {
+  padding: 22px;
+  border: 1px solid var(--line);
+}
+
+.allow span,
+.reject span {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+.allow small,
+.reject small {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.footer {
+  max-width: 760px;
+  margin: 48px 0 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 80px 0;
+  }
+
+  .inner {
+    width: min(100% - 32px, 1120px);
+  }
+
+  .flow {
+    margin-top: 48px;
+  }
+
+  .outcomes {
+    grid-template-columns: 1fr;
+  }
+}

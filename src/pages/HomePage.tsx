@@ -3,6 +3,7 @@ import { Hero } from "../components/Hero";
 import { Problem } from "../components/Problem";
 import { Mechanism } from "../components/Mechanism";
 import { LogContrast } from "../components/LogContrast";
+import { AIIndependence } from "../components/AIIndependence";
 import { Proof } from "../components/Proof";
 import { WhoItsFor } from "../components/WhoItsFor";
 import { Company } from "../components/Company";
@@ -19,6 +20,7 @@ export function HomePage() {
         <Problem />
         <Mechanism />
         <LogContrast />
+        <AIIndependence />
         <Proof />
         <WhoItsFor />
         <Company />

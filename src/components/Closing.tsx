@@ -5,7 +5,7 @@ export function Closing() {
     <section className={styles.section} id="closing">
       <div className={styles.inner}>
         <h2 className={styles.tagline}>
-          AI can decide. You decide what happens.
+          AI can decide. Your institution decides what it is allowed to execute.
         </h2>
 
         <a
@@ -17,7 +17,7 @@ export function Closing() {
 
         <p className={styles.support}>
           Tell us what your AI can do today. We'll show you where
-          Parmana can put control around it.
+          deterministic execution authority belongs.
         </p>
       </div>
     </section>
