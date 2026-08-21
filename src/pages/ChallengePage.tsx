@@ -73,7 +73,7 @@ const INCLUDED = [
     title: "Code repository",
     copy: "A complete, runnable repository covering identify, generate, and defend.",
     href: "https://github.com/pavancharak/mastercard-ai-defense-lab",
-    label: "View on GitHub",
+    label: "View the code repository →",
   },
   {
     num: "02",
@@ -84,8 +84,8 @@ const INCLUDED = [
     num: "03",
     title: "Working web prototype",
     copy: "A live demonstration of the complete loop from discovering an attack to generating it and testing the defence.",
-    href: "https://mastercard-ai-defense-lab.fly.dev/mandate-demo",
-    label: "Open live prototype",
+    href: "https://mastercard-ai-defense-lab.fly.dev/",
+    label: "Open the working prototype →",
   },
 ];
 
@@ -128,25 +128,22 @@ export function ChallengePage() {
 
             <div className={styles.copy}>
               <p>
-                AI is making payment fraud faster, cheaper, and harder
-                to spot. This challenge asks us to look at both sides:
-                how new attacks could work, and how we can build a
-                defence that catches them.
+                AI is making payment fraud faster, cheaper, and harder to
+                spot. This challenge asks us to look at both sides: how new
+                attacks could work, and how we can build a defence that
+                catches them.
               </p>
 
               <p>
-                Our approach is a closed loop: identify new attacks,
-                generate realistic examples, test the defence, and use
-                what the defence misses to find the next attack.
+                Our approach is a closed loop: identify new attacks, generate
+                realistic examples, test the defence, and use what the
+                defence misses to find the next attack.
               </p>
             </div>
 
             <div className={styles.pillars}>
               {PILLARS.map((pillar) => (
-                <article
-                  className={styles.pillar}
-                  key={pillar.num}
-                >
+                <article className={styles.pillar} key={pillar.num}>
                   <span className={styles.pillarIcon}>
                     {pillar.num}
                   </span>
@@ -318,7 +315,7 @@ export function ChallengePage() {
                         className={styles.includedLink}
                         href={item.href}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                       >
                         {item.label}
                       </a>
@@ -358,7 +355,9 @@ export function ChallengePage() {
 
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
-          <div className={styles.footerWordmark}>Parmana</div>
+          <div className={styles.footerWordmark}>
+            Parmana
+          </div>
 
           <p className={styles.footerNote}>
             Mastercard Innovation Challenge 2026 · AI Defense Lab
