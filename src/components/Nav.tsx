@@ -1,9 +1,10 @@
 import styles from "./Nav.module.css";
 
 const LINKS = [
+  { href: "#problem", label: "The problem" },
   { href: "#how-it-works", label: "How it works" },
   { href: "#proof", label: "Proof" },
-  { href: "#who-its-for", label: "Who it's for" },
+  { href: "#who-its-for", label: "Systems of record" },
   { href: "#company", label: "Company" },
 ];
 
@@ -14,6 +15,7 @@ export function Nav() {
         <a href="/" className={styles.wordmarkLink}>
           <span className={styles.wordmark}>Parmana</span>
         </a>
+
         <nav className={styles.links} aria-label="Section">
           {LINKS.map((link) => (
             <a key={link.href} href={link.href} className={styles.link}>
@@ -21,8 +23,12 @@ export function Nav() {
             </a>
           ))}
         </nav>
-        <a className={styles.cta} href="mailto:founder@parmanasystems.com">
-          Write to us
+
+        <a
+          className={styles.cta}
+          href="mailto:founder@parmanasystems.com"
+        >
+          Talk to us
         </a>
       </div>
     </header>

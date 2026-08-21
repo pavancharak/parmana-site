@@ -15,24 +15,32 @@ export function Company() {
     <section className={styles.section} id="company">
       <div className={styles.inner}>
         <FigureLabel n="07" title="Company" />
+
         <div className={styles.grid}>
           <div className={styles.copy}>
             <p>
-              Parmana is built by people who've spent their careers building the products companies run
-              on, and watching what happens when access and authorization aren't designed carefully. We
-              kept watching businesses find out what went wrong only after it had already happened, and
-              decided that was backwards.
+              Parmana builds infrastructure for a world where AI agents can
+              act directly on behalf of organizations. Our focus is not on
+              making AI more capable, but on ensuring organizations retain
+              deterministic authority over what AI is allowed to execute.
             </p>
+
             <p>
-              We exist to build the checkpoint instead, infrastructure that keeps working no matter
-              what's asking to act, or how capable it gets. A person, a program, or something newer than
-              either. The gate holds either way.
+              We built Parmana around a simple principle: the organization
+              should remain the final authority over execution. The AI may
+              generate the action, but Parmana provides the control point that
+              determines whether that action can become real.
             </p>
           </div>
+
           <div className={styles.team}>
             {TEAM.map((member) => (
               <div className={styles.member} key={member.name}>
-                <img className={styles.photo} src={member.photo} alt={member.name} />
+                <img
+                  className={styles.photo}
+                  src={member.photo}
+                  alt={member.name}
+                />
                 <span className={styles.name}>{member.name}</span>
                 <span className={styles.role}>{member.role}</span>
               </div>

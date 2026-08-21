@@ -5,30 +5,30 @@ import { GateSvg } from "./GateSvg";
 const STEPS = [
   {
     num: "01",
-    title: "Ask",
-    copy: "Something requests an action, an AI agent, a person, an app, it doesn't matter which.",
+    title: "Propose",
+    copy: "An AI agent generates an action it wants to execute on a system of record.",
     tokenX: 20,
     openAmount: 0,
     pulse: false,
-    title2: "A request arrives and approaches the gate, unresolved.",
+    title2: "A machine-generated action approaches the authorization boundary.",
   },
   {
     num: "02",
-    title: "Check",
-    copy: "The request is checked against what your business has actually authorized, instantly.",
+    title: "Authorize",
+    copy: "Parmana evaluates the action against the authority defined by the organization.",
     tokenX: 120,
     openAmount: 0,
     pulse: true,
-    title2: "The request is held at the gate and checked.",
+    title2: "The action is held at the boundary and evaluated against organizational authority.",
   },
   {
     num: "03",
-    title: "Act",
-    copy: "Only what's allowed goes through. Nothing else can.",
+    title: "Execute",
+    copy: "Only an authorized action is allowed to reach the system of record.",
     tokenX: 220,
     openAmount: 1,
     pulse: false,
-    title2: "The request has passed through an open gate.",
+    title2: "The authorized action passes through to execution.",
   },
 ];
 
@@ -37,10 +37,12 @@ export function Mechanism() {
     <section className={styles.section} id="how-it-works">
       <div className={styles.inner}>
         <FigureLabel n="03" title="How it works" />
+
         <div className={styles.steps}>
           {STEPS.map((step) => (
             <div className={styles.step} key={step.num}>
               <span className={styles.stepNum}>{step.num}</span>
+
               <GateSvg
                 titleId={`mechanism-gate-${step.num}`}
                 title={step.title2}
@@ -51,7 +53,9 @@ export function Mechanism() {
                 pulseToken={step.pulse}
                 durationMs={1}
               />
+
               <h3 className={styles.stepTitle}>{step.title}</h3>
+
               <p className={styles.stepCopy}>{step.copy}</p>
             </div>
           ))}

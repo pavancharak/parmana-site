@@ -61,7 +61,6 @@
   margin-top: 1rem;
 }
 
-/* FIG 01: pillars */
 .pillars {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -91,7 +90,6 @@
   max-width: 30ch;
 }
 
-/* FIG 02: category grid */
 .categoryGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -143,7 +141,6 @@
   color: var(--ink);
 }
 
-/* FIG 04: stats */
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -219,7 +216,6 @@
   height: auto;
 }
 
-/* FIG 05: included list */
 .includedList {
   margin-top: clamp(1.5rem, 4vw, 2.5rem);
   border-top: 1px solid var(--line);
@@ -266,7 +262,6 @@
   color: var(--brass);
 }
 
-/* FIG 06: why different */
 .differentiators {
   display: flex;
   flex-direction: column;
@@ -314,6 +309,14 @@
     grid-template-columns: 1fr;
   }
 
+  .categoryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .category:last-child {
+    grid-column: auto;
+  }
+
   .stats {
     grid-template-columns: 1fr;
     max-width: none;
@@ -335,5 +338,13 @@
   .includedItem {
     grid-template-columns: 1fr;
     gap: 0.35rem;
+  }
+
+  .headerInner {
+    align-items: flex-start;
+  }
+
+  .headerLabel {
+    line-height: 1.4;
   }
 }

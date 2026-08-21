@@ -2,7 +2,13 @@ import styles from "./Problem.module.css";
 import { FigureLabel } from "./FigureLabel";
 import { GateSvg } from "./GateSvg";
 
-const SOURCES = ["AI agent", "Employee", "Connected app", "Automated system", "Attacker"];
+const SOURCES = [
+  "AI agent",
+  "AI-generated action",
+  "Agent workflow",
+  "Autonomous system",
+  "Machine decision",
+];
 
 const ROW_Y = [28, 84, 140, 196, 252];
 const CONVERGE = { x: 100, y: 140 };
@@ -12,18 +18,23 @@ export function Problem() {
     <section className={styles.section} id="problem">
       <div className={styles.inner}>
         <FigureLabel n="02" title="The problem" />
+
         <div className={styles.grid}>
           <div className={styles.copy}>
             <p>
-              Most businesses have no independent way to check, before the fact, whether a specific
-              action was actually allowed to happen. They find out after, if they find out at all.
+              Organizations are giving AI agents the ability to make decisions
+              and execute actions on systems of record, but they lack a
+              deterministic control point over what those agents are allowed
+              to execute.
             </p>
+
             <p>
-              An AI agent, an employee, a connected app, an automated system, sometimes an attacker,
-              all trying to reach the same door. Right now, almost nothing stands at that door and
-              checks.
+              The AI agent can generate the action. The organization needs to
+              retain authority over whether that action becomes real execution.
+              Parmana provides that control at the execution boundary.
             </p>
           </div>
+
           <div className={styles.diagram}>
             <div className={styles.sources}>
               {SOURCES.map((label) => (
@@ -32,6 +43,7 @@ export function Problem() {
                 </span>
               ))}
             </div>
+
             <svg
               className={styles.svg}
               viewBox="0 0 100 280"
@@ -51,10 +63,11 @@ export function Problem() {
                 />
               ))}
             </svg>
+
             <div className={styles.gateBox}>
               <GateSvg
                 titleId="problem-gate-title"
-                title="A closed gate, unchecked requests converging on it"
+                title="A closed authorization boundary with machine-generated actions converging on it."
                 className={styles.gateIcon}
                 tone="ink"
                 tokenX={20}

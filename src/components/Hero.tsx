@@ -15,15 +15,19 @@ export function Hero() {
 
   useEffect(() => {
     if (reducedMotion) return;
+
     const t1 = window.setTimeout(() => setPhase("approach"), 450);
     const t2 = window.setTimeout(() => setPhase("through"), 450 + 1300);
+
     return () => {
       window.clearTimeout(t1);
       window.clearTimeout(t2);
     };
   }, [reducedMotion]);
 
-  const tokenX = phase === "start" ? START_X : phase === "approach" ? GATE_X : END_X;
+  const tokenX =
+    phase === "start" ? START_X : phase === "approach" ? GATE_X : END_X;
+
   const openAmount = phase === "through" ? 1 : 0;
   const duration = reducedMotion ? 1 : phase === "approach" ? 1300 : 900;
 
@@ -32,35 +36,50 @@ export function Hero() {
       <div className={styles.inner}>
         <div>
           <div className={styles.topRow}>
-            <span className={styles.eyebrow}>Institutional Authority Infrastructure</span>
+            <span className={styles.eyebrow}>
+              Execution Authority Infrastructure
+            </span>
             <span className={styles.badge}>Made in India</span>
           </div>
-          <h1 className={styles.headline}>Only what your business authorizes should ever happen.</h1>
+
+          <h1 className={styles.headline}>
+            Organizations lack deterministic control over AI agents acting on
+            systems of record.
+          </h1>
+
           <p className={styles.dek}>
-            Parmana checks every action against what you've actually approved, before it happens, no
-            matter who or what is asking.
+            Parmana provides that control. It deterministically authorizes or
+            blocks machine-generated actions before they become execution.
           </p>
+
           <div className={styles.actions}>
             <a className={styles.primary} href="#how-it-works">
-              Explore Parmana
+              See how Parmana works
             </a>
-            <a className={styles.secondary} href="mailto:founder@parmanasystems.com">
-              Write to us
+            <a
+              className={styles.secondary}
+              href="mailto:founder@parmanasystems.com"
+            >
+              Talk to us
             </a>
           </div>
         </div>
+
         <div>
           <div className={styles.gateWrap}>
             <GateSvg
               titleId="hero-gate-title"
-              title="A request travels toward the gate, is checked, and only continues if it is allowed."
+              title="A machine-generated action approaches an authorization boundary and continues only when authorized."
               tone="ink"
               tokenX={tokenX}
               openAmount={openAmount}
               durationMs={duration}
             />
           </div>
-          <p className={styles.gateCaption}>every request reaches the same checkpoint</p>
+
+          <p className={styles.gateCaption}>
+            every machine-generated action reaches the same control point
+          </p>
         </div>
       </div>
     </section>

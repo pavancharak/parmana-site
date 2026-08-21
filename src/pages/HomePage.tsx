@@ -13,6 +13,7 @@ export function HomePage() {
   return (
     <>
       <Nav />
+
       <main>
         <Hero />
         <Problem />
@@ -23,6 +24,7 @@ export function HomePage() {
         <Company />
         <Closing />
       </main>
+
       <Footer />
     </>
   );

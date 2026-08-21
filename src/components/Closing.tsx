@@ -4,12 +4,16 @@ export function Closing() {
   return (
     <section className={styles.section} id="closing">
       <div className={styles.inner}>
-        <h2 className={styles.tagline}>AI may decide. You decide what becomes real.</h2>
+        <h2 className={styles.tagline}>
+          Organizations need control over what AI agents are allowed to execute.
+        </h2>
+
         <a className={styles.cta} href="mailto:founder@parmanasystems.com">
-          Write to us
+          Talk to us
         </a>
+
         <p className={styles.support}>
-          No pitch deck, no demo request. Write, and a person will write back.
+          Parmana provides deterministic control at the execution boundary.
         </p>
       </div>
     </section>

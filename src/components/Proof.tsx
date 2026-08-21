@@ -41,6 +41,7 @@ export function Proof() {
   function send(request: Request) {
     timeouts.current.forEach((t) => window.clearTimeout(t));
     timeouts.current = [];
+
     setActiveId(request.id);
 
     if (reducedMotion) {
@@ -49,8 +50,10 @@ export function Proof() {
     }
 
     setPhase("idle");
+
     const t1 = window.setTimeout(() => setPhase("approaching"), 30);
     const t2 = window.setTimeout(() => setPhase("resolved"), 30 + 700);
+
     timeouts.current = [t1, t2];
   }
 
@@ -85,25 +88,44 @@ export function Proof() {
     <section className={styles.section} id="proof">
       <div className={styles.inner}>
         <FigureLabel n="05" title="Proof" />
+
         <div className={styles.grid}>
           <div className={styles.copy}>
             <p>
-              This isn't a mockup. It's a working system, tested end to end against a real business
-              system, with real transactions, not just described on paper.
+              Parmana provides a deterministic control point between a
+              machine-generated action and the system of record it wants to
+              change.
             </p>
+
             <p>
-              Every decision it makes leaves a sealed, checkable record. Try it yourself below, with
-              a few example requests.
+              The action is evaluated against organizational authority before
+              execution. If it is authorized, it proceeds. If it is not, it is
+              blocked.
+            </p>
+
+            <p>
+              Every governed execution produces verifiable evidence of the
+              authorization decision and resulting outcome.
             </p>
           </div>
+
           <div className={styles.demo}>
-            <span className={styles.prompt}>Send a request through the gate</span>
-            <div className={styles.requests} role="group" aria-label="Example requests">
+            <span className={styles.prompt}>
+              Test an action against the authorization boundary
+            </span>
+
+            <div
+              className={styles.requests}
+              role="group"
+              aria-label="Example machine-generated actions"
+            >
               {REQUESTS.map((request) => (
                 <button
                   key={request.id}
                   type="button"
-                  className={`${styles.request} ${activeId === request.id ? styles.requestActive : ""}`}
+                  className={`${styles.request} ${
+                    activeId === request.id ? styles.requestActive : ""
+                  }`}
                   onClick={() => send(request)}
                   aria-pressed={activeId === request.id}
                 >
@@ -111,10 +133,11 @@ export function Proof() {
                 </button>
               ))}
             </div>
+
             <div className={styles.gateStage}>
               <GateSvg
                 titleId="proof-gate-title"
-                title="The interactive gate, responding to your chosen request"
+                title="The authorization boundary responding to a machine-generated action"
                 tone={tone}
                 tokenX={tokenX}
                 openAmount={openAmount}
@@ -122,16 +145,25 @@ export function Proof() {
                 durationMs={duration}
               />
             </div>
+
             <div className={styles.result} role="status" aria-live="polite">
               {phase === "resolved" && outcome === "go" && (
-                <span className={styles.resultGo}>ALLOWED, the action was completed.</span>
+                <span className={styles.resultGo}>
+                  AUTHORIZED — the action can execute.
+                </span>
               )}
+
               {phase === "resolved" && outcome === "stop" && (
-                <span className={styles.resultStop}>BLOCKED, held at the gate, nothing happened.</span>
+                <span className={styles.resultStop}>
+                  BLOCKED — the action cannot execute.
+                </span>
               )}
+
               {phase !== "resolved" && (
                 <span className={styles.resultIdle}>
-                  {activeId ? "Checking…" : "Choose a request above to send it through."}
+                  {activeId
+                    ? "Evaluating against organizational authority…"
+                    : "Choose an action above to test the control."}
                 </span>
               )}
             </div>
