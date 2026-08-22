@@ -20,7 +20,7 @@ interface Request {
 const REQUESTS: Request[] = [
   {
     id: "refund",
-    label: "Refund a customer ₹40",
+    label: "Issue a ₹40 customer refund",
     outcome: "go",
   },
   {
@@ -29,8 +29,8 @@ const REQUESTS: Request[] = [
     outcome: "go",
   },
   {
-    id: "wire",
-    label: "Move ₹2,50,000 to an unfamiliar account",
+    id: "payment",
+    label: "Send ₹2,50,000 to an unfamiliar account",
     outcome: "stop",
   },
   {
@@ -44,24 +44,31 @@ type Phase = "idle" | "approaching" | "resolved";
 
 export function Proof() {
   const reducedMotion = usePrefersReducedMotion();
+
   const [activeId, setActiveId] = useState<string | null>(null);
   const [phase, setPhase] = useState<Phase>("idle");
+
   const timeouts = useRef<number[]>([]);
 
   useEffect(() => {
     return () => {
-      timeouts.current.forEach((timeout) =>
-        window.clearTimeout(timeout)
-      );
+      timeouts.current.forEach((timeout) => {
+        window.clearTimeout(timeout);
+      });
     };
   }, []);
 
-  function send(request: Request) {
-    timeouts.current.forEach((timeout) =>
-      window.clearTimeout(timeout)
-    );
+  function clearTimeouts() {
+    timeouts.current.forEach((timeout) => {
+      window.clearTimeout(timeout);
+    });
 
     timeouts.current = [];
+  }
+
+  function send(request: Request) {
+    clearTimeouts();
+
     setActiveId(request.id);
 
     if (reducedMotion) {
@@ -71,17 +78,18 @@ export function Proof() {
 
     setPhase("idle");
 
-    const t1 = window.setTimeout(
-      () => setPhase("approaching"),
-      30
-    );
+    const approachTimer = window.setTimeout(() => {
+      setPhase("approaching");
+    }, 30);
 
-    const t2 = window.setTimeout(
-      () => setPhase("resolved"),
-      730
-    );
+    const resolveTimer = window.setTimeout(() => {
+      setPhase("resolved");
+    }, 730);
 
-    timeouts.current = [t1, t2];
+    timeouts.current = [
+      approachTimer,
+      resolveTimer,
+    ];
   }
 
   const active =
@@ -99,12 +107,18 @@ export function Proof() {
     tokenX = GATE_X;
     tone = "ink";
     duration = reducedMotion ? 1 : 700;
-  } else if (phase === "resolved" && outcome === "go") {
+  } else if (
+    phase === "resolved" &&
+    outcome === "go"
+  ) {
     tokenX = END_X;
     openAmount = 1;
     tone = "go";
     duration = reducedMotion ? 1 : 500;
-  } else if (phase === "resolved" && outcome === "stop") {
+  } else if (
+    phase === "resolved" &&
+    outcome === "stop"
+  ) {
     tokenX = BLOCKED_X;
     openAmount = 0;
     tone = "stop";
@@ -114,32 +128,56 @@ export function Proof() {
   }
 
   return (
-    <section className={styles.section} id="proof">
+    <section
+      className={styles.section}
+      id="proof"
+    >
       <div className={styles.inner}>
-        <FigureLabel n="05" title="Execution authority" />
+        <FigureLabel
+          n="04"
+          title="Authorization in action"
+        />
 
         <div className={styles.grid}>
           <div className={styles.copy}>
             <p>
-              Parmana deterministically authorizes or rejects an action
-              before it reaches the system of record.
+              Not every action an agent can technically perform
+              should be allowed to happen.
             </p>
 
             <p>
-              The machine can propose the action. The institution
-              determines whether it is allowed to execute.
+              A customer refund may be authorized. A routine
+              account change may be authorized. A large payment to
+              an unfamiliar account may not be.
+            </p>
+
+            <p>
+              The difference is not whether the system can execute
+              the action.
+            </p>
+
+            <p>
+              <strong>
+                The difference is whether the action has authority
+                to execute.
+              </strong>
+            </p>
+
+            <p>
+              Parmana makes that decision at the boundary, before
+              the action reaches the system that executes it.
             </p>
           </div>
 
           <div className={styles.demo}>
             <span className={styles.prompt}>
-              Choose an action
+              Test an action
             </span>
 
             <div
               className={styles.requests}
               role="group"
-              aria-label="Example actions"
+              aria-label="Example business actions"
             >
               {REQUESTS.map((request) => (
                 <button
@@ -151,7 +189,9 @@ export function Proof() {
                       : ""
                   }`}
                   onClick={() => send(request)}
-                  aria-pressed={activeId === request.id}
+                  aria-pressed={
+                    activeId === request.id
+                  }
                 >
                   {request.label}
                 </button>
@@ -161,7 +201,7 @@ export function Proof() {
             <div className={styles.gateStage}>
               <GateSvg
                 titleId="proof-gate-title"
-                title="Parmana authorizes the selected action or rejects it before execution."
+                title="A requested business action is authorized or blocked before execution."
                 tone={tone}
                 tokenX={tokenX}
                 openAmount={openAmount}
@@ -175,23 +215,25 @@ export function Proof() {
               role="status"
               aria-live="polite"
             >
-              {phase === "resolved" && outcome === "go" && (
-                <span className={styles.resultGo}>
-                  AUTHORIZED — execution can proceed.
-                </span>
-              )}
+              {phase === "resolved" &&
+                outcome === "go" && (
+                  <span className={styles.resultGo}>
+                    AUTHORIZED — EXECUTION MAY PROCEED
+                  </span>
+                )}
 
-              {phase === "resolved" && outcome === "stop" && (
-                <span className={styles.resultStop}>
-                  REJECTED — execution cannot proceed.
-                </span>
-              )}
+              {phase === "resolved" &&
+                outcome === "stop" && (
+                  <span className={styles.resultStop}>
+                    DENIED — EXECUTION IS BLOCKED
+                  </span>
+                )}
 
               {phase !== "resolved" && (
                 <span className={styles.resultIdle}>
                   {activeId
-                    ? "Determining authorization…"
-                    : "Choose an action to test authorization."}
+                    ? "Evaluating authorization…"
+                    : "Choose an action to see the boundary in action."}
                 </span>
               )}
             </div>

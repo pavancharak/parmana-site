@@ -5,7 +5,9 @@ export function Closing() {
     <section className={styles.section} id="closing">
       <div className={styles.inner}>
         <h2 className={styles.tagline}>
-          AI can decide. Your institution decides what it is allowed to execute.
+          Let AI act.
+          <br />
+          Keep authority yours.
         </h2>
 
         <a
@@ -16,8 +18,9 @@ export function Closing() {
         </a>
 
         <p className={styles.support}>
-          Tell us what your AI can do today. We'll show you where
-          deterministic execution authority belongs.
+          Tell us what you want AI to do for your business.
+          We'll show you how to put an authorization boundary
+          between intent and execution.
         </p>
       </div>
     </section>

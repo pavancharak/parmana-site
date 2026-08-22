@@ -26,19 +26,20 @@ export function Company() {
   return (
     <section className={styles.section} id="company">
       <div className={styles.inner}>
-        <FigureLabel n="07" title="Company" />
+        <FigureLabel n="07" title="About us" />
 
         <div className={styles.grid}>
           <div className={styles.copy}>
             <p>
-              Parmana is building the infrastructure that keeps human
-              authority in control as machines gain the ability to act.
+              AI is moving from helping people to doing work on their
+              behalf. We believe businesses should be able to embrace
+              that change without giving up control.
             </p>
 
             <p>
-              AI can decide what it wants to do. Parmana sits at the
-              execution boundary and makes sure only actions the
-              organization has authorized can actually happen.
+              We are building Parmana for businesses that want to give
+              AI more responsibility while keeping a clear say over
+              what it can actually do.
             </p>
           </div>
 

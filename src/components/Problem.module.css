@@ -1,100 +1,63 @@
 .section {
   border-bottom: 1px solid var(--line);
-  background: var(--paper-dim);
 }
 
 .inner {
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: clamp(2.5rem, 6vw, 4.5rem) var(--gutter);
+  padding: clamp(3rem, 7vw, 5.5rem) var(--gutter)
+    clamp(4rem, 8vw, 6rem);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
+.copy {
+  max-width: 68ch;
+  margin-top: clamp(3rem, 6vw, 5rem);
 }
 
 .copy p {
-  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
-  line-height: 1.65;
-  max-width: 42ch;
-}
+  margin: 0 0 2rem;
 
-.copy p + p {
-  margin-top: 1rem;
-}
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  line-height: 1.7;
 
-.diagram {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  gap: 0;
-  align-items: center;
-}
-
-.sources {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0.5rem 0;
-  min-height: 17rem;
-}
-
-.source {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
   color: var(--ink);
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
 }
 
-.source::after {
-  content: "";
-  flex: 1;
-  min-width: 1.5rem;
-  height: 1px;
-  background: var(--line);
+.copy p strong {
+  font-weight: 600;
 }
 
-.svg {
-  height: 17rem;
-  width: clamp(9rem, 16vw, 14rem);
+.copy .question {
+  max-width: 58ch;
+
+  margin-top: 2.75rem;
+  margin-bottom: 2.75rem;
+
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  line-height: 1.45;
+  letter-spacing: -0.015em;
 }
 
-.gateIcon {
-  height: 4.5rem;
-}
-
-.gateBox {
-  display: flex;
-  align-items: center;
-  padding-left: 0.5rem;
-}
-
-@media (max-width: 800px) {
-  .grid {
-    grid-template-columns: 1fr;
+@media (max-width: 560px) {
+  .inner {
+    padding-top: 2.5rem;
   }
 
-  .diagram {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .copy {
+    margin-top: 2.5rem;
   }
 
-  .svg {
-    width: 100%;
-    height: 12rem;
+  .copy p {
+    margin-bottom: 1.75rem;
+
+    font-size: 1.05rem;
+    line-height: 1.65;
   }
 
-  .sources {
-    min-height: 12rem;
-  }
+  .copy .question {
+    margin-top: 2.25rem;
+    margin-bottom: 2.25rem;
 
-  .gateBox {
-    justify-content: center;
-    padding-left: 0;
+    font-size: 1.3rem;
   }
 }
