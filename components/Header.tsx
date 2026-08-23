@@ -1,0 +1,75 @@
+"use client";
+
+import { useState } from "react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { founderEmail, nav } from "@/lib/config";
+
+const links = [
+  { label: "Docs", href: nav.docs },
+  { label: "Blog", href: nav.blog },
+  { label: "Security", href: nav.security },
+];
+
+export default function Header() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="sticky top-0 z-50 w-full bg-white border-b border-border-light">
+      <div className="max-w-container mx-auto flex items-center justify-between px-6 py-4">
+        <span className="text-lg font-bold text-text-primary">Parmana</span>
+
+        <nav className="hidden md:flex items-center gap-8">
+          {links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="hidden md:block">
+          <a
+            href={`mailto:${founderEmail}`}
+            className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white hover:bg-primary-dark transition-colors"
+          >
+            Write to us
+          </a>
+        </div>
+
+        <button
+          type="button"
+          className="md:hidden flex h-12 w-12 items-center justify-center"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
+        </button>
+      </div>
+
+      {open && (
+        <div className="md:hidden border-t border-border-light px-6 py-4 flex flex-col gap-4">
+          {links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="text-sm text-text-secondary"
+              onClick={() => setOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href={`mailto:${founderEmail}`}
+            className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white min-h-[48px]"
+          >
+            Write to us
+          </a>
+        </div>
+      )}
+    </header>
+  );
+}
