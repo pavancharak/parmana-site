@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { founderEmail, nav } from "@/lib/config";
+import { nav } from "@/lib/config";
 
 const links = [
   { label: "Research", href: nav.blog },
@@ -32,10 +32,10 @@ export default function Header() {
 
         <div className="hidden md:block">
           <a
-            href={`mailto:${founderEmail}`}
+            href="#faq"
             className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white hover:bg-primary-dark transition-colors"
           >
-            Talk to us
+            See the answers
           </a>
         </div>
 
@@ -68,10 +68,11 @@ export default function Header() {
           ))}
 
           <a
-            href={`mailto:${founderEmail}`}
+            href="#faq"
             className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white min-h-[48px]"
+            onClick={() => setOpen(false)}
           >
-            Talk to us
+            See the answers
           </a>
         </div>
       )}
