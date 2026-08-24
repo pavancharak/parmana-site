@@ -5,7 +5,7 @@ const faqs = [
       "It keeps you in control when AI agents, applications, or automated systems can initiate financial actions. Parmana checks every important action against your business rules before that action happens, not after.",
   },
   {
-    question: "What if the agent itself is compromised?",
+    question: "What if the agent is compromised?",
     answer:
       "Parmana does not need to trust the agent. Say a compromised agent asks to send ₹500,000 to a new account. It can still only make a request, the same request any agent would make. That request is checked against your business rules before execution, the same as any other. The agent never holds the credential that could move the money itself.",
   },
@@ -15,7 +15,7 @@ const faqs = [
       "An agent's own guardrails are never the final authority. Say a duplicate-refund guardrail fails silently and the agent asks Parmana to issue the same refund twice. Parmana checks that second request against your rules regardless, the same way it checks the first one, and refuses it if it does not match. Your protection does not depend on the agent behaving correctly.",
   },
   {
-    question: "What if a more intelligent frontier model finds a way around the rules?",
+    question: "What if a smarter frontier model finds a way around the rules?",
     answer:
       "Parmana does not rely on the model being harmless or predictable. A more capable model might phrase a request differently or reach it by a different chain of reasoning, but Parmana only evaluates the request itself, the amount, the recipient, the timing, whatever your rules check, never how the model arrived at it. Capability does not become authority.",
   },
@@ -55,7 +55,7 @@ const faqs = [
       "A kill switch stops a system, or all of it at once, when something goes wrong. Parmana checks one request at a time: it can let 999 out of 1,000 requests through and stop only the one that breaks a rule, without touching the other 999.",
   },
   {
-    question: "Can Parmana run in our cloud or on our own infrastructure?",
+    question: "Can Parmana run in our own cloud or infrastructure?",
     answer:
       "Yes. Parmana runs as a standard container and can be deployed on your own cloud account or infrastructure you control, not only ours. Your business rules and signing keys stay in your deployment, not in ours.",
   },
