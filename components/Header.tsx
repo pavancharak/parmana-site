@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { nav } from "@/lib/config";
+import { founderEmail, nav } from "@/lib/config";
 
 const links = [
-  { label: "Research", href: "#evidence" },
-  { label: "Security", href: nav.security },
+  { label: "Research", href: nav.blog },
+  { label: "Security", href: "https://parmana.fly.dev/" },
 ];
 
 export default function Header() {
@@ -15,34 +15,45 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-border-light">
       <div className="max-w-container mx-auto flex items-center justify-between px-6 py-4">
+        {/* Home */}
         <a
           href="/"
-          className="text-lg font-bold text-text-primary hover:text-primary transition-colors"
+          className="text-lg font-bold text-text-primary hover:opacity-80 transition-opacity"
+          aria-label="Parmana home"
         >
           Parmana
         </a>
 
+        {/* Desktop navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {links.map((link) => (
             <a
               key={link.label}
               href={link.href}
               className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+              {...(link.href.startsWith("http")
+                ? {
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  }
+                : {})}
             >
               {link.label}
             </a>
           ))}
         </nav>
 
+        {/* Desktop CTA */}
         <div className="hidden md:block">
           <a
             href="#faq"
             className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white hover:bg-primary-dark transition-colors"
           >
-            See the answers
+            Questions?
           </a>
         </div>
 
+        {/* Mobile menu button */}
         <button
           type="button"
           className="md:hidden flex h-12 w-12 items-center justify-center"
@@ -58,6 +69,7 @@ export default function Header() {
         </button>
       </div>
 
+      {/* Mobile navigation */}
       {open && (
         <div className="md:hidden border-t border-border-light px-6 py-4 flex flex-col gap-4">
           {links.map((link) => (
@@ -66,6 +78,12 @@ export default function Header() {
               href={link.href}
               className="text-sm text-text-secondary"
               onClick={() => setOpen(false)}
+              {...(link.href.startsWith("http")
+                ? {
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  }
+                : {})}
             >
               {link.label}
             </a>
@@ -76,7 +94,7 @@ export default function Header() {
             className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white min-h-[48px]"
             onClick={() => setOpen(false)}
           >
-            See the answers
+            Questions?
           </a>
         </div>
       )}
