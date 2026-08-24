@@ -2,14 +2,14 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import {
-  CpuChipIcon,
+  IdentificationIcon,
   ShieldCheckIcon,
   BuildingOffice2Icon,
 } from "@heroicons/react/24/outline";
 import { requestFlow, checkmarkPulse } from "@/lib/animations";
 
 const boxes = [
-  { label: "AI Agent", icon: CpuChipIcon },
+  { label: "Any Actor", icon: IdentificationIcon },
   { label: "Parmana", icon: ShieldCheckIcon },
   { label: "Business System", icon: BuildingOffice2Icon },
 ];
@@ -19,9 +19,15 @@ export default function Diagram({ compact = false }: { compact?: boolean }) {
 
   return (
     <div className={compact ? "w-full" : "max-w-container mx-auto px-6 py-12 md:py-16 lg:py-20"}>
+      {!compact && (
+        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] text-text-primary text-center mb-12">
+          How authorization works
+        </h2>
+      )}
       <span className="sr-only">
-        Diagram: an AI agent sends a request, Parmana checks it against business rules, then
-        the request either proceeds to the business system or is stopped.
+        Diagram: any actor, AI agent, human, application, or automated system, sends a
+        request. Parmana checks it against your authorization rules. The request either
+        proceeds to the business system or is refused.
       </span>
 
       <div

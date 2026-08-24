@@ -1,7 +1,12 @@
 import Hero from "@/components/Hero";
-import ValueProp from "@/components/ValueProp";
+import Differentiators from "@/components/Differentiators";
+import AuthorizationGap from "@/components/AuthorizationGap";
 import Diagram from "@/components/Diagram";
-import Industries from "@/components/Industries";
+import UseCases from "@/components/UseCases";
+import ActorTable from "@/components/ActorTable";
+import NpciUap from "@/components/NpciUap";
+import Evidence from "@/components/Evidence";
+import WhatWeAreNot from "@/components/WhatWeAreNot";
 import Philosophy from "@/components/Philosophy";
 import BottomCTA from "@/components/BottomCTA";
 
@@ -9,9 +14,14 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <ValueProp />
+      <Differentiators />
+      <AuthorizationGap />
       <Diagram />
-      <Industries />
+      <UseCases />
+      <ActorTable />
+      <NpciUap />
+      <Evidence />
+      <WhatWeAreNot />
       <Philosophy />
       <BottomCTA />
     </main>

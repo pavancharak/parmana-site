@@ -7,7 +7,7 @@ export default function Philosophy() {
         </h2>
         <p className="mt-4 text-base leading-[1.6] text-text-secondary max-w-[600px] mx-auto">
           The best infrastructure isn&apos;t something users notice. It
-          quietly makes every AI action more reliable.
+          quietly makes every authorized action more reliable.
         </p>
       </div>
     </section>

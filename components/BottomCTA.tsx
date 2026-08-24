@@ -5,11 +5,13 @@ export default function BottomCTA() {
     <section id="security" className="border-t border-border-light">
       <div className="max-w-container mx-auto px-6 py-12 md:py-16 lg:py-20 text-center">
         <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] text-text-primary">
-          AI is ready to operate. Make sure it operates within your rules.
+          Ready to protect what you authorize?
         </h2>
         <p className="mt-4 text-base leading-[1.6] text-text-secondary max-w-[600px] mx-auto">
-          If you&apos;re deploying AI agents and want them switched on rather than stuck in
-          pilot, write to us: {founderEmail}
+          If you&apos;re deploying autonomous systems, AI agents, automated
+          workflows, or third party integrations, and want runtime
+          authorization instead of a compliance checkbox, write to us:{" "}
+          {founderEmail}
         </p>
         <a
           href={`mailto:${founderEmail}`}
