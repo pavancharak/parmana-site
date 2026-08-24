@@ -15,9 +15,12 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-border-light">
       <div className="max-w-container mx-auto flex items-center justify-between px-6 py-4">
-        <span className="text-lg font-bold text-text-primary">
+        <a
+          href="/"
+          className="text-lg font-bold text-text-primary hover:text-primary transition-colors"
+        >
           Parmana
-        </span>
+        </a>
 
         <nav className="hidden md:flex items-center gap-8">
           {links.map((link) => (
