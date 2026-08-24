@@ -4,10 +4,12 @@
 **Source:** every component under `D:\last\parmana-site\components\`, `app\layout.tsx`
 **Against:** `D:\last\parmana-exp` source code
 
-This extends `FAQ_VALIDATION_COMPLETE.md` (which covered only the FAQ) to every content claim on
-the homepage: hero, meta tags, the three-protections cards, the authorization-gap section, the
-use-case cards, the actor table, the flight-booking example, the "why this matters now" cards, the
-is/is-not list, the philosophy line, and the closing CTA.
+This covers every content claim on the homepage, in page order: meta tags, hero, the
+three-protections cards, the authorization-gap section, the use-case cards, the actor table, the
+flight-booking example, the "why this matters now" cards, the is/is-not list, the philosophy line,
+the FAQ (all 18 entries, full evidence in the sibling `FAQ_VALIDATION_COMPLETE.md`), and the closing
+CTA. Earlier versions of this document excluded the FAQ by cross-reference only; it's now included
+directly below so this document is self-contained, page section by page section.
 
 **Two kinds of claims live on this page, and they get different treatment:**
 1. **Claims about what Parmana does** — checkable against `parmana-exp` source. Given a verdict below.
@@ -19,7 +21,7 @@ is/is-not list, the philosophy line, and the closing CTA.
 
 ## Summary
 
-- ✅ Accurate: 24 product claims
+- ✅ Accurate: 42 product claims (24 outside the FAQ + 18 FAQ entries)
 - ⚠️ Misleading: 0
 - ❌ False: 0
 - 🌐 Not code-verifiable (external-world or business claims): 6
@@ -155,7 +157,41 @@ matches the real one.
 ## Philosophy (`components/Philosophy.tsx`)
 
 **Claim:** "Your business rules decide what is allowed, and only authorized actions are allowed to happen."
-**Verdict:** ✅ ACCURATE — same `PolicyEngine`/`ExecutionGateway` gating evidence as everywhere above; and per `FAQ_VALIDATION_COMPLETE.md` FAQ 12/14, the deploying business's own keys and policy files (`FilePolicyRepository`), not Parmana's, control what a given deployment allows.
+**Verdict:** ✅ ACCURATE — same `PolicyEngine`/`ExecutionGateway` gating evidence as everywhere above; and per `FAQ_VALIDATION_COMPLETE.md` FAQ 12/15, the deploying business's own keys and policy files (`FilePolicyRepository`), not Parmana's, control what a given deployment allows.
+
+---
+
+## FAQ (`components/FAQ.tsx`)
+
+All 18 entries are validated in full, with code citations, in `FAQ_VALIDATION_COMPLETE.md`. Summary
+verdicts below so this document is complete on its own without requiring the cross-reference; see the
+sibling doc for the evidence behind each one.
+
+| # | Question | Verdict |
+|---|---|---|
+| 1 | What problem does Parmana solve? | ✅ ACCURATE |
+| 2 | What if the agent is compromised? | ✅ ACCURATE |
+| 3 | What if our guardrails fail? | ✅ ACCURATE |
+| 4 | What if a smarter frontier model finds a way around the rules? | ✅ ACCURATE |
+| 5 | What if we change AI vendors, switch models, or turn AI off? | ✅ ACCURATE |
+| 6 | Does Parmana stop agents from making payments? | ✅ ACCURATE |
+| 7 | What happens if an agent behaves unexpectedly? | ✅ ACCURATE |
+| 8 | Is Parmana only for AI agents? | ✅ ACCURATE |
+| 9 | How is this different from an audit log? | ✅ ACCURATE |
+| 10 | Can Parmana help with auditability and compliance? | ✅ ACCURATE |
+| 11 | How is this different from a kill switch? | ✅ ACCURATE |
+| 12 | Can Parmana run in our own cloud or infrastructure? | ✅ ACCURATE |
+| 13 | What if today's cryptography changes tomorrow? | ✅ ACCURATE |
+| 14 | How do I know a signed authorization is real? | ✅ ACCURATE |
+| 15 | What if Parmana disappears tomorrow? | ✅ ACCURATE |
+| 16 | Does Parmana replace our existing payment or authorization systems? | ✅ ACCURATE |
+| 17 | Can Parmana be used outside payments? | ✅ ACCURATE |
+| 18 | How do I know the claims on this page are accurate? | ✅ ACCURATE, self-referential (see note below) |
+
+FAQ 18 is a special case: its claim is about the validation process itself, not about `parmana-exp`.
+It's accurate in that the check it describes is exactly what produced this document and
+`FAQ_VALIDATION_COMPLETE.md`, but note (as its own answer does) that `parmana-exp` is private, so a
+site visitor is reading the write-up, not independently re-running the check against the source.
 
 ---
 
