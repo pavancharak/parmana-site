@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { founderEmail, nav } from "@/lib/config";
 
 const links = [
-  { label: "Docs", href: nav.docs },
+  { label: "Research", href: nav.blog },
   { label: "Blog", href: nav.blog },
   { label: "Security", href: nav.security },
 ];
@@ -35,7 +35,7 @@ export default function Header() {
             href={`mailto:${founderEmail}`}
             className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white hover:bg-primary-dark transition-colors"
           >
-            Write to us
+            Talk to us
           </a>
         </div>
 
@@ -46,7 +46,11 @@ export default function Header() {
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
-          {open ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
+          {open ? (
+            <XMarkIcon className="h-6 w-6" />
+          ) : (
+            <Bars3Icon className="h-6 w-6" />
+          )}
         </button>
       </div>
 
@@ -62,11 +66,12 @@ export default function Header() {
               {link.label}
             </a>
           ))}
+
           <a
             href={`mailto:${founderEmail}`}
             className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white min-h-[48px]"
           >
-            Write to us
+            Talk to us
           </a>
         </div>
       )}
