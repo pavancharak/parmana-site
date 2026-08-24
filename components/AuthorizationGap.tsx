@@ -53,8 +53,9 @@ export default function AuthorizationGap() {
 
           <p className="text-base leading-[1.6] text-text-secondary">
             Parmana checks the requested action against your rules before it
-            happens. The authorization decision is signed and can be verified
-            by the system that executes the action.
+            happens. Parmana uses Ed25519 digital signatures to prove every
+            authorization independently, so the system that executes the
+            action can verify it without trusting Parmana.
           </p>
 
           <p className="text-base leading-[1.6] text-text-primary font-bold">

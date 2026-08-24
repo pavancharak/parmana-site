@@ -14,5 +14,5 @@ export const founderEmail = "founder@parmanasystems.com";
 export const nav = {
   docs: "https://docs.parmanasystems.com",
   blog: "https://parmanasystems.substack.com",
-  security: "#security",
+  security: "https://parmana.fly.dev/",
 } as const;

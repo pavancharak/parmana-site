@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import Differentiators from "@/components/Differentiators";
 import AuthorizationGap from "@/components/AuthorizationGap";
-import Diagram from "@/components/Diagram";
 import UseCases from "@/components/UseCases";
 import ActorTable from "@/components/ActorTable";
 import NpciUap from "@/components/NpciUap";
@@ -17,7 +16,6 @@ export default function Home() {
       <Hero />
       <Differentiators />
       <AuthorizationGap />
-      <Diagram />
       <UseCases />
       <ActorTable />
       <NpciUap />

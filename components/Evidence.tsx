@@ -2,7 +2,7 @@ const proof = [
   {
     title: "AI agents can take unexpected actions",
     date: "AUGUST 2026",
-    body: "Recent AI security evaluations have shown that agents can take actions beyond what people expect when pursuing a goal. An agent may find its own way to achieve an objective, including actions that were never explicitly approved.",
+    body: "AI security evaluations have shown agents can take actions beyond what people expect when pursuing a goal. An agent may find its own way to achieve an objective, including actions that were never explicitly approved.",
     proves:
       "Giving an agent a goal does not mean every action it takes should be trusted.",
   },
@@ -23,7 +23,7 @@ const proof = [
   {
     title: "RBI is putting stronger controls around AI",
     date: "JULY 2026",
-    body: "RBI's 2026 draft Model Risk Management guidance includes human oversight for AI models, including mechanisms to override, suspend or deactivate models — explicitly including kill-switch arrangements.",
+    body: "RBI's 2026 draft Model Risk Management guidance includes human oversight for AI models, including mechanisms to override, suspend, or deactivate models. This explicitly includes kill-switch arrangements.",
     proves:
       "Financial institutions need the ability to intervene when an AI system behaves unexpectedly.",
   },

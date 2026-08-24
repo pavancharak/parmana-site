@@ -2,7 +2,7 @@ import { founderEmail } from "@/lib/config";
 
 export default function BottomCTA() {
   return (
-    <section id="security" className="border-t border-border-light">
+    <section id="contact" className="border-t border-border-light">
       <div className="max-w-container mx-auto px-6 py-12 md:py-16 lg:py-20 text-center">
         <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] text-text-primary max-w-[800px] mx-auto">
           Adopt agentic payment flows without losing control.

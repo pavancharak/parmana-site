@@ -18,7 +18,7 @@ const items = [
   {
     title: "Proof Before Payment",
     icon: DocumentCheckIcon,
-    body: "Parmana creates signed proof of the authorization before the action is executed. The decision can be independently verified.",
+    body: "Parmana signs every authorization with Ed25519 before the action executes. Your payment system, or any regulator, can verify the signature independently with the public key and decision record.",
   },
 ];
 

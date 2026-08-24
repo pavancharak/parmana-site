@@ -57,12 +57,17 @@ const faqs = [
   {
     question: "Can Parmana run in our cloud or on our own infrastructure?",
     answer:
-      "Parmana is designed to support deployment in environments that fit your security and operational requirements, including cloud and infrastructure you control. The deployment model does not change the authorization boundary: your business rules remain in control of what can execute.",
+      "Yes. Parmana runs as a standard container and can be deployed on your own cloud account or infrastructure you control, not only ours. Your business rules and signing keys stay in your deployment, not in ours.",
   },
   {
     question: "What if today's cryptography changes tomorrow?",
     answer:
       "Parmana separates authorization from the technology used to prove it. As cryptographic standards evolve, the proof mechanism can evolve without changing the business rules that determine what is allowed.",
+  },
+  {
+    question: "How do I know a signed authorization is real?",
+    answer:
+      "Parmana signs every authorization with Ed25519. Anyone can verify it independently by checking the signature against the public key and the decision record, no special tools and no need to trust Parmana's word for it.",
   },
   {
     question: "What if Parmana disappears tomorrow?",

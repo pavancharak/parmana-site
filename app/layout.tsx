@@ -5,25 +5,25 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://parmanasystems.com"),
-  title: "Parmana | Institutional Authority Infrastructure",
+  title: "Parmana | Authorization Before Execution",
   description:
-    "Authorization infrastructure for consequential actions. Any actor, any domain, authority remains yours. Parmana verifies every action before execution.",
+    "Parmana checks every payment an AI agent, employee, or app requests against your rules before it executes. Allowed, it proceeds. Not allowed, it stops.",
   alternates: {
     canonical: "https://parmanasystems.com",
   },
   openGraph: {
-    title: "Parmana | Institutional Authority Infrastructure",
+    title: "Parmana | Authorization Before Execution",
     description:
-      "Only what you authorize should execute, regardless of the actor.",
+      "Let AI agents request payments. Your rules decide what actually happens.",
     type: "website",
     url: "https://parmanasystems.com",
     images: ["https://parmanasystems.com/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Parmana | Institutional Authority Infrastructure",
+    title: "Parmana | Authorization Before Execution",
     description:
-      "Only what you authorize should execute, regardless of the actor.",
+      "Let AI agents request payments. Your rules decide what actually happens.",
   },
   robots: "index, follow",
 };

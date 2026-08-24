@@ -6,7 +6,7 @@ import { founderEmail, nav } from "@/lib/config";
 
 const links = [
   { label: "Research", href: nav.blog },
-  { label: "Security", href: "https://parmana.fly.dev/" },
+  { label: "Security", href: nav.security },
 ];
 
 export default function Header() {
