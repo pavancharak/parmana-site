@@ -13,9 +13,14 @@ corrected map. All verification below is against the real files.
 
 ## Summary
 
-- ✅ Accurate: 16 FAQs
+- ✅ Accurate: 18 FAQs
 - ⚠️ Misleading: 0 FAQs
 - ❌ False: 0 FAQs
+
+**Update, 2026-08-24:** originally validated at 16 FAQs. Since then, 3 question wordings were
+tightened (FAQ 2, 4, 12, no change to meaning) and 2 new entries were added (FAQ 14 and FAQ 18) —
+both validated below for the first time. See `FIXES_BEFORE_AFTER.md` and the FAQ Stripe-style rewrite
+history for what changed and why.
 
 Every claim in the FAQ is backed by real, working code, not aspirational copy. The nuances below
 aren't corrections, they're the kind of detail an engineer reading the FAQ would want to see spelled
@@ -37,7 +42,7 @@ verifies) as one word, "Parmana," which is fair at the marketing-copy level.
 
 ---
 
-### FAQ 2: "What if the agent itself is compromised?"
+### FAQ 2: "What if the agent is compromised?"
 **Claim:** The agent does not get direct authority to move money.
 **Verdict:** ✅ ACCURATE
 **Evidence:**
@@ -58,7 +63,7 @@ verifies) as one word, "Parmana," which is fair at the marketing-copy level.
 
 ---
 
-### FAQ 4: "What if a more intelligent frontier model finds a way around the rules?"
+### FAQ 4: "What if a smarter frontier model finds a way around the rules?"
 **Claim:** Capability does not become authority; only the requested action is checked.
 **Verdict:** ✅ ACCURATE
 **Evidence:**
@@ -133,7 +138,7 @@ verifies) as one word, "Parmana," which is fair at the marketing-copy level.
 
 ---
 
-### FAQ 12: "Can Parmana run in our cloud or on our own infrastructure?"
+### FAQ 12: "Can Parmana run in our own cloud or infrastructure?"
 **Claim:** Designed to support deployment in environments that fit the customer's security and operational requirements, including cloud/infrastructure they control.
 **Verdict:** ✅ ACCURATE
 **Evidence:**
@@ -154,7 +159,17 @@ verifies) as one word, "Parmana," which is fair at the marketing-copy level.
 
 ---
 
-### FAQ 14: "What if Parmana disappears tomorrow?"
+### FAQ 14: "How do I know a signed authorization is real?"
+**Claim:** Parmana signs every authorization with Ed25519. Anyone can verify it independently by checking the signature against the public key and the decision record, no special tools needed.
+**Verdict:** ✅ ACCURATE
+**Evidence:**
+- `packages/crypto/src/providers/signature/Ed25519SignatureProvider.ts` implements the signing algorithm named in the claim.
+- `AuthorizationVerifier` (used by `EnvelopeVerifier.ts:137-139`) verifies against a `KeyObject` public key supplied by the caller (`EnvelopeVerifierOptions.publicKey`, `EnvelopeVerifier.ts:66-72`) — the verifier's own doc comment states it "proves only that Parmana authorized the request," a check the executing party runs itself against the public key, not a live call back to Parmana.
+**Conclusion:** Claim accurately reflects code behavior. This entry was added after the original 16-FAQ validation pass (see `FIXES_BEFORE_AFTER.md` Fix #2) and is validated here for the first time.
+
+---
+
+### FAQ 15: "What if Parmana disappears tomorrow?"
 **Claim:** Authority belongs to the business, not to Parmana; not a permanent source of authority.
 **Verdict:** ✅ ACCURATE
 **Evidence:** Same Dockerfile evidence as FAQ 12 — signing keys live outside Parmana's build artifact by design — plus `FilePolicyRepository.ts`, which reads policy definitions from a plain, customer-controlled directory (`policies/`, baked into the customer's own deployment per the Dockerfile's `PARMANA_POLICY_DIR`), not a Parmana-hosted central policy store.
@@ -162,7 +177,7 @@ verifies) as one word, "Parmana," which is fair at the marketing-copy level.
 
 ---
 
-### FAQ 15: "Does Parmana replace our existing payment or authorization systems?"
+### FAQ 16: "Does Parmana replace our existing payment or authorization systems?"
 **Claim:** No — works alongside existing systems, adds a control point.
 **Verdict:** ✅ ACCURATE
 **Evidence:**
@@ -171,7 +186,7 @@ verifies) as one word, "Parmana," which is fair at the marketing-copy level.
 
 ---
 
-### FAQ 16: "Can Parmana be used outside payments?"
+### FAQ 17: "Can Parmana be used outside payments?"
 **Claim:** Same approach can protect refunds, transfers, access changes, infrastructure operations, data movement, automated business workflows.
 **Verdict:** ✅ ACCURATE
 **Evidence:**
@@ -182,10 +197,18 @@ verifies) as one word, "Parmana," which is fair at the marketing-copy level.
 
 ---
 
+### FAQ 18: "How do I know the claims on this page are accurate?"
+**Claim:** Every technical claim on this page was checked, one by one, against Parmana's own implementation before publishing.
+**Verdict:** ✅ ACCURATE, self-referential
+**Evidence:** This is a claim about the validation process itself, not about `parmana-exp`. Its evidence is this document plus `SITE_CONTENT_VALIDATION.md` (which the FAQ links to directly), not a code file citation. It doesn't overclaim: the answer explicitly says `parmana-exp` is private, so a visitor is reading the write-up, not independently re-running the check against the source themselves.
+**Conclusion:** Accurate as a description of what happened in this and the sibling validation pass. Added after the original 16-FAQ validation, alongside FAQ 14, and validated here for the first time.
+
+---
+
 ## Accuracy Summary
 
-- Total FAQs: 16
-- Fully accurate: 16
+- Total FAQs: 18
+- Fully accurate: 18
 - Minor misleads: 0
 - Major issues: 0
 
@@ -202,5 +225,8 @@ would make the FAQ even harder to poke a hole in:
 1. **FAQ 9/10** could name that persistent evidence storage (Postgres/Supabase-backed) is what a real
    deployment uses, rather than leaving "verifiable evidence" as a claim a skeptical reader can't
    immediately place a mechanism behind.
-2. **FAQ 16** could be honest that GitHub/HubSpot support exists today as working connectors without
+2. **FAQ 17** could be honest that GitHub/HubSpot support exists today as working connectors without
    implying either is already running in a customer's production environment.
+
+FAQ 14 and FAQ 18 (added after the original pass) needed no correction either; see their entries
+above.

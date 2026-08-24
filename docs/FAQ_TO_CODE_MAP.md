@@ -21,6 +21,8 @@ below; `VerificationService.ts` doesn't exist anywhere in the repo — `Envelope
 | 11 | Kill switch vs. individual-action check | `execution-control/src/ConnectorPolicy.ts`, `execution-gateway/src/ExecutionGateway.ts` |
 | 12 | Can run in customer's cloud/infrastructure | `parmana-exp/Dockerfile`, `parmana-exp/docker/` |
 | 13 | Crypto can evolve without changing business rules | `crypto/src/providers/signature/Ed25519SignatureProvider.ts`, `Dilithium3SignatureProvider.ts`, `HybridSignatureProvider.ts`, `SignatureRegistry.ts`, `envelope-verifier/src/EnvelopeVerifier.ts` (`keyProvider`/`keyId` rotation) |
-| 14 | Authority belongs to the business, not Parmana | `parmana-exp/Dockerfile` (keys/ deliberately excluded from image), `policy/src/FilePolicyRepository.ts` |
-| 15 | Works alongside existing systems | `execution-gateway/src/Connector.ts` (interface doc comment), `execution-gateway/src/HttpConnector.ts` |
-| 16 | Can protect non-payment actions | `shared/src/domain/executable-content.ts`, `connector-github/src/`, `connector-hubspot/src/` |
+| 14 | Signed authorizations are Ed25519 and independently verifiable | `crypto/src/providers/signature/Ed25519SignatureProvider.ts`, `envelope-verifier/src/EnvelopeVerifier.ts` (public-key-based `AuthorizationVerifier`) |
+| 15 | Authority belongs to the business, not Parmana | `parmana-exp/Dockerfile` (keys/ deliberately excluded from image), `policy/src/FilePolicyRepository.ts` |
+| 16 | Works alongside existing systems | `execution-gateway/src/Connector.ts` (interface doc comment), `execution-gateway/src/HttpConnector.ts` |
+| 17 | Can protect non-payment actions | `shared/src/domain/executable-content.ts`, `connector-github/src/`, `connector-hubspot/src/` |
+| 18 | Site content claims were checked against the actual implementation | Not a `parmana-exp` code claim — this entry documents the validation process itself. See `FAQ_VALIDATION_COMPLETE.md` and `SITE_CONTENT_VALIDATION.md`, which the FAQ links to directly. |
