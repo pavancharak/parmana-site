@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { nav } from "@/lib/config";
 
 const links = [
-  { label: "Research", href: nav.blog },
+  { label: "Research", href: "#evidence" },
   { label: "Blog", href: nav.blog },
   { label: "Security", href: nav.security },
 ];
@@ -16,7 +16,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-border-light">
       <div className="max-w-container mx-auto flex items-center justify-between px-6 py-4">
-        <span className="text-lg font-bold text-text-primary">Parmana</span>
+        <span className="text-lg font-bold text-text-primary">
+          Parmana
+        </span>
 
         <nav className="hidden md:flex items-center gap-8">
           {links.map((link) => (
