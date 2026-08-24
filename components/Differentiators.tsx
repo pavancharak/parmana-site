@@ -6,19 +6,19 @@ import {
 
 const items = [
   {
-    title: "Credential Isolation",
+    title: "No Direct Access",
     icon: LockClosedIcon,
-    body: "No actor, AI, application, or otherwise, holds the actual execution credential. Requests generate intents only. Authorization and execution stay separate.",
+    body: "The agent can request a payment, but it never holds the credential that can move the money. The ability to execute stays separate from the agent.",
   },
   {
-    title: "Atomic Authorization",
+    title: "One Action, One Decision",
     icon: BoltIcon,
-    body: "No standing review or hold state. Execute immediately or refuse immediately, regardless of who or what requested it. No partial execution, no continuation after refusal.",
+    body: "Every payment is checked against your rules. It is either allowed or stopped. There is no partial approval and no continuing after a refusal.",
   },
   {
-    title: "Verifiable Enforcement",
+    title: "Proof Before Payment",
     icon: DocumentCheckIcon,
-    body: "Every authorization and every refusal produces independently verifiable evidence: cryptographic attestation, signed audit records. Authority is provable.",
+    body: "Parmana creates signed proof of the authorization before the action is executed. The decision can be independently verified.",
   },
 ];
 
@@ -26,8 +26,8 @@ export default function Differentiators() {
   return (
     <section id="differentiators" className="bg-white">
       <div className="max-w-container mx-auto px-6 py-12 md:py-16 lg:py-20">
-        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] text-text-primary text-center">
-          The challenge isn&apos;t intelligence. It&apos;s authority.
+        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] text-text-primary text-center max-w-[800px] mx-auto">
+          Before money moves, three things happen.
         </h2>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -36,22 +36,31 @@ export default function Differentiators() {
               key={item.title}
               className="rounded-lg bg-bg-light p-6 flex flex-col items-start gap-3"
             >
-              <item.icon className="h-10 w-10 text-primary" aria-hidden="true" />
-              <p className="text-lg font-bold text-text-primary">{item.title}</p>
-              <p className="text-sm leading-[1.6] text-text-secondary">{item.body}</p>
+              <item.icon
+                className="h-10 w-10 text-primary"
+                aria-hidden="true"
+              />
+
+              <p className="text-lg font-bold text-text-primary">
+                {item.title}
+              </p>
+
+              <p className="text-sm leading-[1.6] text-text-secondary">
+                {item.body}
+              </p>
             </div>
           ))}
         </div>
 
         <div className="mt-12 max-w-[800px] mx-auto text-center">
           <p className="text-base leading-[1.6] text-text-secondary">
-            AI can be intelligent without being in charge. Your business rules
-            still decide what it is allowed to do. Intelligence, whether AI,
-            application, or system, proposes. Your authorization rules decide.
-            Parmana enforces.
+            An agent can request an action. Your business rules decide whether
+            it is allowed. Parmana makes sure the action matches that decision
+            before it happens.
           </p>
+
           <p className="mt-4 text-sm font-bold text-text-primary">
-            Intelligence layer → Request → Policy layer → Authorization → Execution
+            Request → Check your rules → Authorize → Execute
           </p>
         </div>
       </div>

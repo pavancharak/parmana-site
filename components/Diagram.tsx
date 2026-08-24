@@ -2,32 +2,54 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import {
-  IdentificationIcon,
+  CreditCardIcon,
   ShieldCheckIcon,
+  DocumentCheckIcon,
   BuildingOffice2Icon,
 } from "@heroicons/react/24/outline";
 import { requestFlow, checkmarkPulse } from "@/lib/animations";
 
 const boxes = [
-  { label: "Any Actor", icon: IdentificationIcon },
-  { label: "Parmana", icon: ShieldCheckIcon },
-  { label: "Business System", icon: BuildingOffice2Icon },
+  {
+    label: "Payment Request",
+    icon: CreditCardIcon,
+  },
+  {
+    label: "Parmana",
+    icon: ShieldCheckIcon,
+  },
+  {
+    label: "Proof of Authorization",
+    icon: DocumentCheckIcon,
+  },
+  {
+    label: "Payment System",
+    icon: BuildingOffice2Icon,
+  },
 ];
 
 export default function Diagram({ compact = false }: { compact?: boolean }) {
   const reduceMotion = useReducedMotion();
 
   return (
-    <div className={compact ? "w-full" : "max-w-container mx-auto px-6 py-12 md:py-16 lg:py-20"}>
+    <div
+      className={
+        compact
+          ? "w-full"
+          : "max-w-container mx-auto px-6 py-12 md:py-16 lg:py-20"
+      }
+    >
       {!compact && (
         <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] text-text-primary text-center mb-12">
-          How authorization works
+          Before the payment happens
         </h2>
       )}
+
       <span className="sr-only">
-        Diagram: any actor, AI agent, human, application, or automated system, sends a
-        request. Parmana checks it against your authorization rules. The request either
-        proceeds to the business system or is refused.
+        Diagram: a payment request is sent to Parmana. Parmana checks the
+        request against business rules and creates proof of authorization.
+        The payment system can then verify the authorization before executing
+        the payment.
       </span>
 
       <div
@@ -47,7 +69,7 @@ export default function Diagram({ compact = false }: { compact?: boolean }) {
         {boxes.map((box, i) => (
           <div
             key={box.label}
-            className="relative z-10 flex flex-col items-center gap-3 rounded-lg border border-border-light bg-white px-6 py-6 w-full md:w-auto md:flex-1"
+            className="relative z-10 flex flex-col items-center justify-center gap-3 rounded-lg border border-border-light bg-white px-5 py-6 w-full md:flex-1 min-h-[150px]"
           >
             {i === 1 && (
               <motion.div
@@ -60,10 +82,25 @@ export default function Diagram({ compact = false }: { compact?: boolean }) {
                 </svg>
               </motion.div>
             )}
-            <box.icon className="h-12 w-12 text-text-primary" />
-            <span className="text-sm font-bold text-text-primary">{box.label}</span>
+
+            <box.icon className="h-10 w-10 text-text-primary" />
+
+            <span className="text-sm font-bold text-text-primary text-center max-w-[150px]">
+              {box.label}
+            </span>
           </div>
         ))}
+      </div>
+
+      <div className="mt-8 text-center">
+        <p className="text-base font-bold text-text-primary">
+          Request → Check your rules → Prove authorization → Execute
+        </p>
+
+        <p className="mt-2 text-sm leading-[1.6] text-text-secondary max-w-[640px] mx-auto">
+          The payment system verifies the authorization before the payment is
+          allowed to happen.
+        </p>
       </div>
     </div>
   );
