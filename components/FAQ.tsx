@@ -83,7 +83,7 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="bg-white border-t border-border-light">
+    <section id="faq" className="bg-white border-t border-border-light">
       <div className="max-w-container mx-auto px-6 py-12 md:py-16 lg:py-20">
         <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] text-text-primary text-center">
           Questions fintech teams ask
