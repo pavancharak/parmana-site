@@ -8,6 +8,7 @@ import NpciUap from "@/components/NpciUap";
 import Evidence from "@/components/Evidence";
 import WhatWeAreNot from "@/components/WhatWeAreNot";
 import Philosophy from "@/components/Philosophy";
+import FAQ from "@/components/FAQ";
 import BottomCTA from "@/components/BottomCTA";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <Evidence />
       <WhatWeAreNot />
       <Philosophy />
+      <FAQ />
       <BottomCTA />
     </main>
   );
