@@ -165,7 +165,8 @@ matches the real one.
 **Verdict:** 🌐 NOT CODE-VERIFIABLE — a description of the company's service/consulting engagement, not a claim about product mechanics. Nothing in `parmana-exp` confirms or denies what the team does with customers.
 
 **Claim:** "Working with fintech teams building agentic payments."
-**Verdict:** 🌐 NOT CODE-VERIFIABLE — this implies active customer engagements. That's a business/sales-pipeline fact, not something a codebase can confirm. Flagging this explicitly rather than silently passing it: this is the sentence closest to the "customer proof" gap identified in `FRESH_WEBSITE_AUDIT_REPORT.md` and deliberately deferred in `FIX7_CUSTOMER_PROOF_PLACEHOLDER.md`. Whoever owns the customer relationships should confirm this line is still accurate before it ships again.
+**Verdict:** 🌐 NOT CODE-VERIFIABLE — this implies active customer engagements. That's a business/sales-pipeline fact, not something a codebase can confirm. This is the sentence closest to the "customer proof" gap identified in `FRESH_WEBSITE_AUDIT_REPORT.md` and deliberately deferred in `FIX7_CUSTOMER_PROOF_PLACEHOLDER.md`.
+**Confirmed by site owner:** 2026-08-24 — accurate, still true. No copy change needed.
 
 ---
 
@@ -174,6 +175,5 @@ matches the real one.
 It didn't touch copy. Every claim above was already live on the site (several already validated in
 `FAQ_VALIDATION_COMPLETE.md`); this pass exists to show the same rigor was applied everywhere else on
 the page, not just the FAQ, and to draw an honest line between what `parmana-exp` can and can't
-settle. The one action item this surfaces: reconfirm the "working with fintech teams" line in
-`BottomCTA.tsx` is still true before the next deploy, since that's a claim about the business, not the
-code, and this pass can't verify it either way.
+settle. The one action item this surfaced, whether "working with fintech teams" in `BottomCTA.tsx`
+is still true, was confirmed accurate by the site owner on 2026-08-24. No open items remain.

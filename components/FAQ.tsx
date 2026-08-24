@@ -84,6 +84,27 @@ const faqs = [
     answer:
       "Yes. Say an agent requests revoking a user's database access rather than issuing a refund. Parmana checks that request the same way it checks a payment, against your rules, before it happens. The same approach covers refunds, transfers, access changes, infrastructure operations, data movement, and other automated business workflows.",
   },
+  {
+    question: "How do I know the claims on this page are accurate?",
+    answer: (
+      <>
+        Every technical claim on this page describing how Parmana works was
+        checked, one by one, against Parmana&apos;s own implementation before
+        publishing, not written by a marketing team and left unverified.{" "}
+        <a
+          href="https://github.com/pavancharak/parmana-site/blob/main/docs/SITE_CONTENT_VALIDATION.md"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-text-primary"
+        >
+          Read the validation write-up
+        </a>
+        . Parmana&apos;s implementation itself is private, so the write-up documents
+        what was checked and how, rather than something you can independently
+        re-run against the source yourself.
+      </>
+    ),
+  },
 ];
 
 export default function FAQ() {
