@@ -9,21 +9,42 @@ import WhatWeAreNot from "@/components/WhatWeAreNot";
 import Philosophy from "@/components/Philosophy";
 import FAQ from "@/components/FAQ";
 import BottomCTA from "@/components/BottomCTA";
+import Reveal from "@/components/Reveal";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Differentiators />
-      <AuthorizationGap />
-      <UseCases />
-      <ActorTable />
-      <NpciUap />
-      <Evidence />
-      <WhatWeAreNot />
-      <Philosophy />
-      <FAQ />
-      <BottomCTA />
+      <Reveal>
+        <Differentiators />
+      </Reveal>
+      <Reveal>
+        <AuthorizationGap />
+      </Reveal>
+      <Reveal>
+        <UseCases />
+      </Reveal>
+      <Reveal>
+        <ActorTable />
+      </Reveal>
+      <Reveal>
+        <NpciUap />
+      </Reveal>
+      <Reveal>
+        <Evidence />
+      </Reveal>
+      <Reveal>
+        <WhatWeAreNot />
+      </Reveal>
+      <Reveal>
+        <Philosophy />
+      </Reveal>
+      <Reveal>
+        <FAQ />
+      </Reveal>
+      <Reveal>
+        <BottomCTA />
+      </Reveal>
     </main>
   );
 }

@@ -60,9 +60,8 @@ export default function ActorTable() {
                 <tr
                   key={row.actor}
                   className={
-                    i !== rows.length - 1
-                      ? "border-b border-border-light"
-                      : ""
+                    "transition-colors hover:bg-bg-light" +
+                    (i !== rows.length - 1 ? " border-b border-border-light" : "")
                   }
                 >
                   <td className="px-6 py-4 text-sm font-bold text-text-primary">

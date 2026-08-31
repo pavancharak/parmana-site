@@ -45,7 +45,7 @@ export default function UseCases() {
           {useCases.map((useCase) => (
             <div
               key={useCase.name}
-              className="rounded-lg p-6 border border-border-light"
+              className="rounded-lg p-6 border border-border-light transition-all duration-200 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-black/5"
             >
               <useCase.icon
                 className="h-10 w-10 text-primary"

@@ -47,7 +47,7 @@ export default function Evidence() {
           {proof.map((item) => (
             <div
               key={item.title}
-              className="rounded-lg bg-white border border-border-light p-6 flex flex-col gap-3"
+              className="rounded-lg bg-white border border-border-light p-6 flex flex-col gap-3 transition-all duration-200 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-black/5"
             >
               <p className="text-xs font-bold uppercase tracking-wide text-primary">
                 {item.date}

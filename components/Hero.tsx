@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="bg-gradient-to-b from-bg-light to-white">
       <div className="max-w-container mx-auto px-6 py-12 md:py-16 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
+        <div className="animate-[fade-in-up_0.6s_ease-out_both]">
           <p className="text-sm font-bold uppercase tracking-wide text-primary">
             For fintech teams building agentic payments
           </p>
@@ -37,7 +37,7 @@ export default function Hero() {
           </a>
         </div>
 
-        <div>
+        <div className="animate-[fade-in-up_0.6s_ease-out_0.15s_both]">
           <Diagram compact />
         </div>
       </div>

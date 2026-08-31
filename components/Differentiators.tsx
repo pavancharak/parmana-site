@@ -34,7 +34,7 @@ export default function Differentiators() {
           {items.map((item) => (
             <div
               key={item.title}
-              className="rounded-lg bg-bg-light p-6 flex flex-col items-start gap-3"
+              className="rounded-lg bg-bg-light border border-transparent p-6 flex flex-col items-start gap-3 transition-all duration-200 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-black/5"
             >
               <item.icon
                 className="h-10 w-10 text-primary"

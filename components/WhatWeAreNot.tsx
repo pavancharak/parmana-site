@@ -29,7 +29,7 @@ export default function WhatWeAreNot() {
         </p>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[800px] mx-auto">
-          <div className="rounded-lg border border-border-light p-6">
+          <div className="rounded-lg border border-border-light p-6 transition-shadow duration-200 hover:shadow-lg hover:shadow-black/5">
             <p className="text-sm font-bold uppercase tracking-wide text-text-secondary">
               Parmana is not
             </p>
@@ -50,7 +50,7 @@ export default function WhatWeAreNot() {
             </ul>
           </div>
 
-          <div className="rounded-lg border border-border-light bg-bg-light p-6">
+          <div className="rounded-lg border border-border-light bg-bg-light p-6 transition-shadow duration-200 hover:shadow-lg hover:shadow-black/5">
             <p className="text-sm font-bold uppercase tracking-wide text-primary">
               Parmana is
             </p>
