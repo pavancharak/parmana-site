@@ -26,7 +26,7 @@ export default function Differentiators() {
   return (
     <section id="differentiators" className="bg-white">
       <div className="max-w-container mx-auto px-6 py-12 md:py-16 lg:py-20">
-        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] text-text-primary text-center max-w-[800px] mx-auto">
+        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] tracking-tight text-text-primary text-center max-w-[800px] mx-auto">
           Before money moves, three things happen.
         </h2>
 
@@ -34,7 +34,7 @@ export default function Differentiators() {
           {items.map((item) => (
             <div
               key={item.title}
-              className="rounded-lg bg-bg-light border border-transparent p-6 flex flex-col items-start gap-3 transition-all duration-200 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-black/5"
+              className="rounded-xl bg-bg-light border border-transparent p-6 flex flex-col items-start gap-3 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-black/5"
             >
               <item.icon
                 className="h-10 w-10 text-primary"

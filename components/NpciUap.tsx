@@ -2,7 +2,7 @@ export default function NpciUap() {
   return (
     <section className="bg-white">
       <div className="max-w-container mx-auto px-6 py-12 md:py-16 lg:py-20">
-        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] text-text-primary text-center max-w-[800px] mx-auto">
+        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] tracking-tight text-text-primary text-center max-w-[800px] mx-auto">
           A simple example: an agent booking a flight
         </h2>
 
@@ -24,7 +24,7 @@ export default function NpciUap() {
           </p>
         </div>
 
-        <div className="mt-10 max-w-[720px] mx-auto rounded-lg bg-bg-light p-6 md:p-8">
+        <div className="mt-10 max-w-[720px] mx-auto rounded-xl bg-bg-light p-6 md:p-8 shadow-sm">
           <p className="text-sm font-bold uppercase tracking-wide text-primary">
             What happens next
           </p>

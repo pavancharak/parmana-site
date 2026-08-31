@@ -47,7 +47,7 @@ export default function Header() {
         <div className="hidden md:block">
           <a
             href="#faq"
-            className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white hover:bg-primary-dark transition-colors"
+            className="inline-flex items-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-primary-dark hover:shadow-md transition-all"
           >
             Questions?
           </a>

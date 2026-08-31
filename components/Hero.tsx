@@ -9,7 +9,7 @@ export default function Hero() {
             For fintech teams building agentic payments
           </p>
 
-          <h1 className="mt-3 text-[32px] md:text-[40px] lg:text-[48px] font-bold leading-[1.2] text-text-primary">
+          <h1 className="mt-3 text-[32px] md:text-[40px] lg:text-[48px] font-bold leading-[1.2] tracking-tight text-text-primary">
             Adopt agentic payments without losing control.
           </h1>
 
@@ -31,7 +31,7 @@ export default function Hero() {
 
           <a
             href="#authorization-gap"
-            className="mt-8 inline-flex items-center justify-center rounded-lg bg-primary px-8 py-3 text-base font-bold text-white hover:bg-primary-dark transition-colors min-h-[48px]"
+            className="mt-8 inline-flex items-center justify-center rounded-lg bg-primary px-8 py-3 text-base font-bold text-white shadow-sm hover:bg-primary-dark hover:shadow-md transition-all min-h-[48px]"
           >
             See how it works
           </a>

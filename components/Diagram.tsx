@@ -40,7 +40,7 @@ export default function Diagram({ compact = false }: { compact?: boolean }) {
       }
     >
       {!compact && (
-        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] text-text-primary text-center mb-12">
+        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] tracking-tight text-text-primary text-center mb-12">
           Before the payment happens
         </h2>
       )}
@@ -69,7 +69,7 @@ export default function Diagram({ compact = false }: { compact?: boolean }) {
         {boxes.map((box, i) => (
           <div
             key={box.label}
-            className="relative z-10 flex flex-col items-center justify-center gap-3 rounded-lg border border-border-light bg-white px-5 py-6 w-full md:flex-1 min-h-[150px]"
+            className="relative z-10 flex flex-col items-center justify-center gap-3 rounded-xl border border-border-light bg-white shadow-sm px-5 py-6 w-full md:flex-1 min-h-[150px]"
           >
             {i === 1 && (
               <motion.div

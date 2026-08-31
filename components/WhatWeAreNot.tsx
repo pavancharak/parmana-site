@@ -19,7 +19,7 @@ export default function WhatWeAreNot() {
   return (
     <section className="bg-white">
       <div className="max-w-container mx-auto px-6 py-12 md:py-16 lg:py-20">
-        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] text-text-primary text-center max-w-[800px] mx-auto">
+        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] tracking-tight text-text-primary text-center max-w-[800px] mx-auto">
           Parmana does one important thing
         </h2>
 
@@ -29,7 +29,7 @@ export default function WhatWeAreNot() {
         </p>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[800px] mx-auto">
-          <div className="rounded-lg border border-border-light p-6 transition-shadow duration-200 hover:shadow-lg hover:shadow-black/5">
+          <div className="rounded-xl border border-border-light p-6 shadow-sm transition-shadow duration-200 hover:shadow-lg hover:shadow-black/5">
             <p className="text-sm font-bold uppercase tracking-wide text-text-secondary">
               Parmana is not
             </p>
@@ -50,7 +50,7 @@ export default function WhatWeAreNot() {
             </ul>
           </div>
 
-          <div className="rounded-lg border border-border-light bg-bg-light p-6 transition-shadow duration-200 hover:shadow-lg hover:shadow-black/5">
+          <div className="rounded-xl border border-border-light bg-bg-light p-6 shadow-sm transition-shadow duration-200 hover:shadow-lg hover:shadow-black/5">
             <p className="text-sm font-bold uppercase tracking-wide text-primary">
               Parmana is
             </p>

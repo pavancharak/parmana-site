@@ -32,7 +32,7 @@ export default function UseCases() {
   return (
     <section className="bg-white">
       <div className="max-w-container mx-auto px-6 py-12 md:py-16 lg:py-20">
-        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] text-text-primary text-center max-w-[800px] mx-auto">
+        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] tracking-tight text-text-primary text-center max-w-[800px] mx-auto">
           Start with the actions that move money.
         </h2>
 
@@ -45,7 +45,7 @@ export default function UseCases() {
           {useCases.map((useCase) => (
             <div
               key={useCase.name}
-              className="rounded-lg p-6 border border-border-light transition-all duration-200 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-black/5"
+              className="rounded-xl p-6 border border-border-light shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg hover:shadow-black/5"
             >
               <useCase.icon
                 className="h-10 w-10 text-primary"

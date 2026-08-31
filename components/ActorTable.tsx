@@ -30,7 +30,7 @@ export default function ActorTable() {
   return (
     <section className="bg-bg-light">
       <div className="max-w-container mx-auto px-6 py-12 md:py-16 lg:py-20">
-        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] text-text-primary text-center max-w-[900px] mx-auto">
+        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] tracking-tight text-text-primary text-center max-w-[900px] mx-auto">
           Whatever makes the request, your rules still decide.
         </h2>
 
@@ -39,7 +39,7 @@ export default function ActorTable() {
           a payment. Parmana checks the request before it can move money.
         </p>
 
-        <div className="mt-12 overflow-x-auto rounded-lg border border-border-light bg-white">
+        <div className="mt-12 overflow-x-auto rounded-xl border border-border-light bg-white shadow-sm">
           <table className="w-full text-left border-collapse min-w-[700px]">
             <thead>
               <tr className="border-b border-border-light">

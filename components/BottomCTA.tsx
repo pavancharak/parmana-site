@@ -4,7 +4,7 @@ export default function BottomCTA() {
   return (
     <section id="contact" className="border-t border-border-light">
       <div className="max-w-container mx-auto px-6 py-12 md:py-16 lg:py-20 text-center">
-        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] text-text-primary max-w-[800px] mx-auto">
+        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] tracking-tight text-text-primary max-w-[800px] mx-auto">
           Adopt agentic payment flows without losing control.
         </h2>
 
@@ -16,7 +16,7 @@ export default function BottomCTA() {
 
         <a
           href={`mailto:${founderEmail}?subject=Agentic%20Payment%20Flow`}
-          className="mt-8 inline-flex items-center justify-center rounded-lg bg-primary px-8 py-3 text-base font-bold text-white hover:bg-primary-dark transition-colors min-h-[48px]"
+          className="mt-8 inline-flex items-center justify-center rounded-lg bg-primary px-8 py-3 text-base font-bold text-white shadow-sm hover:bg-primary-dark hover:shadow-md transition-all min-h-[48px]"
         >
           Talk through your payment flow
         </a>
