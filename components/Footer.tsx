@@ -2,7 +2,6 @@ import { nav } from "@/lib/config";
 
 const links = [
   { label: "Docs", href: nav.docs },
-  { label: "Blog", href: nav.blog },
   { label: "Security", href: nav.security },
   { label: "Contact Founder", href: nav.founderLinkedIn },
 ];
