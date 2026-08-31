@@ -4,6 +4,7 @@ const links = [
   { label: "Docs", href: nav.docs },
   { label: "Blog", href: nav.blog },
   { label: "Security", href: nav.security },
+  { label: "Contact Founder", href: nav.founderLinkedIn },
 ];
 
 export default function Footer() {
@@ -17,6 +18,9 @@ export default function Footer() {
               key={link.label}
               href={link.href}
               className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+              {...(link.href.startsWith("http")
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
             >
               {link.label}
             </a>

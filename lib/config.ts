@@ -15,4 +15,5 @@ export const nav = {
   docs: "https://docs.parmanasystems.com",
   blog: "https://parmanasystems.substack.com",
   security: "https://execution-authority-gate.fly.dev/",
+  founderLinkedIn: "https://www.linkedin.com/in/pavancharak/",
 } as const;
