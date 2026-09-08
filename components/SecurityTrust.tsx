@@ -25,6 +25,11 @@ export default function SecurityTrust() {
           automatic.
         </h2>
 
+        <p className="mt-6 text-lg md:text-xl font-medium leading-[1.5] text-mint text-center max-w-[760px] mx-auto">
+          Our guarantee: unauthorized execution by autonomous systems is
+          structurally impossible inside the Parmana execution boundary.
+        </p>
+
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-mint">
