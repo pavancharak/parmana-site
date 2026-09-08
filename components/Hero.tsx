@@ -26,14 +26,19 @@ export default function Hero() {
 
           <div className="mt-8 space-y-5 text-lg md:text-xl leading-[1.55] text-paper/70 max-w-[620px]">
             <p>
-              You have authorization rules. Policies. Approval processes. Built to
-              define what&apos;s allowed. They work for humans. They work for AI
-              too.
+              You already have authorization rules, policies, and approval
+              processes. They define what your business allows.
             </p>
+
             <p>
-              You&apos;re not creating new rules. You&apos;re applying your existing
-              rules to AI, automatically.
+              They were built for humans. Parmana makes them enforceable for AI.
             </p>
+
+            <p>
+              You&apos;re not creating new rules for AI. You&apos;re applying
+              your existing rules to autonomous execution, automatically.
+            </p>
+
             <p className="text-mint font-medium">
               Execution stays within the bounds you set. No matter how fast it
               moves.
@@ -47,6 +52,7 @@ export default function Hero() {
             >
               See how it works
             </a>
+
             <a
               href={`mailto:${founderEmail}?subject=Request%20a%20demo`}
               className="inline-flex items-center justify-center rounded-md bg-mint px-8 py-3 text-base font-semibold text-navy shadow-sm hover:bg-paper hover:shadow-lg hover:shadow-mint/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[48px]"

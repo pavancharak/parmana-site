@@ -26,25 +26,25 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://parmanasystems.com"),
-  title: "Parmana | Your Infrastructure Is Already Ready",
+  title: "Parmana | Authorization Before Execution",
   description:
-    "Your authorization rules, policies, and approval processes already work for humans. Parmana applies them to AI, automatically. Execution stays within the bounds you set.",
+    "Your business already has authorization rules, policies, and approval processes. Parmana makes them enforceable for AI and autonomous systems before execution.",
   alternates: {
     canonical: "https://parmanasystems.com",
   },
   openGraph: {
-    title: "Parmana | Your Infrastructure Is Already Ready",
+    title: "Parmana | Authorization Before Execution",
     description:
-      "You're not creating new rules for AI. You're applying your existing rules to AI, automatically.",
+      "AI can act without being in charge. Parmana enforces your existing authorization rules before autonomous execution.",
     type: "website",
     url: "https://parmanasystems.com",
     images: ["https://parmanasystems.com/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Parmana | Your Infrastructure Is Already Ready",
+    title: "Parmana | Authorization Before Execution",
     description:
-      "You're not creating new rules for AI. You're applying your existing rules to AI, automatically.",
+      "AI can act without being in charge. Parmana enforces your existing authorization rules before autonomous execution.",
   },
   robots: "index, follow",
 };
@@ -55,7 +55,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${publicSans.variable} ${plexMono.variable}`}>
+    <html
+      lang="en"
+      className={`${fraunces.variable} ${publicSans.variable} ${plexMono.variable}`}
+    >
       <body className="bg-navy text-paper font-sans">
         <Header />
         {children}

@@ -6,22 +6,22 @@ const moments = [
     layer: "Your infrastructure",
     state: "closed" as const,
     headline: "You already have what matters",
-    body: "Payment approval limits. Compliance policies. Vendor lists. Refund thresholds. These define what's authorized. They work for your team. They're your infrastructure. And they're already ready for AI.",
+    body: "Payment approval limits. Compliance policies. Vendor lists. Refund thresholds. These already define what your business allows. They're your infrastructure. They're already ready to govern AI.",
     supporting: "Your rules exist. You don't need new ones.",
   },
   {
-    layer: "The application",
+    layer: "The enforcement layer",
     state: "checking" as const,
-    headline: "We apply your rules automatically",
-    body: "AI proposes. You define the policies. Parmana ensures the decision executes exactly the way your business systems already execute decisions. Purely deterministic. Either your rules are followed, or nothing executes beyond your policy. No exceptions.",
-    supporting: "Full control over every AI agent. Instant enforcement.",
+    headline: "We don't make the decision. We enforce yours.",
+    body: "AI proposes an action. Your existing policies determine whether it's authorized. Parmana evaluates the request against those rules and enforces the result deterministically. If the request is outside the authorized boundary, execution stops.",
+    supporting: "Your policy decides. Parmana enforces.",
   },
   {
     layer: "The proof",
     state: "open" as const,
     headline: "Proof before execution",
-    body: "Every time an AI requests an action, we prove authorization happened first. Cryptographic signature. Audit trail. Before execution reached your systems. You have the proof. Regulators have the proof. It's automatic.",
-    supporting: "Execution stays within bounds. Every time.",
+    body: "Every authorized action produces cryptographic proof before execution reaches your business systems. The authorization is signed, verifiable, and recorded as an audit trail automatically.",
+    supporting: "Authorization is proven before execution.",
   },
 ];
 
@@ -49,7 +49,9 @@ export default function ThreeMoments() {
                 {moment.headline}
               </h3>
 
-              <p className="text-sm leading-[1.65] text-paper/70">{moment.body}</p>
+              <p className="text-sm leading-[1.65] text-paper/70">
+                {moment.body}
+              </p>
 
               <p className="mt-auto pt-4 border-t border-divider text-sm font-medium text-mint">
                 {moment.supporting}
