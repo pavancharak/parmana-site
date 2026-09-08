@@ -8,13 +8,16 @@ export default {
       current: "currentColor",
       white: "#FFFFFF",
       black: "#000000",
-      primary: "#D97706",
-      "primary-dark": "#B45309",
-      "text-primary": "#1A1A1A",
-      "text-secondary": "#6B7280",
-      "bg-light": "#F3F4F6",
-      "border-light": "#E5E7EB",
-      success: "#10B981",
+      navy: "#0A0D10",
+      paper: "#F5F3F0",
+      mint: "#6FE3C4",
+      divider: "#1B2126",
+      gold: "#E8B34E",
+    },
+    fontFamily: {
+      serif: ["var(--font-fraunces)", "Georgia", "serif"],
+      sans: ["var(--font-public-sans)", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+      mono: ["var(--font-plex-mono)", "monospace"],
     },
     extend: {
       maxWidth: {

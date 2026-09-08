@@ -1,13 +1,8 @@
 import Hero from "@/components/Hero";
-import Differentiators from "@/components/Differentiators";
-import AuthorizationGap from "@/components/AuthorizationGap";
+import ThreeMoments from "@/components/ThreeMoments";
+import WhyNow from "@/components/WhyNow";
 import UseCases from "@/components/UseCases";
-import ActorTable from "@/components/ActorTable";
-import NpciUap from "@/components/NpciUap";
-import Evidence from "@/components/Evidence";
-import WhatWeAreNot from "@/components/WhatWeAreNot";
-import Philosophy from "@/components/Philosophy";
-import FAQ from "@/components/FAQ";
+import SecurityTrust from "@/components/SecurityTrust";
 import BottomCTA from "@/components/BottomCTA";
 import Reveal from "@/components/Reveal";
 
@@ -16,31 +11,16 @@ export default function Home() {
     <main>
       <Hero />
       <Reveal>
-        <Differentiators />
+        <ThreeMoments />
       </Reveal>
       <Reveal>
-        <AuthorizationGap />
+        <WhyNow />
       </Reveal>
       <Reveal>
         <UseCases />
       </Reveal>
       <Reveal>
-        <ActorTable />
-      </Reveal>
-      <Reveal>
-        <NpciUap />
-      </Reveal>
-      <Reveal>
-        <Evidence />
-      </Reveal>
-      <Reveal>
-        <WhatWeAreNot />
-      </Reveal>
-      <Reveal>
-        <Philosophy />
-      </Reveal>
-      <Reveal>
-        <FAQ />
+        <SecurityTrust />
       </Reveal>
       <Reveal>
         <BottomCTA />

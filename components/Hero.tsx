@@ -1,44 +1,50 @@
-import Diagram from "@/components/Diagram";
+import Gate from "@/components/Gate";
+import { founderEmail, nav } from "@/lib/config";
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-b from-bg-light to-white">
-      <div className="max-w-container mx-auto px-6 py-12 md:py-16 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div className="animate-[fade-in-up_0.6s_ease-out_both]">
-          <p className="text-sm font-bold uppercase tracking-wide text-primary">
-            For fintech teams building agentic payments
-          </p>
+    <section className="relative overflow-hidden bg-navy border-b border-divider">
+      <Gate
+        state="open"
+        className="pointer-events-none absolute -right-6 -top-6 h-40 w-40 opacity-20 md:h-56 md:w-56"
+      />
 
-          <h1 className="mt-3 text-[32px] md:text-[40px] lg:text-[48px] font-bold leading-[1.2] tracking-tight text-text-primary">
-            Adopt agentic payments without losing control.
+      <div className="relative max-w-container mx-auto px-6 py-16 md:py-20 lg:py-28">
+        <div className="max-w-[760px] animate-[fade-in-up_0.6s_ease-out_both]">
+          <h1 className="font-serif text-[32px] md:text-[44px] lg:text-[52px] font-semibold leading-[1.15] tracking-tight text-paper">
+            Your existing infrastructure is already ready for the agentic era.
           </h1>
 
-          <p className="mt-5 text-xl md:text-2xl font-bold leading-[1.35] text-text-primary max-w-[560px]">
-            Let agents request payments. Your business decides what can happen.
-          </p>
+          <div className="mt-8 space-y-5 text-lg md:text-xl leading-[1.55] text-paper/80 max-w-[620px]">
+            <p>
+              You have authorization rules. Policies. Approval processes. Built to
+              define what&apos;s allowed. They work for humans. They work for AI
+              too.
+            </p>
+            <p>
+              You&apos;re not creating new rules. You&apos;re applying your existing
+              rules to AI, automatically.
+            </p>
+            <p className="text-mint font-medium">
+              Execution stays within the bounds you set. No matter how fast it
+              moves.
+            </p>
+          </div>
 
-          <p className="mt-6 text-base md:text-lg leading-[1.6] text-text-secondary max-w-[560px]">
-            AI agents can initiate payments, refunds, transfers, and other
-            financial actions. Parmana checks each important action against
-            your business rules before it happens.
-          </p>
-
-          <p className="mt-4 text-base leading-[1.6] text-text-secondary max-w-[560px]">
-            If it is allowed, it proceeds. If it is not, it stops. The
-            authorization is recorded so your team can verify what was
-            approved before the action happened.
-          </p>
-
-          <a
-            href="#authorization-gap"
-            className="mt-8 inline-flex items-center justify-center rounded-lg bg-primary px-8 py-3 text-base font-bold text-white shadow-sm hover:bg-primary-dark hover:shadow-md transition-all min-h-[48px]"
-          >
-            See how it works
-          </a>
-        </div>
-
-        <div className="animate-[fade-in-up_0.6s_ease-out_0.15s_both]">
-          <Diagram compact />
+          <div className="mt-10 flex flex-col sm:flex-row gap-4">
+            <a
+              href={nav.product}
+              className="inline-flex items-center justify-center rounded-sm bg-paper px-8 py-3 text-base font-semibold text-mint hover:bg-mint hover:text-navy transition-colors min-h-[48px]"
+            >
+              See how it works
+            </a>
+            <a
+              href={`mailto:${founderEmail}?subject=Request%20a%20demo`}
+              className="inline-flex items-center justify-center rounded-sm bg-mint px-8 py-3 text-base font-semibold text-navy hover:bg-paper transition-colors min-h-[48px]"
+            >
+              Request demo
+            </a>
+          </div>
         </div>
       </div>
     </section>

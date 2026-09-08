@@ -1,29 +1,54 @@
-import { founderEmail } from "@/lib/config";
+import Gate from "@/components/Gate";
+import { founderEmail, nav } from "@/lib/config";
 
 export default function BottomCTA() {
   return (
-    <section id="contact" className="border-t border-border-light">
-      <div className="max-w-container mx-auto px-6 py-12 md:py-16 lg:py-20 text-center">
-        <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-bold leading-[1.3] tracking-tight text-text-primary max-w-[800px] mx-auto">
-          Adopt agentic payment flows without losing control.
+    <section id="contact" className="relative overflow-hidden bg-navy">
+      <Gate
+        state="open"
+        className="pointer-events-none absolute -left-8 -bottom-8 h-48 w-48 opacity-10"
+      />
+
+      <div className="relative max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24 text-center">
+        <h2 className="font-serif text-[26px] md:text-[32px] lg:text-[36px] font-semibold leading-[1.3] tracking-tight text-paper max-w-[820px] mx-auto">
+          Your infrastructure is already ready. What are you waiting for?
         </h2>
 
-        <p className="mt-4 text-base leading-[1.6] text-text-secondary max-w-[680px] mx-auto">
-          We help fintech teams design and test payment flows where AI agents
-          can act within clear business rules, without giving up control over
-          what actually gets executed.
+        <p className="mt-6 text-base leading-[1.65] text-paper/70 max-w-[720px] mx-auto">
+          You have authorization rules. Policies. Approval processes. They work
+          for humans. They work for AI. Same policies, automatic enforcement,
+          before execution. No rebuild needed. The regulatory window is open
+          right now, RBI&apos;s Jan 1, 2027 deadline and NPCI&apos;s Sep 8, 2026
+          UAP launch. Move while you can.
         </p>
 
-        <a
-          href={`mailto:${founderEmail}?subject=Agentic%20Payment%20Flow`}
-          className="mt-8 inline-flex items-center justify-center rounded-lg bg-primary px-8 py-3 text-base font-bold text-white shadow-sm hover:bg-primary-dark hover:shadow-md transition-all min-h-[48px]"
-        >
-          Talk through your payment flow
-        </a>
+        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+          <div>
+            <a
+              href={`mailto:${founderEmail}?subject=Request%20a%20demo`}
+              className="inline-flex items-center justify-center rounded-sm bg-mint px-8 py-3 text-base font-semibold text-navy hover:bg-paper transition-colors min-h-[48px]"
+            >
+              Request a demo
+            </a>
+            <p className="mt-2 text-xs text-paper/50">
+              See your infrastructure ready for AI in 30 minutes.
+            </p>
+          </div>
 
-        <p className="mt-4 text-sm text-text-secondary">
-          Working with fintech teams building agentic payments.
-        </p>
+          <div>
+            <a
+              href={nav.security}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-sm border border-mint px-8 py-3 text-base font-semibold text-mint hover:bg-mint hover:text-navy transition-colors min-h-[48px]"
+            >
+              Read the technical validation
+            </a>
+            <p className="mt-2 text-xs text-paper/50">
+              See the code audit proving our claims.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
