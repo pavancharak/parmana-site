@@ -92,10 +92,10 @@ export default function UseCases() {
               key={useCase.name}
               type="button"
               onClick={() => setActive(i)}
-              className={`rounded-sm px-5 py-2 text-sm font-medium transition-colors min-h-[44px] ${
+              className={`rounded-sm px-5 py-2 text-sm font-medium transition-all duration-200 min-h-[44px] ${
                 active === i
-                  ? "bg-mint text-navy"
-                  : "border border-divider text-paper/70 hover:border-mint/50"
+                  ? "bg-mint text-navy shadow-sm shadow-mint/25"
+                  : "border border-divider text-paper/70 hover:border-mint/50 hover:text-paper"
               }`}
             >
               {useCase.name}

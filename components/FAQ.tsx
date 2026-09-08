@@ -37,7 +37,7 @@ export default function FAQ() {
         <div className="mt-12 max-w-[800px] mx-auto divide-y divide-divider border-y border-divider">
           {faqs.map((faq) => (
             <details key={faq.question} className="group py-5">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-base md:text-lg font-semibold text-paper">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-base md:text-lg font-semibold text-paper transition-colors duration-200 hover:text-mint">
                 <span>{faq.question}</span>
                 <span
                   className="shrink-0 text-2xl font-normal text-mint transition-transform duration-200 group-open:rotate-45"

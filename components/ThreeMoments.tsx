@@ -41,7 +41,7 @@ export default function ThreeMoments() {
           {moments.map((moment) => (
             <div
               key={moment.headline}
-              className="rounded-sm border border-divider p-8 flex flex-col gap-4 transition-all duration-200 hover:-translate-y-1 hover:border-mint/40"
+              className="rounded-sm border border-divider p-8 flex flex-col gap-4 transition-all duration-200 hover:-translate-y-1 hover:border-mint/40 hover:shadow-[0_20px_45px_-20px_rgba(111,227,196,0.35)]"
             >
               <Gate state={moment.state} className="h-12 w-12" />
 

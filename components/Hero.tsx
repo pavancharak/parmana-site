@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-navy border-b border-divider">
       <Gate
         state="open"
-        className="pointer-events-none absolute -right-6 -top-6 h-40 w-40 opacity-20 md:h-56 md:w-56"
+        className="pointer-events-none absolute -right-6 -top-6 h-40 w-40 opacity-20 drop-shadow-[0_0_50px_rgba(111,227,196,0.25)] md:h-56 md:w-56"
       />
 
       <div className="relative max-w-container mx-auto px-6 py-16 md:py-20 lg:py-28">
@@ -34,13 +34,13 @@ export default function Hero() {
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <a
               href={nav.product}
-              className="inline-flex items-center justify-center rounded-sm bg-paper px-8 py-3 text-base font-semibold text-mint hover:bg-mint hover:text-navy transition-colors min-h-[48px]"
+              className="inline-flex items-center justify-center rounded-sm bg-paper px-8 py-3 text-base font-semibold text-mint shadow-sm hover:bg-mint hover:text-navy hover:shadow-lg hover:shadow-mint/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[48px]"
             >
               See how it works
             </a>
             <a
               href={`mailto:${founderEmail}?subject=Request%20a%20demo`}
-              className="inline-flex items-center justify-center rounded-sm bg-mint px-8 py-3 text-base font-semibold text-navy hover:bg-paper transition-colors min-h-[48px]"
+              className="inline-flex items-center justify-center rounded-sm bg-mint px-8 py-3 text-base font-semibold text-navy shadow-sm hover:bg-paper hover:shadow-lg hover:shadow-mint/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[48px]"
             >
               Request demo
             </a>

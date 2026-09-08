@@ -54,7 +54,7 @@ export default function MastercardChallenge() {
             {pillars.map((pillar) => (
               <div
                 key={pillar.name}
-                className="rounded-sm border border-divider p-8 flex flex-col gap-4"
+                className="rounded-sm border border-divider p-8 flex flex-col gap-4 transition-all duration-200 hover:-translate-y-1 hover:border-mint/40 hover:shadow-[0_20px_45px_-20px_rgba(111,227,196,0.35)]"
               >
                 <Gate state={pillar.state} className="h-12 w-12" />
                 <h3 className="font-serif text-xl font-semibold text-paper">
@@ -90,9 +90,12 @@ export default function MastercardChallenge() {
             href={nav.docs}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-block text-sm font-semibold text-mint hover:text-paper transition-colors"
+            className="group mt-6 inline-flex items-center gap-1 text-sm font-semibold text-mint hover:text-paper transition-colors duration-200"
           >
-            Read the technical validation →
+            Read the technical validation
+            <span className="transition-transform duration-200 group-hover:translate-x-1">
+              →
+            </span>
           </a>
         </div>
       </section>
@@ -104,7 +107,7 @@ export default function MastercardChallenge() {
           </h2>
           <a
             href={`mailto:${founderEmail}?subject=Mastercard%20Innovation%20Challenge%2C%20Question`}
-            className="mt-8 inline-flex items-center justify-center rounded-sm bg-mint px-8 py-3 text-base font-semibold text-navy hover:bg-paper transition-colors min-h-[48px]"
+            className="mt-8 inline-flex items-center justify-center rounded-sm bg-mint px-8 py-3 text-base font-semibold text-navy shadow-sm hover:bg-paper hover:shadow-lg hover:shadow-mint/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[48px]"
           >
             Contact the team
           </a>

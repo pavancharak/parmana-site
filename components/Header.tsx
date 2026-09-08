@@ -43,7 +43,7 @@ export default function Header() {
         <div className="hidden md:block">
           <a
             href={`mailto:${founderEmail}?subject=Request%20a%20demo`}
-            className="inline-flex items-center rounded-sm bg-mint px-6 py-3 text-sm font-semibold text-navy hover:bg-paper transition-colors"
+            className="inline-flex items-center rounded-sm bg-mint px-6 py-3 text-sm font-semibold text-navy shadow-sm hover:bg-paper hover:shadow-lg hover:shadow-mint/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
           >
             Request Demo
           </a>

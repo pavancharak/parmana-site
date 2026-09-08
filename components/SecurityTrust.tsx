@@ -74,9 +74,12 @@ export default function SecurityTrust() {
             href={nav.docs}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-block text-sm font-semibold text-mint hover:text-paper transition-colors"
+            className="group mt-4 inline-flex items-center gap-1 text-sm font-semibold text-mint hover:text-paper transition-colors duration-200"
           >
-            Download the full validation →
+            Download the full validation
+            <span className="transition-transform duration-200 group-hover:translate-x-1">
+              →
+            </span>
           </a>
           <p className="mt-6 font-serif text-lg font-semibold text-paper">
             Your infrastructure was built right. We just make it automatic for AI.
