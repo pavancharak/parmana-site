@@ -1,4 +1,5 @@
 import { nav } from "@/lib/config";
+import BoundaryDiagram from "@/components/BoundaryDiagram";
 
 const guarantees = [
   "Authorization verified before execution, not audited after",
@@ -35,6 +36,7 @@ export default function SecurityTrust() {
             <p className="text-sm font-semibold uppercase tracking-wide text-mint">
               Technical guarantees
             </p>
+            <BoundaryDiagram />
             <ul className="mt-5 space-y-3">
               {guarantees.map((item) => (
                 <li key={item} className="flex gap-3 text-sm leading-[1.6] text-paper/70">

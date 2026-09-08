@@ -1,4 +1,5 @@
 import Gate from "@/components/Gate";
+import FlowDiagram from "@/components/FlowDiagram";
 
 const moments = [
   {
@@ -31,6 +32,10 @@ export default function ThreeMoments() {
         <h2 className="font-serif text-[26px] md:text-[32px] font-semibold leading-[1.3] tracking-tight text-paper text-center max-w-[760px] mx-auto">
           Why your infrastructure is already ready
         </h2>
+
+        <div className="mt-10">
+          <FlowDiagram />
+        </div>
 
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-6">
           {moments.map((moment) => (
