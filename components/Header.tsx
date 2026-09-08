@@ -30,7 +30,7 @@ export default function Header() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-paper/80 hover:text-mint transition-colors"
+              className="text-sm text-paper/70 hover:text-mint transition-colors"
               {...(link.href.startsWith("http")
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}
@@ -43,7 +43,7 @@ export default function Header() {
         <div className="hidden md:block">
           <a
             href={`mailto:${founderEmail}?subject=Request%20a%20demo`}
-            className="inline-flex items-center rounded-sm bg-mint px-6 py-3 text-sm font-semibold text-navy shadow-sm hover:bg-paper hover:shadow-lg hover:shadow-mint/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+            className="inline-flex items-center rounded-md bg-mint px-6 py-3 text-sm font-semibold text-navy shadow-sm hover:bg-paper hover:shadow-lg hover:shadow-mint/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
           >
             Request Demo
           </a>
@@ -66,7 +66,7 @@ export default function Header() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-paper/80"
+              className="text-sm text-paper/70"
               onClick={() => setOpen(false)}
               {...(link.href.startsWith("http")
                 ? { target: "_blank", rel: "noopener noreferrer" }
@@ -78,7 +78,7 @@ export default function Header() {
 
           <a
             href={`mailto:${founderEmail}?subject=Request%20a%20demo`}
-            className="inline-flex items-center justify-center rounded-sm bg-mint px-6 py-3 text-sm font-semibold text-navy min-h-[48px]"
+            className="inline-flex items-center justify-center rounded-md bg-mint px-6 py-3 text-sm font-semibold text-navy min-h-[48px]"
             onClick={() => setOpen(false)}
           >
             Request Demo

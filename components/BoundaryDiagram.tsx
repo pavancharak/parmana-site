@@ -13,7 +13,7 @@ export default function BoundaryDiagram() {
         {sources.map((source) => (
           <div
             key={source}
-            className="rounded-sm border border-divider px-2 py-3 text-center text-xs font-medium text-paper/70"
+            className="rounded-md border border-divider px-2 py-3 text-center text-xs font-medium text-paper/70"
           >
             {source}
           </div>
@@ -22,14 +22,14 @@ export default function BoundaryDiagram() {
 
       <div className="h-5 w-px bg-mint" aria-hidden="true" />
 
-      <div className="flex items-center gap-3 rounded-sm border-2 border-mint px-5 py-4">
+      <div className="flex items-center gap-3 rounded-md border-2 border-mint px-5 py-4">
         <Gate state="checking" className="h-9 w-9 shrink-0" />
         <p className="text-sm font-medium text-paper">Parmana boundary</p>
       </div>
 
       <div className="h-5 w-px bg-divider" aria-hidden="true" />
 
-      <div className="rounded-sm border border-divider px-6 py-4 text-center">
+      <div className="rounded-md border border-divider px-6 py-4 text-center">
         <p className="text-sm font-medium text-paper/70">Your business systems</p>
       </div>
 

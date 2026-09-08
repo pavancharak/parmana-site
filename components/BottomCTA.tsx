@@ -26,7 +26,7 @@ export default function BottomCTA() {
           <div>
             <a
               href={`mailto:${founderEmail}?subject=Request%20a%20demo`}
-              className="inline-flex items-center justify-center rounded-sm bg-mint px-8 py-3 text-base font-semibold text-navy shadow-sm hover:bg-paper hover:shadow-lg hover:shadow-mint/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[48px]"
+              className="inline-flex items-center justify-center rounded-md bg-mint px-8 py-3 text-base font-semibold text-navy shadow-sm hover:bg-paper hover:shadow-lg hover:shadow-mint/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[48px]"
             >
               Request a demo
             </a>
@@ -40,7 +40,7 @@ export default function BottomCTA() {
               href={nav.docs}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-sm border border-mint px-8 py-3 text-base font-semibold text-mint hover:bg-mint hover:text-navy hover:shadow-lg hover:shadow-mint/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[48px]"
+              className="inline-flex items-center justify-center rounded-md border border-mint px-8 py-3 text-base font-semibold text-mint hover:bg-mint hover:text-navy hover:shadow-lg hover:shadow-mint/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[48px]"
             >
               Read the technical validation
             </a>

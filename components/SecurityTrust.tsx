@@ -19,8 +19,13 @@ const personas = [
 
 export default function SecurityTrust() {
   return (
-    <section id="security" className="bg-navy border-b border-divider">
-      <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
+    <section id="security" className="relative overflow-hidden bg-navy border-b border-divider">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-0 h-[320px] w-[640px] -translate-x-1/2 rounded-full bg-mint/10 blur-[140px]"
+      />
+
+      <div className="relative max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
         <h2 className="font-serif text-[26px] md:text-[32px] font-semibold leading-[1.3] tracking-tight text-paper text-center max-w-[820px] mx-auto">
           Your infrastructure doesn&apos;t need to change. We just make enforcement
           automatic.
@@ -65,7 +70,7 @@ export default function SecurityTrust() {
         </div>
 
         <div className="mt-14 max-w-[760px] mx-auto text-center border-t border-divider pt-10">
-          <p className="text-base leading-[1.65] text-paper/80">
+          <p className="text-base leading-[1.65] text-paper/70">
             This isn&apos;t theoretical. A code audit (Sep 8, 2026) validates the
             entire architecture: authorization happens outside your business
             systems, before execution is reached.

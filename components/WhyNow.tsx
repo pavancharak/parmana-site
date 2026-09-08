@@ -29,7 +29,7 @@ export default function WhyNow() {
 
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <p className="text-base leading-[1.65] text-paper/80">
+            <p className="text-base leading-[1.65] text-paper/70">
               Three ways to deploy AI with your existing policies.
             </p>
 
@@ -42,12 +42,12 @@ export default function WhyNow() {
               ))}
             </ol>
 
-            <p className="mt-6 text-base leading-[1.65] text-paper/80">
+            <p className="mt-6 text-base leading-[1.65] text-paper/70">
               Your infrastructure already supports option three. You don&apos;t need
               to wait. You don&apos;t need to rebuild. You&apos;re ready now.
             </p>
 
-            <p className="mt-4 text-base leading-[1.65] text-paper/80">
+            <p className="mt-4 text-base leading-[1.65] text-paper/70">
               The regulatory window is closing fast, RBI&apos;s Jan 1, 2027
               deadline. The market window is opening now, NPCI&apos;s Sep 8, 2026
               launch. Move while you have the advantage.

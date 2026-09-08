@@ -56,15 +56,15 @@ function CycleTimeBars({
     >
       <div className="flex items-center gap-3">
         <span className="w-24 shrink-0 text-xs text-paper/50">Before</span>
-        <div className="h-3 flex-1 rounded-sm bg-divider">
-          <div className="h-3 w-full rounded-sm bg-paper/30" />
+        <div className="h-3 flex-1 rounded-md bg-divider">
+          <div className="h-3 w-full rounded-md bg-paper/30" />
         </div>
         <span className="w-24 shrink-0 text-xs text-paper/70">{beforeLabel}</span>
       </div>
       <div className="flex items-center gap-3">
         <span className="w-24 shrink-0 text-xs text-mint">With Parmana</span>
-        <div className="h-3 flex-1 rounded-sm bg-divider">
-          <div className="h-3 w-[10%] rounded-sm bg-mint" />
+        <div className="h-3 flex-1 rounded-md bg-divider">
+          <div className="h-3 w-[10%] rounded-md bg-mint" />
         </div>
         <span className="w-24 shrink-0 text-xs font-semibold text-mint">{afterLabel}</span>
       </div>
@@ -82,7 +82,7 @@ export default function UseCases() {
         <h2 className="font-serif text-[26px] md:text-[32px] font-semibold leading-[1.3] tracking-tight text-paper text-center max-w-[820px] mx-auto">
           What this looks like in practice
         </h2>
-        <p className="mt-3 text-base text-paper/60 text-center">
+        <p className="mt-3 text-base text-paper/70 text-center">
           Your policies already define this.
         </p>
 
@@ -92,7 +92,7 @@ export default function UseCases() {
               key={useCase.name}
               type="button"
               onClick={() => setActive(i)}
-              className={`rounded-sm px-5 py-2 text-sm font-medium transition-all duration-200 min-h-[44px] ${
+              className={`rounded-md px-5 py-2 text-sm font-medium transition-all duration-200 min-h-[44px] ${
                 active === i
                   ? "bg-mint text-navy shadow-sm shadow-mint/25"
                   : "border border-divider text-paper/70 hover:border-mint/50 hover:text-paper"
@@ -103,7 +103,7 @@ export default function UseCases() {
           ))}
         </div>
 
-        <div className="mt-10 rounded-sm border border-divider p-8 md:p-10 max-w-[820px] mx-auto">
+        <div className="mt-10 rounded-md border border-divider p-8 md:p-10 max-w-[820px] mx-auto">
           <p className="text-xs uppercase tracking-wide font-mono text-mint">
             {current.subtitle}
           </p>

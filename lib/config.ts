@@ -15,6 +15,6 @@ export const nav = {
   founderLinkedIn: "https://www.linkedin.com/in/pavancharak/",
   product: "#product",
   whyNow: "#why-now",
-  company: "#security",
+  company: "#contact",
   mastercardChallenge: "/mastercard-challenge",
 } as const;

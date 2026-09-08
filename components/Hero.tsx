@@ -4,6 +4,15 @@ import { founderEmail, nav } from "@/lib/config";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-navy border-b border-divider">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-40 right-[-10%] h-[420px] w-[420px] rounded-full bg-mint/20 blur-[120px]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-40 left-[-10%] h-[360px] w-[360px] rounded-full bg-gold/10 blur-[120px]"
+      />
+
       <Gate
         state="open"
         className="pointer-events-none absolute -right-6 -top-6 h-40 w-40 opacity-20 drop-shadow-[0_0_50px_rgba(111,227,196,0.25)] md:h-56 md:w-56"
@@ -15,7 +24,7 @@ export default function Hero() {
             Your existing infrastructure is already ready for the agentic era.
           </h1>
 
-          <div className="mt-8 space-y-5 text-lg md:text-xl leading-[1.55] text-paper/80 max-w-[620px]">
+          <div className="mt-8 space-y-5 text-lg md:text-xl leading-[1.55] text-paper/70 max-w-[620px]">
             <p>
               You have authorization rules. Policies. Approval processes. Built to
               define what&apos;s allowed. They work for humans. They work for AI
@@ -34,13 +43,13 @@ export default function Hero() {
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <a
               href={nav.product}
-              className="inline-flex items-center justify-center rounded-sm bg-paper px-8 py-3 text-base font-semibold text-mint shadow-sm hover:bg-mint hover:text-navy hover:shadow-lg hover:shadow-mint/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[48px]"
+              className="inline-flex items-center justify-center rounded-md bg-paper px-8 py-3 text-base font-semibold text-mint shadow-sm hover:bg-mint hover:text-navy hover:shadow-lg hover:shadow-mint/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[48px]"
             >
               See how it works
             </a>
             <a
               href={`mailto:${founderEmail}?subject=Request%20a%20demo`}
-              className="inline-flex items-center justify-center rounded-sm bg-mint px-8 py-3 text-base font-semibold text-navy shadow-sm hover:bg-paper hover:shadow-lg hover:shadow-mint/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[48px]"
+              className="inline-flex items-center justify-center rounded-md bg-mint px-8 py-3 text-base font-semibold text-navy shadow-sm hover:bg-paper hover:shadow-lg hover:shadow-mint/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[48px]"
             >
               Request demo
             </a>
