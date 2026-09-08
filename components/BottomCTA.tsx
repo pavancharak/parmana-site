@@ -11,15 +11,16 @@ export default function BottomCTA() {
 
       <div className="relative max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24 text-center">
         <h2 className="font-serif text-[26px] md:text-[32px] lg:text-[36px] font-semibold leading-[1.3] tracking-tight text-paper max-w-[820px] mx-auto">
-          Your infrastructure is already ready. What are you waiting for?
+          Your authorization infrastructure is already ready.
         </h2>
 
         <p className="mt-6 text-base leading-[1.65] text-paper/70 max-w-[720px] mx-auto">
-          You have authorization rules. Policies. Approval processes. They work
-          for humans. They work for AI. Same policies, automatic enforcement,
-          before execution. No rebuild needed. The regulatory window is open
-          right now, RBI&apos;s Jan 1, 2027 deadline and NPCI&apos;s Sep 8, 2026
-          UAP launch. Move while you can.
+          You have the rules. You have the policies. You have the approval
+          processes. Parmana makes them enforceable for AI and autonomous
+          systems before execution.
+          <br />
+          <br />
+          No rebuild. No new rulebook. No new authority granted to AI.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
@@ -30,8 +31,10 @@ export default function BottomCTA() {
             >
               Request a demo
             </a>
+
             <p className="mt-2 text-xs text-paper/50">
-              See your infrastructure ready for AI in 30 minutes.
+              See your existing authorization infrastructure controlling an AI
+              agent in 30 minutes.
             </p>
           </div>
 
@@ -44,8 +47,9 @@ export default function BottomCTA() {
             >
               Read the technical validation
             </a>
+
             <p className="mt-2 text-xs text-paper/50">
-              See the code audit proving our claims.
+              See the code audit proving the enforcement boundary.
             </p>
           </div>
         </div>

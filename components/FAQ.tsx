@@ -2,27 +2,27 @@ const faqs = [
   {
     question: "Is Parmana AI powered?",
     answer:
-      "No, deliberately not. The check that decides whether an action executes is a deterministic rule evaluation, not a model. AI can be the thing making the request, but it is never the thing deciding whether the request is authorized. That is what makes the result provable rather than probabilistic.",
+      "No, deliberately not. The decision that determines whether an action executes is a deterministic rule evaluation, not a model. AI can make the request, but it is never the authority deciding whether that request is authorized. That makes the result provable rather than probabilistic.",
   },
   {
     question: "Do we need to rebuild our authorization rules?",
     answer:
-      "No. Your existing approval limits, compliance policies, and vendor lists are what Parmana checks against. There is no new policy framework to design or new governance process to adopt, we apply the rules you already have.",
+      "No. Your existing approval limits, compliance policies, vendor lists, and other authorization rules are what Parmana checks against. Your business systems and policies stay in place. Parmana adds the enforcement boundary.",
   },
   {
     question: "Does Parmana stop AI agents from acting?",
     answer:
-      "No. If a request follows the rules you have set, it clears automatically. If it does not, it is refused. Parmana is built to help you adopt agentic execution with control, not to block it.",
+      "No. Authorized requests proceed. Requests that fall outside your existing rules are refused. Parmana is designed to enable autonomous execution without giving the AI authority of its own.",
   },
   {
     question: "What if the AI agent itself is compromised?",
     answer:
-      "Parmana does not need to trust the agent. A compromised agent can still only make a request, the same request any agent would make. That request is checked against your rules before execution, the same as any other. The agent never holds the authority to execute on its own.",
+      "Parmana does not need to trust the agent. A compromised agent can submit requests, but it cannot manufacture authorization. Every request is checked against your rules before execution, and the agent never holds the authority to execute on its own.",
   },
   {
     question: "How is this different from an audit log?",
     answer:
-      "An audit log tells you, after the fact, that an action happened. Parmana tells you, before it happened, that the action was allowed under your rules, and records that decision as proof. One is a record of what occurred. The other is evidence of what was allowed to occur.",
+      "An audit log records what happened after the fact. Parmana verifies whether an action is authorized before it happens and records cryptographic proof of that authorization. One records an event. The other enforces the boundary before execution.",
   },
 ];
 
@@ -39,6 +39,7 @@ export default function FAQ() {
             <details key={faq.question} className="group py-5">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-base md:text-lg font-semibold text-paper transition-colors duration-200 hover:text-mint">
                 <span>{faq.question}</span>
+
                 <span
                   className="shrink-0 text-2xl font-normal text-mint transition-transform duration-200 group-open:rotate-45"
                   aria-hidden="true"

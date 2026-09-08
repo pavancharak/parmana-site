@@ -7,11 +7,13 @@ const useCases = [
     name: "Payments",
     subtitle: "Your approval limit",
     infrastructure:
-      "Finance team approves vendor payments up to ₹50 lakhs. Threshold set. Approval chain defined. Takes 5 to 7 days.",
+      "Finance policy defines the authorization conditions for vendor payments up to ₹50 lakhs. Threshold set. Approval chain defined. Takes 5 to 7 days.",
     withParmana:
-      "Same threshold. AI-requested payments up to ₹50 lakhs clear automatically. Same rigor. Same policy. Instant execution.",
-    outcome: "Payment cycle: 5 to 7 days → same day. ₹2 to 5 crore working capital freed.",
-    proof: "Cryptographic signature proves authorization happened before execution. Audit trail automatic.",
+      "AI requests the payment. Parmana verifies the request against the existing authorization conditions. If authorized, execution proceeds. If not, execution stops.",
+    outcome:
+      "Authorized payment execution moves from a 5 to 7 day process toward same-day execution, without changing the underlying policy.",
+    proof:
+      "Cryptographic proof records that authorization was verified before execution reached the business system.",
     beforeLabel: "5 to 7 days",
     afterLabel: "Same day",
   },
@@ -19,11 +21,13 @@ const useCases = [
     name: "Disputes",
     subtitle: "Your refund policy",
     infrastructure:
-      "Support team refunds up to ₹5,000 per customer per month. Policy documented. Approval gates exist. Takes 24 hours.",
+      "Support policy allows refunds up to ₹5,000 per customer per month. Policy documented. Approval conditions defined. Takes up to 24 hours.",
     withParmana:
-      "Same ₹5,000 limit. AI-requested refunds clear automatically. Same policy enforced. Instant execution.",
-    outcome: "Refund SLA: 24 hours → instant. Customer satisfaction improves 30 to 40%.",
-    proof: "Your policy didn't change. We just prove it was followed before execution.",
+      "AI requests the refund. Parmana checks the request against the existing refund policy. Authorized requests proceed. Requests outside the policy are refused.",
+    outcome:
+      "Refund SLA: up to 24 hours → instant execution when the request satisfies the existing policy.",
+    proof:
+      "Your refund policy does not change. Parmana verifies that the authorization conditions were satisfied before execution.",
     beforeLabel: "24 hours",
     afterLabel: "Instant",
   },
@@ -33,9 +37,11 @@ const useCases = [
     infrastructure:
       "Procurement approves orders from 250 pre-vetted vendors. Approval list maintained. Takes 2 to 3 days per order.",
     withParmana:
-      "Same vendor list. AI-requested orders from approved vendors clear automatically. Same governance. Instant execution.",
-    outcome: "Order-to-execution: 2 to 3 days → same day. Inventory planning improves.",
-    proof: "Your vendor list is your rule. Every AI-requested order is checked against it. Cryptographic proof before order executes.",
+      "AI requests an order. Parmana checks the requested vendor against the existing approved list. Authorized orders proceed. Unapproved vendors are blocked.",
+    outcome:
+      "Order-to-execution: 2 to 3 days → same day for requests that satisfy the existing authorization policy.",
+    proof:
+      "Your vendor list remains the rule. Every AI-requested order is checked against it, with cryptographic proof before execution.",
     beforeLabel: "2 to 3 days",
     afterLabel: "Same day",
   },
@@ -55,18 +61,31 @@ function CycleTimeBars({
       className="mt-3 space-y-2"
     >
       <div className="flex items-center gap-3">
-        <span className="w-24 shrink-0 text-xs text-paper/50">Before</span>
+        <span className="w-24 shrink-0 text-xs text-paper/50">
+          Before
+        </span>
+
         <div className="h-3 flex-1 rounded-md bg-divider">
           <div className="h-3 w-full rounded-md bg-paper/30" />
         </div>
-        <span className="w-24 shrink-0 text-xs text-paper/70">{beforeLabel}</span>
+
+        <span className="w-24 shrink-0 text-xs text-paper/70">
+          {beforeLabel}
+        </span>
       </div>
+
       <div className="flex items-center gap-3">
-        <span className="w-24 shrink-0 text-xs text-mint">With Parmana</span>
+        <span className="w-24 shrink-0 text-xs text-mint">
+          With Parmana
+        </span>
+
         <div className="h-3 flex-1 rounded-md bg-divider">
           <div className="h-3 w-[10%] rounded-md bg-mint" />
         </div>
-        <span className="w-24 shrink-0 text-xs font-semibold text-mint">{afterLabel}</span>
+
+        <span className="w-24 shrink-0 text-xs font-semibold text-mint">
+          {afterLabel}
+        </span>
       </div>
     </div>
   );
@@ -82,8 +101,9 @@ export default function UseCases() {
         <h2 className="font-serif text-[26px] md:text-[32px] font-semibold leading-[1.3] tracking-tight text-paper text-center max-w-[820px] mx-auto">
           What this looks like in practice
         </h2>
+
         <p className="mt-3 text-base text-paper/70 text-center">
-          Your policies already define this.
+          Your policies already define the authority.
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-3">
@@ -110,23 +130,38 @@ export default function UseCases() {
 
           <div className="mt-6 space-y-6">
             <div>
-              <p className="text-sm font-semibold text-paper">Your infrastructure:</p>
+              <p className="text-sm font-semibold text-paper">
+                Your infrastructure:
+              </p>
+
               <p className="mt-2 text-sm leading-[1.65] text-paper/70">
                 {current.infrastructure}
               </p>
             </div>
 
             <div>
-              <p className="text-sm font-semibold text-paper">With Parmana:</p>
+              <p className="text-sm font-semibold text-paper">
+                With Parmana:
+              </p>
+
               <p className="mt-2 text-sm leading-[1.65] text-paper/70">
                 {current.withParmana}
               </p>
             </div>
 
             <div className="pt-4 border-t border-divider">
-              <p className="text-sm font-semibold text-mint">Outcome:</p>
-              <p className="mt-2 text-sm leading-[1.65] text-paper/70">{current.outcome}</p>
-              <CycleTimeBars beforeLabel={current.beforeLabel} afterLabel={current.afterLabel} />
+              <p className="text-sm font-semibold text-mint">
+                Outcome:
+              </p>
+
+              <p className="mt-2 text-sm leading-[1.65] text-paper/70">
+                {current.outcome}
+              </p>
+
+              <CycleTimeBars
+                beforeLabel={current.beforeLabel}
+                afterLabel={current.afterLabel}
+              />
             </div>
 
             <p className="text-xs font-mono leading-[1.6] text-paper/50">

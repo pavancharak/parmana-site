@@ -1,21 +1,21 @@
 const options = [
   "Rebuild everything (18 months, millions, risky)",
   "Lock down AI (slow, safe, pointless)",
-  "Verify authorization automatically (30 to 60 days, your existing rules, proven)",
+  "Enforce authorization automatically (30 to 60 days, your existing rules, proven)",
 ];
 
 const proofPoints = [
   {
     title: "You're ready",
-    body: "Your authorization rules, policies, and processes exist. No new infrastructure needed.",
+    body: "Your authorization rules, policies, and approval processes already exist. Your business systems stay in place. Parmana adds the enforcement boundary.",
   },
   {
     title: "Code-validated",
-    body: "The check happens outside your business systems, proved through a Sep 8, 2026 code audit. A security flaw in your systems can't be used to bypass it.",
+    body: "The authorization check happens outside your business systems, before execution is reached. A security flaw inside those systems cannot grant authority that Parmana did not authorize.",
   },
   {
     title: "Regulatory tailwind",
-    body: "RBI's Jan 1, 2027 liability framework, the FCA Supercharged Sandbox (Oct to Nov 2026), and NPCI's UAP (Sep 8, 2026) all reward early movers.",
+    body: "Regulatory and market momentum is accelerating around autonomous payments, AI governance, and controlled agentic execution. The opportunity is to apply your existing controls before autonomous systems act.",
   },
 ];
 
@@ -30,12 +30,15 @@ export default function WhyNow() {
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <p className="text-base leading-[1.65] text-paper/70">
-              Three ways to deploy AI with your existing policies.
+              Three ways to deploy AI with your existing authorization.
             </p>
 
             <ol className="mt-5 space-y-3">
               {options.map((option, i) => (
-                <li key={option} className="flex gap-3 text-sm leading-[1.6] text-paper/70">
+                <li
+                  key={option}
+                  className="flex gap-3 text-sm leading-[1.6] text-paper/70"
+                >
                   <span className="font-mono text-mint">{i + 1}.</span>
                   <span>{option}</span>
                 </li>
@@ -43,22 +46,26 @@ export default function WhyNow() {
             </ol>
 
             <p className="mt-6 text-base leading-[1.65] text-paper/70">
-              Your infrastructure already supports option three. You don&apos;t need
-              to wait. You don&apos;t need to rebuild. You&apos;re ready now.
+              Your infrastructure already supports option three. You don&apos;t
+              need to replace your authorization systems or create a parallel
+              policy framework.
             </p>
 
             <p className="mt-4 text-base leading-[1.65] text-paper/70">
-              The regulatory window is closing fast, RBI&apos;s Jan 1, 2027
-              deadline. The market window is opening now, NPCI&apos;s Sep 8, 2026
-              launch. Move while you have the advantage.
+              The opportunity is simple: keep the rules you already trust and
+              make them enforceable before autonomous execution.
             </p>
           </div>
 
           <div className="space-y-6">
             {proofPoints.map((point) => (
               <div key={point.title} className="border-l-2 border-mint pl-5">
-                <p className="font-serif text-lg font-semibold text-paper">{point.title}</p>
-                <p className="mt-2 text-sm leading-[1.6] text-paper/70">{point.body}</p>
+                <p className="font-serif text-lg font-semibold text-paper">
+                  {point.title}
+                </p>
+                <p className="mt-2 text-sm leading-[1.6] text-paper/70">
+                  {point.body}
+                </p>
               </div>
             ))}
           </div>
