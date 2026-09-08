@@ -38,6 +38,14 @@ export default function Footer() {
             {founderEmail}
           </a>
           <p className="mt-1 text-paper/50">{founderPhone}</p>
+          <a
+            href={nav.founderLinkedIn}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-1 block text-paper/50 hover:text-mint transition-colors"
+          >
+            Pavan Charak
+          </a>
         </div>
       </div>
     </footer>
