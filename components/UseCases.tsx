@@ -9,7 +9,7 @@ const useCases = [
     infrastructure:
       "Finance team approves vendor payments up to ₹50 lakhs. Threshold set. Approval chain defined. Takes 5 to 7 days.",
     withParmana:
-      "Same threshold. AI approves up to ₹50 lakhs, automatically. Same rigor. Same policy. Instant execution.",
+      "Same threshold. AI-requested payments up to ₹50 lakhs clear automatically. Same rigor. Same policy. Instant execution.",
     outcome: "Payment cycle: 5 to 7 days → same day. ₹2 to 5 crore working capital freed.",
     proof: "Cryptographic signature proves authorization happened before execution. Audit trail automatic.",
   },
@@ -19,7 +19,7 @@ const useCases = [
     infrastructure:
       "Support team refunds up to ₹5,000 per customer per month. Policy documented. Approval gates exist. Takes 24 hours.",
     withParmana:
-      "Same ₹5,000 limit. AI approves refunds automatically. Same policy enforced. Instant execution.",
+      "Same ₹5,000 limit. AI-requested refunds clear automatically. Same policy enforced. Instant execution.",
     outcome: "Refund SLA: 24 hours → instant. Customer satisfaction improves 30 to 40%.",
     proof: "Your policy didn't change. We just prove it was followed before execution.",
   },
@@ -29,9 +29,9 @@ const useCases = [
     infrastructure:
       "Procurement approves orders from 250 pre-vetted vendors. Approval list maintained. Takes 2 to 3 days per order.",
     withParmana:
-      "Same vendor list. AI orders from approved vendors automatically. Same governance. Instant execution.",
+      "Same vendor list. AI-requested orders from approved vendors clear automatically. Same governance. Instant execution.",
     outcome: "Order-to-execution: 2 to 3 days → same day. Inventory planning improves.",
-    proof: "Your vendor list is your rule. AI agents follow it. Cryptographic proof before order executes.",
+    proof: "Your vendor list is your rule. Every AI-requested order is checked against it. Cryptographic proof before order executes.",
   },
 ];
 

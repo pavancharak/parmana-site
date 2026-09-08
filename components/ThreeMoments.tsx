@@ -19,7 +19,7 @@ const moments = [
     layer: "The proof",
     state: "open" as const,
     headline: "Proof before execution",
-    body: "Every time an AI acts, we prove authorization happened first. Cryptographic signature. Audit trail. Before execution reached your systems. You have the proof. Regulators have the proof. It's automatic.",
+    body: "Every time an AI requests an action, we prove authorization happened first. Cryptographic signature. Audit trail. Before execution reached your systems. You have the proof. Regulators have the proof. It's automatic.",
     supporting: "Execution stays within bounds. Every time.",
   },
 ];
