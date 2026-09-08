@@ -64,7 +64,7 @@ export default function SecurityTrust() {
             systems, before execution is reached.
           </p>
           <a
-            href={nav.security}
+            href={nav.docs}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-block text-sm font-semibold text-mint hover:text-paper transition-colors"

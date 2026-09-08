@@ -12,7 +12,6 @@ export const founderPhone = "+91 97179 94459";
 export const nav = {
   docs: "https://docs.parmanasystems.com",
   blog: "https://parmanasystems.substack.com",
-  security: "https://execution-authority-gate.fly.dev/",
   founderLinkedIn: "https://www.linkedin.com/in/pavancharak/",
   product: "#product",
   whyNow: "#why-now",

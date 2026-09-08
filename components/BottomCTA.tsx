@@ -37,7 +37,7 @@ export default function BottomCTA() {
 
           <div>
             <a
-              href={nav.security}
+              href={nav.docs}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-sm border border-mint px-8 py-3 text-base font-semibold text-mint hover:bg-mint hover:text-navy transition-colors min-h-[48px]"

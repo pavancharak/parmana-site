@@ -87,7 +87,7 @@ export default function MastercardChallenge() {
             when asked, we do not want a judge to have to guess which is which.
           </p>
           <a
-            href={nav.security}
+            href={nav.docs}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 inline-block text-sm font-semibold text-mint hover:text-paper transition-colors"
