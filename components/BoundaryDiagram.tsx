@@ -34,7 +34,8 @@ export default function BoundaryDiagram() {
       </div>
 
       <p className="mt-3 max-w-[400px] text-center text-xs leading-[1.6] text-paper/50">
-        Security vulnerabilities inside your business systems sit outside this boundary.
+        Even if your business systems have a security flaw, it can&apos;t be used
+        to skip this check.
       </p>
     </div>
   );

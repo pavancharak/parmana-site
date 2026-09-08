@@ -3,8 +3,8 @@ import BoundaryDiagram from "@/components/BoundaryDiagram";
 
 const guarantees = [
   "Authorization verified before execution, not audited after",
-  "Boundary sits outside your business systems, verified by code audit",
-  "Security vulnerabilities in your systems are orthogonal to our authorization boundary",
+  "The check happens outside your business systems, verified by code audit",
+  "A security flaw in your systems can't be used to bypass this check",
   "Single-use, time-bounded, revocable credentials (session-isolated)",
   "Ed25519 cryptographic signing (ML-DSA/Dilithium3 available for quantum-readiness)",
   "Instant audit trail (who, what, when, proof), automatic for every execution",

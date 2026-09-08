@@ -11,7 +11,7 @@ const proofPoints = [
   },
   {
     title: "Code-validated",
-    body: "The boundary sits outside your business systems, proved through a Sep 8, 2026 code audit. Security vulnerabilities in your systems are orthogonal to our authorization boundary.",
+    body: "The check happens outside your business systems, proved through a Sep 8, 2026 code audit. A security flaw in your systems can't be used to bypass it.",
   },
   {
     title: "Regulatory tailwind",
