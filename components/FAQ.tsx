@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "Does Parmana stop AI agents from acting?",
     answer:
-      "No. If a request matches the rules you have set, it clears automatically. If it does not, it is refused. Parmana is built to help you adopt agentic execution with control, not to block it.",
+      "No. If a request follows the rules you have set, it clears automatically. If it does not, it is refused. Parmana is built to help you adopt agentic execution with control, not to block it.",
   },
   {
     question: "What if the AI agent itself is compromised?",
@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "How is this different from an audit log?",
     answer:
-      "An audit log tells you, after the fact, that an action happened. Parmana tells you, before it happened, that the action matched your rules, and records that decision as proof. One is a record of what occurred. The other is evidence of what was allowed to occur.",
+      "An audit log tells you, after the fact, that an action happened. Parmana tells you, before it happened, that the action was allowed under your rules, and records that decision as proof. One is a record of what occurred. The other is evidence of what was allowed to occur.",
   },
 ];
 
