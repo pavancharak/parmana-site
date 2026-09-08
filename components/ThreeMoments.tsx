@@ -12,8 +12,8 @@ const moments = [
     layer: "The application",
     state: "checking" as const,
     headline: "We apply your rules automatically",
-    body: "AI proposes a ₹15 crore payment. Your rule says ₹10 crore. We check: is this authorized? Answer: no. Execution stops. Same rule your team follows. Now automatic for AI. No new policy.",
-    supporting: "Same rule. Instant enforcement.",
+    body: "AI proposes. You define the policies. Parmana ensures the decision executes exactly the way your business systems already execute decisions. Purely deterministic. Either your rules are followed, or nothing executes beyond your policy. No exceptions.",
+    supporting: "Full control over every AI agent. Instant enforcement.",
   },
   {
     layer: "The proof",
