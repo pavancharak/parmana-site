@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import CoreProblems from "@/components/CoreProblems";
 import ThreeMoments from "@/components/ThreeMoments";
 import ThatsIt from "@/components/ThatsIt";
 import WhyNow from "@/components/WhyNow";
@@ -12,6 +13,9 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <Reveal>
+        <CoreProblems />
+      </Reveal>
       <Reveal>
         <ThreeMoments />
       </Reveal>
