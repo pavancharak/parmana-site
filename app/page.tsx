@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import ThreeMoments from "@/components/ThreeMoments";
+import ThatsIt from "@/components/ThatsIt";
 import WhyNow from "@/components/WhyNow";
 import UseCases from "@/components/UseCases";
 import SecurityTrust from "@/components/SecurityTrust";
@@ -13,6 +14,9 @@ export default function Home() {
       <Hero />
       <Reveal>
         <ThreeMoments />
+      </Reveal>
+      <Reveal>
+        <ThatsIt />
       </Reveal>
       <Reveal>
         <WhyNow />
