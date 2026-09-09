@@ -1,9 +1,9 @@
 export const colors = {
   navy: "#0A0D10",
-  paper: "#F6F9FC",
+  paper: "#F5F3F0",
   mint: "#6FE3C4",
-  mintDeep: "#1E715B",
-  divider: "#E3E8EE",
+  mintDeep: "#2E9B7D",
+  divider: "#DAD5CB",
   gold: "#E8B34E",
 } as const;
 

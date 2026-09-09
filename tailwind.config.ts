@@ -9,10 +9,10 @@ export default {
       white: "#FFFFFF",
       black: "#000000",
       navy: "#0A0D10",
-      paper: "#F6F9FC",
+      paper: "#F5F3F0",
       mint: "#6FE3C4",
-      "mint-deep": "#1E715B",
-      divider: "#E3E8EE",
+      "mint-deep": "#2E9B7D",
+      divider: "#DAD5CB",
       gold: "#E8B34E",
     },
     fontFamily: {
