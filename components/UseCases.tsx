@@ -61,29 +61,29 @@ function CycleTimeBars({
       className="mt-3 space-y-2"
     >
       <div className="flex items-center gap-3">
-        <span className="w-24 shrink-0 text-xs text-paper/50">
+        <span className="w-24 shrink-0 text-xs text-navy/50">
           Before
         </span>
 
         <div className="h-3 flex-1 rounded-md bg-divider">
-          <div className="h-3 w-full rounded-md bg-paper/30" />
+          <div className="h-3 w-full rounded-md bg-navy/25" />
         </div>
 
-        <span className="w-24 shrink-0 text-xs tabular-nums text-paper/70">
+        <span className="w-24 shrink-0 text-xs tabular-nums text-navy/70">
           {beforeLabel}
         </span>
       </div>
 
       <div className="flex items-center gap-3">
-        <span className="w-24 shrink-0 text-xs text-mint">
+        <span className="w-24 shrink-0 text-xs text-mint-deep">
           With Parmana
         </span>
 
         <div className="h-3 flex-1 rounded-md bg-divider">
-          <div className="h-3 w-[10%] rounded-md bg-mint" />
+          <div className="h-3 w-[10%] rounded-md bg-mint-deep" />
         </div>
 
-        <span className="w-24 shrink-0 text-xs font-semibold tabular-nums text-mint">
+        <span className="w-24 shrink-0 text-xs font-semibold tabular-nums text-mint-deep">
           {afterLabel}
         </span>
       </div>
@@ -96,13 +96,13 @@ export default function UseCases() {
   const current = useCases[active];
 
   return (
-    <section id="use-cases" className="bg-navy border-b border-divider">
+    <section id="use-cases" className="bg-paper border-b border-divider">
       <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
-        <h2 className="font-serif text-[26px] md:text-[32px] font-semibold leading-[1.3] tracking-tight text-paper text-center max-w-[820px] mx-auto">
+        <h2 className="font-serif text-[26px] md:text-[32px] font-semibold leading-[1.3] tracking-tight text-navy text-center max-w-[820px] mx-auto">
           What this looks like in practice
         </h2>
 
-        <p className="mt-3 text-base text-paper/70 text-center">
+        <p className="mt-3 text-base text-navy/70 text-center">
           Your policies already define the authority.
         </p>
 
@@ -115,7 +115,7 @@ export default function UseCases() {
               className={`rounded-md px-5 py-2 text-sm font-medium transition-all duration-200 min-h-[44px] ${
                 active === i
                   ? "bg-mint text-navy shadow-sm shadow-mint/25"
-                  : "border border-divider text-paper/70 hover:border-mint/50 hover:text-paper"
+                  : "border border-divider text-navy/70 hover:border-mint/50 hover:text-navy"
               }`}
             >
               {useCase.name}
@@ -124,37 +124,37 @@ export default function UseCases() {
         </div>
 
         <div className="mt-10 rounded-md border border-divider p-8 md:p-10 max-w-[820px] mx-auto">
-          <p className="text-xs uppercase tracking-wide font-mono text-mint">
+          <p className="text-xs uppercase tracking-wide font-mono text-mint-deep">
             {current.subtitle}
           </p>
 
           <div className="mt-6 space-y-6">
             <div>
-              <p className="text-sm font-semibold text-paper">
+              <p className="text-sm font-semibold text-navy">
                 Your infrastructure:
               </p>
 
-              <p className="mt-2 text-sm leading-[1.65] text-paper/70">
+              <p className="mt-2 text-sm leading-[1.65] text-navy/70">
                 {current.infrastructure}
               </p>
             </div>
 
             <div>
-              <p className="text-sm font-semibold text-paper">
+              <p className="text-sm font-semibold text-navy">
                 With Parmana:
               </p>
 
-              <p className="mt-2 text-sm leading-[1.65] text-paper/70">
+              <p className="mt-2 text-sm leading-[1.65] text-navy/70">
                 {current.withParmana}
               </p>
             </div>
 
             <div className="pt-4 border-t border-divider">
-              <p className="text-sm font-semibold text-mint">
+              <p className="text-sm font-semibold text-mint-deep">
                 Outcome:
               </p>
 
-              <p className="mt-2 text-sm leading-[1.65] text-paper/70">
+              <p className="mt-2 text-sm leading-[1.65] text-navy/70">
                 {current.outcome}
               </p>
 
@@ -164,7 +164,7 @@ export default function UseCases() {
               />
             </div>
 
-            <p className="text-xs font-mono leading-[1.6] text-paper/50">
+            <p className="text-xs font-mono leading-[1.6] text-navy/50">
               {current.proof}
             </p>
           </div>

@@ -15,11 +15,11 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-navy border-b border-divider">
+    <header className="sticky top-0 z-50 w-full bg-paper border-b border-divider">
       <div className="max-w-container mx-auto flex items-center justify-between px-6 py-4">
         <a
           href="/"
-          className="font-serif text-lg font-semibold text-paper hover:text-mint transition-colors"
+          className="font-serif text-lg font-semibold text-navy hover:text-mint-deep transition-colors"
           aria-label="Parmana home"
         >
           Parmana
@@ -30,7 +30,7 @@ export default function Header() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-paper/70 hover:text-mint transition-colors"
+              className="text-sm text-navy/70 hover:text-mint-deep transition-colors"
               {...(link.href.startsWith("http")
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}
@@ -43,7 +43,7 @@ export default function Header() {
         <div className="hidden md:block">
           <a
             href={`mailto:${founderEmail}?subject=Request%20a%20demo`}
-            className="inline-flex items-center rounded-md bg-mint px-6 py-3 text-sm font-semibold text-navy shadow-sm hover:bg-paper hover:shadow-lg hover:shadow-mint/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+            className="inline-flex items-center rounded-md bg-mint px-6 py-3 text-sm font-semibold text-navy shadow-sm hover:bg-navy hover:text-paper hover:shadow-lg hover:shadow-mint/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
           >
             Request Demo
           </a>
@@ -51,7 +51,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="md:hidden flex h-12 w-12 items-center justify-center text-paper"
+          className="md:hidden flex h-12 w-12 items-center justify-center text-navy"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -66,7 +66,7 @@ export default function Header() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-paper/70"
+              className="text-sm text-navy/70"
               onClick={() => setOpen(false)}
               {...(link.href.startsWith("http")
                 ? { target: "_blank", rel: "noopener noreferrer" }

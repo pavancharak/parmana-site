@@ -12,10 +12,10 @@ export default function Footer() {
     <footer className="border-t border-divider">
       <div className="max-w-container mx-auto flex flex-col md:flex-row items-center justify-between gap-6 px-6 py-10">
         <div>
-          <a href="/" className="font-serif text-lg font-semibold text-paper">
+          <a href="/" className="font-serif text-lg font-semibold text-navy">
             Parmana
           </a>
-          <p className="mt-2 text-xs text-paper/50">© 2026 Parmana Systems</p>
+          <p className="mt-2 text-xs text-navy/50">© 2026 Parmana Systems</p>
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-6">
@@ -23,7 +23,7 @@ export default function Footer() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-paper/70 hover:text-mint transition-colors"
+              className="text-sm text-navy/70 hover:text-mint-deep transition-colors"
               {...(link.href.startsWith("http")
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}
@@ -33,16 +33,16 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="text-sm text-paper/70 text-center md:text-right">
-          <a href={`mailto:${founderEmail}`} className="hover:text-mint transition-colors">
+        <div className="text-sm text-navy/70 text-center md:text-right">
+          <a href={`mailto:${founderEmail}`} className="hover:text-mint-deep transition-colors">
             {founderEmail}
           </a>
-          <p className="mt-1 text-paper/50">{founderPhone}</p>
+          <p className="mt-1 text-navy/50">{founderPhone}</p>
           <a
             href={nav.founderLinkedIn}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-1 block text-paper/50 hover:text-mint transition-colors"
+            className="mt-1 block text-navy/50 hover:text-mint-deep transition-colors"
           >
             Pavan Charak
           </a>

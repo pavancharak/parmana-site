@@ -42,14 +42,14 @@ p {
 }
 
 body {
-  color: #f5f3f0;
+  color: #0a0d10;
   background:
-    radial-gradient(circle at 1px 1px, rgba(245, 243, 240, 0.05) 1px, transparent 0) 0 0 / 28px 28px,
-    #0a0d10;
+    radial-gradient(circle at 1px 1px, rgba(10, 13, 16, 0.06) 1px, transparent 0) 0 0 / 28px 28px,
+    #f5f3f0;
 }
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #6fe3c4;
+  outline: 2px solid #1e715b;
   outline-offset: 2px;
 }

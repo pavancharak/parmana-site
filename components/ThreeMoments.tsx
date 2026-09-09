@@ -27,9 +27,9 @@ const moments = [
 
 export default function ThreeMoments() {
   return (
-    <section id="product" className="bg-navy border-b border-divider">
+    <section id="product" className="bg-paper border-b border-divider">
       <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
-        <h2 className="font-serif text-[26px] md:text-[32px] font-semibold leading-[1.3] tracking-tight text-paper text-center max-w-[760px] mx-auto">
+        <h2 className="font-serif text-[26px] md:text-[32px] font-semibold leading-[1.3] tracking-tight text-navy text-center max-w-[760px] mx-auto">
           Why your infrastructure is already ready
         </h2>
 
@@ -45,19 +45,19 @@ export default function ThreeMoments() {
             >
               <Gate state={moment.state} className="h-12 w-12" />
 
-              <h3 className="font-serif text-xl font-semibold text-paper">
+              <h3 className="font-serif text-xl font-semibold text-navy">
                 {moment.headline}
               </h3>
 
-              <p className="text-sm leading-[1.65] text-paper/70">
+              <p className="text-sm leading-[1.65] text-navy/70">
                 {moment.body}
               </p>
 
-              <p className="mt-auto pt-4 border-t border-divider text-sm font-medium text-mint">
+              <p className="mt-auto pt-4 border-t border-divider text-sm font-medium text-mint-deep">
                 {moment.supporting}
               </p>
 
-              <p className="text-xs uppercase tracking-wide text-paper/50 font-mono">
+              <p className="text-xs uppercase tracking-wide text-navy/50 font-mono">
                 {moment.layer}
               </p>
             </div>

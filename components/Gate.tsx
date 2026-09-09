@@ -23,8 +23,8 @@ export default function Gate({
       role="img"
       aria-label={`Gate glyph, ${state} state`}
     >
-      <rect x="6" y="10" width="4" height="44" fill="#F5F3F0" opacity="0.5" />
-      <line x1="10" y1="54" x2="52" y2="54" stroke="#F5F3F0" strokeWidth="4" opacity="0.5" />
+      <rect x="6" y="10" width="4" height="44" fill="#0A0D10" opacity="0.35" />
+      <line x1="10" y1="54" x2="52" y2="54" stroke="#0A0D10" strokeWidth="4" opacity="0.35" />
       <g
         style={{
           transformOrigin: "10px 54px",

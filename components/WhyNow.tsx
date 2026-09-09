@@ -21,15 +21,15 @@ const proofPoints = [
 
 export default function WhyNow() {
   return (
-    <section id="why-now" className="bg-navy border-b border-divider">
+    <section id="why-now" className="bg-paper border-b border-divider">
       <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
-        <h2 className="font-serif text-[26px] md:text-[32px] font-semibold leading-[1.3] tracking-tight text-paper text-center max-w-[760px] mx-auto">
+        <h2 className="font-serif text-[26px] md:text-[32px] font-semibold leading-[1.3] tracking-tight text-navy text-center max-w-[760px] mx-auto">
           Why you&apos;re already ready right now
         </h2>
 
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <p className="text-base leading-[1.65] text-paper/70">
+            <p className="text-base leading-[1.65] text-navy/70">
               Three ways to deploy AI with your existing authorization.
             </p>
 
@@ -37,21 +37,21 @@ export default function WhyNow() {
               {options.map((option, i) => (
                 <li
                   key={option}
-                  className="flex gap-3 text-sm leading-[1.6] text-paper/70"
+                  className="flex gap-3 text-sm leading-[1.6] text-navy/70"
                 >
-                  <span className="font-mono text-mint">{i + 1}.</span>
+                  <span className="font-mono text-mint-deep">{i + 1}.</span>
                   <span>{option}</span>
                 </li>
               ))}
             </ol>
 
-            <p className="mt-6 text-base leading-[1.65] text-paper/70">
+            <p className="mt-6 text-base leading-[1.65] text-navy/70">
               Your infrastructure already supports option three. You don&apos;t
               need to replace your authorization systems or create a parallel
               policy framework.
             </p>
 
-            <p className="mt-4 text-base leading-[1.65] text-paper/70">
+            <p className="mt-4 text-base leading-[1.65] text-navy/70">
               The opportunity is simple: keep the rules you already trust and
               make them enforceable before autonomous execution.
             </p>
@@ -60,10 +60,10 @@ export default function WhyNow() {
           <div className="space-y-6">
             {proofPoints.map((point) => (
               <div key={point.title} className="border-l-2 border-mint pl-5">
-                <p className="font-serif text-lg font-semibold text-paper">
+                <p className="font-serif text-lg font-semibold text-navy">
                   {point.title}
                 </p>
-                <p className="mt-2 text-sm leading-[1.6] text-paper/70">
+                <p className="mt-2 text-sm leading-[1.6] text-navy/70">
                   {point.body}
                 </p>
               </div>

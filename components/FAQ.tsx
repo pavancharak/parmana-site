@@ -28,27 +28,27 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section id="faq" className="bg-navy border-b border-divider">
+    <section id="faq" className="bg-paper border-b border-divider">
       <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
-        <h2 className="font-serif text-[26px] md:text-[32px] font-semibold leading-[1.3] tracking-tight text-paper text-center max-w-[760px] mx-auto">
+        <h2 className="font-serif text-[26px] md:text-[32px] font-semibold leading-[1.3] tracking-tight text-navy text-center max-w-[760px] mx-auto">
           Questions teams ask
         </h2>
 
         <div className="mt-12 max-w-[800px] mx-auto divide-y divide-divider border-y border-divider">
           {faqs.map((faq) => (
             <details key={faq.question} className="group py-5">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-base md:text-lg font-semibold text-paper transition-colors duration-200 hover:text-mint">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-base md:text-lg font-semibold text-navy transition-colors duration-200 hover:text-mint-deep">
                 <span>{faq.question}</span>
 
                 <span
-                  className="shrink-0 text-2xl font-normal text-mint transition-transform duration-200 group-open:rotate-45"
+                  className="shrink-0 text-2xl font-normal text-mint-deep transition-transform duration-200 group-open:rotate-45"
                   aria-hidden="true"
                 >
                   +
                 </span>
               </summary>
 
-              <p className="mt-4 max-w-[720px] text-sm md:text-base leading-[1.6] text-paper/70">
+              <p className="mt-4 max-w-[720px] text-sm md:text-base leading-[1.6] text-navy/70">
                 {faq.answer}
               </p>
             </details>

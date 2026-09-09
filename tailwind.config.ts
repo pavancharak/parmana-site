@@ -11,7 +11,8 @@ export default {
       navy: "#0A0D10",
       paper: "#F5F3F0",
       mint: "#6FE3C4",
-      divider: "#1B2126",
+      "mint-deep": "#1E715B",
+      divider: "#DAD5CB",
       gold: "#E8B34E",
     },
     fontFamily: {

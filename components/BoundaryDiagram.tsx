@@ -13,7 +13,7 @@ export default function BoundaryDiagram() {
         {sources.map((source) => (
           <div
             key={source}
-            className="rounded-md border border-divider px-2 py-3 text-center text-xs font-medium text-paper/70"
+            className="rounded-md border border-divider px-2 py-3 text-center text-xs font-medium text-navy/70"
           >
             {source}
           </div>
@@ -24,16 +24,16 @@ export default function BoundaryDiagram() {
 
       <div className="flex items-center gap-3 rounded-md border-2 border-mint px-5 py-4">
         <Gate state="checking" className="h-9 w-9 shrink-0" />
-        <p className="text-sm font-medium text-paper">Parmana boundary</p>
+        <p className="text-sm font-medium text-navy">Parmana boundary</p>
       </div>
 
       <div className="h-5 w-px bg-divider" aria-hidden="true" />
 
       <div className="rounded-md border border-divider px-6 py-4 text-center">
-        <p className="text-sm font-medium text-paper/70">Your business systems</p>
+        <p className="text-sm font-medium text-navy/70">Your business systems</p>
       </div>
 
-      <p className="mt-3 max-w-[400px] text-center text-xs leading-[1.6] text-paper/50">
+      <p className="mt-3 max-w-[400px] text-center text-xs leading-[1.6] text-navy/50">
         Even if your business systems have a security flaw, it can&apos;t be used
         to skip this check.
       </p>

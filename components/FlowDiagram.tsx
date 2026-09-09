@@ -14,8 +14,8 @@ function Box({
     <div
       className={`rounded-md border border-divider px-5 py-4 text-center max-w-[280px] ${className}`}
     >
-      <p className="text-xs font-mono uppercase tracking-wide text-paper/50">{eyebrow}</p>
-      <p className="mt-1 text-sm font-medium text-paper">{label}</p>
+      <p className="text-xs font-mono uppercase tracking-wide text-navy/50">{eyebrow}</p>
+      <p className="mt-1 text-sm font-medium text-navy">{label}</p>
     </div>
   );
 }
@@ -29,13 +29,13 @@ export default function FlowDiagram() {
     >
       <Box eyebrow="Step 1" label="AI, employee, or app requests an action" />
 
-      <ArrowDownIcon className="h-5 w-5 text-paper/50" aria-hidden="true" />
+      <ArrowDownIcon className="h-5 w-5 text-navy/50" aria-hidden="true" />
 
       <div className="flex items-center gap-3 rounded-md border-2 border-mint px-5 py-4">
         <Gate state="checking" className="h-9 w-9 shrink-0" />
         <div className="text-left">
-          <p className="text-xs font-mono uppercase tracking-wide text-mint">Step 2</p>
-          <p className="text-sm font-medium text-paper">
+          <p className="text-xs font-mono uppercase tracking-wide text-mint-deep">Step 2</p>
+          <p className="text-sm font-medium text-navy">
             Parmana checks it against your existing rules
           </p>
         </div>
@@ -44,16 +44,16 @@ export default function FlowDiagram() {
       <div className="mt-1 grid w-full grid-cols-1 gap-6 border-t border-divider pt-5 sm:grid-cols-2">
         <div className="flex flex-col items-center gap-2 text-center">
           <div className="mx-auto h-4 w-px bg-mint" aria-hidden="true" />
-          <CheckCircleIcon className="h-6 w-6 text-mint" aria-hidden="true" />
-          <p className="text-xs font-mono uppercase tracking-wide text-mint">Allowed</p>
-          <p className="text-sm text-paper/70">Executes in your business system</p>
+          <CheckCircleIcon className="h-6 w-6 text-mint-deep" aria-hidden="true" />
+          <p className="text-xs font-mono uppercase tracking-wide text-mint-deep">Allowed</p>
+          <p className="text-sm text-navy/70">Executes in your business system</p>
         </div>
 
         <div className="flex flex-col items-center gap-2 text-center">
           <div className="mx-auto h-4 w-px bg-divider" aria-hidden="true" />
-          <XCircleIcon className="h-6 w-6 text-paper/50" aria-hidden="true" />
-          <p className="text-xs font-mono uppercase tracking-wide text-paper/50">Not allowed</p>
-          <p className="text-sm text-paper/70">Stops. Nothing executes.</p>
+          <XCircleIcon className="h-6 w-6 text-navy/50" aria-hidden="true" />
+          <p className="text-xs font-mono uppercase tracking-wide text-navy/50">Not allowed</p>
+          <p className="text-sm text-navy/70">Stops. Nothing executes.</p>
         </div>
       </div>
     </div>
