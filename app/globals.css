@@ -43,9 +43,7 @@ p {
 
 body {
   color: #0a0d10;
-  background:
-    radial-gradient(circle at 1px 1px, rgba(10, 13, 16, 0.06) 1px, transparent 0) 0 0 / 28px 28px,
-    #f5f3f0;
+  background: #f6f9fc;
 }
 
 a:focus-visible,
