@@ -9,7 +9,7 @@ export default {
       white: "#FFFFFF",
       black: "#000000",
       navy: "#0A0D10",
-      paper: "#F5F3F0",
+      paper: "#FFFFFF",
       mint: "#6FE3C4",
       "mint-deep": "#2E9B7D",
       divider: "#DAD5CB",

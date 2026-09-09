@@ -18,7 +18,7 @@ export default function Gate({
   dark?: boolean;
 }) {
   const resolvedAccent = accent ?? stateAccent[state];
-  const frameColor = dark ? "#F5F3F0" : "#0A0D10";
+  const frameColor = dark ? "#FFFFFF" : "#0A0D10";
   const frameOpacity = dark ? "0.5" : "0.35";
   const leafAngle = state === "closed" ? 0 : state === "checking" ? 28 : 60;
 

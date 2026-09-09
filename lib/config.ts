@@ -1,6 +1,6 @@
 export const colors = {
   navy: "#0A0D10",
-  paper: "#F5F3F0",
+  paper: "#FFFFFF",
   mint: "#6FE3C4",
   mintDeep: "#2E9B7D",
   divider: "#DAD5CB",
@@ -8,7 +8,6 @@ export const colors = {
 } as const;
 
 export const founderEmail = "founder@parmanasystems.com";
-export const founderPhone = "+91 97179 94459";
 
 export const nav = {
   docs: "https://docs.parmanasystems.com",
