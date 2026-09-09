@@ -4,7 +4,7 @@ const points = [
     example: "Finance can approve vendor payments up to ₹50 lakhs.",
   },
   {
-    label: "Parmana applies the same rule to AI",
+    label: "Parmana applies the same rule to AI agents/autonomous systems",
     example: "AI requests the same payment. The same ₹50 lakh threshold applies, automatically.",
   },
   {
