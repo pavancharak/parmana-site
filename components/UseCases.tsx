@@ -69,7 +69,7 @@ function CycleTimeBars({
           <div className="h-3 w-full rounded-md bg-paper/30" />
         </div>
 
-        <span className="w-24 shrink-0 text-xs text-paper/70">
+        <span className="w-24 shrink-0 text-xs tabular-nums text-paper/70">
           {beforeLabel}
         </span>
       </div>
@@ -83,7 +83,7 @@ function CycleTimeBars({
           <div className="h-3 w-[10%] rounded-md bg-mint" />
         </div>
 
-        <span className="w-24 shrink-0 text-xs font-semibold text-mint">
+        <span className="w-24 shrink-0 text-xs font-semibold tabular-nums text-mint">
           {afterLabel}
         </span>
       </div>

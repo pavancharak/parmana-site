@@ -20,7 +20,7 @@ export default function Hero() {
 
       <div className="relative max-w-container mx-auto px-6 py-16 md:py-20 lg:py-28">
         <div className="max-w-[760px] animate-[fade-in-up_0.6s_ease-out_both]">
-          <h1 className="font-serif text-[32px] md:text-[44px] lg:text-[52px] font-semibold leading-[1.15] tracking-tight text-paper">
+          <h1 className="font-serif text-[32px] md:text-[44px] lg:text-[52px] font-semibold leading-[1.15] tracking-tight md:tracking-[-0.03em] lg:tracking-[-0.035em] text-paper">
             Your existing infrastructure is already ready for the agentic era.
           </h1>
 

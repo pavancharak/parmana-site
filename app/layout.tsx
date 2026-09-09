@@ -59,7 +59,7 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${publicSans.variable} ${plexMono.variable}`}
     >
-      <body className="bg-navy text-paper font-sans">
+      <body className="bg-navy text-paper font-sans antialiased">
         <Header />
         {children}
         <Footer />
