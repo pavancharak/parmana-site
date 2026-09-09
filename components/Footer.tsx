@@ -1,4 +1,4 @@
-import { founderEmail, founderPhone, nav } from "@/lib/config";
+import { founderEmail, nav } from "@/lib/config";
 
 const links = [
   { label: "Product", href: nav.product },
@@ -37,7 +37,6 @@ export default function Footer() {
           <a href={`mailto:${founderEmail}`} className="hover:text-mint-deep transition-colors">
             {founderEmail}
           </a>
-          <p className="mt-1 text-navy/50">{founderPhone}</p>
           <a
             href={nav.founderLinkedIn}
             target="_blank"
