@@ -1,9 +1,9 @@
 type GateState = "closed" | "checking" | "open";
 
 const stateAccent: Record<GateState, string> = {
-  closed: "#6FE3C4",
-  checking: "#6FE3C4",
-  open: "#E8B34E",
+  closed: "#6366F1",
+  checking: "#6366F1",
+  open: "#4338CA",
 };
 
 export default function Gate({
@@ -18,7 +18,7 @@ export default function Gate({
   dark?: boolean;
 }) {
   const resolvedAccent = accent ?? stateAccent[state];
-  const frameColor = dark ? "#FFFFFF" : "#0A0D10";
+  const frameColor = dark ? "#FFFFFF" : "#1A1A1A";
   const frameOpacity = dark ? "0.5" : "0.35";
   const leafAngle = state === "closed" ? 0 : state === "checking" ? 28 : 60;
 

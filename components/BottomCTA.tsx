@@ -3,55 +3,44 @@ import { founderEmail, nav } from "@/lib/config";
 
 export default function BottomCTA() {
   return (
-    <section id="contact" className="relative overflow-hidden bg-paper">
+    <section id="contact" className="relative overflow-hidden bg-purple">
       <Gate
         state="open"
-        className="pointer-events-none absolute -left-8 -bottom-8 h-48 w-48 opacity-10"
+        dark
+        className="pointer-events-none absolute -left-8 -bottom-8 h-48 w-48 opacity-15"
       />
 
       <div className="relative max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24 text-center">
-        <h2 className="font-serif text-[26px] md:text-[32px] lg:text-[36px] font-semibold leading-[1.3] tracking-tight text-navy max-w-[820px] mx-auto">
-          Your authorization infrastructure is already ready.
+        <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-white max-w-[760px] mx-auto">
+          Your rules already exist.
         </h2>
 
-        <p className="mt-6 text-base leading-[1.65] text-navy/70 max-w-[720px] mx-auto">
-          You have the rules. You have the policies. You have the approval
-          processes. Parmana makes them enforceable for AI and autonomous
-          systems before execution.
-          <br />
-          <br />
-          No rebuild. No new rulebook. No new authority granted to AI.
+        <p className="mt-4 text-lg md:text-xl text-white/90 max-w-[640px] mx-auto">
+          You do not need another policy system. You need an enforcement
+          boundary.
+        </p>
+
+        <p className="mt-6 text-base leading-[1.65] text-white/80 max-w-[640px] mx-auto">
+          See your existing authorization infrastructure controlling an AI
+          agent.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-          <div>
-            <a
-              href={`mailto:${founderEmail}?subject=Request%20a%20demo`}
-              className="inline-flex items-center justify-center rounded-md bg-mint px-8 py-3 text-base font-semibold text-navy shadow-sm hover:bg-navy hover:text-paper hover:shadow-lg hover:shadow-mint/25 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[48px]"
-            >
-              Request a demo
-            </a>
+          <a
+            href={`mailto:${founderEmail}?subject=Request%20a%20demo`}
+            className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3 text-base font-semibold text-purple-deep hover:opacity-90 transition-opacity duration-150 min-h-[44px]"
+          >
+            Request a demo
+          </a>
 
-            <p className="mt-2 text-xs text-navy/50">
-              See your existing authorization infrastructure controlling an AI
-              agent in 30 minutes.
-            </p>
-          </div>
-
-          <div>
-            <a
-              href={nav.docs}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-md border border-mint-deep px-8 py-3 text-base font-semibold text-mint-deep hover:bg-mint-deep hover:text-paper hover:shadow-lg hover:shadow-mint/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 min-h-[48px]"
-            >
-              Read the technical validation
-            </a>
-
-            <p className="mt-2 text-xs text-navy/50">
-              See the code audit proving the enforcement boundary.
-            </p>
-          </div>
+          <a
+            href={nav.docs}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-md border border-white px-8 py-3 text-base font-semibold text-white hover:bg-white/10 transition-colors duration-150 min-h-[44px]"
+          >
+            Read the technical validation
+          </a>
         </div>
       </div>
     </section>

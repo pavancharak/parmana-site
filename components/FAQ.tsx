@@ -10,9 +10,24 @@ const faqs = [
       "No. Your existing approval limits, compliance policies, vendor lists, and other authorization rules are what Parmana checks against. Your business systems and policies stay in place. Parmana adds the enforcement boundary.",
   },
   {
+    question: "How is Parmana different from identity or access management?",
+    answer:
+      "Identity and access layers answer who you are and what you can access. Parmana answers whether this specific action is authorized right now, in this context. It is a separate, complementary layer.",
+  },
+  {
     question: "Does Parmana stop AI agents from acting?",
     answer:
       "No. Authorized requests proceed. Requests that fall outside your existing rules are refused. Parmana is designed to enable autonomous execution without giving the AI authority of its own.",
+  },
+  {
+    question: "Can an agent override Parmana's decision?",
+    answer:
+      "No. An agent cannot change the authorization decision or the authorization boundary itself. Authority is separated from execution, hierarchically.",
+  },
+  {
+    question: "What happens if Parmana is unavailable?",
+    answer:
+      "Execution fails closed. No action proceeds without authorization. That is a guarantee, not a limitation.",
   },
   {
     question: "What if the AI agent itself is compromised?",
@@ -28,27 +43,27 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section id="faq" className="bg-paper border-b border-divider">
+    <section id="faq" className="bg-paper border-b border-border">
       <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
-        <h2 className="font-serif text-[26px] md:text-[32px] font-semibold leading-[1.3] tracking-tight text-navy text-center max-w-[760px] mx-auto">
+        <h2 className="text-[26px] md:text-[32px] font-bold leading-[1.3] tracking-tight text-ink text-center max-w-[760px] mx-auto">
           Questions teams ask
         </h2>
 
-        <div className="mt-12 max-w-[800px] mx-auto divide-y divide-divider border-y border-divider">
+        <div className="mt-12 max-w-[800px] mx-auto divide-y divide-border border-y border-border">
           {faqs.map((faq) => (
             <details key={faq.question} className="group py-5">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-base md:text-lg font-semibold text-navy transition-colors duration-200 hover:text-mint-deep">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-base md:text-lg font-semibold text-ink transition-colors duration-150 hover:text-purple-deep">
                 <span>{faq.question}</span>
 
                 <span
-                  className="shrink-0 text-2xl font-normal text-mint-deep transition-transform duration-200 group-open:rotate-45"
+                  className="shrink-0 text-2xl font-normal text-purple-deep transition-transform duration-150 group-open:rotate-45"
                   aria-hidden="true"
                 >
                   +
                 </span>
               </summary>
 
-              <p className="mt-4 max-w-[720px] text-sm md:text-base leading-[1.6] text-navy/70">
+              <p className="mt-4 max-w-[720px] text-sm md:text-base leading-[1.6] text-ink/70">
                 {faq.answer}
               </p>
             </details>

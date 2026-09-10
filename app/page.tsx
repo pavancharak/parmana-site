@@ -1,11 +1,14 @@
 import Hero from "@/components/Hero";
-import CoreMessage from "@/components/CoreMessage";
-import CoreProblems from "@/components/CoreProblems";
-import ThreeMoments from "@/components/ThreeMoments";
-import ThatsIt from "@/components/ThatsIt";
-import WhyNow from "@/components/WhyNow";
+import Problem from "@/components/Problem";
+import Gap from "@/components/Gap";
+import Solution from "@/components/Solution";
+import HowItWorks from "@/components/HowItWorks";
+import ExistingInfrastructure from "@/components/ExistingInfrastructure";
+import PreventionVsDetection from "@/components/PreventionVsDetection";
+import Architecture from "@/components/Architecture";
+import TechGuarantees from "@/components/TechGuarantees";
 import UseCases from "@/components/UseCases";
-import SecurityTrust from "@/components/SecurityTrust";
+import Stakeholders from "@/components/Stakeholders";
 import FAQ from "@/components/FAQ";
 import BottomCTA from "@/components/BottomCTA";
 import Reveal from "@/components/Reveal";
@@ -15,25 +18,34 @@ export default function Home() {
     <main>
       <Hero />
       <Reveal>
-        <CoreMessage />
+        <Problem />
       </Reveal>
       <Reveal>
-        <CoreProblems />
+        <Gap />
       </Reveal>
       <Reveal>
-        <ThreeMoments />
+        <Solution />
       </Reveal>
       <Reveal>
-        <ThatsIt />
+        <HowItWorks />
       </Reveal>
       <Reveal>
-        <WhyNow />
+        <ExistingInfrastructure />
+      </Reveal>
+      <Reveal>
+        <PreventionVsDetection />
+      </Reveal>
+      <Reveal>
+        <Architecture />
+      </Reveal>
+      <Reveal>
+        <TechGuarantees />
       </Reveal>
       <Reveal>
         <UseCases />
       </Reveal>
       <Reveal>
-        <SecurityTrust />
+        <Stakeholders />
       </Reveal>
       <Reveal>
         <FAQ />
