@@ -35,6 +35,21 @@ const faqs = [
       "Parmana does not need to trust the agent. A compromised agent can submit requests, but it cannot manufacture authorization. Every request is checked against your rules before execution, and the agent never holds the authority to execute on its own.",
   },
   {
+    question: "Can the execution evidence be verified independently?",
+    answer:
+      "Yes. Parmana can produce signed execution trust records that can be verified independently with the corresponding public verification key, without requiring trust in the Parmana runtime or database.",
+  },
+  {
+    question: "Does Parmana support post-quantum signatures?",
+    answer:
+      "Yes. Parmana supports ML-DSA as well as hybrid signatures. Hybrid enforcement can be enabled where an environment requires protection against silent fallback to a single signature scheme.",
+  },
+  {
+    question: "How are verification keys discovered and rotated?",
+    answer:
+      "Verification keys are exposed through standard discovery endpoints, and key selection supports an explicit verification key identifier so keys can be rotated without changing the authorization model.",
+  },
+  {
     question: "How is this different from an audit log?",
     answer:
       "An audit log records what happened after the fact. Parmana verifies whether an action is authorized before it happens and records cryptographic proof of that authorization. One records an event. The other enforces the boundary before execution.",

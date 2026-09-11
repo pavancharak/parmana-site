@@ -15,7 +15,7 @@ const steps = [
   },
   {
     title: "Execute",
-    body: "If authorized, the action proceeds with cryptographic proof. If denied, execution is blocked.",
+    body: "If authorized, execution proceeds and the decision is signed into verifiable evidence. If denied, execution is blocked.",
   },
 ];
 

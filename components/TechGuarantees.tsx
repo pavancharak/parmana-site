@@ -21,7 +21,7 @@ const guarantees = [
   },
   {
     title: "Cryptographic signing",
-    desc: "Ed25519 signing today, with ML-DSA/Dilithium3 available for quantum readiness.",
+    desc: "Ed25519 and ML-DSA signing, with hybrid signatures available for cryptographic agility and quantum readiness.",
   },
   {
     title: "Verifiable execution evidence",
@@ -30,6 +30,22 @@ const guarantees = [
   {
     title: "Immutable audit trail",
     desc: "Evidence cannot be modified after the fact.",
+  },
+  {
+    title: "Independent offline verification",
+    desc: "Signed execution trust records can be verified independently without trusting the Parmana runtime or database.",
+  },
+  {
+    title: "Discoverable verification keys",
+    desc: "Public verification keys are exposed through standard discovery endpoints for independent verification.",
+  },
+  {
+    title: "Key rotation",
+    desc: "Verification keys can be rotated through an explicit key identifier without changing the authorization model.",
+  },
+  {
+    title: "Hybrid downgrade protection",
+    desc: "Hybrid signature enforcement can be enabled when an environment requires protection against silent fallback to a single signature scheme.",
   },
 ];
 

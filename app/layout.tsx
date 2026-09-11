@@ -22,14 +22,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://parmanasystems.com"),
   title: "Parmana | Authorization Before Execution",
   description:
-    "Parmana makes your existing authorization rules enforceable for AI agents and autonomous systems, before execution reaches your business systems.",
+    "Parmana makes your existing authorization rules enforceable for AI agents and autonomous systems, with deterministic execution authorization and cryptographically verifiable evidence.",
   alternates: {
     canonical: "https://parmanasystems.com",
   },
   openGraph: {
     title: "Parmana | Authorization Before Execution",
     description:
-      "AI can be intelligent without being in charge. Parmana enforces your existing authorization rules before autonomous execution.",
+      "AI can be intelligent without being in charge. Parmana enforces existing authorization rules before autonomous execution and produces verifiable evidence.",
     type: "website",
     url: "https://parmanasystems.com",
     images: ["https://parmanasystems.com/og-image.jpg"],
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Parmana | Authorization Before Execution",
     description:
-      "AI can be intelligent without being in charge. Parmana enforces your existing authorization rules before autonomous execution.",
+      "AI can be intelligent without being in charge. Parmana enforces existing authorization rules before autonomous execution and produces verifiable evidence.",
   },
   robots: "index, follow",
 };
