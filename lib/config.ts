@@ -51,4 +51,11 @@ export const explainerVideos = [
       "The boundary this demo proves: the AI proposes, Parmana authorizes, the business system executes.",
     orientation: "vertical" as const,
   },
+  {
+    id: "I2ePXz2KFgc",
+    title: "Human authority infrastructure for autonomous systems",
+    description:
+      "Why the boundary between an autonomous system's request and its execution has to sit outside the system itself.",
+    orientation: "vertical" as const,
+  },
 ] as const;
