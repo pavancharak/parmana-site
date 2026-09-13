@@ -1,28 +1,48 @@
 const faqs = [
   {
-    question: "Is Parmana AI powered?",
+    question: "Is Parmana an AI system?",
     answer:
-      "No, deliberately not. The decision that determines whether an action executes is a deterministic rule evaluation, not a model. AI can make the request, but it is never the authority deciding whether that request is authorized. That makes the result provable rather than probabilistic.",
+      "No, deliberately not. The decision that determines whether an action executes is a deterministic policy evaluation, not a model. An autonomous system can propose or request an action, but it is never the authority deciding whether that action is authorized. That makes the result provable rather than probabilistic.",
   },
   {
-    question: "Do we need to rebuild our authorization rules?",
+    question: "What does human authority infrastructure actually mean?",
     answer:
-      "No. Your existing approval limits, compliance policies, vendor lists, and other authorization rules are what Parmana checks against. Your business systems and policies stay in place. Parmana adds the enforcement boundary.",
+      "It means the boundary that decides whether a proposed action is allowed to happen is controlled by your policy, not by the system proposing it. Parmana does not add a new layer of oversight to watch autonomous systems, it makes sure your existing policy is what an action is checked against before it is allowed to run.",
   },
   {
-    question: "How is Parmana different from identity or access management?",
+    question: "Isn't this just AI governance?",
     answer:
-      "Identity and access layers answer who you are and what you can access. Parmana answers whether this specific action is authorized right now, in this context. It is a separate, complementary layer.",
+      "Governance usually means monitoring a system you are worried about and reacting after something goes wrong. Parmana is structural instead of behavioral, an unauthorized action cannot execute in the first place because the requesting system never holds the credential needed to execute it. That holds whether or not the system behaves as expected.",
   },
   {
-    question: "Does Parmana stop AI agents from acting?",
+    question: "Do we need to rebuild our policies to use Parmana?",
     answer:
-      "No. Authorized requests proceed. Requests that fall outside your existing rules are refused. Parmana is designed to enable autonomous execution without giving the AI authority of its own.",
+      "No. Your existing approval limits, delegation rules, vendor lists, and compliance rules are what Parmana checks against. Your business systems and policies stay in place, Parmana adds the enforcement boundary in front of them.",
   },
   {
-    question: "Can an agent override Parmana's decision?",
+    question: "How is this different from identity and access management?",
     answer:
-      "No. An agent cannot change the authorization decision or the authorization boundary itself. Authority is separated from execution, hierarchically.",
+      "Identity and access layers answer who a requester is and what they can generally access. Parmana answers whether this specific action is authorized right now, in this context. It is a separate, complementary layer, not a replacement for IAM.",
+  },
+  {
+    question: "Is this only for AI agents?",
+    answer:
+      "No. The same boundary works for AI agents, algorithms, workflows, employees, or applications. Parmana does not evaluate who or what is making the request, it evaluates whether the requested action is authorized.",
+  },
+  {
+    question: "Does Parmana stop autonomous systems from acting?",
+    answer:
+      "No. A request that matches your policy proceeds. A request that falls outside your policy is refused. Parmana is designed to let autonomous systems act without giving them authority of their own.",
+  },
+  {
+    question: "What if the autonomous system itself is compromised or jailbroken?",
+    answer:
+      "Parmana does not need to trust the system making the request. A compromised system can still submit a request, but it cannot manufacture authorization, because it never holds the credential that executes the action. Every request is checked against your policy before execution, regardless of how the request was generated.",
+  },
+  {
+    question: "Can an autonomous system override Parmana's decision?",
+    answer:
+      "No. A requester cannot change the authorization decision or the authorization boundary itself. Authority is separated from execution, hierarchically, so the system proposing an action has no path to grant itself permission.",
   },
   {
     question: "What happens if Parmana is unavailable?",
@@ -30,29 +50,24 @@ const faqs = [
       "Execution fails closed. No action proceeds without authorization. That is a guarantee, not a limitation.",
   },
   {
-    question: "What if the AI agent itself is compromised?",
+    question: "What happens if Parmana disappears entirely?",
     answer:
-      "Parmana does not need to trust the agent. A compromised agent can submit requests, but it cannot manufacture authorization. Every request is checked against your rules before execution, and the agent never holds the authority to execute on its own.",
-  },
-  {
-    question: "Can the execution evidence be verified independently?",
-    answer:
-      "Yes. Parmana can produce signed execution trust records that can be verified independently with the corresponding public verification key, without requiring trust in the Parmana runtime or database.",
-  },
-  {
-    question: "Does Parmana support post-quantum signatures?",
-    answer:
-      "Yes. Parmana supports ML-DSA as well as hybrid signatures. Hybrid enforcement can be enabled where an environment requires protection against silent fallback to a single signature scheme.",
-  },
-  {
-    question: "How are verification keys discovered and rotated?",
-    answer:
-      "Verification keys are exposed through standard discovery endpoints, and key selection supports an explicit verification key identifier so keys can be rotated without changing the authorization model.",
+      "Authority belongs to your business, not to Parmana. Parmana is built to deploy in an environment you control, using your own signing keys and your own policy files rather than a central store Parmana hosts, so Parmana is not a permanent, irreplaceable source of authority for your organization.",
   },
   {
     question: "How is this different from an audit log?",
     answer:
-      "An audit log records what happened after the fact. Parmana verifies whether an action is authorized before it happens and records cryptographic proof of that authorization. One records an event. The other enforces the boundary before execution.",
+      "An audit log records what happened after the fact. Parmana verifies whether an action is authorized before it happens and records cryptographic proof of that authorization. One records an event, the other enforces the boundary before execution.",
+  },
+  {
+    question: "Can the execution evidence be verified independently?",
+    answer:
+      "Yes. Parmana signs authorization decisions with Ed25519, with ML-DSA, also known as Dilithium3, available through hybrid signatures for post-quantum readiness. Anyone holding the public verification key can check a signed decision independently, without trusting Parmana's runtime or database.",
+  },
+  {
+    question: "How do we start a pilot?",
+    answer:
+      "Email us and we will scope a pilot around one real, consequential action your autonomous systems already need to take, a refund, a payment, or another workflow, so you can see your own policy controlling execution before committing to anything further.",
   },
 ];
 

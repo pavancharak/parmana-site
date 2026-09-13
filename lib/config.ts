@@ -31,7 +31,6 @@ export const nav = {
   company: "#contact",
   demo: "/demo",
   explainers: "/explainers",
-  demoRepo: "https://github.com/pavancharak/parmana-phinite-agent",
 } as const;
 
 // The ID is the part after "v=" in a youtube.com/watch?v= URL, or after

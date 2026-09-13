@@ -16,10 +16,8 @@ export default function DemoCTA() {
         </h2>
 
         <p className="mt-6 text-base leading-[1.65] text-white/80 max-w-[640px] mx-auto">
-          Read the full Phinite integration, including the tool contract,
-          capability configuration, and the failure cases we hit along the
-          way. Or talk to us about running a pilot on your own agentic
-          workflow.
+          Read the docs to see how the authorization boundary works, or talk
+          to us about running a pilot on your own agentic workflow.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
@@ -31,12 +29,12 @@ export default function DemoCTA() {
           </a>
 
           <a
-            href={nav.demoRepo}
+            href={nav.docs}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-md border border-white px-8 py-3 text-base font-semibold text-white hover:bg-white/10 transition-colors duration-150 min-h-[44px]"
           >
-            Read the integration on GitHub
+            Read the docs
           </a>
         </div>
       </div>
