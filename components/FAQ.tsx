@@ -15,6 +15,26 @@ const faqs = [
       "Governance usually means monitoring a system you are worried about and reacting after something goes wrong. Parmana is structural instead of behavioral, an unauthorized action cannot execute in the first place because the requesting system never holds the credential needed to execute it. That holds whether or not the system behaves as expected.",
   },
   {
+    question: "Why call this human authority infrastructure instead of AI governance?",
+    answer:
+      "Governance usually implies a system that acts first and gets reviewed second. Human authority infrastructure describes the opposite order, your policy is checked before an action executes, not after. The name is meant to describe where the deciding power sits, with your policy, not with the system asking to act.",
+  },
+  {
+    question: "If nobody is approving every action by hand, how is a human still in control?",
+    answer:
+      "Control here does not mean a person clicks approve on every request, autonomous systems would not be useful if that were true. It means the rule that decides whether an action is authorized was set by a person in advance, as policy, and Parmana enforces exactly that rule without deviation. Authority stays with whoever owns the policy, execution just happens at the speed autonomous systems need.",
+  },
+  {
+    question: "Does Parmana replace our risk or governance team?",
+    answer:
+      "No. Your risk and compliance functions still set the policy and still own the response when something needs to change. Parmana enforces whatever they decide, structurally, so their decisions apply to every autonomous action automatically instead of depending on someone noticing an exception after the fact.",
+  },
+  {
+    question: "What if our policy itself is wrong or outdated? Doesn't Parmana just enforce a bad decision faster?",
+    answer:
+      "Yes, and that is worth being direct about. Parmana enforces the policy you give it, it does not judge whether that policy is a good one. Getting the policy right is still your organization's responsibility, Parmana's job is making sure whatever policy you set is actually what happens, every time, rather than something that quietly degrades as autonomous systems scale.",
+  },
+  {
     question: "Do we need to rebuild our policies to use Parmana?",
     answer:
       "No. Your existing approval limits, delegation rules, vendor lists, and compliance rules are what Parmana checks against. Your business systems and policies stay in place, Parmana adds the enforcement boundary in front of them.",
@@ -68,6 +88,26 @@ const faqs = [
     question: "How do we start a pilot?",
     answer:
       "Email us and we will scope a pilot around one real, consequential action your autonomous systems already need to take, a refund, a payment, or another workflow, so you can see your own policy controlling execution before committing to anything further.",
+  },
+  {
+    question: "What do you need from us to run a pilot?",
+    answer:
+      "One real, consequential action worth protecting, and the policy that should govern it, refunds, payments, or another workflow. You keep your own signing keys and policy files in your own infrastructure, Parmana does not need standing access to your systems beyond the specific action being piloted.",
+  },
+  {
+    question: "Do we need real production data or real money for a pilot?",
+    answer:
+      "No. A pilot can run against a sandbox or test environment first, so you can see your policy controlling execution before anything touches production traffic. Extending it to a live environment is a decision you make after seeing it work, not a precondition of the pilot.",
+  },
+  {
+    question: "How long does a pilot take?",
+    answer:
+      "It depends on how ready your policy and target system are to integrate, so we scope a timeline together rather than quote one up front. Most of the work is agreeing on the one action and the policy it should be checked against, the integration itself is comparatively fast.",
+  },
+  {
+    question: "What happens after the pilot?",
+    answer:
+      "If it proves out, the same integration extends to more actions and more of your autonomous systems, using policy you already validated during the pilot. If it does not, you have not committed to anything beyond the scope of that one pilot.",
   },
 ];
 
