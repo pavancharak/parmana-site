@@ -29,9 +29,13 @@ two shipped in that form; treat that file as historical only). The repositioning
 terminology only, not a design system change: colors, typography, page structure, and nav below
 are unchanged.
 
-An "Evidence" section citing third-party validation (regulatory reports, incidents, market
-research) was proposed alongside this repositioning but is intentionally not yet built. Every
-named claim needs a verifiable source before it ships, per the copy rules below.
+An "Evidence" section (`components/Evidence.tsx`) cites third-party validation: real, independently
+verified sources only, each with an outbound link to the primary source (NPCI, FCA, KPMG, RBI,
+OpenAI, UK AISI, HCLTech). Two claims from an earlier draft of this section (a Razorpay "misconfigured
+agents" incident, an Infosys architecture diagram naming Parmana) could not be verified against any
+real source and were dropped rather than published. Before adding a new item to this section,
+verify it against a primary or clearly reputable source the same way, do not add a claim on the
+strength of a pasted brief alone.
 
 ## Color tokens (Tailwind)
 
@@ -81,6 +85,6 @@ Don't hardcode hex values in components or improvise new accent colors, consume 
 ## Page structure (`app/page.tsx`)
 
 Hero -> Problem -> Gap -> Solution -> HowItWorks -> ExistingInfrastructure ->
-PreventionVsDetection -> Architecture -> TechGuarantees -> UseCases -> Stakeholders -> FAQ ->
-BottomCTA, each component in `components/`, wrapped in `<Reveal>` for scroll-in animation except
-Hero.
+PreventionVsDetection -> Evidence -> Architecture -> TechGuarantees -> UseCases -> DemoTeaser ->
+Stakeholders -> FAQ -> BottomCTA, each component in `components/`, wrapped in `<Reveal>` for
+scroll-in animation except Hero.

@@ -5,6 +5,7 @@ import Solution from "@/components/Solution";
 import HowItWorks from "@/components/HowItWorks";
 import ExistingInfrastructure from "@/components/ExistingInfrastructure";
 import PreventionVsDetection from "@/components/PreventionVsDetection";
+import Evidence from "@/components/Evidence";
 import Architecture from "@/components/Architecture";
 import TechGuarantees from "@/components/TechGuarantees";
 import UseCases from "@/components/UseCases";
@@ -35,6 +36,9 @@ export default function Home() {
       </Reveal>
       <Reveal>
         <PreventionVsDetection />
+      </Reveal>
+      <Reveal>
+        <Evidence />
       </Reveal>
       <Reveal>
         <Architecture />
