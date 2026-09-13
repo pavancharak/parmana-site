@@ -6,7 +6,7 @@ const useCases = [
   {
     name: "Payments",
     subtitle: "Your approval limit",
-    request: "An AI agent requests a payment to a vendor.",
+    request: "An autonomous system requests a payment to a vendor.",
     checks: "Parmana verifies the agent is authorized to request it, the vendor is on the approved list, and the amount is within the existing limit.",
     outcome: "If all conditions hold, the payment executes. If any fails, the payment is blocked.",
   },
@@ -20,14 +20,14 @@ const useCases = [
   {
     name: "Vendor management",
     subtitle: "Your approved list",
-    request: "A procurement agent needs to onboard a new vendor.",
+    request: "A procurement agent, autonomous or human-run, needs to onboard a new vendor.",
     checks: "Parmana checks that KYC is complete, compliance screening passed, and the category is approved.",
     outcome: "If all checks pass, the vendor is activated. If any fails, the request is blocked until requirements are met.",
   },
   {
     name: "Financial approvals",
     subtitle: "Your approval chain",
-    request: "An AI system requests approval for an expense, investment, or transfer.",
+    request: "An autonomous system requests approval for an expense, investment, or transfer.",
     checks: "Parmana evaluates the amount threshold, the budget owner, and the approval chain.",
     outcome: "The action proceeds only if every authorization check passes.",
   },

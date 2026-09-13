@@ -1,9 +1,11 @@
+import { messaging } from "@/lib/config";
+
 export default function Solution() {
   return (
     <section id="solution" className="bg-paper border-b border-border">
       <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
         <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-ink text-center max-w-[760px] mx-auto">
-          Parmana adds the execution authorization layer
+          Parmana is the human authority boundary
         </h2>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -11,7 +13,7 @@ export default function Solution() {
             <div className="w-full max-w-[340px] space-y-3">
               <div className="rounded-md border border-border bg-white px-5 py-4 text-center">
                 <p className="text-sm font-semibold text-ink">
-                  AI agents, employees, applications, partners
+                  Autonomous systems, employees, applications, partners
                 </p>
               </div>
 
@@ -20,8 +22,7 @@ export default function Solution() {
               <div className="rounded-md border-2 border-purple bg-lavender px-5 py-5 text-center">
                 <p className="text-sm font-bold text-purple-deep">PARMANA</p>
                 <p className="mt-2 text-xs leading-[1.6] text-ink/60">
-                  Authorization evaluation, decision state, cryptographic
-                  proof
+                  Policy check, authority verification, cryptographic proof
                 </p>
               </div>
 
@@ -37,20 +38,21 @@ export default function Solution() {
 
           <div className="space-y-4">
             <p className="text-base leading-[1.65] text-ink/70">
-              Parmana sits between autonomous actors, AI agents, employees,
-              applications, and partners, and business systems.
+              Parmana sits between autonomous systems, employees,
+              applications, and partners, and the business systems they act
+              on.
             </p>
             <p className="text-base leading-[1.65] text-ink/70">
-              Before any execution reaches your systems, Parmana evaluates
-              authorization against your existing business rules.
+              Before any execution reaches your systems, Parmana checks the
+              proposed action against your policy.
             </p>
             <p className="text-base leading-[1.65] text-ink/70">
-              If authorized, execution proceeds. If not, execution is
-              blocked.
+              If it is within your authority, execution proceeds. If not, it
+              is blocked.
             </p>
             <p className="text-base leading-[1.65] font-medium text-purple-deep">
-              Every authorized action produces cryptographic proof of
-              authorization.
+              Every authorized action produces cryptographic proof that your
+              authority was respected.
             </p>
           </div>
         </div>
@@ -63,10 +65,7 @@ export default function Solution() {
             Your existing policies determine what is authorized. Parmana
             evaluates and enforces those policies deterministically.
           </p>
-          <p className="mt-4 text-sm font-mono text-ink/50">
-            AI proposes the action. Your policy determines authority. Parmana
-            enforces the result.
-          </p>
+          <p className="mt-4 text-sm font-mono text-ink/50">{messaging.corePrinciple}</p>
         </div>
       </div>
     </section>

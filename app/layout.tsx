@@ -20,25 +20,25 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://parmanasystems.com"),
-  title: "Parmana | Authorization Before Execution",
+  title: "Parmana | Human Authority Infrastructure for Autonomous Systems",
   description:
-    "Parmana makes your existing authorization rules enforceable for AI agents and autonomous systems, with deterministic execution authorization and cryptographically verifiable evidence.",
+    "Parmana preserves human authority over autonomous systems. Your policies, your control, with structural enforcement and cryptographically verifiable proof before execution.",
   alternates: {
     canonical: "https://parmanasystems.com",
   },
   openGraph: {
-    title: "Parmana | Authorization Before Execution",
+    title: "Parmana | Human Authority Infrastructure for Autonomous Systems",
     description:
-      "AI can be intelligent without being in charge. Parmana enforces existing authorization rules before autonomous execution and produces verifiable evidence.",
+      "Your policies. Your control. Autonomous systems execute within your authority. Parmana enforces policy before execution and produces verifiable proof.",
     type: "website",
     url: "https://parmanasystems.com",
     images: ["https://parmanasystems.com/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Parmana | Authorization Before Execution",
+    title: "Parmana | Human Authority Infrastructure for Autonomous Systems",
     description:
-      "AI can be intelligent without being in charge. Parmana enforces existing authorization rules before autonomous execution and produces verifiable evidence.",
+      "Your policies. Your control. Autonomous systems execute within your authority. Parmana enforces policy before execution and produces verifiable proof.",
   },
   robots: "index, follow",
 };

@@ -8,14 +8,14 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Live demo | Parmana",
   description:
-    "Watch a working integration between a Phinite AI agent and Parmana: the agent proposes a refund, Parmana authorizes it, and only an authorized path executes.",
+    "Watch a working integration between a Phinite autonomous agent and Parmana: the agent proposes a refund, your policy decides if it is authorized, and only an authorized path executes.",
   alternates: {
     canonical: "https://parmanasystems.com/demo",
   },
   openGraph: {
-    title: "Parmana live demo: AI can be intelligent without being in charge",
+    title: "Parmana live demo: your policy decides, Parmana enforces",
     description:
-      "A Phinite AI agent proposes a refund. Parmana evaluates and authorizes it. Watch the full walkthrough and see what a pilot with Parmana looks like.",
+      "A Phinite autonomous agent proposes a refund. Your policy decides if it is authorized, Parmana enforces the result. Watch the full walkthrough and see what a pilot with Parmana looks like.",
     type: "website",
     url: "https://parmanasystems.com/demo",
     images: ["https://parmanasystems.com/og-image.jpg"],

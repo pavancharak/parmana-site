@@ -9,6 +9,18 @@ export const colors = {
 
 export const founderEmail = "founder@parmanasystems.com";
 
+// Locked positioning phrases (2026-09-13 repositioning). Reuse these
+// verbatim rather than rephrasing per component, see
+// docs/DESIGN-SYSTEM-CURRENT.md for the full positioning rationale.
+export const messaging = {
+  hero: "Human Authority Infrastructure for Autonomous Systems",
+  tagline:
+    "Your policies. Your control. Autonomous systems execute within your authority.",
+  corePrinciple: "Autonomous systems propose. Your policy decides. Parmana enforces.",
+  outcome: "Humans stay in control while benefiting from autonomous capability.",
+  proof: "Structural authority, verified by cryptographic proof.",
+} as const;
+
 export const nav = {
   docs: "https://docs.parmanasystems.com",
   blog: "https://parmanasystems.substack.com",

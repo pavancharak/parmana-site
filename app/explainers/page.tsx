@@ -7,14 +7,14 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Explainers | Parmana",
   description:
-    "Short videos on why AI can be intelligent without being in charge, and how Parmana enforces authorization before execution.",
+    "Short videos on why autonomous systems need human authority, and how Parmana enforces your policy before execution.",
   alternates: {
     canonical: "https://parmanasystems.com/explainers",
   },
   openGraph: {
     title: "Parmana explainers",
     description:
-      "Short videos on the authorization boundary Parmana enforces between AI agents and business execution.",
+      "Short videos on the human authority boundary Parmana enforces between autonomous systems and business execution.",
     type: "website",
     url: "https://parmanasystems.com/explainers",
     images: ["https://parmanasystems.com/og-image.jpg"],

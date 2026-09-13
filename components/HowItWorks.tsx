@@ -3,15 +3,15 @@ import FlowDiagram from "@/components/FlowDiagram";
 const steps = [
   {
     title: "Request",
-    body: "The actor, an AI agent, employee, or application, proposes an action.",
+    body: "The actor, an autonomous system, employee, or application, proposes an action.",
   },
   {
     title: "Evaluate",
-    body: "Parmana checks the request against existing authorization rules.",
+    body: "Parmana checks the proposal against your policy.",
   },
   {
     title: "Decide",
-    body: "Parmana issues a decision state: authorized or denied.",
+    body: "Your policy decides. Parmana issues the decision state: authorized or denied.",
   },
   {
     title: "Execute",
@@ -24,7 +24,7 @@ export default function HowItWorks() {
     <section id="how-it-works" className="bg-paper border-b border-border">
       <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
         <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-ink text-center max-w-[760px] mx-auto">
-          The execution authorization flow
+          Three systems. One boundary.
         </h2>
 
         <div className="mt-14">

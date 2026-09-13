@@ -1,23 +1,37 @@
-# Current design system (as of 2026-09-10)
+# Current design system (as of 2026-09-13)
 
 Source of truth for tokens: `tailwind.config.ts` and `lib/config.ts`. This file documents intent;
 if it and the config disagree, the config wins, but flag the drift.
 
 ## Positioning
 
-"Authorization before execution." Parmana is execution authorization infrastructure: it makes a
-business's existing authorization rules (approval limits, delegation rules, vendor lists,
-compliance rules) enforceable against AI agents and autonomous systems before execution reaches
-business systems. Parmana does not invent or change policy, and does not make the authorization
-decision itself, it evaluates and enforces existing policy deterministically. Core lines:
+"Human authority infrastructure for autonomous systems." Parmana preserves human authority over
+autonomous systems: it makes a business's existing policy (approval limits, delegation rules,
+vendor lists, compliance rules) structurally enforceable against autonomous agents and other
+autonomous systems before execution reaches business systems. Parmana does not invent or change
+policy, and does not make the authorization decision itself, it evaluates and enforces existing
+policy deterministically. Locked phrases, reuse verbatim (see `messaging` in `lib/config.ts`):
 
-- "Your policy decides. Parmana enforces."
-- "AI can be intelligent without being in charge."
-- "Proof before execution."
+- "Your policies. Your control. Autonomous systems execute within your authority."
+- "Autonomous systems propose. Your policy decides. Parmana enforces."
+- "Humans stay in control while benefiting from autonomous capability."
+- "Structural authority, verified by cryptographic proof."
 
-This supersedes the earlier navy/mint "your infrastructure is already ready" pyramid framing and
-the black-minimalist "Institutional Authority Infrastructure" plan in `NEW-SITE-BUILD-PROMPT.md`
-(neither shipped in this form; treat that file as historical only).
+Terminology preference: "autonomous systems" over "AI agents" alone, Parmana is actor-agnostic
+(agents, algorithms, workflows, compromised systems all pass through the same boundary). "AI
+agent" is still fine when describing a specific real system by name (for example the Phinite demo
+integration), but general positioning copy should default to "autonomous systems."
+
+This supersedes the "Authorization before execution" framing (documented here 2026-09-10), the
+earlier navy/mint "your infrastructure is already ready" pyramid framing, and the black-minimalist
+"Institutional Authority Infrastructure" plan in `NEW-SITE-BUILD-PROMPT.md` (neither of the latter
+two shipped in that form; treat that file as historical only). The repositioning is copy and
+terminology only, not a design system change: colors, typography, page structure, and nav below
+are unchanged.
+
+An "Evidence" section citing third-party validation (regulatory reports, incidents, market
+research) was proposed alongside this repositioning but is intentionally not yet built. Every
+named claim needs a verifiable source before it ships, per the copy rules below.
 
 ## Color tokens (Tailwind)
 
@@ -52,9 +66,10 @@ Don't hardcode hex values in components or improvise new accent colors, consume 
 
 - No em dashes or en dashes anywhere in site copy, use commas or periods instead (hyphens in
   compound words are fine)
-- AI never "acts", "approves", "orders", or otherwise appears as the authority. AI/agents/employees
-  /apps "propose" or "request" an action; Parmana "evaluates" and "enforces"; execution "proceeds"
-  or is "blocked" as a system outcome, not something AI does on its own authority
+- AI, and autonomous systems generally, never "act", "approve", "order", or otherwise appear as the
+  authority. AI/agents/autonomous systems/employees/apps "propose" or "request" an action; Parmana
+  "evaluates" and "enforces"; execution "proceeds" or is "blocked" as a system outcome, not
+  something AI or an autonomous system does on its own authority
 - No fabricated customer names, revenue figures, benchmark numbers, or specific currency/day-count
   metrics that are not independently verified. Prefer qualitative descriptions or brief-style
   illustrative examples ("for example, approvals over $10,000 require sign-off") over invented

@@ -19,8 +19,9 @@ export default function DemoTeaser() {
               Watch a real refund get authorized, live
             </h2>
             <p className="mt-2 text-sm leading-[1.6] text-ink/70 max-w-[520px]">
-              A working integration between a Phinite AI agent and Parmana,
-              with the full walkthrough and the real authorization evidence.
+              A working integration between a Phinite autonomous agent and
+              Parmana, with the full walkthrough and the real authorization
+              evidence.
             </p>
             <a
               href={nav.explainers}

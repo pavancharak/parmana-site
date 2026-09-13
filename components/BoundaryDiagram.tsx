@@ -1,12 +1,12 @@
 import Gate from "@/components/Gate";
 
-const sources = ["AI agents", "Employees", "Apps", "Partners"];
+const sources = ["Autonomous systems", "Employees", "Apps", "Partners"];
 
 export default function BoundaryDiagram() {
   return (
     <div
       role="img"
-      aria-label="AI agents, employees, apps, and partners all pass through the Parmana boundary before reaching business systems, so vulnerabilities inside business systems sit outside that boundary"
+      aria-label="Autonomous systems, employees, apps, and partners all pass through the Parmana boundary before reaching business systems, so vulnerabilities inside business systems sit outside that boundary"
       className="mx-auto flex max-w-[480px] flex-col items-center gap-2 py-4"
     >
       <div className="grid w-full grid-cols-4 gap-2 border-b border-border pb-4">
@@ -35,8 +35,9 @@ export default function BoundaryDiagram() {
 
       <p className="mt-3 max-w-[400px] text-center text-xs leading-[1.6] text-ink/50">
         A vulnerability inside a business system does not reduce Parmana&apos;s
-        value. It reinforces it. The boundary does not depend on the security
-        posture of the system behind it.
+        value. It reinforces it, because authority here is structural, not
+        behavioral. The boundary does not depend on the security posture of
+        the system behind it.
       </p>
     </div>
   );

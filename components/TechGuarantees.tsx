@@ -54,7 +54,7 @@ export default function TechGuarantees() {
     <section id="guarantees" className="bg-paper border-b border-border">
       <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
         <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-ink text-center max-w-[760px] mx-auto">
-          Execution authority guarantees
+          Structural authority guarantees
         </h2>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">

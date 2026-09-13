@@ -16,13 +16,12 @@ export default function BottomCTA() {
         </h2>
 
         <p className="mt-4 text-lg md:text-xl text-white/90 max-w-[640px] mx-auto">
-          You do not need another policy system. You need an enforcement
+          You do not need another policy system. You need a human authority
           boundary.
         </p>
 
         <p className="mt-6 text-base leading-[1.65] text-white/80 max-w-[640px] mx-auto">
-          See your existing authorization infrastructure controlling an AI
-          agent.
+          See your existing policy controlling an autonomous system.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">

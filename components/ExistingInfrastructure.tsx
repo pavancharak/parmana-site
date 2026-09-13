@@ -35,7 +35,7 @@ export default function ExistingInfrastructure() {
               Parmana enforces them.
             </p>
             <p className="mt-4 text-sm font-medium text-purple-deep">
-              Policies stay unchanged. Enforcement becomes automatic.
+              Policies stay unchanged. Your authority becomes structural.
             </p>
           </div>
         </div>

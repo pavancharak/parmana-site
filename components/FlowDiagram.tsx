@@ -24,7 +24,7 @@ export default function FlowDiagram() {
   return (
     <div
       role="img"
-      aria-label="An actor requests an action, Parmana checks it against existing authorization rules, then either it executes in the business system or it is blocked and nothing executes"
+      aria-label="An actor requests an action, Parmana checks it against your policy, then either it executes in the business system or it is blocked and nothing executes"
       className="mx-auto flex max-w-[560px] flex-col items-center gap-3 py-4"
     >
       <Box eyebrow="Step 1, request" label="Actor proposes an action" />
@@ -38,7 +38,7 @@ export default function FlowDiagram() {
             Step 2, evaluate authority
           </p>
           <p className="text-sm font-medium text-ink">
-            Parmana checks it against existing authorization rules
+            Parmana checks it against your policy
           </p>
         </div>
       </div>

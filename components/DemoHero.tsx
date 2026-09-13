@@ -14,14 +14,14 @@ export default function DemoHero() {
         </p>
 
         <h1 className="mx-auto mt-4 max-w-[820px] text-[30px] md:text-[42px] font-bold leading-[1.15] tracking-tight text-ink">
-          A customer asks an AI agent for a refund. Parmana decides if it is
-          authorized.
+          A customer asks an autonomous agent for a refund. Your policy
+          decides if it is authorized.
         </h1>
 
         <p className="mx-auto mt-6 max-w-[680px] text-lg leading-[1.5] text-ink/70">
-          This page walks through a working integration between a Phinite AI
-          agent and Parmana: the agent understands a refund request, Parmana
-          evaluates and authorizes the transaction, and only an authorized
+          This page walks through a working integration between a Phinite
+          autonomous agent and Parmana: the agent proposes a refund, your
+          policy determines whether it is authorized, and only an authorized
           path executes it against Paytm.
         </p>
       </div>

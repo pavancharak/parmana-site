@@ -1,5 +1,5 @@
 import Gate from "@/components/Gate";
-import { founderEmail, nav } from "@/lib/config";
+import { founderEmail, messaging, nav } from "@/lib/config";
 
 export default function Hero() {
   return (
@@ -17,25 +17,23 @@ export default function Hero() {
       <div className="relative max-w-container mx-auto px-6 py-16 md:py-20 lg:py-28 text-center">
         <div className="mx-auto max-w-[820px] animate-[fade-in-up_0.6s_ease-out_both]">
           <h1 className="text-[32px] md:text-[44px] lg:text-[56px] font-bold leading-[1.1] tracking-tight text-ink">
-            Authorization before execution.
+            {messaging.hero}
           </h1>
 
           <p className="mx-auto mt-6 max-w-[680px] text-lg md:text-xl leading-[1.5] text-ink/70">
-            Parmana makes your existing authorization rules enforceable for AI
-            agents and autonomous systems, before execution reaches your
-            business systems.
+            {messaging.tagline}
           </p>
 
           <p className="mt-5 text-base md:text-lg font-medium text-purple-deep">
-            AI can be intelligent without being in charge.
+            {messaging.corePrinciple}
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href={nav.howItWorks}
+              href={nav.demo}
               className="inline-flex items-center justify-center rounded-md bg-purple px-8 py-3 text-base font-semibold text-white hover:opacity-90 transition-opacity duration-150 min-h-[44px]"
             >
-              See how it works
+              See it in action
             </a>
 
             <a

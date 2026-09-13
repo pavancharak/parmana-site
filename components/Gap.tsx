@@ -32,8 +32,8 @@ export default function Gap() {
               Missing
             </p>
             <p className="mt-2 text-lg md:text-xl font-semibold text-ink">
-              Are you authorized to execute this action, right now, in this
-              context?
+              Does this specific action stay within human authority, right
+              now, in this context?
             </p>
           </div>
         </div>
