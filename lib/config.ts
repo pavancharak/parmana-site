@@ -34,7 +34,7 @@ export const demoVideo = {
 // expected orientation for these, but it's set per video.
 export const explainerVideos = [
   {
-    id: "REPLACE_WITH_EXPLAINER_ID",
+    id: "TFpT0wCHnmM",
     title: "AI can be intelligent without being in charge",
     description:
       "The boundary this demo proves: the AI proposes, Parmana authorizes, the business system executes.",
