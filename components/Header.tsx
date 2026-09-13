@@ -7,6 +7,8 @@ import { founderEmail, nav } from "@/lib/config";
 const links = [
   { label: "How it works", href: nav.howItWorks },
   { label: "Use cases", href: nav.useCases },
+  { label: "Demo", href: nav.demo },
+  { label: "Explainers", href: nav.explainers },
   { label: "FAQ", href: nav.faq },
   { label: "Docs", href: nav.docs },
 ];

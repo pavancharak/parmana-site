@@ -17,4 +17,27 @@ export const nav = {
   useCases: "#use-cases",
   faq: "#faq",
   company: "#contact",
+  demo: "/demo",
+  explainers: "/explainers",
+  demoRepo: "https://github.com/pavancharak/parmana-phinite-agent",
 } as const;
+
+// The ID is the part after "v=" in a youtube.com/watch?v= URL, or after
+// youtu.be/ in a short link.
+export const demoVideo = {
+  id: "1MIxMwzlfIY",
+  title: "Parmana x Phinite: live refund authorization demo",
+  orientation: "horizontal" as const,
+};
+
+// Add new explainer videos here as they're uploaded. Vertical is the
+// expected orientation for these, but it's set per video.
+export const explainerVideos = [
+  {
+    id: "REPLACE_WITH_EXPLAINER_ID",
+    title: "AI can be intelligent without being in charge",
+    description:
+      "The boundary this demo proves: the AI proposes, Parmana authorizes, the business system executes.",
+    orientation: "vertical" as const,
+  },
+] as const;

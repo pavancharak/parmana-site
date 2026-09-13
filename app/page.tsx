@@ -8,6 +8,7 @@ import PreventionVsDetection from "@/components/PreventionVsDetection";
 import Architecture from "@/components/Architecture";
 import TechGuarantees from "@/components/TechGuarantees";
 import UseCases from "@/components/UseCases";
+import DemoTeaser from "@/components/DemoTeaser";
 import Stakeholders from "@/components/Stakeholders";
 import FAQ from "@/components/FAQ";
 import BottomCTA from "@/components/BottomCTA";
@@ -43,6 +44,9 @@ export default function Home() {
       </Reveal>
       <Reveal>
         <UseCases />
+      </Reveal>
+      <Reveal>
+        <DemoTeaser />
       </Reveal>
       <Reveal>
         <Stakeholders />
