@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { founderEmail, nav } from "@/lib/config";
+import { nav } from "@/lib/config";
 
 const links = [
   { label: "How it works", href: nav.howItWorks },
@@ -44,10 +44,10 @@ export default function Header() {
 
         <div className="hidden md:block">
           <a
-            href={`mailto:${founderEmail}?subject=Request%20a%20demo`}
+            href={nav.demo}
             className="inline-flex items-center rounded-md bg-purple px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity duration-150"
           >
-            Request a demo
+            Watch a demo
           </a>
         </div>
 
@@ -79,11 +79,11 @@ export default function Header() {
           ))}
 
           <a
-            href={`mailto:${founderEmail}?subject=Request%20a%20demo`}
+            href={nav.demo}
             className="inline-flex items-center justify-center rounded-md bg-purple px-6 py-3 text-sm font-semibold text-white min-h-[48px]"
             onClick={() => setOpen(false)}
           >
-            Request a demo
+            Watch a demo
           </a>
         </div>
       )}

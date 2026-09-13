@@ -1,5 +1,5 @@
 import Gate from "@/components/Gate";
-import { founderEmail, nav } from "@/lib/config";
+import { nav } from "@/lib/config";
 
 export default function BottomCTA() {
   return (
@@ -26,10 +26,10 @@ export default function BottomCTA() {
 
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
           <a
-            href={`mailto:${founderEmail}?subject=Request%20a%20demo`}
+            href={nav.demo}
             className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3 text-base font-semibold text-purple-deep hover:opacity-90 transition-opacity duration-150 min-h-[44px]"
           >
-            Request a demo
+            Watch a demo
           </a>
 
           <a

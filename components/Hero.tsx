@@ -33,14 +33,14 @@ export default function Hero() {
               href={nav.demo}
               className="inline-flex items-center justify-center rounded-md bg-purple px-8 py-3 text-base font-semibold text-white hover:opacity-90 transition-opacity duration-150 min-h-[44px]"
             >
-              See it in action
+              Watch a demo
             </a>
 
             <a
-              href={`mailto:${founderEmail}?subject=Request%20a%20demo`}
+              href={`mailto:${founderEmail}?subject=Request%20a%20pilot`}
               className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3 text-base font-semibold text-purple-deep border border-purple hover:bg-lavender transition-colors duration-150 min-h-[44px]"
             >
-              Request a demo
+              Request a pilot
             </a>
           </div>
         </div>
