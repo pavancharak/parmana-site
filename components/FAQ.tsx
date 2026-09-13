@@ -110,6 +110,37 @@ const categories = [
     ],
   },
   {
+    id: "who-this-is-for",
+    label: "Who this is for",
+    faqs: [
+      {
+        question: "What kind of organizations should use Parmana?",
+        answer:
+          "Any organization where an autonomous system, an AI agent, an algorithm, or an automated workflow can initiate a consequential action, a payment, a refund, a vendor approval, an infrastructure change, and where getting that action wrong has a real cost. If nothing in your organization executes automatically today, there is nothing yet for Parmana to sit in front of.",
+      },
+      {
+        question: "Do we need AI agents already running in production to get value from this?",
+        answer:
+          "No. What matters is that you have, or are about to have, some automated or autonomous process that takes a consequential action, whether that is an AI agent, a scripted workflow, or an algorithm. Parmana does not evaluate what is making the request, only whether the request is authorized.",
+      },
+      {
+        question: "Is Parmana built for a specific industry?",
+        answer:
+          "No. The underlying architecture is domain agnostic, an action, a target, and its parameters, so it does not assume payments or any other specific domain. Financial services is where the clearest, highest stakes examples live today, refunds, transfers, approvals, but the same boundary applies anywhere an autonomous system can take a consequential action.",
+      },
+      {
+        question: "What is the minimum infrastructure required to participate in a pilot?",
+        answer:
+          "Parmana runs as a container and is built to deploy on any Docker based platform, so the minimum is whatever you already use to run a small containerized service. Beyond that you need one target system to integrate for the piloted action, your own signing keys, and a policy for that one action, nothing more specialized than that.",
+      },
+      {
+        question: "Do we need a dedicated engineering team to integrate Parmana?",
+        answer:
+          "You need someone who can wire up one connector, an API call to the system that executes the piloted action, and define the policy for that action. For most teams that is a small, scoped integration task rather than a dedicated project, though the exact effort depends on how that target system already exposes its API.",
+      },
+    ],
+  },
+  {
     id: "pilots",
     label: "Pilots",
     faqs: [
