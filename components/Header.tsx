@@ -9,6 +9,7 @@ const links = [
   { label: "Use cases", href: nav.useCases },
   { label: "Demo", href: nav.demo },
   { label: "Explainers", href: nav.explainers },
+  { label: "SDKs", href: nav.sdks },
   { label: "FAQ", href: nav.faq },
   { label: "Docs", href: nav.docs },
 ];

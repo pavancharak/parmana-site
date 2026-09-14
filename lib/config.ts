@@ -31,6 +31,7 @@ export const nav = {
   company: "#contact",
   demo: "/demo",
   explainers: "/explainers",
+  sdks: "/sdks",
 } as const;
 
 // The ID is the part after "v=" in a youtube.com/watch?v= URL, or after
