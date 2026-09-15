@@ -23,6 +23,7 @@ export const messaging = {
 
 export const nav = {
   docs: "https://docs.parmanasystems.com",
+  github: "https://github.com/pavancharak/AgentLabsBuildathon",
   blog: "https://parmanasystems.substack.com",
   founderLinkedIn: "https://www.linkedin.com/in/pavancharak/",
   howItWorks: "#how-it-works",
