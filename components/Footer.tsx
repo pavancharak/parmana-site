@@ -3,7 +3,6 @@ import { founderEmail, nav } from "@/lib/config";
 const links = [
   { label: "How it works", href: nav.howItWorks },
   { label: "Use cases", href: nav.useCases },
-  { label: "FAQ", href: nav.faq },
   { label: "Docs", href: nav.docs },
   { label: "GitHub", href: nav.github },
   { label: "Blog", href: nav.blog },

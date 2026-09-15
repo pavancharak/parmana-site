@@ -28,7 +28,6 @@ export const nav = {
   founderLinkedIn: "https://www.linkedin.com/in/pavancharak/",
   howItWorks: "#how-it-works",
   useCases: "#use-cases",
-  faq: "#faq",
   company: "#contact",
   demo: "/demo",
   explainers: "/explainers",
