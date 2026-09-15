@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import SdksHero from "@/components/SdksHero";
 import SdkDownloads from "@/components/SdkDownloads";
 import SdkIntegrationPath from "@/components/SdkIntegrationPath";
-import ConnectorSdkDownloads from "@/components/ConnectorSdkDownloads";
 import DemoCTA from "@/components/DemoCTA";
 import Reveal from "@/components/Reveal";
 
@@ -32,9 +31,6 @@ export default function SdksPage() {
       </Reveal>
       <Reveal>
         <SdkIntegrationPath />
-      </Reveal>
-      <Reveal>
-        <ConnectorSdkDownloads />
       </Reveal>
       <Reveal>
         <DemoCTA />
