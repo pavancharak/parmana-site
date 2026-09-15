@@ -29,13 +29,7 @@ export default function ExistingInfrastructure() {
 
           <div className="rounded-md border border-border bg-white p-8">
             <p className="text-lg font-bold text-ink">
-              Parmana does not invent or change these rules.
-            </p>
-            <p className="mt-3 text-base leading-[1.65] text-ink/70">
-              Parmana enforces them.
-            </p>
-            <p className="mt-4 text-sm font-medium text-purple-deep">
-              Policies stay unchanged. Your authority becomes structural.
+              Parmana enforces these rules. It does not invent or change them.
             </p>
           </div>
         </div>

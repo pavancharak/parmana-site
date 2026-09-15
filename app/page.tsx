@@ -4,7 +4,6 @@ import Gap from "@/components/Gap";
 import Solution from "@/components/Solution";
 import HowItWorks from "@/components/HowItWorks";
 import ExistingInfrastructure from "@/components/ExistingInfrastructure";
-import PreventionVsDetection from "@/components/PreventionVsDetection";
 import Evidence from "@/components/Evidence";
 import Architecture from "@/components/Architecture";
 import TechGuarantees from "@/components/TechGuarantees";
@@ -33,9 +32,6 @@ export default function Home() {
       </Reveal>
       <Reveal>
         <ExistingInfrastructure />
-      </Reveal>
-      <Reveal>
-        <PreventionVsDetection />
       </Reveal>
       <Reveal>
         <Evidence />
