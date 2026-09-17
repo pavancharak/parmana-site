@@ -14,5 +14,7 @@ export const explainerVideos = [
 {id:"I2ePXz2KFgc",title:"How Parmana keeps business rules in control",description:"Why an important action should be checked before it reaches the business system.",orientation:"vertical" as const},
 {id:"8g_J81sqdWE",title:"How to control what AI can do",description:"A simple look at how businesses can control actions taken by AI before they reach business systems.",orientation:"vertical" as const},
 {id:"KWx0wNrWLws",title:"How Parmana checks the full chain",description:"A simple look at how an action is connected to the permission, decision, rules and authority behind it.",orientation:"vertical" as const},
-{id:"V8oLELp8CWs",title:"How Parmana protects business decisions",description:"A simple look at how Parmana keeps business-allowed actions under control when software and AI carry them out.",orientation:"vertical" as const},
+{id:"V8oLELp8CWs",title:"How Parmana protects business decisions",description:"A simple look at how Parmana keeps actions approved by the business under control when software and AI carry them out.",orientation:"vertical" as const},
+{id:"4UC7Y4IoJgg",title:"Keeping business control with AI",description:"A short explanation of how a business can stay in control when AI takes action.",orientation:"vertical" as const},
+{id:"5qQxbdw3AmE",title:"Making sure AI follows business decisions",description:"A short explanation of how approved business decisions guide actions taken by software and AI.",orientation:"vertical" as const},
 ] as const;
