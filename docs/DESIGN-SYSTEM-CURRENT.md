@@ -7,7 +7,7 @@ if it and the config disagree, the config wins, but flag the drift.
 
 **Primary positioning:**
 
-> AI can propose. Leaders have the authority to make decisions. Parmana makes sure your systems follow those decisions at machine speed and produces proof that they did.
+> AI can propose. Leaders have the authority to make decisions. Parmana makes sure your systems follow those decisions at machine speed and produces proof that they did. Parmana makes sure your systems follow those decisions at machine speed and produces proof that they did.
 
 Plain-language explanation:
 

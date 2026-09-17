@@ -20,14 +20,14 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://parmanasystems.com"),
-  title: "Parmana | AI can propose. Leaders have the authority to make decisions. Parmana makes sure your systems follow those decisions at machine speed and produces proof that they did.",
+  title: "Parmana | AI can propose. Leaders have the authority to make decisions. Parmana makes sure your systems follow those decisions at machine speed and produces proof that they did. Parmana makes sure your systems follow those decisions at machine speed and produces proof that they did.",
   description:
     "AI proposes actions. The leaders decide what is allowed. Parmana checks the action and proves what happened.",
   alternates: {
     canonical: "https://parmanasystems.com",
   },
   openGraph: {
-    title: "Parmana | AI can propose. Leaders have the authority to make decisions. Parmana makes sure your systems follow those decisions at machine speed and produces proof that they did.",
+    title: "Parmana | AI can propose. Leaders have the authority to make decisions. Parmana makes sure your systems follow those decisions at machine speed and produces proof that they did. Parmana makes sure your systems follow those decisions at machine speed and produces proof that they did.",
     description:
       "AI can propose actions in business systems. The business sets what is allowed. Parmana checks before the action happens and proves what happened.",
     type: "website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Parmana | AI can propose. Leaders have the authority to make decisions. Parmana makes sure your systems follow those decisions at machine speed and produces proof that they did.",
+    title: "Parmana | AI can propose. Leaders have the authority to make decisions. Parmana makes sure your systems follow those decisions at machine speed and produces proof that they did. Parmana makes sure your systems follow those decisions at machine speed and produces proof that they did.",
     description:
       "AI can propose actions in business systems. The business sets what is allowed. Parmana checks before the action happens and proves what happened.",
   },
