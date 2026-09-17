@@ -68,4 +68,11 @@ export const explainerVideos = [
       "A simple look at how an authorized action is verified before execution and how the result can be proven.",
     orientation: "vertical" as const,
   },
+  {
+    id: "V8oLELp8CWs",
+    title: "How Parmana protects business decisions",
+    description:
+      "A simple look at how Parmana keeps approved business actions under control when software and AI carry them out.",
+    orientation: "vertical" as const,
+  },
 ] as const;
