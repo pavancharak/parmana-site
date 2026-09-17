@@ -1,28 +1,2 @@
 import Gate from "@/components/Gate";
-
-export default function SdksHero() {
-  return (
-    <section className="relative overflow-hidden bg-paper border-b border-border">
-      <Gate
-        state="open"
-        className="pointer-events-none absolute -right-6 -top-6 h-40 w-40 opacity-15 md:h-56 md:w-56"
-      />
-
-      <div className="relative max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24 text-center">
-        <p className="text-xs font-mono uppercase tracking-wide text-purple-deep">
-          SDKs
-        </p>
-
-        <h1 className="mx-auto mt-4 max-w-[760px] text-[30px] md:text-[42px] font-bold leading-[1.15] tracking-tight text-ink">
-          Integrate the authority boundary directly into your stack
-        </h1>
-
-        <p className="mx-auto mt-6 max-w-[640px] text-lg leading-[1.5] text-ink/70">
-          TypeScript and Python SDKs, both published and versioned. An
-          autonomous system proposes an action through the SDK, your policy
-          decides, and Parmana enforces before execution proceeds.
-        </p>
-      </div>
-    </section>
-  );
-}
+export default function SdksHero(){return <section className="relative overflow-hidden bg-paper border-b border-border"><Gate state="open" className="pointer-events-none absolute -right-6 -top-6 h-40 w-40 opacity-15 md:h-56 md:w-56"/><div className="relative max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24 text-center"><p className="text-xs font-mono uppercase tracking-wide text-purple-deep">Developer tools</p><h1 className="mx-auto mt-4 max-w-[760px] text-[30px] md:text-[42px] font-bold leading-[1.15] tracking-tight text-ink">Connect Parmana to the systems that already run your business.</h1><p className="mx-auto mt-6 max-w-[640px] text-lg leading-[1.5] text-ink/70">Use the TypeScript or Python SDK to send an action for checking, apply your business rule, and verify the resulting record.</p></div></section>}

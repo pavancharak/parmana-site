@@ -16,7 +16,7 @@ export default function Footer() {
           <a href="/" className="text-lg font-bold text-ink">
             Parmana
           </a>
-          <p className="mt-2 text-xs text-ink/50">© 2026 Parmana Systems</p>
+          <p className="mt-2 text-xs text-ink/50">© 2026 Parmana Systems Private Limited</p>
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-6">

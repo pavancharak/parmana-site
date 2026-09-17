@@ -47,7 +47,7 @@ export default function Header() {
             href={nav.demo}
             className="inline-flex items-center rounded-md bg-purple px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity duration-150"
           >
-            Watch a demo
+            See the demo
           </a>
         </div>
 
@@ -83,7 +83,7 @@ export default function Header() {
             className="inline-flex items-center justify-center rounded-md bg-purple px-6 py-3 text-sm font-semibold text-white min-h-[48px]"
             onClick={() => setOpen(false)}
           >
-            Watch a demo
+            See the demo
           </a>
         </div>
       )}

@@ -9,16 +9,13 @@ export const colors = {
 
 export const founderEmail = "founder@parmanasystems.com";
 
-// Locked positioning phrases (2026-09-13 repositioning). Reuse these
-// verbatim rather than rephrasing per component, see
-// docs/DESIGN-SYSTEM-CURRENT.md for the full positioning rationale.
 export const messaging = {
-  hero: "Human Authority Infrastructure for Autonomous Systems",
+  hero: "Make sure your software does exactly what your business approves.",
   tagline:
-    "Your policies. Your control. Autonomous systems execute within your authority.",
-  corePrinciple: "Autonomous systems propose. Your policy decides. Parmana enforces.",
-  outcome: "Humans stay in control while benefiting from autonomous capability.",
-  proof: "Structural authority, verified by cryptographic proof.",
+    "Parmana helps businesses control what their software is allowed to do, stop actions that are not approved, and show exactly what happened.",
+  corePrinciple: "Your business decides. Parmana makes sure the system follows the decision.",
+  outcome: "Your business stays in control while software and AI carry out approved work.",
+  proof: "Clear proof of what was approved and what happened.",
 } as const;
 
 export const nav = {
@@ -26,37 +23,33 @@ export const nav = {
   github: "https://github.com/pavancharak/AgentLabsBuildathon",
   blog: "https://parmanasystems.substack.com",
   founderLinkedIn: "https://www.linkedin.com/in/pavancharak/",
-  howItWorks: "#how-it-works",
-  useCases: "#use-cases",
-  company: "#contact",
+  howItWorks: "/#how-it-works",
+  useCases: "/#use-cases",
+  company: "/#contact",
   demo: "/demo",
   explainers: "/explainers",
   sdks: "/sdks",
 } as const;
 
-// The ID is the part after "v=" in a youtube.com/watch?v= URL, or after
-// youtu.be/ in a short link.
 export const demoVideo = {
   id: "1MIxMwzlfIY",
-  title: "Parmana x Phinite: live refund authorization demo",
+  title: "Parmana live refund authorization demo",
   orientation: "horizontal" as const,
 };
 
-// Add new explainer videos here as they're uploaded. Vertical is the
-// expected orientation for these, but it's set per video.
 export const explainerVideos = [
   {
     id: "TFpT0wCHnmM",
-    title: "AI can be intelligent without being in charge",
+    title: "AI can propose. The business decides.",
     description:
-      "The boundary this demo proves: the AI proposes, Parmana authorizes, the business system executes.",
+      "A simple look at the difference between an AI system suggesting an action and a business giving permission for that action.",
     orientation: "vertical" as const,
   },
   {
     id: "I2ePXz2KFgc",
-    title: "Human authority infrastructure for autonomous systems",
+    title: "How Parmana keeps approval in control",
     description:
-      "Why the boundary between an autonomous system's request and its execution has to sit outside the system itself.",
+      "Why the check should happen before an important action reaches the business system that carries it out.",
     orientation: "vertical" as const,
   },
 ] as const;

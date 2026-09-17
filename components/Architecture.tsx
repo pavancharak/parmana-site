@@ -1,17 +1,2 @@
 import BoundaryDiagram from "@/components/BoundaryDiagram";
-
-export default function Architecture() {
-  return (
-    <section id="architecture" className="bg-lavender border-b border-border">
-      <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
-        <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-ink text-center max-w-[760px] mx-auto">
-          The human authority boundary sits outside your business systems
-        </h2>
-
-        <div className="mt-14 rounded-md border border-border bg-white p-8 md:p-10">
-          <BoundaryDiagram />
-        </div>
-      </div>
-    </section>
-  );
-}
+export default function Architecture() { return <section id="architecture" className="bg-lavender border-b border-border"><div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24"><h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-ink text-center max-w-[760px] mx-auto">Parmana checks the action before it reaches the business system.</h2><p className="mt-4 text-center text-base text-ink/70 max-w-[680px] mx-auto">The same check can sit in front of actions coming from people, applications, automated workflows, or AI systems.</p><div className="mt-14 rounded-md border border-border bg-white p-8 md:p-10"><BoundaryDiagram /></div></div></section>; }

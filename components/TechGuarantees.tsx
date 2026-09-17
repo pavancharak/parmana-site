@@ -1,71 +1,12 @@
 const guarantees = [
-  {
-    title: "Authorization verified before execution",
-    desc: "No action reaches your systems without evaluation.",
-  },
-  {
-    title: "Fails closed by default",
-    desc: "Blocked by default. Authorized only by an explicit decision state.",
-  },
-  {
-    title: "Single use credentials",
-    desc: "Each action consumes its own authorization token, isolated per session.",
-  },
-  {
-    title: "Bounded in time",
-    desc: "Authorization expires automatically.",
-  },
-  {
-    title: "Revocable credentials",
-    desc: "Authority can be revoked in flight.",
-  },
-  {
-    title: "Cryptographic signing",
-    desc: "Ed25519 and ML-DSA signing, with hybrid signatures available for cryptographic agility and quantum readiness.",
-  },
-  {
-    title: "Verifiable execution evidence",
-    desc: "Proof that authorization happened before execution.",
-  },
-  {
-    title: "Immutable audit trail",
-    desc: "Evidence cannot be modified after the fact.",
-  },
-  {
-    title: "Independent offline verification",
-    desc: "Signed execution trust records can be verified independently without trusting the Parmana runtime or database.",
-  },
-  {
-    title: "Discoverable verification keys",
-    desc: "Public verification keys are exposed through standard discovery endpoints for independent verification.",
-  },
-  {
-    title: "Key rotation",
-    desc: "Verification keys can be rotated through an explicit key identifier without changing the authorization model.",
-  },
-  {
-    title: "Hybrid downgrade protection",
-    desc: "Hybrid signature enforcement can be enabled when an environment requires protection against silent fallback to a single signature scheme.",
-  },
+  ["Checked before action", "The requested action is checked before it reaches the target system."],
+  ["Stopped when not approved", "An action without the required approval does not proceed through the governed path."],
+  ["Limited permission", "Permission can be limited to the particular action and its conditions."],
+  ["Time-limited", "An approval can expire instead of remaining valid forever."],
+  ["Can be withdrawn", "Permission can be withdrawn when the business requires it."],
+  ["Signed decisions", "Important decisions can be digitally signed so they can be checked later."],
+  ["Evidence of execution", "The system keeps evidence connecting the approval to the resulting action."],
+  ["Hard to change afterward", "The record is designed to make later changes detectable."],
+  ["Independent checking", "Verification can be performed without relying on the same application that performed the action."],
 ];
-
-export default function TechGuarantees() {
-  return (
-    <section id="guarantees" className="bg-paper border-b border-border">
-      <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
-        <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-ink text-center max-w-[760px] mx-auto">
-          Structural authority guarantees
-        </h2>
-
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {guarantees.map((g) => (
-            <div key={g.title} className="rounded-md border border-border bg-lavender p-8">
-              <h3 className="text-base font-bold text-ink mb-2">{g.title}</h3>
-              <p className="text-sm leading-[1.6] text-ink/70">{g.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+export default function TechGuarantees(){return <section id="guarantees" className="bg-paper border-b border-border"><div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24"><h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-ink text-center max-w-[760px] mx-auto">Built for control and proof</h2><p className="mt-4 text-center text-base text-ink/70 max-w-[680px] mx-auto">The technical system underneath Parmana is designed around a simple rule: an important action should not depend on trust alone.</p><div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">{guarantees.map(([title,desc])=><div key={title} className="rounded-md border border-border bg-lavender p-8"><h3 className="text-base font-bold text-ink mb-2">{title}</h3><p className="text-sm leading-[1.6] text-ink/70">{desc}</p></div>)}</div></div></section>}
