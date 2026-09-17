@@ -43,7 +43,7 @@ was written.
 
 | File | Status |
 |---|---|
-| `app/layout.tsx` | `metadata.description` is `"Execution Authorization Infrastructure"`, not the fully banned phrase (no "for AI systems") but adjacent to it and worth updating to reflect the authority-protection framing. |
+| `app/layout.tsx` | `metadata.description` is `"Approval Infrastructure"`, not the fully banned phrase (no "for AI systems") but adjacent to it and worth updating to reflect the authority-protection framing. |
 | `components/navbar.tsx` | Structurally fine, preserve as-is. Links: Why / Execution / Architecture / FAQ / Company / external blog, plus a Contact CTA. |
 | `components/footer.tsx` | Tagline: *"Parmana ensures institutions don't lose authority to AI agents."*, see repeated-line note below. |
 
@@ -108,8 +108,8 @@ Parmana" one-liner on `/company` or `/faq`, use:
 
 > **Institutional Authority Infrastructure**
 
-This replaces "Execution Layer for AI," "Execution Authorization Infrastructure for AI systems,"
-and the current bare "Execution Authorization Infrastructure" in `layout.tsx` metadata (see
+This replaces "Execution Layer for AI," "Approval Infrastructure for AI systems,"
+and the current bare "Approval Infrastructure" in `layout.tsx` metadata (see
 Part 1's global-chrome inventory). Apply it consistently everywhere the category is named, not
 just in `layout.tsx`.
 
@@ -143,8 +143,8 @@ all six are independently corroborated in that repo's own documentation, not jus
 
 ### What must NOT appear anywhere in the rebuilt site
 
-- "Execution Layer for AI" or "Execution Authorization Infrastructure for AI systems" as
-  category terms (the current `layout.tsx` metadata, `"Execution Authorization Infrastructure"`
+- "Execution Layer for AI" or "Approval Infrastructure for AI systems" as
+  category terms (the current `layout.tsx` metadata, `"Approval Infrastructure"`
  , is adjacent to this and should be updated, though it's not the fully banned phrase verbatim).
   The locked replacement category term is **"Institutional Authority Infrastructure"**, see the
   "Locked category term" subsection above.
@@ -213,7 +213,7 @@ others aren't:
 
 - [ ] Every occurrence of "Parmana ensures institutions don't lose authority to AI agents" (or
       close variants) replaced consistently.
-- [ ] "Execution Authorization Infrastructure" (bare, in `layout.tsx` metadata) updated.
+- [ ] "Approval Infrastructure" (bare, in `layout.tsx` metadata) updated.
 - [ ] No page's *sole* framing device is "AI agents", each names AI as one source among several
       (human, application, attacker/unauthorized actor), consistent with `/architecture` and
       `/why`'s Risk section.
@@ -224,7 +224,7 @@ others aren't:
       line has been retired from site copy.
 - [ ] "Institutional Authority Infrastructure" is the category term used consistently wherever
       the site names its category (metadata description, footer, "what is Parmana" one-liners),
-      replacing any lingering "Execution Layer for AI" / "Execution Authorization Infrastructure"
+      replacing any lingering "Execution Layer for AI" / "Approval Infrastructure"
       language.
 - [ ] At least one of the six proof points in Part 2 is featured with real specificity (not just
       a vague "we're verified" claim), the four-pass validation story is the strongest

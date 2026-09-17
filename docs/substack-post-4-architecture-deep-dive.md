@@ -2,7 +2,7 @@
 
 *Subtitle: Last post I said every action gets checked before it executes, not just once at setup. Here's exactly what that means, mechanically.*
 
-In the last post, I described the gap in agentic payment protocols like NPCI's UAP: a spending limit tells you "how much," not "was this specific action, right now, still authorized." I said Parmana closes that gap with runtime verification, cryptographic proof, and immediate revocation.
+In the last post, I described the gap in agentic payment protocols like NPCI's UAP: a spending limit tells you "how much," not "was this specific action, right now, still authorized." I said Parmana closes that gap with runtime verification, proof, and immediate revocation.
 
 That's the pitch version. Here's the actual mechanism, because "we verify at runtime" is exactly the kind of sentence that means nothing until you can see what it does.
 
@@ -40,7 +40,7 @@ There's no window where "the agent hasn't heard yet." The agent doesn't need to 
 
 ## The proof is a signature, not a promise
 
-Every decision, approved or refused, gets signed before anything downstream acts on it. Right now that's Ed25519. The signing layer isn't hardcoded to one algorithm, there's already a working post-quantum option (Dilithium3) built alongside it, coordinated through the same registry, and the policy engine that decides approve or reject has zero dependency on which signature scheme is in use underneath it. That's a real, separate architectural layer, not something bolted on for a blog post: the part that decides what's allowed doesn't know or care how the decision gets proven afterward.
+Every decision, approved or refused, gets signed before anything downstream acts on it. Right now that's Ed25519. The signing layer isn't hardcoded to one algorithm, there's already a working post-quantum option (Dilithium3) built alongside it, coordinated through the same registry, and the rules that decides approve or reject has zero dependency on which signature scheme is in use underneath it. That's a real, separate architectural layer, not something bolted on for a blog post: the part that decides what's allowed doesn't know or care how the decision gets proven afterward.
 
 What that buys you: the signature can be checked by the executing system, by an auditor, by a regulator, independently, against a public key. Nobody has to trust Parmana's live say-so at the moment of execution. They check the math.
 
@@ -54,7 +54,7 @@ Same story with policy: rules live in a plain, deploying-party-controlled locati
 
 ## What this doesn't do
 
-Worth being honest about the edges here too. This isn't a fraud model. It doesn't guess whether a transaction looks suspicious, that's a different problem, and if you want a risk score feeding into a decision, that's a signal you hand the policy engine as one input among others, not something this replaces. It's not a human-approval workflow either; there's a separate, real tool for reviewing changes to the rules themselves, with a proper diff view, but that's governance over the policy, not a human sitting in the loop of every payment. The policy engine decides in real time, deterministically, off the rules and the facts it's given. No model call, no external lookup, no clock, no randomness, inside that decision. That's deliberate: the one piece that decides approve or reject should be the one piece you can reason about completely, every time, the same way.
+Worth being honest about the edges here too. This isn't a fraud model. It doesn't guess whether a transaction looks suspicious, that's a different problem, and if you want a risk score feeding into a decision, that's a signal you hand the rules as one input among others, not something this replaces. It's not a human-approval workflow either; there's a separate, real tool for reviewing changes to the rules themselves, with a proper diff view, but that's governance over the policy, not a human sitting in the loop of every payment. The rules decides in real time, deterministically, off the rules and the facts it's given. No model call, no external lookup, no clock, no randomness, inside that decision. That's deliberate: the one piece that decides approve or reject should be the one piece you can reason about completely, every time, the same way.
 
 ## Where this leaves things
 

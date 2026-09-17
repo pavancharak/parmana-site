@@ -11,7 +11,7 @@ export default function Problem() {
             <p className="text-base leading-[1.65] font-medium text-purple-deep">Parmana checks the request before it reaches the business system.</p>
           </div>
           <div className="relative flex items-end justify-center">
-            <img src="/parmana-problem-foreground.png" alt="A person and a software system, representing business decisions and software execution." className="w-full max-w-[720px] h-auto object-contain" />
+            <img src="/parmana-problem-foreground.png" alt="A person and a software system, representing leader decisions and software execution." className="w-full max-w-[720px] h-auto object-contain" />
           </div>
         </div>
       </div>

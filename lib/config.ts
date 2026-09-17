@@ -10,7 +10,7 @@ export const colors = {
 export const founderEmail = "founder@parmanasystems.com";
 
 export const messaging = {
-  hero: "AI can propose. Leaders have the authority to make decisions. Parmana makes sure your systems follow those decisions at machine speed — and produces proof that they did.",
+  hero: "AI can propose. Leaders have the authority to make decisions. Parmana makes sure your systems follow those decisions at machine speed and produces proof that they did.",
   tagline:
     "Make sure every action stays within what your business allows.",
   corePrinciple:
@@ -70,7 +70,7 @@ export const explainerVideos = [
   },
   {
     id: "V8oLELp8CWs",
-    title: "How Parmana protects business decisions",
+    title: "How Parmana protects leader decisions",
     description:
       "A simple look at how Parmana keeps business-allowed actions under control when software and AI carry them out.",
     orientation: "vertical" as const,

@@ -35,7 +35,7 @@ Claim: No. A refund request typed into an internal admin tool by an employee goe
 FAQ 9: How is this different from an audit log?
 Claim: An audit log tells you, after the fact, that an agent sent a payment. Parmana tells you, before it happened, that the payment matched your rules, and records that decision as evidence. One is a record of what occurred. The other is proof of what was allowed to occur.
 
-FAQ 10: Can Parmana help with auditability and compliance?
+FAQ 10: Can Parmana help with clear proof and compliance?
 Claim: Yes. Parmana creates verifiable evidence for each authorization decision: what was requested, what rules were applied, whether it was allowed, and what was authorized before execution. It does not replace your compliance program, audit systems, or regulatory obligations. It gives them evidence to work with.
 
 FAQ 11: How is this different from a kill switch?

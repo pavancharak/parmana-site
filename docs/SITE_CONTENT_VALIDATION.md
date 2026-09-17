@@ -84,7 +84,7 @@ directly below so this document is self-contained, page section by page section.
 
 **Claim ("Refunds & Transfers"):** "Check refunds, transfers, and other money movements before they are executed."
 **Verdict:** ✅ ACCURATE
-**Evidence:** `ExecutableContent` (`packages/shared/src/domain/executable-content.ts:19-39`) is domain-agnostic — `action`, `target`, `parameters`, with no payment-specific required field. A refund or transfer is just a different `action` value through the identical verify-then-execute pipeline; nothing in the gateway or policy engine special-cases "payment" as a type.
+**Evidence:** `ExecutableContent` (`packages/shared/src/domain/executable-content.ts:19-39`) is domain-agnostic — `action`, `target`, `parameters`, with no payment-specific required field. A refund or transfer is just a different `action` value through the identical verify-then-execute pipeline; nothing in the gateway or rules special-cases "payment" as a type.
 
 **Claim ("Payouts"):** "Make sure automated payouts match the amount, recipient, and rules that were approved."
 **Verdict:** ✅ ACCURATE
@@ -178,7 +178,7 @@ sibling doc for the evidence behind each one.
 | 7 | What happens if an agent behaves unexpectedly? | ✅ ACCURATE |
 | 8 | Is Parmana only for AI agents? | ✅ ACCURATE |
 | 9 | How is this different from an audit log? | ✅ ACCURATE |
-| 10 | Can Parmana help with auditability and compliance? | ✅ ACCURATE |
+| 10 | Can Parmana help with clear proof and compliance? | ✅ ACCURATE |
 | 11 | How is this different from a kill switch? | ✅ ACCURATE |
 | 12 | Can Parmana run in our own cloud or infrastructure? | ✅ ACCURATE |
 | 13 | What if today's cryptography changes tomorrow? | ✅ ACCURATE |

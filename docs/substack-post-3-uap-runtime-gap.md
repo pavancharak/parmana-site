@@ -34,7 +34,7 @@ That's a real, useful thing to build, and it's moving faster than most infrastru
 
 None of these are edge cases invented to make a point. They're the ordinary texture of how spending limits actually get used: they change, they get revoked, and being under a number was never the same question as being the right transaction, right now, for this customer, under whatever the current rules actually are.
 
-This is close to what NPCI's own commentators are already flagging in public. Sharat Chandra, writing specifically about UAP, frames the core requirement well: agents need verifiable identity, delegated authority, auditability, and revocation, "trust becomes programmable," in his words. But he also names what's still unresolved: liability, consent mechanisms, audit standards, dispute resolution, fraud controls. Those aren't footnotes. They're the actual hard part.
+This is close to what NPCI's own commentators are already flagging in public. Sharat Chandra, writing specifically about UAP, frames the core requirement well: agents need verifiable identity, delegated authority, clear proof, and revocation, "trust becomes programmable," in his words. But he also names what's still unresolved: liability, consent mechanisms, audit standards, dispute resolution, fraud controls. Those aren't footnotes. They're the actual hard part.
 
 Nikhil Pahwa, at MediaNama, has made a related and more specific point: NPCI needs to build trust before agentic UPI rolls out further, and agents should transact through delegated handles rather than direct bank account access, precisely so that what an agent can touch is scoped and revocable rather than an all-or-nothing grant.
 

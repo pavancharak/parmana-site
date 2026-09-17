@@ -67,7 +67,7 @@ verifies) as one word, "Parmana," which is fair at the marketing-copy level.
 **Claim:** Capability does not become authority; only the requested action is checked.
 **Verdict:** ✅ ACCURATE
 **Evidence:**
-- `PolicyOperator`'s own doc comment (`Policy.ts:34-48`): "Operators SHALL NOT... call LLMs... access external systems... use clocks... generate randomness." The policy engine is a pure, deterministic function over supplied facts.
+- `PolicyOperator`'s own doc comment (`Policy.ts:34-48`): "Operators SHALL NOT... call LLMs... access external systems... use clocks... generate randomness." The rules is a pure, deterministic function over supplied facts.
 - `PolicySignals` (`PolicySignals.ts`) is a plain fact map (`{ amount, currency, country, riskScore }` in the type's own example) — there's no "model capability" or "reasoning quality" concept anywhere in the evaluated path.
 **Conclusion:** Claim accurately reflects code behavior.
 
@@ -121,7 +121,7 @@ verifies) as one word, "Parmana," which is fair at the marketing-copy level.
 
 ---
 
-### FAQ 10: "Can Parmana help with auditability and compliance?"
+### FAQ 10: "Can Parmana help with clear proof and compliance?"
 **Claim:** Creates verifiable evidence around authorization decisions; does not replace your compliance program.
 **Verdict:** ✅ ACCURATE
 **Evidence:** Same as FAQ 9. The "does not replace your compliance program" framing is honest and correctly scoped — nothing in the codebase claims to be a compliance system, only an evidence source.

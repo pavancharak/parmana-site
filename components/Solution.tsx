@@ -56,7 +56,7 @@ export default function Solution() {
 
         <div className="mt-16 rounded-md border border-border bg-lavender p-8 md:p-10 text-center max-w-[760px] mx-auto">
           <p className="text-lg md:text-xl font-bold text-ink">
-            Parmana does not make the business decision.
+            Parmana does not make the leader decision.
           </p>
 
           <p className="mt-3 text-base leading-[1.65] text-ink/70">

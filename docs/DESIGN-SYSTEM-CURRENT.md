@@ -7,7 +7,7 @@ if it and the config disagree, the config wins, but flag the drift.
 
 **Primary positioning:**
 
-> AI can propose. Leaders have the authority to make decisions. Parmana makes sure your systems follow those decisions at machine speed — and produces proof that they did.
+> AI can propose. Leaders have the authority to make decisions. Parmana makes sure your systems follow those decisions at machine speed and produces proof that they did.
 
 Plain-language explanation:
 
@@ -18,7 +18,7 @@ Plain-language explanation:
 
 Public copy should use simple words. Prefer **business rules**, **allowed**, **authorized**, **action**, **system**, **what happened**, and **proof**. Avoid abstract category language in customer-facing copy.
 
-Parmana does not make the business decision. The business sets the rules. AI, people, applications, and automated workflows can request actions; Parmana checks those actions before they reach the business system.
+Parmana does not make the leader decision. The business sets the rules. AI, people, applications, and automated workflows can request actions; Parmana checks those actions before they reach the business system.
 
 ## Color tokens (Tailwind)
 
