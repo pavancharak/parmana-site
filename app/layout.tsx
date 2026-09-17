@@ -22,14 +22,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://parmanasystems.com"),
   title: "Parmana | When AI operates business systems, Parmana proves what happened",
   description:
-    "When AI operates business systems, Parmana checks what the business allows and proves what the system actually did."
+    "When AI operates business systems, Parmana checks what the business allows and proves what the system actually did.",
   alternates: {
     canonical: "https://parmanasystems.com",
   },
   openGraph: {
     title: "Parmana | When AI operates business systems, Parmana proves what happened",
     description:
-      "AI can operate business systems. Parmana checks each important action against what the business allows and proves what happened."
+      "AI can operate business systems. Parmana checks each important action against what the business allows and proves what happened.",
     type: "website",
     url: "https://parmanasystems.com",
     images: ["https://parmanasystems.com/og-image.jpg"],
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Parmana | When AI operates business systems, Parmana proves what happened",
     description:
-      "AI can operate business systems. Parmana checks each important action against what the business allows and proves what happened."
+      "AI can operate business systems. Parmana checks each important action against what the business allows and proves what happened.",
   },
   robots: "index, follow",
 };
