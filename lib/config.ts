@@ -10,7 +10,7 @@ export const colors = {
 export const founderEmail = "founder@parmanasystems.com";
 
 export const messaging = {
-  hero: "AI proposes. Leaders decide. Parmana proves.",
+  hero: "AI can propose. Leaders have the authority to make decisions. Parmana makes sure your systems follow those decisions at machine speed — and produces proof that they did.",
   tagline:
     "Make sure every action stays within what your business allows.",
   corePrinciple:
