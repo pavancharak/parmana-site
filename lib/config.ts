@@ -61,4 +61,11 @@ export const explainerVideos = [
       "A simple look at how businesses can control actions taken by AI agents before they reach the systems that carry them out.",
     orientation: "vertical" as const,
   },
+  {
+    id: "KWx0wNrWLws",
+    title: "How the Execution Trust Chain Secures AI Agents",
+    description:
+      "A simple look at how an authorized action is verified before execution and how the result can be proven.",
+    orientation: "vertical" as const,
+  },
 ] as const;
