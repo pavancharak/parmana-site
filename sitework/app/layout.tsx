@@ -20,25 +20,25 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://parmanasystems.com"),
-  title: "Parmana | Keep Control of Your Business in the Agentic Era",
+  title: "Parmana | Keep Control of Your Business as AI Starts Acting on Its Own",
   description:
-    "AI can now take action inside your business. Parmana makes sure your software does exactly what your business allows.",
+    "AI can now take action inside your business. Parmana helps make sure your software does exactly what your business allows.",
   alternates: {
     canonical: "https://parmanasystems.com",
   },
   openGraph: {
-    title: "Parmana | Keep Control of Your Business in the Agentic Era",
+    title: "Parmana | Keep Control of Your Business as AI Starts Acting on Its Own",
     description:
-      "AI can propose actions in business systems. The business sets what is allowed. Parmana checks before the action happens and proves what happened.",
+      "AI can suggest and carry out actions. The business sets what is allowed. Parmana checks before the action happens and shows what was allowed and what happened.",
     type: "website",
     url: "https://parmanasystems.com",
     images: ["https://parmanasystems.com/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Parmana | Keep Control of Your Business in the Agentic Era",
+    title: "Parmana | Keep Control of Your Business as AI Starts Acting on Its Own",
     description:
-      "AI can propose actions in business systems. The business sets what is allowed. Parmana checks before the action happens and proves what happened.",
+      "AI can suggest and carry out actions. The business sets what is allowed. Parmana checks before the action happens and shows what was allowed and what happened.",
   },
   robots: "index, follow",
 };
