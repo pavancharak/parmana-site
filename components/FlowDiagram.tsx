@@ -5,14 +5,14 @@ function Box({ eyebrow, label, className = "" }: { eyebrow: string; label: strin
 
 export default function FlowDiagram() {
   return <div role="img" aria-label="A business defines an allowed action, Parmana checks the request, and the action either proceeds or is stopped" className="mx-auto flex max-w-[560px] flex-col items-center gap-3 py-4">
-    <Box eyebrow="Step 1" label="Business approves what is allowed" />
+    <Box eyebrow="Step 1" label="Business sets what is allowed" />
     <ArrowDownIcon className="h-5 w-5 text-ink/50" aria-hidden="true" />
     <div className="flex items-center gap-3 rounded-md border-2 border-purple px-5 py-4"><Gate state="checking" className="h-9 w-9 shrink-0" /><div className="text-left"><p className="text-xs font-mono uppercase tracking-wide text-purple-deep">Step 2</p><p className="text-sm font-medium text-ink">Parmana checks the requested action</p></div></div>
     <ArrowDownIcon className="h-5 w-5 text-ink/50" aria-hidden="true" />
-    <Box eyebrow="Step 3" label="Is this action approved?" />
+    <Box eyebrow="Step 3" label="Is this action allowed?" />
     <div className="mt-1 grid w-full grid-cols-1 gap-6 border-t border-border pt-5 sm:grid-cols-2">
-      <div className="flex flex-col items-center gap-2 text-center"><div className="mx-auto h-4 w-px bg-purple" /><CheckCircleIcon className="h-6 w-6 text-purple-deep" /><p className="text-xs font-mono uppercase tracking-wide text-purple-deep">Approved</p><p className="text-sm text-ink/70">The action can proceed and the result is recorded.</p></div>
-      <div className="flex flex-col items-center gap-2 text-center"><div className="mx-auto h-4 w-px bg-border" /><XCircleIcon className="h-6 w-6 text-ink/50" /><p className="text-xs font-mono uppercase tracking-wide text-ink/50">Not approved</p><p className="text-sm text-ink/70">The action is stopped.</p></div>
+      <div className="flex flex-col items-center gap-2 text-center"><div className="mx-auto h-4 w-px bg-purple" /><CheckCircleIcon className="h-6 w-6 text-purple-deep" /><p className="text-xs font-mono uppercase tracking-wide text-purple-deep">Allowed</p><p className="text-sm text-ink/70">The action can proceed and what happened is recorded.</p></div>
+      <div className="flex flex-col items-center gap-2 text-center"><div className="mx-auto h-4 w-px bg-border" /><XCircleIcon className="h-6 w-6 text-ink/50" /><p className="text-xs font-mono uppercase tracking-wide text-ink/50">Not allowed</p><p className="text-sm text-ink/70">The action is stopped.</p></div>
     </div>
   </div>;
 }

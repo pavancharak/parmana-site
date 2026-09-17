@@ -2,8 +2,9 @@ export default function Solution() {
   return (
     <section id="solution" className="bg-paper border-b border-border">
       <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
-        <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-ink text-center max-w-[760px] mx-auto">
-          Your business decides. Parmana makes sure the system follows.
+        <p className="text-xs font-mono uppercase tracking-wide text-purple-deep text-center">When AI operates business systems</p>
+        <h2 className="mt-3 text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-ink text-center max-w-[760px] mx-auto">
+          Your business sets the rules. Parmana makes sure the system follows them.
         </h2>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -11,7 +12,7 @@ export default function Solution() {
             <div className="w-full max-w-[340px] space-y-3">
               <div className="rounded-md border border-border bg-white px-5 py-4 text-center">
                 <p className="text-sm font-semibold text-ink">
-                  Your business approves an action
+                  The business allows the action
                 </p>
               </div>
 
@@ -36,23 +37,19 @@ export default function Solution() {
 
           <div className="space-y-4">
             <p className="text-base leading-[1.65] text-ink/70">
-              Parmana sits between an approved action and the system that
-              carries it out.
+              Parmana checks the action before the business system carries it out.
             </p>
 
             <p className="text-base leading-[1.65] text-ink/70">
-              It checks whether the requested action matches the business&apos;s
-              rules.
+              It checks whether the requested action is allowed by the business rules.
             </p>
 
             <p className="text-base leading-[1.65] text-ink/70">
-              If it is allowed, it can proceed. If it is not allowed, it is
-              stopped.
+              If it is allowed, it can proceed. If it is not allowed, it stops.
             </p>
 
             <p className="text-base leading-[1.65] font-medium text-purple-deep">
-              Afterward, Parmana provides evidence showing what was approved
-              and what happened.
+              Parmana also keeps proof of what the business allowed and what the system did.
             </p>
           </div>
         </div>
@@ -63,8 +60,7 @@ export default function Solution() {
           </p>
 
           <p className="mt-3 text-base leading-[1.65] text-ink/70">
-            Your people and your business rules decide what should happen.
-            Parmana makes sure the system follows that decision.
+            Your people set the rules. Parmana does not decide what your business should do.
           </p>
         </div>
       </div>

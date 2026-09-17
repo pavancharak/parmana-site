@@ -1,19 +1,19 @@
 const categories=[
  {id:"basics",label:"The basics",faqs:[
-  ["What is Parmana?","Parmana helps businesses make sure that software carries out only the actions the business has approved. It checks the requested action before it reaches the system that carries it out and keeps evidence of what happened."],
-  ["Does Parmana make business decisions?","No. The business decides what should happen. Parmana applies the business's existing rules to the requested action."],
+  ["What is Parmana?","Parmana helps businesses make sure that software carries out only actions the business allows. It checks the action before it reaches the business system and keeps proof of what happened."],
+  ["Does Parmana make business decisions?","No. The business sets the rules. Parmana checks the requested action against those rules."],
   ["Is Parmana only for AI?","No. The same approach can be used when actions come from AI systems, applications, automated workflows or people."],
-  ["Is Parmana an audit log?","No. An audit log mainly records what happened. Parmana is designed to check an action before it happens and then preserve evidence of the approval and result."],
+  ["Is Parmana an audit log?","No. An audit log records what happened. Parmana checks the action before it happens and then keeps proof of what was allowed and what happened."],
  ]},
  {id:"how",label:"How it works",faqs:[
   ["What happens when an action is approved?","The request passes the required checks and can continue to the business system. The decision and related evidence are preserved."],
-  ["What happens when an action is not approved?","The governed path stops the action. It does not treat a failed or missing approval as permission."],
-  ["What happens if the check cannot be completed?","The system is designed to fail closed: an action is not treated as approved when the required check cannot be completed."],
+  ["What happens when an action is not approved?","The action is stopped. A missing or failed check is not treated as permission."],
+  ["What happens if the check cannot be completed?","If the check cannot be completed, the action is not treated as allowed."],
  ]},
  {id:"business",label:"For businesses",faqs:[
   ["What kinds of actions can Parmana protect?","Examples include payments, refunds, access changes, production changes, data deletion, software releases, contracts and vendor actions."],
   ["Do we need to replace our existing systems?","No. Parmana is designed to sit in front of the systems that already carry out your business actions."],
-  ["Who keeps the decision?","Your business does. Parmana is not the owner of your business rules or your authority."],
+  ["Who sets the rules?","Your business does. Parmana does not decide what your business should allow."],
  ]},
  {id:"pilot",label:"Pilot",faqs:[
   ["How do we start?","Start with one important action and the business rule that should control it. We can then show the check in a test or sandbox environment before expanding the scope."],

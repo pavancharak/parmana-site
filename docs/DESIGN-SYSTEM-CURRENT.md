@@ -5,37 +5,20 @@ if it and the config disagree, the config wins, but flag the drift.
 
 ## Positioning
 
-"Human authority infrastructure for autonomous systems." Parmana preserves human authority over
-autonomous systems: it makes a business's existing policy (approval limits, delegation rules,
-vendor lists, compliance rules) structurally enforceable against autonomous agents and other
-autonomous systems before execution reaches business systems. Parmana does not invent or change
-policy, and does not make the authorization decision itself, it evaluates and enforces existing
-policy deterministically. Locked phrases, reuse verbatim (see `messaging` in `lib/config.ts`):
+**Primary positioning:**
 
-- "Your policies. Your control. Autonomous systems execute within your authority."
-- "Autonomous systems propose. Your policy decides. Parmana enforces."
-- "Humans stay in control while benefiting from autonomous capability."
-- "Structural authority, verified by cryptographic proof."
+> When AI operates business systems, Parmana proves that the system executed exactly what the business authorized.
 
-Terminology preference: "autonomous systems" over "AI agents" alone, Parmana is actor-agnostic
-(agents, algorithms, workflows, compromised systems all pass through the same boundary). "AI
-agent" is still fine when describing a specific real system by name (for example the Phinite demo
-integration), but general positioning copy should default to "autonomous systems."
+Plain-language explanation:
 
-This supersedes the "Authorization before execution" framing (documented here 2026-09-10), the
-earlier navy/mint "your infrastructure is already ready" pyramid framing, and the black-minimalist
-"Institutional Authority Infrastructure" plan in `NEW-SITE-BUILD-PROMPT.md` (neither of the latter
-two shipped in that form; treat that file as historical only). The repositioning is copy and
-terminology only, not a design system change: colors, typography, page structure, and nav below
-are unchanged.
+- AI can operate the software a business already uses.
+- The business sets the rules for what is allowed.
+- Parmana checks important actions before the business system carries them out.
+- Parmana keeps proof of what the business allowed and what the system actually did.
 
-An "Evidence" section (`components/Evidence.tsx`) cites third-party validation: real, independently
-verified sources only, each with an outbound link to the primary source (NPCI, FCA, KPMG, RBI,
-OpenAI, UK AISI, HCLTech). Two claims from an earlier draft of this section (a Razorpay "misconfigured
-agents" incident, an Infosys architecture diagram naming Parmana) could not be verified against any
-real source and were dropped rather than published. Before adding a new item to this section,
-verify it against a primary or clearly reputable source the same way, do not add a claim on the
-strength of a pasted brief alone.
+Public copy should use simple words. Prefer **business rules**, **allowed**, **authorized**, **action**, **system**, **what happened**, and **proof**. Avoid abstract category language in customer-facing copy.
+
+Parmana does not make the business decision. The business sets the rules. AI, people, applications, and automated workflows can request actions; Parmana checks those actions before they reach the business system.
 
 ## Color tokens (Tailwind)
 

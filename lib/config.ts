@@ -10,14 +10,14 @@ export const colors = {
 export const founderEmail = "founder@parmanasystems.com";
 
 export const messaging = {
-  hero: "Make sure your software does exactly what your business approves.",
+  hero: "When AI operates business systems, Parmana proves that the system executed exactly what the business authorized.",
   tagline:
-    "Parmana helps businesses control what their software is allowed to do, stop actions that are not approved, and show exactly what happened.",
+    "AI can now operate the software your business already uses. Parmana checks that each important action is allowed and shows what was actually done.",
   corePrinciple:
-    "Your business decides. Parmana makes sure the system follows the decision.",
+    "Your business sets the rules. Parmana makes sure the system follows them.",
   outcome:
-    "Your business stays in control while software and AI carry out approved work.",
-  proof: "Clear proof of what was approved and what happened.",
+    "Your business stays in control while AI and software do more of the work.",
+  proof: "Clear proof of what the business allowed and what the system did.",
 } as const;
 
 export const nav = {
@@ -49,7 +49,7 @@ export const explainerVideos = [
   },
   {
     id: "I2ePXz2KFgc",
-    title: "How Parmana keeps approval in control",
+    title: "How Parmana keeps business rules in control",
     description:
       "Why the check should happen before an important action reaches the business system that carries it out.",
     orientation: "vertical" as const,
