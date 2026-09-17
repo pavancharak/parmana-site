@@ -10,13 +10,13 @@ export const colors = {
 export const founderEmail = "founder@parmanasystems.com";
 
 export const messaging = {
-  hero: "",
-  tagline: "",
+  hero: "Keep control of your business in the agentic era.",
+  tagline: "AI can now take action inside your business. The challenge is making sure your business still controls what happens.",
   corePrinciple:
-    "Your leaders decide what is allowed. Parmana checks the request before the system acts.",
+    "Your business decides. Parmana makes sure your software follows that decision.",
   outcome:
     "Your business stays in control while AI and software do more of the work.",
-  proof: "Clear proof of what the business allowed and what the system did.",
+  proof: "A clear record of what your business allowed and what actually happened.",
 } as const;
 
 export const nav = {

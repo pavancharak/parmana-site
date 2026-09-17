@@ -1,9 +1,9 @@
 const categories=[
  {id:"basics",label:"The basics",faqs:[
-  ["What is Parmana?","Parmana makes sure business systems carry out only actions the business allows. It checks the action before it reaches the business system and keeps proof of what happened."],
-  ["Does Parmana make leader decisions?","No. The business sets the rules. Parmana checks the request against those rules."],
+  ["What is Parmana?","Parmana makes sure your software carries out only actions your business allows. It checks before the action happens and keeps a clear record of what happened."],
+  ["Does Parmana make business decisions?","No. The business sets the rules. Parmana checks the action against those rules."],
   ["Does Parmana work only with AI?","No. It can also check actions requested by people, applications and automated workflows."],
-  ["Is Parmana just an audit log?","No. An audit log mainly tells you what happened. Parmana checks the request before it happens and proves what was allowed and what happened."],
+  ["Is Parmana just an audit log?","No. An audit log mainly tells you what happened afterwards. Parmana checks before the action happens and keeps a record connecting the rule, the decision and the action."],
  ]},
  {id:"how",label:"How it works",faqs:[
   ["What happens when the business allows an action?","The request passes the checks and can continue to the business system. Parmana keeps proof of what was allowed and what happened."],

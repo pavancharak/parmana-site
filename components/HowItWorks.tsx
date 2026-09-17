@@ -1,10 +1,10 @@
 import FlowDiagram from "@/components/FlowDiagram";
 
 const steps = [
-  { title: "Set the rule", body: "Your leaders decide what is allowed." },
-  { title: "Check", body: "Parmana checks the request against that rule." },
-  { title: "Allow or stop", body: "An allowed action can proceed. An action that is not allowed is stopped." },
-  { title: "Show what happened", body: "Parmana proves what was allowed and what the system did." },
+  { title: "Set the rule", body: "Your business decides what is allowed." },
+  { title: "Check the request", body: "Parmana checks the request against that rule." },
+  { title: "Allow or stop", body: "If it follows the rule, it can proceed. If not, it is stopped." },
+  { title: "Show what happened", body: "You can see what was allowed and what the system did." },
 ];
 
 export default function HowItWorks() {
