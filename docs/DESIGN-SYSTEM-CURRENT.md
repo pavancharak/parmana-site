@@ -7,7 +7,7 @@ if it and the config disagree, the config wins, but flag the drift.
 
 **Primary positioning:**
 
-> AI operates your business systems. Parmana proves what they actually do.
+> AI proposes. Leaders decide. Parmana makes sure it happens.
 
 Plain-language explanation:
 
