@@ -10,9 +10,9 @@ export const colors = {
 export const founderEmail = "founder@parmanasystems.com";
 
 export const messaging = {
-  hero: "When AI operates business systems, Parmana proves that the system executed exactly what the business authorized.",
+  hero: "AI operates your business systems. Parmana proves what they actually do.",
   tagline:
-    "AI can now operate the software your business already uses. Parmana checks that each important action is allowed and shows what was actually done.",
+    "Make sure every action stays within what your business allows.",
   corePrinciple:
     "Your business sets the rules. Parmana makes sure the system follows them.",
   outcome:
