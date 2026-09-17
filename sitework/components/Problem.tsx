@@ -23,9 +23,6 @@ export default function Problem() {
               Parmana checks before the action happens.
             </p>
           </div>
-          <div className="relative flex items-end justify-center">
-            <img src="/parmana-problem-foreground.png" alt="Business decision connected to software action." className="w-full max-w-[720px] h-auto object-contain" />
-          </div>
         </div>
       </div>
     </section>

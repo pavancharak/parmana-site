@@ -1,11 +1,9 @@
-import Gate from "@/components/Gate";
 import { founderEmail, messaging, nav } from "@/lib/config";
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-paper border-b border-border">
       <div aria-hidden="true" className="pointer-events-none absolute -top-40 right-[-10%] h-[420px] w-[420px] rounded-full bg-lavender blur-[120px]" />
-      <Gate state="open" className="pointer-events-none absolute -right-6 -top-6 h-40 w-40 opacity-15 md:h-56 md:w-56" />
       <div className="relative max-w-container mx-auto px-6 py-20 md:py-28 lg:py-32 text-center">
         <div className="mx-auto max-w-[900px]">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-purple-deep">
