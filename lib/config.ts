@@ -10,11 +10,11 @@ export const colors = {
 export const founderEmail = "founder@parmanasystems.com";
 
 export const messaging = {
-  hero: "AI proposes. Business decides. Parmana proves.",
+  hero: "AI proposes. Leaders decide. Parmana proves.",
   tagline:
     "Make sure every action stays within what your business allows.",
   corePrinciple:
-    "Your business decides what is allowed. Parmana checks the request before the system acts.",
+    "Your leaders decide what is allowed. Parmana checks the request before the system acts.",
   outcome:
     "Your business stays in control while AI and software do more of the work.",
   proof: "Clear proof of what the business allowed and what the system did.",
@@ -42,7 +42,7 @@ export const demoVideo = {
 export const explainerVideos = [
   {
     id: "TFpT0wCHnmM",
-    title: "AI can propose. The business decides.",
+    title: "AI can propose. The leaders decide.",
     description:
       "A simple look at the difference between an AI system suggesting an action and a business giving permission for that action.",
     orientation: "vertical" as const,

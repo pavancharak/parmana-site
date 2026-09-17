@@ -4,7 +4,7 @@ export default function Solution() {
       <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
         <p className="text-xs font-mono uppercase tracking-wide text-purple-deep text-center">When AI proposes. Leaders decide.</p>
         <h2 className="mt-3 text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-ink text-center max-w-[760px] mx-auto">
-          Your business decides what is allowed. Parmana checks the request before the system acts.
+          Your leaders decide what is allowed. Parmana checks the request before the system acts.
         </h2>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">

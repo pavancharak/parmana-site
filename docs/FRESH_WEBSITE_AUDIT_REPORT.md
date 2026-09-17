@@ -22,7 +22,7 @@
 **Hero:**
 > "For fintech teams building agentic payments"
 > "Adopt agentic payments without losing control."
-> "Let agents request payments. Your business decides what can happen."
+> "Let agents request payments. Your leaders decide what can happen."
 > "AI agents can initiate payments, refunds, transfers, and other financial actions. Parmana checks each important action against your business rules before it happens."
 > "If it is allowed, it proceeds. If it is not, it stops. The authorization is recorded so your team can verify what was approved before the action happened."
 > CTA: "See how it works" (anchors to #authorization-gap)

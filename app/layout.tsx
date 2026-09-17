@@ -20,14 +20,14 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://parmanasystems.com"),
-  title: "Parmana | AI proposes. Business decides. Parmana proves.",
+  title: "Parmana | AI proposes. Leaders decide. Parmana proves.",
   description:
-    "AI proposes actions. The business decides what is allowed. Parmana checks the action and proves what happened.",
+    "AI proposes actions. The leaders decide what is allowed. Parmana checks the action and proves what happened.",
   alternates: {
     canonical: "https://parmanasystems.com",
   },
   openGraph: {
-    title: "Parmana | AI proposes. Business decides. Parmana proves.",
+    title: "Parmana | AI proposes. Leaders decide. Parmana proves.",
     description:
       "AI can propose actions in business systems. The business sets what is allowed. Parmana checks before the action happens and proves what happened.",
     type: "website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Parmana | AI proposes. Business decides. Parmana proves.",
+    title: "Parmana | AI proposes. Leaders decide. Parmana proves.",
     description:
       "AI can propose actions in business systems. The business sets what is allowed. Parmana checks before the action happens and proves what happened.",
   },

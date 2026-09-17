@@ -5,7 +5,7 @@ function Box({ eyebrow, label, className = "" }: { eyebrow: string; label: strin
 
 export default function FlowDiagram() {
   return <div role="img" aria-label="A business defines an allowed action, Parmana checks the request, and the action either proceeds or is stopped" className="mx-auto flex max-w-[560px] flex-col items-center gap-3 py-4">
-    <Box eyebrow="Step 1" label="Business decides what is allowed" />
+    <Box eyebrow="Step 1" label="Leaders decide what is allowed" />
     <ArrowDownIcon className="h-5 w-5 text-ink/50" aria-hidden="true" />
     <div className="flex items-center gap-3 rounded-md border-2 border-purple px-5 py-4"><Gate state="checking" className="h-9 w-9 shrink-0" /><div className="text-left"><p className="text-xs font-mono uppercase tracking-wide text-purple-deep">Step 2</p><p className="text-sm font-medium text-ink">Parmana checks the request</p></div></div>
     <ArrowDownIcon className="h-5 w-5 text-ink/50" aria-hidden="true" />
