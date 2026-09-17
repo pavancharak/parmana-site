@@ -1,2 +1,68 @@
-import YouTubeEmbed from "@/components/YouTubeEmbed"; import { explainerVideos } from "@/lib/config";
-export default function ExplainerGrid(){return <section className="bg-lavender border-b border-border"><div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24"><div className={`grid grid-cols-1 gap-12 ${explainerVideos.length>1?"sm:grid-cols-2 lg:grid-cols-3":""}`}>{explainerVideos.map(video=><div key={video.id} className="text-center"><YouTubeEmbed {...video}/><h3 className="mt-4 text-base font-bold text-ink">{video.title}</h3><p className="mt-2 text-sm leading-[1.6] text-ink/70 max-w-[360px] mx-auto">{video.description}</p></div>)}</div></div></section>}
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+
+const videos = [
+  {
+    id: "TFpT0wCHnmM",
+    title: "AI can suggest. The business decides.",
+    description: "A simple look at the difference between AI suggesting an action and the business giving permission for that action.",
+  },
+  {
+    id: "I2ePXz2KFgc",
+    title: "How Parmana keeps business rules in control",
+    description: "Why an important action should be checked before it reaches the business system.",
+  },
+  {
+    id: "8g_J81sqdWE",
+    title: "How to control what AI can do",
+    description: "A simple look at how businesses can control actions taken by AI before they reach business systems.",
+  },
+  {
+    id: "KWx0wNrWLws",
+    title: "How Parmana checks the full chain",
+    description: "A simple look at how an action is connected to the permission, decision, rules and authority behind it.",
+  },
+  {
+    id: "V8oLELp8CWs",
+    title: "How Parmana protects business decisions",
+    description: "A simple look at how Parmana keeps actions approved by the business under control when software and AI carry them out.",
+  },
+  {
+    id: "4UC7Y4IoJgg",
+    title: "Keeping business control with AI",
+    description: "A short explanation of how a business can stay in control when AI takes action.",
+    newVideo: true,
+  },
+  {
+    id: "5qQxbdw3AmE",
+    title: "Making sure AI follows business decisions",
+    description: "A short explanation of how approved business decisions guide actions taken by software and AI.",
+    newVideo: true,
+  },
+];
+
+export default function ExplainerGrid() {
+  return (
+    <section className="bg-lavender border-b border-border">
+      <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+          {videos.map((video) => (
+            <article key={video.id} className="text-center">
+              <div className="mb-3 inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wide text-purple-deep">
+                {video.newVideo ? "New" : "Explainer"}
+              </div>
+              <YouTubeEmbed
+                id={video.id}
+                title={video.title}
+                orientation="vertical"
+              />
+              <h3 className="mt-4 text-base font-bold text-ink">{video.title}</h3>
+              <p className="mt-2 text-sm leading-[1.6] text-ink/70 max-w-[360px] mx-auto">
+                {video.description}
+              </p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
