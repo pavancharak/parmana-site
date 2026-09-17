@@ -13,8 +13,10 @@ export const messaging = {
   hero: "Make sure your software does exactly what your business approves.",
   tagline:
     "Parmana helps businesses control what their software is allowed to do, stop actions that are not approved, and show exactly what happened.",
-  corePrinciple: "Your business decides. Parmana makes sure the system follows the decision.",
-  outcome: "Your business stays in control while software and AI carry out approved work.",
+  corePrinciple:
+    "Your business decides. Parmana makes sure the system follows the decision.",
+  outcome:
+    "Your business stays in control while software and AI carry out approved work.",
   proof: "Clear proof of what was approved and what happened.",
 } as const;
 
@@ -50,6 +52,13 @@ export const explainerVideos = [
     title: "How Parmana keeps approval in control",
     description:
       "Why the check should happen before an important action reaches the business system that carries it out.",
+    orientation: "vertical" as const,
+  },
+  {
+    id: "8g_J81sqdWE",
+    title: "Securing AI Agent Workflows: How to Control What Agents Can Do",
+    description:
+      "A simple look at how businesses can control actions taken by AI agents before they reach the systems that carry them out.",
     orientation: "vertical" as const,
   },
 ] as const;
