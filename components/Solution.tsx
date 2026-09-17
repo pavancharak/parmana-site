@@ -4,7 +4,7 @@ export default function Solution() {
       <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
         <p className="text-xs font-mono uppercase tracking-wide text-purple-deep text-center">When AI operates business systems</p>
         <h2 className="mt-3 text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-ink text-center max-w-[760px] mx-auto">
-          Your business sets the rules. Parmana makes sure the system follows them.
+          Your business decides what is allowed. Parmana checks the request before the system acts.
         </h2>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -37,19 +37,19 @@ export default function Solution() {
 
           <div className="space-y-4">
             <p className="text-base leading-[1.65] text-ink/70">
-              Parmana checks the action before the business system carries it out.
+              Parmana checks the request before the business system carries it out.
             </p>
 
             <p className="text-base leading-[1.65] text-ink/70">
-              It checks whether the requested action is allowed by the business rules.
+              It checks whether the requested action is allowed by the business.
             </p>
 
             <p className="text-base leading-[1.65] text-ink/70">
-              If it is allowed, it can proceed. If it is not allowed, it stops.
+              If the business allows it, the system can carry it out. If not, it stops.
             </p>
 
             <p className="text-base leading-[1.65] font-medium text-purple-deep">
-              Parmana also keeps proof of what the business allowed and what the system did.
+              Parmana keeps proof of what the business allowed and what the system actually did.
             </p>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function Solution() {
           </p>
 
           <p className="mt-3 text-base leading-[1.65] text-ink/70">
-            Your people set the rules. Parmana does not decide what your business should do.
+            Your business sets the rules. Parmana does not give AI the power to make those rules.
           </p>
         </div>
       </div>

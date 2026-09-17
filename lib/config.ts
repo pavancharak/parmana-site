@@ -10,11 +10,11 @@ export const colors = {
 export const founderEmail = "founder@parmanasystems.com";
 
 export const messaging = {
-  hero: "AI operates your business systems. Parmana proves what they actually do.",
+  hero: "AI proposes. Business decides. Parmana proves.",
   tagline:
     "Make sure every action stays within what your business allows.",
   corePrinciple:
-    "Your business sets the rules. Parmana makes sure the system follows them.",
+    "Your business decides what is allowed. Parmana checks the request before the system acts.",
   outcome:
     "Your business stays in control while AI and software do more of the work.",
   proof: "Clear proof of what the business allowed and what the system did.",
@@ -72,7 +72,7 @@ export const explainerVideos = [
     id: "V8oLELp8CWs",
     title: "How Parmana protects business decisions",
     description:
-      "A simple look at how Parmana keeps approved business actions under control when software and AI carry them out.",
+      "A simple look at how Parmana keeps business-allowed actions under control when software and AI carry them out.",
     orientation: "vertical" as const,
   },
 ] as const;
