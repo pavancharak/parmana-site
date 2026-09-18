@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 export default function YouTubeEmbed({
@@ -34,10 +35,13 @@ export default function YouTubeEmbed({
           className="group absolute inset-0 flex h-full w-full items-center justify-center"
           aria-label={`Play video: ${title}`}
         >
-          <img
+          <Image
             src={`https://img.youtube.com/vi/${id}/hqdefault.jpg`}
             alt=""
-            className="absolute inset-0 h-full w-full object-cover opacity-80 transition-opacity group-hover:opacity-60"
+            fill
+            sizes="(max-width: 768px) 100vw, 720px"
+            className="object-cover opacity-80 transition-opacity group-hover:opacity-60"
+            unoptimized
           />
           <span className="relative flex h-16 w-16 items-center justify-center rounded-full bg-purple text-white shadow-none transition-transform group-hover:scale-105">
             <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 translate-x-0.5">
