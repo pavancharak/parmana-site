@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 export default function YouTubeEmbed({
@@ -12,12 +13,16 @@ export default function YouTubeEmbed({
   orientation: "vertical" | "horizontal";
 }) {
   const [playing, setPlaying] = useState(false);
-  const aspect = orientation === "vertical" ? "aspect-[9/16]" : "aspect-video";
-  const maxWidth = orientation === "vertical" ? "max-w-[360px]" : "max-w-[720px]";
+
+  const aspect =
+    orientation === "vertical" ? "aspect-[9/16]" : "aspect-video";
+
+  const maxWidth =
+    orientation === "vertical" ? "max-w-[360px]" : "max-w-[720px]";
 
   return (
     <div
-      className={`relative w-full ${maxWidth} ${aspect} mx-auto overflow-hidden rounded-md border border-border bg-ink`}
+      className={`relative mx-auto w-full ${maxWidth} ${aspect} overflow-hidden rounded-md border border-border bg-ink`}
     >
       {playing ? (
         <iframe
@@ -34,13 +39,25 @@ export default function YouTubeEmbed({
           className="group absolute inset-0 flex h-full w-full items-center justify-center"
           aria-label={`Play video: ${title}`}
         >
-          <img
+          <Image
             src={`https://img.youtube.com/vi/${id}/hqdefault.jpg`}
             alt=""
-            className="absolute inset-0 h-full w-full object-cover opacity-80 transition-opacity group-hover:opacity-60"
+            fill
+            sizes={
+              orientation === "vertical"
+                ? "360px"
+                : "(max-width: 768px) 100vw, 720px"
+            }
+            className="object-cover opacity-80 transition-opacity group-hover:opacity-60"
           />
+
           <span className="relative flex h-16 w-16 items-center justify-center rounded-full bg-purple text-white shadow-none transition-transform group-hover:scale-105">
-            <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 translate-x-0.5">
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="h-6 w-6 translate-x-0.5"
+              aria-hidden="true"
+            >
               <path d="M8 5v14l11-7z" />
             </svg>
           </span>
