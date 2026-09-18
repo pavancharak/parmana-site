@@ -1,8 +1,8 @@
 export const colors = { paper: "#FFFFFF", ink: "#1A1A1A", purple: "#6366F1", purpleDeep: "#4338CA", lavender: "#F5F3FF", border: "#E5E7EB" } as const;
 export const founderEmail = "founder@parmanasystems.com";
 export const messaging = {
-  hero: "Turn every business decision into organizational intelligence.",
-  tagline: "Parmana helps organizations control what software can do, prove what happened, and learn what their decisions reveal about customers and the business.",
+  hero: "Make sure your software does exactly what your business approves.",
+  tagline: "AI can propose. Leaders have the authority to make decisions. Parmana makes sure your systems follow those decisions at machine speed and produces proof that they did.",
   corePrinciple: "Control. Prove. Learn. Improve.",
   outcome: "Your organization builds decision memory and uses it to understand customers, policies and business outcomes.",
   proof: "A connected record of the customer request, business decision, policy, authorization, execution and outcome.",
