@@ -1,11 +1,11 @@
 export const colors = { paper: "#FFFFFF", ink: "#1A1A1A", purple: "#6366F1", purpleDeep: "#4338CA", lavender: "#F5F3FF", border: "#E5E7EB" } as const;
 export const founderEmail = "founder@parmanasystems.com";
 export const messaging = {
-  hero: "Keep control of your business as AI starts acting on its own.",
-  tagline: "AI can now take action inside your business. The challenge is making sure your business still decides what those actions can be.",
-  corePrinciple: "Your business decides. Parmana makes sure your software follows that decision.",
-  outcome: "Your business stays in control while AI and software do more of the work.",
-  proof: "A clear record connecting what the business said, the rules it set, the decision it made, the permission it gave and what the system did.",
+  hero: "Turn every business decision into organizational intelligence.",
+  tagline: "Parmana helps organizations control what software can do, prove what happened, and learn what their decisions reveal about customers and the business.",
+  corePrinciple: "Control. Prove. Learn. Improve.",
+  outcome: "Your organization builds decision memory and uses it to understand customers, policies and business outcomes.",
+  proof: "A connected record of the customer request, business decision, policy, authorization, execution and outcome.",
 } as const;
 export const nav = { docs:"https://docs.parmanasystems.com", github:"https://github.com/pavancharak/AgentLabsBuildathon", blog:"https://parmanasystems.substack.com", founderLinkedIn:"https://www.linkedin.com/in/pavancharak/", howItWorks:"/#how-it-works", useCases:"/#use-cases", company:"/#contact", demo:"/demo", explainers:"/explainers", sdks:"/sdks" } as const;
 export const demoVideo = { id:"1MIxMwzlfIY", title:"Parmana live refund permission demo", orientation:"horizontal" as const };
