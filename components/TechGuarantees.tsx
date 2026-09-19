@@ -1,30 +1,24 @@
-const guarantees = [
-  ["Check first", "The request is checked before it reaches the system that will carry it out."],
-  ["Stop when not allowed", "If a request does not follow the business rule, it does not proceed."],
-  ["Follow the business rule", "Your business decides what is allowed and when."],
-  ["Set a time limit", "An approval can stop being valid after a set time."],
-  ["Stop an approval", "The business can stop an action when it is no longer allowed."],
-  ["Keep a clear record", "You can keep a clear record of important decisions and actions."],
-  ["Connect the decision to the action", "The record connects what was allowed with what the software actually did."],
-  ["Show changes", "Changes to important records can be detected."],
-  ["Check the record independently", "The record can be checked without relying only on the application that did the work."],
+const points = [
+  ["Deterministic policy", "The final authorization decision is based on explicit rules and supplied facts, not an LLM deciding whether an action feels safe."],
+  ["Payload-bound authorization", "The authorization is associated with the exact approved payload. A changed amount or protected field produces a different payload hash."],
+  ["Fail-closed boundary", "If required verification cannot be completed, the action is not treated as authorized."],
+  ["Independent verification", "The execution side can verify the authorization without giving the agent the signing secret."],
+  ["Short-lived scope", "Authorization can be constrained to the intended operation and validity period."],
+  ["Business authority stays external", "Parmana does not decide business policy. The business defines what is allowed."],
 ];
 
 export default function TechGuarantees() {
   return (
-    <section id="guarantees" className="bg-paper border-b border-border">
+    <section id="guarantees" className="bg-lavender border-b border-border">
       <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
-        <h2 className="text-[28px] md:text-[40px] font-bold leading-[1.15] tracking-tight text-ink text-center max-w-[760px] mx-auto">
-          Built for control
+        <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-ink text-center max-w-[850px] mx-auto">
+          Built for consequential actions
         </h2>
-        <p className="mt-4 text-center text-base md:text-lg text-ink/70 max-w-[700px] mx-auto">
-          Important actions should follow the business rule before they happen, with a clear record afterwards.
-        </p>
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {guarantees.map(([title, desc]) => (
-            <div key={title} className="rounded-md border border-border bg-lavender p-7">
-              <h3 className="text-base font-bold text-ink mb-2">{title}</h3>
-              <p className="text-sm leading-[1.7] text-ink/70">{desc}</p>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {points.map(([title, body]) => (
+            <div key={title} className="rounded-md border border-border bg-white p-8">
+              <h3 className="text-base font-bold text-ink">{title}</h3>
+              <p className="mt-3 text-sm leading-[1.7] text-ink/70">{body}</p>
             </div>
           ))}
         </div>

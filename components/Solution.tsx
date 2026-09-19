@@ -1,66 +1,36 @@
+const steps = [
+  ["Agent proposal", "An AI agent proposes a specific commerce or payment action."],
+  ["Business policy", "The business defines the rules and authority that apply."],
+  ["Deterministic decision", "Parmana evaluates the exact request against those rules."],
+  ["Scoped authorization", "If allowed, Parmana creates authorization bound to the exact payload."],
+  ["Verified execution", "The execution system verifies authorization before carrying out the action."],
+];
+
 export default function Solution() {
   return (
     <section id="solution" className="bg-paper border-b border-border">
       <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
-        <p className="text-xs font-semibold uppercase tracking-[0.15em] text-purple-deep text-center">The simple idea</p>
-        <h2 className="mt-3 text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-ink text-center max-w-[760px] mx-auto">
-          Your business decides what is allowed. Parmana checks before the action happens.
+        <p className="text-xs font-semibold uppercase tracking-[0.15em] text-purple-deep text-center">The execution trust layer</p>
+        <h2 className="mt-3 text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-ink text-center max-w-[850px] mx-auto">
+          Keep the agent fast without giving the agent the authority.
         </h2>
-
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="flex justify-center">
-            <div className="w-full max-w-[340px] space-y-3">
-              <div className="rounded-md border border-border bg-white px-5 py-4 text-center">
-                <p className="text-sm font-semibold text-ink">
-                  Your business sets the rule
-                </p>
-              </div>
-
-              <div className="text-center text-xl text-ink/40">↓</div>
-
-              <div className="rounded-md border-2 border-purple bg-lavender px-5 py-5 text-center">
-                <p className="text-sm font-bold text-purple-deep">PARMANA</p>
-                <p className="mt-2 text-xs leading-[1.6] text-ink/60">
-                  Checks the request
-                </p>
-              </div>
-
-              <div className="text-center text-xl text-ink/40">↓</div>
-
-              <div className="rounded-md border border-border bg-white px-5 py-4 text-center">
-                <p className="text-sm font-semibold text-ink">
-                  Your software carries it out
-                </p>
+        <p className="mt-4 text-base md:text-lg text-ink/70 text-center max-w-[780px] mx-auto">
+          Parmana sits between the agent and the system that executes the transaction. It turns business policy into a deterministic authorization boundary.
+        </p>
+        <div className="mt-12 max-w-[820px] mx-auto space-y-3">
+          {steps.map(([title, body], i) => (
+            <div key={title} className="rounded-md border border-border bg-lavender p-5 md:p-6 flex gap-5 items-start">
+              <div className="shrink-0 h-8 w-8 rounded-full bg-purple text-white text-sm font-bold flex items-center justify-center">{i + 1}</div>
+              <div>
+                <h3 className="text-base font-bold text-ink">{title}</h3>
+                <p className="mt-1 text-sm leading-[1.6] text-ink/70">{body}</p>
               </div>
             </div>
-          </div>
-
-          <div className="space-y-4">
-            <p className="text-base leading-[1.65] text-ink/70">
-              Parmana checks the request before your software carries it out.
-            </p>
-
-            <p className="text-base leading-[1.65] text-ink/70">
-              It checks whether the request follows the rule your business set.
-            </p>
-
-            <p className="text-base leading-[1.65] text-ink/70">
-              If it follows the rule, it can continue. If not, it stops.
-            </p>
-
-            <p className="text-base leading-[1.65] font-medium text-purple-deep">
-              You can see what your business allowed and what actually happened.
-            </p>
-          </div>
+          ))}
         </div>
-
-        <div className="mt-16 rounded-md border border-border bg-lavender p-8 md:p-10 text-center max-w-[760px] mx-auto">
+        <div className="mt-12 rounded-md border border-border bg-white p-8 md:p-10 text-center max-w-[820px] mx-auto">
           <p className="text-lg md:text-xl font-bold text-ink">
-            Parmana does not make the business decision.
-          </p>
-
-          <p className="mt-3 text-base leading-[1.65] text-ink/70">
-            Your business sets the rules. Parmana simply makes sure the software follows them.
+            AI can propose the transaction. Parmana makes sure only what the business allowed can execute.
           </p>
         </div>
       </div>

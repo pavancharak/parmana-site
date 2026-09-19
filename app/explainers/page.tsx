@@ -5,24 +5,11 @@ import DemoCTA from "@/components/DemoCTA";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Explainers | Parmana",
-  description:
-    "Simple explanations of how Parmana helps businesses keep control when software and AI carry out actions.",
-  alternates: {
-    canonical: "https://parmanasystems.com/explainers",
-  },
+  title: "Agentic Commerce Explainers | Parmana",
+  description: "Short explanations of how Parmana keeps business authority outside the AI agent and controls consequential execution.",
+  alternates: { canonical: "https://parmanasystems.com/explainers" },
 };
 
 export default function ExplainersPage() {
-  return (
-    <main>
-      <ExplainersHero />
-      <Reveal>
-        <ExplainerGrid />
-      </Reveal>
-      <Reveal>
-        <DemoCTA />
-      </Reveal>
-    </main>
-  );
+  return <main><ExplainersHero /><Reveal><ExplainerGrid /></Reveal><Reveal><DemoCTA /></Reveal></main>;
 }

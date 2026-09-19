@@ -10,18 +10,20 @@ export const colors = {
 export const founderEmail = "founder@parmanasystems.com";
 
 export const messaging = {
-  hero: "Keep control of your business in the agentic era.",
-  tagline: "AI can now take action inside your business. The challenge is making sure your business still controls what happens.",
+  hero: "Make sure every action stays within what your business allows.",
+  tagline:
+    "AI agents can discover, recommend and propose transactions. Parmana checks the action against your business rules before it reaches the system that executes it.",
   corePrinciple:
-    "Your business decides. Parmana makes sure your software follows that decision.",
+    "AI can propose. Leaders have the authority to decide. Parmana controls execution.",
   outcome:
-    "Your business stays in control while AI and software do more of the work.",
-  proof: "A clear record of what your business allowed and what actually happened.",
+    "Every authorized action is bound to the decision that allowed it and produces evidence of what the system actually executed.",
+  proof:
+    "A connected record of the request, business rules, decision, authorization, execution and verification outcome.",
 } as const;
 
 export const nav = {
   docs: "https://docs.parmanasystems.com",
-  github: "https://github.com/pavancharak/AgentLabsBuildathon",
+  github: "https://github.com/pavancharak/Payment-Action-Guard",
   blog: "https://parmanasystems.substack.com",
   founderLinkedIn: "https://www.linkedin.com/in/pavancharak/",
   howItWorks: "/#how-it-works",
@@ -34,44 +36,58 @@ export const nav = {
 
 export const demoVideo = {
   id: "1MIxMwzlfIY",
-  title: "Parmana live refund authorization demo",
+  title: "Parmana agentic commerce authorization demo",
   orientation: "horizontal" as const,
 };
 
 export const explainerVideos = [
   {
     id: "TFpT0wCHnmM",
-    title: "AI can propose. The leaders decide.",
+    title: "AI can propose. The business decides.",
     description:
-      "A simple look at the difference between an AI system suggesting an action and a business giving permission for that action.",
+      "Why an AI agent can recommend a transaction without becoming the authority that executes it.",
     orientation: "vertical" as const,
   },
   {
     id: "I2ePXz2KFgc",
-    title: "How Parmana keeps business rules in control",
+    title: "The execution trust layer for agentic commerce",
     description:
-      "Why the check should happen before an important action reaches the business system that carries it out.",
+      "How Parmana checks an action before it reaches the payment or business system.",
     orientation: "vertical" as const,
   },
   {
     id: "8g_J81sqdWE",
-    title: "Securing AI Agent Workflows: How to Control What Agents Can Do",
+    title: "How to control what AI can do",
     description:
-      "A simple look at how businesses can control actions taken by AI agents before they reach the systems that carry them out.",
+      "How business rules become an enforceable boundary around actions taken by AI.",
     orientation: "vertical" as const,
   },
   {
     id: "KWx0wNrWLws",
-    title: "How the Execution Trust Chain Secures AI Agents",
+    title: "How Parmana checks the full chain",
     description:
-      "A simple look at how an authorized action is verified before execution and how the result can be proven.",
+      "Connect the request, policy, decision, authorization, execution and verification evidence.",
     orientation: "vertical" as const,
   },
   {
     id: "V8oLELp8CWs",
-    title: "How Parmana protects leader decisions",
+    title: "Protecting business decisions when AI acts",
     description:
-      "A simple look at how Parmana keeps business-allowed actions under control when software and AI carry them out.",
+      "Keep autonomous actions aligned with the decisions and limits set by the business.",
+    orientation: "vertical" as const,
+  },
+  {
+    id: "4UC7Y4IoJgg",
+    title: "Keeping business control with AI",
+    description:
+      "A short explanation of the control boundary between an AI agent and a business system.",
+    orientation: "vertical" as const,
+  },
+  {
+    id: "5qQxbdw3AmE",
+    title: "Making sure AI follows business decisions",
+    description:
+      "How approved business decisions guide actions taken by software and AI.",
     orientation: "vertical" as const,
   },
 ] as const;
