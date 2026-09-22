@@ -10,11 +10,11 @@ export const colors = {
 export const founderEmail = "founder@parmanasystems.com";
 
 export const messaging = {
-  hero: "Make sure every action stays within what your business allows.",
+  hero: "Your Agent. Your Rule. Proof It Followed.",
   tagline:
-    "AI agents can discover, recommend and propose transactions. Parmana checks the action against your business rules before it reaches the system that executes it.",
+    "Deploy AI agents with proof they followed your rules. Nothing changes about how you work.",
   corePrinciple:
-    "AI can propose. Leaders have the authority to decide. Parmana controls execution.",
+    "Your agent proposes the action. Your rule decides. Parmana proves what happened.",
   outcome:
     "Every authorized action is bound to the decision that allowed it and produces evidence of what the system actually executed.",
   proof:

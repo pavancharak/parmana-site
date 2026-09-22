@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="bg-paper border-b border-border">
       <div className="max-w-container mx-auto px-6 py-20 md:py-28 lg:py-32 text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-purple-deep">
-          The execution trust layer for agentic commerce
+          Agent verification before execution
         </p>
         <h1 className="mt-5 text-[40px] md:text-[56px] lg:text-[72px] font-bold leading-[1.02] tracking-tight text-ink max-w-[980px] mx-auto">
           {messaging.hero}
@@ -17,15 +17,15 @@ export default function Hero() {
           {messaging.corePrinciple}
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <a href={nav.demo} className="inline-flex items-center justify-center rounded-md bg-purple px-8 py-3 text-base font-semibold text-white min-h-[44px]">
-            See the agentic commerce demo
+          <a href={nav.howItWorks} className="inline-flex items-center justify-center rounded-md bg-purple px-8 py-3 text-base font-semibold text-white min-h-[44px]">
+            See how it works
           </a>
           <a href={`mailto:${founderEmail}?subject=Request%20a%20pilot`} className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3 text-base font-semibold text-purple-deep border border-purple min-h-[44px]">
             Talk to us
           </a>
         </div>
         <p className="mt-7 text-xs text-ink/50">
-          Agent proposes → Parmana checks → Business system executes → Evidence remains
+          Agent proposes the action → Parmana checks the rule → Proof is issued → Action proceeds
         </p>
       </div>
     </section>

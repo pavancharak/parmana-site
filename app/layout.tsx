@@ -9,20 +9,20 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "500"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://parmanasystems.com"),
-  title: "Parmana | The Execution Trust Layer for Agentic Commerce",
-  description: "AI agents can propose transactions. Parmana checks the exact action against business rules before execution and creates verifiable authorization evidence.",
+  title: "Parmana | Your Agent. Your Rule. Proof It Followed.",
+  description: "Deploy AI agents with proof they followed your rules. Parmana checks the exact action against your existing rule and issues proof of the outcome, nothing changes about how you work.",
   alternates: { canonical: "https://parmanasystems.com" },
   openGraph: {
-    title: "Parmana | The Execution Trust Layer for Agentic Commerce",
-    description: "Let AI agents propose transactions. Your business rules decide what actually executes.",
+    title: "Parmana | Your Agent. Your Rule. Proof It Followed.",
+    description: "Your agent proposes the action. Your rule decides. Parmana proves what happened.",
     type: "website",
     url: "https://parmanasystems.com",
     images: ["https://parmanasystems.com/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Parmana | The Execution Trust Layer for Agentic Commerce",
-    description: "Let AI agents propose transactions. Your business rules decide what actually executes.",
+    title: "Parmana | Your Agent. Your Rule. Proof It Followed.",
+    description: "Your agent proposes the action. Your rule decides. Parmana proves what happened.",
   },
   robots: "index, follow",
 };

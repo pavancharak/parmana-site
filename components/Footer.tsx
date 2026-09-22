@@ -2,7 +2,7 @@ import { founderEmail, nav } from "@/lib/config";
 
 const links = [
   { label: "How it works", href: nav.howItWorks },
-  { label: "Agentic commerce", href: nav.useCases },
+  { label: "Use cases", href: nav.useCases },
   { label: "Docs", href: nav.docs },
   { label: "GitHub", href: nav.github },
   { label: "Blog", href: nav.blog },

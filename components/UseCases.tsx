@@ -3,12 +3,10 @@
 import { useState } from "react";
 
 const useCases = [
-  ["Agentic commerce", "Transaction rule", "An AI agent selects a product and proposes a purchase.", "Parmana checks the merchant, amount, currency, identity, risk context and operation.", "Only the transaction that matches the business rules can receive authorization."],
-  ["Refunds", "Refund rule", "An agent asks to refund a customer.", "Parmana checks the exact refund, payment identity, amount, currency and policy.", "A refund outside the rule is refused before execution."],
-  ["Vendor payments", "Payment rule", "An agent prepares a vendor payment.", "Parmana checks the vendor, amount, account and required approvals.", "The payment proceeds only when the required conditions are satisfied."],
-  ["Access", "Access rule", "An automated workflow asks to grant or change access.", "Parmana checks the actor, target, capability and approval conditions.", "Unauthorized access changes are stopped."],
-  ["Production changes", "Change rule", "An agent proposes a live system change.", "Parmana checks the change against the required business and operational conditions.", "Only an allowed change can cross the execution boundary."],
-  ["Data actions", "Data rule", "Software asks to delete or modify important data.", "Parmana checks the conditions and authority required for the operation.", "The action is held or stopped when the required conditions are missing."],
+  ["Refund disputes", "Refund rule", "An agent proposes a refund after a customer dispute.", "Parmana checks the exact refund against your rule: is this a first dispute, is the amount within the limit.", "A refund that matches the rule gets proof. When the chargeback comes, you show the proof instead of losing the dispute by default."],
+  ["Merchant onboarding", "Onboarding rule", "An agent proposes approving a new merchant.", "Parmana checks identity, risk conditions and required documentation against your onboarding rule.", "Only a merchant that satisfies the rule gets proof of approval, ready to show if the approval is ever questioned."],
+  ["Compliance approvals", "Approval rule", "An agent proposes a compliance sign off on a transaction or account action.", "Parmana checks the request against the exact compliance rule that applies.", "The approval carries proof a regulator can verify independently, not just your word that the rule was followed."],
+  ["Payment settlement", "Settlement rule", "An agent proposes releasing a settlement to a merchant or vendor.", "Parmana checks the amount, account and any required conditions before the release proceeds.", "A settlement that matches the rule proceeds with proof attached, so a later dispute has an answer."],
 ];
 
 export default function UseCases() {
@@ -19,10 +17,10 @@ export default function UseCases() {
     <section id="use-cases" className="bg-lavender border-b border-border">
       <div className="max-w-container mx-auto px-6 py-16 md:py-20 lg:py-24">
         <h2 className="text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-ink text-center max-w-[850px] mx-auto">
-          Start with agentic commerce. Extend to every consequential action.
+          Start with refund disputes. Extend to every rule you need to prove.
         </h2>
         <p className="mt-3 text-base text-ink/70 text-center max-w-[760px] mx-auto">
-          If your business has a rule for an action, Parmana can create a boundary around the execution.
+          If your business has a rule for an action, Parmana checks it and proves the outcome.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
           {useCases.map((u, i) => (

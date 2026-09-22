@@ -6,7 +6,7 @@ import { nav } from "@/lib/config";
 
 const links = [
   { label: "How it works", href: nav.howItWorks },
-  { label: "Agentic commerce", href: nav.useCases },
+  { label: "Use cases", href: nav.useCases },
   { label: "Demo", href: nav.demo },
   { label: "Explainers", href: nav.explainers },
   { label: "SDKs", href: nav.sdks },
@@ -47,7 +47,7 @@ export default function Header() {
             href={nav.demo}
             className="inline-flex items-center rounded-md bg-purple px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity duration-150"
           >
-            See the commerce demo
+            See the demo
           </a>
         </div>
 
@@ -83,7 +83,7 @@ export default function Header() {
             className="inline-flex items-center justify-center rounded-md bg-purple px-6 py-3 text-sm font-semibold text-white min-h-[48px]"
             onClick={() => setOpen(false)}
           >
-            See the commerce demo
+            See the demo
           </a>
         </div>
       )}
