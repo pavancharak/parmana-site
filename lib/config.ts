@@ -8,17 +8,17 @@ export const colors = {
 } as const;
 
 export const founderEmail = "founder@parmanasystems.com";
+export const founderPhone = "+91 97179 94459";
+
+// Swap for a Cal.com / Calendly URL when one exists; every "Schedule a conversation" CTA reads this.
+export const scheduleUrl = `mailto:${founderEmail}?subject=${encodeURIComponent("Conversation about Parmana")}`;
 
 export const messaging = {
-  hero: "Deploy Agents Safely. Prove Compliance. Protect Your Systems.",
-  tagline:
-    "Apply the rules you already have to your AI agents. Nothing changes about how you work.",
-  corePrinciple:
-    "Your agent proposes the action. Your rule decides. Parmana proves what happened.",
-  outcome:
-    "Every authorized action is bound to the decision that allowed it and produces evidence of what the system actually executed.",
-  proof:
-    "A connected record of the request, business rules, decision, authorization, execution and verification outcome.",
+  hero: "You authorize. We ensure.",
+  subhead:
+    "Your agents are getting smarter. Parmana ensures every action they request is carried out exactly the way you authorized it.",
+  // Locked tagline, use exactly as written.
+  tagline: "Your policies don't change. Agents prove they follow them.",
 } as const;
 
 export const nav = {
@@ -27,8 +27,7 @@ export const nav = {
   blog: "https://parmanasystems.substack.com",
   founderLinkedIn: "https://www.linkedin.com/in/pavancharak/",
   howItWorks: "/#how-it-works",
-  useCases: "/#use-cases",
-  company: "/#contact",
+  contact: "/#contact",
   demo: "/demo",
   explainers: "/explainers",
   sdks: "/sdks",

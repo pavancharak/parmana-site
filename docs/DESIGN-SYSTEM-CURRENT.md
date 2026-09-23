@@ -1,13 +1,22 @@
-# Current design system (as of 2026-09-13)
+# Current design system (as of 2026-09-23)
 
 Source of truth for tokens: `tailwind.config.ts` and `lib/config.ts`. This file documents intent;
 if it and the config disagree, the config wins, but flag the drift.
 
 ## Positioning
 
-**Primary positioning:**
+**Primary positioning (2026-09-23):**
 
->  Parmana makes sure your systems follow those decisions at machine speed and produces proof that they did.
+> You authorize. We ensure.
+
+Parmana is authorization infrastructure for agentic systems: it sits between your agents and your
+systems. Not an agent builder, AI safety tool, or governance platform.
+
+Locked items:
+- Tagline, verbatim: "Your policies don't change. Agents prove they follow them." (`messaging.tagline`)
+- Three outcomes, titles and order fixed: Deploy Safely, Prove Compliance, Protect Systems
+- The refund example is the only concrete example on the homepage
+- Never say "AI governance" or "AI safety"; don't lead with preventing bad outcomes
 
 Plain-language explanation:
 
@@ -67,7 +76,14 @@ Don't hardcode hex values in components or improvise new accent colors, consume 
 
 ## Page structure (`app/page.tsx`)
 
-Hero -> Problem -> Gap -> Solution -> HowItWorks -> ExistingInfrastructure ->
-PreventionVsDetection -> Evidence -> Architecture -> TechGuarantees -> UseCases -> DemoTeaser ->
-Stakeholders -> FAQ -> BottomCTA, each component in `components/`, wrapped in `<Reveal>` for
-scroll-in animation except Hero.
+Hero -> Problem -> RefundExample (`#how-it-works`) -> HowItWorks (four-step flow) -> Outcomes ->
+BottomCTA (`#contact`), each component in `components/`, wrapped in `<Reveal>` for scroll-in
+animation except Hero.
+
+`/agents` is the follow-up landing page for emails: `/agents?use=refund|payment|approval|procurement`
+(data in `lib/useCases.ts`, unknown values fall back to refund). "Schedule a conversation" CTAs read
+`scheduleUrl` in `lib/config.ts`, currently a mailto until a calendar link exists.
+
+Visual bar is Stripe-level polish on the existing tokens: soft purple/lavender gradient fields, pill
+buttons, mono eyebrows, product-style cards with layered shadows. Achieved with opacity variants of
+the tokens, no new hues.

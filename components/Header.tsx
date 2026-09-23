@@ -2,11 +2,10 @@
 
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { nav } from "@/lib/config";
+import { nav, scheduleUrl } from "@/lib/config";
 
 const links = [
   { label: "How it works", href: nav.howItWorks },
-  { label: "Use cases", href: nav.useCases },
   { label: "Demo", href: nav.demo },
   { label: "Explainers", href: nav.explainers },
   { label: "SDKs", href: nav.sdks },
@@ -17,7 +16,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-paper border-b border-border">
+    <header className="sticky top-0 z-50 w-full bg-paper/80 backdrop-blur-md border-b border-border/70">
       <div className="max-w-container mx-auto flex items-center justify-between px-6 py-4">
         <a
           href="/"
@@ -44,10 +43,10 @@ export default function Header() {
 
         <div className="hidden md:block">
           <a
-            href={nav.demo}
-            className="inline-flex items-center rounded-md bg-purple px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity duration-150"
+            href={scheduleUrl}
+            className="inline-flex items-center rounded-full bg-purple px-5 py-2.5 text-sm font-semibold text-white hover:bg-purple-deep transition-colors duration-150"
           >
-            See the demo
+            Schedule a conversation
           </a>
         </div>
 
@@ -79,11 +78,11 @@ export default function Header() {
           ))}
 
           <a
-            href={nav.demo}
-            className="inline-flex items-center justify-center rounded-md bg-purple px-6 py-3 text-sm font-semibold text-white min-h-[48px]"
+            href={scheduleUrl}
+            className="inline-flex items-center justify-center rounded-full bg-purple px-6 py-3 text-sm font-semibold text-white min-h-[48px]"
             onClick={() => setOpen(false)}
           >
-            See the demo
+            Schedule a conversation
           </a>
         </div>
       )}

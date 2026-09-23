@@ -1,11 +1,11 @@
-import { founderEmail, nav } from "@/lib/config";
+import { founderEmail, founderPhone, nav } from "@/lib/config";
 
 const links = [
   { label: "How it works", href: nav.howItWorks },
-  { label: "Use cases", href: nav.useCases },
   { label: "Docs", href: nav.docs },
   { label: "GitHub", href: nav.github },
-  { label: "Blog", href: nav.blog },
+  { label: "Substack", href: nav.blog },
+  { label: "LinkedIn", href: nav.founderLinkedIn },
 ];
 
 export default function Footer() {
@@ -39,12 +39,10 @@ export default function Footer() {
             {founderEmail}
           </a>
           <a
-            href={nav.founderLinkedIn}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`tel:${founderPhone.replace(/ /g, "")}`}
             className="mt-1 block text-ink/50 hover:text-purple-deep transition-colors"
           >
-            Pavan Charak
+            {founderPhone}
           </a>
         </div>
       </div>

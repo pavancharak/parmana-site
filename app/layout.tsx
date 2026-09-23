@@ -9,20 +9,20 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "500"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://parmanasystems.com"),
-  title: "Parmana | Your Agent. Your Rule. Proof It Followed.",
-  description: "Deploy AI agents with proof they followed your rules. Parmana checks the exact action against your existing rule and issues proof of the outcome, nothing changes about how you work.",
+  title: "Parmana | You authorize. We ensure.",
+  description: "Authorization infrastructure for agentic systems. Parmana ensures every action your agents request is carried out exactly the way you authorized it, with proof.",
   alternates: { canonical: "https://parmanasystems.com" },
   openGraph: {
-    title: "Parmana | Your Agent. Your Rule. Proof It Followed.",
-    description: "Your agent proposes the action. Your rule decides. Parmana proves what happened.",
+    title: "Parmana | You authorize. We ensure.",
+    description: "Your policies don't change. Agents prove they follow them.",
     type: "website",
     url: "https://parmanasystems.com",
     images: ["https://parmanasystems.com/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Parmana | Your Agent. Your Rule. Proof It Followed.",
-    description: "Your agent proposes the action. Your rule decides. Parmana proves what happened.",
+    title: "Parmana | You authorize. We ensure.",
+    description: "Your policies don't change. Agents prove they follow them.",
   },
   robots: "index, follow",
 };
