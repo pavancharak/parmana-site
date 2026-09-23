@@ -10,8 +10,10 @@ export const colors = {
 export const founderEmail = "founder@parmanasystems.com";
 export const founderPhone = "+91 97179 94459";
 
-// Swap for a Cal.com / Calendly URL when one exists; every "Schedule a conversation" CTA reads this.
-export const scheduleUrl = `mailto:${founderEmail}?subject=${encodeURIComponent("Conversation about Parmana")}`;
+export const calLink = "pavan-charak/30min";
+
+// Every "Schedule a conversation" CTA reads this; /book hosts the Cal.com inline embed.
+export const scheduleUrl = "/book";
 
 export const messaging = {
   hero: "You authorize. We ensure.",
