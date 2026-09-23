@@ -7,7 +7,7 @@ export default function Hero() {
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-purple-deep">
           Authorization infrastructure for agentic commerce
         </p>
-        <h1 className="mt-5 text-[32px] md:text-[46px] lg:text-[58px] font-bold leading-[1.1] tracking-tight text-ink max-w-[1080px] mx-auto">
+        <h1 className="mt-5 text-[36px] md:text-[52px] lg:text-[64px] font-bold leading-[1.05] tracking-tight text-ink max-w-[980px] mx-auto">
           {messaging.hero}
         </h1>
         <p className="mx-auto mt-7 max-w-[800px] text-lg md:text-xl leading-[1.55] text-ink/70">
