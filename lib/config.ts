@@ -10,9 +10,9 @@ export const colors = {
 export const founderEmail = "founder@parmanasystems.com";
 
 export const messaging = {
-  hero: "Your Agent. Your Rule. Proof It Followed.",
+  hero: "Deploy Agents Safely. Prove Compliance. Protect Your Systems. Nothing Changes.",
   tagline:
-    "Deploy AI agents with proof they followed your rules. Nothing changes about how you work.",
+    "Apply the rules you already have to your AI agents. No disruption, no rearchitecting.",
   corePrinciple:
     "Your agent proposes the action. Your rule decides. Parmana proves what happened.",
   outcome:

@@ -5,9 +5,9 @@ export default function Hero() {
     <section className="bg-paper border-b border-border">
       <div className="max-w-container mx-auto px-6 py-20 md:py-28 lg:py-32 text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-purple-deep">
-          Agent verification before execution
+          Authorization infrastructure for agentic commerce
         </p>
-        <h1 className="mt-5 text-[40px] md:text-[56px] lg:text-[72px] font-bold leading-[1.02] tracking-tight text-ink max-w-[980px] mx-auto">
+        <h1 className="mt-5 text-[32px] md:text-[46px] lg:text-[58px] font-bold leading-[1.1] tracking-tight text-ink max-w-[1080px] mx-auto">
           {messaging.hero}
         </h1>
         <p className="mx-auto mt-7 max-w-[800px] text-lg md:text-xl leading-[1.55] text-ink/70">
@@ -17,11 +17,11 @@ export default function Hero() {
           {messaging.corePrinciple}
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <a href={nav.howItWorks} className="inline-flex items-center justify-center rounded-md bg-purple px-8 py-3 text-base font-semibold text-white min-h-[44px]">
-            See how it works
+          <a href={`mailto:${founderEmail}?subject=Start%20free`} className="inline-flex items-center justify-center rounded-md bg-purple px-8 py-3 text-base font-semibold text-white min-h-[44px]">
+            Start free
           </a>
-          <a href={`mailto:${founderEmail}?subject=Request%20a%20pilot`} className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3 text-base font-semibold text-purple-deep border border-purple min-h-[44px]">
-            Talk to us
+          <a href={nav.demo} className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3 text-base font-semibold text-purple-deep border border-purple min-h-[44px]">
+            See the demo
           </a>
         </div>
         <p className="mt-7 text-xs text-ink/50">
