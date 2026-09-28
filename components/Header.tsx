@@ -10,7 +10,6 @@ const links = [
   { label: "Example", href: nav.proof },
   { label: "FAQ", href: nav.faq },
   { label: "Demo", href: nav.demo },
-  { label: "SDKs", href: nav.sdks },
   { label: "Docs", href: nav.docs },
 ];
 

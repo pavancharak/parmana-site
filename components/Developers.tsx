@@ -15,7 +15,6 @@ const back = [
 
 const links = [
   { label: "Read the docs", href: nav.docs, track: "cta_read_docs" },
-  { label: "SDKs", href: nav.sdks, track: "cta_sdks" },
   { label: "GitHub", href: nav.github, track: "cta_github" },
 ];
 
