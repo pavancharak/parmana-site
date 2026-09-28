@@ -1,9 +1,14 @@
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
-import RefundExample from "@/components/RefundExample";
-import HowItWorks from "@/components/HowItWorks";
+import Boundary from "@/components/Boundary";
+import ThreeLayers from "@/components/ThreeLayers";
+import InsideOutside from "@/components/InsideOutside";
 import Outcomes from "@/components/Outcomes";
-import BottomCTA from "@/components/BottomCTA";
+import RefundCase from "@/components/RefundCase";
+import CategoryCheck from "@/components/CategoryCheck";
+import FAQ from "@/components/FAQ";
+import Developers from "@/components/Developers";
+import HomeCTA from "@/components/HomeCTA";
 import Reveal from "@/components/Reveal";
 
 export default function Home() {
@@ -11,10 +16,15 @@ export default function Home() {
     <main>
       <Hero />
       <Reveal><Problem /></Reveal>
-      <Reveal><RefundExample /></Reveal>
-      <Reveal><HowItWorks /></Reveal>
+      <Reveal><Boundary /></Reveal>
+      <Reveal><ThreeLayers /></Reveal>
+      <Reveal><InsideOutside /></Reveal>
       <Reveal><Outcomes /></Reveal>
-      <Reveal><BottomCTA /></Reveal>
+      <Reveal><RefundCase /></Reveal>
+      <Reveal><CategoryCheck /></Reveal>
+      <Reveal><FAQ /></Reveal>
+      <Reveal><Developers /></Reveal>
+      <Reveal><HomeCTA /></Reveal>
     </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SiteAnalytics from "@/components/SiteAnalytics";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--font-inter", display: "swap" });
@@ -9,20 +10,20 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "500"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://parmanasystems.com"),
-  title: "Parmana | You authorize. We ensure.",
-  description: "Authorization infrastructure for agentic systems. Parmana ensures every action your agents request is carried out exactly the way you authorized it, with proof.",
+  title: "Parmana | Your rules. Your control.",
+  description: "Parmana sits outside your business systems and checks every request your AI makes against your rules. Your rules stay the same. You get a signed receipt for every decision.",
   alternates: { canonical: "https://parmanasystems.com" },
   openGraph: {
-    title: "Parmana | You authorize. We ensure.",
-    description: "Your policies don't change. Agents prove they follow them.",
+    title: "Parmana | Your rules. Your control.",
+    description: "Parmana sits outside your business systems and checks every request your AI makes against your rules. Your rules stay the same. You get a signed receipt for every decision.",
     type: "website",
     url: "https://parmanasystems.com",
     images: ["https://parmanasystems.com/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Parmana | You authorize. We ensure.",
-    description: "Your policies don't change. Agents prove they follow them.",
+    title: "Parmana | Your rules. Your control.",
+    description: "Parmana sits outside your business systems and checks every request your AI makes against your rules. Your rules stay the same. You get a signed receipt for every decision.",
   },
   robots: "index, follow",
 };
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header />
         {children}
         <Footer />
+        <SiteAnalytics />
       </body>
     </html>
   );

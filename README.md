@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Parmana site
 
-## Getting Started
+Marketing site for parmanasystems.com. Next.js 14 (App Router), TypeScript, Tailwind CSS.
 
-First, run the development server:
+Before changing copy or design, read `docs/DESIGN-SYSTEM-CURRENT.md` (positioning, colors, copy rules).
+
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build, run before pushing
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where the copy lives
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| What | File |
+|---|---|
+| Headline, subheadline, footer line, tagline | `lib/config.ts` (`messaging`) |
+| Nav links, docs/GitHub/blog URLs, section anchors | `lib/config.ts` (`nav`), `components/Header.tsx` |
+| Page title, description, share (Open Graph) text | `app/layout.tsx` (`metadata`) |
+| Homepage section order | `app/page.tsx` |
+| Hero and its three-box flow | `components/Hero.tsx` |
+| "What we built" and the five steps | `components/Boundary.tsx` |
+| Step-through refund demo | `components/ThreeLayers.tsx` |
+| Inside vs. outside comparison | `components/InsideOutside.tsx` |
+| Three outcomes (titles are locked) | `components/Outcomes.tsx` |
+| Refund example | `components/RefundCase.tsx` |
+| Quiz | `components/CategoryCheck.tsx` |
+| FAQ | `components/FAQ.tsx` |
+| Closing call to action | `components/HomeCTA.tsx` |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy rules in short: no em or en dashes, AI only "asks" or "requests" (it never acts or approves),
+no named customers, partners, regulators, or dates unless sourced, plain words over jargon.
 
-## Learn More
+## Add an FAQ question
 
-To learn more about Next.js, take a look at the following resources:
+Open `components/FAQ.tsx` and add an entry to the `faqs` array:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```ts
+{
+  q: "Your question?",
+  a: "A short, plain answer. Two or three sentences.",
+},
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+It appears on the homepage in the order of the array.
 
-## Deploy on Vercel
+## Deploy (Vercel)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The project deploys on Vercel. Pushing to `main` triggers a production deploy if the Git
+integration is connected. To deploy by hand:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm i -g vercel
+vercel          # preview deploy
+vercel --prod   # production deploy
+```
+
+Check the preview URL on a phone and a desktop before promoting to production.

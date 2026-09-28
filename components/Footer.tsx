@@ -1,4 +1,4 @@
-import { founderEmail, founderPhone, nav } from "@/lib/config";
+import { founderEmail, founderPhone, messaging, nav } from "@/lib/config";
 
 const links = [
   { label: "How it works", href: nav.howItWorks },
@@ -11,6 +11,10 @@ const links = [
 export default function Footer() {
   return (
     <footer className="print:hidden border-t border-border">
+      <div className="max-w-container mx-auto px-6 pt-12 pb-2 text-center md:text-left">
+        <p className="text-2xl font-bold tracking-[-0.02em] text-ink">{messaging.hero}</p>
+        <p className="mt-2 text-sm text-ink/60">{messaging.footer}</p>
+      </div>
       <div className="max-w-container mx-auto flex flex-col md:flex-row items-center justify-between gap-6 px-6 py-10">
         <div>
           <a href="/" className="text-lg font-bold text-ink">

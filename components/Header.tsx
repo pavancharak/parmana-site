@@ -6,8 +6,10 @@ import { nav, scheduleUrl } from "@/lib/config";
 
 const links = [
   { label: "How it works", href: nav.howItWorks },
+  { label: "Why outside", href: nav.whatWeBuilt },
+  { label: "Example", href: nav.proof },
+  { label: "FAQ", href: nav.faq },
   { label: "Demo", href: nav.demo },
-  { label: "Explainers", href: nav.explainers },
   { label: "SDKs", href: nav.sdks },
   { label: "Docs", href: nav.docs },
 ];
@@ -44,6 +46,7 @@ export default function Header() {
         <div className="hidden md:block">
           <a
             href={scheduleUrl}
+            data-track="cta_schedule_header"
             className="inline-flex items-center rounded-full bg-purple px-5 py-2.5 text-sm font-semibold text-white hover:bg-purple-deep transition-colors duration-150"
           >
             Schedule a conversation

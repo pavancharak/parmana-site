@@ -16,9 +16,12 @@ export const calLink = "pavan-charak/30min";
 export const scheduleUrl = "/book";
 
 export const messaging = {
-  hero: "You authorize. We ensure.",
+  hero: "Your rules. Your control.",
+  heroLine: "AI asks. Parmana checks. Only what you allowed goes through.",
   subhead:
-    "Your agents are getting smarter. Parmana ensures every action they request is carried out exactly the way you authorized it.",
+    "Parmana sits outside your business systems. It checks every request your AI makes against your rules, and gives you a signed receipt for every decision.",
+  oneLiner: "You set the rules. Parmana checks every request before it runs. You get proof.",
+  footer: "AI asks. Parmana checks. Only what you allowed goes through.",
   // Locked tagline, use exactly as written.
   tagline: "Your policies don't change. Agents prove they follow them.",
 } as const;
@@ -29,6 +32,10 @@ export const nav = {
   blog: "https://parmanasystems.substack.com",
   founderLinkedIn: "https://www.linkedin.com/in/pavancharak/",
   howItWorks: "/#how-it-works",
+  whatWeBuilt: "/#what-we-built",
+  proof: "/#proof",
+  faq: "/#faq",
+  check: "/#check",
   contact: "/#contact",
   demo: "/demo",
   explainers: "/explainers",

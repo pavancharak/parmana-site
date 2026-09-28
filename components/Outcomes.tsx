@@ -2,15 +2,15 @@
 const outcomes = [
   {
     title: "Deploy Safely",
-    body: "Every action your agents request stays within bounds. The authorization boundary is structural, not aspirational. Your agents can move fast without bypassing rules.",
+    body: "Let AI handle real work. Every request it makes is checked against your rules before anything runs, so it can move fast without going past your limits.",
   },
   {
     title: "Prove Compliance",
-    body: "Cryptographic proof that what executed was what was authorized. Evidence built for auditors and regulators. Proof doesn't depend on logs.",
+    body: "Every decision comes with a signed receipt: the request, the rule, and the result. Hand it to an auditor or regulator. It doesn't rely on logs.",
   },
   {
     title: "Protect Systems",
-    body: "The authorization boundary sits outside your business systems, so it doesn't depend on them staying intact. Your rules stay separate from the code they govern.",
+    body: "The check sits outside your business systems, so it doesn't depend on them. Requests you didn't allow never reach them.",
   },
 ];
 
@@ -19,9 +19,9 @@ export default function Outcomes() {
     <section className="bg-paper">
       <div className="max-w-container mx-auto px-6 py-20 md:py-28">
         <div className="max-w-[720px]">
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-purple-deep">Outcomes</p>
+          <p className="font-mono text-xs uppercase tracking-[0.16em] text-purple-deep">What you get</p>
           <h2 className="mt-4 text-[30px] md:text-[44px] font-bold leading-[1.1] tracking-[-0.025em] text-ink">
-            What you get when authorization is structural
+            Three things you get, without changing how you run
           </h2>
         </div>
         <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">

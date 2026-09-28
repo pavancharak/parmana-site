@@ -16,6 +16,7 @@ Locked items:
 - Tagline, verbatim: "Your policies don't change. Agents prove they follow them." (`messaging.tagline`)
 - Three outcomes, titles and order fixed: Deploy Safely, Prove Compliance, Protect Systems
 - The refund example is the only concrete example on the homepage
+- One-liner (2026-09-26): "You set rules. Parmana checks them. You get proof."
 - Never say "AI governance" or "AI safety"; don't lead with preventing bad outcomes
 
 Plain-language explanation:
@@ -74,11 +75,24 @@ Don't hardcode hex values in components or improvise new accent colors, consume 
   revocable credentials) should track the validated claims in `SITE_CONTENT_VALIDATION.md` where
   they overlap
 
-## Page structure (`app/page.tsx`)
+## Page structure (`app/page.tsx`, rebuilt 2026-09-28)
 
-Hero -> Problem -> RefundExample (`#how-it-works`) -> HowItWorks (four-step flow) -> Outcomes ->
-BottomCTA (`#contact`), each component in `components/`, wrapped in `<Reveal>` for scroll-in
-animation except Hero.
+Hero ("Your rules. Your control." + "AI asks. Parmana checks. Only what you allowed goes through.", with a
+three-box AI -> Parmana -> your system flow) -> Problem -> Boundary (`#what-we-built`, "a checkpoint that
+sits outside your systems", five steps ask/check/sign/run/verify, "nothing you run today has to change")
+-> ThreeLayers (`#how-it-works`) -> InsideOutside (`#why-outside`, built-in check vs. outside check, no
+competitor named) -> Outcomes (locked three) -> RefundCase (`#proof`) -> CategoryCheck (`#check`) -> FAQ
+(`#faq`, add questions in `components/FAQ.tsx`) -> Developers -> HomeCTA (`#contact`). WhyNow and
+CompanyOutcomes are no longer on the homepage (files kept).
+
+Plain-language rule (2026-09-28): write for a busy CFO/CTO. Say "checkpoint outside your systems", not
+"structural boundary"; "signed receipt anyone can verify", not "cryptographic attestation". FAQ answers
+stay honest: no "can't be compromised"; unreachable Parmana means no signed yes, so nothing runs.
+
+Worked example on the homepage is a ₹10,000 refund rule with ₹8,000 / ₹15,000 requests, always
+"your payment processor", never a named processor. No named regulators, firms, or dates on the
+homepage unless sourced. CTA clicks carry `data-track="event_name"`, reported by
+`components/SiteAnalytics.tsx` (Vercel Web Analytics).
 
 `/agents` is the follow-up landing page for emails: `/agents?use=refund|payment|approval|procurement`
 (data in `lib/useCases.ts`, unknown values fall back to refund). "Schedule a conversation" CTAs read
