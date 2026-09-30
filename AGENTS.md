@@ -6,8 +6,6 @@ and positioning this build follows; `docs/NEW-SITE-BUILD-PROMPT.md` is a histori
 plan, don't treat it as current.
 
 - Colors and type are governed by the tokens in `tailwind.config.ts` / `lib/config.ts`, don't
-  improvise new accent colors or hardcode hex values in components. Exception: the homepage,
-  `components/ParmanaWebsite.tsx`, is a self-contained inline-styles build with its own locked
-  palette at the top of the file (see the override note in `docs/DESIGN-SYSTEM-CURRENT.md`).
+  improvise new accent colors or hardcode hex values in components.
 - Copy rules in `docs/DESIGN-SYSTEM-CURRENT.md` (no em/en-dashes, AI never "acts" as the authority,
   no fabricated metrics) apply to all site text.

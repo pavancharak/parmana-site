@@ -1,95 +1,6 @@
-"use client";
+import { founderEmail } from "@/lib/config";
 
-import type { CSSProperties, ReactNode } from "react";
-
-// Self-contained homepage: pure React + inline styles, no Tailwind, no dependencies.
-// Palette and type are locked here so the file can be dropped into any React project.
-const C = {
-  dark: "#0A0D10",
-  light: "#F5F3F0",
-  white: "#FFFFFF",
-  green: "#6FE3C4",
-  border: "#1B2126",
-  muted: "#D9D5CF",
-};
-
-const F = {
-  serif: "'Fraunces', Georgia, serif",
-  sans: "'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-  mono: "'IBM Plex Mono', ui-monospace, monospace",
-};
-
-const EMAIL = "founder@parmanasystems.com";
-const PHONE = "+91 97179 94459";
-const GITHUB = "https://github.com/pavancharak/Payment-Action-Guard";
-const DOCS = "https://docs.parmanasystems.com";
-const BLOG = "https://parmanasystems.substack.com";
-
-const FONTS_HREF =
-  "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap";
-
-// Inline styles can't express media queries, so the 768px breakpoint lives in this one scoped block.
-const RESPONSIVE_CSS = `
-@media (max-width: 768px) {
-  .pm-nav { flex-direction: column; align-items: flex-start !important; gap: 12px !important; }
-  .pm-flow { flex-direction: column; }
-  .pm-arrow { transform: rotate(90deg); }
-  .pm-h1 { font-size: 2.5rem !important; }
-  .pm-hero-row { flex-direction: column-reverse; align-items: flex-start !important; }
-}
-`;
-
-function requestDemo() {
-  window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent("Parmana demo request")}`;
-}
-
-const s = {
-  page: { fontFamily: F.sans, color: C.dark, background: C.white, lineHeight: 1.6, margin: 0 } as CSSProperties,
-  wrap: { maxWidth: 1000, margin: "0 auto", padding: "0 32px" } as CSSProperties,
-  section: { padding: "4rem 0" } as CSSProperties,
-  h2: { fontFamily: F.serif, fontWeight: 600, fontSize: "2.25rem", lineHeight: 1.15, margin: "0 0 1rem" } as CSSProperties,
-  h3: { fontFamily: F.serif, fontWeight: 600, fontSize: "1.25rem", lineHeight: 1.3, margin: "0 0 0.5rem" } as CSSProperties,
-  lead: { fontSize: "1.125rem", margin: "0 0 2.5rem", maxWidth: 640 } as CSSProperties,
-  p: { margin: 0 } as CSSProperties,
-  grid: (min: number): CSSProperties => ({
-    display: "grid",
-    gridTemplateColumns: `repeat(auto-fit, minmax(min(${min}px, 100%), 1fr))`,
-    gap: "1.5rem",
-  }),
-  darkCard: { background: C.dark, color: C.light, padding: "2rem", borderRadius: 2 } as CSSProperties,
-  lightCard: { background: C.white, color: C.dark, padding: "2rem", borderRadius: 2, border: `1px solid ${C.muted}` } as CSSProperties,
-  button: (bg: string, fg: string): CSSProperties => ({
-    background: bg,
-    color: fg,
-    border: "none",
-    borderRadius: 2,
-    padding: "1rem 2rem",
-    fontFamily: F.sans,
-    fontWeight: 600,
-    fontSize: "1rem",
-    cursor: "pointer",
-  }),
-  eyebrow: { fontFamily: F.mono, fontSize: "0.75rem", letterSpacing: "0.12em", textTransform: "uppercase" } as CSSProperties,
-};
-
-function Section({ id, bg, color, children, style }: { id?: string; bg: string; color?: string; children: ReactNode; style?: CSSProperties }) {
-  return (
-    <section id={id} style={{ ...s.section, background: bg, color: color ?? C.dark, ...style }}>
-      <div style={s.wrap}>{children}</div>
-    </section>
-  );
-}
-
-function GateGlyph() {
-  return (
-    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-      <rect x="22" y="8" width="16" height="44" rx="1" stroke={C.green} strokeWidth="2" />
-      <line x1="30" y1="16" x2="30" y2="44" stroke={C.green} strokeWidth="2" />
-      <path d="M4 30h14m-4-4 4 4-4 4" stroke={C.green} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M42 30h14m-4-4 4 4-4 4" stroke={C.green} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
+const demoHref = `mailto:${founderEmail}?subject=${encodeURIComponent("Parmana demo request")}`;
 
 const whyNow = [
   { title: "Agent adoption", text: "Agents are moving from pilots into real workflows." },
@@ -122,216 +33,185 @@ const roles = [
   { title: "Compliance", text: "A record for every decision. That's it." },
 ];
 
-const footerCols = [
-  {
-    title: "Product",
-    links: [
-      { label: "Features", href: "#outcomes" },
-      { label: "Connectors", href: "#everywhere" },
-      { label: "Docs", href: DOCS },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "About", href: "#what-we-do" },
-      { label: "Blog", href: BLOG },
-      { label: "Book a call", href: "/book" },
-    ],
-  },
-  {
-    title: "Contact",
-    links: [
-      { label: EMAIL, href: `mailto:${EMAIL}` },
-      { label: PHONE, href: `tel:${PHONE.replace(/\s/g, "")}` },
-      { label: "GitHub", href: GITHUB },
-    ],
-  },
-];
+const wrap = "max-w-container mx-auto px-6";
+const section = "border-b border-border py-16 md:py-20 lg:py-24";
+const h2 = "text-[26px] md:text-[36px] font-bold leading-[1.2] tracking-tight text-ink";
+const lead = "mt-4 max-w-[640px] text-lg leading-[1.5] text-ink/70";
+const h3 = "text-lg font-bold text-ink";
+
+function GateGlyph() {
+  return (
+    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" aria-hidden="true" className="shrink-0 text-purple">
+      <rect x="22" y="8" width="16" height="44" rx="1" stroke="currentColor" strokeWidth="2" />
+      <line x1="30" y1="16" x2="30" y2="44" stroke="currentColor" strokeWidth="2" />
+      <path d="M4 30h14m-4-4 4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M42 30h14m-4-4 4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
 
 export default function ParmanaWebsite() {
-  const navLink: CSSProperties = { color: C.light, textDecoration: "none", fontSize: "0.9375rem" };
-
   return (
-    <div style={s.page}>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="stylesheet" href={FONTS_HREF} />
-      <style>{RESPONSIVE_CSS}</style>
-
-      {/* 1. Navigation */}
-      <nav style={{ background: C.dark, color: C.light, borderBottom: `1px solid ${C.border}` }}>
-        <div className="pm-nav" style={{ ...s.wrap, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "20px 32px" }}>
-          <div style={{ display: "flex", alignItems: "baseline", gap: 16, flexWrap: "wrap" }}>
-            <a href="/" style={{ ...s.eyebrow, fontSize: "1rem", fontWeight: 500, color: C.light, textDecoration: "none" }}>PARMANA</a>
-            <span style={{ fontSize: "0.875rem", color: C.muted }}>Your rules. Your control.</span>
+    <main>
+      {/* Hero */}
+      <section className="border-b-2 border-purple bg-gradient-to-b from-lavender to-paper">
+        <div className={`${wrap} flex flex-col-reverse items-start gap-8 py-20 md:flex-row md:items-center md:justify-between md:py-28`}>
+          <div className="max-w-[720px]">
+            <h1 className="text-[40px] md:text-[56px] font-bold leading-[1.08] tracking-tight text-ink">
+              Your rules. Your control. That&apos;s it.
+            </h1>
+            <p className="mt-6 text-lg md:text-xl leading-[1.5] text-ink/70">
+              Every agent request is checked against the policies you already have, before anything happens. No changes to your systems.
+            </p>
+            <a
+              href={demoHref}
+              className="mt-10 inline-flex min-h-[44px] items-center rounded-full bg-purple px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-purple-deep"
+            >
+              Request a Demo
+            </a>
           </div>
-          <ul style={{ display: "flex", gap: 28, listStyle: "none", margin: 0, padding: 0 }}>
-            <li><a href="#how-it-works" style={navLink}>Product</a></li>
-            <li><a href="#what-we-do" style={navLink}>Company</a></li>
-            <li><a href={DOCS} style={navLink}>Docs</a></li>
-          </ul>
+          <GateGlyph />
         </div>
-      </nav>
+      </section>
 
-      <main>
-        {/* 2. Hero */}
-        <Section bg={C.dark} color={C.light} style={{ padding: "6rem 0", borderBottom: `2px solid ${C.green}` }}>
-          <div className="pm-hero-row" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 32 }}>
-            <div style={{ maxWidth: 680 }}>
-              <h1 className="pm-h1" style={{ fontFamily: F.serif, fontWeight: 600, fontSize: "3.5rem", lineHeight: 1.08, margin: "0 0 1.5rem" }}>
-                Your rules. Your control. That&apos;s it.
-              </h1>
-              <p style={{ fontSize: "1.25rem", color: C.muted, margin: "0 0 2.5rem" }}>
-                Every agent request is checked against the policies you already have, before anything happens. No changes to your systems.
-              </p>
-              <button type="button" onClick={requestDemo} style={s.button(C.green, C.dark)}>Request a Demo</button>
-            </div>
-            <GateGlyph />
-          </div>
-        </Section>
-
-        {/* 3. Why now */}
-        <Section bg={C.white}>
-          <h2 style={s.h2}>The market&apos;s moving fast.</h2>
-          <p style={s.lead}>Teams are putting agents into real workflows. The question is how you stay in control.</p>
-          <div style={s.grid(250)}>
+      {/* Why now */}
+      <section className={`${section} bg-paper`}>
+        <div className={wrap}>
+          <h2 className={h2}>The market&apos;s moving fast.</h2>
+          <p className={lead}>Teams are putting agents into real workflows. The question is how you stay in control.</p>
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
             {whyNow.map((c) => (
-              <div key={c.title} style={{ ...s.darkCard, borderLeft: `2px solid ${C.green}` }}>
-                <h3 style={s.h3}>{c.title}</h3>
-                <p style={s.p}>{c.text}</p>
+              <div key={c.title} className="rounded-md border border-border border-l-2 border-l-purple bg-lavender p-8">
+                <h3 className={h3}>{c.title}</h3>
+                <p className="mt-2 text-ink/70">{c.text}</p>
               </div>
             ))}
           </div>
-        </Section>
+        </div>
+      </section>
 
-        {/* 4. How it works */}
-        <Section id="how-it-works" bg={C.light}>
-          <h2 style={s.h2}>Three steps.</h2>
-          <p style={s.lead}>Agent requests. Parmana checks. Allowed actions go through, the rest stop.</p>
-          <ol className="pm-flow" style={{ display: "flex", alignItems: "stretch", gap: 16, listStyle: "none", margin: 0, padding: 0 }}>
+      {/* How it works */}
+      <section id="how-it-works" className={`${section} scroll-mt-20 bg-lavender`}>
+        <div className={wrap}>
+          <h2 className={h2}>Three steps.</h2>
+          <p className={lead}>Agent requests. Parmana checks. Allowed actions go through, the rest stop.</p>
+          <ol className="mt-12 flex flex-col items-stretch gap-4 md:flex-row">
             {steps.map((step, i) => (
-              <li key={step.title} style={{ display: "contents" }}>
+              <li key={step.title} className="contents">
                 {i > 0 && (
-                  <span className="pm-arrow" aria-hidden="true" style={{ color: C.green, fontSize: "2rem", alignSelf: "center", lineHeight: 1 }}>
+                  <span aria-hidden="true" className="self-center text-2xl leading-none text-purple rotate-90 md:rotate-0">
                     →
                   </span>
                 )}
-                <div style={{ ...s.darkCard, flex: 1 }}>
-                  <div style={{ ...s.eyebrow, color: C.muted, marginBottom: 8 }}>Step {i + 1}</div>
-                  <h3 style={{ ...s.h3, color: C.green }}>{step.title}</h3>
-                  <p style={s.p}>{step.text}</p>
+                <div className="flex-1 rounded-md border border-border bg-paper p-8">
+                  <p className="font-mono text-xs uppercase tracking-wide text-ink/50">Step {i + 1}</p>
+                  <h3 className="mt-2 text-lg font-bold text-purple-deep">{step.title}</h3>
+                  <p className="mt-2 text-ink/70">{step.text}</p>
                 </div>
               </li>
             ))}
           </ol>
-        </Section>
+        </div>
+      </section>
 
-        {/* 5. Three outcomes */}
-        <Section id="outcomes" bg={C.white}>
-          <h2 style={s.h2}>Three outcomes.</h2>
-          <div style={{ ...s.grid(280), marginTop: "2.5rem" }}>
+      {/* Outcomes */}
+      <section id="outcomes" className={`${section} scroll-mt-20 bg-paper`}>
+        <div className={wrap}>
+          <h2 className={h2}>Three outcomes.</h2>
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
             {outcomes.map((o, i) => (
-              <div key={o.title} style={s.lightCard}>
-                <div
-                  style={{
-                    width: 40, height: 40, borderRadius: "50%", background: C.green, color: C.dark,
-                    display: "flex", alignItems: "center", justifyContent: "center",
-                    fontFamily: F.mono, fontWeight: 500, marginBottom: "1.25rem",
-                  }}
-                >
+              <div key={o.title} className="rounded-md border border-border bg-paper p-8">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-purple font-mono text-sm font-semibold text-white">
                   {i + 1}
-                </div>
-                <h3 style={s.h3}>{o.title}</h3>
-                <p style={s.p}>{o.text}</p>
+                </span>
+                <h3 className={`mt-5 ${h3}`}>{o.title}</h3>
+                <p className="mt-2 text-ink/70">{o.text}</p>
               </div>
             ))}
           </div>
-        </Section>
+        </div>
+      </section>
 
-        {/* 6. Real example */}
-        <Section bg={C.light}>
-          <h2 style={s.h2}>Here&apos;s what this actually does.</h2>
-          <p style={{ fontFamily: F.serif, fontStyle: "italic", fontSize: "1.5rem", lineHeight: 1.45, margin: 0, maxWidth: 760 }}>
+      {/* Real example */}
+      <section id="example" className={`${section} scroll-mt-20 bg-lavender`}>
+        <div className={wrap}>
+          <h2 className={h2}>Here&apos;s what this actually does.</h2>
+          <p className="mt-6 max-w-[760px] text-xl md:text-2xl italic leading-[1.45] text-ink">
             You set a ₹10K refund limit. An agent requests a ₹15K refund. Parmana stops it. The decision is logged.
           </p>
-        </Section>
+        </div>
+      </section>
 
-        {/* 7. Works everywhere */}
-        <Section id="everywhere" bg={C.white}>
-          <h2 style={s.h2}>Same logic. Any system.</h2>
-          <div style={{ ...s.grid(250), marginTop: "2.5rem" }}>
+      {/* Works everywhere */}
+      <section id="everywhere" className={`${section} scroll-mt-20 bg-paper`}>
+        <div className={wrap}>
+          <h2 className={h2}>Same logic. Any system.</h2>
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
             {systems.map((c) => (
-              <div key={c.title} style={s.darkCard}>
-                <h3 style={{ ...s.h3, color: C.green }}>{c.title}</h3>
-                <p style={s.p}>{c.text}</p>
+              <div key={c.title} className="rounded-md border border-border bg-lavender p-8">
+                <p className="font-mono text-xs uppercase tracking-wide text-purple-deep">{c.title}</p>
+                <p className="mt-2 text-base font-bold text-ink">{c.text}</p>
               </div>
             ))}
           </div>
-        </Section>
+        </div>
+      </section>
 
-        {/* 8. What we do */}
-        <Section id="what-we-do" bg={C.light}>
-          <h2 style={s.h2}>What we do. What we don&apos;t.</h2>
-          <div style={{ ...s.grid(250), marginTop: "2.5rem" }}>
-            <div style={{ ...s.lightCard, borderLeft: `2px solid ${C.green}` }}>
-              <h3 style={s.h3}>We do</h3>
-              <ul style={{ margin: 0, paddingLeft: "1.25rem" }}>
+      {/* What we do */}
+      <section id="what-we-do" className={`${section} scroll-mt-20 bg-lavender`}>
+        <div className={wrap}>
+          <h2 className={h2}>What we do. What we don&apos;t.</h2>
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="rounded-md border border-border border-l-2 border-l-purple bg-paper p-8">
+              <h3 className={h3}>We do</h3>
+              <ul className="mt-3 list-disc space-y-1 pl-5 text-ink/70">
                 <li>Check every agent request against your rules before it goes through</li>
               </ul>
             </div>
-            <div style={s.lightCard}>
-              <h3 style={s.h3}>We don&apos;t</h3>
-              <ul style={{ margin: 0, paddingLeft: "1.25rem" }}>
+            <div className="rounded-md border border-border bg-paper p-8">
+              <h3 className={h3}>We don&apos;t</h3>
+              <ul className="mt-3 list-disc space-y-1 pl-5 text-ink/70">
                 <li>Build agents</li>
                 <li>Change your systems</li>
                 <li>Replace your security</li>
               </ul>
             </div>
           </div>
-        </Section>
-
-        {/* 9. By role */}
-        <Section bg={C.white}>
-          <h2 style={s.h2}>By role.</h2>
-          <div style={{ ...s.grid(200), marginTop: "2.5rem" }}>
-            {roles.map((r) => (
-              <div key={r.title} style={{ ...s.darkCard, borderTop: `3px solid ${C.green}` }}>
-                <h3 style={{ ...s.h3, color: C.green }}>{r.title}</h3>
-                <p style={s.p}>{r.text}</p>
-              </div>
-            ))}
-          </div>
-        </Section>
-
-        {/* 10. CTA */}
-        <Section bg={C.dark} color={C.light} style={{ textAlign: "center" }}>
-          <h2 style={s.h2}>Ready?</h2>
-          <p style={{ ...s.lead, color: C.muted, margin: "0 auto 2.5rem" }}>No rearchitecture. Start with one workflow.</p>
-          <button type="button" onClick={requestDemo} style={s.button(C.light, C.dark)}>Request a Demo</button>
-        </Section>
-      </main>
-
-      {/* 11. Footer */}
-      <footer style={{ background: C.dark, color: C.light, borderTop: `1px solid ${C.border}`, padding: "3rem 0" }}>
-        <div style={s.wrap}>
-          <div style={s.grid(200)}>
-            {footerCols.map((col) => (
-              <div key={col.title}>
-                <h4 style={{ ...s.eyebrow, color: C.green, fontWeight: 500, margin: "0 0 1rem" }}>{col.title}</h4>
-                <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gap: 8 }}>
-                  {col.links.map((l) => (
-                    <li key={l.label}>
-                      <a href={l.href} style={{ color: C.light, textDecoration: "none", fontSize: "0.9375rem" }}>{l.label}</a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <p style={{ margin: "2.5rem 0 0", fontSize: "0.8125rem", color: C.muted }}>© {new Date().getFullYear()} Parmana Systems</p>
         </div>
-      </footer>
-    </div>
+      </section>
+
+      {/* By role */}
+      <section className={`${section} bg-paper`}>
+        <div className={wrap}>
+          <h2 className={h2}>By role.</h2>
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {roles.map((r) => (
+              <div key={r.title} className="rounded-md border border-border border-t-[3px] border-t-purple bg-lavender p-8">
+                <h3 className="text-lg font-bold text-purple-deep">{r.title}</h3>
+                <p className="mt-2 text-ink/70">{r.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section id="contact" className="scroll-mt-20 bg-paper px-4 py-20 md:px-6 md:py-28">
+        <div className="relative mx-auto max-w-container overflow-hidden rounded-3xl bg-purple-deep px-6 py-16 text-center md:py-24">
+          <div aria-hidden className="absolute -right-16 -top-24 h-80 w-80 rounded-full bg-purple opacity-70 blur-3xl" />
+          <div aria-hidden className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-purple opacity-50 blur-3xl" />
+          <div className="relative">
+            <h2 className="text-[28px] md:text-[44px] font-bold leading-[1.1] tracking-[-0.025em] text-white">Ready?</h2>
+            <p className="mx-auto mt-4 max-w-[620px] text-base md:text-lg text-white/80">No rearchitecture. Start with one workflow.</p>
+            <a
+              href={demoHref}
+              className="mt-10 inline-flex min-h-[44px] items-center justify-center rounded-full bg-white px-7 py-3 text-base font-semibold text-purple-deep transition hover:bg-lavender"
+            >
+              Request a Demo
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

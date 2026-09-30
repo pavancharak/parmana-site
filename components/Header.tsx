@@ -6,9 +6,8 @@ import { nav, scheduleUrl } from "@/lib/config";
 
 const links = [
   { label: "How it works", href: nav.howItWorks },
-  { label: "Why outside", href: nav.whatWeBuilt },
-  { label: "Example", href: nav.proof },
-  { label: "FAQ", href: nav.faq },
+  { label: "Example", href: nav.example },
+  { label: "What we do", href: nav.whatWeDo },
   { label: "Demo", href: nav.demo },
   { label: "Docs", href: nav.docs },
 ];

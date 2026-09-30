@@ -32,10 +32,8 @@ export const nav = {
   blog: "https://parmanasystems.substack.com",
   founderLinkedIn: "https://www.linkedin.com/in/pavancharak/",
   howItWorks: "/#how-it-works",
-  whatWeBuilt: "/#what-we-built",
-  proof: "/#proof",
-  faq: "/#faq",
-  check: "/#check",
+  whatWeDo: "/#what-we-do",
+  example: "/#example",
   contact: "/#contact",
   demo: "/demo",
 } as const;
