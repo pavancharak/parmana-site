@@ -1,5 +1,13 @@
 # Current design system (as of 2026-09-23)
 
+> **Homepage override (2026-09-30):** the homepage (`app/page.tsx`) now renders
+> `components/ParmanaWebsite.tsx`, a self-contained dark/mint build with inline styles and no Tailwind.
+> Palette: dark `#0A0D10`, light `#F5F3F0`, green `#6FE3C4`, border `#1B2126`. Type: Fraunces 600
+> headings, Public Sans body, IBM Plex Mono labels. Lead line: "Your rules. Your control. That's it."
+> It carries its own nav and footer. Inner pages (`app/(site)/`: /book, /demo, /agents)
+> still use the white/purple Tailwind system documented below. The copy rules below (no dashes,
+> AI never acts, no fabricated metrics) apply to both.
+
 Source of truth for tokens: `tailwind.config.ts` and `lib/config.ts`. This file documents intent;
 if it and the config disagree, the config wins, but flag the drift.
 

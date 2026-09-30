@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SiteAnalytics from "@/components/SiteAnalytics";
 import "./globals.css";
 
@@ -32,9 +30,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body className="bg-paper text-ink font-sans antialiased">
-        <Header />
         {children}
-        <Footer />
         <SiteAnalytics />
       </body>
     </html>
