@@ -16,35 +16,23 @@ npm run build    # production build, run before pushing
 
 | What | File |
 |---|---|
-| Headline, subheadline, footer line, tagline | `lib/config.ts` (`messaging`) |
-| Nav links, docs/GitHub/blog URLs, section anchors | `lib/config.ts` (`nav`), `components/Header.tsx` |
+| Headline, subheadline, one-liner, footer line, tagline | `lib/config.ts` (`messaging`) |
+| Links (docs, GitHub, evaluation pages, section anchors) | `lib/config.ts` (`nav`) |
 | Page title, description, share (Open Graph) text | `app/layout.tsx` (`metadata`) |
-| Homepage section order | `app/page.tsx` |
-| Hero and its three-box flow | `components/Hero.tsx` |
-| "What we built" and the five steps | `components/Boundary.tsx` |
-| Step-through refund demo | `components/ThreeLayers.tsx` |
-| Inside vs. outside comparison | `components/InsideOutside.tsx` |
-| Three outcomes (titles are locked) | `components/Outcomes.tsx` |
-| Refund example | `components/RefundCase.tsx` |
-| Quiz | `components/CategoryCheck.tsx` |
-| FAQ | `components/FAQ.tsx` |
-| Closing call to action | `components/HomeCTA.tsx` |
+| Homepage section order | `components/ParmanaWebsite.tsx` |
+| Header and footer | `components/Header.tsx`, `components/Footer.tsx` |
+| Hero and its request, check, record visual | `components/home/Hero.tsx` |
+| Fact strip and the four steps | `components/home/HowItWorks.tsx` |
+| Interactive refund example | `components/home/RefundExample.tsx` |
+| Three outcomes (titles are locked) and integrations | `components/home/Outcomes.tsx` |
+| Developer section and SDK sample | `components/home/Developers.tsx` |
+| Trust section and evaluation links | `components/home/Trust.tsx` |
+| Closing call to action | `components/home/ClosingCTA.tsx` |
+| Shared section heading, eyebrow and card styles | `components/home/Section.tsx` |
 
 Copy rules in short: no em or en dashes, AI only "asks" or "requests" (it never acts or approves),
-no named customers, partners, regulators, or dates unless sourced, plain words over jargon.
-
-## Add an FAQ question
-
-Open `components/FAQ.tsx` and add an entry to the `faqs` array:
-
-```ts
-{
-  q: "Your question?",
-  a: "A short, plain answer. Two or three sentences.",
-},
-```
-
-It appears on the homepage in the order of the array.
+no named customers, partners, regulators, or dates unless sourced, plain words over jargon. Every
+product claim should match the claims in the Parmana repository (`docs/CLAIMS.md`).
 
 ## Deploy (Vercel)
 
