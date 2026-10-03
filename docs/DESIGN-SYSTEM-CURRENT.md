@@ -75,15 +75,21 @@ Don't hardcode hex values in components or improvise new accent colors, consume 
   revocable credentials) should track the validated claims in `SITE_CONTENT_VALIDATION.md` where
   they overlap
 
-## Page structure (`app/page.tsx`, rebuilt 2026-09-28)
+## Page structure (`components/ParmanaWebsite.tsx`, rebuilt 2026-10-03)
 
-Hero ("Your rules. Your control." + "AI asks. Parmana checks. Only what you allowed goes through.", with a
-three-box AI -> Parmana -> your system flow) -> Problem -> Boundary (`#what-we-built`, "a checkpoint that
-sits outside your systems", five steps ask/check/sign/run/verify, "nothing you run today has to change")
--> ThreeLayers (`#how-it-works`) -> InsideOutside (`#why-outside`, built-in check vs. outside check, no
-competitor named) -> Outcomes (locked three) -> RefundCase (`#proof`) -> CategoryCheck (`#check`) -> FAQ
-(`#faq`, add questions in `components/FAQ.tsx`) -> Developers -> HomeCTA (`#contact`). WhyNow and
-CompanyOutcomes are no longer on the homepage (files kept).
+Hero (`messaging.hero` + `messaging.subhead`, a product visual of one refund request, the checks it
+passed, and the signed record) -> fact strip (signatures, human approval, maker checker, offline
+verification) -> HowItWorks (`#how-it-works`, four steps: request, check, only allowed runs, proof)
+-> RefundExample (`#example`, interactive: ₹8,000, ₹15,000 without approval, ₹15,000 with a signed
+approval) -> Outcomes (locked three, tagline as heading, then the real integrations: Paytm, HubSpot,
+GitHub, Slack, your own API) -> Developers (`#developers`, the TypeScript SDK call, links to
+quickstart, playground, offline verification) -> Trust (`#trust`, links to the audit guide,
+evaluation guide, limitations and source) -> ClosingCTA (`#contact`). Footer has Product, Developers,
+Evaluate and Company columns.
+
+Claims follow the Parmana repository: "requests that go through Parmana reach your systems only
+when your rules allow them", never an unconditional "nothing reaches your systems". Integrations
+named are only the connectors that exist.
 
 Plain-language rule (2026-09-28): write for a busy CFO/CTO. Say "checkpoint outside your systems", not
 "structural boundary"; "signed receipt anyone can verify", not "cryptographic attestation". FAQ answers
