@@ -84,8 +84,14 @@ export default function Footer() {
       </div>
       <div className="border-t border-border">
         <div className="max-w-container mx-auto flex flex-col gap-2 px-6 py-6 text-xs text-ink/50 md:flex-row md:items-center md:justify-between">
-          <p>© 2026 Parmana Systems Private Limited</p>
-          <p>Source-available for evaluation only. See the license.</p>
+          <p>© 2026 Parmana Systems Private Limited. Parmana is a trademark of Parmana Systems Private Limited.</p>
+          <p>
+            Source-available for evaluation only.{" "}
+            <a href={nav.license} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink">
+              See the license
+            </a>
+            .
+          </p>
         </div>
       </div>
     </footer>
