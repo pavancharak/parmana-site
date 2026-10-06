@@ -16,14 +16,14 @@ export const calLink = "pavan-charak/30min";
 export const scheduleUrl = "/book";
 
 export const messaging = {
-  hero: "Your rules. Your control.",
-  heroLine: "AI asks. Parmana checks. Only what you allowed goes through.",
+  hero: "Make your business ready for autonomy.",
+  heroLine: "Make existing systems ready. Enforce business authority. Prove consequential actions.",
   subhead:
     "Parmana sits outside your business systems. It checks every request your AI makes against your rules, and gives you a signed receipt for every decision.",
-  oneLiner: "You set the rules. Parmana checks every request before it runs. You get proof.",
-  footer: "AI asks. Parmana checks. Only what you allowed goes through.",
+  oneLiner: "Make existing systems ready for autonomy. Enforce authority. Prove what happened.",
+  footer: "Ready. Enforced. Proven.",
   // Locked tagline, use exactly as written.
-  tagline: "Your policies don't change. Agents prove they follow them.",
+  tagline: "Your business decides what autonomous systems are allowed to do.",
 } as const;
 
 export const nav = {
@@ -53,3 +53,4 @@ export const demoVideo = {
   title: "Parmana agentic commerce authorization demo",
   orientation: "horizontal" as const,
 };
+

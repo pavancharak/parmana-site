@@ -74,7 +74,7 @@ export default function Hero() {
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-purple/20 bg-paper/70 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-purple-deep">
             <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-purple" />
-            Authorization for AI agents
+            Authority infrastructure for autonomous systems
           </p>
           <h1 className="mt-6 text-[44px] font-bold leading-[1.03] tracking-[-0.035em] text-ink sm:text-[60px] lg:text-[72px]">
             {messaging.hero}
@@ -86,17 +86,17 @@ export default function Hero() {
               data-track="cta_schedule_hero"
               className="group inline-flex min-h-[44px] items-center gap-1 rounded-full bg-purple px-6 py-3 text-base font-semibold text-white shadow-md shadow-purple/30 transition-colors hover:bg-purple-deep"
             >
-              Schedule a conversation
+              Request a demo ?
               <span aria-hidden className="transition-transform group-hover:translate-x-0.5">›</span>
             </a>
             <a
-              href={nav.quickstart}
+              href={nav.demo}
               target="_blank"
               rel="noopener noreferrer"
               data-track="cta_docs_hero"
               className="group inline-flex min-h-[44px] items-center gap-1 rounded-full px-5 py-3 text-base font-semibold text-purple-deep transition-colors hover:bg-lavender"
             >
-              Read the docs
+              See it work ?
               <span aria-hidden className="transition-transform group-hover:translate-x-0.5">›</span>
             </a>
           </div>
@@ -107,3 +107,4 @@ export default function Hero() {
     </section>
   );
 }
+
