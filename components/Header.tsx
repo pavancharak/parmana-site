@@ -5,9 +5,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { nav, scheduleUrl } from "@/lib/config";
 
 const links = [
-  { label: "How it works", href: nav.howItWorks },
-  { label: "Example", href: nav.example },
-  { label: "Developers", href: nav.developers },
+  { label: "Product", href: nav.product },
+  { label: "Use cases", href: nav.useCases },
   { label: "Trust", href: nav.trust },
   { label: "Docs", href: nav.docs },
 ];
@@ -58,11 +57,11 @@ export default function Header() {
           </a>
           <a
             href={scheduleUrl}
-            data-track="cta_schedule_header"
-            className="group inline-flex items-center gap-1 rounded-full bg-purple px-4 py-2 text-sm font-semibold text-white shadow-sm shadow-purple/30 hover:bg-purple-deep transition-colors"
+            data-track="cta_demo_header"
+            className="group inline-flex min-h-[40px] items-center gap-1.5 rounded-full bg-purple px-5 py-2 text-sm font-semibold text-white shadow-sm shadow-purple/30 hover:bg-purple-deep transition-colors"
           >
-            Schedule a conversation
-            <span aria-hidden className="transition-transform group-hover:translate-x-0.5">›</span>
+            Request a demo
+            <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
           </a>
         </div>
 
@@ -86,11 +85,11 @@ export default function Header() {
           ))}
           <a
             href={scheduleUrl}
-            data-track="cta_schedule_header_mobile"
+            data-track="cta_demo_header_mobile"
             className="inline-flex items-center justify-center rounded-full bg-purple px-6 py-3 text-sm font-semibold text-white min-h-[48px]"
             onClick={() => setOpen(false)}
           >
-            Schedule a conversation
+            Request a demo
           </a>
         </div>
       )}

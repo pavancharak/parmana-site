@@ -1,61 +1,77 @@
 import { messaging, nav, scheduleUrl } from "@/lib/config";
+import { Arrow, primaryButton, secondaryButton } from "./Section";
 
-function ProductVisual() {
+function Connector() {
   return (
-    <div className="relative mx-auto w-full max-w-[520px]" aria-label="Example: an agent requests a refund, Parmana checks it, and returns a signed record">
-      {/* Request */}
-      <div className="relative z-10 rounded-xl border border-border bg-paper p-5 shadow-[0_1px_2px_rgba(26,26,26,0.04),0_12px_32px_-12px_rgba(67,56,202,0.25)]">
-        <div className="flex items-center justify-between">
-          <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink/50">Request from refund agent</p>
-          <span className="rounded-full bg-lavender px-2 py-0.5 font-mono text-[11px] text-purple-deep">paytm:refund</span>
-        </div>
-        <dl className="mt-4 grid grid-cols-2 gap-y-2 text-sm">
-          <dt className="text-ink/50">Order</dt>
-          <dd className="text-right font-mono text-ink">ORD-1042</dd>
-          <dt className="text-ink/50">Amount</dt>
-          <dd className="text-right font-mono text-ink">₹15,000</dd>
-          <dt className="text-ink/50">Manager approval</dt>
-          <dd className="text-right font-mono text-ink">signed</dd>
-        </dl>
-      </div>
+    <div aria-hidden className="flex justify-center py-1.5">
+      <svg viewBox="0 0 12 28" className="h-7 w-3 text-purple/50" fill="none">
+        <path d="M6 0v24" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 3" />
+        <path d="M2 21l4 5 4-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </div>
+  );
+}
 
-      {/* Check */}
-      <div className="relative z-20 -mt-2 ml-6 mr-[-8px] rounded-xl border border-purple/30 bg-paper p-5 shadow-[0_1px_2px_rgba(26,26,26,0.04),0_24px_48px_-16px_rgba(67,56,202,0.35)] sm:ml-12">
-        <div className="flex items-center gap-3">
-          <span className="grid h-8 w-8 place-items-center rounded-full bg-purple text-white" aria-hidden>
-            <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none">
-              <path d="M5 10.5l3 3 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </span>
-          <div>
-            <p className="text-sm font-semibold text-ink">Allowed by your rules</p>
-            <p className="text-xs text-ink/50">customer-refund 1.2.0, approved through maker checker</p>
+function Label({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
+  return (
+    <p className={`font-mono text-[11px] uppercase tracking-[0.16em] ${light ? "text-white/60" : "text-ink/50"}`}>{children}</p>
+  );
+}
+
+function FlowVisual() {
+  return (
+    <figure className="relative mx-auto w-full max-w-[440px]">
+      <figcaption className="sr-only">
+        An autonomous system requests a ₹75,000 refund against a ₹50,000 authority limit. Parmana stops it as outside business
+        authority, the existing system does not execute it, and the decision can be verified independently.
+      </figcaption>
+
+      <div aria-hidden>
+        <div className="rounded-2xl border border-border bg-paper p-5 shadow-[0_1px_2px_rgba(26,26,26,0.04),0_12px_32px_-12px_rgba(67,56,202,0.25)]">
+          <Label>Autonomous request</Label>
+          <div className="mt-3 flex items-baseline justify-between gap-4">
+            <p className="text-lg font-semibold text-ink">Refund</p>
+            <p className="font-mono text-2xl font-semibold text-ink">₹75,000</p>
+          </div>
+          <p className="mt-1 text-sm text-ink/60">
+            Authority limit <span className="font-mono text-ink">₹50,000</span>
+          </p>
+        </div>
+
+        <Connector />
+
+        <div className="rounded-2xl bg-ink p-5 text-white shadow-[0_24px_48px_-16px_rgba(26,26,26,0.45)]">
+          <div className="flex items-center justify-between">
+            <Label light>Parmana</Label>
+            <span className="rounded-full bg-white/10 px-2.5 py-0.5 font-mono text-[11px] text-white/70">checked before execution</span>
+          </div>
+          <div className="mt-3 flex items-center gap-3">
+            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border-2 border-white/80">
+              <svg viewBox="0 0 20 20" className="h-3.5 w-3.5" fill="none">
+                <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+              </svg>
+            </span>
+            <div>
+              <p className="text-2xl font-bold tracking-tight">STOPPED</p>
+              <p className="text-sm text-white/70">Outside business authority</p>
+            </div>
           </div>
         </div>
-        <ul className="mt-4 space-y-1.5 text-sm text-ink/70">
-          {["Caller authenticated", "Rule: refunds need a signed manager approval", "Approval matches this order and amount", "Single use authorization issued"].map((t) => (
-            <li key={t} className="flex items-center gap-2">
-              <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-purple" />
-              {t}
-            </li>
-          ))}
-        </ul>
-      </div>
 
-      {/* Record */}
-      <div className="relative z-10 -mt-2 mr-6 rounded-xl bg-ink p-5 text-white shadow-[0_24px_48px_-20px_rgba(26,26,26,0.5)] sm:mr-12">
-        <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-white/50">Signed record</p>
-        <pre className="mt-3 overflow-hidden font-mono text-[12px] leading-relaxed text-white/80">
-{`{
-  "decision": "APPROVED",
-  "policy": "customer-refund@1.2.0",
-  "signature": { "algorithm": "ed25519" },
-  "verify": "offline, with your public key"
-}`}
-        </pre>
+        <Connector />
+
+        <div className="grid grid-cols-2 gap-3">
+          <div className="rounded-2xl border border-border bg-paper p-4">
+            <Label>Existing system</Label>
+            <p className="mt-2 text-base font-semibold text-ink">No execution</p>
+          </div>
+          <div className="rounded-2xl border border-purple/30 bg-lavender p-4">
+            <Label>Evidence</Label>
+            <p className="mt-2 text-base font-semibold text-purple-deep">Independently verifiable</p>
+          </div>
+        </div>
       </div>
-      <p className="sr-only">{messaging.heroLine}</p>
-    </div>
+    </figure>
   );
 }
 
@@ -70,41 +86,28 @@ export default function Hero() {
         className="absolute inset-0 -z-10 opacity-[0.35] [background-image:linear-gradient(to_right,rgba(99,102,241,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(99,102,241,0.08)_1px,transparent_1px)] [background-size:48px_48px] [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_70%)]"
       />
 
-      <div className="max-w-container mx-auto grid items-center gap-14 px-6 pb-20 pt-16 md:pt-24 lg:grid-cols-[1.05fr_1fr] lg:pb-28">
+      <div className="max-w-container mx-auto grid items-center gap-16 px-6 pb-24 pt-16 md:pt-24 lg:grid-cols-[1.15fr_1fr] lg:pb-32">
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-purple/20 bg-paper/70 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-purple-deep">
             <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-purple" />
-            Authority infrastructure for autonomous systems
+            {messaging.eyebrow}
           </p>
-          <h1 className="mt-6 text-[44px] font-bold leading-[1.03] tracking-[-0.035em] text-ink sm:text-[60px] lg:text-[72px]">
+          <h1 className="mt-6 text-[46px] font-bold leading-[1.02] tracking-[-0.035em] text-ink sm:text-[64px] lg:text-[80px]">
             {messaging.hero}
           </h1>
-          <p className="mt-6 max-w-[560px] text-lg leading-[1.6] text-ink/70 md:text-xl">{messaging.subhead}</p>
+          <p className="mt-7 max-w-[580px] text-lg leading-[1.6] text-ink/70 md:text-xl">{messaging.subhead}</p>
           <div className="mt-10 flex flex-wrap items-center gap-3">
-            <a
-              href={scheduleUrl}
-              data-track="cta_schedule_hero"
-              className="group inline-flex min-h-[44px] items-center gap-1 rounded-full bg-purple px-6 py-3 text-base font-semibold text-white shadow-md shadow-purple/30 transition-colors hover:bg-purple-deep"
-            >
-              Request a demo ?
-              <span aria-hidden className="transition-transform group-hover:translate-x-0.5">›</span>
+            <a href={scheduleUrl} data-track="cta_demo_hero" className={primaryButton}>
+              Request a demo <Arrow />
             </a>
-            <a
-              href={nav.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-track="cta_docs_hero"
-              className="group inline-flex min-h-[44px] items-center gap-1 rounded-full px-5 py-3 text-base font-semibold text-purple-deep transition-colors hover:bg-lavender"
-            >
-              See it work ?
-              <span aria-hidden className="transition-transform group-hover:translate-x-0.5">›</span>
+            <a href={nav.demo} data-track="cta_see_it_work_hero" className={secondaryButton}>
+              See it work <Arrow />
             </a>
           </div>
-          <p className="mt-8 text-sm text-ink/50">{messaging.heroLine}</p>
+          <p className="mt-10 font-mono text-sm uppercase tracking-[0.16em] text-ink/50">{messaging.heroLine}</p>
         </div>
-        <ProductVisual />
+        <FlowVisual />
       </div>
     </section>
   );
 }
-

@@ -12,15 +12,16 @@ export const founderPhone = "+91 97179 94459";
 
 export const calLink = "pavan-charak/30min";
 
-// Every "Schedule a conversation" CTA reads this; /book hosts the Cal.com inline embed.
+// Every "Request a demo" CTA reads this; /book hosts the Cal.com inline embed.
 export const scheduleUrl = "/book";
 
 export const messaging = {
+  eyebrow: "Authority infrastructure for autonomous systems",
   hero: "Make your business ready for autonomy.",
-  heroLine: "Make existing systems ready. Enforce business authority. Prove consequential actions.",
+  heroLine: "Ready. Enforced. Proven.",
   subhead:
-    "Parmana sits outside your business systems. It checks every request your AI makes against your rules, and gives you a signed receipt for every decision.",
-  oneLiner: "Make existing systems ready for autonomy. Enforce authority. Prove what happened.",
+    "Parmana adds an authority layer to the systems you already run. Autonomous systems work within your business rules, and consequential actions routed through it produce evidence you can verify independently.",
+  oneLiner: "Ready your systems. Enforce business authority. Prove consequential actions.",
   footer: "Ready. Enforced. Proven.",
   // Locked tagline, use exactly as written.
   tagline: "Your business decides what autonomous systems are allowed to do.",
@@ -40,6 +41,8 @@ export const nav = {
   security: "https://github.com/pavancharak/parmana/blob/main/SECURITY.md",
   blog: "https://parmanasystems.substack.com",
   founderLinkedIn: "https://www.linkedin.com/in/pavancharak/",
+  product: "/#product",
+  useCases: "/#use-cases",
   howItWorks: "/#how-it-works",
   example: "/#example",
   developers: "/#developers",

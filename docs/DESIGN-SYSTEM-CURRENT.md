@@ -1,23 +1,25 @@
-# Current design system (as of 2026-09-23)
+# Current design system (as of 2026-10-06)
 
 Source of truth for tokens: `tailwind.config.ts` and `lib/config.ts`. This file documents intent;
 if it and the config disagree, the config wins, but flag the drift.
 
 ## Positioning
 
-**Primary positioning (2026-09-23):**
+**Primary positioning (2026-10-06):**
 
-> You authorize. We ensure.
+> Make your business ready for autonomy. Ready. Enforced. Proven.
 
-Parmana is authorization infrastructure for agentic systems: it sits between your agents and your
-systems. Not an agent builder, AI safety tool, or governance platform.
+Parmana is authority infrastructure for autonomous systems: it adds an authority layer in front of
+the systems a business already runs. It does not replace ERP, CRM, payments, APIs, IAM or AI models.
+Not an agent builder, AI safety tool, or governance platform.
 
 Locked items:
-- Tagline, verbatim: "Your policies don't change. Agents prove they follow them." (`messaging.tagline`)
-- Three outcomes, titles and order fixed: Deploy Safely, Prove Compliance, Protect Systems
-- The refund example is the only concrete example on the homepage
-- One-liner (2026-09-26): "You set rules. Parmana checks them. You get proof."
-- Never say "AI governance" or "AI safety"; don't lead with preventing bad outcomes
+- Tagline, verbatim: "Your business decides what autonomous systems are allowed to do." (`messaging.tagline`)
+- Framework: Ready. Enforced. Proven. (`messaging.heroLine`, `messaging.footer`)
+- Primary CTA everywhere is "Request a demo" (to `/book`); no "Schedule a conversation"
+- The ₹50,000 refund limit with a ₹75,000 request is the homepage's worked example
+- Never say "AI governance" or "AI safety"; never claim Parmana makes AI safe. Scope claims to
+  actions routed through Parmana
 
 Plain-language explanation:
 
@@ -75,17 +77,16 @@ Don't hardcode hex values in components or improvise new accent colors, consume 
   revocable credentials) should track the validated claims in `SITE_CONTENT_VALIDATION.md` where
   they overlap
 
-## Page structure (`components/ParmanaWebsite.tsx`, rebuilt 2026-10-03)
+## Page structure (`components/ParmanaWebsite.tsx`, rebuilt 2026-10-06)
 
-Hero (`messaging.hero` + `messaging.subhead`, a product visual of one refund request, the checks it
-passed, and the signed record) -> fact strip (signatures, human approval, maker checker, offline
-verification) -> HowItWorks (`#how-it-works`, four steps: request, check, only allowed runs, proof)
--> RefundExample (`#example`, interactive: ₹8,000, ₹15,000 without approval, ₹15,000 with a signed
-approval) -> Outcomes (locked three, tagline as heading, then the real integrations: Paytm, HubSpot,
-GitHub, Slack, your own API) -> Developers (`#developers`, the TypeScript SDK call, links to
-quickstart, playground, offline verification) -> Trust (`#trust`, links to the audit guide,
-evaluation guide, limitations and source) -> ClosingCTA (`#contact`). Footer has Product, Developers,
-Evaluate and Company columns.
+Hero (eyebrow, `messaging.hero`, `messaging.subhead`, a four-step flow visual: ₹75,000 request,
+Parmana STOPPED, no execution, verifiable evidence) -> Problem -> Pillars (`#product`, Ready /
+Enforce / Prove) -> Architecture (`#how-it-works`, autonomous system, Parmana, ALLOW / STOP,
+existing system, independent proof) -> RefundExample (`#example`, interactive slider against a
+₹50,000 limit) -> Benefits (four cards) -> WhyParmana (dark band, "Authority should belong to the
+business") -> Trust (`#trust`, three cards, evaluate and source links) -> UseCases (`#use-cases`,
+links to `/agents?use=`) -> Developers (`#developers`, no code block, docs / playground / verify)
+-> ClosingCTA (`#contact`). Header: Product, Use cases, Trust, Docs, GitHub, Request a demo.
 
 Claims follow the Parmana repository: "requests that go through Parmana reach your systems only
 when your rules allow them", never an unconditional "nothing reaches your systems". Integrations
@@ -95,14 +96,16 @@ Plain-language rule (2026-09-28): write for a busy CFO/CTO. Say "checkpoint outs
 "structural boundary"; "signed receipt anyone can verify", not "cryptographic attestation". FAQ answers
 stay honest: no "can't be compromised"; unreachable Parmana means no signed yes, so nothing runs.
 
-Worked example on the homepage is a ₹10,000 refund rule with ₹8,000 / ₹15,000 requests, always
+Worked example on the homepage is a ₹50,000 refund rule with a ₹75,000 request (illustrative), always
 "your payment processor", never a named processor. No named regulators, firms, or dates on the
 homepage unless sourced. CTA clicks carry `data-track="event_name"`, reported by
 `components/SiteAnalytics.tsx` (Vercel Web Analytics).
 
-`/agents` is the follow-up landing page for emails: `/agents?use=refund|payment|approval|procurement`
-(data in `lib/useCases.ts`, unknown values fall back to refund). "Schedule a conversation" CTAs read
-`scheduleUrl` in `lib/config.ts`, currently a mailto until a calendar link exists.
+`/agents` is the follow-up landing page for emails:
+`/agents?use=refund|payment|approval|procurement|customer|engineering` (data in `lib/useCases.ts`,
+unknown values fall back to refund), showing what the system can do, cannot do, what Parmana
+enforces and what evidence is produced. "Request a demo" CTAs read `scheduleUrl` in `lib/config.ts`
+(`/book`, the Cal.com embed).
 
 Visual bar is Stripe-level polish on the existing tokens: soft purple/lavender gradient fields, pill
 buttons, mono eyebrows, product-style cards with layered shadows. Achieved with opacity variants of

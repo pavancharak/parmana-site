@@ -21,9 +21,10 @@ export default function BottomCTA({
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-3">
             <a
               href={scheduleUrl}
+              data-track="cta_demo_bottom"
               className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-base font-semibold text-purple-deep min-h-[44px] transition hover:bg-lavender"
             >
-              Schedule a conversation
+              Request a demo
             </a>
             {showDemo && (
               <a
