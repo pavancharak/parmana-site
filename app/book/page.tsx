@@ -3,8 +3,8 @@ import CalEmbed from "@/components/CalEmbed";
 import { calLink, founderEmail } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Schedule a conversation | Parmana",
-  description: "Book a 30 minute conversation about authorization for your agents.",
+  title: "Request a demo | Parmana",
+  description: "Bring one consequential workflow. See where Parmana fits, what authority you can enforce and what evidence you can prove.",
   alternates: { canonical: "https://parmanasystems.com/book" },
 };
 
@@ -15,10 +15,11 @@ export default function BookPage() {
         <div className="text-center">
           <p className="font-mono text-xs uppercase tracking-[0.16em] text-purple-deep">30 minutes</p>
           <h1 className="mt-4 text-[34px] md:text-[48px] font-bold leading-[1.1] tracking-[-0.03em] text-ink">
-            Schedule a conversation
+            Ready your first autonomous workflow.
           </h1>
           <p className="mx-auto mt-4 max-w-[560px] text-lg text-ink/70">
-            Bring one agent and the authority you want it to stay within. Pick a time that works for you.
+            Bring one consequential workflow. We&apos;ll show where Parmana fits, what authority you can enforce and what
+            evidence you can prove.
           </p>
         </div>
         <div className="mt-10 rounded-2xl border border-border bg-white p-2 md:p-4 shadow-[0_30px_60px_-30px_rgb(67_56_202/0.25)]">

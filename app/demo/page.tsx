@@ -6,8 +6,8 @@ import DemoCTA from "@/components/DemoCTA";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Agentic Commerce Demo | Parmana",
-  description: "See how Parmana checks an AI agent's payment action before it reaches the execution system.",
+  title: "See business authority enforced | Parmana",
+  description: "An autonomous system proposes the action. Parmana checks the authority before execution and produces evidence that can be verified independently.",
   alternates: { canonical: "https://parmanasystems.com/demo" },
 };
 

@@ -1,11 +1,11 @@
-import { founderEmail, founderPhone, messaging, nav } from "@/lib/config";
+import { founderEmail, founderPhone, messaging, nav, scheduleUrl } from "@/lib/config";
 
 const columns = [
   {
     title: "Product",
     links: [
-      { label: "How it works", href: nav.howItWorks },
-      { label: "Example", href: nav.example },
+      { label: "Product", href: nav.product },
+      { label: "Use cases", href: nav.useCases },
       { label: "Demo", href: nav.demo },
       { label: "Trust", href: nav.trust },
     ],
@@ -16,6 +16,7 @@ const columns = [
       { label: "Docs", href: nav.docs },
       { label: "Quickstart", href: nav.quickstart },
       { label: "Playground", href: nav.playground },
+      { label: "Verify evidence", href: nav.verifySdk },
       { label: "GitHub", href: nav.github },
     ],
   },
@@ -56,7 +57,15 @@ export default function Footer() {
             </span>
             Parmana
           </a>
-          <p className="mt-4 max-w-[260px] text-sm leading-relaxed text-ink/60">{messaging.footer}</p>
+          <p className="mt-4 font-mono text-xs uppercase tracking-[0.16em] text-ink/60">{messaging.footer}</p>
+          <a
+            href={scheduleUrl}
+            data-track="cta_demo_footer"
+            className="group mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-purple-deep hover:text-ink"
+          >
+            Request a demo
+            <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
+          </a>
           <div className="mt-6 space-y-1 text-sm">
             <a href={`mailto:${founderEmail}`} className="block text-ink/70 hover:text-purple-deep transition-colors">
               {founderEmail}
