@@ -1,6 +1,0 @@
-{
-  "name": "parmana-investor-deck",
-  "private": true,
-  "scripts": { "build": "node build-deck.cjs" },
-  "devDependencies": { "pptxgenjs": "^3.12.0" }
-}
