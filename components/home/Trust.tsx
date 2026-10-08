@@ -25,7 +25,7 @@ export default function Trust() {
   return (
     <Section id="trust" tone="lavender">
       <Eyebrow>How you can trust it</Eyebrow>
-      <Heading>Do not rely on the AI's own story about what it did.</Heading>
+      <Heading>Do not rely on the AI story about what it did.</Heading>
 
       <div className="mt-16 grid gap-5 md:grid-cols-3">
         {items.map((i) => (
