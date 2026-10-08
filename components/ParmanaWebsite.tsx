@@ -7,6 +7,7 @@ import Benefits from "@/components/home/Benefits";
 import WhyParmana from "@/components/home/WhyParmana";
 import Trust from "@/components/home/Trust";
 import UseCases from "@/components/home/UseCases";
+import FAQ from "@/components/home/FAQ";
 import Developers from "@/components/home/Developers";
 import ClosingCTA from "@/components/home/ClosingCTA";
 
@@ -22,6 +23,7 @@ export default function ParmanaWebsite() {
       <WhyParmana />
       <Trust />
       <UseCases />
+      <FAQ />
       <Developers />
       <ClosingCTA />
     </main>

@@ -7,10 +7,15 @@ export default function ClosingCTA() {
       <div className="relative isolate mx-auto max-w-container overflow-hidden rounded-3xl bg-purple-deep px-6 py-20 text-center md:px-16 md:py-28">
         <div aria-hidden className="absolute -right-24 -top-32 -z-10 h-96 w-96 rounded-full bg-purple opacity-70 blur-3xl" />
         <div aria-hidden className="absolute -bottom-40 -left-24 -z-10 h-96 w-96 rounded-full bg-purple opacity-40 blur-3xl" />
+
         <h2 className="mx-auto max-w-[820px] text-[38px] font-bold leading-[1.05] tracking-[-0.03em] text-white md:text-[60px]">
-          Make autonomy operational.
+          Give AI room to work. Keep people in control.
         </h2>
-        <p className="mx-auto mt-6 max-w-[620px] text-lg text-white/80 md:text-xl">{messaging.oneLiner}</p>
+
+        <p className="mx-auto mt-6 max-w-[620px] text-lg text-white/80 md:text-xl">
+          {messaging.oneLiner}
+        </p>
+
         <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
           <a
             href={scheduleUrl}
@@ -19,6 +24,7 @@ export default function ClosingCTA() {
           >
             Request a demo <Arrow />
           </a>
+
           <a
             href={nav.demo}
             data-track="cta_see_it_work_closing"

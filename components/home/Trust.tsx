@@ -3,16 +3,16 @@ import { Arrow, Eyebrow, Heading, Section, card, primaryButton, secondaryButton 
 
 const items = [
   {
-    title: "Enforced before execution",
-    text: "Business authority is checked before the action reaches the protected system. A refused request never gets an authorization.",
+    title: "Checked before the action",
+    text: "Parmana checks the action before it reaches the system that can carry it out. A request outside the limit is stopped first.",
   },
   {
-    title: "Bound to the action",
-    text: "An authorization covers the exact action that was approved, and is used once. Change the action and it no longer matches.",
+    title: "The limit follows the exact action",
+    text: "The decision is tied to what was requested. Change the amount, target or action and the earlier decision no longer applies.",
   },
   {
-    title: "Independently verifiable",
-    text: "Evidence is signed and checks offline with the open source verification tooling, without relying on the AI system or on Parmana.",
+    title: "The record can be checked later",
+    text: "Parmana keeps a signed record of the request, the limit used and the decision so it can be checked separately later.",
   },
 ];
 
@@ -24,8 +24,8 @@ const evidenceLinks = [
 export default function Trust() {
   return (
     <Section id="trust" tone="lavender">
-      <Eyebrow>Trust</Eyebrow>
-      <Heading>Don&apos;t just log autonomous actions. Prove their authority.</Heading>
+      <Eyebrow>How you can trust it</Eyebrow>
+      <Heading>Do not rely on the AI's own story about what it did.</Heading>
 
       <div className="mt-16 grid gap-5 md:grid-cols-3">
         {items.map((i) => (

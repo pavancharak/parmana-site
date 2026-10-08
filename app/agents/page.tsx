@@ -6,38 +6,39 @@ import { messaging } from "@/lib/config";
 import { defaultUseCase, useCases } from "@/lib/useCases";
 
 export const metadata: Metadata = {
-  title: "Put autonomous systems within business authority | Parmana",
+  title: "Examples of autonomous AI staying within limits | Parmana",
   description:
-    "See what an autonomous system can request, what stays out of bounds, what Parmana enforces and what evidence is produced, for refunds, payments, approvals and procurement.",
+    "See what autonomous AI can request, what stays outside the limit, what Parmana checks and what record remains.",
   alternates: { canonical: "https://parmanasystems.com/agents" },
 };
 
-// Share as /agents?use=refund|payment|approval|procurement|customer|engineering. Unknown values fall back to refund.
 export default function AgentsPage({ searchParams }: { searchParams: { use?: string } }) {
   const useCase = useCases[searchParams.use ?? ""] ?? defaultUseCase;
 
   const breakdown = [
-    { label: "What the system can do", text: useCase.can },
-    { label: "What it cannot do", text: useCase.cannot },
-    { label: "What Parmana enforces", text: useCase.enforces },
-    { label: "What evidence is produced", text: useCase.evidence },
+    { label: "What AI may request", text: useCase.can },
+    { label: "What must stop", text: useCase.cannot },
+    { label: "What Parmana checks", text: useCase.enforces },
+    { label: "What you can see later", text: useCase.evidence },
   ];
 
   return (
     <main>
       <section className="relative overflow-hidden bg-gradient-to-b from-lavender to-paper">
         <div aria-hidden className="absolute -top-40 left-1/2 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-purple/15 blur-3xl" />
+
         <div className="relative max-w-container mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-20 text-center">
-          <p className="font-mono text-xs uppercase tracking-[0.16em] text-purple-deep">Use cases</p>
+          <p className="font-mono text-xs uppercase tracking-[0.16em] text-purple-deep">Examples</p>
+
           <h1 className="mx-auto mt-5 max-w-[960px] text-[38px] sm:text-[52px] lg:text-[64px] font-bold leading-[1.05] tracking-[-0.03em] text-ink">
-            Put autonomous systems within business authority.
+            See what autonomous AI can do and what it cannot do.
           </h1>
-          <p className="mx-auto mt-6 max-w-[640px] text-lg md:text-xl leading-[1.6] text-ink/70">
-            Agents that {useCase.building} request actions. Here is what Parmana enforces before any of them reach your
-            systems, and what you can prove afterwards.
+
+          <p className="mx-auto mt-6 max-w-[680px] text-lg md:text-xl leading-[1.6] text-ink/70">
+            Pick an example to see what people allow, what AI can request, what Parmana checks and what happens when the request goes too far.
           </p>
 
-          <nav aria-label="Use cases" className="mt-10 flex flex-wrap justify-center gap-2">
+          <nav aria-label="Examples" className="mt-10 flex flex-wrap justify-center gap-2">
             {Object.values(useCases).map((u) => {
               const active = u.slug === useCase.slug;
               return (
@@ -66,7 +67,7 @@ export default function AgentsPage({ searchParams }: { searchParams: { use?: str
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.16em] text-purple-deep">{useCase.title}</p>
               <h2 className="mt-4 text-[28px] md:text-[40px] font-bold leading-[1.1] tracking-[-0.025em] text-ink">
-                {useCase.agent}, within bounds
+                {useCase.agent} stays within the limit
               </h2>
               <p className="mt-5 text-lg leading-[1.65] text-ink/70">{useCase.summary}</p>
             </div>
@@ -90,6 +91,7 @@ export default function AgentsPage({ searchParams }: { searchParams: { use?: str
                 </li>
               ))}
             </ol>
+
             <p className="mt-12 text-center text-xl font-semibold text-purple-deep">{messaging.tagline}</p>
           </div>
         </section>
@@ -97,8 +99,8 @@ export default function AgentsPage({ searchParams }: { searchParams: { use?: str
 
       <div className="pt-20 md:pt-28 bg-paper">
         <BottomCTA
-          heading="Ready your first autonomous workflow."
-          body="Bring one consequential workflow and the authority you want it to stay within. We'll walk through it together."
+          heading="Ready to see it with one of your workflows?"
+          body="Bring one action you want autonomous AI to take and the limit you want it to stay within."
           showDemo
         />
       </div>
