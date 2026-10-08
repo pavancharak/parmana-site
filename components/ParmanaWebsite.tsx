@@ -3,9 +3,9 @@
 import { useState } from "react";
 
 const examples = [
-  { title: "Refund", action: "Refund ₹80,000", authority: "Up to ₹50,000", result: "BLOCKED", detail: "The system can decide that a refund is appropriate. The business never authorized an ₹80,000 execution." },
-  { title: "Payment", action: "Pay vendor ₹12,00,000", authority: "Up to ₹10,00,000", result: "BLOCKED", detail: "The autonomous system can prepare the payment, but execution cannot exceed the authority granted by the business." },
-  { title: "Customer record", action: "Change protected account", authority: "Read and routine updates", result: "BLOCKED", detail: "The system can work with customer data, but a protected change remains outside the authority it was given." },
+  { title: "Refund", action: "Refund ₹80,000", authority: "Up to ₹50,000", result: "BLOCKED", detail: "The agent can decide a refund is appropriate. The business has not authorized an ₹80,000 execution." },
+  { title: "Payment", action: "Pay vendor ₹12,00,000", authority: "Up to ₹10,00,000", result: "BLOCKED", detail: "The agent can prepare the payment, but it cannot execute beyond the limit set by the business." },
+  { title: "Customer record", action: "Change protected account", authority: "Read and routine updates", result: "BLOCKED", detail: "The agent can work with customer data, but protected changes remain outside its authority." },
 ];
 
 export default function ParmanaWebsite() {
@@ -13,30 +13,57 @@ export default function ParmanaWebsite() {
   const example = examples[selected];
 
   return (
-    <div className="site-shell">
+    <div className="site-shell" id="top">
       <header className="container nav">
-        <a className="logo" href="#top" aria-label="Parmana Systems home">PARMANA<span>®</span></a>
+        <a className="brand" href="#top" aria-label="Parmana Systems home">
+          <span className="brand-mark" aria-hidden="true"><i /><i /></span>
+          <span>Parmana</span>
+        </a>
         <nav className="navlinks" aria-label="Main navigation">
-          <a href="#problem">The problem</a><a href="#principle">Principle</a><a href="#examples">Examples</a><a href="#institutions">Institutions</a>
+          <a href="#principle">Product</a>
+          <a href="#how">How it works</a>
+          <a href="#examples">Use cases</a>
+          <a href="#institutions">Customers</a>
+          <a href="#contact">Resources</a>
         </nav>
-        <a className="btn btn-dark nav-cta" href="#contact">See Parmana in action <b>↗</b></a>
+        <a className="btn btn-accent nav-cta" href="mailto:founder@parmanasystems.com">Talk to us <b>→</b></a>
       </header>
 
-      <main id="top">
+      <main>
         <section className="container hero">
           <div className="hero-copy">
             <div className="eyebrow"><i /> Business authority over autonomous AI</div>
             <h1>Your business<br /><em>has authority</em><br />over autonomous AI.</h1>
-            <p className="lead">Parmana ensures your business has authority over autonomous systems so autonomous AI can execute only what your business has authorized.</p>
-            <div className="actions"><a className="btn btn-dark" href="#principle">See how Parmana works <b>↓</b></a><a className="text-link" href="#problem">Explore the problem <span>→</span></a></div>
-            <p className="micro">For businesses deploying AI that can make decisions and take action.</p>
+            <p className="lead">Parmana ensures autonomous systems can execute only what your business has authorized.</p>
+            <div className="actions">
+              <a className="btn btn-accent hero-btn" href="#how">See how it works <b>→</b></a>
+              <a className="btn btn-outline" href="mailto:founder@parmanasystems.com">Talk to Parmana</a>
+            </div>
+            <div className="hero-points">
+              <div><span>✓</span><strong>Enforce</strong><small>business rules</small></div>
+              <div><span>✓</span><strong>Prevent</strong><small>unauthorized actions</small></div>
+              <div><span>✓</span><strong>Prove every</strong><small>decision and action</small></div>
+            </div>
           </div>
-          <div className="hero-card" aria-label="Authorization example">
-            <div className="card-top"><span>EXECUTION AUTHORITY</span><span className="live"><i /> LIVE BOUNDARY</span></div>
-            <div className="request"><span>Autonomous action</span><strong>Refund ₹80,000</strong><small>Customer request · Agent: support-01</small></div>
-            <div className="rule"><span>Business authority</span><strong>Up to ₹50,000</strong><small>Refund approval limit</small></div>
-            <div className="decision"><div><span>PARMANA CHECK</span><strong>Outside authority</strong></div><b>BLOCKED</b></div>
-            <div className="proof"><span>Execution</span><strong>No action reaches the protected system.</strong><span className="proof-dot">● Evidence retained</span></div>
+
+          <div className="hero-visual" aria-label="Parmana execution authority example">
+            <div className="hero-card">
+              <div className="card-top"><span>EXECUTION AUTHORITY</span><span className="live"><i /> LIVE BOUNDARY CHECK</span></div>
+              <div className="action-row">
+                <div className="row-icon">↗</div>
+                <div><span>Autonomous action</span><strong>Refund ₹80,000</strong><small>Customer request · Agent: support-01</small></div>
+              </div>
+              <div className="action-row">
+                <div className="row-icon">◇</div>
+                <div><span>Business authority</span><strong>Up to ₹50,000</strong><small>Refund approval limit</small></div>
+              </div>
+              <div className="check-row">
+                <div><span>PARMANA CHECK</span><strong>Outside authority</strong><small>Requested amount exceeds approved limit</small></div>
+                <b>BLOCKED</b>
+              </div>
+              <div className="result-row"><div className="stop-icon">×</div><div><span>RESULT</span><strong>BLOCKED</strong><small>Action not executed</small></div></div>
+            </div>
+            <div className="visual-note"><span>ⓘ</span> Business rules enforced at execution.</div>
           </div>
         </section>
 
@@ -49,7 +76,7 @@ export default function ParmanaWebsite() {
 
         <section className="section dark-section" id="principle"><div className="container">
           <div className="eyebrow light">02 / The principle</div><h2>AI can be autonomous without becoming the authority.</h2>
-          <p className="dark-lead">The business defines what the system is allowed to do. AI operates independently inside that boundary. Parmana checks the attempted execution before it reaches the protected system. No authority means no execution.</p>
+          <p className="dark-lead">The business defines what the system is allowed to do. AI operates independently inside that boundary. Parmana checks the attempted execution before it reaches the protected system.</p>
           <div className="authority-flow"><div><span>01</span><strong>Business authority</strong><small>The institution decides.</small></div><div><span>02</span><strong>Authorized actions</strong><small>Boundaries are explicit.</small></div><div><span>03</span><strong>AI operates</strong><small>Autonomously.</small></div><div className="gate"><span>04</span><strong>Parmana checks</strong><small>Before execution.</small></div><div className="outcomes"><b>ALLOW</b><small>Authorized → execute</small><b>STOP</b><small>Outside authority → block</small></div></div>
         </div><div className="authority-callout"><strong>No authority. No execution.</strong><span>AI may decide what it wants to do. Parmana checks whether the business allowed it to do it.</span></div></section>
 
@@ -71,7 +98,7 @@ export default function ParmanaWebsite() {
 
         <section className="section final-cta" id="contact"><div className="container"><div className="eyebrow light">Parmana Systems</div><h2>Your business has authority.<br /><em>AI operates within it.</em></h2><p>Parmana ensures autonomous AI operates within the authority your business defines, while preserving evidence of what was authorized and what actually executed.</p><div className="actions"><a className="btn btn-white" href="mailto:founder@parmanasystems.com">Talk to Parmana <b>↗</b></a><a className="text-link light-link" href="#top">Back to top ↑</a></div></div></section>
       </main>
-      <footer className="container footer"><div><a className="logo" href="#top">PARMANA<span>®</span></a><p>Your business has authority over autonomous systems.</p></div><div className="footer-right"><span>Business authority over autonomous systems.</span><span>© {new Date().getFullYear()} Parmana Systems</span></div></footer>
+      <footer className="container footer"><div><a className="brand" href="#top"><span className="brand-mark" aria-hidden="true"><i /><i /></span><span>Parmana</span></a><p>Your business has authority over autonomous systems.</p></div><div className="footer-right"><span>© 2026 Parmana Systems</span><a href="mailto:founder@parmanasystems.com">founder@parmanasystems.com</a></div></footer>
     </div>
   );
 }
