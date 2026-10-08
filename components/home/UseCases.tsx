@@ -2,18 +2,18 @@ import { useCases } from "@/lib/useCases";
 import { Arrow, Eyebrow, Heading, Section, card } from "./Section";
 
 const items = [
-  { slug: "payment", text: "Control what autonomous systems can pay." },
-  { slug: "refund", text: "Enforce amount and approval limits." },
-  { slug: "procurement", text: "Control purchasing authority." },
-  { slug: "customer", text: "Restrict changes to customer accounts and records." },
-  { slug: "engineering", text: "Control consequential repository actions." },
+  { slug: "payment", text: "Control what autonomous AI can pay." },
+  { slug: "refund", text: "Stop refunds above the limit." },
+  { slug: "procurement", text: "Control purchasing limits." },
+  { slug: "customer", text: "Limit changes to customer accounts." },
+  { slug: "engineering", text: "Limit important repository actions." },
 ];
 
 export default function UseCases() {
   return (
     <Section id="use-cases">
-      <Eyebrow>Use cases</Eyebrow>
-      <Heading>Where authority matters.</Heading>
+      <Eyebrow>Examples</Eyebrow>
+      <Heading>What can you let AI do?</Heading>
 
       <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
         {items.map((i) => (
@@ -33,7 +33,7 @@ export default function UseCases() {
       </div>
 
       <a href="/agents" data-track="usecase_all" className="group mt-10 inline-flex items-center gap-1 text-base font-semibold text-purple-deep hover:text-ink">
-        Explore agent use cases <Arrow />
+        See all examples <Arrow />
       </a>
     </Section>
   );

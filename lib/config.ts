@@ -11,20 +11,17 @@ export const founderEmail = "founder@parmanasystems.com";
 export const founderPhone = "+91 97179 94459";
 
 export const calLink = "pavan-charak/30min";
-
-// Every "Request a demo" CTA reads this; /book hosts the Cal.com inline embed.
 export const scheduleUrl = "/book";
 
 export const messaging = {
-  eyebrow: "Authority infrastructure for autonomous systems",
-  hero: "Make your business ready for autonomy.",
-  heroLine: "Ready. Enforced. Proven.",
+  eyebrow: "Control for autonomous AI",
+  hero: "Let AI act. Keep people in control.",
+  heroLine: "People decide. AI acts. Parmana makes sure AI stays within what people allowed.",
   subhead:
-    "Parmana adds an authority layer to the systems you already run. Autonomous systems work within your business rules, and consequential actions routed through it produce evidence you can verify independently.",
-  oneLiner: "Ready your systems. Enforce business authority. Prove consequential actions.",
-  footer: "Ready. Enforced. Proven.",
-  // Locked tagline, use exactly as written.
-  tagline: "Your business decides what autonomous systems are allowed to do.",
+    "Autonomous AI can take actions on its own. Parmana makes sure those actions stay within the limits set by the people responsible for the institution.",
+  oneLiner: "Let autonomous AI work without letting it decide what it is allowed to do.",
+  footer: "People decide. AI acts. Parmana enforces the boundary.",
+  tagline: "People decide what autonomous AI is allowed to do.",
 } as const;
 
 export const nav = {
@@ -47,6 +44,7 @@ export const nav = {
   example: "/#example",
   developers: "/#developers",
   trust: "/#trust",
+  faq: "/#faq",
   contact: "/#contact",
   demo: "/demo",
 } as const;
@@ -56,4 +54,3 @@ export const demoVideo = {
   title: "Parmana agentic commerce authorization demo",
   orientation: "horizontal" as const,
 };
-

@@ -14,7 +14,9 @@ function Connector() {
 
 function Label({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
   return (
-    <p className={`font-mono text-[11px] uppercase tracking-[0.16em] ${light ? "text-white/60" : "text-ink/50"}`}>{children}</p>
+    <p className={`font-mono text-[11px] uppercase tracking-[0.16em] ${light ? "text-white/60" : "text-ink/50"}`}>
+      {children}
+    </p>
   );
 }
 
@@ -22,20 +24,30 @@ function FlowVisual() {
   return (
     <figure className="relative mx-auto w-full max-w-[440px]">
       <figcaption className="sr-only">
-        An autonomous system requests a ₹75,000 refund against a ₹50,000 authority limit. Parmana stops it as outside business
-        authority, the existing system does not execute it, and the decision can be verified independently.
+        People set a ₹50,000 refund limit. An autonomous system requests a ₹75,000 refund.
+        Parmana stops it before the payment system can execute it and records what happened.
       </figcaption>
 
       <div aria-hidden>
         <div className="rounded-2xl border border-border bg-paper p-5 shadow-[0_1px_2px_rgba(26,26,26,0.04),0_12px_32px_-12px_rgba(67,56,202,0.25)]">
+          <Label>People set</Label>
+          <div className="mt-3 flex items-baseline justify-between gap-4">
+            <p className="text-lg font-semibold text-ink">Refund limit</p>
+            <p className="font-mono text-2xl font-semibold text-ink">₹50,000</p>
+          </div>
+          <p className="mt-1 text-sm text-ink/60">
+            The autonomous system may request refunds within this limit.
+          </p>
+        </div>
+
+        <Connector />
+
+        <div className="rounded-2xl border border-border bg-paper p-5 shadow-[0_1px_2px_rgba(26,26,26,0.04),0_12px_32px_-12px_rgba(67,56,202,0.18)]">
           <Label>Autonomous request</Label>
           <div className="mt-3 flex items-baseline justify-between gap-4">
             <p className="text-lg font-semibold text-ink">Refund</p>
             <p className="font-mono text-2xl font-semibold text-ink">₹75,000</p>
           </div>
-          <p className="mt-1 text-sm text-ink/60">
-            Authority limit <span className="font-mono text-ink">₹50,000</span>
-          </p>
         </div>
 
         <Connector />
@@ -43,7 +55,9 @@ function FlowVisual() {
         <div className="rounded-2xl bg-ink p-5 text-white shadow-[0_24px_48px_-16px_rgba(26,26,26,0.45)]">
           <div className="flex items-center justify-between">
             <Label light>Parmana</Label>
-            <span className="rounded-full bg-white/10 px-2.5 py-0.5 font-mono text-[11px] text-white/70">checked before execution</span>
+            <span className="rounded-full bg-white/10 px-2.5 py-0.5 font-mono text-[11px] text-white/70">
+              checked before execution
+            </span>
           </div>
           <div className="mt-3 flex items-center gap-3">
             <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border-2 border-white/80">
@@ -53,7 +67,7 @@ function FlowVisual() {
             </span>
             <div>
               <p className="text-2xl font-bold tracking-tight">STOPPED</p>
-              <p className="text-sm text-white/70">Outside business authority</p>
+              <p className="text-sm text-white/70">The request is outside the limit.</p>
             </div>
           </div>
         </div>
@@ -66,8 +80,8 @@ function FlowVisual() {
             <p className="mt-2 text-base font-semibold text-ink">No execution</p>
           </div>
           <div className="rounded-2xl border border-purple/30 bg-lavender p-4">
-            <Label>Evidence</Label>
-            <p className="mt-2 text-base font-semibold text-purple-deep">Independently verifiable</p>
+            <Label>What remains</Label>
+            <p className="mt-2 text-base font-semibold text-purple-deep">A record of the decision</p>
           </div>
         </div>
       </div>
@@ -78,7 +92,6 @@ function FlowVisual() {
 export default function Hero() {
   return (
     <section className="relative isolate overflow-hidden">
-      {/* Background field: token colors at low opacity, no new hues */}
       <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-b from-paper via-lavender to-paper" />
       <div aria-hidden className="absolute -top-48 right-[-10%] -z-10 h-[560px] w-[760px] rotate-[-12deg] rounded-[48px] bg-gradient-to-br from-purple/25 via-purple-deep/10 to-transparent blur-2xl" />
       <div
@@ -92,10 +105,15 @@ export default function Hero() {
             <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-purple" />
             {messaging.eyebrow}
           </p>
+
           <h1 className="mt-6 text-[46px] font-bold leading-[1.02] tracking-[-0.035em] text-ink sm:text-[64px] lg:text-[80px]">
             {messaging.hero}
           </h1>
-          <p className="mt-7 max-w-[580px] text-lg leading-[1.6] text-ink/70 md:text-xl">{messaging.subhead}</p>
+
+          <p className="mt-7 max-w-[580px] text-lg leading-[1.6] text-ink/70 md:text-xl">
+            {messaging.subhead}
+          </p>
+
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <a href={scheduleUrl} data-track="cta_demo_hero" className={primaryButton}>
               Request a demo <Arrow />
@@ -104,8 +122,12 @@ export default function Hero() {
               See it work <Arrow />
             </a>
           </div>
-          <p className="mt-10 font-mono text-sm uppercase tracking-[0.16em] text-ink/50">{messaging.heroLine}</p>
+
+          <p className="mt-10 max-w-[620px] text-base font-semibold leading-relaxed text-ink/60">
+            {messaging.heroLine}
+          </p>
         </div>
+
         <FlowVisual />
       </div>
     </section>

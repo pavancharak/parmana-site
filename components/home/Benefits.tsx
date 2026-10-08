@@ -1,20 +1,17 @@
 import { Eyebrow, Heading, Section, card } from "./Section";
 
 const benefits = [
-  { title: "Keep your systems", text: "Make the infrastructure you already run ready for autonomous use." },
-  { title: "Keep business control", text: "Your business defines the authority. Autonomous systems work within it." },
-  {
-    title: "Reduce execution risk",
-    text: "Requests routed through Parmana that fall outside your authority stop before they reach the protected system.",
-  },
-  { title: "Prove what happened", text: "Evidence for audits, investigations and high consequence operations." },
+  { title: "Keep your systems", text: "Use the payments, CRM, ERP and internal systems you already have." },
+  { title: "Let AI work", text: "Autonomous systems can act on their own within the limits people set." },
+  { title: "Stop what is not allowed", text: "A request outside the allowed boundary is stopped before it reaches the protected system." },
+  { title: "Know what happened", text: "See what was requested, what limit applied, what was allowed or stopped and what happened next." },
 ];
 
 export default function Benefits() {
   return (
     <Section>
-      <Eyebrow>Business benefits</Eyebrow>
-      <Heading>Adopt autonomy without giving up control.</Heading>
+      <Eyebrow>Why institutions use Parmana</Eyebrow>
+      <Heading>Let AI work without letting it set its own limits.</Heading>
 
       <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {benefits.map((b) => (
