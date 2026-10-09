@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Parmana | Let AI act. Keep your authority.</title>
+<meta name="description" content="Parmana makes sure AI agents can only do what your business has authorized and proves it.">
+<style>
+:root{--ink:#111318;--muted:#667085;--line:#e8e9ed;--soft:#f8f9fb;--purple:#635bff;--green:#16a06a;--navy:#111318}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1180px;margin:auto;padding:0 30px}
+nav{height:78px;display:flex;align-items:center;border-bottom:1px solid #f0f1f3;background:rgba(255,255,255,.94);position:sticky;top:0;z-index:10;backdrop-filter:blur(14px)}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.045em}
+.logo span{color:var(--purple)}
+.navlinks{display:flex;gap:34px;color:#606776;font-size:14px;margin-left:54px}
+.navlinks a:hover{color:var(--ink)}
+.navcta{margin-left:auto;border:1px solid #d9dce2;border-radius:8px;padding:10px 16px;font-weight:650;color:#1b2030;background:#fff}
+.navcta:hover{border-color:#aeb3bd}
+.hero{padding:118px 0 108px;text-align:center;background:linear-gradient(180deg,#fbfbff 0%,#fff 72%)}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid #e1dfff;border-radius:999px;background:#fff;color:#5047c6;font-size:12px;font-weight:750;letter-spacing:.01em;box-shadow:0 3px 12px rgba(31,35,54,.04)}
+.dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 0 4px rgba(22,160,106,.10)}
+.hero h1{font-size:clamp(52px,7.2vw,88px);line-height:.99;letter-spacing:-.075em;max-width:940px;margin:28px auto 28px;font-weight:800}
+.hero h1 em{font-style:normal;color:var(--purple)}
+.hero p{font-size:22px;line-height:1.55;color:#3f4652;max-width:720px;margin:0 auto}
+.buttons{display:flex;justify-content:center;gap:12px;margin-top:36px}
+.btn{display:inline-flex;justify-content:center;align-items:center;padding:13px 20px;border-radius:8px;font-weight:700;font-size:14px;transition:.2s ease}
+.primary{background:#111318;color:#fff;box-shadow:0 5px 14px rgba(17,19,24,.12)}
+.primary:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(17,19,24,.16)}
+.secondary{border:1px solid #dfe1e6;background:#fff}
+.secondary:hover{border-color:#bfc3cb}
+.mini{margin-top:20px;color:#667085;font-size:13px;letter-spacing:.02em}
+.section{padding:108px 0}
+.soft{background:#f8f9fb}
+.kicker{color:var(--purple);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.15em}
+.section h2{font-size:clamp(36px,4.2vw,58px);line-height:1.06;letter-spacing:-.06em;margin:13px 0 18px;max-width:790px}
+.lead{font-size:18px;color:#4d5664;max-width:690px}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:center}
+.card{border:1px solid #e5e7eb;border-radius:16px;background:#fff;box-shadow:0 24px 70px rgba(16,24,40,.08);overflow:hidden}
+.cardhead{padding:17px 20px;border-bottom:1px solid #eceef1;font-size:12px;font-weight:750;color:#667085;display:flex;justify-content:space-between;background:#fcfcfd}
+.row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 20px;border-bottom:1px solid #f0f1f3;font-size:14px}
+.row:last-child{border:0;background:#fbfcfd}
+.tag{font-size:11px;padding:5px 8px;border-radius:5px;background:#edf9f3;color:#11794f;font-weight:750;white-space:nowrap}
+.deny{background:#fff0f0;color:#c53232}
+.arrow{text-align:center;padding:12px;color:#a2a8b2;font-size:18px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:48px}
+.step{padding:26px;border:1px solid #e4e6ea;border-radius:13px;background:#fff;min-height:220px}
+.num{font-size:11px;font-weight:800;color:var(--purple);letter-spacing:.08em}
+.step h3{margin:32px 0 9px;font-size:18px;letter-spacing:-.02em}
+.step p{margin:0;color:#4d5664;font-size:15px;line-height:1.65}
+.quote{background:#111318;color:#fff;border-radius:20px;padding:70px 68px;box-shadow:0 22px 70px rgba(17,19,24,.12)}
+.quote p{font-size:clamp(30px,4vw,50px);line-height:1.12;letter-spacing:-.05em;max-width:900px;margin:0}
+.quote small{display:block;margin-top:27px;color:#aeb4bf;font-size:13px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.feature{padding:30px;border:1px solid #e4e6ea;border-radius:14px;background:#fff}
+.icon{width:38px;height:38px;border-radius:9px;background:#f0efff;color:var(--purple);display:grid;place-items:center;font-weight:800}
+.feature h3{margin:21px 0 9px;font-size:18px;letter-spacing:-.02em}
+.feature p{color:#4d5664;margin:0;font-size:15px;line-height:1.65}
+.cta{text-align:center;padding:120px 0}
+.cta h2{margin-left:auto;margin-right:auto}
+.footer{border-top:1px solid var(--line);padding:30px 0;color:#667085;font-size:13px}
+@media(max-width:800px){.navlinks{display:none}.hero{padding:86px 0}.story{grid-template-columns:1fr;gap:44px}.steps,.features{grid-template-columns:1fr 1fr}.quote{padding:46px 30px}}
+@media(max-width:520px){.steps,.features{grid-template-columns:1fr}.buttons{flex-direction:column}.btn{width:100%}.hero h1{font-size:50px}.section{padding:78px 0}}
+</style>
+</head>
+<body>
+<nav><div class="wrap" style="width:100%;display:flex;align-items:center;justify-content:space-between"><div class="logo">parmana<span>.</span></div><div class="navlinks"><a href="#problem">The problem</a><a href="#how">How it works</a><a href="#proof">Proof</a></div><a class="navcta" href="#contact">Talk to us</a></div></nav>
+
+<header class="hero"><div class="wrap">
+<div class="eyebrow"><span class="dot"></span> Built for AI agents in real businesses</div>
+<h1>Let AI act.<br><em>Keep your authority.</em></h1>
+<p><strong>Your AI agent can decide what to do.</strong><br>Parmana makes sure it can only execute what your business has authorized.</p>
+<div class="buttons"><a class="btn primary" href="#how">See how it works</a><a class="btn secondary" href="#contact">Talk to the founders</a></div>
+<div class="mini">Declared  →  Authorized  →  Executed  →  Proven</div>
+</div></header>
+
+<section class="section" id="problem"><div class="wrap story">
+<div><div class="kicker">The shift</div><h2>AI is no longer just answering. It is acting.</h2><p class="lead"><strong>Refund a customer. Update a CRM. Create a purchase. Change an account.</strong></p><p class="lead">The important question is not whether AI can do it. The important question is whether the business actually authorized it.</p></div>
+<div class="card"><div class="cardhead"><span>Agent action</span><span>Parmana check</span></div><div class="row"><span>Refund ₹48,000</span><span class="tag">Within authority</span></div><div class="row"><span>Change bank details</span><span class="tag deny">Not authorized</span></div><div class="row"><span>Issue ₹5,000 credit</span><span class="tag">Within authority</span></div><div class="arrow">↓</div><div class="row"><strong>Only authorized actions reach the system</strong><span>✓</span></div></div>
+</div></section>
+
+<section class="section soft" id="how"><div class="wrap"><div class="kicker">Simple by design</div><h2>One clear path from AI decision to business action.</h2><p class="lead">The agent proposes. Parmana checks. The business system executes only when authority is clear.</p>
+<div class="steps"><div class="step"><div class="num">01</div><h3>AI proposes</h3><p>The agent decides what it wants to do and sends the proposed action.</p></div><div class="step"><div class="num">02</div><h3>Parmana checks</h3><p>The action is checked against the authority granted by the business.</p></div><div class="step"><div class="num">03</div><h3>System executes</h3><p>Only an authorized action is allowed to reach the business system.</p></div><div class="step"><div class="num">04</div><h3>Proof is created</h3><p>The decision and execution become verifiable evidence for audit and accountability.</p></div></div></div></section>
+
+<section class="section" id="proof"><div class="wrap"><div class="quote"><p>“AI can decide what it wants to do. <strong>Parmana makes sure it can only do what the business has authorized it to do.</strong>”</p><small>The execution authority layer for AI agents.</small></div></div></section>
+
+<section class="section"><div class="wrap"><div class="kicker">Why Parmana</div><h2>Control without slowing AI down.</h2><div class="features"><div class="feature"><div class="icon">A</div><h3>Authority, not guesswork</h3><p>Turn business authority into explicit execution boundaries instead of relying on an agent to interpret them correctly every time.</p></div><div class="feature"><div class="icon">✓</div><h3>Deterministic enforcement</h3><p>Every proposed action gets a clear allow or deny outcome before it reaches the system.</p></div><div class="feature"><div class="icon">P</div><h3>Proof by design</h3><p>Keep a verifiable record of what was proposed, authorized and executed.</p></div></div></div></section>
+
+<section class="cta" id="contact"><div class="wrap"><div class="kicker">Build the agentic business</div><h2>Give your AI agents room to work.<br>Give your business the final say.</h2><p class="lead" style="margin:0 auto 30px">We’re building Parmana for businesses that want AI agents to operate in the real world without losing control of what they are allowed to do.</p><a class="btn primary" href="mailto:hello@parmana.systems">Talk to Parmana</a></div></section>
+<footer><div class="wrap" style="width:100%;display:flex;justify-content:space-between"><span>© 2026 Parmana Systems</span><span>Execution authority for AI agents.</span></div></footer>
+</body></html>
