@@ -9,11 +9,11 @@
 :root{--ink:#111318;--muted:#667085;--line:#e8e9ed;--soft:#f8f9fb;--purple:#635bff;--green:#16a06a;--navy:#111318}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+body{margin:0;font-family:"Inter",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-optical-sizing:auto;color:var(--ink);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
 a{text-decoration:none;color:inherit}
 .wrap{max-width:1180px;margin:auto;padding:0 30px}
 nav{height:78px;display:flex;align-items:center;border-bottom:1px solid #f0f1f3;background:rgba(255,255,255,.94);position:sticky;top:0;z-index:10;backdrop-filter:blur(14px)}
-.logo{font-weight:800;font-size:22px;letter-spacing:-.045em}
+.logo{font-family:"Inter Tight","Inter",sans-serif;font-weight:800;font-size:22px;letter-spacing:-.035em}
 .logo span{color:var(--purple)}
 .navlinks{display:flex;gap:34px;color:#606776;font-size:14px;margin-left:54px}
 .navlinks a:hover{color:var(--ink)}
@@ -22,9 +22,9 @@ nav{height:78px;display:flex;align-items:center;border-bottom:1px solid #f0f1f3;
 .hero{padding:118px 0 108px;text-align:center;background:linear-gradient(180deg,#fbfbff 0%,#fff 72%)}
 .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid #e1dfff;border-radius:999px;background:#fff;color:#5047c6;font-size:12px;font-weight:750;letter-spacing:.01em;box-shadow:0 3px 12px rgba(31,35,54,.04)}
 .dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 0 4px rgba(22,160,106,.10)}
-.hero h1{font-size:clamp(52px,7.2vw,88px);line-height:.99;letter-spacing:-.075em;max-width:940px;margin:28px auto 28px;font-weight:800}
+.hero h1{font-family:"Inter Tight","Inter",sans-serif;font-size:clamp(50px,6.7vw,82px);line-height:1.02;letter-spacing:-.055em;max-width:940px;margin:28px auto 28px;font-weight:700}
 .hero h1 em{font-style:normal;color:var(--purple)}
-.hero p{font-size:22px;line-height:1.55;color:#3f4652;max-width:720px;margin:0 auto}
+.hero p{font-size:20px;line-height:1.6;color:#3f4652;max-width:720px;margin:0 auto;font-weight:400;letter-spacing:-.01em}
 .buttons{display:flex;justify-content:center;gap:12px;margin-top:36px}
 .btn{display:inline-flex;justify-content:center;align-items:center;padding:13px 20px;border-radius:8px;font-weight:700;font-size:14px;transition:.2s ease}
 .primary{background:#111318;color:#fff;box-shadow:0 5px 14px rgba(17,19,24,.12)}
@@ -35,7 +35,7 @@ nav{height:78px;display:flex;align-items:center;border-bottom:1px solid #f0f1f3;
 .section{padding:108px 0}
 .soft{background:#f8f9fb}
 .kicker{color:var(--purple);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.15em}
-.section h2{font-size:clamp(36px,4.2vw,58px);line-height:1.06;letter-spacing:-.06em;margin:13px 0 18px;max-width:790px}
+.section h2{font-family:"Inter Tight","Inter",sans-serif;font-size:clamp(36px,4.2vw,58px);line-height:1.08;letter-spacing:-.045em;margin:13px 0 18px;max-width:790px;font-weight:700}
 .lead{font-size:18px;color:#4d5664;max-width:690px}
 .story{display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:center}
 .card{border:1px solid #e5e7eb;border-radius:16px;background:#fff;box-shadow:0 24px 70px rgba(16,24,40,.08);overflow:hidden}
@@ -51,7 +51,7 @@ nav{height:78px;display:flex;align-items:center;border-bottom:1px solid #f0f1f3;
 .step h3{margin:32px 0 9px;font-size:18px;letter-spacing:-.02em}
 .step p{margin:0;color:#4d5664;font-size:15px;line-height:1.65}
 .quote{background:#111318;color:#fff;border-radius:20px;padding:70px 68px;box-shadow:0 22px 70px rgba(17,19,24,.12)}
-.quote p{font-size:clamp(30px,4vw,50px);line-height:1.12;letter-spacing:-.05em;max-width:900px;margin:0}
+.quote p{font-family:"Inter Tight","Inter",sans-serif;font-size:clamp(30px,4vw,50px);line-height:1.15;letter-spacing:-.04em;max-width:900px;margin:0;font-weight:600}
 .quote small{display:block;margin-top:27px;color:#aeb4bf;font-size:13px}
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
 .feature{padding:30px;border:1px solid #e4e6ea;border-radius:14px;background:#fff}
@@ -59,11 +59,14 @@ nav{height:78px;display:flex;align-items:center;border-bottom:1px solid #f0f1f3;
 .feature h3{margin:21px 0 9px;font-size:18px;letter-spacing:-.02em}
 .feature p{color:#4d5664;margin:0;font-size:15px;line-height:1.65}
 .cta{text-align:center;padding:120px 0}
-.cta h2{margin-left:auto;margin-right:auto}
+.cta h2{margin-left:auto;margin-right:auto;font-family:"Inter Tight","Inter",sans-serif}
 .footer{border-top:1px solid var(--line);padding:30px 0;color:#667085;font-size:13px}
 @media(max-width:800px){.navlinks{display:none}.hero{padding:86px 0}.story{grid-template-columns:1fr;gap:44px}.steps,.features{grid-template-columns:1fr 1fr}.quote{padding:46px 30px}}
 @media(max-width:520px){.steps,.features{grid-template-columns:1fr}.buttons{flex-direction:column}.btn{width:100%}.hero h1{font-size:50px}.section{padding:78px 0}}
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter+Tight:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 <nav><div class="wrap" style="width:100%;display:flex;align-items:center;justify-content:space-between"><div class="logo">parmana<span>.</span></div><div class="navlinks"><a href="#problem">The problem</a><a href="#how">How it works</a><a href="#proof">Proof</a></div><a class="navcta" href="#contact">Talk to us</a></div></nav>
