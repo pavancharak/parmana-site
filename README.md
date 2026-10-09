@@ -24,3 +24,7 @@ The site is intentionally centered on one business principle:
 **Parmana ensures your business has authority over autonomous systems.**
 
 AI can propose and act autonomously, but execution remains inside the authority defined by the business.
+
+
+## Positioning revision
+Parmana is positioned as business authority infrastructure for autonomous AI: business authority becomes an enforceable runtime boundary, so access never becomes authority.
