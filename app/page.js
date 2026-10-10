@@ -13,6 +13,7 @@ export default function Home() {
           <div className="navLinks">
             <a href="#problem">The problem</a>
             <a href="#how">How it works</a>
+            <a href="#video">Video</a>
             <a href="#evidence">Evidence</a>
           </div>
           <a className="navButton" href="#contact">Talk to us <span aria-hidden="true">↗</span></a>
@@ -26,7 +27,7 @@ export default function Home() {
           <h1>If the business has not authorized it, <span>AI cannot do it.</span></h1>
           <p className="heroLead">AI agents can make decisions and take action. Parmana checks whether the business has allowed each action before it reaches your systems.</p>
           <div className="heroActions">
-            <a className="button buttonDark" href="#how">See how it works <span aria-hidden="true">↓</span></a>
+            <a className="button buttonDark" href="#video">Watch the video <span aria-hidden="true">↓</span></a>
             <a className="button buttonLight" href="#contact">Talk to Parmana</a>
           </div>
           <div className="heroNote">The business decides. Parmana checks. Only authorized actions proceed.</div>
@@ -55,6 +56,30 @@ export default function Home() {
               </div>
             </div>
             <div className="diagramBottom"><span className="shield">✓</span> A decision record is created for review and audit.</div>
+          </div>
+        </div>
+      </section>
+
+      <section className="videoSection" id="video">
+        <div className="container videoContainer">
+          <div className="videoHeading">
+            <div className="eyebrow eyebrowPlain">See Parmana in action</div>
+            <h2>Give AI room to work. Keep authority with the business.</h2>
+            <p className="bodyCopy">A short introduction to how Parmana checks AI actions before they reach business systems.</p>
+          </div>
+          <div className="videoFrame">
+            <iframe
+              src="https://www.youtube.com/embed/BmEDAFNi5Rg?rel=0&modestbranding=1"
+              title="Parmana Systems overview"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
+          <div className="videoCaption">
+            <span>PARMANA SYSTEMS</span>
+            <span>Business authority for AI actions</span>
           </div>
         </div>
       </section>
