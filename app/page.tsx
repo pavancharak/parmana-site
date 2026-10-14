@@ -58,6 +58,8 @@ export default function Home() {
         </a>
         <nav className="desktop-nav" aria-label="Main navigation">
           <a href="#approach">Approach</a>
+          <a href="#trust">Trust</a>
+          <a href="https://docs.parmanasystems.com" target="_blank" rel="noreferrer">Docs <span aria-hidden="true">↗</span></a>
           <a href="#capabilities">Capabilities</a>
           <a href="#use-cases">Use cases</a>
           <a href="#principles">Principles</a>
@@ -118,6 +120,41 @@ export default function Home() {
       <section className="statement-strip">
         <div className="strip-label">THE GOVERNANCE GAP</div>
         <p>Knowing what an AI system should do is not the same as <strong>controlling what it can execute.</strong></p>
+      </section>
+
+
+      <section className="section trust-section" id="trust">
+        <div className="section-kicker">INDEPENDENT VERIFICATION</div>
+        <div className="trust-intro">
+          <div>
+            <h2>Your business should not have to <em>trust the system.</em></h2>
+          </div>
+          <div className="trust-copy">
+            <p>It should be able to verify that its authority was enforced. When software acts on a business’s behalf, a claim that it followed instructions is not proof.</p>
+            <p>Parmana connects the authority a business defines to checks performed before covered actions proceed, and to evidence that can be independently verified.</p>
+          </div>
+        </div>
+        <div className="trust-grid">
+          <article className="trust-card">
+            <span className="trust-number">01 / DEFINE</span>
+            <div className="trust-symbol">◎</div>
+            <h3>Your authority, your rules</h3>
+            <p>The business defines explicit permissions and limits. Authority is not left to an AI agent to decide for itself.</p>
+          </article>
+          <article className="trust-card">
+            <span className="trust-number">02 / ENFORCE</span>
+            <div className="trust-symbol">⌁</div>
+            <h3>Check before execution</h3>
+            <p>Covered actions are checked against the applicable authority before they proceed. Missing or invalid authorization does not silently become permission.</p>
+          </article>
+          <article className="trust-card">
+            <span className="trust-number">03 / VERIFY</span>
+            <div className="trust-symbol">✓</div>
+            <h3>Evidence, not assurances</h3>
+            <p>Cryptographically verifiable records support independent checks of recorded authorization and execution events, without relying solely on Parmana’s claims.</p>
+          </article>
+        </div>
+        <p className="trust-footnote">Parmana provides verifiable evidence connecting declared business authority, authorization decisions, and recorded execution events. Independent verification lets businesses check that evidence without relying solely on Parmana’s assurances.</p>
       </section>
 
       <section className="section intro-section" id="approach">
