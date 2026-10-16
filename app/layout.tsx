@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Parmana Systems | Deterministic Governance for AI Execution",
+  title: "Parmana Systems | Control for AI That Acts for Your Business",
   description:
-    "Parmana helps ensure AI agents execute only what has been explicitly authorized, with deterministic enforcement and verifiable evidence.",
+    "Parmana lets businesses set clear limits on what AI can do, checks every action against those limits, and keeps a record of each decision.",
   metadataBase: new URL("https://parmanasystems.com"),
   openGraph: {
-    title: "Parmana Systems | The Execution Integrity Layer for AI",
+    title: "Parmana Systems | Control for AI That Acts for Your Business",
     description:
-      "AI can decide. Your business sets the authority. Control what AI agents are allowed to execute.",
+      "AI can act for your business, within limits you set. Parmana checks every action and keeps the record.",
     url: "https://parmanasystems.com",
     siteName: "Parmana Systems",
     type: "website",
