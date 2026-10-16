@@ -3,41 +3,41 @@ const Arrow = () => <span aria-hidden="true">↗</span>;
 const capabilities = [
   {
     number: "01",
-    title: "Define authority",
+    title: "Set the limits",
     description:
-      "Translate business intent into explicit, machine-checkable limits. Make clear which actions an AI agent may take, under which conditions, and on whose authority.",
-    tag: "Authority",
+      "Turn your business rules into clear limits: which actions the AI may take, how much it can spend or change, and who approves exceptions.",
+    tag: "Your rules",
   },
   {
     number: "02",
-    title: "Enforce at execution",
+    title: "Check each action",
     description:
-      "Verify the proposed action against the approved authority before it reaches the business system. If authorization is missing, invalid, or ambiguous, do not proceed.",
-    tag: "Deterministic control",
+      "Every action is compared with your limits before it reaches your systems. If approval is missing or unclear, the action does not go ahead.",
+    tag: "Before it happens",
   },
   {
     number: "03",
-    title: "Prove what happened",
+    title: "Keep a record",
     description:
-      "Preserve verifiable evidence connecting the declared authority, the decision, and the resulting execution, so teams can inspect and independently verify outcomes.",
-    tag: "Evidence",
+      "Each decision is stored with the limit it was checked against and the result, so your team can review what happened at any time.",
+    tag: "Audit trail",
   },
 ];
 
 const useCases = [
   {
     title: "Financial services",
-    text: "Keep payments, refunds, and account actions within approved limits and delegated authority.",
+    text: "Keep payments, refunds and account changes within the limits you approve.",
     number: "01",
   },
   {
-    title: "Enterprise operations",
-    text: "Constrain actions across CRM, ERP, procurement, and other systems where mistakes carry real consequences.",
+    title: "Business operations",
+    text: "Control what AI can do across sales, finance, purchasing and other business systems.",
     number: "02",
   },
   {
     title: "Public services",
-    text: "Help turn clearly defined rules into consistent digital decisions, with exceptions routed to accountable human judgment.",
+    text: "Apply defined rules consistently, and send exceptions to a person for decision.",
     number: "03",
   },
 ];
@@ -47,8 +47,8 @@ export default function Home() {
     <main>
       <div className="announcement">
         <span className="announcement-dot" />
-        THE EXECUTION INTEGRITY LAYER FOR AI
-        <a href="#approach">Explore our approach <Arrow /></a>
+        CONTROL FOR AI THAT ACTS FOR YOUR BUSINESS
+        <a href="#approach">See how it works <Arrow /></a>
       </div>
 
       <header className="site-header">
@@ -57,24 +57,24 @@ export default function Home() {
           <span>parmana<span className="brand-light">systems</span></span>
         </a>
         <nav className="desktop-nav" aria-label="Main navigation">
-          <a href="#approach">Approach</a>
+          <a href="#approach">The problem</a>
           <a href="#trust">Trust</a>
-          <a href="https://docs.parmanasystems.com" target="_blank" rel="noreferrer">Docs <span aria-hidden="true">↗</span></a>
-          <a href="#capabilities">Capabilities</a>
+          <a href="#capabilities">How it works</a>
           <a href="#use-cases">Use cases</a>
           <a href="#principles">Principles</a>
+          <a href="https://docs.parmanasystems.com" target="_blank" rel="noreferrer">Docs <span aria-hidden="true">↗</span></a>
         </nav>
         <a className="button button-dark header-cta" href="https://cal.com/pavan-charak/" target="_blank" rel="noreferrer">Book a meeting <Arrow /></a>
       </header>
 
       <section className="hero">
         <div className="hero-copy">
-          <div className="eyebrow"><span /> GOVERNANCE THAT REACHES EXECUTION</div>
-          <h1>AI can decide.<br /><em>Your business</em><br />sets the authority.</h1>
+          <div className="eyebrow"><span /> BUILT FOR AI THAT TAKES ACTION</div>
+          <h1>AI can act for your business.<br /><em>Only within the limits you set.</em></h1>
           <p className="hero-description">
-            As AI agents move from answering questions to taking action, responsible
-            AI needs more than policies and promises. Parmana helps ensure that
-            systems execute only what has been explicitly authorized.
+            AI agents are starting to issue refunds, update records, approve requests
+            and move money. Parmana checks each action against the limits your business
+            has approved before it happens, and keeps a clear record of every decision.
           </p>
           <div className="hero-actions">
             <a className="button button-dark" href="#approach">See how it works <Arrow /></a>
@@ -82,89 +82,89 @@ export default function Home() {
           </div>
           <div className="hero-footnote">
             <span className="footnote-icon">✓</span>
-            <span>Explicit authority. Deterministic enforcement. Verifiable evidence.</span>
+            <span>Set the limits. Check every action. Keep the record.</span>
           </div>
         </div>
 
-        <div className="hero-visual" aria-label="Illustration of an AI action passing through an authorization boundary">
+        <div className="hero-visual" aria-label="Illustration of an AI action being checked against approved limits">
           <div className="visual-topline">
-            <span>EXECUTION CONTROL</span>
-            <span className="live-indicator">● CONTROL ACTIVE</span>
+            <span>APPROVAL CHECK</span>
+            <span className="live-indicator">● LIMITS APPLIED</span>
           </div>
           <div className="flow-card flow-proposal">
             <div className="flow-icon ai-icon">AI</div>
-            <div><span className="flow-label">01 / PROPOSAL</span><strong>Agent proposes an action</strong><small>Initiate a $4,800 payment</small></div>
+            <div><span className="flow-label">01 / REQUEST</span><strong>AI proposes an action</strong><small>Make a $4,800 payment</small></div>
             <span className="flow-status">REQUEST</span>
           </div>
           <div className="flow-connector"><span /></div>
           <div className="authority-box">
             <div className="authority-heading">
               <div className="flow-icon shield-icon">✓</div>
-              <div><span className="flow-label">02 / AUTHORITY CHECK</span><strong>Verify before execution</strong></div>
-              <span className="verified-pill">VERIFIED</span>
+              <div><span className="flow-label">02 / CHECK</span><strong>Compare with your limits</strong></div>
+              <span className="verified-pill">APPROVED</span>
             </div>
-            <div className="check-row"><span>Approved action</span><b>Payment</b><span className="check">✓</span></div>
-            <div className="check-row"><span>Transaction limit</span><b>$5,000 max</b><span className="check">✓</span></div>
-            <div className="check-row"><span>Authority status</span><b>Valid</b><span className="check">✓</span></div>
+            <div className="check-row"><span>Action type</span><b>Payment</b><span className="check">✓</span></div>
+            <div className="check-row"><span>Spending limit</span><b>$5,000 max</b><span className="check">✓</span></div>
+            <div className="check-row"><span>Permission</span><b>Active</b><span className="check">✓</span></div>
           </div>
           <div className="flow-connector"><span /></div>
           <div className="flow-card flow-execution">
             <div className="flow-icon execution-icon">↗</div>
-            <div><span className="flow-label">03 / EXECUTION</span><strong>Authorized action proceeds</strong><small>Decision evidence recorded</small></div>
+            <div><span className="flow-label">03 / RESULT</span><strong>Approved action goes ahead</strong><small>Record saved for review</small></div>
             <span className="flow-status success">ALLOWED</span>
           </div>
-          <div className="visual-bottom"><span>DECLARED</span><i /> <span>AUTHORIZED</span><i /> <span>EXECUTED</span><i /> <span>PROVEN</span></div>
+          <div className="visual-bottom"><span>SET LIMITS</span><i /> <span>CHECK</span><i /> <span>ACT</span><i /> <span>RECORD</span></div>
         </div>
       </section>
 
       <section className="statement-strip">
-        <div className="strip-label">THE GOVERNANCE GAP</div>
-        <p>Knowing what an AI system should do is not the same as <strong>controlling what it can execute.</strong></p>
+        <div className="strip-label">THE PROBLEM</div>
+        <p>Most AI tools can suggest what to do. Few can make sure the system <strong>only does what the business has approved.</strong></p>
       </section>
 
 
       <section className="section trust-section" id="trust">
-        <div className="section-kicker">INDEPENDENT VERIFICATION</div>
+        <div className="section-kicker">TRUST</div>
         <div className="trust-intro">
           <div>
-            <h2>Your business should not have to <em>trust the system.</em></h2>
+            <h2>Trust should be checked, <em>not assumed.</em></h2>
           </div>
           <div className="trust-copy">
-            <p>It should be able to verify that its authority was enforced. When software acts on a business’s behalf, a claim that it followed instructions is not proof.</p>
-            <p>Parmana connects the authority a business defines to checks performed before covered actions proceed, and to evidence that can be independently verified.</p>
+            <p>When software acts for a business, saying it followed the rules is not enough. The business should be able to see what was approved, what was done, and whether the two match.</p>
+            <p>Parmana sits between the AI and your systems. It applies your limits before each action goes through, and records what happened so it can be reviewed later.</p>
           </div>
         </div>
         <div className="trust-grid">
           <article className="trust-card">
-            <span className="trust-number">01 / DEFINE</span>
+            <span className="trust-number">01 / SET</span>
             <div className="trust-symbol">◎</div>
-            <h3>Your authority, your rules</h3>
-            <p>The business defines explicit permissions and limits. Authority is not left to an AI agent to decide for itself.</p>
+            <h3>You set the limits</h3>
+            <p>Your business decides what the AI can do, how much it can spend or change, and under what conditions. The AI does not decide its own permissions.</p>
           </article>
           <article className="trust-card">
-            <span className="trust-number">02 / ENFORCE</span>
+            <span className="trust-number">02 / CHECK</span>
             <div className="trust-symbol">⌁</div>
-            <h3>Check before execution</h3>
-            <p>Covered actions are checked against the applicable authority before they proceed. Missing or invalid authorization does not silently become permission.</p>
+            <h3>Every action is checked</h3>
+            <p>Before an action reaches your systems, Parmana checks it against your limits. If approval is missing or unclear, the action does not go ahead.</p>
           </article>
           <article className="trust-card">
-            <span className="trust-number">03 / VERIFY</span>
+            <span className="trust-number">03 / REVIEW</span>
             <div className="trust-symbol">✓</div>
-            <h3>Evidence, not assurances</h3>
-            <p>Cryptographically verifiable records support independent checks of recorded authorization and execution events, without relying solely on Parmana’s claims.</p>
+            <h3>A record you can review</h3>
+            <p>Each decision is stored with the approval it relied on and the result. Your team or an auditor can review it without relying only on our word.</p>
           </article>
         </div>
-        <p className="trust-footnote">Parmana provides verifiable evidence connecting declared business authority, authorization decisions, and recorded execution events. Independent verification lets businesses check that evidence without relying solely on Parmana’s assurances.</p>
+        <p className="trust-footnote">Parmana records what was approved, what was checked and what happened. It does not decide whether your policies are the right ones. That remains your business decision.</p>
       </section>
 
       <section className="section intro-section" id="approach">
-        <div className="section-kicker">01 — THE APPROACH</div>
+        <div className="section-kicker">01 — THE PROBLEM</div>
         <div className="intro-grid">
-          <h2>Responsible AI must work <em>when it matters most.</em></h2>
+          <h2>AI needs control at <em>the moment it acts.</em></h2>
           <div className="intro-copy">
-            <p>AI safety, model evaluations, and policy frameworks all play important roles. But when an agent can issue a refund, change a customer record, approve a request, or move money, the business needs a control that applies to the action itself.</p>
-            <p>Parmana focuses on that boundary: checking whether the exact action is authorized before execution, and preserving evidence that can be verified afterwards.</p>
-            <a className="underlined-link" href="#capabilities">Explore the control model <Arrow /></a>
+            <p>Testing AI models and writing AI policies both matter. But they do not stop an agent from making a payment or changing a customer record on the wrong day. When AI takes action, the business needs a check on that exact action, before it happens.</p>
+            <p>Parmana focuses on that moment: confirming the action is allowed, then keeping a record of what was allowed and what was done.</p>
+            <a className="underlined-link" href="#capabilities">See the three steps <Arrow /></a>
           </div>
         </div>
       </section>
@@ -173,8 +173,8 @@ export default function Home() {
       <section className="section video-section" id="explainer">
         <div className="section-kicker">WATCH THE EXPLAINER</div>
         <div className="video-heading">
-          <h2>See how Parmana brings <em>authority to execution.</em></h2>
-          <p>A short introduction to the problem Parmana is built to solve.</p>
+          <h2>See how Parmana <em>keeps AI within limits.</em></h2>
+          <p>A short introduction to the problem and how we solve it.</p>
         </div>
         <div className="video-frame">
           <iframe
@@ -190,10 +190,10 @@ export default function Home() {
 
       <section className="capabilities-section" id="capabilities">
         <div className="section">
-          <div className="section-kicker">02 — WHAT PARMANA DOES</div>
+          <div className="section-kicker">02 — HOW IT WORKS</div>
           <div className="section-heading-row">
-            <h2>From governance intent<br />to <em>enforced control.</em></h2>
-            <p>One execution integrity approach. Three connected capabilities.</p>
+            <h2>Three steps to <em>keep AI in bounds.</em></h2>
+            <p>Simple to explain, and simple to audit.</p>
           </div>
           <div className="capability-grid">
             {capabilities.map((item) => (
@@ -202,7 +202,7 @@ export default function Home() {
                 <div className="capability-symbol">{item.number === "01" ? "⌘" : item.number === "02" ? "⊙" : "⌁"}</div>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
-                <a href="#contact" aria-label={`Discuss ${item.title}`}>Discuss this capability <Arrow /></a>
+                <a href="#contact" aria-label={`Talk to us about: ${item.title}`}>Talk to us about this <Arrow /></a>
               </article>
             ))}
           </div>
@@ -210,27 +210,27 @@ export default function Home() {
       </section>
 
       <section className="section authority-section" id="principles">
-        <div className="section-kicker">03 — THE PRINCIPLE</div>
+        <div className="section-kicker">03 — OUR PRINCIPLES</div>
         <div className="authority-grid">
           <div>
-            <h2>AI may propose.<br /><em>Authority must be proven.</em></h2>
-            <p className="authority-lead">A model's confidence is not permission. A valid credential is not unlimited authority. A plausible interpretation is not approval.</p>
+            <h2>AI can suggest.<br /><em>Your business approves.</em></h2>
+            <p className="authority-lead">An AI&apos;s confidence is not permission. Access to a system is not the same as being allowed to use it for any purpose. Every action needs a clear approval.</p>
           </div>
           <div className="principle-list">
-            <div><span>01</span><p><strong>Explicit authority</strong><br />Actions are measured against defined business permissions and constraints.</p></div>
-            <div><span>02</span><p><strong>Fail closed</strong><br />Missing, invalid, or ambiguous authorization does not silently become permission.</p></div>
-            <div><span>03</span><p><strong>Verifiable evidence</strong><br />Records connect what was authorized with what the system actually did.</p></div>
-            <div><span>04</span><p><strong>Human accountability</strong><br />Exceptions and genuine discretion remain visible and accountable.</p></div>
+            <div><span>01</span><p><strong>Clear limits</strong><br />Every action is measured against limits your business has defined.</p></div>
+            <div><span>02</span><p><strong>Stop when unsure</strong><br />If approval is missing or unclear, the action does not go ahead.</p></div>
+            <div><span>03</span><p><strong>Clear records</strong><br />Each record shows what was approved and what was done.</p></div>
+            <div><span>04</span><p><strong>People stay accountable</strong><br />Exceptions and judgment calls go to people, who remain responsible for them.</p></div>
           </div>
         </div>
       </section>
 
       <section className="use-cases-section" id="use-cases">
         <div className="section">
-          <div className="section-kicker">04 — WHERE IT MATTERS</div>
+          <div className="section-kicker">04 — WHERE IT APPLIES</div>
           <div className="section-heading-row">
-            <h2>When AI acts in the real world, <em>authority matters.</em></h2>
-            <p>Designed for environments where automated actions must stay within defined limits.</p>
+            <h2>Where controlled AI action <em>matters most.</em></h2>
+            <p>Any business where a mistake with money, customers or records is costly.</p>
           </div>
           <div className="use-case-list">
             {useCases.map((item) => (
@@ -238,7 +238,7 @@ export default function Home() {
                 <span className="use-number">{item.number}</span>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
-                <a href="#contact" aria-label={`Discuss ${item.title}`}>↗</a>
+                <a href="#contact" aria-label={`Talk to us about: ${item.title}`}>↗</a>
               </article>
             ))}
           </div>
@@ -249,18 +249,18 @@ export default function Home() {
         <div className="evidence-pattern" aria-hidden="true" />
         <div className="evidence-content">
           <div className="section-kicker light-kicker">THE PROMISE</div>
-          <h2>Don't just ask AI<br />to behave. <em>Control what<br />it can execute.</em></h2>
-          <p>Build a clear boundary between what AI proposes and what your business authorizes. Make every permitted action accountable.</p>
+          <h2>Let AI do more work.<br /><em>Keep control of what it can do.</em></h2>
+          <p>Draw a clear line between what AI suggests and what your business approves. Every action that goes through is one you authorized, and you can show it.</p>
           <a className="button button-light" href="https://cal.com/pavan-charak/" target="_blank" rel="noreferrer">Book a 30-minute meeting <Arrow /></a>
-          <div className="evidence-sequence"><span>DECLARED</span><b>→</b><span>AUTHORIZED</span><b>→</b><span>EXECUTED</span><b>→</b><span>PROVEN</span></div>
+          <div className="evidence-sequence"><span>SET LIMITS</span><b>→</b><span>CHECK</span><b>→</b><span>ACT</span><b>→</b><span>RECORD</span></div>
         </div>
       </section>
 
       <section className="contact-section" id="contact">
-        <div className="section-kicker">05 — LET'S TALK</div>
+        <div className="section-kicker">05 — LET&apos;S TALK</div>
         <div className="contact-row">
-          <div><h2>Put authority at the heart of your AI systems.</h2><p>Exploring AI agents in financial services, enterprise operations, or public services? Let's discuss the execution integrity problem.</p></div>
-          <a className="button button-dark" href="https://cal.com/pavan-charak/" target="_blank" rel="noreferrer">Discuss your use case <Arrow /></a>
+          <div><h2>Let&apos;s talk about your AI plans.</h2><p>Exploring AI agents in financial services, operations or public services? We would like to hear what you are building and where control matters most.</p></div>
+          <a className="button button-dark" href="https://cal.com/pavan-charak/" target="_blank" rel="noreferrer">Book a meeting <Arrow /></a>
         </div>
       </section>
 
@@ -269,8 +269,8 @@ export default function Home() {
           <span className="brand-mark"><i /><i /><i /></span>
           <span>parmana<span className="brand-light">systems</span></span>
         </a>
-        <p>Deterministic governance for systems that act.</p>
-        <div className="footer-links"><a href="#approach">Approach</a><a href="#capabilities">Capabilities</a><a href="#contact">Contact</a></div>
+        <p>Control for AI that acts on your business&apos;s behalf.</p>
+        <div className="footer-links"><a href="#approach">The problem</a><a href="#capabilities">How it works</a><a href="#contact">Contact</a></div>
         <span className="copyright">© {new Date().getFullYear()} Parmana Systems</span>
       </footer>
     </main>

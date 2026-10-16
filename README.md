@@ -1,6 +1,8 @@
-# Parmana Systems website refresh
+# Parmana Systems website
 
-A responsive Next.js App Router homepage themed around responsible AI, deterministic governance, execution authority, and verifiable evidence. The information architecture takes inspiration from the clarity and institutional structure of responsible.ai without copying its branding or content.
+The final site is the Next.js (React) app in `app/`. The legacy static `index.html` has been removed.
+
+A responsive Next.js App Router homepage that explains how Parmana keeps AI agents within the limits a business has approved, and keeps a record of each decision. Styled in a clean, Stripe-inspired standard (original implementation, no Stripe assets).
 
 ## Files in this overlay
 
