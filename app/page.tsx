@@ -63,6 +63,7 @@ export default function Home() {
           <a href="#use-cases">Use cases</a>
           <a href="#principles">Principles</a>
           <a href="https://docs.parmanasystems.com" target="_blank" rel="noreferrer">Docs <span aria-hidden="true">↗</span></a>
+          <a href="https://blog.parmanasystems.com" target="_blank" rel="noreferrer">Blog <span aria-hidden="true">↗</span></a>
         </nav>
         <a className="button button-dark header-cta" href="https://cal.com/pavan-charak/" target="_blank" rel="noreferrer">Book a meeting <Arrow /></a>
       </header>
@@ -270,7 +271,7 @@ export default function Home() {
           <span>parmana<span className="brand-light">systems</span></span>
         </a>
         <p>Control for AI that acts on your business&apos;s behalf.</p>
-        <div className="footer-links"><a href="#approach">The problem</a><a href="#capabilities">How it works</a><a href="#contact">Contact</a></div>
+        <div className="footer-links"><a href="#approach">The problem</a><a href="#capabilities">How it works</a><a href="#contact">Contact</a><a href="https://docs.parmanasystems.com" target="_blank" rel="noreferrer">Docs</a><a href="https://blog.parmanasystems.com" target="_blank" rel="noreferrer">Blog</a></div>
         <span className="copyright">© {new Date().getFullYear()} Parmana Systems</span>
       </footer>
     </main>
