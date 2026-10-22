@@ -367,3 +367,20 @@ a:focus-visible, button:focus-visible {
   margin: 0;
   line-height: 1.6;
 }
+
+.question-page {
+  max-width: 720px;
+  margin: 3rem auto;
+  padding: 0 1.25rem;
+  line-height: 1.6;
+}
+
+.question-short {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.question-list {
+  padding-left: 1.25rem;
+  line-height: 2;
+}

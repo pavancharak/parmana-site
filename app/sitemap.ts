@@ -1,12 +1,17 @@
 import type { MetadataRoute } from "next";
+import { questions } from "../lib/questions";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const base = "https://parmanasystems.com";
+  const now = new Date();
   return [
-    {
-      url: "https://parmanasystems.com/",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
-    },
+    { url: `${base}/`, lastModified: now, changeFrequency: "monthly", priority: 1 },
+    { url: `${base}/questions`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    ...questions.map((q) => ({
+      url: `${base}/questions/${q.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
   ];
 }
