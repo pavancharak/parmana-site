@@ -53,7 +53,7 @@ export default function Home() {
 
       <header className="site-header">
         <a className="brand" href="#" aria-label="Parmana Systems home">
-          <span className="brand-mark"><i /><i /><i /></span>
+          <img className="brand-mark" src="/logo-mark.svg" alt="" width="27" height="27" />
           <span>parmana<span className="brand-light">systems</span></span>
         </a>
         <nav className="desktop-nav" aria-label="Main navigation">
@@ -276,7 +276,7 @@ export default function Home() {
 
       <footer className="site-footer">
         <a className="brand footer-brand" href="#">
-          <span className="brand-mark"><i /><i /><i /></span>
+          <img className="brand-mark" src="/logo-mark.svg" alt="" width="27" height="27" />
           <span>parmana<span className="brand-light">systems</span></span>
         </a>
         <p>Control for AI that acts on your business&apos;s behalf.</p>
