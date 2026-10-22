@@ -187,6 +187,15 @@ export default function Home() {
             allowFullScreen
           />
         </div>
+        <div className="video-summary">
+          <h3>In short</h3>
+          <ul>
+            <li>AI agents can now pay suppliers, issue refunds and change records.</li>
+            <li>Parmana checks each action against your business rules before it happens.</li>
+            <li>A person approves the actions that need approval.</li>
+            <li>Every decision is recorded, with the reason it was allowed or stopped.</li>
+          </ul>
+        </div>
       </section>
 
       <section className="capabilities-section" id="capabilities">
