@@ -1,3 +1,5 @@
+import { questions } from "../lib/questions";
+
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
 const capabilities = [
@@ -266,8 +268,19 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section" id="questions">
+        <div className="section-kicker">05 — COMMON QUESTIONS</div>
+        <ul className="question-list">
+          {questions.map((q) => (
+            <li key={q.slug}>
+              <a href={`/questions/${q.slug}`}>{q.question}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <section className="contact-section" id="contact">
-        <div className="section-kicker">05 — LET&apos;S TALK</div>
+        <div className="section-kicker">06 — LET&apos;S TALK</div>
         <div className="contact-row">
           <div><h2>Let&apos;s talk about your AI plans.</h2><p>Exploring AI agents in financial services, operations or public services? We would like to hear what you are building and where control matters most.</p></div>
           <a className="button button-dark" href="https://cal.com/pavan-charak/" target="_blank" rel="noreferrer">Book a meeting <Arrow /></a>
@@ -280,7 +293,7 @@ export default function Home() {
           <span>parmana<span className="brand-light">systems</span></span>
         </a>
         <p>Control for AI that acts on your business&apos;s behalf.</p>
-        <div className="footer-links"><a href="#approach">The problem</a><a href="#capabilities">How it works</a><a href="#contact">Contact</a><a href="https://docs.parmanasystems.com" target="_blank" rel="noreferrer">Docs</a><a href="https://blog.parmanasystems.com" target="_blank" rel="noreferrer">Blog</a></div>
+        <div className="footer-links"><a href="#approach">The problem</a><a href="#capabilities">How it works</a><a href="#questions">Questions</a><a href="#contact">Contact</a><a href="https://docs.parmanasystems.com" target="_blank" rel="noreferrer">Docs</a><a href="https://blog.parmanasystems.com" target="_blank" rel="noreferrer">Blog</a></div>
         <span className="copyright">© {new Date().getFullYear()} Parmana Systems</span>
       </footer>
     </main>
