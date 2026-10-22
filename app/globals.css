@@ -351,3 +351,19 @@ a:focus-visible, button:focus-visible {
   .trust-card { transition: none; }
   .trust-card:hover { transform: none; }
 }
+
+.video-summary {
+  max-width: 720px;
+  margin: 2rem auto 0;
+}
+
+.video-summary h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+}
+
+.video-summary ul {
+  padding-left: 1.25rem;
+  margin: 0;
+  line-height: 1.6;
+}
