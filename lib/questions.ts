@@ -98,6 +98,44 @@ export const questions: Question[] = [
       "Parmana is for when you need proof you can show someone later: what was allowed, by whom, and what happened. Each approval is tied to the exact action it covers.",
     ],
   },
+  {
+    slug: "what-parmana-cannot-guarantee",
+    question: "What can Parmana not guarantee?",
+    short: "It checks the actions sent through it. It cannot stop an agent that has its own login to your systems, and it cannot make a person read what they approve.",
+    paragraphs: [
+      "Parmana checks the actions that are sent through it. It cannot stop an AI agent that already holds its own login to one of your systems and uses it directly.",
+      "An approval names the action and the resource it covers, but not every detail of the request. Parmana can check that a trusted approver signed it. It cannot check that the person read it.",
+      "Parmana applies the rules you write. A rule written wrongly still gives a wrong result, so the rules need a careful review.",
+    ],
+  },
+  {
+    slug: "who-can-restart-agent-actions",
+    question: "Who can restart AI agent actions after they are stopped?",
+    short: "Two different people must do it, each with their own key. One person cannot do both steps.",
+    paragraphs: [
+      "After a stop, one person asks for the restart. A second person, using their own key, confirms it. Actions resume only after that.",
+      "A stop does not undo actions that were already carried out. It also does not stop a system that an agent reaches without going through Parmana.",
+    ],
+  },
+  {
+    slug: "is-parmana-open-source",
+    question: "Is Parmana open source?",
+    short: "The Parmana server is not open source. The libraries your code uses are free under the Apache 2.0 license.",
+    paragraphs: [
+      "The Parmana server is proprietary software. You may read its source and run it to evaluate Parmana. Using it in production, copying it, or changing it needs a written agreement with Parmana Systems.",
+      "The libraries your code uses, for TypeScript and Python, are licensed under the Apache License 2.0.",
+    ],
+  },
+  {
+    slug: "connect-an-agent-you-already-run",
+    question: "How do I connect an AI agent I already run to Parmana?",
+    short: "Give the agent its own key, limited to the actions it may take. Then send each action through Parmana before it reaches your system.",
+    paragraphs: [
+      "Create a key for the agent that allows only the actions it needs. The operator issues the key, and it is never shared or written into logs.",
+      "Send each action to Parmana first. Parmana checks it against your rules and either lets it through or refuses it with a reason.",
+      "If a refusal asks for a person's approval, get that approval and send the request again. Parmana records every step. TypeScript and Python libraries are available, and the same steps work over plain HTTP.",
+    ],
+  },
 ];
 
 export function findQuestion(slug: string): Question | undefined {
