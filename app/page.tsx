@@ -19,8 +19,8 @@ const capabilities = [
     number: "03",
     title: "Keep a record",
     description:
-      "Each decision is stored with the limit it was checked against and the result, so your team can review what happened at any time.",
-    tag: "Audit trail",
+      "For every action, Parmana keeps the why (the rule and approval behind it), the how (the steps it went through) and the what (whether it went ahead or was stopped), so your team can review it at any time.",
+    tag: "Proof you can show",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function Home() {
         </a>
         <nav className="desktop-nav" aria-label="Main navigation">
           <a href="#approach">The problem</a>
-          <a href="#trust">Trust</a>
+          <a href="#trust">Proof</a>
           <a href="#capabilities">How it works</a>
           <a href="#use-cases">Use cases</a>
           <a href="#principles">Principles</a>
@@ -83,7 +83,7 @@ export default function Home() {
           </div>
           <div className="hero-footnote">
             <span className="footnote-icon">✓</span>
-            <span>Set the limits. Check every action. Keep the record.</span>
+            <span>Set the limits. Check every action. Keep the proof.</span>
           </div>
         </div>
 
@@ -125,10 +125,10 @@ export default function Home() {
 
 
       <section className="section trust-section" id="trust">
-        <div className="section-kicker">TRUST</div>
+        <div className="section-kicker">PROOF</div>
         <div className="trust-intro">
           <div>
-            <h2>Trust should be checked, <em>not assumed.</em></h2>
+            <h2>Don&apos;t take the AI&apos;s word for it. <em>Check it.</em></h2>
           </div>
           <div className="trust-copy">
             <p>When software acts for a business, saying it followed the rules is not enough. The business should be able to see what was approved, what was done, and whether the two match.</p>
@@ -152,10 +152,10 @@ export default function Home() {
             <span className="trust-number">03 / REVIEW</span>
             <div className="trust-symbol">✓</div>
             <h3>A record you can review</h3>
-            <p>Each decision is stored with the approval it relied on and the result. Your team or an auditor can review it without relying only on our word.</p>
+            <p>For every action you get the why, how and what happened: the rule and approval behind it, the steps taken, and the result. Your team or an outside auditor can review it.</p>
           </article>
         </div>
-        <p className="trust-footnote">Parmana records what was approved, what was checked and what happened. It does not decide whether your policies are the right ones. That remains your business decision.</p>
+        <p className="trust-footnote">Parmana records what was approved, what was checked and what happened. It does not decide whether your rules are the right ones. That remains your business decision.</p>
       </section>
 
       <section className="section intro-section" id="approach">
@@ -164,7 +164,7 @@ export default function Home() {
           <h2>AI needs control at <em>the moment it acts.</em></h2>
           <div className="intro-copy">
             <p>Testing AI models and writing AI policies both matter. But they do not stop an agent from making a payment or changing a customer record on the wrong day. When AI takes action, the business needs a check on that exact action, before it happens.</p>
-            <p>Parmana focuses on that moment: confirming the action is allowed, then keeping a record of what was allowed and what was done.</p>
+            <p>Parmana focuses on that moment: confirming the action is allowed, then keeping a record of what was allowed and what was done. It works with the systems you already use, so you don&apos;t need new equipment. Hosting costs still apply.</p>
             <a className="underlined-link" href="#capabilities">See the three steps <Arrow /></a>
           </div>
         </div>
