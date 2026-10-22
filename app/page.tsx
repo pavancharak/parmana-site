@@ -154,7 +154,7 @@ export default function Home() {
             <span className="trust-number">03 / REVIEW</span>
             <div className="trust-symbol">✓</div>
             <h3>A record you can review</h3>
-            <p>For every action you get the why, how and what happened: the rule and approval behind it, the steps taken, and the result. Your team or an outside auditor can review it.</p>
+            <p>For every action you get the why, how and what happened: the rule and approval behind it, the steps taken, and the result. Your team can review it, and anyone can check it without trusting Parmana's servers.</p>
           </article>
         </div>
         <p className="trust-footnote">Parmana records what was approved, what was checked and what happened. It does not decide whether your rules are the right ones. That remains your business decision.</p>
