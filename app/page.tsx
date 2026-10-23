@@ -134,7 +134,7 @@ export default function Home() {
           </div>
           <div className="trust-copy">
             <p>When software acts for a business, saying it followed the rules is not enough. The business should be able to see what was approved, what was done, and whether the two match.</p>
-            <p>Parmana sits between the AI and your systems. It applies your limits before each action goes through, and records what happened so it can be reviewed later.</p>
+            <p>Parmana sits between agents and your business systems, ensuring they execute only what your business has authorised. It checks each action before it goes through, and records what happened so it can be reviewed later.</p>
           </div>
         </div>
         <div className="trust-grid">
