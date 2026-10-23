@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Parmana Systems | Control for AI That Acts for Your Business",
   description:
-    "Parmana lets businesses set clear limits on what AI can do, checks every action against those limits, and keeps a record of each decision.",
+    "Parmana sits between agents and your business systems, ensuring they execute only what your business has authorised.",
   metadataBase: new URL("https://parmanasystems.com"),
   alternates: { canonical: "/" },
   twitter: { card: "summary" },
