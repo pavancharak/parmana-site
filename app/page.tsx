@@ -166,7 +166,7 @@ export default function Home() {
           <h2>AI needs control at <em>the moment it acts.</em></h2>
           <div className="intro-copy">
             <p>Testing AI models and writing AI policies both matter. But they do not stop an agent from making a payment or changing a customer record on the wrong day. When AI takes action, the business needs a check on that exact action, before it happens.</p>
-            <p>Parmana focuses on that moment: confirming the action is allowed, then keeping a record of what was allowed and what was done. It works with the systems you already use, so you don&apos;t need new equipment. Hosting costs still apply.</p>
+            <p>Parmana focuses on that moment: confirming the action is allowed, then keeping a record of what was allowed and what was done. It connects to the business tools you already use through connectors, currently HubSpot, GitHub, Paytm and Slack, so you don&apos;t need new equipment. You pay for your own hosting.</p>
             <a className="underlined-link" href="#capabilities">See the three steps <Arrow /></a>
           </div>
         </div>
