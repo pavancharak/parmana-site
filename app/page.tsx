@@ -293,7 +293,7 @@ export default function Home() {
           <span>parmana<span className="brand-light">systems</span></span>
         </a>
         <p>Control for AI that acts on your business&apos;s behalf.</p>
-        <div className="footer-links"><a href="#approach">The problem</a><a href="#capabilities">How it works</a><a href="#questions">Questions</a><a href="#contact">Contact</a><a href="https://docs.parmanasystems.com" target="_blank" rel="noreferrer">Docs</a><a href="https://blog.parmanasystems.com" target="_blank" rel="noreferrer">Blog</a></div>
+        <div className="footer-links"><a href="#approach">The problem</a><a href="#capabilities">How it works</a><a href="#questions">Questions</a><a href="/security">Security review</a><a href="/compare">Compare</a><a href="/verify">Verify a record</a><a href="#contact">Contact</a><a href="https://docs.parmanasystems.com" target="_blank" rel="noreferrer">Docs</a><a href="https://blog.parmanasystems.com" target="_blank" rel="noreferrer">Blog</a></div>
         <span className="copyright">© {new Date().getFullYear()} Parmana Systems</span>
       </footer>
     </main>
