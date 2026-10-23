@@ -21,8 +21,8 @@ const capabilities = [
     number: "03",
     title: "Keep a record",
     description:
-      "For every action, Parmana keeps the why (the rule and approval behind it), the how (the steps it went through) and the what (whether it went ahead or was stopped), so your team can review it at any time.",
-    tag: "Proof you can show",
+      "For every action, Parmana keeps a record of why it was allowed or stopped, the steps it went through, and whether it went ahead. Your team can review it at any time.",
+    tag: "A record you can show",
   },
 ];
 
@@ -39,7 +39,7 @@ const useCases = [
   },
   {
     title: "Public services",
-    text: "Apply defined rules consistently, and send exceptions to a person for decision.",
+    text: "Apply the same rules to everyone, and send exceptions to a person to decide.",
     number: "03",
   },
 ];
@@ -76,8 +76,8 @@ export default function Home() {
           <h1>AI can act for your business.<br /><em>Only within the limits you set.</em></h1>
           <p className="hero-description">
             AI agents are starting to issue refunds, update records, approve requests
-            and move money. Parmana checks each action against the limits your business
-            has approved before it happens, and keeps a clear record of every decision.
+            and move money. Parmana sits between them and your business systems, so they
+            only do what your business has authorised. Every decision is recorded.
           </p>
           <div className="hero-actions">
             <a className="button button-dark" href="#approach">See how it works <Arrow /></a>
@@ -85,7 +85,7 @@ export default function Home() {
           </div>
           <div className="hero-footnote">
             <span className="footnote-icon">✓</span>
-            <span>Set the limits. Check every action. Keep the proof.</span>
+            <span>Set the limits. Check each action. Keep a record.</span>
           </div>
         </div>
 
@@ -154,7 +154,7 @@ export default function Home() {
             <span className="trust-number">03 / REVIEW</span>
             <div className="trust-symbol">✓</div>
             <h3>A record you can review</h3>
-            <p>For every action you get the why, how and what happened: the rule and approval behind it, the steps taken, and the result. Your team can review it, and anyone can check it without trusting Parmana's servers.</p>
+            <p>For every action, you can see why it was allowed or stopped, the steps it went through, and what happened. Your team can review it, and anyone can check it without relying on Parmana.</p>
           </article>
         </div>
         <p className="trust-footnote">Parmana records what was approved, what was checked and what happened. It does not decide whether your rules are the right ones. That remains your business decision.</p>
@@ -165,8 +165,8 @@ export default function Home() {
         <div className="intro-grid">
           <h2>AI needs control at <em>the moment it acts.</em></h2>
           <div className="intro-copy">
-            <p>Testing AI models and writing AI policies both matter. But they do not stop an agent from making a payment or changing a customer record on the wrong day. When AI takes action, the business needs a check on that exact action, before it happens.</p>
-            <p>Parmana focuses on that moment: confirming the action is allowed, then keeping a record of what was allowed and what was done. It connects to the business tools you already use through connectors, currently HubSpot, GitHub, Paytm and Slack, so you don&apos;t need new equipment. You pay for your own hosting.</p>
+            <p>Testing AI and writing rules for it both matter. But neither stops an agent from making a payment or changing a customer record on the wrong day. When AI takes action, the business needs a check on that exact action, before it happens.</p>
+            <p>Parmana focuses on that moment: confirming the action is allowed, then keeping a record of what was allowed and what was done. It connects to the business tools you already use, for now HubSpot, GitHub, Paytm and Slack, so you don&apos;t need new equipment. You pay for your own hosting.</p>
             <a className="underlined-link" href="#capabilities">See the three steps <Arrow /></a>
           </div>
         </div>
@@ -205,7 +205,7 @@ export default function Home() {
           <div className="section-kicker">02 — HOW IT WORKS</div>
           <div className="section-heading-row">
             <h2>Three steps to <em>keep AI in bounds.</em></h2>
-            <p>Simple to explain, and simple to audit.</p>
+            <p>Simple to explain, and easy to review.</p>
           </div>
           <div className="capability-grid">
             {capabilities.map((item) => (
