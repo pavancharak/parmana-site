@@ -45,6 +45,7 @@ export default function Home() {
           <a href="#proof">Proof</a>
           <a href="/vision">Vision</a>
           <a href="https://docs.parmanasystems.com" target="_blank" rel="noreferrer">Docs <span aria-hidden="true">↗</span></a>
+          <a href="https://blog.parmanasystems.com" target="_blank" rel="noreferrer">Blog <span aria-hidden="true">↗</span></a>
         </nav>
         <a className="button button-dark header-cta" href={bookingUrl} target="_blank" rel="noreferrer">Book a meeting <Arrow /></a>
       </header>
@@ -137,6 +138,7 @@ export default function Home() {
           <a href="/verify">Verify a record</a>
           <a href="/questions">Questions</a>
           <a href="https://docs.parmanasystems.com" target="_blank" rel="noreferrer">Docs</a>
+          <a href="https://blog.parmanasystems.com" target="_blank" rel="noreferrer">Blog</a>
           <a href={bookingUrl} target="_blank" rel="noreferrer">Contact</a>
         </div>
         <span className="copyright">© {new Date().getFullYear()} Parmana Systems</span>
