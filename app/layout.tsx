@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Parmana Systems | Control for AI That Acts for Your Business",
+  title: "Parmana Systems | The trust layer for every action",
   description:
-    "Parmana sits between agents and your business systems, ensuring they execute only what your business has authorised.",
+    "Parmana checks every action, by a person or a machine, against the limits your business sets, and keeps proof of what happened.",
   metadataBase: new URL("https://parmanasystems.com"),
   alternates: { canonical: "/" },
   twitter: { card: "summary" },
   openGraph: {
-    title: "Parmana Systems | Control for AI That Acts for Your Business",
+    title: "Parmana Systems | The trust layer for every action",
     description:
-      "AI can act for your business, within limits you set. Parmana checks every action and keeps the record.",
+      "Every action stays within what your business allowed. Parmana checks each one and keeps the proof.",
     url: "https://parmanasystems.com",
     siteName: "Parmana Systems",
     type: "website",
