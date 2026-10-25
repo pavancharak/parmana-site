@@ -43,6 +43,7 @@ export default function Home() {
         <nav className="desktop-nav" aria-label="Main navigation">
           <a href="#how-it-works">How it works</a>
           <a href="#proof">Proof</a>
+          <a href="/vision">Vision</a>
           <a href="https://docs.parmanasystems.com" target="_blank" rel="noreferrer">Docs <span aria-hidden="true">↗</span></a>
         </nav>
         <a className="button button-dark header-cta" href={bookingUrl} target="_blank" rel="noreferrer">Book a meeting <Arrow /></a>
@@ -130,6 +131,7 @@ export default function Home() {
         <p>The trust layer for every action.</p>
         <div className="footer-links">
           <a href="#how-it-works">How it works</a>
+          <a href="/vision">Vision</a>
           <a href="/security">Security review</a>
           <a href="/compare">Compare</a>
           <a href="/verify">Verify a record</a>
