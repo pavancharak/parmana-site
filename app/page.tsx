@@ -1,299 +1,142 @@
-import { questions } from "../lib/questions";
+const bookingUrl = "https://cal.com/pavan-charak/";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
-const capabilities = [
+const steps = [
   {
-    number: "01",
     title: "Set the limits",
-    description:
-      "Turn your business rules into clear limits: which actions the AI may take, how much it can spend or change, and who approves exceptions.",
-    tag: "Your rules",
+    text: "Decide what each person and machine can do, how far they can go, and who approves anything beyond that.",
   },
   {
-    number: "02",
-    title: "Check each action",
-    description:
-      "Every action is compared with your limits before it reaches your systems. If approval is missing or unclear, the action does not go ahead.",
-    tag: "Before it happens",
+    title: "Check every action",
+    text: "Each action is compared with your limits before it runs. If approval is missing or unclear, it stops.",
   },
   {
-    number: "03",
-    title: "Keep a record",
-    description:
-      "For every action, Parmana keeps a record of why it was allowed or stopped, the steps it went through, and whether it went ahead. Your team can review it at any time.",
-    tag: "A record you can show",
+    title: "Keep the proof",
+    text: "Every action gets a record of who approved it, what ran, and whether it matched. Anyone can check that record.",
   },
 ];
 
-const useCases = [
+const proofPoints = [
   {
-    title: "Financial services",
-    text: "Keep payments, refunds and account changes within the limits you approve.",
-    number: "01",
+    title: "Authority is always clear",
+    text: "Every action traces back to a named person or rule that allowed it. No one can approve their own request.",
   },
   {
-    title: "Business operations",
-    text: "Control what AI can do across sales, finance, purchasing and other business systems.",
-    number: "02",
+    title: "Nothing runs without approval",
+    text: "Missing or unclear approval stops the action. It never goes ahead and gets reviewed later.",
   },
   {
-    title: "Public services",
-    text: "Apply the same rules to everyone, and send exceptions to a person to decide.",
-    number: "03",
+    title: "Results you can verify",
+    text: "Each record shows what was approved and what actually happened, and it can be checked without relying on Parmana.",
   },
 ];
 
 export default function Home() {
   return (
     <main>
-      <div className="announcement">
-        <span className="announcement-dot" />
-        CONTROL FOR AI THAT ACTS FOR YOUR BUSINESS
-        <a href="#approach">See how it works <Arrow /></a>
-      </div>
-
       <header className="site-header">
-        <a className="brand" href="#" aria-label="Parmana Systems home">
+        <a className="brand" href="/" aria-label="Parmana Systems home">
           <img className="brand-mark" src="/logo-mark.svg" alt="" width="27" height="27" />
           <span>parmana<span className="brand-light">systems</span></span>
         </a>
         <nav className="desktop-nav" aria-label="Main navigation">
-          <a href="#approach">The problem</a>
-          <a href="#trust">Proof</a>
-          <a href="#capabilities">How it works</a>
-          <a href="#use-cases">Use cases</a>
-          <a href="#principles">Principles</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#proof">Proof</a>
           <a href="https://docs.parmanasystems.com" target="_blank" rel="noreferrer">Docs <span aria-hidden="true">↗</span></a>
-          <a href="https://blog.parmanasystems.com" target="_blank" rel="noreferrer">Blog <span aria-hidden="true">↗</span></a>
         </nav>
-        <a className="button button-dark header-cta" href="https://cal.com/pavan-charak/" target="_blank" rel="noreferrer">Book a meeting <Arrow /></a>
+        <a className="button button-dark header-cta" href={bookingUrl} target="_blank" rel="noreferrer">Book a meeting <Arrow /></a>
       </header>
 
-      <section className="hero">
-        <div className="hero-copy">
-          <div className="eyebrow"><span /> BUILT FOR AI THAT TAKES ACTION</div>
-          <h1>AI can act for your business.<br /><em>Only within the limits you set.</em></h1>
-          <p className="hero-description">
-            AI agents are starting to issue refunds, update records, approve requests
-            and move money. Parmana sits between them and your business systems, so they
-            only do what your business has authorised. Every decision is recorded.
+      <section className="tl-hero">
+        <div>
+          <div className="eyebrow"><span />The trust layer for every action</div>
+          <h1>Every action stays within what your business allowed.</h1>
+          <p className="tl-subhead">
+            Parmana checks every action, whether a person or a machine takes it, against
+            the limits you set. Then it keeps proof of what happened.
           </p>
           <div className="hero-actions">
-            <a className="button button-dark" href="#approach">See how it works <Arrow /></a>
-            <a className="text-link" href="#principles">Our principles <span>↓</span></a>
-          </div>
-          <div className="hero-footnote">
-            <span className="footnote-icon">✓</span>
-            <span>Set the limits. Check each action. Keep a record.</span>
+            <a className="button button-dark" href={bookingUrl} target="_blank" rel="noreferrer">Book a meeting <Arrow /></a>
+            <a className="text-link" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a>
           </div>
         </div>
 
-        <div className="hero-visual" aria-label="Illustration of an AI action being checked against approved limits">
-          <div className="visual-topline">
-            <span>APPROVAL CHECK</span>
-            <span className="live-indicator">● LIMITS APPLIED</span>
-          </div>
-          <div className="flow-card flow-proposal">
-            <div className="flow-icon ai-icon">AI</div>
-            <div><span className="flow-label">01 / REQUEST</span><strong>AI proposes an action</strong><small>Make a $4,800 payment</small></div>
-            <span className="flow-status">REQUEST</span>
-          </div>
-          <div className="flow-connector"><span /></div>
-          <div className="authority-box">
-            <div className="authority-heading">
-              <div className="flow-icon shield-icon">✓</div>
-              <div><span className="flow-label">02 / CHECK</span><strong>Compare with your limits</strong></div>
-              <span className="verified-pill">APPROVED</span>
-            </div>
-            <div className="check-row"><span>Action type</span><b>Payment</b><span className="check">✓</span></div>
-            <div className="check-row"><span>Spending limit</span><b>$5,000 max</b><span className="check">✓</span></div>
-            <div className="check-row"><span>Permission</span><b>Active</b><span className="check">✓</span></div>
-          </div>
-          <div className="flow-connector"><span /></div>
-          <div className="flow-card flow-execution">
-            <div className="flow-icon execution-icon">↗</div>
-            <div><span className="flow-label">03 / RESULT</span><strong>Approved action goes ahead</strong><small>Record saved for review</small></div>
-            <span className="flow-status success">ALLOWED</span>
-          </div>
-          <div className="visual-bottom"><span>SET LIMITS</span><i /> <span>CHECK</span><i /> <span>ACT</span><i /> <span>RECORD</span></div>
-        </div>
+        <figure className="tl-receipt" aria-label="Example record of an action that was allowed">
+          <figcaption className="tl-receipt-head">
+            <span>Example record</span>
+            <span className="tl-status">Allowed</span>
+          </figcaption>
+          <dl>
+            <div className="tl-receipt-row"><dt>Requested by</dt><dd>Billing assistant</dd></div>
+            <div className="tl-receipt-row"><dt>Action</dt><dd>Refund $120 to a customer</dd></div>
+            <div className="tl-receipt-row"><dt>Limit</dt><dd>Up to $200, set by Finance</dd></div>
+            <div className="tl-receipt-row"><dt>Check</dt><dd>Within limit</dd></div>
+            <div className="tl-receipt-row"><dt>Result</dt><dd>Refund issued</dd></div>
+          </dl>
+          <p className="tl-receipt-foot">Record saved and ready to review.</p>
+        </figure>
       </section>
 
-      <section className="statement-strip">
-        <div className="strip-label">THE PROBLEM</div>
-        <p>Most AI tools can suggest what to do. Few can make sure the system <strong>only does what the business has approved.</strong></p>
-      </section>
-
-
-      <section className="section trust-section" id="trust">
-        <div className="section-kicker">PROOF</div>
-        <div className="trust-intro">
-          <div>
-            <h2>Don&apos;t take the AI&apos;s word for it. <em>Check it.</em></h2>
-          </div>
-          <div className="trust-copy">
-            <p>When software acts for a business, saying it followed the rules is not enough. The business should be able to see what was approved, what was done, and whether the two match.</p>
-            <p>Parmana sits between agents and your business systems, ensuring they execute only what your business has authorised. It checks each action before it goes through, and records what happened so it can be reviewed later.</p>
-          </div>
-        </div>
-        <div className="trust-grid">
-          <article className="trust-card">
-            <span className="trust-number">01 / SET</span>
-            <div className="trust-symbol">◎</div>
-            <h3>You set the limits</h3>
-            <p>Your business decides what the AI can do, how much it can spend or change, and under what conditions. The AI does not decide its own permissions.</p>
-          </article>
-          <article className="trust-card">
-            <span className="trust-number">02 / CHECK</span>
-            <div className="trust-symbol">⌁</div>
-            <h3>Every action is checked</h3>
-            <p>Before an action reaches your systems, Parmana checks it against your limits. If approval is missing or unclear, the action does not go ahead.</p>
-          </article>
-          <article className="trust-card">
-            <span className="trust-number">03 / REVIEW</span>
-            <div className="trust-symbol">✓</div>
-            <h3>A record you can review</h3>
-            <p>For every action, you can see why it was allowed or stopped, the steps it went through, and what happened. Your team can review it, and anyone can check it without relying on Parmana.</p>
-          </article>
-        </div>
-        <p className="trust-footnote">Parmana records what was approved, what was checked and what happened. It does not decide whether your rules are the right ones. That remains your business decision.</p>
-      </section>
-
-      <section className="section intro-section" id="approach">
-        <div className="section-kicker">01 — THE PROBLEM</div>
-        <div className="intro-grid">
-          <h2>AI needs control at <em>the moment it acts.</em></h2>
-          <div className="intro-copy">
-            <p>Testing AI and writing rules for it both matter. But neither stops an agent from making a payment or changing a customer record on the wrong day. When AI takes action, the business needs a check on that exact action, before it happens.</p>
-            <p>Parmana focuses on that moment: confirming the action is allowed, then keeping a record of what was allowed and what was done. It connects to the business tools you already use, for now HubSpot, GitHub, Paytm and Slack, so you don&apos;t need new equipment. You pay for your own hosting.</p>
-            <a className="underlined-link" href="#capabilities">See the three steps <Arrow /></a>
-          </div>
-        </div>
-      </section>
-
-
-      <section className="section video-section" id="explainer">
-        <div className="section-kicker">WATCH THE EXPLAINER</div>
-        <div className="video-heading">
-          <h2>See how Parmana <em>keeps AI within limits.</em></h2>
-          <p>A short introduction to the problem and how we solve it.</p>
-        </div>
-        <div className="video-frame">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/BmEDAFNi5Rg"
-            title="Parmana Systems explainer video"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
-        </div>
-        <div className="video-summary">
-          <h3>In short</h3>
-          <ul>
-            <li>AI agents can now pay suppliers, issue refunds and change records.</li>
-            <li>Parmana checks each action against your business rules before it happens.</li>
-            <li>A person approves the actions that need approval.</li>
-            <li>Every decision is recorded, with the reason it was allowed or stopped.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section className="capabilities-section" id="capabilities">
-        <div className="section">
-          <div className="section-kicker">02 — HOW IT WORKS</div>
-          <div className="section-heading-row">
-            <h2>Three steps to <em>keep AI in bounds.</em></h2>
-            <p>Simple to explain, and easy to review.</p>
-          </div>
-          <div className="capability-grid">
-            {capabilities.map((item) => (
-              <article className="capability-card" key={item.number}>
-                <div className="card-top"><span>{item.number}</span><span className="card-tag">{item.tag}</span></div>
-                <div className="capability-symbol">{item.number === "01" ? "⌘" : item.number === "02" ? "⊙" : "⌁"}</div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <a href="#contact" aria-label={`Talk to us about: ${item.title}`}>Talk to us about this <Arrow /></a>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section authority-section" id="principles">
-        <div className="section-kicker">03 — OUR PRINCIPLES</div>
-        <div className="authority-grid">
-          <div>
-            <h2>AI can suggest.<br /><em>Your business approves.</em></h2>
-            <p className="authority-lead">An AI&apos;s confidence is not permission. Access to a system is not the same as being allowed to use it for any purpose. Every action needs a clear approval.</p>
-          </div>
-          <div className="principle-list">
-            <div><span>01</span><p><strong>Clear limits</strong><br />Every action is measured against limits your business has defined.</p></div>
-            <div><span>02</span><p><strong>Stop when unsure</strong><br />If approval is missing or unclear, the action does not go ahead.</p></div>
-            <div><span>03</span><p><strong>Clear records</strong><br />Each record shows what was approved and what was done.</p></div>
-            <div><span>04</span><p><strong>People stay accountable</strong><br />Exceptions and judgment calls go to people, who remain responsible for them.</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="use-cases-section" id="use-cases">
-        <div className="section">
-          <div className="section-kicker">04 — WHERE IT APPLIES</div>
-          <div className="section-heading-row">
-            <h2>Where controlled AI action <em>matters most.</em></h2>
-            <p>Any business where a mistake with money, customers or records is costly.</p>
-          </div>
-          <div className="use-case-list">
-            {useCases.map((item) => (
-              <article className="use-case" key={item.number}>
-                <span className="use-number">{item.number}</span>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-                <a href="#contact" aria-label={`Talk to us about: ${item.title}`}>↗</a>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="evidence-section">
-        <div className="evidence-pattern" aria-hidden="true" />
-        <div className="evidence-content">
-          <div className="section-kicker light-kicker">THE PROMISE</div>
-          <h2>Let AI do more work.<br /><em>Keep control of what it can do.</em></h2>
-          <p>Draw a clear line between what AI suggests and what your business approves. Every action that goes through is one you authorized, and you can show it.</p>
-          <a className="button button-light" href="https://cal.com/pavan-charak/" target="_blank" rel="noreferrer">Book a 30-minute meeting <Arrow /></a>
-          <div className="evidence-sequence"><span>SET LIMITS</span><b>→</b><span>CHECK</span><b>→</b><span>ACT</span><b>→</b><span>RECORD</span></div>
-        </div>
-      </section>
-
-      <section className="section" id="questions">
-        <div className="section-kicker">05 — COMMON QUESTIONS</div>
-        <ul className="question-list">
-          {questions.map((q) => (
-            <li key={q.slug}>
-              <a href={`/questions/${q.slug}`}>{q.question}</a>
+      <section className="tl-section" id="how-it-works">
+        <p className="section-kicker">How it works</p>
+        <h2>Three steps. <em>Every action checked.</em></h2>
+        <ol className="tl-steps">
+          {steps.map((step, index) => (
+            <li className="tl-card" key={step.title}>
+              <span className="tl-step-number">{index + 1}</span>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
             </li>
           ))}
-        </ul>
+        </ol>
       </section>
 
-      <section className="contact-section" id="contact">
-        <div className="section-kicker">06 — LET&apos;S TALK</div>
-        <div className="contact-row">
-          <div><h2>Let&apos;s talk about your AI plans.</h2><p>Exploring AI agents in financial services, operations or public services? We would like to hear what you are building and where control matters most.</p></div>
-          <a className="button button-dark" href="https://cal.com/pavan-charak/" target="_blank" rel="noreferrer">Book a meeting <Arrow /></a>
+      <section className="tl-band" id="proof">
+        <div className="tl-section">
+          <p className="section-kicker">Proof</p>
+          <h2>Clear authority. <em>Results you can check.</em></h2>
+          <div className="tl-steps">
+            {proofPoints.map((point) => (
+              <article className="tl-card" key={point.title}>
+                <span className="tl-check" aria-hidden="true">✓</span>
+                <h3>{point.title}</h3>
+                <p>{point.text}</p>
+              </article>
+            ))}
+          </div>
+          <p className="tl-note">
+            Parmana shows what was approved and what ran. It does not decide whether your
+            rules are the right ones. That stays with your business.
+          </p>
+        </div>
+      </section>
+
+      <section className="tl-cta">
+        <div className="tl-cta-inner">
+          <div>
+            <h2>Let every action show its authority.</h2>
+            <p>Tell us where your business needs a clear line between what machines can do and what they are allowed to do.</p>
+          </div>
+          <a className="button button-light" href={bookingUrl} target="_blank" rel="noreferrer">Book a meeting <Arrow /></a>
         </div>
       </section>
 
       <footer className="site-footer">
-        <a className="brand footer-brand" href="#">
+        <a className="brand footer-brand" href="/">
           <img className="brand-mark" src="/logo-mark.svg" alt="" width="27" height="27" />
           <span>parmana<span className="brand-light">systems</span></span>
         </a>
-        <p>Control for AI that acts on your business&apos;s behalf.</p>
-        <div className="footer-links"><a href="#approach">The problem</a><a href="#capabilities">How it works</a><a href="#questions">Questions</a><a href="/security">Security review</a><a href="/compare">Compare</a><a href="/verify">Verify a record</a><a href="#contact">Contact</a><a href="https://docs.parmanasystems.com" target="_blank" rel="noreferrer">Docs</a><a href="https://blog.parmanasystems.com" target="_blank" rel="noreferrer">Blog</a></div>
+        <p>The trust layer for every action.</p>
+        <div className="footer-links">
+          <a href="#how-it-works">How it works</a>
+          <a href="/security">Security review</a>
+          <a href="/compare">Compare</a>
+          <a href="/verify">Verify a record</a>
+          <a href="/questions">Questions</a>
+          <a href="https://docs.parmanasystems.com" target="_blank" rel="noreferrer">Docs</a>
+          <a href={bookingUrl} target="_blank" rel="noreferrer">Contact</a>
+        </div>
         <span className="copyright">© {new Date().getFullYear()} Parmana Systems</span>
       </footer>
     </main>
