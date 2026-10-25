@@ -382,3 +382,215 @@ a:focus-visible, button:focus-visible {
   padding-left: 1.25rem;
   line-height: 2;
 }
+
+
+/* Simple homepage: the trust layer for every action */
+.tl-hero {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(64px, 9vw, 120px) 7%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(40px, 6vw, 96px);
+  align-items: center;
+}
+.tl-hero h1 {
+  font-size: clamp(40px, 5.6vw, 72px);
+  line-height: 1.04;
+  letter-spacing: -.055em;
+  color: var(--stripe-ink);
+  margin-bottom: 24px;
+}
+.tl-subhead {
+  font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.6;
+  color: var(--stripe-muted);
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+.tl-receipt {
+  margin: 0;
+  background: #ffffff;
+  border: 1px solid var(--stripe-border);
+  border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(10, 37, 64, .08);
+  padding: clamp(22px, 3vw, 32px);
+}
+.tl-receipt-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--stripe-border);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--stripe-ink);
+}
+.tl-status {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0a6b3f;
+  background: #e5f6ee;
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+.tl-receipt dl {
+  margin: 0;
+}
+.tl-receipt-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f3f7;
+  font-size: 14px;
+}
+.tl-receipt-row dt {
+  color: var(--stripe-muted);
+}
+.tl-receipt-row dd {
+  margin: 0;
+  font-weight: 500;
+  text-align: right;
+}
+.tl-receipt-foot {
+  margin: 18px 0 0;
+  font-size: 13px;
+  color: var(--stripe-muted);
+}
+.tl-section {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(72px, 9vw, 120px) 7%;
+}
+.tl-section > .section-kicker {
+  margin-bottom: 18px;
+}
+.tl-section h2 {
+  font-size: clamp(34px, 4.2vw, 54px);
+  line-height: 1.08;
+  letter-spacing: -.055em;
+  color: var(--stripe-ink);
+  max-width: 720px;
+}
+.tl-section h2 em,
+.tl-cta h2 em {
+  font-style: normal;
+  color: var(--stripe-blue);
+}
+.tl-band {
+  background: var(--stripe-soft);
+  border-top: 1px solid var(--stripe-border);
+  border-bottom: 1px solid var(--stripe-border);
+}
+.tl-steps {
+  list-style: none;
+  padding: 0;
+  margin: 48px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.tl-card {
+  background: #ffffff;
+  border: 1px solid var(--stripe-border);
+  border-radius: 16px;
+  padding: clamp(22px, 2.5vw, 30px);
+  box-shadow: 0 4px 16px rgba(10, 37, 64, .035);
+}
+.tl-step-number,
+.tl-check {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e8f1fd;
+  color: var(--stripe-blue);
+  font-size: 15px;
+  font-weight: 600;
+}
+.tl-card h3 {
+  font-size: 20px;
+  letter-spacing: -.035em;
+  color: var(--stripe-ink);
+  margin: 24px 0 10px;
+}
+.tl-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--stripe-muted);
+  margin: 0;
+}
+.tl-note {
+  max-width: 760px;
+  margin: 36px 0 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--stripe-muted);
+}
+.tl-cta {
+  background: var(--deep);
+  color: #ffffff;
+}
+.tl-cta-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(72px, 9vw, 110px) 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.tl-cta h2 {
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1.1;
+  letter-spacing: -.05em;
+  color: #ffffff;
+  margin: 0 0 14px;
+  max-width: 640px;
+}
+.tl-cta p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #c7d0e0;
+  margin: 0;
+  max-width: 560px;
+}
+@media (max-width: 900px) {
+  .tl-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .tl-steps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 620px) {
+  .tl-hero {
+    padding: 56px 6%;
+  }
+  .tl-section {
+    padding: 64px 6%;
+  }
+  .tl-cta-inner {
+    padding: 64px 6%;
+  }
+  .tl-hero h1 {
+    font-size: 40px;
+  }
+  .tl-section h2 {
+    font-size: 34px;
+  }
+  .tl-card h3 {
+    margin-top: 20px;
+  }
+}
+
+.footer-links {
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
+.footer-links a {
+  white-space: nowrap;
+}
