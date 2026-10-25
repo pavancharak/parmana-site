@@ -594,3 +594,29 @@ a:focus-visible, button:focus-visible {
 .footer-links a {
   white-space: nowrap;
 }
+
+.tl-outcomes {
+  list-style: none;
+  padding: 0;
+  margin: 40px 0 0;
+  max-width: 760px;
+  border-top: 1px solid var(--stripe-border);
+}
+.tl-outcomes li {
+  padding: 20px 0 20px 28px;
+  border-bottom: 1px solid var(--stripe-border);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--stripe-ink);
+  position: relative;
+}
+.tl-outcomes li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 27px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--stripe-blue);
+}
