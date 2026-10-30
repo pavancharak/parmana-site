@@ -1,46 +1,41 @@
-import { Footer, Header, bookingUrl } from "../components/Site";
+const vision = "A world where actions taken on people's behalf can be trusted, because they can always be checked.";
 
-const steps = [
-  { title: "Set the limits", text: "Decide what each person and system may do, how far they can go, and who approves anything beyond that." },
-  { title: "Check every action", text: "Each action is compared with your limits before it runs. If approval is missing or unclear, it stops." },
-  { title: "Keep the record", text: "Each action gets a record of who approved it, what ran, and whether it matched. Anyone can check that record." },
+const mission =
+  "Give any organisation explicit, verifiable limits on the actions its people, systems and AI agents take, with accountable approval and records that anyone can check without trusting the organisation that acted.";
+
+const principles = [
+  { title: "Actions, not actors, and not technologies", text: "The same rules apply to every actor and every stack. Parmana governs what is done, not which model, vendor or cryptographic scheme does it." },
+  { title: "Limits are explicit", text: "Rules are written down, versioned and open to dispute, not hidden in prompts, habits or model behaviour." },
+  { title: "Trust doesn't rest on us", text: "Anyone can verify a record offline, with no account and no network. The verifier states what it cannot prove, such as who owns a key." },
+  { title: "Fail closed", text: "When a system is misconfigured or unsure, it stops rather than guessing." },
 ];
 
 export default function Home() {
   return (
     <main>
-      <Header />
       <div className="wrap hero">
-        <p className="label">The trust layer for every action</p>
-        <h1>Every action stays within what your business allowed.</h1>
-        <p className="lead">Parmana checks each action against the limits you set, whether a person or a machine takes it, and keeps a record anyone can verify.</p>
-        <div className="actions">
-          <a className="button" href={bookingUrl} target="_blank" rel="noreferrer">Book a meeting</a>
-          <a className="text-link" href="/vision">Read our vision</a>
-        </div>
+        <p className="label">Parmana · Draft for review · 30 October 2026</p>
+        <h1>Vision</h1>
+        <p className="lead">{vision}</p>
+        <h2>Mission</h2>
+        <p className="body">{mission}</p>
       </div>
-      <section className="block soft" id="how-it-works">
+      <section className="block soft">
         <div className="wrap">
-          <p className="label">How it works</p>
-          <h2>Three steps. Every action checked.</h2>
+          <h2>Principles</h2>
           <ol className="items">
-            {steps.map((step) => (
-              <li key={step.title}>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
+            {principles.map((principle) => (
+              <li key={principle.title}>
+                <h3>{principle.title}</h3>
+                <p>{principle.text}</p>
               </li>
             ))}
           </ol>
         </div>
       </section>
-      <section className="closing">
-        <div className="wrap">
-          <h2>See how it fits your business.</h2>
-          <p>Tell us where you need a clear line between what an AI agent can suggest and what it is allowed to do.</p>
-          <a className="button" href={bookingUrl} target="_blank" rel="noreferrer">Book a meeting</a>
-        </div>
-      </section>
-      <Footer />
+      <footer className="site-footer">
+        <span>© {new Date().getFullYear()} Parmana Systems</span>
+      </footer>
     </main>
   );
 }

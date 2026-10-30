@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Parmana Systems",
-  description:
-    "Parmana checks each action against the limits your business has set, whether a person or a machine takes it, and keeps a record anyone can verify.",
+  title: "Parmana vision and mission",
+  description: "A world where actions taken on people's behalf can be trusted, because they can always be checked.",
   metadataBase: new URL("https://parmanasystems.com"),
 };
 
