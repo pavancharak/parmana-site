@@ -33,7 +33,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="block" aria-labelledby="mission-heading">
+      <section className="block mission" aria-labelledby="mission-heading">
         <div className="wrap split">
           <div>
             <h2 id="mission-heading">Mission</h2>
