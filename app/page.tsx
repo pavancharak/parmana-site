@@ -16,6 +16,7 @@ export default function Home() {
       <div className="wrap hero">
         <h1>Vision</h1>
         <p className="lead">{vision}</p>
+        <img className="hero-image" src="/hero.png" alt="" width="2048" height="768" />
         <h2>Mission</h2>
         <p className="body">{mission}</p>
       </div>
