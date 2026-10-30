@@ -55,8 +55,8 @@ export default function Home() {
           <div className="eyebrow"><span />The trust layer for every action</div>
           <h1>Every action stays within what your business allowed.</h1>
           <p className="tl-subhead">
-            Parmana checks every action, whether a person or a machine takes it, against
-            the limits you set. Then it keeps proof of what happened.
+            Parmana checks each action against the limits you set, whether a person or a
+            machine takes it, and keeps a record that anyone can verify.
           </p>
           <div className="hero-actions">
             <a className="button button-dark" href={bookingUrl} target="_blank" rel="noreferrer">Book a meeting <Arrow /></a>
