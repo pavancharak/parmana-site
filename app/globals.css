@@ -22,7 +22,7 @@ img { display: block; }
 
 .hero { padding: 88px 0 104px; border-bottom: 1px solid var(--line); }
 .hero h1 { font-size: clamp(40px, 5vw, 60px); font-weight: 300; line-height: 1.1; letter-spacing: -.02em; margin-bottom: 32px; }
-.vision-statement { font-size: clamp(24px, 2.6vw, 36px); font-weight: 500; line-height: 1.2; letter-spacing: -.02em; max-width: 900px; }
+.vision-statement { font-size: clamp(22px, 2.2vw, 30px); font-weight: 500; line-height: 1.2; letter-spacing: -.02em; max-width: 900px; }
 .philosophy { margin-top: 40px; max-width: 580px; padding-left: 20px; border-left: 2px solid var(--accent); font-size: 18px; color: var(--muted); }
 
 .block { padding: 112px 0; }
