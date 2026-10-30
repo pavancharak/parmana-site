@@ -39,3 +39,6 @@ h2 { font-size: clamp(26px, 3.4vw, 36px); line-height: 1.2; font-weight: 600; le
 .site-footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding: 28px 24px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
 .site-footer nav { display: flex; gap: 20px; }
 @media (max-width: 620px) { .site-header nav { display: none; } .hero { padding: 64px 0 56px; } }
+.body { font-size: 18px; color: var(--ink); max-width: 680px; margin: 0; }
+.hero h1 { margin-bottom: 20px; }
+.hero h2 { font-size: 22px; margin: 48px 0 12px; }
