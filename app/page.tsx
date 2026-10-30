@@ -81,7 +81,8 @@ export default function Home() {
           </ol>
           <blockquote className="statement">
             <p className="statement-lead">A stronger foundation for society.</p>
-            <p className="statement-text">Confidence in an action should come from verification, not reputation. Every authorised action should be open to independent checking.</p>
+            <p className="statement-text">&ldquo;Confidence in an action should come from verification, not reputation. Every authorised action should be open to independent checking.&rdquo;</p>
+            <p className="statement-by">Pavan Charak, Founder</p>
           </blockquote>
         </div>
       </section>
