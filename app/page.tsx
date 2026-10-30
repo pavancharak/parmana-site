@@ -2,10 +2,10 @@ const mission =
   "Help any organisation set clear limits on what its people, systems and AI agents can do, get the right person to approve each action, and keep records that anyone can check.";
 
 const principles = [
-  { title: "Actions, not actors, and not technologies", text: "The same rules apply to every actor and every stack. Parmana governs what is done, not which model, vendor or cryptographic scheme does it." },
-  { title: "Limits are explicit", text: "Rules are written down, versioned and open to dispute, not hidden in prompts, habits or model behaviour." },
-  { title: "Trust doesn't rest on us", text: "Anyone can verify a record offline, with no account and no network. The verifier states what it cannot prove, such as who owns a key." },
-  { title: "Fail closed", text: "When a system is misconfigured or unsure, it stops rather than guessing." },
+  { title: "The same rules for everyone", text: "The same rules apply whether a person, a computer program or an AI agent does the action, and whatever tools it uses." },
+  { title: "Limits are written down", text: "Rules are clear, recorded and open to challenge. They are not hidden in instructions or left to habit." },
+  { title: "Anyone can check the record", text: "Anyone can check a record without an account or internet access. The checker also says what it cannot confirm, such as whether a signing key really belongs to a given company." },
+  { title: "When in doubt, stop", text: "If something is set up wrong or approval is unclear, the action stops instead of guessing." },
 ];
 
 export default function Home() {
