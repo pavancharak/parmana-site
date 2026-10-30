@@ -1,10 +1,23 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const title = "Parmana Systems | Trust Through Independent Verification";
+const description =
+  "Parmana Systems helps organisations define authority, approve actions and create independently verifiable records across people, software and AI agents.";
+
 export const metadata: Metadata = {
-  title: "Parmana vision and mission",
-  description: "A world where actions taken on people's behalf can be trusted, because they can always be checked.",
+  title,
+  description,
   metadataBase: new URL("https://parmanasystems.com"),
+  alternates: { canonical: "/" },
+  openGraph: {
+    title,
+    description,
+    url: "https://parmanasystems.com/",
+    siteName: "Parmana Systems",
+    type: "website",
+  },
+  twitter: { card: "summary", title, description },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

@@ -1,5 +1,7 @@
 const vision = "A world where actions taken on people's behalf can be trusted, because they can always be checked.";
 
+const philosophy = "Trust should not depend on believing what happened. It should depend on being able to check what happened.";
+
 const mission =
   "Help organisations define what their people, systems and AI agents are allowed to do, ensure the right approvals happen before actions are taken, and create records that anyone can independently verify.";
 
@@ -10,34 +12,52 @@ const principles = [
   { title: "When in doubt, stop", text: "If something is set up wrong or approval is unclear, the action stops instead of guessing." },
 ];
 
+const linkedIn = "https://www.linkedin.com/in/pavancharak/";
+const docs = "https://docs.parmanasystems.com";
+
 export default function Home() {
   return (
     <main>
-      <div className="wrap hero">
-        <div className="hero-split">
+      <header className="site-header">
+        <a className="wordmark" href="/">Parmana Systems</a>
+        <nav aria-label="Site">
+          <a href={docs} target="_blank" rel="noopener noreferrer">Docs</a>
+        </nav>
+      </header>
+
+      <section className="hero" aria-labelledby="vision-heading">
+        <div className="wrap">
+          <h1 id="vision-heading">Vision</h1>
+          <p className="vision-statement">{vision}</p>
+          <p className="philosophy">{philosophy}</p>
+        </div>
+      </section>
+
+      <section className="block" aria-labelledby="mission-heading">
+        <div className="wrap split">
           <div>
-            <h1>Vision</h1>
-            <p className="vision-statement">{vision}</p>
-            <h2>Mission</h2>
+            <h2 id="mission-heading">Mission</h2>
             <p className="body">{mission}</p>
           </div>
           <div className="video-frame">
             <iframe
               src="https://www.youtube.com/embed/N3qC9jpuViA"
-              title="Parmana explainer"
+              title="How Parmana governs AI agents"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               loading="lazy"
             />
           </div>
         </div>
-      </div>
-      <section className="block soft">
+      </section>
+
+      <section className="block soft" aria-labelledby="principles-heading">
         <div className="wrap">
-          <h2>Principles</h2>
-          <ol className="items">
-            {principles.map((principle) => (
+          <h2 id="principles-heading">Principles</h2>
+          <ol className="principles">
+            {principles.map((principle, index) => (
               <li key={principle.title}>
+                <span className="number">{String(index + 1).padStart(2, "0")}</span>
                 <h3>{principle.title}</h3>
                 <p>{principle.text}</p>
               </li>
@@ -45,15 +65,23 @@ export default function Home() {
           </ol>
         </div>
       </section>
-      <section className="closing">
+
+      <section className="block" aria-labelledby="talk-heading">
         <div className="wrap">
-          <h2>Want to talk about this?</h2>
-          <p>Connect with Pavan Charak on LinkedIn.</p>
-          <a className="button" href="https://www.linkedin.com/in/pavancharak/" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+          <h2 id="talk-heading">Want to talk about this?</h2>
+          <p className="body">Connect with Pavan Charak on LinkedIn.</p>
+          <a className="button" href={linkedIn} target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
         </div>
       </section>
+
       <footer className="site-footer">
-        <span>© {new Date().getFullYear()} Parmana Systems</span>
+        <div className="wrap footer-inner">
+          <span>© {new Date().getFullYear()} Parmana Systems</span>
+          <nav aria-label="Footer">
+            <a href={docs} target="_blank" rel="noopener noreferrer">Docs</a>
+            <a href={linkedIn} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </nav>
+        </div>
       </footer>
     </main>
   );
