@@ -1,5 +1,5 @@
 const mission =
-  "Give any organisation explicit, verifiable limits on the actions its people, systems and AI agents take, with accountable approval and records that anyone can check without trusting the organisation that acted.";
+  "Help any organisation set clear limits on what its people, systems and AI agents can do, get the right person to approve each action, and keep records that anyone can check.";
 
 const principles = [
   { title: "Actions, not actors, and not technologies", text: "The same rules apply to every actor and every stack. Parmana governs what is done, not which model, vendor or cryptographic scheme does it." },
