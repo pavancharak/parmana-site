@@ -61,10 +61,10 @@ h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 500; line-height: 1.2; lett
 }
 
 /* Alignment: the mission text and the 9:16 video share one top edge. */
-.mission { padding-top: 80px; }
+.mission { padding-top: 64px; padding-bottom: 64px; }
 .split { align-items: start; gap: 96px; }
 .split h2 { margin-top: 0; }
-.video-frame { width: 360px; max-width: 100%; margin-top: 0; justify-self: end; }
+.video-frame { width: 300px; max-width: 100%; margin-top: 0; justify-self: end; }
 @media (max-width: 760px) {
   .mission { padding-top: 56px; }
   .video-frame { width: 100%; max-width: 360px; justify-self: start; }
