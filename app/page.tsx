@@ -79,7 +79,10 @@ export default function Home() {
               </li>
             ))}
           </ol>
-          <p className="statement">Society will be better off. Trust should not depend on believing who took an action. It should depend on being able to verify whether that action was authorised.</p>
+          <div className="statement">
+            <p className="statement-lead">Society will be better off.</p>
+            <p className="statement-text">Trust should not depend on believing who took an action. It should depend on being able to verify whether that action was authorised.</p>
+          </div>
         </div>
       </section>
 
