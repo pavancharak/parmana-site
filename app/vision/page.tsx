@@ -5,24 +5,28 @@ const bookingUrl = "https://cal.com/pavan-charak/";
 export const metadata: Metadata = {
   title: "Vision | Parmana Systems",
   description:
-    "Every action stays within what your business allowed. Our vision for AI that acts for businesses, within limits they set, with proof anyone can check.",
+    "A world where actions taken on people's behalf can be trusted, because they can always be checked.",
   alternates: { canonical: "/vision" },
 };
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
-const beliefs = [
+const principles = [
   {
-    title: "Authority comes from the business",
-    text: "The limits your business sets decide what an action may do. An AI system cannot grant itself more, and no one can approve their own request.",
+    title: "Actions, not actors or technologies",
+    text: "The same limits and records apply whether a person, a script or an AI agent acts, and whatever system carries the action out.",
   },
   {
-    title: "Proof should not depend on trust",
-    text: "Anyone should be able to check what was approved and what happened, without relying on the company that ran the action.",
+    title: "Limits are written down",
+    text: "Rules are explicit, versioned and open to dispute. They do not live in hidden prompts or habits.",
   },
   {
-    title: "Suggesting and doing are different",
-    text: "An AI can propose an action. Your business decides whether it goes ahead, and a person decides the exceptions.",
+    title: "Trust does not rest on us",
+    text: "Anyone can check a record without an account, using only the key they choose to trust. The checker says what it cannot prove.",
+  },
+  {
+    title: "Stop when unsure",
+    text: "If a system is misconfigured or approval is missing, the action stops. It does not guess.",
   },
 ];
 
@@ -53,10 +57,11 @@ export default function Vision() {
       <section className="tl-hero">
         <div>
           <div className="eyebrow"><span />Our vision</div>
-          <h1>Every action stays within what your business allowed.</h1>
+          <h1>Trust should come from checking, not from taking someone&rsquo;s word.</h1>
           <p className="tl-subhead">
-            We want businesses to let AI do more of the work, without losing control of what it
-            does or the ability to prove it.
+            We want every action taken on a business&rsquo;s behalf, by a person, a system or an AI
+            agent, to stay within limits that were set in advance and to leave a record anyone can
+            check.
           </p>
           <div className="hero-actions">
             <a className="button button-dark" href={bookingUrl} target="_blank" rel="noreferrer">Book a meeting <Arrow /></a>
@@ -67,14 +72,14 @@ export default function Vision() {
 
       <section className="tl-band">
         <div className="tl-section">
-          <p className="section-kicker">What we believe</p>
-          <h2>Three ideas <em>shape everything we build.</em></h2>
+          <p className="section-kicker">Principles</p>
+          <h2>Four principles. <em>We build to them.</em></h2>
           <ol className="tl-steps">
-            {beliefs.map((belief, index) => (
-              <li className="tl-card" key={belief.title}>
+            {principles.map((principle, index) => (
+              <li className="tl-card" key={principle.title}>
                 <span className="tl-step-number">{index + 1}</span>
-                <h3>{belief.title}</h3>
-                <p>{belief.text}</p>
+                <h3>{principle.title}</h3>
+                <p>{principle.text}</p>
               </li>
             ))}
           </ol>

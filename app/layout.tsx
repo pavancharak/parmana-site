@@ -4,14 +4,14 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Parmana Systems | The trust layer for every action",
   description:
-    "Parmana checks every action, by a person or a machine, against the limits your business sets, and keeps proof of what happened.",
+    "Parmana checks each action against the limits your business has set, whether a person or a machine takes it, and keeps a record anyone can verify.",
   metadataBase: new URL("https://parmanasystems.com"),
   alternates: { canonical: "/" },
   twitter: { card: "summary" },
   openGraph: {
     title: "Parmana Systems | The trust layer for every action",
     description:
-      "Every action stays within what your business allowed. Parmana checks each one and keeps the proof.",
+      "Trust should come from checking, not from taking someone's word. Parmana checks each action and keeps a record anyone can verify.",
     url: "https://parmanasystems.com",
     siteName: "Parmana Systems",
     type: "website",
