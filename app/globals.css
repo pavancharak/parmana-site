@@ -1,10 +1,10 @@
 :root {
-  --ink: #111418;
-  --muted: #5b6168;
-  --line: #d9dce0;
+  --ink: #0a2540;
+  --muted: #425466;
+  --line: #e3e8ee;
   --paper: #ffffff;
-  --soft: #f6f7f8;
-  --accent: #1f4ed8;
+  --soft: #f6f9fc;
+  --accent: #635bff;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
@@ -15,7 +15,7 @@ img { display: block; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; text-decoration: none; }
 .site-header nav { display: flex; gap: 24px; font-size: 15px; }
 .site-header nav a, .site-footer nav a { text-decoration: none; color: var(--muted); }
-.button { display: inline-block; padding: 10px 16px; background: var(--ink); color: #fff; text-decoration: none; font-size: 15px; border-radius: 2px; }
+.button { display: inline-block; padding: 10px 16px; background: var(--ink); color: #fff; text-decoration: none; font-size: 15px; border-radius: 4px; }
 .hero { padding: 96px 0 80px; }
 .hero h1 { font-size: clamp(36px, 5vw, 56px); line-height: 1.1; font-weight: 600; letter-spacing: -.02em; margin: 0 0 24px; max-width: 760px; }
 .lead { font-size: 19px; color: var(--muted); max-width: 620px; margin: 0 0 36px; }
@@ -42,11 +42,11 @@ h2 { font-size: clamp(26px, 3.4vw, 36px); line-height: 1.2; font-weight: 600; le
 .body { font-size: 18px; color: var(--ink); max-width: 680px; margin: 0; }
 .hero h1 { margin-bottom: 20px; }
 .hero h2 { font-size: 22px; margin: 48px 0 12px; }
-.hero-image { display: block; width: 100%; height: auto; margin: 0 0 48px; border-radius: 2px; }
+.hero-image { display: block; width: 100%; height: auto; margin: 0 0 48px; border-radius: 4px; }
 .video-frame { position: relative; width: 100%; max-width: 360px; aspect-ratio: 9 / 16; margin: 0 0 48px; }
-.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 2px; }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 4px; }
 .hero-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 360px); gap: 56px; align-items: start; }
-.hero h1 { font-weight: 700; }
+.hero h1 { font-weight: 600; }
 .hero .video-frame { margin: 0; justify-self: end; }
 @media (max-width: 760px) { .hero-split { grid-template-columns: 1fr; gap: 40px; } .hero .video-frame { justify-self: stretch; max-width: none; } }
-.vision-statement { font-size: clamp(28px, 3.4vw, 42px); font-weight: 700; line-height: 1.2; letter-spacing: -.01em; color: var(--ink); max-width: 640px; margin: 0 0 40px; }
+.vision-statement { font-size: clamp(28px, 3.4vw, 42px); font-weight: 600; line-height: 1.2; letter-spacing: -.02em; color: var(--ink); max-width: 640px; margin: 0 0 40px; }
