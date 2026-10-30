@@ -12,6 +12,13 @@ const principles = [
   { title: "When in doubt, stop", text: "If something is set up wrong or approval is unclear, the action stops instead of guessing." },
 ];
 
+const benefits = [
+  { title: "Citizens", text: "Citizens can trust the institutions that act on their behalf, and have more confidence in the bureaucracy that serves them." },
+  { title: "Customers", text: "Customers can trust organisations that show what was approved and what happened." },
+  { title: "Partners", text: "Partners can rely on records they can check themselves, without relying on the other party's word." },
+  { title: "Businesses", text: "Businesses can prove their actions stayed within their own limits, which builds trust with everyone they work with." },
+];
+
 const linkedIn = "https://www.linkedin.com/in/pavancharak/";
 const docs = "https://docs.parmanasystems.com";
 
@@ -55,6 +62,20 @@ export default function Home() {
                 <span className="number">{String(index + 1).padStart(2, "0")}</span>
                 <h3>{principle.title}</h3>
                 <p>{principle.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="block soft" aria-labelledby="benefits-heading">
+        <div className="wrap">
+          <h2 id="benefits-heading">Why it matters</h2>
+          <ol className="principles">
+            {benefits.map((benefit) => (
+              <li key={benefit.title}>
+                <h3>{benefit.title}</h3>
+                <p>{benefit.text}</p>
               </li>
             ))}
           </ol>
