@@ -14,19 +14,23 @@ export default function Home() {
   return (
     <main>
       <div className="wrap hero">
-        <h1>Vision</h1>
-        <p className="lead">{vision}</p>
-        <div className="video-frame">
-          <iframe
-            src="https://www.youtube.com/embed/N3qC9jpuViA"
-            title="Parmana explainer"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            loading="lazy"
-          />
+        <div className="hero-split">
+          <div>
+            <h1>Vision</h1>
+            <p className="lead">{vision}</p>
+            <h2>Mission</h2>
+            <p className="body">{mission}</p>
+          </div>
+          <div className="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/N3qC9jpuViA"
+              title="Parmana explainer"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
         </div>
-        <h2>Mission</h2>
-        <p className="body">{mission}</p>
       </div>
       <section className="block soft">
         <div className="wrap">
