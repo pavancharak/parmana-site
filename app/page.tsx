@@ -14,6 +14,15 @@ export default function Home() {
       <div className="wrap hero">
         <h1>Vision</h1>
         <img className="hero-image" src="/hero.png" alt="" width="2048" height="768" />
+        <div className="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/N3qC9jpuViA"
+            title="Parmana explainer"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            loading="lazy"
+          />
+        </div>
         <h2>Mission</h2>
         <p className="body">{mission}</p>
       </div>
