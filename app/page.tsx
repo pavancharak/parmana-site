@@ -1,5 +1,3 @@
-const vision = "A world where actions taken on people's behalf can be trusted, because they can always be checked.";
-
 const mission =
   "Give any organisation explicit, verifiable limits on the actions its people, systems and AI agents take, with accountable approval and records that anyone can check without trusting the organisation that acted.";
 
@@ -15,7 +13,6 @@ export default function Home() {
     <main>
       <div className="wrap hero">
         <h1>Vision</h1>
-        <p className="lead">{vision}</p>
         <img className="hero-image" src="/hero.png" alt="" width="2048" height="768" />
         <h2>Mission</h2>
         <p className="body">{mission}</p>
