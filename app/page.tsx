@@ -79,10 +79,10 @@ export default function Home() {
               </li>
             ))}
           </ol>
-          <div className="statement">
+          <blockquote className="statement">
             <p className="statement-lead">A stronger foundation for society.</p>
             <p className="statement-text">Confidence in an action should come from verification, not reputation. Every authorised action should be open to independent checking.</p>
-          </div>
+          </blockquote>
         </div>
       </section>
 
