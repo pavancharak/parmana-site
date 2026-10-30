@@ -80,8 +80,8 @@ export default function Home() {
             ))}
           </ol>
           <div className="statement">
-            <p className="statement-lead">Society will be better off.</p>
-            <p className="statement-text">Trust should not depend on believing who took an action. It should depend on being able to verify whether that action was authorised.</p>
+            <p className="statement-lead">A stronger foundation for society.</p>
+            <p className="statement-text">Confidence in an action should come from verification, not reputation. Every authorised action should be open to independent checking.</p>
           </div>
         </div>
       </section>
