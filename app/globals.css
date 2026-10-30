@@ -42,3 +42,4 @@ h2 { font-size: clamp(26px, 3.4vw, 36px); line-height: 1.2; font-weight: 600; le
 .body { font-size: 18px; color: var(--ink); max-width: 680px; margin: 0; }
 .hero h1 { margin-bottom: 20px; }
 .hero h2 { font-size: 22px; margin: 48px 0 12px; }
+.hero-image { display: block; width: 100%; height: auto; margin: 0 0 48px; border-radius: 2px; }
