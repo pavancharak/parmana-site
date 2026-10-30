@@ -1,7 +1,7 @@
 const vision = "A world where actions taken on people's behalf can be trusted, because they can always be checked.";
 
 const mission =
-  "Help any organisation set clear limits on what its people, systems and AI agents can do, get the right person to approve each action, and keep records that anyone can check.";
+  "Help organisations define what their people, systems and AI agents are allowed to do, ensure the right approvals happen before actions are taken, and create records that anyone can independently verify.";
 
 const principles = [
   { title: "The same rules for everyone", text: "The same rules apply whether a person, a computer program or an AI agent does the action, and whatever tools it uses." },
