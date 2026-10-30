@@ -17,7 +17,7 @@ export default function Home() {
         <div className="hero-split">
           <div>
             <h1>Vision</h1>
-            <p className="lead">{vision}</p>
+            <p className="vision-statement">{vision}</p>
             <h2>Mission</h2>
             <p className="body">{mission}</p>
           </div>

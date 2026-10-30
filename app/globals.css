@@ -49,3 +49,4 @@ h2 { font-size: clamp(26px, 3.4vw, 36px); line-height: 1.2; font-weight: 600; le
 .hero h1 { font-weight: 700; }
 .hero .video-frame { margin: 0; justify-self: end; }
 @media (max-width: 760px) { .hero-split { grid-template-columns: 1fr; gap: 40px; } .hero .video-frame { justify-self: stretch; max-width: none; } }
+.vision-statement { font-size: clamp(28px, 3.4vw, 42px); font-weight: 700; line-height: 1.2; letter-spacing: -.01em; color: var(--ink); max-width: 640px; margin: 0 0 40px; }
