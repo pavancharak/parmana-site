@@ -14,7 +14,6 @@ export default function Home() {
   return (
     <main>
       <div className="wrap hero">
-        <p className="label">Parmana · Draft for review · 30 October 2026</p>
         <h1>Vision</h1>
         <p className="lead">{vision}</p>
         <h2>Mission</h2>
