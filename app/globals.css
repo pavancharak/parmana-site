@@ -69,3 +69,13 @@ h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 500; line-height: 1.2; lett
   .mission { padding-top: 56px; }
   .video-frame { width: 100%; max-width: 360px; justify-self: start; }
 }
+
+/* Vision and mission on the left, 9:16 video on the right. */
+.hero .split { align-items: start; gap: 80px; }
+.hero .split > div:first-child { padding-top: 8px; }
+.hero .video-frame { width: 320px; max-width: 100%; }
+.hero h2 { margin-top: 64px; }
+@media (max-width: 760px) {
+  .hero .video-frame { width: 100%; max-width: 360px; justify-self: start; }
+  .hero h2 { margin-top: 48px; }
+}

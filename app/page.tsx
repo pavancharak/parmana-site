@@ -26,16 +26,11 @@ export default function Home() {
       </header>
 
       <section className="hero" aria-labelledby="vision-heading">
-        <div className="wrap">
-          <h1 id="vision-heading">Vision</h1>
-          <p className="vision-statement">{vision}</p>
-          <p className="philosophy">{philosophy}</p>
-        </div>
-      </section>
-
-      <section className="block mission" aria-labelledby="mission-heading">
         <div className="wrap split">
           <div>
+            <h1 id="vision-heading">Vision</h1>
+            <p className="vision-statement">{vision}</p>
+            <p className="philosophy">{philosophy}</p>
             <h2 id="mission-heading">Mission</h2>
             <p className="body">{mission}</p>
           </div>
