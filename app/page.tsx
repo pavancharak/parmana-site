@@ -1,3 +1,5 @@
+const vision = "A world where actions taken on people's behalf can be trusted, because they can always be checked.";
+
 const mission =
   "Help any organisation set clear limits on what its people, systems and AI agents can do, get the right person to approve each action, and keep records that anyone can check.";
 
@@ -13,7 +15,7 @@ export default function Home() {
     <main>
       <div className="wrap hero">
         <h1>Vision</h1>
-        <img className="hero-image" src="/hero.png" alt="" width="2048" height="768" />
+        <p className="lead">{vision}</p>
         <div className="video-frame">
           <iframe
             src="https://www.youtube.com/embed/N3qC9jpuViA"
