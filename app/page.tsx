@@ -30,6 +30,13 @@ export default function Home() {
           </ol>
         </div>
       </section>
+      <section className="closing">
+        <div className="wrap">
+          <h2>Want to talk about this?</h2>
+          <p>Connect with Pavan Charak on LinkedIn.</p>
+          <a className="button" href="https://www.linkedin.com/in/pavancharak/" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+        </div>
+      </section>
       <footer className="site-footer">
         <span>© {new Date().getFullYear()} Parmana Systems</span>
       </footer>
