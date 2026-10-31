@@ -1,4 +1,4 @@
-# Parmana Systems website
+# Parmana Systems 
 
 The final site is the Next.js (React) app in `app/`. The legacy static `index.html` has been removed.
 
