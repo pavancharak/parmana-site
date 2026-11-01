@@ -1,11 +1,11 @@
 :root {
-  --ink: #1c1f26;
-  --muted: #5a6070;
-  --line: #e6e4df;
-  --paper: #fbfaf7;
+  --ink: #0e2a2b;
+  --muted: #4d6264;
+  --line: #d9e5e3;
+  --paper: #f4f8f6;
   --white: #ffffff;
-  --accent: #2f5bd3;
-  --accent-dark: #2448b0;
+  --accent: #0b7c6e;
+  --accent-dark: #08635a;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
