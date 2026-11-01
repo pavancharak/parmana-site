@@ -1,4 +1,6 @@
-const vision = "A world where actions taken on people's behalf can be trusted, because they can always be checked.";
+import { SiteFooter, SiteHeader } from "./components/SiteChrome";
+
+const vision ="A world where actions taken on people's behalf can be trusted, because they can always be checked.";
 
 const philosophy = "Trust should not depend on believing what happened. It should depend on being able to check what happened.";
 
@@ -20,17 +22,11 @@ const benefits = [
 ];
 
 const linkedIn = "https://www.linkedin.com/in/pavancharak/";
-const docs = "https://docs.parmanasystems.com";
 
 export default function Home() {
   return (
     <main>
-      <header className="site-header">
-        <a className="wordmark" href="/">Parmana Systems</a>
-        <nav aria-label="Site">
-          <a href={docs} target="_blank" rel="noopener noreferrer">Docs</a>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <section className="hero" aria-labelledby="vision-heading">
         <div className="wrap split">
@@ -95,15 +91,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="site-footer">
-        <div className="wrap footer-inner">
-          <span>© {new Date().getFullYear()} Parmana Systems</span>
-          <nav aria-label="Footer">
-            <a href={docs} target="_blank" rel="noopener noreferrer">Docs</a>
-            <a href={linkedIn} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </nav>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
