@@ -3,31 +3,31 @@ import { CallToAction, PageIntro, SiteFooter, SiteHeader } from "../components/S
 
 export const metadata: Metadata = {
   title: "Trust | Parmana Systems",
-  description: "Why Parmana's records can be checked without trusting Parmana, and what that check does not prove.",
+  description: "Why you can check a Parmana record yourself, without trusting us, and what that check does not prove.",
   alternates: { canonical: "/trust" },
 };
 
 const questions = [
   {
     title: "What may this agent do?",
-    text: "An instruction in a prompt is not a control. Parmana keeps the limits in a written, versioned policy, and a person approves each covered action.",
+    text: "A line in a prompt is not a rule. Parmana keeps the limits written down, and a person signs off on each action that needs it.",
   },
   {
-    title: "Can we prove what it did?",
-    text: "Logs written by the same system that acted are a claim. Parmana signs a record of the decision and the result, which can be checked later.",
+    title: "Can we prove what happened?",
+    text: "Logs from the system that did the work prove little. Parmana seals a record of each decision and result, so it can be checked later.",
   },
 ];
 
 const checks = [
-  "The record has not been changed since it was signed.",
-  "It was signed by a key you chose to trust.",
-  "The key's validity window and compromise status were respected.",
+  "The record has not been changed since it was sealed.",
+  "It was sealed by a key you chose to trust.",
+  "That key was valid at the time, and has not been revoked.",
 ];
 
 const limits = [
-  "It cannot prove that a signing key belongs to Parmana. That depends on how you obtained and compared the fingerprint.",
-  "It does not verify the policy a record cites, or the state of an external system.",
-  "It does not confirm that the action described in the record was carried out.",
+  "That a key really belongs to Parmana. You confirm that yourself, through a source you trust.",
+  "That the rules in the record were the right rules.",
+  "That the action was actually carried out in the outside system.",
 ];
 
 export default function TrustPage() {
@@ -35,16 +35,16 @@ export default function TrustPage() {
     <main>
       <SiteHeader />
 
-      <PageIntro eyebrow="Trust" title="Check the record yourself. Do not rely on our word.">
+      <PageIntro eyebrow="Trust" title="Check the record yourself. No need to take our word for it.">
         <p>
-          Parmana&rsquo;s signed records are built so that you can check them with a file and the keys you choose to trust.
-          The checker needs no network access and no account.
+          Each record can be checked with just the file and the keys you choose to trust. No account and no internet
+          connection are needed.
         </p>
       </PageIntro>
 
       <section className="block" aria-labelledby="questions-heading">
         <div className="wrap">
-          <h2 id="questions-heading">The two questions</h2>
+          <h2 id="questions-heading">Two simple questions</h2>
           <ol className="principles">
             {questions.map((question) => (
               <li key={question.title}>
@@ -77,7 +77,7 @@ export default function TrustPage() {
         </div>
       </section>
 
-      <CallToAction heading="Review the evidence yourself." text="The verifier is open source. The test vectors, the threat model and the security review scope are published with it." />
+      <CallToAction heading="Look at the evidence yourself." text="The checking tool is open source, and its tests and security review are published with it." />
 
       <SiteFooter />
     </main>
