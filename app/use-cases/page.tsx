@@ -39,7 +39,7 @@ export default function UseCasesPage() {
     <main>
       <SiteHeader />
 
-      <PageIntro eyebrow="Use cases" title="Where agents act for your business, you set the limits.">
+      <PageIntro eyebrow="Use cases" title="Your rules, applied to every agent action.">
         <p>
           Agents can issue refunds, pay suppliers, update customer deals, merge code and post to team chat. Each of these
           needs a clear limit and a record you can check later.
