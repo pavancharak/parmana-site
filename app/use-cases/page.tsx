@@ -3,34 +3,34 @@ import { CallToAction, PageIntro, SiteFooter, SiteHeader } from "../components/S
 
 export const metadata: Metadata = {
   title: "Use cases | Parmana Systems",
-  description: "Actions AI agents take on behalf of a business, such as refunds, vendor payments, CRM updates and pull requests, and how Parmana checks each one.",
+  description: "Everyday actions AI agents take for a business, such as refunds, supplier payments and customer updates, and how Parmana keeps each one within your rules.",
   alternates: { canonical: "/use-cases" },
 };
 
 const cases = [
   {
     title: "Refunds",
-    text: "An agent may issue a refund only within the limit your policy sets. Anything above it waits for a person's approval.",
+    text: "An agent can refund up to the amount you set. Anything larger waits for a person's approval.",
   },
   {
-    title: "Vendor payments",
-    text: "Payments need an explicit, signed approval before they are released. The payment system never sees the agent's credentials.",
+    title: "Supplier payments",
+    text: "Payments go out only after sign-off. The payment system never sees the agent's passwords.",
   },
   {
-    title: "CRM updates",
-    text: "Changes to deal stages and amounts are checked against policy, and each change is recorded so it can be read back and audited.",
+    title: "Customer deals",
+    text: "Changes to deal stages and amounts follow your rules, and each change is recorded.",
   },
   {
-    title: "Pull requests and releases",
-    text: "An agent may propose a merge or a release. Parmana releases it only when the required approval is on record.",
+    title: "Code changes",
+    text: "An agent can suggest a merge or a release. It goes ahead only once the required approval is on record.",
   },
   {
-    title: "Team channels",
-    text: "Messages an agent posts to a shared channel go through the same check, so the agent can only say what the policy allows.",
+    title: "Team chat",
+    text: "Messages to shared channels follow the same rules, so the agent says only what it is allowed to say.",
   },
   {
     title: "Your own systems",
-    text: "Any other system can be connected as an external connector. It receives only actions that were approved, once, as signed releases.",
+    text: "Any other system can be connected. It receives only the actions you have approved, and each one runs once.",
   },
 ];
 
@@ -39,16 +39,16 @@ export default function UseCasesPage() {
     <main>
       <SiteHeader />
 
-      <PageIntro eyebrow="Use cases" title="Where agents act for a business, Parmana sets the limit.">
+      <PageIntro eyebrow="Use cases" title="Where agents act for your business, you set the limits.">
         <p>
-          Companies want AI agents to issue refunds, pay vendors, update CRM deals, merge pull requests and post to team
-          channels. Each of these needs a written limit and a record that can be checked afterwards.
+          Agents can issue refunds, pay suppliers, update customer deals, merge code and post to team chat. Each of these
+          needs a clear limit and a record you can check later.
         </p>
       </PageIntro>
 
       <section className="block" aria-labelledby="cases-heading">
         <div className="wrap">
-          <h2 id="cases-heading">Common actions, checked the same way</h2>
+          <h2 id="cases-heading">Common actions, handled the same way</h2>
           <ol className="principles">
             {cases.map((item) => (
               <li key={item.title}>
@@ -60,7 +60,7 @@ export default function UseCasesPage() {
         </div>
       </section>
 
-      <CallToAction heading="Start with one workflow." text="Tell us the action your agents take most often, and we will set up the policy and the approval for it together." />
+      <CallToAction heading="Start with one everyday task." text="Tell us the action your agents take most often, and we will set up its rules and approvals together." />
 
       <SiteFooter />
     </main>
