@@ -35,7 +35,7 @@ export default function TrustPage() {
     <main>
       <SiteHeader />
 
-      <PageIntro eyebrow="Trust" title="Check the record yourself. No need to take our word for it.">
+      <PageIntro eyebrow="Trust" title="Don't trust us. Check the record.">
         <p>
           Each record can be checked with just the file and the keys you choose to trust. No account and no internet
           connection are needed.

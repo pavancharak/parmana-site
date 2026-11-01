@@ -42,7 +42,7 @@ export default function ProductPage() {
     <main>
       <SiteHeader />
 
-      <PageIntro eyebrow="Product" title="Every action checked before it happens.">
+      <PageIntro eyebrow="Product" title="Nothing runs until it is approved.">
         <p>
           Parmana stands between an AI agent and the systems it touches. It decides whether the agent is allowed to act,
           and it keeps a record that anyone can check. It does not decide what the agent should do.
