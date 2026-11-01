@@ -5,20 +5,20 @@ const vision ="A world where actions taken on people's behalf can be trusted, be
 const philosophy = "Trust should not depend on believing what happened. It should depend on being able to check what happened.";
 
 const mission =
-  "Help organisations define what their people, systems and AI agents are allowed to do, ensure the right approvals happen before actions are taken, and create records that anyone can independently verify.";
+  "Help organisations decide what their people, systems and AI agents may do, make sure the right approvals happen before anything is done, and keep records anyone can check.";
 
 const principles = [
-  { title: "The same rules for everyone", text: "The same rules apply whether a person, a computer program or an AI agent does the action, and whatever tools it uses." },
+  { title: "The same rules for everyone", text: "The same rules apply to a person, a computer program or an AI agent, whatever tools it uses." },
   { title: "Limits are written down", text: "Rules are clear, recorded and open to challenge. They are not hidden in instructions or left to habit." },
-  { title: "Anyone can check the record", text: "Anyone can check a record without an account or internet access. The checker also says what it cannot confirm, such as whether a signing key really belongs to a given company." },
+  { title: "Anyone can check the record", text: "Anyone can check a record without an account or internet access. The check also says what it cannot confirm, such as whether a signing key really belongs to a company." },
   { title: "When in doubt, stop", text: "If something is set up wrong or approval is unclear, the action stops instead of guessing." },
 ];
 
 const benefits = [
-  { title: "Citizens", text: "Citizens can trust the institutions that act on their behalf, and have more confidence in the bureaucracy that serves them." },
+  { title: "Citizens", text: "People can trust the institutions that act for them, and feel more confident in the services they rely on." },
   { title: "Customers", text: "Customers can trust organisations that show what was approved and what happened." },
-  { title: "Partners", text: "Partners can rely on records they can check themselves, without relying on the other party's word." },
-  { title: "Businesses", text: "Businesses can prove their actions stayed within their own limits, which builds trust with everyone they work with." },
+  { title: "Partners", text: "Partners can check records themselves, instead of taking the other party's word for it." },
+  { title: "Businesses", text: "Businesses can show that their actions stayed within their own limits, which builds trust with everyone they work with." },
 ];
 
 const linkedIn = "https://www.linkedin.com/in/pavancharak/";
