@@ -56,15 +56,14 @@ export default function Home() {
               <a className="button secondary" href="/trust">Check a record</a>
             </div>
           </div>
-          <div className="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/N3qC9jpuViA"
-              title="How Parmana governs AI agents"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-            />
-          </div>
+          <aside className="why-panel" aria-labelledby="why-heading">
+            <p className="eyebrow">Why it is important</p>
+            <h2 id="why-heading">Only approved actions, with a record anyone can check.</h2>
+            <p>
+              Parmana makes sure your AI agents take only the actions your business has approved, even when they could
+              technically do more.
+            </p>
+          </aside>
         </div>
       </section>
 
