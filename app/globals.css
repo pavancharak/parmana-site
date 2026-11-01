@@ -19,6 +19,41 @@ img { display: block; }
 .wordmark { font-size: 15px; font-weight: 600; letter-spacing: -.01em; text-decoration: none; }
 .site-header nav a { font-size: 14px; color: var(--muted); text-decoration: none; transition: color .15s; }
 .site-header nav a:hover { color: var(--ink); }
+.site-header nav { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; justify-content: flex-end; }
+.site-header nav .nav-cta { color: var(--accent); font-weight: 500; }
+
+/* Marketing pages below the homepage. */
+.page-intro { padding: 72px 0 88px; border-bottom: 1px solid var(--line); }
+.page-intro h1 { font-size: clamp(36px, 4.4vw, 52px); font-weight: 300; line-height: 1.15; letter-spacing: -.02em; margin: 16px 0 28px; max-width: 900px; }
+.page-intro .lede { font-size: 18px; color: var(--muted); max-width: 680px; }
+.page-intro .lede p + p { margin-top: 16px; }
+.eyebrow { font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0 40px; }
+.steps li { padding: 36px 0 48px; border-top: 1px solid var(--ink); }
+.steps .number { display: block; font-size: 13px; font-weight: 500; color: var(--accent); font-variant-numeric: tabular-nums; }
+.steps h3 { font-size: 20px; font-weight: 600; letter-spacing: -.01em; margin: 16px 0 12px; }
+.steps p { font-size: 16px; color: var(--muted); }
+
+.checklist { list-style: none; margin: 24px 0 0; padding: 0; }
+.checklist li { position: relative; padding: 14px 0 14px 28px; border-top: 1px solid var(--line); color: var(--ink); }
+.checklist li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 600; }
+.checklist.muted li { color: var(--muted); }
+.checklist.muted li::before { content: "–"; color: var(--muted); }
+.split-text { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 80px; }
+.split-text h2 { margin-bottom: 0; }
+
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+.button.secondary { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.button.secondary:hover { background: var(--white); }
+
+@media (max-width: 760px) {
+  .steps { grid-template-columns: 1fr; gap: 0; }
+  .split-text { grid-template-columns: 1fr; gap: 48px; }
+  .page-intro { padding: 56px 0 64px; }
+  .site-header { flex-wrap: wrap; gap: 16px; }
+  .site-header nav { width: 100%; justify-content: flex-start; gap: 12px 20px; }
+}
 
 .hero { padding: 88px 0 104px; border-bottom: 1px solid var(--line); }
 .hero h1 { font-size: clamp(40px, 5vw, 60px); font-weight: 300; line-height: 1.1; letter-spacing: -.02em; margin-bottom: 32px; }
@@ -46,7 +81,7 @@ h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 500; line-height: 1.2; lett
 
 .site-footer { border-top: 1px solid var(--line); padding: 32px 0; font-size: 14px; color: var(--muted); }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-.footer-inner nav { display: flex; gap: 24px; }
+.footer-inner nav { display: flex; gap: 12px 24px; flex-wrap: wrap; }
 .footer-inner a { text-decoration: none; transition: color .15s; }
 .footer-inner a:hover { color: var(--ink); }
 
