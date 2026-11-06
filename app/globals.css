@@ -144,3 +144,5 @@ h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 500; line-height: 1.2; lett
 @media (max-width: 600px) {
   .check-facts { grid-template-columns: 1fr; }
 }
+
+.footer-button { padding: 0.55rem 1rem; font-size: 0.95rem; }

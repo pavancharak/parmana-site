@@ -37,7 +37,7 @@ export function SiteFooter() {
         <span>© {new Date().getFullYear()} Parmana Systems</span>
         <nav aria-label="Footer">
           <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
-          <a href={linkedIn} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a className="button secondary footer-button" href={linkedIn} target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
         </nav>
       </div>
     </footer>
