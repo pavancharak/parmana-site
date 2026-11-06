@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const title = "Parmana Systems | Trust Through Independent Verification";
+const title = "Parmana | AI that stays within the rules you set";
 const description =
-  "Parmana Systems helps organisations define authority, approve actions and create independently verifiable records across people, software and AI agents.";
+  "Parmana checks every AI action against the rules you set, asks a person to approve where needed, and keeps a record anyone can check.";
 
 export const metadata: Metadata = {
   title,
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title,
     description,
     url: "https://parmanasystems.com/",
-    siteName: "Parmana Systems",
+    siteName: "Parmana",
     type: "website",
   },
   twitter: { card: "summary", title, description },

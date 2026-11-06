@@ -1,29 +1,23 @@
 import type { ReactNode } from "react";
 
-export const docs = "https://docs.parmanasystems.com";
-export const linkedIn = "https://www.linkedin.com/in/pavancharak/";
 export const booking = "https://cal.com/pavan-charak/";
-export const github = "https://github.com/pavancharak/parmana-core";
+export const linkedIn = "https://www.linkedin.com/in/pavancharak/";
+export const contactEmail = "founder@parmanasystems.com";
 
 const navItems = [
-  { href: "/product", label: "Product" },
-  { href: "/trust", label: "Trust" },
-  { href: "/use-cases", label: "Use cases" },
-  { href: docs, label: "Docs", external: true },
+  { href: "/how-it-works", label: "How it works" },
+  { href: "/check-a-record", label: "Check a record" },
+  { href: "/who-its-for", label: "Who it's for" },
 ];
 
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <a className="wordmark" href="/">Parmana Systems</a>
-      <nav aria-label="Site">
-        {navItems.map((item) =>
-          item.external ? (
-            <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer">{item.label}</a>
-          ) : (
-            <a key={item.label} href={item.href}>{item.label}</a>
-          ),
-        )}
+      <a className="wordmark" href="/">Parmana</a>
+      <nav aria-label="Main">
+        {navItems.map((item) => (
+          <a key={item.href} href={item.href}>{item.label}</a>
+        ))}
         <a className="nav-cta" href={booking} target="_blank" rel="noopener noreferrer">Book a call</a>
       </nav>
     </header>
@@ -36,11 +30,7 @@ export function SiteFooter() {
       <div className="wrap footer-inner">
         <span>© {new Date().getFullYear()} Parmana Systems</span>
         <nav aria-label="Footer">
-          <a href="/product">Product</a>
-          <a href="/trust">Trust</a>
-          <a href="/use-cases">Use cases</a>
-          <a href={docs} target="_blank" rel="noopener noreferrer">Docs</a>
-          <a href={github} target="_blank" rel="noopener noreferrer">Source</a>
+          <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
           <a href={linkedIn} target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </nav>
       </div>
@@ -48,7 +38,7 @@ export function SiteFooter() {
   );
 }
 
-/** Shared frame for the marketing pages below the homepage. */
+/** Shared heading block for the pages below the homepage. */
 export function PageIntro({ eyebrow, title, children }: { eyebrow: string; title: string; children: ReactNode }) {
   return (
     <section className="page-intro">
@@ -69,7 +59,7 @@ export function CallToAction({ heading, text }: { heading: string; text: string 
         <p className="body">{text}</p>
         <div className="cta-row">
           <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Book a call</a>
-          <a className="button secondary" href={docs} target="_blank" rel="noopener noreferrer">Read the docs</a>
+          <a className="button secondary" href={`mailto:${contactEmail}`}>Send an email</a>
         </div>
       </div>
     </section>
