@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 
 export const booking = "https://cal.com/pavan-charak/";
-export const linkedIn = "https://www.linkedin.com/in/pavancharak/";
 export const contactEmail = "founder@parmanasystems.com";
 
 const navItems = [
@@ -37,7 +36,6 @@ export function SiteFooter() {
         <span>© {new Date().getFullYear()} Parmana Systems</span>
         <nav aria-label="Footer">
           <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
-          <a className="button secondary footer-button" href={linkedIn} target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
           <a
             id="cy-effective-orcid-url"
             className="underline"
