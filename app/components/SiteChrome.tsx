@@ -42,11 +42,11 @@ export function SiteFooter() {
             href="https://orcid.org/0009-0003-5090-4737"
             target="orcid.widget"
             rel="me noopener noreferrer"
-            style={{ verticalAlign: "top" }}
+            style={{ display: "inline-flex", alignItems: "center", gap: "0.4em" }}
           >
             <img
               src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-              style={{ width: "1em", marginInlineStart: "0.5em" }}
+              style={{ width: "1em", height: "1em" }}
               alt="ORCID iD icon"
             />
             https://orcid.org/0009-0003-5090-4737
