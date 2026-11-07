@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 
 export const booking = "https://cal.com/pavan-charak/";
-export const linkedIn = "https://www.linkedin.com/in/pavancharak/";
 export const contactEmail = "founder@parmanasystems.com";
 
 const navItems = [
