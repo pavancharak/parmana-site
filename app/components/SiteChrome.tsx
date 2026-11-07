@@ -37,7 +37,6 @@ export function SiteFooter() {
         <span>© {new Date().getFullYear()} Parmana Systems</span>
         <nav aria-label="Footer">
           <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
-          <a className="button secondary footer-button" href={linkedIn} target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
           <a
             id="cy-effective-orcid-url"
             className="underline"
