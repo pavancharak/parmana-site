@@ -21,9 +21,9 @@ export const metadata: Metadata = {
 };
 
 const capabilities = [
-  { title: "READ", text: "Decide what information AI agents can access." },
-  { title: "WRITE", text: "Decide what information AI agents can change." },
-  { title: "EXECUTE", text: "Decide which actions AI agents can perform." },
+  { title: "READ", text: "Set what connected AI workflows may access." },
+  { title: "WRITE", text: "Set what connected AI workflows may update." },
+  { title: "EXECUTE", text: "Set which actions may pass through configured control paths." },
 ];
 
 const flow = [
@@ -107,7 +107,7 @@ export default function Home() {
       {/* 2. Can act, stays in control */}
       <section className="block" aria-labelledby="control-heading">
         <div className="wrap">
-          <h2 id="control-heading">AI can act. Your business stays in control.</h2>
+          <h2 id="control-heading">AI can act in connected workflows. Your business sets the limits.</h2>
           <p className="body">
             An AI agent might initiate a payment, update a customer record or prepare an approval request in a connected workflow.
           </p>
@@ -121,7 +121,7 @@ export default function Home() {
       {/* 3. Platform: READ, WRITE, EXECUTE */}
       <section id="platform" className="block soft" aria-labelledby="platform-heading">
         <div className="wrap">
-          <h2 id="platform-heading">You decide what AI can do.</h2>
+          <h2 id="platform-heading">You decide what connected AI workflows can do.</h2>
           <ul className="principles">
             {capabilities.map((item) => (
               <li key={item.title}>
@@ -136,7 +136,7 @@ export default function Home() {
       {/* 4. How it works */}
       <section id="how-it-works" className="block" aria-labelledby="flow-heading">
         <div className="wrap">
-          <h2 id="flow-heading">Every action has to follow your rules.</h2>
+          <h2 id="flow-heading">Requests through connected workflows follow your rules.</h2>
           <ol className="steps">
             {flow.map((step) => (
               <li key={step}>
@@ -159,7 +159,7 @@ export default function Home() {
       {/* 6. Records */}
       <section className="block" aria-labelledby="records-heading">
         <div className="wrap">
-          <h2 id="records-heading">Know what happened. Know why.</h2>
+          <h2 id="records-heading">Keep a record of each control decision.</h2>
           <p className="body">
             For requests processed through configured Parmana controls, a record can show what was requested, which configured
             rule was checked and what result the control path returned.
