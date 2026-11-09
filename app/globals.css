@@ -134,7 +134,7 @@ h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 500; line-height: 1.2; lett
 .check {
   display: block;
   width: 100%;
-  max-width: 100%;
+  max-width: 860px;
   min-width: 0;
 }
 .check > * { min-width: 0; }
@@ -158,6 +158,7 @@ h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 500; line-height: 1.2; lett
 .check-result.blocked { background: #fef2f2; color: #991b1b; }
 
 @media (max-width: 600px) {
+  .check { padding: 1.25rem; }
   .check-facts { grid-template-columns: 1fr; }
 }
 
