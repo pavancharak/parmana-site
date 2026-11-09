@@ -54,6 +54,12 @@ export default function CheckARecord() {
             </li>
           </ol>
         </div>
+        <p className="body" style={{ marginTop: "1.5rem" }}>
+          Get the verifier, setup steps and trust-key guidance from the{" "}
+          <a href="https://github.com/pavancharak/parmana-verifier" target="_blank" rel="noopener noreferrer">
+            Parmana Verifier repository
+          </a>.
+        </p>
       </section>
 
       <CallToAction
