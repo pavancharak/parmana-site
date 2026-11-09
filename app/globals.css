@@ -131,6 +131,22 @@ h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 500; line-height: 1.2; lett
 .hero-visual svg { width: 100%; height: auto; display: block; }
 
 .check { margin-top: 2rem; border: 1px solid #e5e7eb; border-radius: 16px; padding: 2rem; background: #ffffff; }
+.check {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+.check > * { min-width: 0; }
+.check-facts,
+.check-facts > div {
+  min-width: 0;
+}
+.check-result {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
 .check-choices { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem; }
 .choice { font: inherit; padding: 0.7rem 1.1rem; border-radius: 999px; border: 1px solid #c7d2fe; background: #ffffff; color: #1e1b4b; cursor: pointer; }
 .choice.active { background: #1e1b4b; color: #ffffff; border-color: #1e1b4b; }
