@@ -1,21 +1,42 @@
+import type { Metadata } from "next";
 import { CallToAction, PageIntro, SiteFooter, SiteHeader } from "../components/SiteChrome";
+
+export const metadata: Metadata = {
+  title: "Who Parmana is for",
+  description: "For organisations and partners who need defined controls and independently checkable records for selected AI workflows.",
+  alternates: {
+    canonical: "/who-its-for"
+  },
+  openGraph: {
+    title: "Who Parmana is for",
+    description: "For organisations and partners who need defined controls and independently checkable records for selected AI workflows.",
+    url: "/who-its-for",
+    siteName: "Parmana Systems",
+    type: "website"
+  },
+  twitter: {
+    card: "summary",
+    title: "Who Parmana is for",
+    description: "For organisations and partners who need defined controls and independently checkable records for selected AI workflows."
+  }
+};
 
 const audiences = [
   {
     title: "Businesses using AI",
-    text: "Show that your AI tools stayed within the limits you set, and keep a record of every important decision.",
+    text: "Apply configured limits to selected AI workflows routed through Parmana, and keep records of the checks those workflows perform.",
   },
   {
     title: "Customers",
-    text: "See what was approved and what happened, instead of relying on the company's word.",
+    text: "Check whether a signed record has changed and whether its supported signatures validate. The record does not independently prove that an external action occurred.",
   },
   {
     title: "Partners",
-    text: "Check records yourself, rather than depending on the other side to report them accurately.",
+    text: "Independently check the integrity and supported signatures of records shared with you, using public keys you trust.",
   },
   {
     title: "Regulators and auditors",
-    text: "Get clear, checkable evidence of how automated decisions were made and approved.",
+    text: "Review the cryptographic integrity of signed records. Assess the underlying rules, approvals and external events separately.",
   },
 ];
 
@@ -23,8 +44,8 @@ export default function WhoItsFor() {
   return (
     <main>
       <SiteHeader />
-      <PageIntro eyebrow="Who it's for" title="For anyone who needs to trust what AI does.">
-        <p>Parmana helps organisations and the people they work with, so that decisions can be trusted and checked.</p>
+      <PageIntro eyebrow="Who it's for" title="For teams that need to check selected AI activity.">
+        <p>Parmana is for organisations that route selected AI workflows through configured control paths, and for the people who need to review the resulting records. Activity outside those paths is not covered.</p>
       </PageIntro>
 
       <section className="block">
