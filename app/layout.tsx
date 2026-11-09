@@ -1,23 +1,29 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const title = "Parmana | AI that stays within the rules you set";
+const siteName = "Parmana Systems";
 const description =
-  "Parmana checks every AI action against the rules you set, asks a person to approve where needed, and keeps a record anyone can check.";
+  "Parmana checks AI agent requests routed through configured business workflows against the authority your business sets, and records those checks.";
 
 export const metadata: Metadata = {
-  title,
-  description,
   metadataBase: new URL("https://parmanasystems.com"),
-  alternates: { canonical: "/" },
-  openGraph: {
-    title,
-    description,
-    url: "https://parmanasystems.com/",
-    siteName: "Parmana",
-    type: "website",
+  title: {
+    default: "Control for AI agents in connected workflows",
+    template: "%s | Parmana Systems",
   },
-  twitter: { card: "summary", title, description },
+  description,
+  robots: { index: true, follow: true },
+  openGraph: {
+    siteName,
+    type: "website",
+    title: "Control for AI agents in connected workflows",
+    description,
+  },
+  twitter: {
+    card: "summary",
+    title: "Control for AI agents in connected workflows",
+    description,
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
