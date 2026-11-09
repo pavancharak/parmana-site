@@ -186,7 +186,7 @@ export default function Home() {
       {/* 8. Closing call to action */}
       <section className="block" aria-labelledby="closing-heading">
         <div className="wrap">
-          <h2 id="closing-heading">AI moves fast. Your rules stay in control.</h2>
+          <h2 id="closing-heading">In connected workflows, your rules stay in control.</h2>
           <p className="body">
             Give AI agents room to work in connected workflows, with authority limited to what your business has configured.
           </p>
