@@ -146,3 +146,26 @@ h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 500; line-height: 1.2; lett
 }
 
 .footer-button { padding: 0.55rem 1rem; font-size: 0.95rem; }
+
+
+/* Use the full content width for explanatory sections instead of narrow stacked paragraphs. */
+.content-grid {
+  display: grid;
+  gap: 32px 48px;
+  margin-top: 32px;
+}
+.content-grid-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.content-grid-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.content-grid .body {
+  max-width: none;
+  line-height: 1.5;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 760px) {
+  .content-grid-three,
+  .content-grid-two {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
