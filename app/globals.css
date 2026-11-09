@@ -169,3 +169,18 @@ h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 500; line-height: 1.2; lett
     gap: 24px;
   }
 }
+
+
+/* Balance the closing message with a dedicated action column. */
+.closing-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  gap: 56px;
+  align-items: center;
+}
+.closing-grid h2 { max-width: 760px; }
+.closing-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.closing-contact { max-width: none; margin: 0; font-size: 16px; }
+@media (max-width: 760px) {
+  .closing-grid { grid-template-columns: 1fr; gap: 28px; }
+}
