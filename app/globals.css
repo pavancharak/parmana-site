@@ -146,3 +146,41 @@ h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 500; line-height: 1.2; lett
 }
 
 .footer-button { padding: 0.55rem 1rem; font-size: 0.95rem; }
+
+
+/* Use the full content width for explanatory sections instead of narrow stacked paragraphs. */
+.content-grid {
+  display: grid;
+  gap: 32px 48px;
+  margin-top: 32px;
+}
+.content-grid-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.content-grid-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.content-grid .body {
+  max-width: none;
+  line-height: 1.5;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 760px) {
+  .content-grid-three,
+  .content-grid-two {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+
+/* Balance the closing message with a dedicated action column. */
+.closing-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  gap: 56px;
+  align-items: center;
+}
+.closing-grid h2 { max-width: 760px; }
+.closing-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.closing-contact { max-width: none; margin: 0; font-size: 16px; }
+@media (max-width: 760px) {
+  .closing-grid { grid-template-columns: 1fr; gap: 28px; }
+}
