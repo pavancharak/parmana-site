@@ -38,7 +38,7 @@ export default function CheckARecord() {
           <ol className="steps">
             <li>
               <h2>Get the record</h2>
-              <p className="body">The organisation that ran the action gives you the record it kept.</p>
+              <p className="body">The organisation gives you the signed record. You also need the public keys and trust details you intend to rely on, obtained through a channel you trust.</p>
             </li>
             <li>
               <h2>Check it on your own computer</h2>
@@ -47,7 +47,7 @@ export default function CheckARecord() {
               the organisation's real-world process.</p>
             </li>
             <li>
-              <h2>Know what happened</h2>
+              <h2>Understand what was verified</h2>
               <p className="body">A successful check means the verified record content matches its hash and the supported signatures validate
               against the trusted keys you supplied. It does not independently prove that an external payment,
               account change or other action actually happened.</p>
