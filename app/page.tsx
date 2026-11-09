@@ -69,7 +69,7 @@ export default function Home() {
             <h1 id="hero-heading">Your business. Your rules. In the workflows you connect.</h1>
             <p className="vision-statement">
               For workflows you connect, Parmana checks each AI request against the authority your business has configured
-              before it reaches the connected system. Activity outside that configured path is not covered.
+              before it reaches the connected system.
             </p>
             <div className="cta-row">
               <a className="button" href="#platform">Explore Parmana</a>
