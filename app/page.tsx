@@ -105,16 +105,20 @@ export default function Home() {
       </section>
 
       {/* 2. Can act, stays in control */}
-      <section className="block" aria-labelledby="control-heading">
+      <section className="block control-section" aria-labelledby="control-heading">
         <div className="wrap">
           <h2 id="control-heading">AI can act in connected workflows. Your business sets the limits.</h2>
-          <p className="body">
-            An AI agent might initiate a payment, update a customer record or prepare an approval request in a connected workflow.
-          </p>
-          <p className="body">
-            But just because an agent can take an action does not mean it should be allowed to.
-          </p>
-          <p className="body">For requests routed through a configured integration, Parmana checks whether the requested action is allowed before it reaches the connected system.</p>
+          <div className="content-grid content-grid-three">
+            <p className="body">
+              An AI agent might initiate a payment, update a customer record or prepare an approval request in a connected workflow.
+            </p>
+            <p className="body">
+              But just because an agent can take an action does not mean it should be allowed to.
+            </p>
+            <p className="body">
+              For requests routed through a configured integration, Parmana checks whether the requested action is allowed before it reaches the connected system.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -157,14 +161,18 @@ export default function Home() {
       </section>
 
       {/* 6. Records */}
-      <section className="block" aria-labelledby="records-heading">
+      <section className="block records-section" aria-labelledby="records-heading">
         <div className="wrap">
           <h2 id="records-heading">Keep a record of each control decision.</h2>
-          <p className="body">
-            For requests processed through configured Parmana controls, a record can show what was requested, which configured
-            rule was checked and what result the control path returned.
-          </p>
-          <p className="body">This record covers the request processed through that control path, not activity that bypasses it.</p>
+          <div className="content-grid content-grid-two">
+            <p className="body">
+              For requests processed through configured Parmana controls, a record can show what was requested, which configured
+              rule was checked and what result the control path returned.
+            </p>
+            <p className="body scope-note">
+              This record covers the request processed through that control path, not activity that bypasses it.
+            </p>
+          </div>
         </div>
       </section>
 
