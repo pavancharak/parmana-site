@@ -192,19 +192,23 @@ export default function Home() {
       </section>
 
       {/* 8. Closing call to action */}
-      <section className="block" aria-labelledby="closing-heading">
-        <div className="wrap">
-          <h2 id="closing-heading">In connected workflows, your rules stay in control.</h2>
-          <p className="body">
-            Give AI agents room to work in connected workflows, with authority limited to what your business has configured.
-          </p>
-          <div className="cta-row">
-            <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Talk to Parmana</a>
-            <a className="button secondary" href="#platform">See the Platform</a>
+      <section className="block closing-section" aria-labelledby="closing-heading">
+        <div className="wrap closing-grid">
+          <div>
+            <h2 id="closing-heading">In connected workflows, your rules stay in control.</h2>
+            <p className="body">
+              Give AI agents room to work in connected workflows, with authority limited to what your business has configured.
+            </p>
           </div>
-          <p className="body" style={{ marginTop: "1.5rem" }}>
-            Or email <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
-          </p>
+          <div className="closing-actions">
+            <div className="cta-row">
+              <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Talk to Parmana</a>
+              <a className="button secondary" href="#platform">See the Platform</a>
+            </div>
+            <p className="body closing-contact">
+              Or email <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
+            </p>
+          </div>
         </div>
       </section>
 
