@@ -1,5 +1,24 @@
+import type { Metadata } from "next";
 import { SiteFooter, SiteHeader, booking, contactEmail } from "./components/SiteChrome";
 import PaymentCheck from "./components/PaymentCheck";
+
+const pageTitle = "Control for AI agents in connected workflows";
+const pageDescription =
+  "Parmana checks AI agent requests routed through configured business workflows against the authority your business sets, and records those checks.";
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: "/",
+    siteName: "Parmana Systems",
+    type: "website",
+  },
+  twitter: { card: "summary", title: pageTitle, description: pageDescription },
+};
 
 const capabilities = [
   { title: "READ", text: "Decide what information AI agents can access." },
@@ -10,31 +29,31 @@ const capabilities = [
 const flow = [
   "Your business sets the rules.",
   "An AI agent requests an action.",
-  "Parmana checks whether it is allowed.",
-  "The action proceeds or is blocked.",
-  "A record of the decision is created.",
+  "Parmana checks the request against the configured rules.",
+  "The connected control path allows or blocks the request.",
+  "A record of the check is created.",
 ];
 
 const useCases = [
   {
     title: "Payments",
-    text: "A refund within the approved limit goes out. Anything above it waits for a person to approve.",
+    text: "In a connected payment workflow, refunds within a configured limit can proceed while requests above it can be sent for approval.",
   },
   {
     title: "Finance",
-    text: "Journal entries post only from accounts that are approved to post them.",
+    text: "A connected finance workflow can limit journal posting to approved accounts and roles.",
   },
   {
     title: "Procurement",
-    text: "An AI assistant can raise a purchase request. Only the right manager can approve it.",
+    text: "A connected purchasing workflow can let an agent prepare a request while reserving approval for the appropriate manager.",
   },
   {
     title: "Customer operations",
-    text: "An agent can update a delivery address. It cannot change a bank account without a person checking.",
+    text: "In a connected service workflow, an agent can update permitted delivery details while sensitive account changes require review.",
   },
   {
     title: "Enterprise workflows",
-    text: "Access requests follow the approval path your business set, and every step is recorded.",
+    text: "Connected enterprise workflows can apply configured approval paths and record the resulting decisions.",
   },
 ];
 
@@ -47,10 +66,10 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-heading">
         <div className="wrap split">
           <div>
-            <h1 id="hero-heading">Your business. Your rules. Even when AI acts.</h1>
+            <h1 id="hero-heading">Your business. Your rules. In the workflows you connect.</h1>
             <p className="vision-statement">
-              AI agents can take action across your business. Parmana makes sure they only do what you have allowed
-              them to do.
+              For workflows you connect, Parmana checks each AI request against the authority your business has configured
+              before it reaches the connected system. Activity outside that configured path is not covered.
             </p>
             <div className="cta-row">
               <a className="button" href="#platform">Explore Parmana</a>
@@ -90,12 +109,12 @@ export default function Home() {
         <div className="wrap">
           <h2 id="control-heading">AI can act. Your business stays in control.</h2>
           <p className="body">
-            An AI agent might initiate a payment, update a customer record or approve a request.
+            An AI agent might initiate a payment, update a customer record or prepare an approval request in a connected workflow.
           </p>
           <p className="body">
             But just because an agent can take an action does not mean it should be allowed to.
           </p>
-          <p className="body">Parmana checks whether the action is allowed before it happens.</p>
+          <p className="body">For requests routed through a configured integration, Parmana checks whether the requested action is allowed before it reaches the connected system.</p>
         </div>
       </section>
 
@@ -131,8 +150,8 @@ export default function Home() {
       {/* 5. Examples, interactive */}
       <section className="block soft" aria-labelledby="examples-heading">
         <div className="wrap">
-          <h2 id="examples-heading">Not allowed? It doesn&apos;t happen.</h2>
-          <p className="body">Choose a payment to see what Parmana does with it.</p>
+          <h2 id="examples-heading">See a simple limit comparison.</h2>
+          <p className="body">This browser-only example compares a sample amount with a fixed limit. It is not a live Parmana policy check or payment.</p>
           <PaymentCheck />
         </div>
       </section>
@@ -142,10 +161,10 @@ export default function Home() {
         <div className="wrap">
           <h2 id="records-heading">Know what happened. Know why.</h2>
           <p className="body">
-            Every decision creates a record showing what was requested, which business rule applied and what happened
-            next.
+            For requests processed through configured Parmana controls, a record can show what was requested, which configured
+            rule was checked and what result the control path returned.
           </p>
-          <p className="body">Your business has evidence of how AI agents acted.</p>
+          <p className="body">This record covers the request processed through that control path, not activity that bypasses it.</p>
         </div>
       </section>
 
@@ -169,7 +188,7 @@ export default function Home() {
         <div className="wrap">
           <h2 id="closing-heading">AI moves fast. Your rules stay in control.</h2>
           <p className="body">
-            Give AI agents room to work without giving them authority your business never approved.
+            Give AI agents room to work in connected workflows, with authority limited to what your business has configured.
           </p>
           <div className="cta-row">
             <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Talk to Parmana</a>
