@@ -105,16 +105,20 @@ export default function Home() {
       </section>
 
       {/* 2. Can act, stays in control */}
-      <section className="block" aria-labelledby="control-heading">
+      <section className="block control-section" aria-labelledby="control-heading">
         <div className="wrap">
           <h2 id="control-heading">AI can act in connected workflows. Your business sets the limits.</h2>
-          <p className="body">
-            An AI agent might initiate a payment, update a customer record or prepare an approval request in a connected workflow.
-          </p>
-          <p className="body">
-            But just because an agent can take an action does not mean it should be allowed to.
-          </p>
-          <p className="body">For requests routed through a configured integration, Parmana checks whether the requested action is allowed before it reaches the connected system.</p>
+          <div className="content-grid content-grid-three">
+            <p className="body">
+              An AI agent might initiate a payment, update a customer record or prepare an approval request in a connected workflow.
+            </p>
+            <p className="body">
+              But just because an agent can take an action does not mean it should be allowed to.
+            </p>
+            <p className="body">
+              For requests routed through a configured integration, Parmana checks whether the requested action is allowed before it reaches the connected system.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -157,14 +161,18 @@ export default function Home() {
       </section>
 
       {/* 6. Records */}
-      <section className="block" aria-labelledby="records-heading">
+      <section className="block records-section" aria-labelledby="records-heading">
         <div className="wrap">
           <h2 id="records-heading">Keep a record of each control decision.</h2>
-          <p className="body">
-            For requests processed through configured Parmana controls, a record can show what was requested, which configured
-            rule was checked and what result the control path returned.
-          </p>
-          <p className="body">This record covers the request processed through that control path, not activity that bypasses it.</p>
+          <div className="content-grid content-grid-two">
+            <p className="body">
+              For requests processed through configured Parmana controls, a record can show what was requested, which configured
+              rule was checked and what result the control path returned.
+            </p>
+            <p className="body scope-note">
+              This record covers the request processed through that control path, not activity that bypasses it.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -184,19 +192,23 @@ export default function Home() {
       </section>
 
       {/* 8. Closing call to action */}
-      <section className="block" aria-labelledby="closing-heading">
-        <div className="wrap">
-          <h2 id="closing-heading">In connected workflows, your rules stay in control.</h2>
-          <p className="body">
-            Give AI agents room to work in connected workflows, with authority limited to what your business has configured.
-          </p>
-          <div className="cta-row">
-            <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Talk to Parmana</a>
-            <a className="button secondary" href="#platform">See the Platform</a>
+      <section className="block closing-section" aria-labelledby="closing-heading">
+        <div className="wrap closing-grid">
+          <div>
+            <h2 id="closing-heading">In connected workflows, your rules stay in control.</h2>
+            <p className="body">
+              Give AI agents room to work in connected workflows, with authority limited to what your business has configured.
+            </p>
           </div>
-          <p className="body" style={{ marginTop: "1.5rem" }}>
-            Or email <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
-          </p>
+          <div className="closing-actions">
+            <div className="cta-row">
+              <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Talk to Parmana</a>
+              <a className="button secondary" href="#platform">See the Platform</a>
+            </div>
+            <p className="body closing-contact">
+              Or email <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
+            </p>
+          </div>
         </div>
       </section>
 
