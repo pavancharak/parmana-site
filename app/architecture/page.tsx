@@ -190,8 +190,8 @@ export default function ArchitecturePage() {
       </section>
 
       <CallToAction
-        heading="Explore the architecture against a real workflow"
-        text="Bring a business process you want to control. We can map its authority, integration boundary and evidence requirements."
+        heading="Contact us to discuss further"
+        text="Tell us about a workflow you want to control. We can talk through its authority, integration boundary and evidence requirements."
       />
 
       <SiteFooter />
