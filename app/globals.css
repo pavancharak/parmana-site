@@ -66,7 +66,7 @@ img { display: block; }
 .block.soft { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .block + .block { border-top: 1px solid var(--line); }
 h2 { font-size: clamp(26px, 3vw, 38px); font-weight: 600; line-height: 1.15; letter-spacing: -.02em; margin-bottom: 24px; }
-.body { font-size: 18px; color: var(--muted); max-width: 680px; }
+.body { font-size: 18px; color: var(--muted); max-width: 760px; }
 
 .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 360px); gap: 96px; align-items: start; }
 .video-frame { position: relative; width: 260px; max-width: 100%; aspect-ratio: 9 / 16; justify-self: end; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(45, 212, 191, .25); }

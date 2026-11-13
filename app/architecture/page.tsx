@@ -170,9 +170,9 @@ export default function ArchitecturePage() {
             controls. Activity outside those integration paths is not covered.
           </p>
           <p className="body">
-            <a href="/how-it-works">How Parmana works</a>
+            <a href="/#how-it-works">How Parmana works</a>
             {" · "}
-            <a href="/check-a-record">Check a signed record</a>
+            <a href="/research">Read the research</a>
           </p>
         </div>
       </section>
