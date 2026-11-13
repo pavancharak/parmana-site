@@ -186,7 +186,7 @@ export default function Home() {
               For requests that go through Parmana, the record shows what was asked, which rule was checked and the result.
             </p>
             <p className="body scope-note">
-              The record only covers requests that went through Parmana. It does not cover activity outside that path.
+              Only requests that go through Parmana get a record.
             </p>
           </div>
         </div>
