@@ -32,7 +32,6 @@ export function SiteFooter() {
       <div className="wrap footer-inner">
         <span>© {new Date().getFullYear()} Parmana Systems</span>
         <nav aria-label="Footer">
-          <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
         </nav>
       </div>
     </footer>
@@ -60,7 +59,6 @@ export function CallToAction({ heading, text }: { heading: string; text: string 
         <p className="body">{text}</p>
         <div className="cta-row">
           <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Book a call</a>
-          <a className="button secondary" href={`mailto:${contactEmail}`}>Send an email</a>
           <a className="button secondary" href="https://github.com/pavancharak" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         </div>
       </div>

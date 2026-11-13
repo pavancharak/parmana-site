@@ -186,7 +186,7 @@ export default function Home() {
               For requests that go through Parmana, the record shows what was asked, which rule was checked and the result.
             </p>
             <p className="body scope-note">
-              The record only covers requests that went through Parmana. It does not cover activity outside that path.
+              Only requests that go through Parmana get a record.
             </p>
           </div>
         </div>
@@ -219,12 +219,8 @@ export default function Home() {
           <div className="closing-actions">
             <div className="cta-row">
               <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Talk to Parmana</a>
-              <a className="button secondary" href="#platform">See the Platform</a>
               <a className="button secondary" href="https://github.com/pavancharak" target="_blank" rel="noopener noreferrer">View on GitHub</a>
             </div>
-            <p className="body closing-contact">
-              Or email <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
-            </p>
           </div>
         </div>
       </section>
