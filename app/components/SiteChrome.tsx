@@ -6,9 +6,10 @@ export const contactEmail = "founder@parmanasystems.com";
 const navItems = [
   { href: "/#platform", label: "Platform" },
   { href: "/#use-cases", label: "Use Cases" },
-  { href: "https://docs.parmanasystems.com", label: "Documentation", external: true },
+  { href: "/architecture", label: "Architecture" },
   { href: "/research", label: "Research" },
   { href: "/team", label: "Team" },
+  { href: "/vision", label: "Vision" },
 ];
 
 export function SiteHeader() {
@@ -16,13 +17,9 @@ export function SiteHeader() {
     <header className="site-header">
       <a className="wordmark" href="/">Parmana</a>
       <nav aria-label="Main">
-        {navItems.map((item) =>
-          item.external ? (
-            <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer">{item.label}</a>
-          ) : (
-            <a key={item.label} href={item.href}>{item.label}</a>
-          ),
-        )}
+        {navItems.map((item) => (
+          <a key={item.label} href={item.href}>{item.label}</a>
+        ))}
         <a className="nav-cta" href={booking} target="_blank" rel="noopener noreferrer">Talk to Us</a>
       </nav>
     </header>
