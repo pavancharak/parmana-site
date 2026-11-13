@@ -5,12 +5,10 @@ export const contactEmail = "founder@parmanasystems.com";
 
 const navItems = [
   { href: "/#platform", label: "Platform" },
-  { href: "/how-it-works", label: "How It Works" },
   { href: "/#use-cases", label: "Use Cases" },
   { href: "https://docs.parmanasystems.com", label: "Documentation", external: true },
   { href: "/research", label: "Research" },
   { href: "/team", label: "Team" },
-  { href: "/who-its-for", label: "Company" },
 ];
 
 export function SiteHeader() {

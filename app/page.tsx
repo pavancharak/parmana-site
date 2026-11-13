@@ -73,7 +73,7 @@ export default function Home() {
             </p>
             <div className="cta-row">
               <a className="button" href="#platform">Explore Parmana</a>
-              <a className="button secondary" href="/how-it-works">See How It Works</a>
+              <a className="button secondary" href="/research">Read the research</a>
             </div>
           </div>
 
