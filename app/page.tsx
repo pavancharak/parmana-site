@@ -219,7 +219,6 @@ export default function Home() {
           <div className="closing-actions">
             <div className="cta-row">
               <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Talk to Parmana</a>
-              <a className="button secondary" href="#platform">See the Platform</a>
               <a className="button secondary" href="https://github.com/pavancharak" target="_blank" rel="noopener noreferrer">View on GitHub</a>
             </div>
           </div>
