@@ -32,7 +32,6 @@ export function SiteFooter() {
       <div className="wrap footer-inner">
         <span>© {new Date().getFullYear()} Parmana Systems</span>
         <nav aria-label="Footer">
-          <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
         </nav>
       </div>
     </footer>

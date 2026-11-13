@@ -52,7 +52,7 @@ export default function ResearchPage() {
                 <h2>{paper.title}</h2>
                 <p className="body">{paper.summary}</p>
                 <p className="body">
-                  Full text on request: <a href={`mailto:${contactEmail}?subject=${encodeURIComponent(paper.title)}`}>{contactEmail}</a>
+                  Full text on request: <a href={`mailto:${contactEmail}?subject=${encodeURIComponent(paper.title)}`}>email us</a>
                 </p>
               </li>
             ))}
