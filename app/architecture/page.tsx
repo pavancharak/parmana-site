@@ -115,8 +115,9 @@ export default function ArchitecturePage() {
       </section>
 
       <section className="block" aria-labelledby="protocol-heading">
-        <div className="wrap">
+        <div className="wrap split-text">
           <h2 id="protocol-heading">The protocol underneath</h2>
+          <div>
           <p className="body">
             The Decision Integrity Protocol (DIP) defines the integrity and
             verification model for recording decisions and checking evidence.
@@ -137,6 +138,7 @@ export default function ArchitecturePage() {
               open-source work
             </a>.
           </p>
+          </div>
         </div>
       </section>
 
@@ -155,8 +157,9 @@ export default function ArchitecturePage() {
       </section>
 
       <section className="block" aria-labelledby="boundaries-heading">
-        <div className="wrap">
+        <div className="wrap split-text">
           <h2 id="boundaries-heading">What the evidence does and does not prove</h2>
+          <div>
           <p className="body">
             A successful offline verification establishes that the checked
             record content matches its hash and that supported signatures
@@ -174,6 +177,7 @@ export default function ArchitecturePage() {
             {" · "}
             <a href="/research">Read the research</a>
           </p>
+          </div>
         </div>
       </section>
 

@@ -74,6 +74,7 @@ h2 { font-size: clamp(26px, 3vw, 38px); font-weight: 600; line-height: 1.15; let
 
 .principles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .principles li { padding: 32px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+.principles-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .principles .number { display: inline-block; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: .08em; font-variant-numeric: tabular-nums; }
 .principles h3 { font-size: 22px; font-weight: 600; letter-spacing: -.01em; margin: 14px 0 12px; }
 .principles p { font-size: 16px; color: var(--muted); max-width: 440px; }
@@ -134,7 +135,7 @@ h2 { font-size: clamp(26px, 3vw, 38px); font-weight: 600; line-height: 1.15; let
   .split-text { grid-template-columns: 1fr; gap: 48px; }
   .split { grid-template-columns: 1fr; gap: 48px; }
   .video-frame { width: 100%; max-width: 360px; justify-self: start; }
-  .principles { grid-template-columns: 1fr; }
+  .principles, .principles-three { grid-template-columns: 1fr; }
   .philosophy { font-size: 16px; }
   .hero .video-frame { width: 100%; max-width: 360px; justify-self: start; }
   .hero h2 { margin-top: 48px; }

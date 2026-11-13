@@ -143,7 +143,7 @@ export default function Home() {
       <section id="platform" className="block soft" aria-labelledby="platform-heading">
         <div className="wrap">
           <h2 id="platform-heading">You decide what AI can do in connected workflows.</h2>
-          <ul className="principles">
+          <ul className="principles principles-three">
             {capabilities.map((item) => (
               <li key={item.title}>
                 <h3>{item.title}</h3>
