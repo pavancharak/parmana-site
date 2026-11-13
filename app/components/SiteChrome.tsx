@@ -6,7 +6,6 @@ export const contactEmail = "founder@parmanasystems.com";
 const navItems = [
   { href: "/#platform", label: "Platform" },
   { href: "/#use-cases", label: "Use Cases" },
-  { href: "https://docs.parmanasystems.com", label: "Documentation", external: true },
   { href: "/research", label: "Research" },
   { href: "/team", label: "Team" },
 ];
