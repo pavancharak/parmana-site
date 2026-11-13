@@ -4,7 +4,7 @@ import PaymentCheck from "./components/PaymentCheck";
 
 const pageTitle = "Control for AI agents in connected workflows";
 const pageDescription =
-  "Parmana checks AI agent requests routed through configured business workflows against the authority your business sets, and records those checks.";
+  "Parmana checks AI requests in connected workflows against the limits your business sets, and keeps a record of each check.";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -21,39 +21,39 @@ export const metadata: Metadata = {
 };
 
 const capabilities = [
-  { title: "READ", text: "Set what connected AI workflows may access." },
-  { title: "WRITE", text: "Set what connected AI workflows may update." },
-  { title: "EXECUTE", text: "Set which actions may pass through configured control paths." },
+  { title: "READ", text: "Choose what AI can look at." },
+  { title: "WRITE", text: "Choose what AI can change." },
+  { title: "EXECUTE", text: "Choose which actions can go through." },
 ];
 
 const flow = [
-  "Your business sets the rules.",
-  "An AI agent requests an action.",
-  "Parmana checks the request against the configured rules.",
-  "The connected control path allows or blocks the request.",
-  "A record of the check is created.",
+  "You set the rules.",
+  "An AI agent asks for an action.",
+  "Parmana checks the request against your rules.",
+  "The request is allowed or blocked.",
+  "A record of the check is kept.",
 ];
 
 const useCases = [
   {
     title: "Payments",
-    text: "In a connected payment workflow, refunds within a configured limit can proceed while requests above it can be sent for approval.",
+    text: "A refund under the set limit can go ahead. Anything above it is sent for approval.",
   },
   {
     title: "Finance",
-    text: "A connected finance workflow can limit journal posting to approved accounts and roles.",
+    text: "Journal entries can be limited to approved accounts and roles.",
   },
   {
     title: "Procurement",
-    text: "A connected purchasing workflow can let an agent prepare a request while reserving approval for the appropriate manager.",
+    text: "An agent can prepare a purchase request, and the right manager approves it.",
   },
   {
     title: "Customer operations",
-    text: "In a connected service workflow, an agent can update permitted delivery details while sensitive account changes require review.",
+    text: "An agent can update delivery details. Sensitive account changes are sent for review.",
   },
   {
     title: "Enterprise workflows",
-    text: "Connected enterprise workflows can apply configured approval paths and record the resulting decisions.",
+    text: "The approval steps you set are applied, and each decision is recorded.",
   },
 ];
 
@@ -66,10 +66,10 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-heading">
         <div className="wrap split">
           <div>
-            <h1 id="hero-heading">Your business. Your rules. In the workflows you connect.</h1>
+            <h1 id="hero-heading">Set the rules for AI in your connected workflows.</h1>
             <p className="vision-statement">
-              For workflows you connect, Parmana checks each AI request against the authority your business has configured
-              before it reaches the connected system.
+              Parmana checks each AI request against the limits your business has set,
+              before the request reaches the connected system.
             </p>
             <div className="cta-row">
               <a className="button" href="#platform">Explore Parmana</a>
@@ -108,7 +108,7 @@ export default function Home() {
       <section className="block soft" aria-labelledby="video-heading">
         <div className="wrap">
           <p className="eyebrow">Video</p>
-          <h2 id="video-heading">See how Parmana checks a request</h2>
+          <h2 id="video-heading">See how a request is checked</h2>
           <div className="video-embed">
             <iframe
               src="https://www.youtube-nocookie.com/embed/B3G1Cvir5nc"
@@ -124,16 +124,16 @@ export default function Home() {
       {/* 2. Can act, stays in control */}
       <section className="block control-section" aria-labelledby="control-heading">
         <div className="wrap">
-          <h2 id="control-heading">AI can act in connected workflows. Your business sets the limits.</h2>
+          <h2 id="control-heading">AI can act. Your business sets the limits.</h2>
           <div className="content-grid content-grid-three">
             <p className="body">
-              An AI agent might initiate a payment, update a customer record or prepare an approval request in a connected workflow.
+              An AI agent might start a payment, change a customer record or prepare an approval in a connected workflow.
             </p>
             <p className="body">
-              But just because an agent can take an action does not mean it should be allowed to.
+              Just because an agent can do something does not mean it should be allowed to.
             </p>
             <p className="body">
-              For requests routed through a configured integration, Parmana checks whether the requested action is allowed before it reaches the connected system.
+              For requests that go through a connected integration, Parmana checks that the action is allowed before it reaches the system.
             </p>
           </div>
         </div>
@@ -142,7 +142,7 @@ export default function Home() {
       {/* 3. Platform: READ, WRITE, EXECUTE */}
       <section id="platform" className="block soft" aria-labelledby="platform-heading">
         <div className="wrap">
-          <h2 id="platform-heading">You decide what connected AI workflows can do.</h2>
+          <h2 id="platform-heading">You decide what AI can do in connected workflows.</h2>
           <ul className="principles">
             {capabilities.map((item) => (
               <li key={item.title}>
@@ -157,7 +157,7 @@ export default function Home() {
       {/* 4. How it works */}
       <section id="how-it-works" className="block" aria-labelledby="flow-heading">
         <div className="wrap">
-          <h2 id="flow-heading">Requests through connected workflows follow your rules.</h2>
+          <h2 id="flow-heading">Every request follows your rules.</h2>
           <ol className="steps">
             {flow.map((step) => (
               <li key={step}>
@@ -171,8 +171,8 @@ export default function Home() {
       {/* 5. Examples, interactive */}
       <section className="block soft" aria-labelledby="examples-heading">
         <div className="wrap">
-          <h2 id="examples-heading">See a simple limit comparison.</h2>
-          <p className="body">This browser-only example compares a sample amount with a fixed limit. It is not a live Parmana policy check or payment.</p>
+          <h2 id="examples-heading">A simple limit check.</h2>
+          <p className="body">This demo runs in your browser. It compares an amount with a set limit. It is not a live Parmana check or a payment.</p>
           <PaymentCheck />
         </div>
       </section>
@@ -180,14 +180,13 @@ export default function Home() {
       {/* 6. Records */}
       <section className="block records-section" aria-labelledby="records-heading">
         <div className="wrap">
-          <h2 id="records-heading">Keep a record of each control decision.</h2>
+          <h2 id="records-heading">Every decision leaves a record.</h2>
           <div className="content-grid content-grid-two">
             <p className="body">
-              For requests processed through configured Parmana controls, a record can show what was requested, which configured
-              rule was checked and what result the control path returned.
+              For requests that go through Parmana, the record shows what was asked, which rule was checked and the result.
             </p>
             <p className="body scope-note">
-              This record covers the request processed through that control path, not activity that bypasses it.
+              The record only covers requests that went through Parmana. It does not cover activity outside that path.
             </p>
           </div>
         </div>
@@ -196,7 +195,7 @@ export default function Home() {
       {/* 7. Use cases */}
       <section id="use-cases" className="block soft" aria-labelledby="use-cases-heading">
         <div className="wrap">
-          <h2 id="use-cases-heading">Built for the way businesses work.</h2>
+          <h2 id="use-cases-heading">Examples from everyday work.</h2>
           <ul className="principles">
             {useCases.map((item) => (
               <li key={item.title}>
@@ -212,9 +211,9 @@ export default function Home() {
       <section className="block closing-section" aria-labelledby="closing-heading">
         <div className="wrap closing-grid">
           <div>
-            <h2 id="closing-heading">In connected workflows, your rules stay in control.</h2>
+            <h2 id="closing-heading">Your rules stay in control.</h2>
             <p className="body">
-              Give AI agents room to work in connected workflows, with authority limited to what your business has configured.
+              Let AI agents do useful work, within the limits your business has set.
             </p>
           </div>
           <div className="closing-actions">
