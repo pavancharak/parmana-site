@@ -104,6 +104,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Video */}
+      <section className="block soft" aria-labelledby="video-heading">
+        <div className="wrap">
+          <p className="eyebrow">Video</p>
+          <h2 id="video-heading">See how Parmana checks a request</h2>
+          <div className="video-embed">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/B3G1Cvir5nc"
+              title="Parmana video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* 2. Can act, stays in control */}
       <section className="block" aria-labelledby="control-heading">
         <div className="wrap">

@@ -96,6 +96,24 @@ export default function ArchitecturePage() {
         </div>
       </section>
 
+      <section className="block" aria-labelledby="diagrams-heading">
+        <div className="wrap">
+          <h2 id="diagrams-heading">Diagrams</h2>
+          <figure style={{ margin: "32px 0 0" }}>
+            <img src="/diagrams/request-flow.svg" alt="A request from an AI agent passes a connector, then the Parmana control path. If authority matches, it reaches the business system; otherwise it is refused. Both outcomes create an evidence record." style={{ width: "auto", maxWidth: "100%", height: "auto" }} />
+            <figcaption className="body" style={{ marginTop: 12 }}>How a request moves through the control path.</figcaption>
+          </figure>
+          <figure style={{ margin: "48px 0 0" }}>
+            <img src="/diagrams/lifecycle.svg" alt="Four stages: Declared, Authorized, Executed and Proven." style={{ width: "auto", maxWidth: "100%", height: "auto" }} />
+            <figcaption className="body" style={{ marginTop: 12 }}>The lifecycle: declare the rules, authorise each request, execute only what was approved, and prove it afterwards.</figcaption>
+          </figure>
+          <figure style={{ margin: "48px 0 0" }}>
+            <img src="/diagrams/trust-chain.svg" alt="Authority leads to authorization, then intent, then the business transaction, then the policy reference." style={{ width: "auto", maxWidth: "100%", height: "auto" }} />
+            <figcaption className="body" style={{ marginTop: 12 }}>The trust chain: each record links back to the authority that allowed it.</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section className="block" aria-labelledby="protocol-heading">
         <div className="wrap">
           <h2 id="protocol-heading">The protocol underneath</h2>
