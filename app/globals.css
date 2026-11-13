@@ -140,3 +140,75 @@ h2 { font-size: clamp(26px, 3vw, 38px); font-weight: 600; line-height: 1.15; let
   .hero h2 { margin-top: 48px; }
   .check-facts { grid-template-columns: 1fr; }
 }
+
+/* Layout rules merged from main (PR #37), kept with the dark design. */
+.check {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  min-width: 0;
+}
+.check > * { min-width: 0; }
+.check-facts,
+.check-facts > div {
+  min-width: 0;
+}
+.check-result {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.check-choices { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem; }
+.choice { font: inherit; padding: 0.7rem 1.1rem; border-radius: 999px; border: 1px solid #c7d2fe; background: #ffffff; color: #1e1b4b; cursor: pointer; }
+.choice.active { background: #1e1b4b; color: #ffffff; border-color: #1e1b4b; }
+.check-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 0 0 1.5rem; }
+.check-facts dt { color: #64748b; font-size: 0.9rem; }
+.check-facts dd { margin: 0.25rem 0 0; font-size: 1.5rem; font-weight: 600; color: #1e1b4b; }
+.check-result { margin: 0; padding: 1rem 1.25rem; border-radius: 12px; font-weight: 600; }
+.check-result.allowed { background: #ecfdf5; color: #065f46; }
+.check-result.blocked { background: #fef2f2; color: #991b1b; }
+
+@media (max-width: 600px) {
+  .check { padding: 1.25rem; }
+  .check-facts { grid-template-columns: 1fr; }
+}
+
+.footer-button { padding: 0.55rem 1rem; font-size: 0.95rem; }
+
+
+/* Use the full content width for explanatory sections instead of narrow stacked paragraphs. */
+.content-grid {
+  display: grid;
+  gap: 32px 48px;
+  margin-top: 32px;
+}
+.content-grid-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.content-grid-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.content-grid .body {
+  max-width: none;
+  line-height: 1.5;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 760px) {
+  .content-grid-three,
+  .content-grid-two {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+
+/* Balance the closing message with a dedicated action column. */
+.closing-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  gap: 56px;
+  align-items: center;
+}
+.closing-grid h2 { max-width: 760px; }
+.closing-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.closing-contact { max-width: none; margin: 0; font-size: 16px; }
+@media (max-width: 760px) {
+  .closing-grid { grid-template-columns: 1fr; gap: 28px; }
+}
