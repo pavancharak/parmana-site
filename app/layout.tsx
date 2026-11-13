@@ -16,6 +16,13 @@ export const metadata: Metadata = {
   icons: {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
+  keywords: [
+    "deep tech",
+    "AI agent authorization",
+    "execution integrity",
+    "verifiable evidence",
+    "AI governance",
+  ],
   robots: { index: true, follow: true },
   openGraph: {
     siteName,
@@ -33,7 +40,27 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: siteName,
+              url: "https://parmanasystems.com",
+              description,
+              category: "Deep tech",
+              knowsAbout: [
+                "AI agent authorization",
+                "Execution integrity",
+                "Verifiable evidence",
+              ],
+            }),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

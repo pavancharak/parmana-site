@@ -73,7 +73,7 @@ export default function Home() {
             </p>
             <div className="cta-row">
               <a className="button" href="#platform">Explore Parmana</a>
-              <a className="button secondary" href="/how-it-works">See How It Works</a>
+              <a className="button secondary" href="/research">Read the research</a>
             </div>
           </div>
 
@@ -100,6 +100,23 @@ export default function Home() {
               <text x="475" y="166" textAnchor="middle" fontSize="14" fill="#1e1b4b" fontFamily="inherit">Customers</text>
               <text x="475" y="236" textAnchor="middle" fontSize="14" fill="#1e1b4b" fontFamily="inherit">Records</text>
             </svg>
+          </div>
+        </div>
+      </section>
+
+      {/* Video */}
+      <section className="block soft" aria-labelledby="video-heading">
+        <div className="wrap">
+          <p className="eyebrow">Video</p>
+          <h2 id="video-heading">See how Parmana checks a request</h2>
+          <div className="video-embed">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/B3G1Cvir5nc"
+              title="Parmana video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
