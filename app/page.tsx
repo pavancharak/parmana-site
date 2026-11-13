@@ -104,6 +104,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Vision */}
+      <section className="block" aria-labelledby="vision-heading">
+        <div className="wrap">
+          <p className="eyebrow">Our vision</p>
+          <h2 id="vision-heading" className="sr-only">Our vision</h2>
+          <p className="statement-text">
+            A world where institutions can be trusted. Where authority can be established. Where evidence can be independently verified.
+          </p>
+        </div>
+      </section>
+
       {/* Video */}
       <section className="block soft" aria-labelledby="video-heading">
         <div className="wrap">
