@@ -31,11 +31,13 @@ const layers = [
   {
     number: "02",
     title: "Parmana Connect",
+    repo: "https://github.com/pavancharak/parmana-connectors",
     text: "Connectors and integration paths bring covered requests from business applications and agent workflows into the Parmana control path. The boundary matters: requests that bypass the configured path are outside its enforcement.",
   },
   {
     number: "03",
     title: "Parmana Core",
+    repo: "https://github.com/pavancharak/parmana-core",
     text: "The core evaluates a covered request against the configured authority and returns a deterministic authorization outcome. The connected execution path uses that outcome to allow or block the requested operation.",
   },
   {
@@ -46,6 +48,7 @@ const layers = [
   {
     number: "05",
     title: "Parmana Verifier",
+    repo: "https://github.com/pavancharak/parmana-verifier",
     text: "The verifier checks record integrity and supported signatures against trusted public keys supplied by the verifier operator. This establishes what was cryptographically checked, not whether an external action actually occurred.",
   },
 ];
@@ -90,6 +93,11 @@ export default function ArchitecturePage() {
                 <p className="eyebrow">{layer.number}</p>
                 <h3>{layer.title}</h3>
                 <p className="body">{layer.text}</p>
+                {"repo" in layer && layer.repo ? (
+                  <p className="body">
+                    <a href={layer.repo} target="_blank" rel="noopener noreferrer">View repository</a>
+                  </p>
+                ) : null}
               </li>
             ))}
           </ol>

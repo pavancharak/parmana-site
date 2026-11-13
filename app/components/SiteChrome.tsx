@@ -4,7 +4,6 @@ export const booking = "https://cal.com/pavan-charak/";
 export const contactEmail = "founder@parmanasystems.com";
 
 const navItems = [
-  { href: "/#platform", label: "Platform" },
   { href: "/#use-cases", label: "Use Cases" },
   { href: "/architecture", label: "Architecture" },
   { href: "/research", label: "Research" },

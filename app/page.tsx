@@ -72,7 +72,7 @@ export default function Home() {
               before the request reaches the connected system.
             </p>
             <div className="cta-row">
-              <a className="button" href="#platform">Explore Parmana</a>
+              <a className="button" href="/architecture">Explore the architecture</a>
               <a className="button secondary" href="/research">Read the research</a>
             </div>
           </div>
@@ -136,21 +136,6 @@ export default function Home() {
               For requests that go through a connected integration, Parmana checks that the action is allowed before it reaches the system.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* 3. Platform: READ, WRITE, EXECUTE */}
-      <section id="platform" className="block soft" aria-labelledby="platform-heading">
-        <div className="wrap">
-          <h2 id="platform-heading">You decide what AI can do in connected workflows.</h2>
-          <ul className="principles principles-three">
-            {capabilities.map((item) => (
-              <li key={item.title}>
-                <h3>{item.title}</h3>
-                <p className="body">{item.text}</p>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
