@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CallToAction, PageIntro, SiteFooter, SiteHeader, contactEmail } from "../components/SiteChrome";
+import { CallToAction, PageIntro, SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 const title = "Research";
 const description = "Parmana's research on how to prove that an AI agent acted within its authority.";
@@ -34,36 +34,37 @@ export default function ResearchPage() {
     <main>
       <SiteHeader />
       <PageIntro eyebrow="Research" title="One question: how do you prove an AI agent stayed within its authority?">
-        <p>Our research looks at the gap between what an AI agent can do and what it is allowed to do, and how to check that difference after the fact.</p>
+        <p>
+          Our research looks at the gap between what an AI agent can do and what it is allowed to do,
+          and how to check that difference after the fact.
+        </p>
       </PageIntro>
 
       <section className="block">
         <div className="wrap">
-          <ul className="principles">
+          <div className="grid-2" style={{ marginTop: 0 }}>
             {papers.map((paper) => (
-              <li key={paper.title}>
-                <img
-                  src={paper.thumb}
-                  alt={`First page of ${paper.title}`}
-                  width={640}
-                  style={{ width: "100%", height: "auto", border: "1px solid var(--line)", borderRadius: 8, marginBottom: 20 }}
-                />
+              <article className="card" key={paper.title}>
+                <img className="paper-thumb" src={paper.thumb} alt={`First page of ${paper.title}`} width={640} />
                 <p className="eyebrow">{paper.status}</p>
-                <h2>{paper.title}</h2>
-                <p className="body">{paper.summary}</p>
-                <p className="body">
-                  Full text on request: <a href={`mailto:${contactEmail}?subject=${encodeURIComponent(paper.title)}`}>email us</a>
+                <h2 style={{ fontSize: "1.4rem" }}>{paper.title}</h2>
+                <p className="body" style={{ marginTop: 14 }}>{paper.summary}</p>
+                <p className="body" style={{ marginTop: 14 }}>
+                  Full text on request: <a href="https://cal.com/pavan-charak/" target="_blank" rel="noopener noreferrer">book a call</a>.
                 </p>
-              </li>
+              </article>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
       <section className="block soft">
-        <div className="wrap">
-          <h2>What the research does not claim</h2>
-          <ul className="checklist muted">
+        <div className="wrap split-text">
+          <div>
+            <p className="eyebrow">Limits</p>
+            <h2>What the research does not claim</h2>
+          </div>
+          <ul className="checklist">
             <li>Recorded evidence shows what was checked. It does not prove that the underlying policy was correct.</li>
             <li>The papers are drafts for discussion and have not been endorsed by any outside body.</li>
             <li>The approach is a design model, not a guarantee against every AI risk.</li>
@@ -72,7 +73,7 @@ export default function ResearchPage() {
       </section>
 
       <CallToAction
-        heading="Talk about the research"
+        heading="Talk about the research."
         text="If you work on authorisation, audit or AI governance, we are glad to discuss the papers and the open questions."
       />
       <SiteFooter />

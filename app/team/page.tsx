@@ -41,26 +41,26 @@ export default function TeamPage() {
 
       <section className="block">
         <div className="wrap">
-          <ul className="principles">
+          <div className="grid-3" style={{ marginTop: 0 }}>
             {team.map((person) => (
-              <li key={person.name}>
-                <h2>{person.name}</h2>
-                <p className="eyebrow">{person.role}</p>
-                <p className="body">{person.text}</p>
+              <div className="card" key={person.name}>
+                <h2 style={{ fontSize: "1.3rem" }}>{person.name}</h2>
+                <p className="eyebrow" style={{ marginTop: 10, marginBottom: 0 }}>{person.role}</p>
+                <p className="body" style={{ marginTop: 14 }}>{person.text}</p>
                 {person.github ? (
-                  <p className="body">
+                  <p style={{ marginTop: 14 }}>
                     <a href={person.github} target="_blank" rel="noopener noreferrer">GitHub</a>
                   </p>
                 ) : null}
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
       <CallToAction
-        heading="Work with the team"
-        text="For partnerships, design reviews or research collaboration, book a call or send us an email."
+        heading="Work with the team."
+        text="For partnerships, design reviews or research collaboration, book a call."
       />
       <SiteFooter />
     </main>
