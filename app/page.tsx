@@ -45,10 +45,19 @@ const useCases = [
   },
 ];
 
-const capabilities = [
-  { title: "Read", text: "Choose what AI can look at." },
-  { title: "Write", text: "Choose what AI can change." },
-  { title: "Execute", text: "Choose which actions can go through." },
+const permissions = [
+  {
+    title: "Named actions",
+    text: "Every action has a clear name, such as refunds or release-goods, so it is obvious what an agent is asking to do.",
+  },
+  {
+    title: "Granted per caller",
+    text: "Each AI agent or user is given only the actions it needs. Anything not granted is refused and recorded.",
+  },
+  {
+    title: "Limits and approval",
+    text: "Each granted action can carry its own limits. Requests above a limit are sent to a trusted person for signed approval.",
+  },
 ];
 
 export default function Home() {
@@ -169,14 +178,21 @@ export default function Home() {
               was asked, which policy was checked, who approved, and what was carried out. Anyone can
               verify it later.
             </p>
-            <div className="grid-3" style={{ marginTop: 28 }}>
-              {capabilities.map((item) => (
-                <div className="card" key={item.title}>
-                  <h3>{item.title}</h3>
-                  <p className="body">{item.text}</p>
-                </div>
-              ))}
-            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="block" aria-labelledby="permissions-heading">
+        <div className="wrap">
+          <p className="eyebrow">Permissions</p>
+          <h2 id="permissions-heading">Each agent gets only the actions it is granted.</h2>
+          <div className="grid-3">
+            {permissions.map((item) => (
+              <div className="card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p className="body">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
