@@ -15,11 +15,11 @@ export const metadata: Metadata = {
 };
 
 const flow = [
-  "You set the rules.",
-  "An AI agent asks for an action.",
-  "Parmana checks the request against your rules.",
-  "The request is allowed or blocked.",
-  "A record of the check is kept.",
+  "You set the policy.",
+  "An AI agent requests an action.",
+  "Parmana checks it against your policy.",
+  "A trusted person approves, if the policy requires it.",
+  "Your own system carries out the action once. Both steps are recorded.",
 ];
 
 const useCases = [
@@ -62,8 +62,8 @@ export default function Home() {
             <p className="eyebrow">For businesses using AI agents</p>
             <h1 id="hero-heading">Set the rules for AI in your connected workflows.</h1>
             <p className="lead">
-              Parmana checks each AI request against the limits your business has set, before the
-              request reaches the connected system.
+              Parmana lets businesses use the power of AI while keeping control and predictability in
+              the systems they already run.
             </p>
             <div className="cta-row">
               <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Talk to us</a>
@@ -125,7 +125,7 @@ export default function Home() {
             </div>
             <div className="card">
               <h3>Checked before it runs</h3>
-              <p className="body">For requests that go through a connected integration, Parmana checks the action before it reaches the system.</p>
+              <p className="body">Each request is checked against your policy before any action is carried out, through a connector for each system.</p>
             </div>
             <div className="card">
               <h3>Limits you can read</h3>
@@ -165,8 +165,9 @@ export default function Home() {
           </div>
           <div>
             <p className="body">
-              For requests that go through Parmana, the record shows what was asked, which rule was
-              checked and the result. It is kept so that it can be checked later.
+              Each request, decision and execution is saved in a signed record. The record shows what
+              was asked, which policy was checked, who approved, and what was carried out. Anyone can
+              verify it later.
             </p>
             <div className="grid-3" style={{ marginTop: 28 }}>
               {capabilities.map((item) => (
