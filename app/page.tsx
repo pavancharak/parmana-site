@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SiteFooter, SiteHeader, booking, contactEmail } from "./components/SiteChrome";
+import { CallToAction, SiteFooter, SiteHeader, booking } from "./components/SiteChrome";
 import PaymentCheck from "./components/PaymentCheck";
 
 const pageTitle = "Control for AI agents in connected workflows";
@@ -10,21 +10,9 @@ export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   alternates: { canonical: "/" },
-  openGraph: {
-    title: pageTitle,
-    description: pageDescription,
-    url: "/",
-    siteName: "Parmana Systems",
-    type: "website",
-  },
+  openGraph: { title: pageTitle, description: pageDescription, url: "/", siteName: "Parmana Systems", type: "website" },
   twitter: { card: "summary", title: pageTitle, description: pageDescription },
 };
-
-const capabilities = [
-  { title: "READ", text: "Choose what AI can look at." },
-  { title: "WRITE", text: "Choose what AI can change." },
-  { title: "EXECUTE", text: "Choose which actions can go through." },
-];
 
 const flow = [
   "You set the rules.",
@@ -57,23 +45,29 @@ const useCases = [
   },
 ];
 
+const capabilities = [
+  { title: "Read", text: "Choose what AI can look at." },
+  { title: "Write", text: "Choose what AI can change." },
+  { title: "Execute", text: "Choose which actions can go through." },
+];
+
 export default function Home() {
   return (
     <main>
       <SiteHeader />
 
-      {/* 1. Hero */}
       <section className="hero" aria-labelledby="hero-heading">
         <div className="wrap split">
           <div>
+            <p className="eyebrow">For businesses using AI agents</p>
             <h1 id="hero-heading">Set the rules for AI in your connected workflows.</h1>
-            <p className="vision-statement">
-              Parmana checks each AI request against the limits your business has set,
-              before the request reaches the connected system.
+            <p className="lead">
+              Parmana checks each AI request against the limits your business has set, before the
+              request reaches the connected system.
             </p>
             <div className="cta-row">
-              <a className="button" href="/architecture">Explore the architecture</a>
-              <a className="button secondary" href="/research">Read the research</a>
+              <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Talk to us</a>
+              <a className="button secondary" href="/architecture">Explore the architecture</a>
             </div>
           </div>
 
@@ -81,30 +75,29 @@ export default function Home() {
             <svg viewBox="0 0 560 320" role="img">
               <defs>
                 <linearGradient id="line" x1="0" x2="1">
-                  <stop offset="0" stopColor="#4f46e5" />
-                  <stop offset="1" stopColor="#2563eb" />
+                  <stop offset="0" stopColor="#5b4bdb" />
+                  <stop offset="1" stopColor="#2f7de1" />
                 </linearGradient>
               </defs>
-              <rect x="20" y="120" width="130" height="80" rx="16" fill="#f5f7ff" stroke="#c7d2fe" />
-              <text x="85" y="166" textAnchor="middle" fontSize="16" fill="#1e1b4b" fontFamily="inherit">AI agent</text>
+              <rect x="20" y="120" width="130" height="80" rx="16" fill="#f6f8fb" stroke="#d6dcf7" />
+              <text x="85" y="166" textAnchor="middle" fontSize="16" fill="#0b1b2e">AI agent</text>
 
               <path d="M150 160 H215" stroke="url(#line)" strokeWidth="3" fill="none" />
-              <rect x="215" y="100" width="130" height="120" rx="20" fill="#1e1b4b" />
-              <text x="280" y="164" textAnchor="middle" fontSize="18" fontWeight="600" fill="#ffffff" fontFamily="inherit">Parmana</text>
+              <rect x="215" y="100" width="130" height="120" rx="20" fill="#0b1b2e" />
+              <text x="280" y="164" textAnchor="middle" fontSize="18" fontWeight="600" fill="#ffffff">Parmana</text>
 
               <path d="M345 160 H410" stroke="url(#line)" strokeWidth="3" fill="none" />
-              <rect x="410" y="60" width="130" height="60" rx="14" fill="#f5f7ff" stroke="#c7d2fe" />
-              <rect x="410" y="130" width="130" height="60" rx="14" fill="#f5f7ff" stroke="#c7d2fe" />
-              <rect x="410" y="200" width="130" height="60" rx="14" fill="#f5f7ff" stroke="#c7d2fe" />
-              <text x="475" y="96" textAnchor="middle" fontSize="14" fill="#1e1b4b" fontFamily="inherit">Payments</text>
-              <text x="475" y="166" textAnchor="middle" fontSize="14" fill="#1e1b4b" fontFamily="inherit">Customers</text>
-              <text x="475" y="236" textAnchor="middle" fontSize="14" fill="#1e1b4b" fontFamily="inherit">Records</text>
+              <rect x="410" y="60" width="130" height="60" rx="14" fill="#f6f8fb" stroke="#d6dcf7" />
+              <rect x="410" y="130" width="130" height="60" rx="14" fill="#f6f8fb" stroke="#d6dcf7" />
+              <rect x="410" y="200" width="130" height="60" rx="14" fill="#f6f8fb" stroke="#d6dcf7" />
+              <text x="475" y="96" textAnchor="middle" fontSize="14" fill="#0b1b2e">Payments</text>
+              <text x="475" y="166" textAnchor="middle" fontSize="14" fill="#0b1b2e">Customers</text>
+              <text x="475" y="236" textAnchor="middle" fontSize="14" fill="#0b1b2e">Records</text>
             </svg>
           </div>
         </div>
       </section>
 
-      {/* Video */}
       <section className="block soft" aria-labelledby="video-heading">
         <div className="wrap">
           <p className="eyebrow">Video</p>
@@ -121,91 +114,91 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. Can act, stays in control */}
-      <section className="block control-section" aria-labelledby="control-heading">
+      <section className="block" aria-labelledby="control-heading">
         <div className="wrap">
+          <p className="eyebrow">The problem</p>
           <h2 id="control-heading">AI can act. Your business sets the limits.</h2>
-          <div className="content-grid content-grid-three">
-            <p className="body">
-              An AI agent might start a payment, change a customer record or prepare an approval in a connected workflow.
-            </p>
-            <p className="body">
-              Just because an agent can do something does not mean it should be allowed to.
-            </p>
-            <p className="body">
-              For requests that go through a connected integration, Parmana checks that the action is allowed before it reaches the system.
-            </p>
+          <div className="grid-3">
+            <div className="card">
+              <h3>Capable is not allowed</h3>
+              <p className="body">An agent might start a payment or change a customer record. Just because it can does not mean it should.</p>
+            </div>
+            <div className="card">
+              <h3>Checked before it runs</h3>
+              <p className="body">For requests that go through a connected integration, Parmana checks the action before it reaches the system.</p>
+            </div>
+            <div className="card">
+              <h3>Limits you can read</h3>
+              <p className="body">Rules are explicit and versioned, so the limits are written down rather than left to an AI model to interpret.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 4. How it works */}
-      <section id="how-it-works" className="block" aria-labelledby="flow-heading">
+      <section id="how-it-works" className="block soft" aria-labelledby="flow-heading">
         <div className="wrap">
+          <p className="eyebrow">How it works</p>
           <h2 id="flow-heading">Every request follows your rules.</h2>
           <ol className="steps">
             {flow.map((step) => (
               <li key={step}>
-                <p className="body">{step}</p>
+                <p>{step}</p>
               </li>
             ))}
           </ol>
         </div>
       </section>
 
-      {/* 5. Examples, interactive */}
-      <section className="block soft" aria-labelledby="examples-heading">
+      <section className="block" aria-labelledby="examples-heading">
         <div className="wrap">
+          <p className="eyebrow">Try it</p>
           <h2 id="examples-heading">A simple limit check.</h2>
-          <p className="body">This demo runs in your browser. It compares an amount with a set limit. It is not a live Parmana check or a payment.</p>
           <PaymentCheck />
         </div>
       </section>
 
-      {/* 6. Records */}
-      <section className="block records-section" aria-labelledby="records-heading">
-        <div className="wrap">
-          <h2 id="records-heading">Every decision leaves a record.</h2>
-          <div className="content-grid content-grid-two">
-            <p className="body">
-              For requests that go through Parmana, the record shows what was asked, which rule was checked and the result.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Use cases */}
-      <section id="use-cases" className="block soft" aria-labelledby="use-cases-heading">
-        <div className="wrap">
-          <h2 id="use-cases-heading">Examples from everyday work.</h2>
-          <ul className="principles">
-            {useCases.map((item) => (
-              <li key={item.title}>
-                <h3>{item.title}</h3>
-                <p className="body">{item.text}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* 8. Closing call to action */}
-      <section className="block closing-section" aria-labelledby="closing-heading">
-        <div className="wrap closing-grid">
+      <section className="block band" aria-labelledby="records-heading">
+        <div className="wrap split-text">
           <div>
-            <h2 id="closing-heading">Your rules stay in control.</h2>
-            <p className="body">
-              Let AI agents do useful work, within the limits your business has set.
-            </p>
+            <p className="eyebrow">Records</p>
+            <h2 id="records-heading">Every decision leaves a record.</h2>
           </div>
-          <div className="closing-actions">
-            <div className="cta-row">
-              <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Talk to Parmana</a>
-              <a className="button secondary" href="https://github.com/pavancharak" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          <div>
+            <p className="body">
+              For requests that go through Parmana, the record shows what was asked, which rule was
+              checked and the result. It is kept so that it can be checked later.
+            </p>
+            <div className="grid-3" style={{ marginTop: 28 }}>
+              {capabilities.map((item) => (
+                <div className="card" key={item.title}>
+                  <h3>{item.title}</h3>
+                  <p className="body">{item.text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
+
+      <section id="use-cases" className="block" aria-labelledby="use-cases-heading">
+        <div className="wrap">
+          <p className="eyebrow">Use cases</p>
+          <h2 id="use-cases-heading">Examples from everyday work.</h2>
+          <div className="grid-3">
+            {useCases.map((item) => (
+              <div className="card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p className="body">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CallToAction
+        heading="Your rules stay in control."
+        text="Let AI agents do useful work, within the limits your business has set."
+      />
 
       <SiteFooter />
     </main>

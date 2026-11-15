@@ -17,14 +17,13 @@ export default function PaymentCheck() {
 
   return (
     <div className="check">
-      <h3>Illustrative payment limit check</h3>
+      <h3>Illustrative limit check</h3>
       <p className="body">
-        This is a browser-only example using a fixed ₹50,000 limit. It does not contact
-        Parmana, check a live policy, call a bank or payment provider, approve a payment,
-        or send money.
+        A browser-only example with a fixed ₹50,000 limit. It does not contact Parmana,
+        check a live policy, call a bank or payment provider, or move money.
       </p>
 
-      <div className="check-choices" role="group" aria-label="Choose an example payment amount">
+      <div className="check-choices" role="group" aria-label="Choose an example amount">
         {options.map((option) => (
           <button
             key={option.amount}
@@ -50,9 +49,7 @@ export default function PaymentCheck() {
       </dl>
 
       <p className={"check-result " + (withinExampleLimit ? "allowed" : "blocked")} aria-live="polite">
-        {withinExampleLimit
-          ? "Within the example limit"
-          : "Above the example limit"}
+        {withinExampleLimit ? "Within the example limit: sent on for approval rules." : "Above the example limit: sent for review."}
       </p>
     </div>
   );

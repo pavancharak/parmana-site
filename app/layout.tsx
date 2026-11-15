@@ -3,7 +3,7 @@ import "./globals.css";
 
 const siteName = "Parmana Systems";
 const description =
-  "Parmana checks AI agent requests routed through configured business workflows against the authority your business sets, and records those checks.";
+  "Parmana checks AI agent requests in connected workflows against the limits your business sets, and keeps a record of each check.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://parmanasystems.com"),
@@ -16,13 +16,7 @@ export const metadata: Metadata = {
   icons: {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
-  keywords: [
-    "deep tech",
-    "AI agent authorization",
-    "execution integrity",
-    "verifiable evidence",
-    "AI governance",
-  ],
+  keywords: ["AI agent authorization", "AI governance", "verifiable evidence", "execution control"],
   robots: { index: true, follow: true },
   openGraph: {
     siteName,
@@ -50,12 +44,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               name: siteName,
               url: "https://parmanasystems.com",
               description,
-              category: "Deep tech",
-              knowsAbout: [
-                "AI agent authorization",
-                "Execution integrity",
-                "Verifiable evidence",
-              ],
             }),
           }}
         />
