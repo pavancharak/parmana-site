@@ -401,3 +401,13 @@ p { margin: 0; }
   .pic-arrow { transform: rotate(90deg); }
   .pic-box { max-width: 100%; width: 100%; }
 }
+
+/* License highlight */
+.license-highlight {
+  background: var(--accent-tint);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: clamp(28px, 4vw, 44px);
+  max-width: 820px;
+}
+.license-statement { color: var(--ink); font-size: clamp(1.25rem, 2.2vw, 1.6rem); font-weight: 650; line-height: 1.4; letter-spacing: -0.01em; }
