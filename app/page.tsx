@@ -31,7 +31,7 @@ export default function Home() {
         <div className="wrap story-full">
           <div className="story-title">
             <p className="eyebrow">An ordinary afternoon</p>
-            <h1 id="story-heading">An AI agent did the work. The rules still applied.</h1>
+            <h1 id="story-heading">Make sure your business is ready for autonomous execution.</h1>
           </div>
           <div className="story">
             {storyParagraphs.map((text) => (
