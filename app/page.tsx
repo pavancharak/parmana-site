@@ -22,6 +22,25 @@ const storyParagraphs = [
   "The owner didn't have to trust the agent, and didn't have to trust a sentence in its instructions. The policies applied, and the proof was already there.",
 ];
 
+const takeaways = [
+  {
+    title: "Policies, written once",
+    text: "You set the rules your people already follow, and the same rules apply to your AI agents.",
+  },
+  {
+    title: "Every action is checked first",
+    text: "Each request is compared with your policies before anything happens. If it doesn't fit, it stops.",
+  },
+  {
+    title: "People approve what matters",
+    text: "Where your policy requires it, a named person must approve before the action goes ahead.",
+  },
+  {
+    title: "A record of everything",
+    text: "Every decision is kept, so you can show later what was asked, what was allowed, and what was done.",
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -36,6 +55,21 @@ export default function Home() {
           <div className="story">
             {storyParagraphs.map((text) => (
               <p key={text.slice(0, 24)}>{text}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="block soft" aria-labelledby="takeaways-heading">
+        <div className="wrap">
+          <p className="eyebrow">Key takeaways</p>
+          <h2 id="takeaways-heading">What to remember.</h2>
+          <div className="grid-2">
+            {takeaways.map((item) => (
+              <div className="card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p className="body">{item.text}</p>
+              </div>
             ))}
           </div>
         </div>
