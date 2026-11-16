@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { CallToAction, SiteFooter, SiteHeader, booking } from "./components/SiteChrome";
-import PaymentCheck from "./components/PaymentCheck";
 
-const pageTitle = "Control for AI agents in connected workflows";
+const pageTitle = "Authority for AI agents, enforced outside the prompt";
 const pageDescription =
-  "Parmana checks AI requests in connected workflows against the limits your business sets, and keeps a record of each check.";
+  "Parmana checks every action an AI agent takes against the limits you set, requires signed approval where policy needs it, and records what was authorized and what happened.";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -14,51 +13,83 @@ export const metadata: Metadata = {
   twitter: { card: "summary", title: pageTitle, description: pageDescription },
 };
 
-const flow = [
-  "You set the policy.",
-  "An AI agent requests an action.",
-  "Parmana checks it against your policy.",
-  "A trusted person approves, if the policy requires it.",
-  "Your own system carries out the action once. Both steps are recorded.",
+const problems = [
+  {
+    title: "A prompt is not a control",
+    text: "“Only refund up to 500” is an instruction the model can ignore, and text injected into its context can override it.",
+  },
+  {
+    title: "Credentials should not reach the agent",
+    text: "On supported paths, the gateway resolves connector credentials, so the agent calling the API never receives them.",
+  },
+  {
+    title: "Logs are a claim, not evidence",
+    text: "Logs written by the system that acted show what it says happened. Parmana writes signed records that can be checked independently.",
+  },
 ];
 
-const useCases = [
+const steps = [
   {
-    title: "Payments",
-    text: "A refund under the set limit can go ahead. Anything above it is sent for approval.",
+    title: "Declare",
+    text: "The agent sends one request, POST /transactions, with a caller key and a Business Transaction. Declaring and executing are one call.",
   },
   {
-    title: "Finance",
-    text: "Journal entries can be limited to approved accounts and roles.",
+    title: "Authorize",
+    text: "Parmana loads the named policy version and checks governance, signals and bindings. It returns approve or reject. A rejected action never runs.",
   },
   {
-    title: "Procurement",
-    text: "An agent can prepare a purchase request, and the right manager approves it.",
+    title: "Approve where required",
+    text: "If the policy requires it, a trusted person gives a signed approval. No approval, no action, including reads.",
   },
   {
-    title: "Customer operations",
-    text: "An agent can update delivery details. Sensitive account changes are sent for review.",
-  },
-  {
-    title: "Enterprise workflows",
-    text: "The approval steps you set are applied, and each decision is recorded.",
+    title: "Execute once, then prove",
+    text: "The gateway releases one approved action through a connector and writes a signed record of what was authorized and what happened.",
   },
 ];
 
 const permissions = [
   {
     title: "Named actions",
-    text: "Every action has a clear name, such as refunds or release-goods, so it is obvious what an agent is asking to do.",
+    text: "Every capability has a name, such as razorpay:refund, so it is obvious what an agent is asking to do.",
   },
   {
     title: "Granted per caller",
-    text: "Each AI agent or user is given only the actions it needs. Anything not granted is refused and recorded.",
+    text: "Each caller gets only the actions it needs. Anything not granted is refused and recorded.",
   },
   {
-    title: "Limits and approval",
-    text: "Each granted action can carry its own limits. Requests above a limit are sent to a trusted person for signed approval.",
+    title: "Limits and approvals",
+    text: "Each granted action can carry its own limits. Requests above a limit go to a trusted person for signed approval.",
   },
 ];
+
+const useCases = [
+  { title: "Refunds", text: "Refunds under the set limit go ahead. Anything above it waits for approval." },
+  { title: "Vendor payments", text: "Payments are checked against approved vendors, amounts and approvers before they run." },
+  { title: "CRM updates", text: "An agent can update a deal stage. Changes to amounts or ownership go to review." },
+  { title: "Pull requests", text: "An agent can open a change. Merging needs the approval the policy names." },
+];
+
+const sampleRequest = `POST /transactions
+Authorization: Bearer <caller key>
+Content-Type: application/json
+
+{
+  "businessTransactionId": "3f6c2a1e-8b4d-4e7a-9c1f-2d5b7a9e0f11",
+  "metadata": {
+    "businessTransactionId": "3f6c2a1e-8b4d-4e7a-9c1f-2d5b7a9e0f11",
+    "tenantId": "acme-finance",
+    "sourceSystem": "support-agent"
+  },
+  "authority": {
+    "principalId": "agent:support-refunds",
+    "authorityType": "delegated"
+  },
+  "intent": {
+    "action": "razorpay:refund",
+    "parameters": { "amount": 12000, "currency": "INR" }
+  },
+  "policy": { "name": "refund-limits", "version": "3" }
+}`;
 
 export default function Home() {
   return (
@@ -66,80 +97,33 @@ export default function Home() {
       <SiteHeader />
 
       <section className="hero" aria-labelledby="hero-heading">
-        <div className="wrap split">
-          <div>
-            <p className="eyebrow">For businesses using AI agents</p>
-            <h1 id="hero-heading">Set the rules for AI in your connected workflows.</h1>
-            <p className="lead">
-              Parmana lets businesses use the power of AI while keeping control and predictability in
-              the systems they already run.
-            </p>
-            <div className="cta-row">
-              <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Talk to us</a>
-              <a className="button secondary" href="/architecture">Explore the architecture</a>
-            </div>
-          </div>
-
-          <div className="hero-visual" aria-hidden="true">
-            <svg viewBox="0 0 560 320" role="img">
-              <defs>
-                <linearGradient id="line" x1="0" x2="1">
-                  <stop offset="0" stopColor="#5b4bdb" />
-                  <stop offset="1" stopColor="#2f7de1" />
-                </linearGradient>
-              </defs>
-              <rect x="20" y="120" width="130" height="80" rx="16" fill="#f6f8fb" stroke="#d6dcf7" />
-              <text x="85" y="166" textAnchor="middle" fontSize="16" fill="#0b1b2e">AI agent</text>
-
-              <path d="M150 160 H215" stroke="url(#line)" strokeWidth="3" fill="none" />
-              <rect x="215" y="100" width="130" height="120" rx="20" fill="#0b1b2e" />
-              <text x="280" y="164" textAnchor="middle" fontSize="18" fontWeight="600" fill="#ffffff">Parmana</text>
-
-              <path d="M345 160 H410" stroke="url(#line)" strokeWidth="3" fill="none" />
-              <rect x="410" y="60" width="130" height="60" rx="14" fill="#f6f8fb" stroke="#d6dcf7" />
-              <rect x="410" y="130" width="130" height="60" rx="14" fill="#f6f8fb" stroke="#d6dcf7" />
-              <rect x="410" y="200" width="130" height="60" rx="14" fill="#f6f8fb" stroke="#d6dcf7" />
-              <text x="475" y="96" textAnchor="middle" fontSize="14" fill="#0b1b2e">Payments</text>
-              <text x="475" y="166" textAnchor="middle" fontSize="14" fill="#0b1b2e">Customers</text>
-              <text x="475" y="236" textAnchor="middle" fontSize="14" fill="#0b1b2e">Records</text>
-            </svg>
+        <div className="wrap hero-inner">
+          <p className="eyebrow">For engineering teams building AI agents</p>
+          <h1 id="hero-heading">Authority for AI agents, enforced outside the prompt.</h1>
+          <p className="lead">
+            Parmana checks every action an agent takes against the limits you set, requires signed
+            approval where your policy needs it, and records what was authorized and what happened.
+          </p>
+          <div className="cta-row">
+            <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Talk to us</a>
+            <a className="button secondary" href="https://docs.parmanasystems.com" target="_blank" rel="noopener noreferrer">
+              Read the docs
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="block soft" aria-labelledby="video-heading">
-        <div className="wrap">
-          <p className="eyebrow">Video</p>
-          <h2 id="video-heading">See how a request is checked</h2>
-          <div className="video-embed">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/B3G1Cvir5nc"
-              title="Parmana video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="block" aria-labelledby="control-heading">
+      <section className="block" aria-labelledby="problem-heading">
         <div className="wrap">
           <p className="eyebrow">The problem</p>
-          <h2 id="control-heading">AI can act. Your business sets the limits.</h2>
+          <h2 id="problem-heading">Agents that move money or change data need controls they cannot talk their way past.</h2>
           <div className="grid-3">
-            <div className="card">
-              <h3>Capable is not allowed</h3>
-              <p className="body">An agent might start a payment or change a customer record. Just because it can does not mean it should.</p>
-            </div>
-            <div className="card">
-              <h3>Checked before it runs</h3>
-              <p className="body">Each request is checked against your policy before any action is carried out, through a connector for each system.</p>
-            </div>
-            <div className="card">
-              <h3>Limits you can read</h3>
-              <p className="body">Rules are explicit and versioned, so the limits are written down rather than left to an AI model to interpret.</p>
-            </div>
+            {problems.map((item) => (
+              <div className="card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p className="body">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -147,36 +131,47 @@ export default function Home() {
       <section id="how-it-works" className="block soft" aria-labelledby="flow-heading">
         <div className="wrap">
           <p className="eyebrow">How it works</p>
-          <h2 id="flow-heading">Every request follows your rules.</h2>
+          <h2 id="flow-heading">Declare, authorize, execute, prove.</h2>
           <ol className="steps">
-            {flow.map((step) => (
-              <li key={step}>
-                <p>{step}</p>
+            {steps.map((step) => (
+              <li key={step.title}>
+                <h3>{step.title}</h3>
+                <p className="body">{step.text}</p>
               </li>
             ))}
           </ol>
         </div>
       </section>
 
-      <section className="block" aria-labelledby="examples-heading">
-        <div className="wrap">
-          <p className="eyebrow">Try it</p>
-          <h2 id="examples-heading">A simple limit check.</h2>
-          <PaymentCheck />
+      <section className="block" aria-labelledby="request-heading">
+        <div className="wrap split">
+          <div>
+            <p className="eyebrow">Integration</p>
+            <h2 id="request-heading">One request in front of the action you need to control.</h2>
+            <p className="body">
+              Your agent code changes in one place: the call that used to go straight to the API now goes
+              to Parmana. The request names the action, the parameters the policy depends on, and the
+              policy version in effect. The fields below are illustrative.
+            </p>
+          </div>
+          <pre className="code" aria-label="Example request to Parmana">
+            <code>{sampleRequest}</code>
+          </pre>
         </div>
       </section>
 
-      <section className="block band" aria-labelledby="records-heading">
+      <section className="block band" aria-labelledby="verify-heading">
         <div className="wrap split-text">
           <div>
-            <p className="eyebrow">Records</p>
-            <h2 id="records-heading">Every decision leaves a record.</h2>
+            <p className="eyebrow">Verification</p>
+            <h2 id="verify-heading">Check a record without trusting us.</h2>
           </div>
           <div>
             <p className="body">
-              Each request, decision and execution is saved in a signed record. The record shows what
-              was asked, which policy was checked, who approved, and what was carried out. Anyone can
-              verify it later.
+              Each authorization and execution produces a signed record. Anyone can check its integrity
+              and signatures using only the public keys they choose to trust, without access to our
+              database or runtime. Verification shows the record is intact and was signed by a trusted
+              key. It does not, on its own, prove that an external action happened.
             </p>
           </div>
         </div>
@@ -197,11 +192,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="use-cases" className="block" aria-labelledby="use-cases-heading">
+      <section id="use-cases" className="block soft" aria-labelledby="use-cases-heading">
         <div className="wrap">
-          <p className="eyebrow">Use cases</p>
-          <h2 id="use-cases-heading">Examples from everyday work.</h2>
-          <div className="grid-3">
+          <p className="eyebrow">Where teams start</p>
+          <h2 id="use-cases-heading">Try it on the riskiest action your agent has.</h2>
+          <div className="grid-2">
             {useCases.map((item) => (
               <div className="card" key={item.title}>
                 <h3>{item.title}</h3>
@@ -212,9 +207,25 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="block" aria-labelledby="video-heading">
+        <div className="wrap">
+          <p className="eyebrow">Video</p>
+          <h2 id="video-heading">See how a request is checked.</h2>
+          <div className="video-embed">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/B3G1Cvir5nc"
+              title="Parmana video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
       <CallToAction
-        heading="Your rules stay in control."
-        text="Let AI agents do useful work, within the limits your business has set."
+        heading="Put one agent action behind Parmana this week."
+        text="Pick the riskiest action your agent has, route it through the gate in a test environment, and verify one record offline."
       />
 
       <SiteFooter />

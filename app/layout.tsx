@@ -3,12 +3,12 @@ import "./globals.css";
 
 const siteName = "Parmana Systems";
 const description =
-  "Parmana checks AI agent requests in connected workflows against the limits your business sets, and keeps a record of each check.";
+  "Parmana checks every action an AI agent takes against the limits you set, requires signed approval where policy needs it, and records what was authorized and what happened.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://parmanasystems.com"),
   title: {
-    default: "Control for AI agents in connected workflows",
+    default: "Authority for AI agents, enforced outside the prompt",
     template: "%s | Parmana Systems",
   },
   description,
@@ -21,12 +21,12 @@ export const metadata: Metadata = {
   openGraph: {
     siteName,
     type: "website",
-    title: "Control for AI agents in connected workflows",
+    title: "Authority for AI agents, enforced outside the prompt",
     description,
   },
   twitter: {
     card: "summary",
-    title: "Control for AI agents in connected workflows",
+    title: "Authority for AI agents, enforced outside the prompt",
     description,
   },
 };
