@@ -53,7 +53,7 @@ export default function Home() {
         <div className="wrap authority-hero-grid">
           <div className="authority-copy">
             <p className="eyebrow">Accountability for autonomous systems</p>
-            <h1>Your AI agent can follow every security rule and still make a decision your business never authorized.</h1>
+            <h1>Your AI agent can exceed business authority, even when it follows security rules.</h1>
             <p className="authority-lead">Security permissions determine what a system can access. Business authority determines what it is allowed to do. These are not the same thing.</p>
             <p className="authority-support">Parmana checks business authority before covered actions reach execution, then keeps independently verifiable evidence of what was authorized and what happened.</p>
             <div className="cta-row">
