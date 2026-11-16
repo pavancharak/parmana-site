@@ -364,3 +364,40 @@ p { margin: 0; }
 .story-closing .cta-row { justify-content: center; }
 
 .small-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 18px; }
+
+/* Picture of how Parmana fits */
+.picture {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(24px, 4vw, 48px);
+  display: grid;
+  gap: 20px;
+}
+.pic-top, .pic-bottom { display: flex; justify-content: center; }
+.pic-row { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.pic-box {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  min-width: 190px;
+  max-width: 260px;
+  display: grid;
+  gap: 6px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.pic-box strong { color: var(--ink); font-size: 1.05rem; }
+.pic-box span { color: var(--muted); font-size: 0.92rem; }
+.pic-box.policy { border-color: var(--accent); }
+.pic-box.hero-box { background: var(--ink); border-color: var(--ink); }
+.pic-box.hero-box strong { color: var(--bg); }
+.pic-box.hero-box span { color: var(--line); }
+.pic-arrow { color: var(--accent); font-size: 1.6rem; font-weight: 700; line-height: 1; }
+.pic-arrow.down { line-height: 1; }
+@media (max-width: 760px) {
+  .pic-row { flex-direction: column; }
+  .pic-arrow { transform: rotate(90deg); }
+  .pic-box { max-width: 100%; width: 100%; }
+}
