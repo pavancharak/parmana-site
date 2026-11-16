@@ -8,6 +8,7 @@ const navItems = [
   { href: "/research", label: "Research" },
   { href: "/team", label: "Team" },
   { href: "/vision", label: "Vision" },
+  { href: "/license", label: "License" },
 ];
 
 export function GitHubIcon() {
@@ -51,6 +52,7 @@ export function SiteFooter() {
           <a href="/research">Research</a>
           <a href="/team">Team</a>
           <a href="/vision">Vision</a>
+          <a href="/license">License</a>
           <a href="https://docs.parmanasystems.com" target="_blank" rel="noopener noreferrer">Docs</a>
           <a href={github} target="_blank" rel="noopener noreferrer">GitHub</a>
         </nav>
