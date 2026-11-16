@@ -47,6 +47,10 @@ export default function Home() {
           <div className="cta-row">
             <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Talk to us</a>
           </div>
+          <div className="small-links" aria-label="Learn more">
+            <a className="button secondary small" href="/architecture">See how Parmana fits</a>
+            <a className="button secondary small" href="https://docs.parmanasystems.com" target="_blank" rel="noopener noreferrer">Read the docs</a>
+          </div>
         </div>
       </section>
 
