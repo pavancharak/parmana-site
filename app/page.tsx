@@ -28,7 +28,7 @@ export default function Home() {
       <SiteHeader />
 
       <section className="story-section" aria-labelledby="story-heading">
-        <div className="wrap story-split">
+        <div className="wrap story-full">
           <div className="story-title">
             <p className="eyebrow">An ordinary afternoon</p>
             <h1 id="story-heading">An AI agent did the work. The rules still applied.</h1>
