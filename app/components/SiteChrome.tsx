@@ -4,7 +4,6 @@ export const booking = "https://cal.com/pavan-charak/";
 export const github = "https://github.com/pavancharak";
 
 const navItems = [
-  { href: "/#use-cases", label: "Use cases" },
   { href: "/architecture", label: "Architecture" },
   { href: "/research", label: "Research" },
   { href: "/team", label: "Team" },
