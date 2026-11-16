@@ -43,7 +43,7 @@ export default function Home() {
 
       <section className="closing story-closing" aria-labelledby="cta-heading">
         <div className="wrap">
-          <h2 id="cta-heading">You set the rules. Parmana makes sure they're followed, and keeps the proof.</h2>
+          <h2 id="cta-heading">Works with your existing systems. No new infrastructure required.</h2>
           <div className="cta-row">
             <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Talk to us</a>
           </div>
