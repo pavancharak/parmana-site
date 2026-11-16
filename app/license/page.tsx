@@ -3,7 +3,7 @@ import { SiteFooter, SiteHeader, PageIntro } from "../components/SiteChrome";
 
 const title = "License";
 const description = "The Parmana repository, including the server, the SDKs and the offline verifier, is licensed under the Apache License 2.0.";
-const licenseUrl = "https://github.com/pavancharak/parmana-core/blob/main/LICENSE";
+const licenseUrl = "https://docs.parmanasystems.com/license";
 
 export const metadata: Metadata = {
   title,
