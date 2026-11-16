@@ -320,7 +320,13 @@ p { margin: 0; }
 .checklist { padding-left: 20px; color: var(--muted); }
 .checklist li { margin: 8px 0; }
 .paper-thumb { width: 100%; border-radius: var(--radius); border: 1px solid var(--line); }
-.repo-link { font-weight: 600; }
+.repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+.repo-link svg { width: 18px; height: 18px; flex: none; }
 
 .hide-sm { display: inline-block; }
 
