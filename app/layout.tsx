@@ -3,12 +3,12 @@ import "./globals.css";
 
 const siteName = "Parmana Systems";
 const description =
-  "Parmana checks every action an AI agent takes against the limits you set, requires signed approval where policy needs it, and records what was authorized and what happened.";
+  "The Business Authority Layer for autonomous systems. Parmana helps enterprises define delegated business authority, enforce it deterministically before execution and verify evidence of what happened.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://parmanasystems.com"),
   title: {
-    default: "Authority for AI agents, enforced outside the prompt",
+    default: "Parmana Systems | The Business Authority Layer",
     template: "%s | Parmana Systems",
   },
   description,
@@ -16,17 +16,24 @@ export const metadata: Metadata = {
   icons: {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
-  keywords: ["AI agent authorization", "AI governance", "verifiable evidence", "execution control"],
+  keywords: [
+    "business authority",
+    "AI agent authorization",
+    "deterministic enforcement",
+    "autonomous business systems",
+    "cryptographic evidence",
+    "agent execution control",
+  ],
   robots: { index: true, follow: true },
   openGraph: {
     siteName,
     type: "website",
-    title: "Authority for AI agents, enforced outside the prompt",
+    title: "Parmana Systems | The Business Authority Layer",
     description,
   },
   twitter: {
-    card: "summary",
-    title: "Authority for AI agents, enforced outside the prompt",
+    card: "summary_large_image",
+    title: "Parmana Systems | The Business Authority Layer",
     description,
   },
 };
