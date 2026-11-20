@@ -3,12 +3,12 @@ import "./globals.css";
 
 const siteName = "Parmana Systems";
 const description =
-  "The Business Authority Layer for autonomous systems. Parmana helps enterprises define delegated business authority, enforce it deterministically before execution and verify evidence of what happened.";
+  "The Institutional Authority Layer for autonomous systems. Parmana helps enterprises define delegated institutional authority, enforce it deterministically before execution and verify evidence of what happened.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://parmanasystems.com"),
   title: {
-    default: "Parmana Systems | The Business Authority Layer",
+    default: "Parmana Systems | The Institutional Authority Layer",
     template: "%s | Parmana Systems",
   },
   description,
@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   keywords: [
-    "business authority",
+    "institutional authority",
     "AI agent authorization",
     "deterministic enforcement",
-    "autonomous business systems",
+    "autonomous institutional systems",
     "cryptographic evidence",
     "agent execution control",
   ],
@@ -28,12 +28,12 @@ export const metadata: Metadata = {
   openGraph: {
     siteName,
     type: "website",
-    title: "Parmana Systems | The Business Authority Layer",
+    title: "Parmana Systems | The Institutional Authority Layer",
     description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Parmana Systems | The Business Authority Layer",
+    title: "Parmana Systems | The Institutional Authority Layer",
     description,
   },
 };

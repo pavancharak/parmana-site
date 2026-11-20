@@ -41,7 +41,7 @@ export function SiteFooter() {
               <img src="/logo-mark.svg" alt="" width={28} height={28} />
               <span>parmana<span className="wordmark-systems">systems</span></span>
             </a>
-            <p>The Business Authority Layer for autonomous systems.</p>
+            <p>The Institutional Authority Layer for autonomous systems.</p>
           </div>
           <div className="footer-links">
             <div><strong>Explore</strong><a href="/business">For business</a><a href="/engineering">For engineering</a><a href="/architecture">Architecture</a><a href="/use-cases">Use cases</a></div>
