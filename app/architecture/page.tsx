@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CallToAction, PageIntro, SectionHeading, SiteFooter, SiteHeader, docs } from "../components/SiteChrome";
 
 const title = "Technical Architecture";
-const description = "Detailed architecture for deterministic business authorization, policy enforcement, cryptographic evidence and independent verification.";
+const description = "Detailed architecture for deterministic institutional authorization, policy enforcement, cryptographic evidence and independent verification.";
 
 export const metadata: Metadata = {
   title, description, alternates: { canonical: "/architecture" },
@@ -14,7 +14,7 @@ const stages = [
   { id: "B", title: "Request adapter", sub: "Typed action contract", desc: "The integration boundary binds the authenticated principal, agent, operation, target, resource attributes and request identifier." },
   { id: "C", title: "Policy and authority engine", sub: "Deterministic evaluation", desc: "A versioned policy bundle is evaluated against canonical structured inputs. The result is allow, deny or approval required." },
   { id: "D", title: "Enforcement gateway", sub: "Side-effect mediation", desc: "Only an allowed and correctly bound decision may progress to the protected operation. Pending and denied actions do not fall through." },
-  { id: "E", title: "Business system", sub: "Protected side effect", desc: "The target service performs the operation. Its response or transaction reference is captured separately from the authorization decision." },
+  { id: "E", title: "Institutional system", sub: "Protected side effect", desc: "The target service performs the operation. Its response or transaction reference is captured separately from the authorization decision." },
   { id: "F", title: "Evidence and verifier", sub: "Integrity and provenance", desc: "The decision and execution references are recorded in integrity-protected evidence that can be checked independently." },
 ];
 
@@ -31,7 +31,7 @@ export default function ArchitecturePage() {
     <main>
       <SiteHeader />
       <PageIntro eyebrow="Technical architecture" title="Authorization must sit on the execution path, not beside it.">
-        <p>This page describes the control architecture for deterministic business authorization. It is intended for platform engineering, security architecture, infrastructure and integration teams.</p>
+        <p>This page describes the control architecture for deterministic institutional authorization. It is intended for platform engineering, security architecture, infrastructure and integration teams.</p>
       </PageIntro>
 
       <section className="block">
@@ -79,7 +79,7 @@ export default function ArchitecturePage() {
             <div className="matrix-head"><span>CONDITION</span><span>REQUIRED CONTROL BEHAVIOR</span></div>
             <div><code>Unknown policy version</code><strong>Reject the decision request. Do not fall back to a permissive policy.</strong></div>
             <div><code>Invalid policy signature</code><strong>Reject policy material that does not validate to a configured trust root.</strong></div>
-            <div><code>Missing required attributes</code><strong>Return an explicit non-allow result. Do not infer missing business facts.</strong></div>
+            <div><code>Missing required attributes</code><strong>Return an explicit non-allow result. Do not infer missing institutional facts.</strong></div>
             <div><code>Approval required</code><strong>Hold the action until an authorized approval is bound to the request.</strong></div>
             <div><code>Downstream timeout</code><strong>Do not report successful execution without a confirmed downstream result.</strong></div>
             <div><code>Evidence verification failure</code><strong>Mark the evidence as unverifiable. Never present it as a valid proof record.</strong></div>
@@ -92,7 +92,7 @@ export default function ArchitecturePage() {
           <SectionHeading eyebrow="Threat and trust boundaries" title="Do not confuse an authorization proof with proof of everything." text="The control has a defined scope. It should be precise about what it establishes and what remains the responsibility of connected systems." />
           <div className="trust-grid">
             <article><h3>What the control can establish</h3><ul><li>Which policy reference was evaluated.</li><li>Which structured request was presented for authorization.</li><li>Which outcome the authorization engine returned.</li><li>Which execution reference was associated with the decision.</li><li>Whether the recorded evidence passes configured integrity verification.</li></ul></article>
-            <article><h3>What it does not establish by itself</h3><ul><li>That the underlying business policy was correct or lawful.</li><li>That every possible route to the target system is mediated.</li><li>That a downstream service completed an external real-world outcome.</li><li>That an AI agent is secure against every exploit or compromise.</li><li>That a signature makes an inaccurate source statement true.</li></ul></article>
+            <article><h3>What it does not establish by itself</h3><ul><li>That the underlying institutional policy was correct or lawful.</li><li>That every possible route to the target system is mediated.</li><li>That a downstream service completed an external real-world outcome.</li><li>That an AI agent is secure against every exploit or compromise.</li><li>That a signature makes an inaccurate source statement true.</li></ul></article>
           </div>
         </div>
       </section>

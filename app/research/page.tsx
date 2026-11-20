@@ -25,7 +25,7 @@ const papers = [
     status: "Research paper, November 2026",
     thumb: "/research/beyond-trust-thumb.png",
     summary:
-      "Checking how an AI model behaves is not the same as controlling what it is allowed to do in a business system. The paper proposes separating these two questions and keeping evidence that others can verify.",
+      "Checking how an AI model behaves is not the same as controlling what it is allowed to do in an institutional system. The paper proposes separating these two questions and keeping evidence that others can verify.",
   },
 ];
 

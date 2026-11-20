@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CallToAction, PageIntro, SectionHeading, SiteFooter, SiteHeader, docs } from "../components/SiteChrome";
 
 const title = "For Engineering Leaders";
-const description = "Technical architecture and implementation model for enforcing delegated business authority outside the agent execution loop.";
+const description = "Technical architecture and implementation model for enforcing delegated institutional authority outside the agent execution loop.";
 
 export const metadata: Metadata = {
   title, description, alternates: { canonical: "/engineering" },
@@ -31,8 +31,8 @@ export default function EngineeringPage() {
   return (
     <main>
       <SiteHeader />
-      <PageIntro eyebrow="For CTOs, architects and platform engineers" title="A deterministic authorization boundary between agent intent and business execution.">
-        <p>Parmana is designed to externalize business authority from the agent. It evaluates structured action requests against declared policy, enforces the decision at the execution boundary and records cryptographically verifiable evidence.</p>
+      <PageIntro eyebrow="For CTOs, architects and platform engineers" title="A deterministic authorization boundary between agent intent and institutional execution.">
+        <p>Parmana is designed to externalize institutional authority from the agent. It evaluates structured action requests against declared policy, enforces the decision at the execution boundary and records cryptographically verifiable evidence.</p>
       </PageIntro>
 
       <section className="block">
@@ -64,7 +64,7 @@ export default function EngineeringPage() {
             </div>
             <div className="arch-arrow">↓ ALLOW ONLY</div>
             <div className="arch-row arch-two">
-              <div className="arch-node"><span>PROTECTED SIDE EFFECT</span><strong>Business system / tool</strong><small>Payment, ERP, CRM, infrastructure</small></div>
+              <div className="arch-node"><span>PROTECTED SIDE EFFECT</span><strong>Institutional system / tool</strong><small>Payment, ERP, CRM, infrastructure</small></div>
               <div className="arch-node arch-evidence"><span>INTEGRITY RECORD</span><strong>Evidence ledger</strong><small>Decision reference · execution reference · hash chain</small></div>
             </div>
             <div className="arch-foot">Independent verification recomputes the cryptographic evidence against the applicable trust roots.</div>
@@ -104,7 +104,7 @@ export default function EngineeringPage() {
         </div>
       </section>
 
-      <CallToAction heading="Review the control boundary with your engineering team." text="Bring your agent framework, tool execution path and one protected business action. We can work through the integration and trust boundaries together." />
+      <CallToAction heading="Review the control boundary with your engineering team." text="Bring your agent framework, tool execution path and one protected institutional action. We can work through the integration and trust boundaries together." />
       <SiteFooter />
     </main>
   );
