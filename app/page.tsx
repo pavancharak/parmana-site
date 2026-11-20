@@ -104,7 +104,7 @@ export default function Home() {
           </div>
         </div>
         <div className="wrap distinction-table">
-          <div><span>TECHNICAL ACCESS</span><strong>Can this identity invoke the operation?</strong></div>
+          <div><span>ACCESS PERMISSIONS</span><strong>Can this identity invoke the operation?</strong></div>
           <div><span>INSTITUTIONAL AUTHORITY</span><strong>Is this specific action within delegated limits?</strong></div>
           <div><span>EXECUTION EVIDENCE</span><strong>Can the decision and recorded action be verified?</strong></div>
         </div>
