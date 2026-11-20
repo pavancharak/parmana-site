@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CallToAction, PageIntro, SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 const title = "Vision";
-const description = "To help organisations adopt autonomous systems without losing control over who or what is authorised to act on their behalf.";
+const description = "A world where institutions can be trusted, authority can be established, and evidence can be independently verified.";
 
 export const metadata: Metadata = {
   title,
@@ -27,8 +27,8 @@ export default function VisionPage() {
   return (
     <main>
       <SiteHeader />
-      <PageIntro eyebrow="Our Vision" title="Autonomy without losing control.">
-        <p>To help organisations adopt autonomous systems without losing control over who or what is authorised to act on their behalf.</p>
+      <PageIntro eyebrow="Vision" title="A world where institutions can be trusted.">
+        <p>Authority can be established. Evidence can be independently verified.</p>
       </PageIntro>
 
       <section className="block">
