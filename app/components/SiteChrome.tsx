@@ -7,6 +7,8 @@ const navItems = [
   { href: "/architecture", label: "Architecture" },
   { href: "/research", label: "Research" },
   { href: "/team", label: "Team" },
+  { href: "/business", label: "For business" },
+  { href: "/engineering", label: "For engineers" },
   { href: "/vision", label: "Vision" },
   { href: "/license", label: "License" },
 ];
@@ -51,6 +53,8 @@ export function SiteFooter() {
           <a href="/architecture">Architecture</a>
           <a href="/research">Research</a>
           <a href="/team">Team</a>
+          <a href="/business">For business</a>
+          <a href="/engineering">For engineers</a>
           <a href="/vision">Vision</a>
           <a href="/license">License</a>
           <a href="https://docs.parmanasystems.com" target="_blank" rel="noopener noreferrer">Docs</a>
