@@ -1,41 +1,30 @@
 import type { ReactNode } from "react";
 
 export const booking = "https://cal.com/pavan-charak/";
+export const docs = "https://docs.parmanasystems.com";
 export const github = "https://github.com/pavancharak";
 
 const navItems = [
+  { href: "/business", label: "For business" },
+  { href: "/engineering", label: "For engineering" },
   { href: "/architecture", label: "Architecture" },
+  { href: "/use-cases", label: "Use cases" },
   { href: "/research", label: "Research" },
-  { href: "/team", label: "Team" },
-  { href: "/vision", label: "Vision" },
-  { href: "/license", label: "License" },
 ];
-
-export function GitHubIcon() {
-  return (
-    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
-    </svg>
-  );
-}
 
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <div className="wrap">
-        <a className="wordmark" href="/">
-          <img src="/logo-mark.svg" alt="" width={28} height={28} />
-          Parmana
+      <div className="wrap header-inner">
+        <a className="wordmark" href="/" aria-label="Parmana Systems home">
+          <img src="/logo-mark.svg" alt="" width={30} height={30} />
+          <span>parmana<span className="wordmark-systems">systems</span></span>
         </a>
-        <nav className="site-nav" aria-label="Main">
+        <nav className="site-nav" aria-label="Main navigation">
           {navItems.map((item) => (
-            <a key={item.label} href={item.href} className="hide-sm">
-              {item.label}
-            </a>
+            <a key={item.href} href={item.href}>{item.label}</a>
           ))}
-          <a className="button small" href={booking} target="_blank" rel="noopener noreferrer">
-            Talk to us
-          </a>
+          <a className="button button-small" href={booking} target="_blank" rel="noopener noreferrer">Request a conversation</a>
         </nav>
       </div>
     </header>
@@ -45,17 +34,25 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="site-footer">
-      <div className="wrap footer-inner">
-        <span>© {new Date().getFullYear()} Parmana Systems</span>
-        <nav aria-label="Footer">
-          <a href="/architecture">Architecture</a>
-          <a href="/research">Research</a>
-          <a href="/team">Team</a>
-          <a href="/vision">Vision</a>
-          <a href="/license">License</a>
-          <a href="https://docs.parmanasystems.com" target="_blank" rel="noopener noreferrer">Docs</a>
-          <a href={github} target="_blank" rel="noopener noreferrer">GitHub</a>
-        </nav>
+      <div className="wrap">
+        <div className="footer-main">
+          <div className="footer-brand">
+            <a className="wordmark" href="/">
+              <img src="/logo-mark.svg" alt="" width={28} height={28} />
+              <span>parmana<span className="wordmark-systems">systems</span></span>
+            </a>
+            <p>The Business Authority Layer for autonomous systems.</p>
+          </div>
+          <div className="footer-links">
+            <div><strong>Explore</strong><a href="/business">For business</a><a href="/engineering">For engineering</a><a href="/architecture">Architecture</a><a href="/use-cases">Use cases</a></div>
+            <div><strong>Company</strong><a href="/research">Research</a><a href="/team">Team</a><a href="/vision">Vision</a><a href="/license">License</a></div>
+            <div><strong>Developer</strong><a href={docs} target="_blank" rel="noopener noreferrer">Documentation ↗</a><a href={github} target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href={booking} target="_blank" rel="noopener noreferrer">Contact ↗</a></div>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <span>© {new Date().getFullYear()} Parmana Systems</span>
+          <span>Authority before action. Evidence after.</span>
+        </div>
       </div>
     </footer>
   );
@@ -64,10 +61,10 @@ export function SiteFooter() {
 export function PageIntro({ eyebrow, title, children }: { eyebrow: string; title: string; children: ReactNode }) {
   return (
     <section className="page-intro">
-      <div className="wrap">
+      <div className="wrap narrow">
         <p className="eyebrow">{eyebrow}</p>
         <h1>{title}</h1>
-        <div className="lede">{children}</div>
+        <div className="page-lede">{children}</div>
       </div>
     </section>
   );
@@ -76,14 +73,25 @@ export function PageIntro({ eyebrow, title, children }: { eyebrow: string; title
 export function CallToAction({ heading, text }: { heading: string; text: string }) {
   return (
     <section className="closing">
-      <div className="wrap">
+      <div className="wrap closing-inner">
+        <p className="eyebrow">Parmana Systems</p>
         <h2>{heading}</h2>
-        <p className="body">{text}</p>
+        <p className="closing-copy">{text}</p>
         <div className="cta-row">
-          <a className="button" href={booking} target="_blank" rel="noopener noreferrer">Book a call</a>
-          <a className="button secondary" href={github} target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          <a className="button button-light" href={booking} target="_blank" rel="noopener noreferrer">Request a conversation</a>
+          <a className="text-link text-link-light" href={docs} target="_blank" rel="noopener noreferrer">Read the documentation ↗</a>
         </div>
       </div>
     </section>
+  );
+}
+
+export function SectionHeading({ eyebrow, title, text }: { eyebrow: string; title: string; text?: string }) {
+  return (
+    <div className="section-heading">
+      <p className="eyebrow">{eyebrow}</p>
+      <h2>{title}</h2>
+      {text ? <p className="section-copy">{text}</p> : null}
+    </div>
   );
 }
