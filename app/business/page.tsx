@@ -155,7 +155,7 @@ export default function BusinessPage() {
             ))}
           </div>
           <p className="body">
-            Parmana is a prototype. Every claim is written down with its evidence and its limits in the public repository.
+            Every claim is written down with its evidence and its limits in the public repository.
           </p>
         </div>
       </section>

@@ -83,7 +83,7 @@ const limits = [
   "Approvers are not yet limited to particular actions or policies. An approval names the action and resource.",
   "Facts from your own systems reach a policy only through a registered business signal source. No shipped policy uses one yet.",
   "Parmana ships no connectors. You write or register the ones you need.",
-  "It is a prototype, with no metrics, tracing or dashboards yet.",
+  "No metrics, tracing or dashboards are built yet.",
 ];
 
 export default function EngineeringPage() {
