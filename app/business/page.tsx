@@ -66,6 +66,18 @@ export default function BusinessPage() {
         </div>
       </section>
 
+      <section className="block">
+        <div className="wrap">
+          <SectionHeading eyebrow="Logs are not governance" title="Seeing what happened is not the same as deciding what may happen." text="Monitoring and logging are essential. On their own, they record activity after it occurs and stop nothing." />
+          <div className="business-value-grid">
+            <article><span>01</span><h3>Rules come first</h3><p>Write the limits down, with amounts, conditions and who must approve, before the agent acts.</p></article>
+            <article><span>02</span><h3>The checker is separate</h3><p>The party that proposes an action should not be the only one that approves it, and rule changes should need a second person.</p></article>
+            <article><span>03</span><h3>Approvals stay meaningful</h3><p>Keep approvals few and specific. A reviewer who approves everything without examining it provides no real control.</p></article>
+            <article><span>04</span><h3>Evidence sits outside the agent</h3><p>A record the agent can edit is its own account of itself. Evidence should come from a source the agent cannot alter.</p></article>
+          </div>
+        </div>
+      </section>
+
       <section className="block block-dark">
         <div className="wrap business-split">
           <div><p className="eyebrow eyebrow-light">Questions for leadership</p><h2>Before an agent acts, can your institution answer these questions?</h2></div>

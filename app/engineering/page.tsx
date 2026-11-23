@@ -97,6 +97,18 @@ export default function EngineeringPage() {
         </div>
       </section>
 
+      <section className="block">
+        <div className="wrap">
+          <SectionHeading eyebrow="Current limits" title="Where the control does not yet reach." text="A structural boundary holds even when the agent is wrong, fooled or compromised. A behavioural one, such as an instruction in a prompt, depends on the agent behaving. Parmana is a prototype, and its limits are listed here rather than left for you to discover." />
+          <div className="integration-list">
+            <div><span>01</span><p><strong>Routes outside the gateway are not checked.</strong> An agent that can call a system directly, without passing the enforcement boundary, is outside the control. Coverage depends on which connectors and paths are in place.</p></div>
+            <div><span>02</span><p><strong>Same-host access is not fully prevented.</strong> Code running on the same host as the server, and able to read its environment, may be able to read connector credentials.</p></div>
+            <div><span>03</span><p><strong>Verification has a boundary.</strong> A verified record shows it was not altered after signing. It does not show that the signing key belongs to Parmana, or that the underlying policy was correct or lawful.</p></div>
+            <div><span>04</span><p><strong>Interfaces may change.</strong> The project is pre-release. Pin versions and review the status documentation before relying on any behaviour in production.</p></div>
+          </div>
+        </div>
+      </section>
+
       <section className="block block-soft">
         <div className="wrap engineering-cta-grid">
           <div><p className="eyebrow">Developer resources</p><h2>Move from architecture to implementation.</h2><p className="section-copy">Review the API and SDK references, integration examples and protocol documentation.</p></div>

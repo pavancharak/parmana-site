@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const pillars = [
   { n: "01", title: "Declare authority", text: "Make the limits of delegation explicit: who or what may act, on which resources, for which purpose, and under what conditions." },
   { n: "02", title: "Enforce before execution", text: "Evaluate the proposed institutional action against deterministic rules before it reaches the system that changes institutional state." },
-  { n: "03", title: "Prove what happened", text: "Create tamper-evident evidence that connects the declared authority, the authorization decision and the recorded execution event." },
+  { n: "03", title: "Prove what happened", text: "Create signed evidence that connects the declared authority, the authorization decision and the recorded execution event. Anyone can check the record offline. The check shows the record was not altered; it does not show the policy was correct." },
 ];
 
 const scenarios = [
@@ -101,6 +101,7 @@ export default function Home() {
             <p>Identity and access controls are essential. They establish which users, services and agents can access systems and operations.</p>
             <p>But an agent with permission to call a payment API may still lack authority to pay a particular supplier, exceed a delegated limit or bypass an approval.</p>
             <p>That is an institutional decision. It should not be delegated to the agent's interpretation of its instructions.</p>
+            <p>Authority should hold even when the agent is wrong, fooled or compromised. A limit written only in a prompt depends on the agent behaving. A limit enforced outside the agent still holds when it doesn't.</p>
           </div>
         </div>
         <div className="wrap distinction-table">
