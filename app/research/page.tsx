@@ -45,7 +45,7 @@ const papers = [
     title:
       "From Delegated Authority to Verifiable Execution: A Deterministic Authorization Model for AI Agents",
     status: "Research draft v0.1, not peer-reviewed",
-    thumb: undefined,
+    thumb: "/research/from-delegated-authority-thumb.png",
     summary:
       "A model that represents delegated authority as an explicit, bounded and revocable grant, evaluates each consequential action deterministically before it runs, and binds the authorisation to the exact action so the outcome can be verified. The evaluation is proposed, not yet run.",
   },
@@ -53,7 +53,7 @@ const papers = [
     title:
       "Beyond Valid Credentials: Deterministic Authorization and Verifiable Execution for Agentic Commerce",
     status: "Research draft v0.1, not peer-reviewed",
-    thumb: undefined,
+    thumb: "/research/agentic-commerce-thumb.png",
     summary:
       "A valid credential shows that an agent may call a service. It does not show that a particular purchase, supplier payment or refund was delegated to it. This draft applies the same authorisation model to agentic commerce, with a proposed evaluation that has not been run.",
   },
