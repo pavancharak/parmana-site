@@ -79,11 +79,14 @@ export default function VisionPage() {
         <div className="wrap">
           <SectionHeading
             eyebrow="The horizon"
-            title="Where we want to be."
-            text="An aspiration, not a claim about the product today. We want every consequential AI action in a regulated institution to carry evidence that it was authorized, and to be checkable by an auditor, regulator or customer who never had access to the system that acted."
+            title="Where we are heading."
+            text="This is the direction we are working toward. It is not a description of Parmana today, and it does not assume that any institution will adopt it."
           />
           <p className="body">
-            We expect the rules for delegating authority to AI to be written by many institutions, regulators and auditors, not by a single vendor. Parmana is open source under the Apache License 2.0 so that the foundation can be shared, examined and improved in the open.
+            We would like consequential AI actions in regulated institutions to carry evidence that they were authorized, and to be checkable by an auditor, regulator or customer who never had access to the system that acted.
+          </p>
+          <p className="body">
+            We hope the rules for delegating authority to AI will be written by many institutions, regulators and auditors, not by a single vendor. Parmana is open source under the Apache License 2.0 so that the foundation can be shared, examined and improved in the open.
           </p>
         </div>
       </section>
