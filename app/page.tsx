@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader, booking, docs } from "./components/SiteChrome";
 
-const title = "The Institutional Authority Layer for Autonomous Systems";
-const description = "Parmana Systems helps enterprises define, enforce and verify the institutional authority delegated to AI agents and autonomous software.";
+const title = "Independent evidence that AI followed your policies";
+const description = "Parmana independently verifies whether AI agents acted within the authority your business defined, and binds that decision to tamper-evident evidence of what actually executed.";
 
 export const metadata: Metadata = {
   title,
@@ -31,9 +31,9 @@ export default function Home() {
       <section className="hero hero-home">
         <div className="wrap hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow eyebrow-light">Institutional authority infrastructure</p>
-            <h1>AI can act autonomously.<br /><span>Institutional authority must remain explicit.</span></h1>
-            <p className="hero-lede">As AI agents take action across institutional systems, access alone is not enough. Enterprises need a way to define what agents are allowed to do, enforce those limits before execution, and prove what happened.</p>
+            <p className="eyebrow eyebrow-light">Parmana Systems</p>
+            <h1>Independent evidence that <span>AI followed your policies.</span></h1>
+            <p className="hero-lede">Know whether every AI action was authorized, within scope and executed as permitted, checked independently of the agent's own claims. Don't just trust that your AI followed the rules. Have evidence that it did.</p>
             <div className="cta-row">
               <a className="button button-light" href={booking} target="_blank" rel="noopener noreferrer">Discuss your use case</a>
               <a className="text-link text-link-light" href="/architecture">Explore the architecture <span aria-hidden="true">↗</span></a>
@@ -144,8 +144,8 @@ export default function Home() {
       <section className="closing closing-home">
         <div className="wrap closing-inner">
           <p className="eyebrow eyebrow-light">Parmana Systems</p>
-          <h2>Let AI agents work for your institution. Keep authority with your institution.</h2>
-          <p className="closing-copy">Start with the institutional action you need to control. We will show you the authority model and the engineering path.</p>
+          <h2>Keep control when AI acts for your business.</h2>
+          <p className="closing-copy">Start with the action you need to control. We will show you the authority model, the evidence it produces and the engineering path.</p>
           <div className="cta-row">
             <a className="button button-light" href={booking} target="_blank" rel="noopener noreferrer">Request a conversation</a>
             <a className="text-link text-link-light" href={docs} target="_blank" rel="noopener noreferrer">Technical documentation ↗</a>
