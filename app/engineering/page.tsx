@@ -32,7 +32,7 @@ export default function EngineeringPage() {
     <main>
       <SiteHeader />
       <PageIntro eyebrow="For CTOs, architects and platform engineers" title="A deterministic authorization boundary between agent intent and institutional execution.">
-        <p>Parmana is designed to externalize institutional authority from the agent. It evaluates structured action requests against declared policy, enforces the decision at the execution boundary and records cryptographically verifiable evidence.</p>
+        <p>Parmana independently verifies whether each agent action was authorized before it executes, without relying on the agent's own claims. It externalizes institutional authority from the agent, evaluates structured action requests against declared policy, enforces the decision at the execution boundary and binds it to cryptographically verifiable evidence of what executed.</p>
       </PageIntro>
 
       <section className="block">

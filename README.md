@@ -4,7 +4,9 @@ The site is a Next.js 15 App Router application for Parmana Systems.
 
 ## Positioning
 
-**The Business Authority Layer for Autonomous Systems.**
+**Independent evidence that AI followed your policies.**
+
+Parmana independently verifies whether AI agents acted within the authority your business defined, and binds that decision to tamper-evident evidence of what actually executed.
 
 The website serves two audiences with intentionally different language and depth:
 

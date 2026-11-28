@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     "autonomous institutional systems",
     "cryptographic evidence",
     "agent execution control",
+    "independent verification",
+    "AI policy evidence",
+    "AI agent audit evidence",
   ],
   robots: { index: true, follow: true },
   openGraph: {

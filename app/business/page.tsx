@@ -23,7 +23,7 @@ export default function BusinessPage() {
         <div className="wrap narrow">
           <p className="eyebrow">For CEOs, COOs, CFOs, CIOs and business owners</p>
           <h1>Delegate work to AI. Do not delegate your institutional authority by accident.</h1>
-          <p className="page-hero-lede">AI agents can process refunds, initiate payments, update records and trigger workflows. Your institution must decide which actions they may take, how far their authority extends and when a person must approve.</p>
+          <p className="page-hero-lede">AI agents can process refunds, initiate payments, update records and trigger workflows. Your institution decides which actions they may take, how far their authority extends and when a person must approve. Parmana gives you independent evidence that each action stayed within that authority.</p>
           <div className="cta-row"><a className="button" href="https://cal.com/pavan-charak/" target="_blank" rel="noopener noreferrer">Discuss your institution needs</a><a className="text-link" href="/use-cases">See business examples →</a></div>
         </div>
       </section>
