@@ -23,7 +23,7 @@ export default function UseCasesPage() {
     <main>
       <SiteHeader />
       <PageIntro eyebrow="Use cases" title="Wherever an AI action can change institutional state, authority matters.">
-        <p>Parmana applies to consequential actions across enterprise systems. The institution defines the limits. The control layer checks the action before it executes.</p>
+        <p>Parmana applies to consequential actions across enterprise systems. The institution defines the limits. The control layer checks each action before it executes and keeps independent evidence of the decision.</p>
       </PageIntro>
       <section className="block">
         <div className="wrap">

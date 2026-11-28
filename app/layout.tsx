@@ -3,12 +3,12 @@ import "./globals.css";
 
 const siteName = "Parmana Systems";
 const description =
-  "The Institutional Authority Layer for autonomous systems. Parmana helps enterprises define delegated institutional authority, enforce it deterministically before execution and verify evidence of what happened.";
+  "Parmana independently verifies whether AI agents acted within the authority your business defined, and binds that decision to tamper-evident evidence of what actually executed.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://parmanasystems.com"),
   title: {
-    default: "Parmana Systems | The Institutional Authority Layer",
+    default: "Parmana Systems | Independent evidence that AI followed your policies",
     template: "%s | Parmana Systems",
   },
   description,
@@ -23,17 +23,20 @@ export const metadata: Metadata = {
     "autonomous institutional systems",
     "cryptographic evidence",
     "agent execution control",
+    "independent verification",
+    "AI policy evidence",
+    "AI agent audit evidence",
   ],
   robots: { index: true, follow: true },
   openGraph: {
     siteName,
     type: "website",
-    title: "Parmana Systems | The Institutional Authority Layer",
+    title: "Parmana Systems | Independent evidence that AI followed your policies",
     description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Parmana Systems | The Institutional Authority Layer",
+    title: "Parmana Systems | Independent evidence that AI followed your policies",
     description,
   },
 };
